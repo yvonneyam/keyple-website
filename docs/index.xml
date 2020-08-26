@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Global Architecture of Keyple | Eclipse Keyple</title><link>/keyple-website/docs/</link><atom:link href="/keyple-website/docs/index.xml" rel="self" type="application/rss+xml"/><description>Global Architecture of Keyple</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Copyright © Eclipse Foundation, Inc. All Rights Reserved.</copyright><lastBuildDate>Thu, 25 Jun 2020 00:00:00 +0000</lastBuildDate><image><url>/keyple-website/images/logo_hud2fb0b35622057c5c7bb20829420fe80_179328_300x300_fit_lanczos_2.png</url><title>Global Architecture of Keyple</title><link>/keyple-website/docs/</link></image><item><title>Get Started with Keyple-Java</title><link>/keyple-website/docs/getstarted-java/</link><pubDate>Mon, 24 Feb 2020 00:00:00 +0100</pubDate><guid>/keyple-website/docs/getstarted-java/</guid><description>&lt;p>This getting stated contains one ready-to-execute JAVA example starting from a new Gradle project.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Global Architecture of Keyple | Eclipse Keyple</title><link>/keyple-website/docs/</link><atom:link href="/keyple-website/docs/index.xml" rel="self" type="application/rss+xml"/><description>Global Architecture of Keyple</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Copyright © Eclipse Foundation, Inc. All Rights Reserved.</copyright><lastBuildDate>Thu, 25 Jun 2020 00:00:00 +0000</lastBuildDate><image><url>/keyple-website/images/logo_hud2fb0b35622057c5c7bb20829420fe80_179328_300x300_fit_lanczos_2.png</url><title>Global Architecture of Keyple</title><link>/keyple-website/docs/</link></image><item><title>Get Started with Keyple-Java</title><link>/keyple-website/docs/build-your-first-app-java/</link><pubDate>Mon, 24 Feb 2020 00:00:00 +0100</pubDate><guid>/keyple-website/docs/build-your-first-app-java/</guid><description>&lt;p>This getting stated contains one ready-to-execute JAVA example starting from a new Gradle project.&lt;/p>
 &lt;p>The example demonstrate Keyple capabilities with the Keyple PCSC plugin and PO/SAM provided in the Calypso Test Kit.&lt;/p>
 &lt;h2 id="build">Build&lt;/h2>
 &lt;p>The example can run on any machine: Linux, Windows and MacOS. If not installed in your machine, you will need to download :&lt;/p>
@@ -356,7 +356,7 @@ private final static String SAM_READER_NAME = &amp;quot;XXX&amp;quot;;
 &lt;p>seProxyService.getPlugin(PLUGIN_NAME) methode: plugin -&amp;gt; readers -&amp;gt; X -&amp;gt; terminal -&amp;gt; name .&lt;/p>
 &lt;/blockquote>
 &lt;p>Run the application.&lt;/p>
-&lt;p>Note: All project dependencies, including Keyple components, are downloaded during the first run, which can take several minutes.&lt;/p></description></item><item><title>Keyple ‘Core’ – User guide (high level API)</title><link>/keyple-website/docs/keyplecore-userguide/</link><pubDate>Mon, 24 Feb 2020 00:00:00 +0100</pubDate><guid>/keyple-website/docs/keyplecore-userguide/</guid><description>&lt;p>This high-level API is convenient for developers implementing smart card processing application for terminal interfaced with smart card readers.&lt;/p>
+&lt;p>Note: All project dependencies, including Keyple components, are downloaded during the first run, which can take several minutes.&lt;/p></description></item><item><title>Keyple ‘Core’ – Architecture</title><link>/keyple-website/docs/architecture-keyplecore/</link><pubDate>Mon, 24 Feb 2020 00:00:00 +0100</pubDate><guid>/keyple-website/docs/architecture-keyplecore/</guid><description>&lt;p>This high-level API is convenient for developers implementing smart card processing application for terminal interfaced with smart card readers.&lt;/p>
 &lt;h2 id="packages--features">Packages &amp;amp; features&lt;/h2>
 &lt;p>The Keyple Core User API is a tool to manage readers, and to select “generic” Secure Elements.&lt;/p>
 &lt;table>
@@ -545,7 +545,93 @@ cf.
 &lt;blockquote>
 &lt;p>cf.
 &lt;a href="https://github.com/eclipse/keyple-java/blob/develop/java/example/generic/pc/UseCase4_SequentialMultiSelection/src/main/java/org/eclipse/keyple/example/generic/pc/usecase4/SequentialMultiSelection_Pcsc.java" target="_blank" rel="noopener">“Generic Use Case 4 / Sequential Multi-Selection”&lt;/a> example&lt;/p>
-&lt;/blockquote></description></item><item><title>Keyple Calypso – User guide (high level API)</title><link>/keyple-website/docs/keyplecalypso-userguide/</link><pubDate>Mon, 24 Feb 2020 00:00:00 +0100</pubDate><guid>/keyple-website/docs/keyplecalypso-userguide/</guid><description>&lt;h2 id="packages--features">Packages &amp;amp; features&lt;/h2>
+&lt;/blockquote></description></item><item><title>(WIP)Developer guide - Develop a Plugin</title><link>/keyple-website/docs/developer-guide-plugin/</link><pubDate>Mon, 24 Feb 2020 00:00:00 +0100</pubDate><guid>/keyple-website/docs/developer-guide-plugin/</guid><description>&lt;p>This guide will provide nescessary steps to develop a Keyple plugin for a device. In order to flatten the learning curve, we&amp;rsquo;ll
+illustrate the creation processus using the implementation of the Android NFC Plugin and OMAPI plugins.
+This plugins can be consulted with the keyple-java/android repository.&lt;/p>
+&lt;h2 id="imports">Imports&lt;/h2>
+&lt;p>Your plugin will use be based upon Keyple Core libraries:&lt;/p>
+&lt;pre>&lt;code class="language-gradle">implementation &amp;quot;org.eclipse.keyple:keyple-java-core:$keyple_version&amp;quot;
+&lt;/code>&lt;/pre>
+&lt;h2 id="implement-keyple-reader">Implement Keyple Reader&lt;/h2>
+&lt;p>The basis component of a Keyple plugin is the implementation of an AbstractLocalReader. The AbstractLocalReader implementation will map the native reader&amp;rsquo;s
+features of the device to Keyple Reader component allowing to be used within the Keyple suite.&lt;/p>
+&lt;p>The &amp;lsquo;local&amp;rsquo; in AbstractLocalReader is used to specify devices physicaly connected to the device.&lt;/p>
+&lt;p>Relying on native libraries capacities of the device, implementations to be done are:&lt;/p>
+&lt;ul>
+&lt;li>checkSePresence()&lt;/li>
+&lt;li>getATR()&lt;/li>
+&lt;li>openPhysicalChannel()&lt;/li>
+&lt;li>closePhysicalChannel()&lt;/li>
+&lt;li>isPhysicalChannelOpen()&lt;/li>
+&lt;li>ProtocolFlagMatches()&lt;/li>
+&lt;li>TransmitApdu&lt;/li>
+&lt;/ul>
+&lt;p>###Examples&lt;/p>
+&lt;h4 id="checksepresence">checkSePresence()&lt;/h4>
+&lt;p>Allow Keyple to check if the secure elements is inserted or in the NFC field of the device.&lt;/p>
+&lt;p>OMAPI Exemple&lt;/p>
+&lt;pre>&lt;code class="language-kotlin">//nativeReader is an instance of android.se.omapi.Reader
+override fun checkSePresence(): Boolean {
+return nativeReader.isSecureElementPresent
+}
+&lt;/code>&lt;/pre>
+&lt;p>Android NFC Example&lt;/p>
+&lt;pre>&lt;code class="language-kotlin">//When a SE is presented in the NFC field, we can get a tagproxy object. When the SE is removed,
+//this value is reinited. So when it is not null, we can assume the SE is currently in the field.
+public override fun checkSePresence(): Boolean {
+return tagProxy != null
+}
+&lt;/code>&lt;/pre>
+&lt;h4 id="getatr">getAtr()&lt;/h4>
+&lt;p>OMAPI Exemple&lt;/p>
+&lt;pre>&lt;code class="language-kotlin">//Session is a native object of android.se.omapi package
+override fun getATR(): ByteArray? {
+return session?.let {
+it.atr
+}
+}
+&lt;/code>&lt;/pre>
+&lt;p>Android NFC Example&lt;/p>
+&lt;pre>&lt;code class="language-kotlin">//TagProxy is an object mapping android.nfc.tech.TagTechnology. Atr is obtained from data of this object (epending of protocol)
+public override fun getATR(): ByteArray? {
+val atr = tagProxy?.atr
+return if (atr?.isNotEmpty() == true) atr else null
+}
+&lt;/code>&lt;/pre>
+&lt;h4 id="openphysicalchannel">openPhysicalChannel()&lt;/h4>
+&lt;p>OMAPI Exemple&lt;/p>
+&lt;pre>&lt;code class="language-kotlin">@Throws(KeypleReaderIOException::class)
+override fun openPhysicalChannel() {
+try {
+session = nativeReader.openSession()
+} catch (e: IOException) {
+throw KeypleReaderIOException(&amp;quot;IOException while opening physical channel.&amp;quot;, e)
+}
+}
+&lt;/code>&lt;/pre>
+&lt;p>Android NFC Example&lt;/p>
+&lt;pre>&lt;code class="language-kotlin">@Throws(KeypleReaderIOException::class)
+public override fun openPhysicalChannel() {
+if (tagProxy?.isConnected != true) {
+try {
+tagProxy?.connect()
+} catch (e: IOException) {
+throw KeypleReaderIOException(&amp;quot;Error while opening physical channel&amp;quot;, e)
+}
+}
+}
+&lt;/code>&lt;/pre>
+&lt;p>Also, this implementation could be done extending AbstractObservableLocalReader. It provides :&lt;/p>
+&lt;ul>
+&lt;li>State machine regarding SE event: &amp;lsquo;WAIT_FOR_START_DETECTION&amp;rsquo;, &amp;lsquo;WAIT_FOR_SE_INSERTION&amp;rsquo;&amp;hellip;&lt;/li>
+&lt;li>Extended readers features
+&lt;ul>
+&lt;li>Smart Insertion Reader: Allow to detect SE insertion&lt;/li>
+&lt;li>Smart Removal Reader: Allow to detect SE Removal&lt;/li>
+&lt;li>Smart Selection Reader: Allow to use native SE selection process&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul></description></item><item><title>Keyple Calypso – Architecture</title><link>/keyple-website/docs/architecture-keyplecalypso/</link><pubDate>Mon, 24 Feb 2020 00:00:00 +0100</pubDate><guid>/keyple-website/docs/architecture-keyplecalypso/</guid><description>&lt;h2 id="packages--features">Packages &amp;amp; features&lt;/h2>
 &lt;p>The &lt;strong>Keyple Calypso User API is an extension of the Keyple Core User API&lt;/strong> to manage Calypso Portable Object securely using Calypso SAM:&lt;/p>
 &lt;ul>
 &lt;li>The generic Secure Element selection is enhanced for the &lt;strong>selection of a Calypso PO&lt;/strong>. The FCI response is automatically analyzed in order to identify the revision and the features supported by the Calypso PO. The invalidation status is also checked.&lt;/li>
