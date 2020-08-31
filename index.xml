@@ -76,7 +76,80 @@ several manufacturers in various configurations.&lt;/p></description></item><ite
 &lt;/ul>
 &lt;p>Keyple comes with dedicated plugins that integrate directly with smartcard readers that have been built on standard software interfaces including PC/ SC, Android NFC, and Android OMAPI.&lt;/p>
 &lt;p>In cases where there is a distributed architecture design, Keyple includes a Remote Secure Element API plugin so that a smartcard terminal can be operated remotely, as if it were local to the terminal, and ensures that robust security and speed is not sacrificed in a cloud-based system.&lt;/p>
-&lt;p>The Calypso Processing API is also available as a Keyple extension. This component carries out the terminal processing element of ticketing technology. Access to Calypso’s security features are automatically managed by the Keyple extension.&lt;/p></description></item><item><title>Get Started with Keyple-Java</title><link>/keyple-website/docs/build-your-first-app-java/</link><pubDate>Mon, 24 Feb 2020 00:00:00 +0100</pubDate><guid>/keyple-website/docs/build-your-first-app-java/</guid><description>&lt;p>This getting stated contains one ready-to-execute JAVA example starting from a new Gradle project.&lt;/p>
+&lt;p>The Calypso Processing API is also available as a Keyple extension. This component carries out the terminal processing element of ticketing technology. Access to Calypso’s security features are automatically managed by the Keyple extension.&lt;/p></description></item><item><title>Get Started with Keyple-Java</title><link>/keyple-website/docs/build-your-first-app-android/</link><pubDate>Mon, 24 Feb 2020 00:00:00 +0100</pubDate><guid>/keyple-website/docs/build-your-first-app-android/</guid><description>&lt;h1 id="introduction">Introduction&lt;/h1>
+&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>Keyple SDK is supported by the Operating System Android. As Keyple request low level reader access, the key features of
+the SDK relies on components called &amp;lsquo;Plugins&amp;rsquo;.&lt;/p>
+&lt;p>Keyple Android Plugins are low level implementation of Keyple contracts described in the section &amp;lsquo;Develop a plugin&amp;rsquo; in Developer
+guide. Once a plugin is provided, any classic Android application can use Keyple to provide ticketing features.&lt;/p>
+&lt;p>This Guide will describe how to start a ticketing application using Keyple SDK.&lt;/p>
+&lt;h2 id="compatibility">Compatibility&lt;/h2>
+&lt;ul>
+&lt;li>Android OS 19+&lt;/li>
+&lt;/ul>
+&lt;h1 id="integration">Integration&lt;/h1>
+&lt;h2 id="sdk-integration">SDK Integration&lt;/h2>
+&lt;h3 id="keyple-core">Keyple Core&lt;/h3>
+&lt;p>This high-level API is convenient for developers implementing smart card processing application for terminal interfaced
+with smart card readers. Access to the readers is provided by the plugins.&lt;/p>
+&lt;p>To use Keyple core API (and in fact, anything keyple&amp;rsquo;s related) import the jar within the gradle dependencies of your
+Android application.&lt;/p>
+&lt;pre>&lt;code class="language-gradle">implementation &amp;quot;org.eclipse.keyple:keyple-java-core:$keyple_version&amp;quot;
+&lt;/code>&lt;/pre>
+&lt;p>Please refer to Architecture/Keyle Core&lt;/p>
+&lt;h3 id="keyple-plugins">Keyple Plugins&lt;/h3>
+&lt;p>There are many Keyple plugins available, the one to use depends on the device and ticketing tools you are aiming to
+use.&lt;/p>
+&lt;p>For a standard device the keyple-android-plugin-nfc and keyple-android-plugin-omapi should be be used. They will allow keyple to
+connect to, respectively, a smart card in the NFC field of the device or, a smart card inserted in a SIM like port. The
+plugins for Android are Android Libraries (AAR).&lt;/p>
+&lt;p>To use the plugins simply import it within the gradle dependencies of your Android application.&lt;/p>
+&lt;pre>&lt;code class="language-gradle">implementation &amp;quot;org.eclipse.keyple:keyple-android-plugin-omapi:$keyple_version&amp;quot;
+&lt;/code>&lt;/pre>
+&lt;h3 id="keyple-calypso">Keyple Calypso&lt;/h3>
+&lt;p>The Keyple Calypso User API is an extension of the Keyple Core User API to manage Calypso Portable Object securely using
+Calypso SAM.&lt;/p>
+&lt;p>Please refer to Architecture/Keyle Calypso&lt;/p>
+&lt;p>To use Keyple Calypso User API simply import the jar within the gradle dependencies of your Android application.&lt;/p>
+&lt;pre>&lt;code class="language-gradle">implementation &amp;quot;org.eclipse.keyple:keyple-android-plugin-omapi:$keyple_version&amp;quot;
+&lt;/code>&lt;/pre>
+&lt;h2 id="initializing-the-sdk">Initializing the SDK&lt;/h2>
+&lt;h2 id="register-a-plugin">Register a plugin&lt;/h2>
+&lt;p>The Singleton SeProxyService is the entry point of the SE Proxy Service, its instance has to be called by a
+ticketing application in order to establish a link with a SE’s application.&lt;/p>
+&lt;p>In order to access to SE we have to register at least one plugin.&lt;/p>
+&lt;pre>&lt;code class="language-kotlin">override fun onCreate(savedInstanceState: Bundle?) {
+super.onCreate(savedInstanceState)
+/* register Omapi Plugin to the SeProxyService */
+try {
+SeProxyService.getInstance().registerPlugin(AndroidOmapiPluginFactory(this))
+} catch (e: KeyplePluginInstantiationException) {
+/* do something with it */
+}
+}
+&lt;/code>&lt;/pre>
+&lt;p>Then readers of the plugin can be retrieved.&lt;/p>
+&lt;pre>&lt;code class="language-kotlin">val readers = SeProxyService.getInstance().getPlugin(PLUGIN_NAME).readers
+&lt;/code>&lt;/pre>
+&lt;p>Using this readers it is possible to select a smart card application using its AID.&lt;/p>
+&lt;pre>&lt;code class="language-kotlin">//Configure the selector with protocol and Aid
+val seSelector = SeSelector.builder()
+.seProtocol(SeCommonProtocols.PROTOCOL_ISO7816_3)
+.aidSelector(AidSelector.builder().aidToSelect(poAid).build())
+.build()
+//build the request by passing the seSelector.
+//As second parameter of the SeRequest consctructor, an APDU can be added to be executed
+//right after the selection.
+val seRequest = SeRequest(seSelector, null)
+//A proxy reader is a physical reader, it allows to send and receive synchronised APDUS
+val seResponse = (it.value as ProxyReader).transmitSeRequest(seRequest, ChannelControl.KEEP_OPEN)
+//Check is selection is successful
+if (seResponse?.selectionStatus?.hasMatched() == true) {
+//Selection is done
+} else {
+//Selection failed
+}
+&lt;/code>&lt;/pre></description></item><item><title>Get Started with Keyple-Java</title><link>/keyple-website/docs/build-your-first-app-java/</link><pubDate>Mon, 24 Feb 2020 00:00:00 +0100</pubDate><guid>/keyple-website/docs/build-your-first-app-java/</guid><description>&lt;p>This getting stated contains one ready-to-execute JAVA example starting from a new Gradle project.&lt;/p>
 &lt;p>The example demonstrate Keyple capabilities with the Keyple PCSC plugin and PO/SAM provided in the Calypso Test Kit.&lt;/p>
 &lt;h2 id="build">Build&lt;/h2>
 &lt;p>The example can run on any machine: Linux, Windows and MacOS. If not installed in your machine, you will need to download :&lt;/p>
