@@ -7,6 +7,6 @@ org.eclipse.keyple.core.seproxy.exception
 org.eclipse.keyple.core.seproxy.message
 org.eclipse.keyple.core.seproxy.plugin
 org.eclipse.keyple.core.seproxy.plugin.reader
-org.eclipse.keyple.core.seproxy.protocol
+org.eclipse.keyple.core.seproxy.plugin.reader.util
 org.eclipse.keyple.core.util
 org.eclipse.keyple.core.util.bertlv
