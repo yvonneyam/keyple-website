@@ -1337,21 +1337,21 @@ return nativeReader.isSecureElementPresent
 &lt;td>&lt;code>Remote Native&lt;/code>&lt;/td>
 &lt;td>Must be used by the application installed on the terminal having local access to the smart card reader.&lt;/td>
 &lt;td style="text-align:center">
-&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/component/keyple-plugin/remote-se/nativese/README.md" target="_blank" rel="noopener">
+&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/component/keyple-plugin/remote-plugin/nativese/README.md" target="_blank" rel="noopener">
 &lt;i class="fab fa-github pr-1 fa-fw">&lt;/i>&lt;/a>&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;code>Remote Virtual&lt;/code>&lt;/td>
 &lt;td>Must be used by the application installed on the terminal not having local access to the smart card reader and that wishes to control the reader remotely.&lt;/td>
 &lt;td style="text-align:center">
-&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/component/keyple-plugin/remote-se/virtualse/README.md" target="_blank" rel="noopener">
+&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/component/keyple-plugin/remote-plugin/virtualse/README.md" target="_blank" rel="noopener">
 &lt;i class="fab fa-github pr-1 fa-fw">&lt;/i>&lt;/a>&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;code>Remote Core&lt;/code>&lt;/td>
 &lt;td>Contains all the common components used by &lt;code>Remote Native&lt;/code> and &lt;code>Remote Virtual&lt;/code> libraries such as nodes used for communication management. &lt;strong>Therefore, you do not have to import it explicitly because it&amp;rsquo;s imported by transitivity.&lt;/strong>&lt;/td>
 &lt;td style="text-align:center">
-&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/component/keyple-plugin/remote-se/core/README.md" target="_blank" rel="noopener">
+&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/component/keyple-plugin/remote-plugin/core/README.md" target="_blank" rel="noopener">
 &lt;i class="fab fa-github pr-1 fa-fw">&lt;/i>&lt;/a>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
@@ -1372,8 +1372,8 @@ width: 70px;
 &lt;li>Find your use case with the help of chapter
 &lt;a href="#use-cases">Use cases&lt;/a>. This will help you determine exactly which interfaces to use.&lt;/li>
 &lt;li>Import
-&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/component/keyple-plugin/remote-se/nativese/README.md" target="_blank" rel="noopener">Remote Native&lt;/a> and/or
-&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/component/keyple-plugin/remote-se/virtualse/README.md" target="_blank" rel="noopener">Remote Virtual&lt;/a> libraries depending on your use case.&lt;/li>
+&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/component/keyple-plugin/remote-plugin/nativese/README.md" target="_blank" rel="noopener">Remote Native&lt;/a> and/or
+&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/component/keyple-plugin/remote-plugin/virtualse/README.md" target="_blank" rel="noopener">Remote Virtual&lt;/a> libraries depending on your use case.&lt;/li>
 &lt;li>Using chapter
 &lt;a href="#network-configuration">Network configuration&lt;/a>, you must implement the transport layer using the sequence diagram adapted to your network configuration.&lt;/li>
 &lt;li>Implement your ticketing services as specified in the associated use case.&lt;/li>
@@ -1512,54 +1512,54 @@ width: 240px;
 &lt;p>In this diagram, the network layer is deliberately hidden. Its implementation is described in the
 &lt;a href="#network-configuration">Network configuration&lt;/a> paragraph.&lt;/p>
 &lt;figure >
-&lt;a data-fancybox="" href="/keyple-website/keyple-website/media/remote-se/sequence/Remote_Sequence_RemoteServerPlugin_API.svg" >
-&lt;img src="/keyple-website/keyple-website/media/remote-se/sequence/Remote_Sequence_RemoteServerPlugin_API.svg" alt="" >
+&lt;a data-fancybox="" href="/keyple-website/keyple-website/media/remote-plugin/sequence/Remote_Sequence_RemoteServerPlugin_API.svg" >
+&lt;img src="/keyple-website/keyple-website/media/remote-plugin/sequence/Remote_Sequence_RemoteServerPlugin_API.svg" alt="" >
 &lt;/a>
 &lt;/figure>
 &lt;h4 id="uc-1">UC 1&lt;/h4>
 &lt;figure >
-&lt;a data-fancybox="" href="/keyple-website/keyple-website/media/remote-se/component/Remote_Component_UC1_RemoteServerPlugin_Reader_API.svg" >
-&lt;img src="/keyple-website/keyple-website/media/remote-se/component/Remote_Component_UC1_RemoteServerPlugin_Reader_API.svg" alt="" >
+&lt;a data-fancybox="" href="/keyple-website/keyple-website/media/remote-plugin/component/Remote_Component_UC1_RemoteServerPlugin_Reader_API.svg" >
+&lt;img src="/keyple-website/keyple-website/media/remote-plugin/component/Remote_Component_UC1_RemoteServerPlugin_Reader_API.svg" alt="" >
 &lt;/a>
 &lt;/figure>
 &lt;h4 id="uc-2">UC 2&lt;/h4>
 &lt;figure >
-&lt;a data-fancybox="" href="/keyple-website/keyple-website/media/remote-se/component/Remote_Component_UC2_RemoteServerPlugin_ObservableReader_API.svg" >
-&lt;img src="/keyple-website/keyple-website/media/remote-se/component/Remote_Component_UC2_RemoteServerPlugin_ObservableReader_API.svg" alt="" >
+&lt;a data-fancybox="" href="/keyple-website/keyple-website/media/remote-plugin/component/Remote_Component_UC2_RemoteServerPlugin_ObservableReader_API.svg" >
+&lt;img src="/keyple-website/keyple-website/media/remote-plugin/component/Remote_Component_UC2_RemoteServerPlugin_ObservableReader_API.svg" alt="" >
 &lt;/a>
 &lt;/figure>
 &lt;h3 id="remote-client-plugin">Remote Client Plugin&lt;/h3>
 &lt;p>This plugin allows controlling from a &lt;strong>client&lt;/strong> terminal a smart card reader plugged into a &lt;strong>server&lt;/strong> terminal (e.g. SAM reader).&lt;/p>
 &lt;h4 id="uc-3">UC 3&lt;/h4>
 &lt;figure >
-&lt;a data-fancybox="" href="/keyple-website/keyple-website/media/remote-se/component/Remote_Component_UC3_RemoteClientPlugin_Reader_API.svg" >
-&lt;img src="/keyple-website/keyple-website/media/remote-se/component/Remote_Component_UC3_RemoteClientPlugin_Reader_API.svg" alt="" >
+&lt;a data-fancybox="" href="/keyple-website/keyple-website/media/remote-plugin/component/Remote_Component_UC3_RemoteClientPlugin_Reader_API.svg" >
+&lt;img src="/keyple-website/keyple-website/media/remote-plugin/component/Remote_Component_UC3_RemoteClientPlugin_Reader_API.svg" alt="" >
 &lt;/a>
 &lt;/figure>
 &lt;h4 id="uc-4">UC 4&lt;/h4>
 &lt;figure >
-&lt;a data-fancybox="" href="/keyple-website/keyple-website/media/remote-se/component/Remote_Component_UC4_RemoteClientPlugin_ObservableReader_API.svg" >
-&lt;img src="/keyple-website/keyple-website/media/remote-se/component/Remote_Component_UC4_RemoteClientPlugin_ObservableReader_API.svg" alt="" >
+&lt;a data-fancybox="" href="/keyple-website/keyple-website/media/remote-plugin/component/Remote_Component_UC4_RemoteClientPlugin_ObservableReader_API.svg" >
+&lt;img src="/keyple-website/keyple-website/media/remote-plugin/component/Remote_Component_UC4_RemoteClientPlugin_ObservableReader_API.svg" alt="" >
 &lt;/a>
 &lt;/figure>
 &lt;h4 id="uc-5">UC 5&lt;/h4>
 &lt;figure >
-&lt;a data-fancybox="" href="/keyple-website/keyple-website/media/remote-se/component/Remote_Component_UC5_RemoteClientObservablePlugin_Reader_API.svg" >
-&lt;img src="/keyple-website/keyple-website/media/remote-se/component/Remote_Component_UC5_RemoteClientObservablePlugin_Reader_API.svg" alt="" >
+&lt;a data-fancybox="" href="/keyple-website/keyple-website/media/remote-plugin/component/Remote_Component_UC5_RemoteClientObservablePlugin_Reader_API.svg" >
+&lt;img src="/keyple-website/keyple-website/media/remote-plugin/component/Remote_Component_UC5_RemoteClientObservablePlugin_Reader_API.svg" alt="" >
 &lt;/a>
 &lt;/figure>
 &lt;h4 id="uc-6">UC 6&lt;/h4>
 &lt;figure >
-&lt;a data-fancybox="" href="/keyple-website/keyple-website/media/remote-se/component/Remote_Component_UC6_RemoteClientObservablePlugin_ObservableReader_API.svg" >
-&lt;img src="/keyple-website/keyple-website/media/remote-se/component/Remote_Component_UC6_RemoteClientObservablePlugin_ObservableReader_API.svg" alt="" >
+&lt;a data-fancybox="" href="/keyple-website/keyple-website/media/remote-plugin/component/Remote_Component_UC6_RemoteClientObservablePlugin_ObservableReader_API.svg" >
+&lt;img src="/keyple-website/keyple-website/media/remote-plugin/component/Remote_Component_UC6_RemoteClientObservablePlugin_ObservableReader_API.svg" alt="" >
 &lt;/a>
 &lt;/figure>
 &lt;h3 id="remote-pool-client-plugin">Remote Pool Client Plugin&lt;/h3>
 &lt;p>This plugin allows controlling from a &lt;strong>client&lt;/strong> terminal a pool of smart cards readers plugged into a &lt;strong>server&lt;/strong> terminal (e.g. HSM readers).&lt;/p>
 &lt;h4 id="uc-7">UC 7&lt;/h4>
 &lt;figure >
-&lt;a data-fancybox="" href="/keyple-website/keyple-website/media/remote-se/component/Remote_Component_UC7_RemotePoolClientPlugin_Reader_API.svg" >
-&lt;img src="/keyple-website/keyple-website/media/remote-se/component/Remote_Component_UC7_RemotePoolClientPlugin_Reader_API.svg" alt="" >
+&lt;a data-fancybox="" href="/keyple-website/keyple-website/media/remote-plugin/component/Remote_Component_UC7_RemotePoolClientPlugin_Reader_API.svg" >
+&lt;img src="/keyple-website/keyple-website/media/remote-plugin/component/Remote_Component_UC7_RemotePoolClientPlugin_Reader_API.svg" alt="" >
 &lt;/a>
 &lt;/figure>
 &lt;h2 id="network-configuration">Network configuration&lt;/h2>
@@ -1573,8 +1573,8 @@ width: 240px;
 &lt;/ul>
 &lt;p>Here is the minimal algorithm to implement in a context with a &lt;strong>single server instance&lt;/strong>:&lt;/p>
 &lt;figure >
-&lt;a data-fancybox="" href="/keyple-website/keyple-website/media/remote-se/sequence/Remote_Sequence_SyncNode_API.svg" >
-&lt;img src="/keyple-website/keyple-website/media/remote-se/sequence/Remote_Sequence_SyncNode_API.svg" alt="" >
+&lt;a data-fancybox="" href="/keyple-website/keyple-website/media/remote-plugin/sequence/Remote_Sequence_SyncNode_API.svg" >
+&lt;img src="/keyple-website/keyple-website/media/remote-plugin/sequence/Remote_Sequence_SyncNode_API.svg" alt="" >
 &lt;/a>
 &lt;/figure>
 &lt;p>In a context with several server instances, a mechanism must be implemented to ensure that all messages containing information about a &lt;code>serverNodeId&lt;/code> are routed to the server associated with a &lt;code>KeypleServerSyncNode&lt;/code> node having the &lt;code>serverNodeId&lt;/code>.&lt;/p>
@@ -1586,8 +1586,8 @@ width: 240px;
 &lt;/ul>
 &lt;p>Here is the minimal algorithm to implement:&lt;/p>
 &lt;figure >
-&lt;a data-fancybox="" href="/keyple-website/keyple-website/media/remote-se/sequence/Remote_Sequence_AsyncNode_API.svg" >
-&lt;img src="/keyple-website/keyple-website/media/remote-se/sequence/Remote_Sequence_AsyncNode_API.svg" alt="" >
+&lt;a data-fancybox="" href="/keyple-website/keyple-website/media/remote-plugin/sequence/Remote_Sequence_AsyncNode_API.svg" >
+&lt;img src="/keyple-website/keyple-website/media/remote-plugin/sequence/Remote_Sequence_AsyncNode_API.svg" alt="" >
 &lt;/a>
 &lt;/figure>
 &lt;h2 id="exchanged-data">Exchanged data&lt;/h2>
@@ -1595,8 +1595,8 @@ width: 240px;
 &lt;p>However, it is necessary in some contexts to access certain information such as the &lt;code>sessionId&lt;/code> in the case of asynchronous communication or the &lt;code>serverNodeId&lt;/code> in the case of synchronous communication with several server instances.&lt;/p>
 &lt;h2 id="public-global-api">Public Global API&lt;/h2>
 &lt;figure >
-&lt;a data-fancybox="" href="/keyple-website/keyple-website/media/remote-se/class/Remote_Class_API.svg" >
-&lt;img src="/keyple-website/keyple-website/media/remote-se/class/Remote_Class_API.svg" alt="" >
+&lt;a data-fancybox="" href="/keyple-website/keyple-website/media/remote-plugin/class/Remote_Class_API.svg" >
+&lt;img src="/keyple-website/keyple-website/media/remote-plugin/class/Remote_Class_API.svg" alt="" >
 &lt;/a>
 &lt;/figure></description></item><item><title>(WIP)Develop a Plugin</title><link>/keyple-website/docs/developer-guide/develop-plugin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/developer-guide/develop-plugin/</guid><description>&lt;p>This guide will provide nescessary steps to develop a Keyple plugin for a device. In order to flatten the learning curve, we&amp;rsquo;ll
 illustrate the creation processus using the implementation of the Android NFC Plugin and OMAPI plugins.
