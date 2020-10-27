@@ -6,38 +6,38 @@ Discover more about CNA here : &lt;a href="http://calypsonet-asso.org">http://ca
 &lt;p>Calypso Networks Association provides a
 &lt;a href="https://www.calypsonet-asso.org/content/calypso-test-kit" target="_blank" rel="noopener">Calypso Test Kit&lt;/a>.
 The Calypso Test Kit aims at helping ticketing system developers to fully experience
-Eclipse Keyple with a set of Calypso SAM and Calypso certified portable objects from
-several manufacturers in various configurations.&lt;/p></description></item><item><title>Keyple's main features</title><link>/keyple-website/what-is-keyple/main-features/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/what-is-keyple/main-features/</guid><description>&lt;p>The goal of Keyple™ is to allow developers to easily implement fast and secure off-line contactless transactions
+Eclipse Keyple™ with a set of Calypso® SAM and Calypso® certified portable objects from
+several manufacturers in various configurations.&lt;/p></description></item><item><title>Keyple's main features</title><link>/keyple-website/what-is-keyple/main-features/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/what-is-keyple/main-features/</guid><description>&lt;p>The goal of Eclipse Keyple™ is to allow developers to easily implement fast and secure off-line contactless transactions
 (using NFC cards, mobile phones, …) based on the Calypso standard.&lt;/p>
 &lt;p>More specifically, Keyple™ is a set of open source libraries that will initially be available in Java and C++,
 designed on the same mutual Object-Oriented Model compatible with any terminal architecture: mobile, embedded
 or server and Interoperable with any smart card reader solution: standard or proprietary, local or remote.&lt;/p>
 &lt;p>To fully understand how Keyple™ works, it is important to discern two main components of contactless ticketing technology:&lt;/p>
 &lt;ul>
-&lt;li>&lt;strong>Secure Elements (SE) readers&lt;/strong>: Readers are situated at the entrance and exit of events, venues and transport sites.
-For example, a smart reader could be a terminal, a portable scanning laser gun, or a swipe tablet area that is embedded
+&lt;li>&lt;strong>Smart Card Readers&lt;/strong>: Readers are situated at the entrance and exit of events, venues and transport sites.
+For example, a smart card reader could be a terminal, a portable scanning laser gun, or a swipe tablet area that is embedded
 into a door, vehicle or gate. Code is written for a terminal to set the parameters for allowing cards or apps to transmit
 ticketing information data. Sometimes in a distributed architecture system design, the code for the reader is not on the
 terminal, but in a cloud environment, so the reader sends the data to cloud-based architecture.&lt;/li>
-&lt;li>&lt;strong>Ticketing application&lt;/strong>: This is behind-the-scenes code that is able to take the data from the smart reader terminal
+&lt;li>&lt;strong>Ticketing application&lt;/strong>: This is behind-the-scenes code that is able to take the data from the smart card reader
 and, in milliseconds real-time, analyze the balance of the ticket, confirm the permissions for entry, and update the data
 on the ticket (for example, to confirm that the ticket holder can enter the gate or vehicle, and then to deduct the cost
 of the journey and calculate the new balance).&lt;/li>
 &lt;/ul>
 &lt;p>&lt;strong>According to this scheme, Keyple™ defines two layers:&lt;/strong>&lt;/p>
 &lt;ul>
-&lt;li>&lt;strong>SE readers&lt;/strong> are integrated through plugins implementing the SE Proxy API which manages the communications with
-a contactless secure element through ant type of contactless reader (local, remote, standard, proprietary…)&lt;/li>
-&lt;li>&lt;strong>Ticketing applications&lt;/strong> relies on a high-level Calypso processing API to manage Calypso commands &amp;amp; security features.
+&lt;li>&lt;strong>Smart Card readers&lt;/strong> are integrated through plugins implementing the SE Proxy API which manages the communications with
+a smart card through any type of contactless or contact reader (local, remote, standard, proprietary…)&lt;/li>
+&lt;li>&lt;strong>Ticketing applications&lt;/strong> relies on a high-level Calypso® processing API to manage Calypso® commands &amp;amp; security features.
 This API uses the SE Proxy API to communicate with the reader&lt;/li>
 &lt;/ul>
-&lt;p>Keyple™ comes with dedicated plugins that integrate directly with smartcard readers that have been built on standard
-software interfaces including PC/ SC, Android NFC, and Android OMAPI.&lt;/p>
-&lt;p>In cases where there is a distributed architecture design, Keyple™ includes a Remote Secure Element API plugin so that
-a smartcard terminal can be operated remotely, as if it were local to the terminal, and ensures that robust security and
+&lt;p>Keyple™ comes with dedicated plugins that integrate directly with smart card readers that have been built on standard
+software interfaces including PC/SC, Android NFC reader, and Android OMAPI.&lt;/p>
+&lt;p>In cases where there is a distributed architecture design, Keyple™ includes a Remote API plugin so that
+a smart card terminal can be operated remotely, as if it were local to the terminal, and ensures that robust security and
 speed is not sacrificed in a cloud-based system.&lt;/p>
 &lt;p>The Calypso Processing API is also available as a Keyple™ extension. This component carries out the terminal processing
-element of ticketing technology. Access to Calypso’s security features are automatically managed by the Keyple™ extension.&lt;/p></description></item><item><title>What is Calypso?</title><link>/keyple-website/what-is-keyple/what-is-calypso/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/what-is-keyple/what-is-calypso/</guid><description>&lt;p>Calypso® is a set of specifications describing a fast and secure off-line contactless transaction, between a portable object and a terminal.
+element of ticketing technology. Access to Calypso’s security features are automatically managed by the Keyple™ extension.&lt;/p></description></item><item><title>What is Calypso®?</title><link>/keyple-website/what-is-keyple/what-is-calypso/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/what-is-keyple/what-is-calypso/</guid><description>&lt;p>Calypso® is a set of specifications describing a fast and secure off-line contactless transaction, between a portable object and a terminal.
 It has been created for public transport ticketing at the end of the 1990s by some European public transport operators or authority
 (RATP and SNCF in Paris and all France, STIB in Brussels, OTLIS in Lisbon, ACTV in Venice, Konstanz in Germany), in order to create an open,
 interoperable and secure standard independent from industrials to ensure a real competition.&lt;/p>
@@ -46,7 +46,7 @@ It brings to his user a guarantee of security and interoperability which relies 
 (ISO 14443, ISO 7816-4, Global Platform). The Calypso® standard is managed by the Calypso Networks Association (CNA) ,
 which is led by transports operators and public authorities in order to ensure openness and independence from industrials
 in confront of other proprietary schemes.&lt;/p></description></item><item><title>Who is it for?</title><link>/keyple-website/what-is-keyple/who-is-it-for/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/what-is-keyple/who-is-it-for/</guid><description>&lt;p>Whether you are a transport authority or operator, a mobility provider, a system integrator, an event manager, a mobility aggregator
-or a multi-mobility startup, Keyple™ allows you to:&lt;/p>
+or a multi-mobility startup, Eclipse Keyple™ allows you to:&lt;/p>
 &lt;ul>
 &lt;li>Have easy access to a highly secure and interoperable standard, Calypso®.&lt;/li>
 &lt;li>Reduce your costs and accelerate your developments.&lt;/li>
@@ -54,17 +54,17 @@ or a multi-mobility startup, Keyple™ allows you to:&lt;/p>
 &lt;li>Quickly build new apps and integrations that conform to the Calypso standard and other ticketing schemas.&lt;/li>
 &lt;li>Use libraries to enable instant payments, remote top-ups, event and multimodal transport integrations, connection to park-and-ride services, and more.&lt;/li>
 &lt;li>Easily create applications or services compatible with existing card-centric or server-centric systems.&lt;/li>
-&lt;li>Benefit from a more diverse and easily collaborative network that encourages co-opetition in a multimodal market: compete where you can, collaborate when necessary to create integrated mobility customer journeys.&lt;/li>
-&lt;li>Easily migrate from an existing, closed ticketing schemes to Calypso, a high-end open ticketing, certified solution.&lt;/li>
+&lt;li>Benefit from a more diverse and easily collaborative network that encourages coopetition in a multimodal market: compete where you can, collaborate when necessary to create integrated mobility customer journeys.&lt;/li>
+&lt;li>Easily migrate from an existing, closed ticketing schemes to Calypso®, a high-end open ticketing, certified solution.&lt;/li>
 &lt;li>Harness the flexibility to introduce modern, mobile and new architecture systems while maintaining integrations to legacy infrastructure.&lt;/li>
 &lt;li>Ensure the sustainability and future-proofing of your ticketing system, as Keyple™ is compatible with any smart card reader and SIO-enabled terminal.&lt;/li>
 &lt;li>Unchain from vendor lock in, black box and single provider systems to an open solution with access to multiple suppliers.&lt;/li>
 &lt;li>Enable partnerships with multimodal transport, building facilities including parking, tourism operators and events to offer seamless, single ticketing across the end customer’s journey.&lt;/li>
 &lt;li>Easily integrate with public transport providers that are using the Calypso standard, today used in major cities around the world in over 25 countries.&lt;/li>
-&lt;/ul></description></item><item><title>Why trust Eclipse Keyple?</title><link>/keyple-website/what-is-keyple/why-trust/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/what-is-keyple/why-trust/</guid><description>&lt;p>Keyple™ is an Eclipse open source project developped and leaded by Calypso Networks Association, which has been the leader in contactless electronic
-ticketing transportation standards since 2003. For many years, our mission has been to create innovative solutions that are fully interoperable,
-reliable, secure, and open. We collaborate with a dynamic network of city leaders and transport authorities that are keen to work with system
-integrators with Calypso standard expertise.&lt;/p>
+&lt;/ul></description></item><item><title>Why trust Eclipse Keyple™?</title><link>/keyple-website/what-is-keyple/why-trust/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/what-is-keyple/why-trust/</guid><description>&lt;p>Eclipse Keyple™ is an Eclipse open source project developped and leaded by Calypso Networks Association, which has been the leader in contactless
+electronic ticketing transportation standards since 2003. For many years, our mission has been to create innovative solutions that are fully
+interoperable, reliable, secure, and open. We collaborate with a dynamic network of city leaders and transport authorities that are keen to work
+with system integrators with Calypso standard expertise.&lt;/p>
 &lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
 &lt;iframe src="https://www.youtube.com/embed/3CWNho1rrSw" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
 &lt;/div>
@@ -79,13 +79,13 @@ integrators with Calypso standard expertise.&lt;/p>
 &lt;tbody>
 &lt;tr>
 &lt;td>Interoperable with any smart card reader solution (standard/proprietary, local/remote)&lt;/td>
-&lt;td>Open source libraries in Java, C and C++&lt;/td>
+&lt;td>Open source libraries in Java and C++&lt;/td>
 &lt;td>Audit and certification&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Compatible with any terminal architecture (mobile, embedded, server)&lt;/td>
 &lt;td>Developer-friendly, up-to-date documentation, code samples and how-to guides&lt;/td>
-&lt;td>Permanent compliance to the latest Calypso release&lt;/td>
+&lt;td>Permanent compliance to the latest Calypso® release&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Options for creating add-on features that incorporate Calypso’s advanced security together with non-Calypso smart cards for ticketing and payment&lt;/td>
@@ -95,7 +95,7 @@ integrators with Calypso standard expertise.&lt;/p>
 &lt;tr>
 &lt;td>&lt;/td>
 &lt;td>Help desk-Separate maintenance for software and equipment&lt;/td>
-&lt;td>Online and offline trainings available that will help you get the most of Keyple&lt;/td>
+&lt;td>Online and offline trainings available that will help you get the most of Keyple™&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;/td>
@@ -108,13 +108,13 @@ However, in order for the concept of Mobility as a Service to become a reality, 
 rely on open standards, APIs and SDKs as well as Open Source technologies. This openness has already been a reality for several years in the field
 of passenger information and has enabled the explosion of rich and high-quality applications, thanks in particular to Open Data. Today, CNA is
 paving the way for ticketing to follow the same path, by making available for free the first fully Open Source API: Eclipse Keyple™.&lt;/p>
-&lt;p>Keyple™ accelerates the integration and development of ticketing applications by enabling multimodal transport services, public transport operators
-and event organizers to implement ticketing systems based on a common, open and modular base, while benefiting from Calypso®'s main features of
-reliability, security and interoperability.&lt;/p>
-&lt;p>Keyple™ transforms complex contactless ticketing, transportation and event access systems into a simple integration to manage terminal readers and
-portals that use smart cards and mobile applications to enter and exit.&lt;/p>
-&lt;p>As an open source technology, Keyple™ offers uniformity of structure but does not lock you into a specific ticketing system. Plugins are being created,
-or may be created by developers, to allow ticket processing integrating technologies other than Calypso, based on several programming languages.&lt;/p></description></item><item><title>Global Architecture of Keyple</title><link>/keyple-website/docs/architecture/keyple-global/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/architecture/keyple-global/</guid><description>&lt;p>&lt;img src="docs/img/Keyple-components.svg" alt="global architecture" title="keyple SDK global architecture">&lt;/p>
+&lt;p>Eclipse Keyple™ accelerates the integration and development of ticketing applications by enabling multimodal transport services, public transport
+operators and event organizers to implement ticketing systems based on a common, open and modular base, while benefiting from Calypso®'s main features
+of reliability, security and interoperability.&lt;/p>
+&lt;p>Eclipse Keyple™ transforms complex contactless ticketing, transportation and event access systems into a simple integration to manage terminal readers
+and portals that use smart cards and mobile applications to enter and exit.&lt;/p>
+&lt;p>As an open source technology, Eclipse Keyple™ offers uniformity of structure but does not lock you into a specific ticketing system. Plugins are being
+created, or may be created by developers, to allow ticket processing integrating technologies other than Calypso®, based on several programming languages.&lt;/p></description></item><item><title>Global Architecture of Keyple</title><link>/keyple-website/docs/architecture/keyple-global/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/architecture/keyple-global/</guid><description>&lt;p>&lt;img src="docs/img/Keyple-components.svg" alt="global architecture" title="keyple SDK global architecture">&lt;/p>
 &lt;p>The API is currently divided in two major layers:&lt;/p>
 &lt;ul>
 &lt;li>The ‘Keyple Core' : a Secure Element Proxy API which allows managing SE readers in a generic way, whaterver the reader driver or environment, and for standalone or distributed solution (
@@ -596,20 +596,21 @@ A ‘PO resource’ is the set of a Calypso PO and the reader on which it is sel
 &lt;blockquote>
 &lt;p>cf.
 &lt;a href="https://github.com/eclipse/keyple-java/blob/develop/java/example/calypso/pc/UseCase5_MultipleSession/src/main/java/org/eclipse/keyple/example/calypso/pc/usecase5/MultipleSession_Pcsc.java" target="_blank" rel="noopener">“Calypso Use Case 5 / PO Multiple Session&amp;quot;&lt;/a> example&lt;/p>
-&lt;/blockquote></description></item><item><title>Build your First Java Application</title><link>/keyple-website/docs/build-your-first-app/java-app/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/build-your-first-app/java-app/</guid><description>&lt;p>This getting stated contains one ready-to-execute JAVA example starting from a new Gradle project.&lt;/p>
+&lt;/blockquote></description></item><item><title>Build your First Java Application</title><link>/keyple-website/docs/build-your-first-app/java-app/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/build-your-first-app/java-app/</guid><description>&lt;p>This getting started contains one ready-to-execute JAVA example starting from a new Gradle project.&lt;/p>
 &lt;p>The example demonstrate Keyple capabilities with the Keyple PCSC plugin and PO/SAM provided in the Calypso Test Kit.&lt;/p>
 &lt;h2 id="build">Build&lt;/h2>
 &lt;p>The example can run on any machine: Linux, Windows and MacOS. If not installed in your machine, you will need to download :&lt;/p>
 &lt;p>Java 1.6 or newer&lt;/p>
-&lt;p>Gradle (any version) download&lt;/p>
+&lt;p>
+&lt;a href="https://gradle.org/install/" target="_blank" rel="noopener">Gradle (any version)&lt;/a>&lt;/p>
 &lt;p>We recommend that you use a Java IDE like Eclipse or Intellij to create your new Gradle project.&lt;/p>
 &lt;p>Create a new Gradle project.&lt;/p>
 &lt;p>Add the following statements to your build.gradle file to import Keyple components into your project:&lt;/p>
 &lt;pre>&lt;code class="language-java">repositories {
 //to import snapshots
-maven {url 'https://oss.sonatype.org/content/repositories/snapshots' }
+//maven {url 'https://oss.sonatype.org/content/repositories/snapshots' }
 //to import releases
-//maven { url 'https://oss.sonatype.org/content/repositories/releases' }
+maven { url 'https://oss.sonatype.org/content/repositories/releases' }
 }
 dependencies {
 //Keyple core is a mandatory library for using Keyple, in this case import the last version of keyple-java-core
@@ -626,286 +627,167 @@ implementation &amp;quot;org.slf4j:slf4j-simple:1.7.25&amp;quot;
 implementation &amp;quot;org.slf4j:slf4j-ext:1.7.25&amp;quot;
 }
 &lt;/code>&lt;/pre>
-&lt;p>Copy the source code below in a new Java Class named Demo_CalypsoTestKit_App2_Pcsc:&lt;/p>
-&lt;pre>&lt;code class="language-java">/********************************************************************************
-* Copyright (c) Calypso Networks Association 2020 https://www.calypsonet-asso.org/
+&lt;p>Copy the source code below in a new Java Class named DemoPoAuthentication:&lt;/p>
+&lt;pre>&lt;code class="language-java">/* **************************************************************************************
+* Copyright (c) 2020 Calypso Networks Association https://www.calypsonet-asso.org/
 *
-* See the NOTICE file(s) distributed with this work for additional information regarding copyright
-* ownership.
+* See the NOTICE file(s) distributed with this work for additional information
+* regarding copyright ownership.
 *
-* This program and the accompanying materials are made available under the terms of the Eclipse
-* Public License 2.0 which is available at http://www.eclipse.org/legal/epl-2.0
+* This program and the accompanying materials are made available under the terms of the
+* Eclipse Public License 2.0 which is available at http://www.eclipse.org/legal/epl-2.0
 *
 * SPDX-License-Identifier: EPL-2.0
-********************************************************************************/
-import org.eclipse.keyple.calypso.command.po.parser.ReadDataStructure;
-import org.eclipse.keyple.calypso.command.po.parser.ReadRecordsRespPars;
-import org.eclipse.keyple.calypso.command.sam.SamRevision;
+************************************************************************************** */
 import org.eclipse.keyple.calypso.transaction.*;
+import org.eclipse.keyple.calypso.transaction.PoSelector.*;
+import org.eclipse.keyple.calypso.command.sam.SamRevision;
 import org.eclipse.keyple.core.selection.*;
 import org.eclipse.keyple.core.seproxy.*;
-import org.eclipse.keyple.core.seproxy.exception.KeypleBaseException;
-import org.eclipse.keyple.core.seproxy.exception.KeypleReaderException;
-import org.eclipse.keyple.core.seproxy.exception.NoStackTraceThrowable;
-import org.eclipse.keyple.core.seproxy.protocol.SeCommonProtocols;
+import org.eclipse.keyple.core.seproxy.SeSelector.*;
 import org.eclipse.keyple.core.util.ByteArrayUtil;
-import org.eclipse.keyple.plugin.pcsc.PcscPlugin;
-import org.eclipse.keyple.plugin.pcsc.PcscPluginFactory;
-import org.eclipse.keyple.plugin.pcsc.PcscProtocolSetting;
-import org.eclipse.keyple.plugin.pcsc.PcscReader;
+import org.eclipse.keyple.plugin.pcsc.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-public class Demo_CalypsoTestKit_App2_Pcsc {
-private static final Logger logger =
-LoggerFactory.getLogger(Demo_CalypsoTestKit_App2_Pcsc.class);
-/* Plugin name */
-private final static String PLUGIN_NAME = &amp;quot;PcscPlugin&amp;quot;;
-/* PO Reader name */
-private final static String PO_READER_NAME = &amp;quot;ASK LoGO 0&amp;quot;;
-/* SAM Reader name */
-private final static String SAM_READER_NAME = &amp;quot;Identive CLOUD 2700 R Smart Card Reader 0&amp;quot;;
-/* AID: Keyple test kit profile 1, Application 2 */
+public class DemoPoAuthentication {
+private static final Logger logger = LoggerFactory.getLogger(DemoPoAuthentication.class);
+// PO Reader name
+private final static String PO_READER_NAME = &amp;quot;XXX&amp;quot;;
+// SAM Reader name
+private final static String SAM_READER_NAME = &amp;quot;XXX&amp;quot;;
+// Keyple test kit profile 1, Application 2
 private final static String AID = &amp;quot;315449432E49434131&amp;quot;;
 private final static byte RECORD_NUMBER_1 = 1;
-private final static byte SFI_EnvironmentAndHolder = (byte) 0x07;
-public static void main(String[] args) throws KeypleBaseException, NoStackTraceThrowable {
-/* Get the instance of the SeProxyService (Singleton pattern) */
+private final static byte SFI_Environment = (byte) 0x07;
+public static void main(String[] args) {
+// Get the instance of the SeProxyService (Singleton pattern)
 SeProxyService seProxyService = SeProxyService.getInstance();
-logger.info(
-&amp;quot;=================================================================================&amp;quot;);
-logger.info(
-&amp;quot;= Configuration of the PO &amp;amp; SAM Readers =&amp;quot;);
-logger.info(
-&amp;quot;=================================================================================&amp;quot;);
-/* Assign PcscPlugin to the SeProxyService */
-seProxyService.registerPlugin(new PcscPluginFactory());
-/* Get the PcscPlugin */
-ReaderPlugin plugin = seProxyService.getPlugin(PcscPlugin.PLUGIN_NAME);
-/* Get the PO reader */
-SeReader poReader = plugin.getReader(PO_READER_NAME);
-/* Sets the PO reader parameters for contactless secure elements */
-setContactlessSettings(poReader);
-/* Get a SAM reader */
-SeReader samReader = plugin.getReader(SAM_READER_NAME);
-/* Sets the reader parameters for contacts secure elements */
-setContactsSettings(samReader);
-logger.info(
-&amp;quot;=================================================================================&amp;quot;);
-logger.info(
-&amp;quot;= Opening logical channel with the SAM =&amp;quot;);
-logger.info(
-&amp;quot;=================================================================================&amp;quot;);
-/*
-* Open logical channel for the SAM inserted in the reader
-* (We expect the right is inserted)
-*/
-SamResource samResource = checkSamAndOpenChannel(samReader);
-/* Check if the readers exists */
-if (poReader == null || samResource == null) {
-throw new IllegalStateException(&amp;quot;Bad PO or SAM reader setup&amp;quot;);
-}
-logger.info(&amp;quot;======= Secure reading of Environment and Holder file &amp;amp; Po Authentication =======&amp;quot;);
-logger.info(&amp;quot;= PO Reader NAME = {}&amp;quot;, poReader.getName());
-logger.info(&amp;quot;= SAM Reader NAME = {}&amp;quot;, samResource.getSeReader().getName());
-/* Check if a PO is present in the reader */
-if (poReader.isSePresent()) {
-logger.info(
-&amp;quot;=================================================================================&amp;quot;);
-logger.info(
-&amp;quot;= Start of the Calypso PO processing. =&amp;quot;);
-logger.info(
-&amp;quot;=================================================================================&amp;quot;);
-logger.info(
-&amp;quot;= 1st PO exchange =&amp;quot;);
-logger.info(
-&amp;quot;= AID based selection =&amp;quot;);
-logger.info(
-&amp;quot;=================================================================================&amp;quot;);
-/*
-* Prepare a Calypso PO selection
-*/
-SeSelection seSelection = new SeSelection();
-/*
-* Setting of an AID based selection of a Calypso REV3 PO
-*
-* Select the first application matching the selection AID whatever the SE communication protocol
-* Keep the logical channel open after the selection
-*
-* Calypso PO selection: configures a PoSelectionRequest with all the desired attributes to
-* make the selection and read additional information afterwards
-*/
-PoSelectionRequest poSelectionRequest = new PoSelectionRequest(
-new PoSelector( //the selector to target a particular SE
-SeCommonProtocols.PROTOCOL_ISO14443_4, // the SE communication protocol
-null, // the ATR filter
-new PoSelector.PoAidSelector( // the AID selection data
-new SeSelector.AidSelector.IsoAid(AID), // the application identifier
-PoSelector.InvalidatedPo.REJECT), // an enum value to indicate if an invalidated PO should be accepted or not
-&amp;quot;AID: &amp;quot;+ AID), // information string (to be printed in logs)
-ChannelState.KEEP_OPEN); // tell if the channel is to be closed or not after the command
-/*
-* Add the selection case to the current selection (we could have added other cases
-* here)
-*/
-seSelection.prepareSelection(poSelectionRequest);
-/*
-* Actual PO communication: operate through a single request the Calypso PO selection
-* and the file read
-*/
-SelectionsResult selectionsResult = seSelection.processExplicitSelection(poReader);
+logger.info(&amp;quot;============================================================================&amp;quot;);
+logger.info(&amp;quot;= Get and Configure the PO &amp;amp; SAM Readers =&amp;quot;);
+logger.info(&amp;quot;============================================================================&amp;quot;);
+// Register the PcscPlugin with SeProxyService, get the corresponding generic ReaderPlugin
+ReaderPlugin readerPlugin = seProxyService.registerPlugin(new PcscPluginFactory());
+// Get the PO reader
+SeReader poReader = readerPlugin.getReader(PO_READER_NAME);
+// Configure the PO reader parameters
+((PcscReader)poReader).setContactless(true);
+// Get a SAM reader
+SeReader samReader = readerPlugin.getReader(SAM_READER_NAME);
+// Eventually, configure the SAM reader parameters
+// ...
+logger.info(&amp;quot;============================================================================&amp;quot;);
+logger.info(&amp;quot;= Create a SAM resource after selecting the SAM =&amp;quot;);
+logger.info(&amp;quot;============================================================================&amp;quot;);
+// Prepare the selector to ensure the correct SAM is used
+SamSelector samSelector = SamSelector.builder().samRevision(SamRevision.AUTO).build();
+// Make the SAM selection
+SeSelection samSelection = new SeSelection();
+samSelection.prepareSelection(new SamSelectionRequest(samSelector));
+CalypsoSam calypsoSam;
+if (samReader.isSePresent()) {
+SelectionsResult selectionsResult = samSelection.processExplicitSelection(samReader);
 if (selectionsResult.hasActiveSelection()) {
-MatchingSelection matchingSelection = selectionsResult.getActiveSelection();
-CalypsoPo calypsoPo = (CalypsoPo) matchingSelection.getMatchingSe();
+calypsoSam = (CalypsoSam) selectionsResult.getActiveMatchingSe();
+} else {
+throw new IllegalStateException(&amp;quot;SAM matching failed!&amp;quot;);
+}
+} else {
+throw new IllegalStateException(&amp;quot;No SAM is present in the reader &amp;quot; + samReader.getName());
+}
+// Associate the calypsoSam and the samReader to create the samResource
+SeResource&amp;lt;CalypsoSam&amp;gt; samResource = new SeResource&amp;lt;CalypsoSam&amp;gt;(samReader, calypsoSam);
+// Prepare the security settings used during the Calypso transaction
+PoSecuritySettings poSecuritySettings = new PoSecuritySettings.PoSecuritySettingsBuilder(samResource).build();
+logger.info(&amp;quot;============================================================================&amp;quot;);
+logger.info(&amp;quot;= Display basic information about the readers and SAM =&amp;quot;);
+logger.info(&amp;quot;============================================================================&amp;quot;);
+logger.info(
+&amp;quot;= PO Reader Name = {}&amp;quot;,
+poReader.getName());
+String samSerialNumber = ByteArrayUtil.toHex(samResource.getMatchingSe().getSerialNumber());
+logger.info(
+&amp;quot;= SAM Reader Name = {}, Serial Number = {}&amp;quot;,
+samResource.getSeReader().getName(),
+samSerialNumber);
+logger.info(&amp;quot;============================================================================&amp;quot;);
+logger.info(&amp;quot;= Prepare the Calypso PO selection =&amp;quot;);
+logger.info(&amp;quot;============================================================================&amp;quot;);
+// Prepare a Calypso PO selection
+SeSelection seSelection = new SeSelection();
+// Setting of an AID based selection of a Calypso Revision 3.1 PO
+//
+// Select the first application matching the selection AID whatever the card communication protocol
+// Keep the logical channel open after the selection
+//
+// Calypso selection: configures a PoSelectionRequest with all the desired attributes to
+// make the selection and read additional information afterwards
+PoSelectionRequest poSelectionRequest = new PoSelectionRequest(
+PoSelector.builder()
+.aidSelector(AidSelector.builder().aidToSelect(AID).build()) // the application identifier
+.invalidatedPo(InvalidatedPo.REJECT) // to indicate if an invalidated PO should be accepted or not
+.build());
+// Add the selection case to the current selection
+// (we could have added other cases)
+seSelection.prepareSelection(poSelectionRequest);
+logger.info(&amp;quot;============================================================================&amp;quot;);
+logger.info(&amp;quot;= Check if a PO is present in the reader =&amp;quot;);
+logger.info(&amp;quot;============================================================================&amp;quot;);
+if (poReader.isSePresent()) {
+logger.info(&amp;quot;============================================================================&amp;quot;);
+logger.info(&amp;quot;= Start of the Calypso PO processing =&amp;quot;);
+logger.info(&amp;quot;============================================================================&amp;quot;);
+logger.info(&amp;quot;= 1st PO exchange =&amp;quot;);
+logger.info(&amp;quot;= AID based selection =&amp;quot;);
+logger.info(&amp;quot;============================================================================&amp;quot;);
+try {
+// Actual PO communication: operate through a single request the Calypso PO selection
+CalypsoPo calypsoPo =
+(CalypsoPo) seSelection.processExplicitSelection(poReader).getActiveMatchingSe();
 logger.info(&amp;quot;The selection of the PO has succeeded.&amp;quot;);
-logger.info(
-&amp;quot;=================================================================================&amp;quot;);
-logger.info(
-&amp;quot;= 2nd PO exchange =&amp;quot;);
-logger.info(
-&amp;quot;= Open a secure session =&amp;quot;);
-logger.info(
-&amp;quot;= Reading of Environment and Holder file (SFI=07h) =&amp;quot;);
-logger.info(
-&amp;quot;=================================================================================&amp;quot;);
-PoTransaction poTransaction = new PoTransaction(new PoResource(poReader, calypsoPo),
-samResource, new SecuritySettings());
-/*
-* Prepare the reading order and keep the associated parser for later use once the
-* transaction has been processed.
-*/
-int readEnvironmentAndHolderParserIndex = poTransaction.prepareReadRecordsCmd(
-SFI_EnvironmentAndHolder, // the sfi top select
-ReadDataStructure.SINGLE_RECORD_DATA, // read mode enum to indicate a SINGLE, MULTIPLE or COUNTER read
-RECORD_NUMBER_1, // the record number to read (or first record to read in case of several records)
-String.format( // extra information included in the logs (can be null or empty)
-&amp;quot;EventLog (SFI=%02X, recnbr=%d))&amp;quot;,
-SFI_EnvironmentAndHolder,
-RECORD_NUMBER_1));
-/*
-* Open Session for the debit key
-*/
-boolean poProcessStatus = poTransaction.processOpening(
-PoTransaction.ModificationMode.ATOMIC,
-PoTransaction.SessionAccessLevel.SESSION_LVL_DEBIT, (byte) 0, (byte) 0);
-if (!poProcessStatus) {
-throw new IllegalStateException(&amp;quot;processingOpening failure.&amp;quot;);
+logger.info(&amp;quot;============================================================================&amp;quot;);
+logger.info(&amp;quot;= 2nd PO exchange =&amp;quot;);
+logger.info(&amp;quot;= Open a Calypso secure session =&amp;quot;);
+logger.info(&amp;quot;= Reading of Environment file (SFI=07h) =&amp;quot;);
+logger.info(&amp;quot;============================================================================&amp;quot;);
+// Create a PoTransaction object to manage the Calypso transaction
+PoTransaction poTransaction = new PoTransaction(
+new SeResource&amp;lt;CalypsoPo&amp;gt;(poReader, calypsoPo),
+poSecuritySettings);
+// Read the Environment file at the Session Opening
+// (we could have added other commands)
+poTransaction.prepareReadRecordFile(
+SFI_Environment, // the sfi to select
+RECORD_NUMBER_1);
+// Open Session with the debit key
+poTransaction.processOpening(PoTransaction.SessionSetting.AccessLevel.SESSION_LVL_DEBIT);
+// Get the Environment data
+ElementaryFile efEnvironment = calypsoPo.getFileBySfi(SFI_Environment);
+String environmentLog = ByteArrayUtil.toHex(efEnvironment.getData().getContent());
+logger.info(&amp;quot;File Environment log: {}&amp;quot;, environmentLog);
+if (!calypsoPo.isDfRatified()) {
+logger.info(&amp;quot;============= Previous Calypso Secure Session was not ratified =============&amp;quot;);
 }
-if (!poTransaction.wasRatified()) {
-logger.info(
-&amp;quot;=================== Previous Secure Session was not ratified ====================&amp;quot;);
+logger.info(&amp;quot;============================================================================&amp;quot;);
+logger.info(&amp;quot;= 3th PO exchange =&amp;quot;);
+logger.info(&amp;quot;= Close the Calypso secure session =&amp;quot;);
+logger.info(&amp;quot;============================================================================&amp;quot;);
+// To close the channel with the PO after the closing
+poTransaction.prepareReleasePoChannel();
+// Close the Calypso Secure Session
+// A ratification command will be sent (CONTACTLESS_MODE)
+poTransaction.processClosing();
+logger.info(&amp;quot;============================================================================&amp;quot;);
+logger.info(&amp;quot;= The Calypso secure session ended successfully =&amp;quot;);
+logger.info(&amp;quot;= (Successful mutual authentication) =&amp;quot;);
+logger.info(&amp;quot;= End of the Calypso PO processing =&amp;quot;);
+logger.info(&amp;quot;============================================================================&amp;quot;);
+} catch (Exception e) {
+logger.error(&amp;quot;Exception: {}&amp;quot;, e.getMessage());
 }
-/*
-* Retrieve the data read from the parser updated during the transaction process
-*/
-byte EnvironmentAndHolderLog[] = (((ReadRecordsRespPars) poTransaction
-.getResponseParser(readEnvironmentAndHolderParserIndex)).getRecords())
-.get((int) RECORD_NUMBER_1);
-/* Log the result */
-logger.info(&amp;quot;Environment And Holder file data: {}&amp;quot;, ByteArrayUtil.toHex(EnvironmentAndHolderLog));
-logger.info(
-&amp;quot;=================================================================================&amp;quot;);
-logger.info(
-&amp;quot;= 3th PO exchange =&amp;quot;);
-logger.info(
-&amp;quot;= Close the secure session =&amp;quot;);
-logger.info(
-&amp;quot;=================================================================================&amp;quot;);
-/*
-* Close the Secure Session.
-* A ratification command will be sent (CONTACTLESS_MODE).
-*/
-poProcessStatus = poTransaction.processClosing(ChannelState.CLOSE_AFTER);
-if (!poProcessStatus) {
-throw new IllegalStateException(&amp;quot;processClosing failure.&amp;quot;);
-}
-logger.info(
-&amp;quot;=================================================================================&amp;quot;);
-logger.info(
-&amp;quot;= Successful mutual authentication =&amp;quot;);
-logger.info(
-&amp;quot;= End of the Calypso PO processing =&amp;quot;);
-logger.info(
-&amp;quot;=================================================================================&amp;quot;);
 } else {
 logger.error(&amp;quot;The selection of the PO has failed.&amp;quot;);
 }
-} else {
-logger.error(&amp;quot;No PO were detected.&amp;quot;);
-}
 System.exit(0);
-}
-/**
-* Sets the reader parameters for contactless secure elements
-*
-* @param reader the reader to configure
-* @throws KeypleBaseException in case of an error while settings the parameters
-*/
-private static void setContactlessSettings(SeReader reader) throws KeypleBaseException {
-/* Enable logging */
-reader.setParameter(PcscReader.SETTING_KEY_LOGGING, &amp;quot;true&amp;quot;);
-/* Contactless SE works with T1 protocol */
-reader.setParameter(PcscReader.SETTING_KEY_PROTOCOL, PcscReader.SETTING_PROTOCOL_T1);
-/*
-* PC/SC card access mode:
-* The PO reader is set to EXCLUSIVE mode to avoid side effects during the selection step
-* that may result in session failures.
-*/
-reader.setParameter(PcscReader.SETTING_KEY_MODE, PcscReader.SETTING_MODE_EXCLUSIVE);
-/* Set the PO reader protocol flag */
-reader.addSeProtocolSetting(
-SeCommonProtocols.PROTOCOL_ISO14443_4,
-PcscProtocolSetting.PCSC_PROTOCOL_SETTING.get(SeCommonProtocols.PROTOCOL_ISO14443_4));
-}
-/**
-* Sets the reader parameters for contacts secure elements
-*
-* @param reader the reader to configure
-* @throws KeypleBaseException in case of an error while settings the parameters
-*/
-private static void setContactsSettings(SeReader reader) throws KeypleBaseException {
-/* Enable logging */
-reader.setParameter(PcscReader.SETTING_KEY_LOGGING, &amp;quot;true&amp;quot;);
-/* Contactless SE works with T0 protocol */
-reader.setParameter(PcscReader.SETTING_KEY_PROTOCOL, PcscReader.SETTING_PROTOCOL_T0);
-/*
-* PC/SC card access mode:
-* The SAM is left in the SHARED mode (by default) to avoid automatic resets due to the
-* limited time between two consecutive exchanges granted by Windows.
-*/
-reader.setParameter(PcscReader.SETTING_KEY_MODE, PcscReader.SETTING_MODE_SHARED);
-/* Set the SAM reader protocol flag */
-reader.addSeProtocolSetting(
-SeCommonProtocols.PROTOCOL_ISO7816_3,
-PcscProtocolSetting.PCSC_PROTOCOL_SETTING.get(SeCommonProtocols.PROTOCOL_ISO7816_3));
-}
-/**
-* Check SAM presence and consistency and return a SamResource when everything is correct.
-*
-* Throw an exception if the expected SAM is not available
-*
-* @param samReader the SAM reader
-*/
-private static SamResource checkSamAndOpenChannel(SeReader samReader) {
-/*
-* Check the availability of the SAM doing a ATR based selection,
-* open its physical and logical channels,
-* keep it open
-*/
-SeSelection samSelection = new SeSelection();
-SamSelector samSelector = new SamSelector(SamRevision.C1, &amp;quot;.*&amp;quot;, &amp;quot;Selection SAM C1&amp;quot;);
-/* Prepare selector, ignore AbstractMatchingSe here */
-samSelection.prepareSelection(new SamSelectionRequest(samSelector, ChannelState.KEEP_OPEN));
-CalypsoSam calypsoSam;
-try {
-calypsoSam = (CalypsoSam) samSelection.processExplicitSelection(samReader)
-.getActiveSelection().getMatchingSe();
-if (!calypsoSam.isSelected()) {
-throw new IllegalStateException(&amp;quot;Unable to open a logical channel for SAM!&amp;quot;);
-}
-} catch (KeypleReaderException e) {
-throw new IllegalStateException(&amp;quot;SAM Reader exception: &amp;quot; + e.getMessage());
-}
-return new SamResource(samReader, calypsoSam);
 }
 }
 &lt;/code>&lt;/pre>
@@ -915,7 +797,7 @@ return new SamResource(samReader, calypsoSam);
 # Default logging detail level for all instances of SimpleLogger.
 # Must be one of (&amp;quot;trace&amp;quot;, &amp;quot;debug&amp;quot;, &amp;quot;info&amp;quot;, &amp;quot;warn&amp;quot;, or &amp;quot;error&amp;quot;).
 # If not specified, defaults to &amp;quot;info&amp;quot;.
-org.slf4j.simpleLogger.defaultLogLevel=trace
+org.slf4j.simpleLogger.defaultLogLevel=debug
 # Logging detail level for a SimpleLogger instance named &amp;quot;xxxxx&amp;quot;.
 # Must be one of (&amp;quot;trace&amp;quot;, &amp;quot;debug&amp;quot;, &amp;quot;info&amp;quot;, &amp;quot;warn&amp;quot;, or &amp;quot;error&amp;quot;).
 # If not specified, the default logging detail level is used.
@@ -949,12 +831,13 @@ private final static String PO_READER_NAME = &amp;quot;XXX&amp;quot;;
 /* SAM Reader name */
 private final static String SAM_READER_NAME = &amp;quot;XXX&amp;quot;;
 &lt;/code>&lt;/pre>
-&lt;p>If you don’t know the reader name, run the application in debug mode and get the reader name in plugin variable returned by:&lt;/p>
-&lt;blockquote>
-&lt;p>seProxyService.getPlugin(PLUGIN_NAME) methode: plugin -&amp;gt; readers -&amp;gt; X -&amp;gt; terminal -&amp;gt; name .&lt;/p>
-&lt;/blockquote>
+&lt;p>If you don’t know the reader name, run the application in debug mode and get the reader name in plugin variable&lt;/p>
 &lt;p>Run the application.&lt;/p>
-&lt;p>Note: All project dependencies, including Keyple components, are downloaded during the first run, which can take several minutes.&lt;/p></description></item><item><title>Build your First Android Application</title><link>/keyple-website/docs/build-your-first-app/android-app/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/build-your-first-app/android-app/</guid><description>&lt;h1 id="introduction">Introduction&lt;/h1>
+&lt;div class="alert alert-note">
+&lt;div>
+All project dependencies, including Keyple components, are downloaded during the first run, which can take several minutes.
+&lt;/div>
+&lt;/div></description></item><item><title>Build your First Android Application</title><link>/keyple-website/docs/build-your-first-app/android-app/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/build-your-first-app/android-app/</guid><description>&lt;h1 id="introduction">Introduction&lt;/h1>
 &lt;h2 id="overview">Overview&lt;/h2>
 &lt;p>Keyple SDK is supported by the Operating System Android. As Keyple request low level reader access, the key features of
 the SDK relies on components called &amp;lsquo;Plugins&amp;rsquo;.&lt;/p>
@@ -1233,7 +1116,7 @@ ObservableReader.NotificationMode.MATCHED_ONLY)
 poReader.startSeDetection(ObservableReader.PollingMode.REPEATING)
 &lt;/code>&lt;/pre>
 &lt;p>#FAQ:&lt;/p>
-&lt;p>When should I use the Selection API instead of SeProxy API?&lt;/p></description></item><item><title>Build your First C++ Application</title><link>/keyple-website/docs/build-your-first-app/cpp-app/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/build-your-first-app/cpp-app/</guid><description/></item><item><title>(WIP)Develop a Local Ticketing Application</title><link>/keyple-website/docs/developer-guide/develop-ticketing-app-local/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/developer-guide/develop-ticketing-app-local/</guid><description>&lt;h2 id="test-shortcode-java-kotlin-cpp">Test shortcode &amp;ldquo;java-kotlin-cpp&amp;rdquo;&lt;/h2>
+&lt;p>When should I use the Selection API instead of SeProxy API?&lt;/p></description></item><item><title>Build your First C++ Application</title><link>/keyple-website/docs/build-your-first-app/cpp-app/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/build-your-first-app/cpp-app/</guid><description/></item><item><title>Develop a Local Ticketing Application</title><link>/keyple-website/docs/developer-guide/develop-ticketing-app-local/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/developer-guide/develop-ticketing-app-local/</guid><description>&lt;h2 id="test-shortcode-java-kotlin-cpp">Test shortcode &amp;ldquo;java-kotlin-cpp&amp;rdquo;&lt;/h2>
 &lt;section class="project-tab" id="tabs">
 &lt;div class="container" style="margin: 0; padding: 0">
 &lt;div class="flex-row">
@@ -2058,7 +1941,7 @@ width: 240px;
 &lt;li>
 &lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/component/keyple-plugin/remote-plugin/core/README.md" target="_blank" rel="noopener">Core Lib
 &lt;i class="fab fa-github pr-1 fa-fw">&lt;/i>&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>(WIP)Develop a Plugin</title><link>/keyple-website/docs/developer-guide/develop-plugin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/developer-guide/develop-plugin/</guid><description>&lt;p>This guide will provide nescessary steps to develop a Keyple plugin for a device. In order to flatten the learning curve, we&amp;rsquo;ll
+&lt;/ul></description></item><item><title>Develop a Plugin</title><link>/keyple-website/docs/developer-guide/develop-plugin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/developer-guide/develop-plugin/</guid><description>&lt;p>This guide will provide nescessary steps to develop a Keyple plugin for a device. In order to flatten the learning curve, we&amp;rsquo;ll
 illustrate the creation processus using the implementation of the Android NFC Plugin and OMAPI plugins.
 This plugins can be consulted with the keyple-java/android repository.&lt;/p>
 &lt;h2 id="imports">Imports&lt;/h2>
@@ -2144,7 +2027,7 @@ throw KeypleReaderIOException(&amp;quot;Error while opening physical channel&amp
 &lt;li>Smart Selection Reader: Allow to use native SE selection process&lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;/ul></description></item><item><title>(WIP)Develop an Extension</title><link>/keyple-website/docs/developer-guide/develop-extension/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/developer-guide/develop-extension/</guid><description/></item><item><title>Migration Guide - Keyple Java 0.8.1 to 0.9.0</title><link>/keyple-website/docs/developer-guide/migration-0.8.1-to-0.9.0/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/developer-guide/migration-0.8.1-to-0.9.0/</guid><description>&lt;p>This guide is intended to help a user of version 0.8.1 of Keyple Java to upgrade his application to the 0.9.0 version of the library.&lt;/p>
+&lt;/ul></description></item><item><title>Develop an Extension</title><link>/keyple-website/docs/developer-guide/develop-extension/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/developer-guide/develop-extension/</guid><description/></item><item><title>Migration Guide - Keyple Java 0.8.1 to 0.9.0</title><link>/keyple-website/docs/developer-guide/migration-0.8.1-to-0.9.0/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/developer-guide/migration-0.8.1-to-0.9.0/</guid><description>&lt;p>This guide is intended to help a user of version 0.8.1 of Keyple Java to upgrade his application to the 0.9.0 version of the library.&lt;/p>
 &lt;p>From a user API point of view, the changes relate to the following topics:&lt;/p>
 &lt;ul>
 &lt;li>
@@ -2373,19 +2256,23 @@ ByteArrayUtil.toHex(entry.getValue()));
 &lt;p>Catching exceptions is therefore now optional.&lt;/p>
 &lt;p>However, it is possible to selectively catch certain exceptions in order to deal with particular cases.&lt;/p>
 &lt;p>The new hierarchy of Keyple exceptions is shown
-&lt;a href="https://keyple.atlassian.net/projects/KEYP/issues/KEYP-154?filter=allissues&amp;amp;orderby=priority%20DESC&amp;amp;keyword=exceptions" target="_blank" rel="noopener">here&lt;/a>&lt;/p></description></item><item><title>Webinar Eclipse Keyple for Developers, Thursday, October 15, 2020</title><link>/keyple-website/post/webinar-eclipse-keyple-developers-oct15-2020/</link><pubDate>Fri, 25 Sep 2020 14:57:23 +0200</pubDate><guid>/keyple-website/post/webinar-eclipse-keyple-developers-oct15-2020/</guid><description>&lt;h2 id="are-you-a-mobility-aggregator-a-system-integrator-an-event-manager--a-developer-or-a-multi-mobility-startup">Are you a mobility aggregator, a system integrator, an event manager, a developer or a multi-mobility startup?&lt;/h2>
+&lt;a href="https://keyple.atlassian.net/projects/KEYP/issues/KEYP-154?filter=allissues&amp;amp;orderby=priority%20DESC&amp;amp;keyword=exceptions" target="_blank" rel="noopener">here&lt;/a>&lt;/p></description></item><item><title>Webinar Eclipse Keyple™ for Developers, Thursday, October 15, 2020</title><link>/keyple-website/post/webinar-eclipse-keyple-developers-oct15-2020/</link><pubDate>Fri, 25 Sep 2020 14:57:23 +0200</pubDate><guid>/keyple-website/post/webinar-eclipse-keyple-developers-oct15-2020/</guid><description>&lt;h2 id="are-you-a-mobility-aggregator-a-system-integrator-an-event-manager-a-developer-or-a-multi-mobility-startup">Are you a mobility aggregator, a system integrator, an event manager, a developer or a multi-mobility startup?&lt;/h2>
 &lt;p>Do you want to have easy access to a highly secure and interoperable standard, Calypso®, to reduce your costs and
 accelerate your developments, to move from a black box to an open and modular solution with access to multiple
 hardware platforms, to enable partnerships with multimodal transport, building facilities including parking,
-tourism and events… or just discover what Eclipse Keyple is and how it works?&lt;/p>
-&lt;p>Join the Calypso Technical Webinar about Eclipse Keyple.&lt;/p>
+tourism and events… or just discover what Eclipse Keyple™ is and how it works?&lt;/p>
+&lt;p>On October 15, 2020, we organized a webinar Eclipse Keyple™ for Developers!&lt;/p>
+&lt;p>See the whole event on video:
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+&lt;iframe src="https://www.youtube.com/embed/v6EKq6ZwJUc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
+&lt;/div>
+&lt;/p>
 &lt;p>
-&lt;i class="fas fa-calendar pr-1 fa-fw">&lt;/i> &lt;strong>Tuesday 15th October 2020&lt;/strong>&lt;/p>
-&lt;p>
-&lt;i class="fas fa-clock pr-1 fa-fw">&lt;/i> &lt;strong>3.00 - 5.00 PM CET&lt;/strong>&lt;/p></description></item><item><title>Release 0.9.0 Java on the field</title><link>/keyple-website/post/release-0-9-0-java/</link><pubDate>Fri, 18 Sep 2020 14:57:56 +0200</pubDate><guid>/keyple-website/post/release-0-9-0-java/</guid><description>&lt;p>We are pleased to announce that the version 0.9.0 of the Java implementation of Eclipse Keyple was released September 11th, 2020.&lt;/p>
-&lt;p>The main improvement on the Calypso extension is the addition of high-level API to manage the portable object response.
-Now the APDU responses of the Calypso cards are automatically parsed to fill card images.
-Currently all the components of Eclipse Keyple Java are following the same versioning.&lt;/p>
+&lt;i class="fas fa-file-pdf pr-1 fa-fw">&lt;/i> Discover the
+&lt;a href="https://drive.google.com/file/d/1HdrThZD70bFIun8jFLYKfgozyCvX9SQg/view" target="_blank" rel="noopener">presentation&lt;/a>.&lt;/p></description></item><item><title>Release 0.9.0 Java on the field</title><link>/keyple-website/post/release-0-9-0-java/</link><pubDate>Fri, 18 Sep 2020 14:57:56 +0200</pubDate><guid>/keyple-website/post/release-0-9-0-java/</guid><description>&lt;p>We are pleased to announce that the version 0.9.0 of the Java implementation of Eclipse Keyple™ was released September 11th, 2020.&lt;/p>
+&lt;p>The main improvement on the Calypso® extension is the addition of high-level API to manage the portable object response.
+Now the APDU responses of the Calypso® cards are automatically parsed to fill card images.
+Currently all the components of Eclipse Keyple™ Java are following the same versioning.&lt;/p>
 &lt;p>From the version 1.0.0 scheduled for November 2020, the components will be defined with their own versioning in order to stabilize as possible the different APIs.&lt;/p>
 &lt;p>
 &lt;a href="/keyple-website/keyple-website/docs/">Documentation&lt;/a> currently available:&lt;/p>
@@ -2393,11 +2280,19 @@ Currently all the components of Eclipse Keyple Java are following the same versi
 &lt;li>the project plan,&lt;/li>
 &lt;li>the guides of the different public API,&lt;/li>
 &lt;li>and a guide to manage the migration between the release 0.8.1 &amp;amp; 0.9.0.&lt;/li>
-&lt;/ul></description></item><item><title>First Meet Up Eclipse Keyple</title><link>/keyple-website/post/first-meetup-eclipse-keyple/</link><pubDate>Thu, 17 Oct 2019 00:00:00 +0000</pubDate><guid>/keyple-website/post/first-meetup-eclipse-keyple/</guid><description>&lt;p>On October 17, 2019, we organized the first Meet Up Eclipse Keyple! Great moments of exchanges around the first Open Source SDK for Ticketing with Benoît Boute, Nicolas Generali, Pierre Terree, Hicham ELBIZY, Benoist Laforge, Gaël Blondelle, Camille Moulin, Philippe Vappereau, Valentina Zajackowski. Many thanks to them for their interventions and also to Manon Chaix, Jean-Pierre Fortune, Olivier Delcroix, Ludovic TEIXEIRA COSTA and all the participants!&lt;/p>
-&lt;p>See the whole event on video:&lt;/p>
+&lt;/ul></description></item><item><title>First Meet Up Eclipse Keyple™</title><link>/keyple-website/post/first-meetup-eclipse-keyple/</link><pubDate>Thu, 17 Oct 2019 00:00:00 +0000</pubDate><guid>/keyple-website/post/first-meetup-eclipse-keyple/</guid><description>&lt;p>On October 17, 2019, we organized the first Meet Up Eclipse Keyple™!
+Great moments of exchanges around the first Open Source SDK for Ticketing with Benoît Boute,
+Nicolas Generali, Pierre Terree, Hicham Elbizy, Benoist Laforge, Gaël Blondelle, Camille Moulin,
+Philippe Vappereau, Valentina Zajackowski. Many thanks to them for their interventions and also
+to Manon Chaix, Jean-Pierre Fortune, Olivier Delcroix, Ludovic Teixeira Costa and all the participants!&lt;/p>
+&lt;p>See the whole event on video:
 &lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
 &lt;iframe src="https://www.youtube.com/embed/4j5rkvdXU7g" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
 &lt;/div>
-&lt;p>Discover the photos: &lt;a href="https://drive.google.com/drive/folders/1StRgiAxKrn0mHsP9WwIQ_bopQW-eGVb8">https://drive.google.com/drive/folders/1StRgiAxKrn0mHsP9WwIQ_bopQW-eGVb8&lt;/a>&lt;/p>
-&lt;p>And the presentations: &lt;a href="https://drive.google.com/file/d/1GAAhW-mv-E6kxqVySv8-KSjMJ15tZBkM/view">https://drive.google.com/file/d/1GAAhW-mv-E6kxqVySv8-KSjMJ15tZBkM/view&lt;/a>&lt;/p></description></item><item><title>RATP Smart Systems - Remote SE use case</title><link>/keyple-website/post/rss-remote-se/</link><pubDate>Tue, 01 Jan 2019 14:13:44 +0200</pubDate><guid>/keyple-website/post/rss-remote-se/</guid><description>&lt;p>RATP Smart Systems has integrated in 2019 Eclipse Keyple into the new retail shops reloading system of RATP in Paris Great Region.
-1800 Android terminals from Coppernic to retaillers has been deployed.&lt;/p></description></item><item><title/><link>/keyple-website/components/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/components/</guid><description/></item></channel></rss>
+&lt;/p>
+&lt;p>
+&lt;i class="fas fa-file-pdf pr-1 fa-fw">&lt;/i> Discover the
+&lt;a href="https://drive.google.com/file/d/1GAAhW-mv-E6kxqVySv8-KSjMJ15tZBkM/view" target="_blank" rel="noopener">presentation&lt;/a>.&lt;/p>
+&lt;p>
+&lt;i class="fas fa-images pr-1 fa-fw">&lt;/i> Discover the
+&lt;a href="https://drive.google.com/drive/folders/1StRgiAxKrn0mHsP9WwIQ_bopQW-eGVb8" target="_blank" rel="noopener">photos&lt;/a>.&lt;/p></description></item><item><title/><link>/keyple-website/components/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/components/</guid><description/></item></channel></rss>
