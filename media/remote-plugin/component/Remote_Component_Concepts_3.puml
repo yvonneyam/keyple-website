@@ -1,0 +1,95 @@
+@startuml
+footer
+    Keyple Remote Plugin - Concepts - Many Remote Plugins connected to one Native Service (30/10/2020)
+end footer
+
+' == THEME ==
+
+'Couleurs issues de : https://htmlcolorcodes.com/fr/tableau-de-couleur/tableau-de-couleur-design-plat/
+!define COLOR_RED E74C3C
+!define COLOR_PURPLE 8E44AD
+!define COLOR_BLUE 3498DB
+!define COLOR_GREEN 27AE60
+!define COLOR_GREY 2C3E50
+skinparam Shadowing false
+skinparam component {
+    BorderColor #D4AC0D
+    ' Red
+    BackgroundColor<<red>> #FDEDEC
+    BorderColor<<red>> #E74C3C
+    ' Purple
+    BackgroundColor<<purple>> #F4ECF7
+    BorderColor<<purple>> #8E44AD
+    ' blue
+    BackgroundColor<<blue>> #EBF5FB
+    BorderColor<<blue>> #3498DB
+    ' Green
+    BackgroundColor<<green>> #E9F7EF
+    BorderColor<<green>> #27AE60
+    ' Grey
+    BackgroundColor<<grey>> #EAECEE
+    BorderColor<<grey>> #2C3E50
+}
+hide <<red>> stereotype
+hide <<purple>> stereotype
+hide <<blue>> stereotype
+hide <<green>> stereotype
+hide <<grey>> stereotype
+
+' == CONTENT ==
+
+[Hardware Reader A\n(PO)] as readerA <<green>>
+[Hardware Reader B\n(SAM)] as readerB <<blue>>
+[Hardware Reader C\n(PO)] as readerC <<purple>>
+package "Terminal A with 'hardware' and 'virtual' readers" {
+    [Application] as appA
+    [**Remote Plugin**] as remotePluginA <<red>>
+    [Virtual\nReader B] as virtualReaderA <<blue>>
+    [Native\nPlugin A] as nativePluginA <<green>>
+    [Native\nReader A] as nativeReaderA <<green>>
+}
+package "Terminal B with 'hardware' reader" {
+    [Application] as appB
+    [**Native Service**] as nativeServiceB <<red>>
+    [Native\nPlugin B] as nativePluginB <<blue>>
+    [Native\nReader B] as nativeReaderB <<blue>>
+}
+package "Terminal C with 'hardware' and 'virtual' readers" {
+    [Application] as appC
+    [**Remote Plugin**] as remotePluginC <<red>>
+    [Virtual\nReader B] as virtualReaderC <<blue>>
+    [Native\nPlugin C] as nativePluginC <<purple>>
+    [Native\nReader C] as nativeReaderC <<purple>>
+}
+
+'utilisation
+
+appA -- remotePluginA
+appA -- virtualReaderA #LightGrey
+appA -- nativePluginA #LightGrey
+appA -- nativeReaderA #LightGrey
+remotePluginA -- virtualReaderA #COLOR_BLUE
+nativePluginA -- nativeReaderA #COLOR_GREEN
+nativeReaderA -- readerA #COLOR_GREEN
+
+remotePluginA - nativeServiceB
+
+appB -- nativeServiceB
+appB -- nativePluginB #LightGrey
+appB -- nativeReaderB #LightGrey
+nativeServiceB -- nativePluginB #COLOR_BLUE
+nativeServiceB -- nativeReaderB #COLOR_BLUE
+nativePluginB -- nativeReaderB #COLOR_BLUE
+nativeReaderB -- readerB #COLOR_BLUE
+
+nativeServiceB - remotePluginC
+
+appC -- remotePluginC
+appC -- virtualReaderC #LightGrey
+appC -- nativePluginC #LightGrey
+appC -- nativeReaderC #LightGrey
+remotePluginC -- virtualReaderC #COLOR_BLUE
+nativePluginC -- nativeReaderC #COLOR_PURPLE
+nativeReaderC -- readerC #COLOR_PURPLE
+
+@enduml

@@ -1,6 +1,6 @@
 @startuml
 footer
-    Keyple Remote Plugin - Concepts - Complex Use Case (29/10/2020)
+    Keyple Remote Plugin - Concepts - One Remote Plugin connected to many Native Services (30/10/2020)
 end footer
 
 ' == THEME ==
@@ -38,9 +38,9 @@ hide <<grey>> stereotype
 
 ' == CONTENT ==
 
-[Hardware Reader A\n(PO, SAM, HSM,...)] as readerA <<green>>
-[Hardware Reader B\n(PO, SAM, HSM,...)] as readerB <<blue>>
-[Hardware Reader C\n(PO, SAM, HSM,...)] as readerC <<purple>>
+[Hardware Reader A\n(PO)] as readerA <<green>>
+[Hardware Reader B\n(PO)] as readerB <<blue>>
+[Hardware Reader C\n(PO)] as readerC <<purple>>
 package "Terminal A with 'hardware' reader" {
     [Application] as appA
     [**Native Service**] as nativeServiceA <<red>>

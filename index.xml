@@ -1251,7 +1251,7 @@ return nativeReader.isSecureElementPresent
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>Virtual Reader&lt;/strong>&lt;/td>
-&lt;td>Part of the &lt;strong>Virtual Lib&lt;/strong>, this is a Keyple reader which has some specificities :&lt;br>- each virtual reader is connected to a native reader ;&lt;br>- any command sent by the application to a virtual reader will be forwarded to the associated native reader ;&lt;br>- any event occurs on a native reader or plugin will be forwarded to the associated remote virtual reader or plugin.&lt;/td>
+&lt;td>Part of the &lt;strong>Remote Plugin&lt;/strong>, this is a Keyple reader which has some specificities :&lt;br>- each virtual reader is connected to a native reader ;&lt;br>- any command sent by the application to a virtual reader will be forwarded to the associated native reader ;&lt;br>- any event occurs on a native reader or plugin will be forwarded to the associated remote virtual reader or plugin.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>Native Service&lt;/strong>&lt;/td>
@@ -1287,10 +1287,20 @@ width: 120px;
 &lt;img src="/keyple-website/keyple-website/media/remote-plugin/component/Remote_Component_Concepts_1.svg" alt="" >
 &lt;/a>
 &lt;/figure>
-&lt;p>The second diagram below illustrates an arbitrary more complex possible use case with several hardware readers connected to different terminals :&lt;/p>
+&lt;p>The second diagram below illustrates an arbitrary more complex possible use case with several hardware readers connected to different terminals.&lt;/p>
+&lt;p>These could be for example a ticketing reloading service, where the intelligence would be on the terminal with virtual readers, with thin clients on A &amp;amp; B terminals communicating locally with the cards.&lt;/p>
+&lt;p>In this use case, the &lt;strong>Remote Plugin&lt;/strong> is used for card communication.&lt;/p>
 &lt;figure >
 &lt;a data-fancybox="" href="/keyple-website/keyple-website/media/remote-plugin/component/Remote_Component_Concepts_2.svg" >
 &lt;img src="/keyple-website/keyple-website/media/remote-plugin/component/Remote_Component_Concepts_2.svg" alt="" >
+&lt;/a>
+&lt;/figure>
+&lt;p>Here is another example, but this time it illustrates several &lt;strong>Remote Plugins&lt;/strong> connected to the same &lt;strong>Native Service&lt;/strong>.&lt;/p>
+&lt;p>These could be for example ticketing terminals with transaction logic, which communicate locally with cards, but which do not have SAM, and which use a SAM server with hardware reader.&lt;/p>
+&lt;p>In this use case, the &lt;strong>Remote Plugin&lt;/strong> is used for SAM communication.&lt;/p>
+&lt;figure >
+&lt;a data-fancybox="" href="/keyple-website/keyple-website/media/remote-plugin/component/Remote_Component_Concepts_3.svg" >
+&lt;img src="/keyple-website/keyple-website/media/remote-plugin/component/Remote_Component_Concepts_3.svg" alt="" >
 &lt;/a>
 &lt;/figure>
 &lt;h2 id="plugins">Plugins&lt;/h2>
@@ -1349,8 +1359,8 @@ That-s why it&amp;rsquo;s very important to understand the following coexistence
 &lt;tbody>
 &lt;tr>
 &lt;td>&lt;strong>Library&lt;/strong>&lt;/td>
-&lt;td>Remote Native&lt;/td>
-&lt;td>Remote Virtual&lt;/td>
+&lt;td>Native Lib&lt;/td>
+&lt;td>Virtual Lib&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>Remote Plugin&lt;/strong> / &lt;strong>Native Service&lt;/strong>&lt;/td>
@@ -1423,8 +1433,8 @@ That-s why it&amp;rsquo;s very important to understand the following coexistence
 &lt;tbody>
 &lt;tr>
 &lt;td>&lt;strong>Library&lt;/strong>&lt;/td>
-&lt;td>Remote Virtual&lt;/td>
-&lt;td>Remote Native&lt;/td>
+&lt;td>Virtual Lib&lt;/td>
+&lt;td>Native Lib&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>Remote Plugin&lt;/strong> / &lt;strong>Native Service&lt;/strong>&lt;/td>
@@ -1474,8 +1484,8 @@ That-s why it&amp;rsquo;s very important to understand the following coexistence
 &lt;tbody>
 &lt;tr>
 &lt;td>&lt;strong>Library&lt;/strong>&lt;/td>
-&lt;td>Remote Virtual&lt;/td>
-&lt;td>Remote Native&lt;/td>
+&lt;td>Virtual Lib&lt;/td>
+&lt;td>Native Lib&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>Remote Plugin&lt;/strong> / &lt;strong>Native Service&lt;/strong>&lt;/td>
@@ -1523,8 +1533,8 @@ That-s why it&amp;rsquo;s very important to understand the following coexistence
 &lt;tbody>
 &lt;tr>
 &lt;td>&lt;strong>Library&lt;/strong>&lt;/td>
-&lt;td>Remote Virtual&lt;/td>
-&lt;td>Remote Native&lt;/td>
+&lt;td>Virtual Lib&lt;/td>
+&lt;td>Native Lib&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>Remote Plugin&lt;/strong> / &lt;strong>Native Service&lt;/strong>&lt;/td>
@@ -1560,8 +1570,39 @@ That-s why it&amp;rsquo;s very important to understand the following coexistence
 &lt;/li>
 &lt;/ul>
 &lt;h2 id="plugins-apis">Plugins APIs&lt;/h2>
+&lt;p>The class diagrams below shows the different APIs exposed and SPIs required by the &lt;strong>Keyple Remote Plugin&lt;/strong> solution.&lt;/p>
+&lt;p>An &lt;strong>SPI&lt;/strong> (Service Provider Interface) is an interface that must be implemented by the user.&lt;/p>
+&lt;p>Here are the available APIs depending on the library imported by your project :&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;/th>
+&lt;th style="text-align:center">Virtual Lib&lt;/th>
+&lt;th style="text-align:center">Native Lib&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>
+&lt;a href="#common-api">Common API&lt;/a>&lt;/td>
+&lt;td style="text-align:center">✔️&lt;/td>
+&lt;td style="text-align:center">✔️&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>
+&lt;a href="#remote-plugin-api">Remote Plugin API&lt;/a>&lt;/td>
+&lt;td style="text-align:center">✔️&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>
+&lt;a href="#native-service-api">Native Service API&lt;/a>&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td style="text-align:center">✔️&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
 &lt;h3 id="common-api">Common API&lt;/h3>
-&lt;p>This API is common to &lt;strong>Remote Plugin&lt;/strong> and &lt;strong>Native Service&lt;/strong> APIs :&lt;/p>
 &lt;figure >
 &lt;a data-fancybox="" href="/keyple-website/keyple-website/media/remote-plugin/class/Remote_Class_Core_API.svg" >
 &lt;img src="/keyple-website/keyple-website/media/remote-plugin/class/Remote_Class_Core_API.svg" alt="" >
