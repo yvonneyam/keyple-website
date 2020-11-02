@@ -84,7 +84,7 @@ override fun checkSePresence(): Boolean {
 return nativeReader.isSecureElementPresent
 }
 &lt;/code>&lt;/pre></description></item><item><title>Develop a Remote Ticketing Application</title><link>/keyple-website/docs/developer-guide/develop-ticketing-app-remote/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/developer-guide/develop-ticketing-app-remote/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
-&lt;p>&lt;strong>Keyple provides the &amp;ldquo;Keyple Remote Plugin&amp;rdquo; solution which allows a terminal to communicate with a smart card reader plugged into another terminal&lt;/strong>.&lt;/p>
+&lt;p>&lt;strong>Keyple provides the &amp;ldquo;Keyple Remote Plugin&amp;rdquo; solution which allows a terminal to communicate with a smart card reader available in another terminal&lt;/strong>.&lt;/p>
 &lt;p>In this way, you can manage transactions within a distributed architecture.&lt;/p>
 &lt;p>The diagram below shows the role of the &lt;strong>Keyple Remote Plugin&lt;/strong> components in the software layers used in a distributed architecture :&lt;/p>
 &lt;figure >
@@ -99,7 +99,7 @@ return nativeReader.isSecureElementPresent
 &lt;li>Read chapter
 &lt;a href="#concepts">Concepts&lt;/a> to understand the main terms and concepts of the &lt;strong>Keyple Remote Plugin&lt;/strong> solution.&lt;/li>
 &lt;li>Read the introduction of chapter
-&lt;a href="#plugins">Plugins&lt;/a> to be informed about the different plugins and APIs proposed by the solution.&lt;/li>
+&lt;a href="#remote-plugins">Remote Plugins&lt;/a> to be informed about the different plugins and APIs proposed by the solution.&lt;/li>
 &lt;li>Using chapter
 &lt;a href="#use-cases">Use cases&lt;/a>, find your use case. This will help you to determine exactly which library and API to use.&lt;/li>
 &lt;li>Using chapter
@@ -185,9 +185,9 @@ width: 120px;
 &lt;img src="/keyple-website/keyple-website/media/remote-plugin/component/Remote_Component_Concepts_3.svg" alt="" >
 &lt;/a>
 &lt;/figure>
-&lt;h2 id="plugins">Plugins&lt;/h2>
+&lt;h2 id="remote-plugins">Remote Plugins&lt;/h2>
 &lt;p>The &lt;strong>Keyple Remote Plugin&lt;/strong> solution provides &lt;strong>3&lt;/strong> different specific &lt;strong>Remote Plugin&lt;/strong> components, each one having a specific API described in chapter
-&lt;a href="#plugins-apis">Plugins APIs&lt;/a> designed on a &lt;strong>Client-Server&lt;/strong> model in which &lt;strong>the Client is always the initiator of the processing&lt;/strong> :&lt;/p>
+&lt;a href="#remote-plugins-apis">Remote Plugins APIs&lt;/a> designed on a &lt;strong>Client-Server&lt;/strong> model in which &lt;strong>the Client is always the initiator of the processing&lt;/strong> :&lt;/p>
 &lt;div id="plugins-table-1">
 &lt;table>
 &lt;thead>
@@ -200,18 +200,18 @@ width: 120px;
 &lt;tr>
 &lt;td>
 &lt;a href="#remoteserverplugin">RemoteServerPlugin&lt;/a>&lt;/td>
-&lt;td>Allows to control from a &lt;strong>server&lt;/strong> terminal a smart card reader plugged into a &lt;strong>client&lt;/strong> terminal (e.g. PO reader).&lt;/td>
+&lt;td>Allows to control from a &lt;strong>server&lt;/strong> terminal a smart card reader available on a &lt;strong>client&lt;/strong> terminal (e.g. PO reader).&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>
 &lt;a href="#remoteclientplugin">RemoteClientPlugin&lt;/a> or&lt;br>
 &lt;a href="#remoteclientobservableplugin">RemoteClientObservablePlugin&lt;/a>&lt;/td>
-&lt;td>Allows to control from a &lt;strong>client&lt;/strong> terminal a smart card reader plugged into a &lt;strong>server&lt;/strong> terminal (e.g. SAM reader).&lt;/td>
+&lt;td>Allows to control from a &lt;strong>client&lt;/strong> terminal a smart card reader available on a &lt;strong>server&lt;/strong> terminal (e.g. SAM reader).&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>
 &lt;a href="#remotepoolclientplugin">RemotePoolClientPlugin&lt;/a>&lt;/td>
-&lt;td>Allows to control from a &lt;strong>client&lt;/strong> terminal a &lt;strong>pool&lt;/strong> of smart cards readers plugged into a &lt;strong>server&lt;/strong> terminal (e.g. HSM readers).&lt;/td>
+&lt;td>Allows to control from a &lt;strong>client&lt;/strong> terminal a &lt;strong>pool&lt;/strong> of smart cards readers available on a &lt;strong>server&lt;/strong> terminal (e.g. HSM readers).&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -221,15 +221,15 @@ width: 120px;
 width: 220px;
 }
 &lt;/style>
-&lt;p>More over, some plugins have different modes in which they allow or not the observation of plugin or reader events (such as smart card insertion, reader connection, etc&amp;hellip;).&lt;/p>
+&lt;p>Moreover, some plugins have different modes in which they allow or not the observation of plugin or reader events (such as smart card insertion, reader connection, etc&amp;hellip;).&lt;/p>
 &lt;p>Each &lt;strong>Remote Plugin&lt;/strong> is connected to a specific &lt;strong>Native Service&lt;/strong> and is dependent on a specific node type (synchronous or asynchronous).
-That-s why it&amp;rsquo;s very important to understand the following coexistence limitations :&lt;/p>
+That&amp;rsquo;s why it&amp;rsquo;s very important to understand the following coexistence limitations :&lt;/p>
 &lt;ul>
 &lt;li>There can be &lt;strong>only one instance&lt;/strong> of a specific &lt;strong>Native Service&lt;/strong> per application.&lt;/li>
 &lt;li>There can be &lt;strong>only one instance&lt;/strong> of a specific &lt;strong>Remote Plugin&lt;/strong> per application and per network communication configuration. There can therefore be a maximum of 2 instances of a specific &lt;strong>Remote Plugin&lt;/strong> per application, one with a synchronous and the other one with an asynchronous network communication configuration.&lt;/li>
 &lt;/ul>
 &lt;h3 id="remoteserverplugin">RemoteServerPlugin&lt;/h3>
-&lt;p>This plugin allows controlling from a &lt;strong>server&lt;/strong> terminal a smart card reader plugged into a &lt;strong>client&lt;/strong> terminal (e.g. PO reader).&lt;/p>
+&lt;p>This plugin allows controlling from a &lt;strong>server&lt;/strong> terminal a smart card reader available on a &lt;strong>client&lt;/strong> terminal (e.g. PO reader).&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
@@ -256,17 +256,16 @@ That-s why it&amp;rsquo;s very important to understand the following coexistence
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>Utility&lt;/strong>&lt;/td>
-&lt;td>&lt;code>NativeClientUtils&lt;/code>&lt;/td>
-&lt;td>&lt;code>RemoteServerUtils&lt;/code>&lt;/td>
+&lt;td>&lt;code>NativeClientServiceUtils&lt;/code>&lt;/td>
+&lt;td>&lt;code>RemoteServerPluginUtils&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;h4 id="use">USE&lt;/h4>
-&lt;p>Please note that this plugin is observable &lt;strong>only to trigger ticketing services&lt;/strong> on the server side, but does not allow observation on the native plugin (reader insertion, etc&amp;hellip;).&lt;/p>
+&lt;h4 id="use-and-sequence-of-operations">USE AND SEQUENCE OF OPERATIONS&lt;/h4>
 &lt;ul>
 &lt;li>Server side :
 &lt;ol>
-&lt;li>configure the factory by providing the network and plugin observer implementation,&lt;/li>
+&lt;li>configure the factory by providing the network and plugin observer implementation. Please note that &lt;strong>this plugin is observable only to trigger ticketing services&lt;/strong> on the server side, but does not allow observation on the native plugin (reader insertion, etc&amp;hellip;),&lt;/li>
 &lt;li>register the &lt;strong>Remote Plugin&lt;/strong> to the smart card service using the factory,&lt;/li>
 &lt;li>await for events of type &lt;code>PluginEvent.READER_CONNECTED&lt;/code>,&lt;/li>
 &lt;li>when an event occurs, get the specified virtual reader from the &lt;strong>Remote Plugin&lt;/strong>,&lt;/li>
@@ -303,7 +302,7 @@ That-s why it&amp;rsquo;s very important to understand the following coexistence
 &lt;/a>
 &lt;/figure>
 &lt;h3 id="remoteclientplugin">RemoteClientPlugin&lt;/h3>
-&lt;p>This plugin allows controlling from a &lt;strong>client&lt;/strong> terminal a smart card reader plugged into a &lt;strong>server&lt;/strong> terminal (e.g. SAM reader).&lt;/p>
+&lt;p>This plugin allows controlling from a &lt;strong>client&lt;/strong> terminal a smart card reader available on a &lt;strong>server&lt;/strong> terminal (e.g. SAM reader).&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
@@ -330,12 +329,12 @@ That-s why it&amp;rsquo;s very important to understand the following coexistence
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>Utility&lt;/strong>&lt;/td>
-&lt;td>&lt;code>RemoteClientUtils&lt;/code>&lt;/td>
-&lt;td>&lt;code>NativeServerUtils&lt;/code>&lt;/td>
+&lt;td>&lt;code>RemoteClientPluginUtils&lt;/code>&lt;/td>
+&lt;td>&lt;code>NativeServerServiceUtils&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;h4 id="use-1">USE&lt;/h4>
+&lt;h4 id="use-and-sequence-of-operations-1">USE AND SEQUENCE OF OPERATIONS&lt;/h4>
 &lt;ul>
 &lt;li>Server side :
 &lt;ol>
@@ -353,7 +352,7 @@ That-s why it&amp;rsquo;s very important to understand the following coexistence
 &lt;/ul>
 &lt;h3 id="remoteclientobservableplugin">RemoteClientObservablePlugin&lt;/h3>
 &lt;p>This plugin is a
-&lt;a href="#remoteclientplugin">RemoteClientPlugin&lt;/a> which also allows to observe the plugin events.&lt;/p>
+&lt;a href="#remoteclientplugin">RemoteClientPlugin&lt;/a> which also allows to observe the plugin events (such as reader connection, etc&amp;hellip;).&lt;/p>
 &lt;p>Please note that this mode is possible only if the native plugin is observable.&lt;/p>
 &lt;table>
 &lt;thead>
@@ -381,12 +380,12 @@ That-s why it&amp;rsquo;s very important to understand the following coexistence
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>Utility&lt;/strong>&lt;/td>
-&lt;td>&lt;code>RemoteClientUtils&lt;/code>&lt;/td>
-&lt;td>&lt;code>NativeServerUtils&lt;/code>&lt;/td>
+&lt;td>&lt;code>RemoteClientPluginUtils&lt;/code>&lt;/td>
+&lt;td>&lt;code>NativeServerServiceUtils&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;h4 id="use-2">USE&lt;/h4>
+&lt;h4 id="use-and-sequence-of-operations-2">USE AND SEQUENCE OF OPERATIONS&lt;/h4>
 &lt;ul>
 &lt;li>Server side :
 &lt;ol>
@@ -403,7 +402,7 @@ That-s why it&amp;rsquo;s very important to understand the following coexistence
 &lt;/li>
 &lt;/ul>
 &lt;h3 id="remotepoolclientplugin">RemotePoolClientPlugin&lt;/h3>
-&lt;p>This plugin allows controlling from a &lt;strong>client&lt;/strong> terminal a pool of smart cards readers plugged into a &lt;strong>server&lt;/strong> terminal (e.g. HSM readers).&lt;/p>
+&lt;p>This plugin allows controlling from a &lt;strong>client&lt;/strong> terminal a pool of smart cards readers available on a &lt;strong>server&lt;/strong> terminal (e.g. HSM readers).&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
@@ -430,12 +429,12 @@ That-s why it&amp;rsquo;s very important to understand the following coexistence
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>Utility&lt;/strong>&lt;/td>
-&lt;td>&lt;code>RemotePoolClientUtils&lt;/code>&lt;/td>
-&lt;td>&lt;code>NativePoolServerUtils&lt;/code>&lt;/td>
+&lt;td>&lt;code>RemotePoolClientPluginUtils&lt;/code>&lt;/td>
+&lt;td>&lt;code>NativePoolServerServiceUtils&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;h4 id="use-3">USE&lt;/h4>
+&lt;h4 id="use-and-sequence-of-operations-3">USE AND SEQUENCE OF OPERATIONS&lt;/h4>
 &lt;ul>
 &lt;li>Server
 &lt;ol>
@@ -451,7 +450,7 @@ That-s why it&amp;rsquo;s very important to understand the following coexistence
 &lt;/ol>
 &lt;/li>
 &lt;/ul>
-&lt;h2 id="plugins-apis">Plugins APIs&lt;/h2>
+&lt;h2 id="remote-plugins-apis">Remote Plugins APIs&lt;/h2>
 &lt;p>The class diagrams below shows the different APIs exposed and SPIs required by the &lt;strong>Keyple Remote Plugin&lt;/strong> solution.&lt;/p>
 &lt;p>An &lt;strong>SPI&lt;/strong> (Service Provider Interface) is an interface that must be implemented by the user.&lt;/p>
 &lt;p>Here are the available APIs depending on the library imported by your project :&lt;/p>
@@ -486,8 +485,8 @@ That-s why it&amp;rsquo;s very important to understand the following coexistence
 &lt;/table>
 &lt;h3 id="common-api">Common API&lt;/h3>
 &lt;figure >
-&lt;a data-fancybox="" href="/keyple-website/keyple-website/media/remote-plugin/class/Remote_Class_Core_API.svg" >
-&lt;img src="/keyple-website/keyple-website/media/remote-plugin/class/Remote_Class_Core_API.svg" alt="" >
+&lt;a data-fancybox="" href="/keyple-website/keyple-website/media/remote-plugin/class/Remote_Class_Common_API.svg" >
+&lt;img src="/keyple-website/keyple-website/media/remote-plugin/class/Remote_Class_Common_API.svg" alt="" >
 &lt;/a>
 &lt;/figure>
 &lt;h3 id="remote-plugin-api">Remote Plugin API&lt;/h3>
@@ -859,7 +858,7 @@ width: 240px;
 &lt;/a>
 &lt;/figure>
 &lt;h3 id="exchanged-data">Exchanged data&lt;/h3>
-&lt;p>The data exchanged between &lt;strong>Remote Plugin&lt;/strong> and &lt;strong>Native Service&lt;/strong> components are contain in the POJO object &lt;code>KeypleMessageDto&lt;/code>. It is built and processed by the plugin and &lt;strong>you don&amp;rsquo;t need to modify it&lt;/strong>.&lt;/p>
+&lt;p>The data exchanged between &lt;strong>Remote Plugin&lt;/strong> and &lt;strong>Native Service&lt;/strong> components are contain in the DTO (Data Transfer Object) &lt;code>KeypleMessageDto&lt;/code>. It is built and processed by the plugin and &lt;strong>you don&amp;rsquo;t need to modify it&lt;/strong>.&lt;/p>
 &lt;p>However, it is necessary in some contexts to access certain information such as the &lt;code>sessionId&lt;/code> in the case of asynchronous communication or the &lt;code>serverNodeId&lt;/code> in the case of synchronous communication with several server instances.&lt;/p>
 &lt;h2 id="download">Download&lt;/h2>
 &lt;h3 id="releases">Releases&lt;/h3>
@@ -927,7 +926,7 @@ width: 240px;
 &lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/component/keyple-plugin/remote-plugin/native/README.md" target="_blank" rel="noopener">Native Lib
 &lt;i class="fab fa-github pr-1 fa-fw">&lt;/i>&lt;/a>&lt;/li>
 &lt;li>
-&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/component/keyple-plugin/remote-plugin/core/README.md" target="_blank" rel="noopener">Core Lib
+&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/component/keyple-plugin/remote-plugin/common/README.md" target="_blank" rel="noopener">Common Lib
 &lt;i class="fab fa-github pr-1 fa-fw">&lt;/i>&lt;/a>&lt;/li>
 &lt;/ul></description></item><item><title>Develop a Plugin</title><link>/keyple-website/docs/developer-guide/develop-plugin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/developer-guide/develop-plugin/</guid><description>&lt;p>This guide will provide nescessary steps to develop a Keyple plugin for a device. In order to flatten the learning curve, we&amp;rsquo;ll
 illustrate the creation processus using the implementation of the Android NFC Plugin and OMAPI plugins.
