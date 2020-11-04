@@ -787,13 +787,13 @@ width: 240px;
 &lt;tbody>
 &lt;tr>
 &lt;td>SPI to be implemented&lt;/td>
-&lt;td>&lt;code>KeypleClientSync&lt;/code>&lt;/td>
+&lt;td>&lt;code>SyncEndpointClient&lt;/code>&lt;/td>
 &lt;td>-&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Node API&lt;/td>
-&lt;td>&lt;code>KeypleClientSyncNode&lt;/code>&lt;/td>
-&lt;td>&lt;code>KeypleServerSyncNode&lt;/code>&lt;/td>
+&lt;td>&lt;code>SyncNodeClient&lt;/code>&lt;/td>
+&lt;td>&lt;code>SyncNodeServer&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Methods to be used when initializing the factory&lt;/td>
@@ -813,7 +813,7 @@ width: 240px;
 &lt;img src="/keyple-website/keyple-website/media/remote-plugin/sequence/Remote_Sequence_SyncNode_API.svg" alt="" >
 &lt;/a>
 &lt;/figure>
-&lt;p>In a context with several server instances, a mechanism must be implemented to ensure that all messages containing information about a &lt;code>serverNodeId&lt;/code> are routed to the server associated with a &lt;code>KeypleServerSyncNode&lt;/code> node having the &lt;code>serverNodeId&lt;/code>.&lt;/p>
+&lt;p>In a context with several server instances, a mechanism must be implemented to ensure that all messages containing information about a &lt;code>serverNodeId&lt;/code> are routed to the server associated with a &lt;code>SyncNodeServer&lt;/code> node having the &lt;code>serverNodeId&lt;/code>.&lt;/p>
 &lt;h3 id="asynchronous">Asynchronous&lt;/h3>
 &lt;p>Choose this mode if you want to implement a Full-Duplex &lt;strong>Asynchronous&lt;/strong> communication protocol, such as Web Sockets for example.&lt;/p>
 &lt;table>
@@ -827,13 +827,13 @@ width: 240px;
 &lt;tbody>
 &lt;tr>
 &lt;td>SPI to be implemented&lt;/td>
-&lt;td>&lt;code>KeypleClientAsync&lt;/code>&lt;/td>
-&lt;td>&lt;code>KeypleServerAsync&lt;/code>&lt;/td>
+&lt;td>&lt;code>AsyncEndpointClient&lt;/code>&lt;/td>
+&lt;td>&lt;code>AsyncEndpointServer&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Node API&lt;/td>
-&lt;td>&lt;code>KeypleClientAsyncNode&lt;/code>&lt;/td>
-&lt;td>&lt;code>KeypleServerAsyncNode&lt;/code>&lt;/td>
+&lt;td>&lt;code>AsyncNodeClient&lt;/code>&lt;/td>
+&lt;td>&lt;code>AsyncNodeServer&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Methods to be used when initializing the factory&lt;/td>
@@ -854,7 +854,7 @@ width: 240px;
 &lt;/a>
 &lt;/figure>
 &lt;h3 id="exchanged-data">Exchanged data&lt;/h3>
-&lt;p>The data exchanged between &lt;strong>Remote Plugin&lt;/strong> and &lt;strong>Local Service&lt;/strong> components are contain in the DTO (Data Transfer Object) &lt;code>KeypleMessageDto&lt;/code>. It is built and processed by the plugin and &lt;strong>you don&amp;rsquo;t need to modify it&lt;/strong>.&lt;/p>
+&lt;p>The data exchanged between &lt;strong>Remote Plugin&lt;/strong> and &lt;strong>Local Service&lt;/strong> components are contain in the DTO (Data Transfer Object) &lt;code>MessageDto&lt;/code>. It is built and processed by the plugin and &lt;strong>you don&amp;rsquo;t need to modify it&lt;/strong>.&lt;/p>
 &lt;p>However, it is necessary in some contexts to access certain information such as the &lt;code>sessionId&lt;/code> in the case of asynchronous communication or the &lt;code>serverNodeId&lt;/code> in the case of synchronous communication with several server instances.&lt;/p>
 &lt;h2 id="download">Download&lt;/h2>
 &lt;h3 id="releases">Releases&lt;/h3>
