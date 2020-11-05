@@ -222,8 +222,8 @@ width: 220px;
 }
 &lt;/style>
 &lt;p>Moreover, some plugins have different modes in which they allow or not the observation of plugin or reader events (such as smart card insertion, reader connection, etc&amp;hellip;).&lt;/p>
-&lt;p>It is important to note that each &lt;strong>Remote Plugin&lt;/strong> and &lt;strong>Local Service&lt;/strong> components are dependent to a specific network protocol type (synchronous or asynchronous).&lt;/p>
-&lt;p>Therefore, there can only be a maximum of 2 instances of the same &lt;strong>Remote Plugin&lt;/strong> or &lt;strong>Local Service&lt;/strong> per application, one with a synchronous and the other one with an asynchronous network communication configuration.&lt;/p>
+&lt;p>Each &lt;strong>Remote Plugin&lt;/strong> and &lt;strong>Local Service&lt;/strong> has a default name, but it&amp;rsquo;s possible to specify a custom name during the initialization phase.&lt;/p>
+&lt;p>It is thus possible to have within an application as many instances of a specific &lt;strong>Remote Plugin&lt;/strong> or &lt;strong>Local Service&lt;/strong> as desired.&lt;/p>
 &lt;h3 id="remotepluginserver">RemotePluginServer&lt;/h3>
 &lt;p>This plugin allows a &lt;strong>server&lt;/strong> application to control a smart card reader available on a &lt;strong>client&lt;/strong> (e.g. PO reader).&lt;/p>
 &lt;table>
@@ -803,7 +803,7 @@ width: 240px;
 &lt;tr>
 &lt;td>Utility method to use to access the node&lt;/td>
 &lt;td>-&lt;/td>
-&lt;td>&lt;code>getSyncNode()&lt;/code>&lt;/td>
+&lt;td>&lt;code>getSyncNode()&lt;/code> or&lt;br> &lt;code>getSyncNode(...)&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -842,8 +842,8 @@ width: 240px;
 &lt;/tr>
 &lt;tr>
 &lt;td>Utility method to use to access the node&lt;/td>
-&lt;td>&lt;code>getAsyncNode()&lt;/code>&lt;/td>
-&lt;td>&lt;code>getAsyncNode()&lt;/code>&lt;/td>
+&lt;td>&lt;code>getAsyncNode()&lt;/code> or&lt;br> &lt;code>getAsyncNode(...)&lt;/code>&lt;/td>
+&lt;td>&lt;code>getAsyncNode()&lt;/code> or&lt;br> &lt;code>getAsyncNode(...)&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
