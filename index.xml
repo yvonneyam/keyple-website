@@ -839,8 +839,8 @@ All project dependencies, including Keyple components, are downloaded during the
 &lt;/div>
 &lt;/div></description></item><item><title>Build your First Android Application</title><link>/keyple-website/docs/build-your-first-app/android-app/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/build-your-first-app/android-app/</guid><description>&lt;h1 id="introduction">Introduction&lt;/h1>
 &lt;h2 id="overview">Overview&lt;/h2>
-&lt;p>&lt;strong>Since Keyple is supported by the Android operating system, developers can take advantage of this quick and easy to implement solution to provide SmartCard communication functionalities in their own mobile application.&lt;/strong>&lt;/p>
-&lt;p>For exemple, Keyple could be used to facilitate the development of a ticketing application based of the use of conteners on a SIM card and relying on
+&lt;p>&lt;strong>Since Keyple is supported by the Android operating system, developers can take advantage of this quick and easy way to implement solution to provide SmartCard communication functionalities in their own mobile application.&lt;/strong>&lt;/p>
+&lt;p>For example, Keyple could be used to facilitate the development of a ticketing application based on the use of conteners on a SIM card and relying on
 &lt;a href="https://developer.android.com/reference/android/se/omapi/package-summary" target="_blank" rel="noopener">Android SE OMAPI&lt;/a>.
 Keyple could also be used to develop an application reading SmartCard content through NFC using
 &lt;a href="https://developer.android.com/guide/topics/connectivity/nfc/advanced-nfc" target="_blank" rel="noopener">Android NFC&lt;/a>.&lt;/p>
@@ -902,17 +902,15 @@ SmartCardService.getInstance().registerPlugin(AndroidNfcPluginFactory())
 }
 }
 &lt;/code>&lt;/pre>
-&lt;p>Note: Plugins Factory&amp;rsquo;s initialisation could request more steps to execute before passing it to registerPlugin(). It depends on plugins, please check the documentation or usage exemple of desired plugin.&lt;/p>
+&lt;p>Note: Plugins Factory&amp;rsquo;s initialisation could request more steps to execute before passing it to registerPlugin(). It depends on plugins, please check the documentation or usage example of desired plugin.&lt;/p>
 &lt;h3 id="unregister-a-plugin">Unregister a plugin&lt;/h3>
 &lt;p>Clean resources.&lt;/p>
 &lt;pre>&lt;code class="language-kotlin">override fun onDestroy() {
-super.onCreate(savedInstanceState)
+/* deactivate protocol */
+reader?.deactivateProtocol(ContactlessCardCommonProtocols.ISO_14443_4.name)
 /* Unregister Android NFC Plugin to the SmartCardService */
-try {
 SmartCardService.getInstance().unregisterPlugin(AndroidNfcPlugin.PLUGIN_NAME)
-}catch (e: KeypleException){
-/* do something with it */
-}
+reader = null
 super.onDestroy()
 }
 &lt;/code>&lt;/pre>
@@ -952,10 +950,8 @@ override fun onResume() {
 super.onResume()
 reader?.let {
 //Set Keyple in a detection mode
-//We choose to stop detection as soon as one card is detected
-it.startCardDetection(ObservableReader.PollingMode.SINGLESHOT)
-//Activate NFC detection (To be removed soon for merge with below step)
-it.enableNFCReaderMode(this)
+//We choose to continue waiting for a new card persentation
+it.startCardDetection(ObservableReader.PollingMode.REPEATING)
 }
 }
 }
@@ -964,7 +960,6 @@ it.enableNFCReaderMode(this)
 &lt;pre>&lt;code class="language-kotlin">class MainActivity : AppCompatActivity(), ObservableReader.ReaderObserver {
 override fun onPause() {
 reader?.let {
-it.disableNFCReaderMode(this)
 it.stopCardDetection()
 }
 super.onPause()
@@ -1095,18 +1090,19 @@ override fun onResume() {
 super.onResume()
 reader?.let {
 it.startCardDetection(ObservableReader.PollingMode.SINGLESHOT)
-it.enableNFCReaderMode(this)
 Toast.makeText(this, String.format(&amp;quot;Hunt enabled&amp;quot;), Toast.LENGTH_SHORT).show()
 }
 }
 override fun onPause() {
 reader?.let {
-it.disableNFCReaderMode(this)
 it.stopCardDetection()
 }
 super.onPause()
 }
 override fun onDestroy() {
+/* deactivate protocol */
+reader?.deactivateProtocol(ContactlessCardCommonProtocols.ISO_14443_4.name)
+/* Unregister Android NFC Plugin to the SmartCardService */
 SmartCardService.getInstance().unregisterPlugin(AndroidNfcPlugin.PLUGIN_NAME)
 reader = null
 super.onDestroy()
@@ -2102,57 +2098,369 @@ width: 240px;
 &lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/component/keyple-plugin/remote-plugin/remote/README.md" target="_blank" rel="noopener">Remote Lib&lt;/a>&lt;/li>
 &lt;li>
 &lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/component/keyple-plugin/remote-plugin/local/README.md" target="_blank" rel="noopener">Local Lib&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Develop a Plugin</title><link>/keyple-website/docs/developer-guide/develop-plugin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/developer-guide/develop-plugin/</guid><description>&lt;p>This guide will provide nescessary steps to develop a Keyple plugin for a device. In order to flatten the learning curve, we&amp;rsquo;ll
-illustrate the creation processus using the implementation of the Android NFC Plugin and OMAPI plugins.
-This plugins can be consulted with the keyple-java/android repository.&lt;/p>
+&lt;/ul></description></item><item><title>Develop a Plugin</title><link>/keyple-website/docs/developer-guide/develop-plugin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/developer-guide/develop-plugin/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>In order to provide an easy way to port a Keyple applications from a device with a specific card reader to another, a plugin system
+as been developed. When a developer wants to include Keyple features within his project, he has to initialize the SmartCardService by providing a
+plugin Factory available with in the plugin library. The plugin to use depends on the targeted device and running environment.&lt;/p>
+&lt;p>For example, for an android device with native NFC we&amp;rsquo;ll use KeypleAndroidNfcPlugin.&lt;/p>
+&lt;pre>&lt;code class="language-gradle">implementation 'org.eclipse.keyple:keyple-android-plugin-nfc:$keyple_version'
+&lt;/code>&lt;/pre>
+&lt;pre>&lt;code class="language-kotlin">SmartCardService.getInstance().registerPlugin(AndroidNfcPluginFactory())
+&lt;/code>&lt;/pre>
+&lt;p>Keyple is already provided with various plug-ins ready to use. For example Android NFC or PC/SC reader plugins.&lt;/p>
+&lt;p>But users of the Keyple API may need to use it on new hardware not covered with existing plugins. In this case, a new
+one must be developed.&lt;/p>
+&lt;p>The purpose of this guide is to support developers in this process.&lt;/p>
+&lt;h2 id="class-diagram-of-plugin-package">Class diagram of plugin package&lt;/h2>
+&lt;p>For the record, this is a wide view of classes implied in the plugin system. It is designed to natively handle as much
+use cas as possible while being easy to use. It results of several internal classes, however, plugin&amp;rsquo;s developers will
+only have to use a few part of this elements.&lt;/p>
+&lt;figure >
+&lt;a data-fancybox="" href="/keyple-website/keyple-website/media/plugin-development/class/Plugin_Class_Full.png" >
+&lt;img src="/keyple-website/keyple-website/media/plugin-development/class/Plugin_Class_Full.png" alt="" >
+&lt;/a>
+&lt;/figure>
+&lt;h2 id="steps">Steps&lt;/h2>
+&lt;p>Plugin&amp;rsquo;s development relies on 3 main steps, each one consists in implementing a few set of abstract classes and interfaces of
+plugin package from Keyple Core API:&lt;/p>
+&lt;ol>
+&lt;li>Import Keyple dependency&lt;/li>
+&lt;li>Implement a Keyple Reader&lt;/li>
+&lt;li>Implement a Keyple Plugin&lt;/li>
+&lt;li>Implement a Keyple Plugin Factory.&lt;/li>
+&lt;/ol>
 &lt;h2 id="imports">Imports&lt;/h2>
 &lt;p>Your plugin will use be based upon Keyple Core libraries:&lt;/p>
 &lt;pre>&lt;code class="language-gradle">implementation &amp;quot;org.eclipse.keyple:keyple-java-core:$keyple_version&amp;quot;
 &lt;/code>&lt;/pre>
 &lt;h2 id="implement-keyple-reader">Implement Keyple Reader&lt;/h2>
-&lt;p>The basis component of a Keyple plugin is the implementation of an AbstractLocalReader. The AbstractLocalReader implementation will map the native reader&amp;rsquo;s
-features of the device to Keyple Reader component allowing to be used within the Keyple suite.&lt;/p>
-&lt;p>The &amp;lsquo;local&amp;rsquo; in AbstractLocalReader is used to specify devices physicaly connected to the device.&lt;/p>
-&lt;p>Relying on native libraries capacities of the device, implementations to be done are:&lt;/p>
+&lt;p>The first step of a Keyple plugin development is the implementation of Keyple Reader Interface (org.eclipse.keyple.core.Reader).
+This implementation should use device&amp;rsquo;s native smartcard reader library (or sdk package) to map interfaces used by Keyple API.&lt;/p>
+&lt;p>This implementation of a local reader must be done through the extension of one of three abstract classes provided within the Keyple API. The choice depends
+on expected behaviour of the reader:&lt;/p>
 &lt;ul>
-&lt;li>checkSePresence()&lt;/li>
-&lt;li>getATR()&lt;/li>
-&lt;li>openPhysicalChannel()&lt;/li>
-&lt;li>closePhysicalChannel()&lt;/li>
-&lt;li>isPhysicalChannelOpen()&lt;/li>
-&lt;li>ProtocolFlagMatches()&lt;/li>
-&lt;li>TransmitApdu&lt;/li>
+&lt;li>&lt;strong>AbstractLocalReader&lt;/strong>: Basic abstract class to use for local reader implementation.&lt;/li>
+&lt;li>&lt;strong>AbstractObservableLocalReader&lt;/strong>: extends AbstractLocalReader and is used to manage the matter of observing card events in the case of a local reader
+(ie: card insertion, card removal..).&lt;/li>
+&lt;li>&lt;strong>AbstractObservableLocalAutonomousReader&lt;/strong>: extends AbstractObservableLocalReader and is used to allow the reader implementation to
+call back the core when card insertion and removal events occurs.&lt;/li>
 &lt;/ul>
-&lt;p>###Examples&lt;/p>
-&lt;h4 id="checksepresence">checkSePresence()&lt;/h4>
-&lt;p>Allow Keyple to check if the secure elements is inserted or in the NFC field of the device.&lt;/p>
-&lt;p>OMAPI Exemple&lt;/p>
-&lt;pre>&lt;code class="language-kotlin">//nativeReader is an instance of android.se.omapi.Reader
-override fun checkSePresence(): Boolean {
+&lt;figure >
+&lt;a data-fancybox="" href="/keyple-website/keyple-website/media/plugin-development/class/AbstractReaders_Class.png" >
+&lt;img src="/keyple-website/keyple-website/media/plugin-development/class/AbstractReaders_Class.png" alt="" >
+&lt;/a>
+&lt;/figure>
+&lt;p>Once chosen, the Abstract class must be extended by the new reader class and abstract methods must be implemented. Please refer to your native reader
+documentation to implement this elements.&lt;/p>
+&lt;h3 id="implementation-of-abstractlocalreaders-abstract-classes">Implementation of AbstractLocalReader&amp;rsquo;s abstract classes&lt;/h3>
+&lt;p>Relying on the native smartcard reader of the device, implementations to be done are:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Method to implement&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;strong>boolean checkCardPresence()&lt;/strong>&lt;/td>
+&lt;td>Verify the presence of the card&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>byte[] getATR()&lt;/strong>&lt;/td>
+&lt;td>provides the information retrieved when powering up the card&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>openPhysicalChannel()&lt;/strong>&lt;/td>
+&lt;td>Attempts to open the physical channel&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>closePhysicalChannel()&lt;/strong>&lt;/td>
+&lt;td>Attempts to close the current physical channel&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>boolean isPhysicalChannelOpen()&lt;/strong>&lt;/td>
+&lt;td>Tells if the physical channel is open or not&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>boolean isCurrentProtocol(String readerProtocolName)&lt;/strong>&lt;/td>
+&lt;td>Tells if the current card communicates with the protocol provided as an argument&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>byte[] transmitApdu(byte[] apduIn)&lt;/strong>&lt;/td>
+&lt;td>Transmits a single APDU and receives its response. Both are in the form of an array of bytes.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>activateReaderProtocol(String readerProtocolName)&lt;/strong>&lt;/td>
+&lt;td>Activates the protocol provided from the reader&amp;rsquo;s implementation point of view.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>deactivateReaderProtocol(String readerProtocolName)&lt;/strong>&lt;/td>
+&lt;td>Deactivates the protocol provided from the reader&amp;rsquo;s implementation point of view.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>isContactless()&lt;/strong>&lt;/td>
+&lt;td>Tells if the current card communication is contactless.&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>Example of implementations are provided
+&lt;a href="#abstractlocalreader">here&lt;/a>.&lt;/p>
+&lt;h3 id="implementation-of-abstractobservablelocalreaders-abstract-classes">Implementation of AbstractObservableLocalReader&amp;rsquo;s abstract classes&lt;/h3>
+&lt;p>In addition of AbstractLocalReader&amp;rsquo;s methods, specific implementations to be done are:&lt;/p>
+&lt;h4 id="methods">Methods&lt;/h4>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Method to implement&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;strong>void onStartDetection()&lt;/strong>&lt;/td>
+&lt;td>Called when the card detection is started by the Keyple Plugin&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>void onStopDetection()&lt;/strong>&lt;/td>
+&lt;td>called when the card detection is stopped by the Keyple Plugin&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>Beside the implementation of this methods, this observable reader&amp;rsquo;s notification behaviour must be set.&lt;/p>
+&lt;h4 id="observable-readers-notification">Observable reader&amp;rsquo;s notification&lt;/h4>
+&lt;p>Observable reader&amp;rsquo;s notification behaviour is set up by implementing interfaces inheriting from ObservableReaderNotifiers.
+Developer has to choose how the reader should behave regarding its native abilities. It may involve a few more methods to implement.&lt;/p>
+&lt;figure >
+&lt;a data-fancybox="" href="/keyple-website/keyple-website/media/plugin-development/class/ObservableReaderNotifiers_Interfaces.png" >
+&lt;img src="/keyple-website/keyple-website/media/plugin-development/class/ObservableReaderNotifiers_Interfaces.png" alt="" >
+&lt;/a>
+&lt;/figure>
+&lt;p>It is &lt;strong>mandatory&lt;/strong> to implement one, and only one, interface of each use case presented in the related columns in the below
+table.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Card Insertion&lt;/th>
+&lt;th>Card Removal&lt;/th>
+&lt;th>Card Processing&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>WaitForCardInsertionAutonomous&lt;/td>
+&lt;td>WaitForCardRemovalAutonomous&lt;/td>
+&lt;td>WaitForCardRemovalDuringProcessing&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>WaitForCardInsertionBlocking&lt;/td>
+&lt;td>WaitForCardRemovalBlocking&lt;/td>
+&lt;td>DontWaitForCardRemovalDuringProcessing&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>WaitForCardInsertionNonBlocking&lt;/td>
+&lt;td>WaitForCardRemovalNonBlocking&lt;/td>
+&lt;td>&amp;mdash;&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>Description of the Insertion/Removal behaviours:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Type&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;strong>[*]Autonomous&lt;/strong>&lt;/td>
+&lt;td>Interface to be implemented by readers that have a fully integrated management of card communications for card insertion/removal detection&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>[*]Blocking&lt;/strong>&lt;/td>
+&lt;td>Interface to be implemented by readers that are autonomous in the management of waiting for the insertion/removal of a card and that provide a method to wait for it indefinitely.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>[*]Non Blocking&lt;/strong>&lt;/td>
+&lt;td>Interface to be implemented by readers that require an active process to detect the card insertion /removal.&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>Description of the processing behaviours:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Type&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;strong>WaitForCardRemovalDuringProcessing&lt;/strong>&lt;/td>
+&lt;td>Interface to be implemented by readers &lt;strong>able&lt;/strong> to detect a card &lt;strong>removal&lt;/strong> during processing, between two APDU commands.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>DontWaitForCardRemovalDuringProcessing&lt;/strong>&lt;/td>
+&lt;td>Interface to be implemented by readers &lt;strong>not able&lt;/strong> to detect a card &lt;strong>removal&lt;/strong> during processing, between two APDU commands.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Example of implementations are provided
+&lt;a href="#abstractobservablelocalreader">here&lt;/a>.&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="implementation-of-abstractobservablelocalautonomousreaders-abstract-classes">Implementation of AbstractObservableLocalAutonomousReader&amp;rsquo;s abstract classes&lt;/h3>
+&lt;p>In addition of AbstractObservableLocalReader&amp;rsquo;s methods and ObservableReaderNotifiers implementation, specific methods calls must be done:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Method to call&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;strong>void onCardInserted()&lt;/strong>&lt;/td>
+&lt;td>This method must be called when a card is inserted to.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>void onCardRemoved()&lt;/strong>&lt;/td>
+&lt;td>This method must be called when a card is removed.&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>Example of implementations are provided
+&lt;a href="#abstractobservablelocalautonomousreader">here&lt;/a>.&lt;/p>
+&lt;h2 id="implement-keyple-plugin">Implement Keyple Plugin&lt;/h2>
+&lt;p>The next step of Keyple plugin development is the implementation of Keyple Plugin Interface (org.eclipse.keyple.core.service.Plugin).
+The plugin will provide access to the readers and handle their lifecycle.&lt;/p>
+&lt;p>As well as Reader&amp;rsquo;s implementation, abstract classes to extend and interfaces to implement will depend on native abilities of the device.&lt;/p>
+&lt;p>This implementation of a plugin must be done through the extension of one of three abstract classes provided within the Keyple API.
+The choice depends on expected behaviour of the plugin:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>AbstractPlugin&lt;/strong>: Basic class for plugin implementation.&lt;/li>
+&lt;li>&lt;strong>AbstractObservablePlugin&lt;/strong>: This class provides the means to observe a plugin(insertion/removal of readers).&lt;/li>
+&lt;li>&lt;strong>AbstractThreadedObservablePlugin&lt;/strong>: This class provides the means to observe a plugin(insertion/removal of readers) using a monitoring thread.&lt;/li>
+&lt;/ul>
+&lt;figure >
+&lt;a data-fancybox="" href="/keyple-website/keyple-website/media/plugin-development/class/AbstractPlugins_Class.png" >
+&lt;img src="/keyple-website/keyple-website/media/plugin-development/class/AbstractPlugins_Class.png" alt="" >
+&lt;/a>
+&lt;/figure>
+&lt;h3 id="implementation-of-abstractplugins-abstract-classes">Implementation of AbstractPlugin&amp;rsquo;s abstract classes&lt;/h3>
+&lt;h4 id="initnativereaders">initNativeReaders()&lt;/h4>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Method to implement&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;strong>ConcurrentMap&amp;lt;String, Reader&amp;gt; initNativeReaders()&lt;/strong>&lt;/td>
+&lt;td>This method is called when registering a plugin. It should be implemented to init readers map.&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>Example of implementations are provided
+&lt;a href="#initnativereaders-1">here&lt;/a>.&lt;/p>
+&lt;h3 id="implementation-of-abstractobservableplugins-abstract-classes">Implementation of AbstractObservablePlugin&amp;rsquo;s abstract classes&lt;/h3>
+&lt;p>There is no additional methods to implement compared to AbstractPlugin&lt;/p>
+&lt;h3 id="implementation-of-abstractthreadedobservableplugins-abstract-classes">Implementation of AbstractThreadedObservablePlugin&amp;rsquo;s abstract classes&lt;/h3>
+&lt;p>In addition of AbstractObservablePlugin&amp;rsquo;s methods and ObservableReaderNotifiers implementation, specific methods calls must be done:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Method to implement&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;strong>SortedSet&lt;String> fetchNativeReadersNames()&lt;/strong>&lt;/td>
+&lt;td>This method Fetch the list of connected native reader (usually from third party library) and returns their names (or id)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>Reader fetchNativeReader(String name)&lt;/strong>&lt;/td>
+&lt;td>Fetch connected native reader (from third party library) by its name returns the current AbstractReader if it is already listed. Creates and returns a new AbstractReader if not.&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>Example of implementations are provided
+&lt;a href="#abstractthreadedobservableplugin">here&lt;/a>.&lt;/p>
+&lt;h3 id="implementation-of-abstractpluginfactorys-abstract-classes">Implementation of AbstractPluginFactory&amp;rsquo;s abstract classes&lt;/h3>
+&lt;p>The last step is to implement the Plugin factory which is going to be use by Keyple core to handle the plugin.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Method to implement&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;strong>String getPluginName()&lt;/strong>&lt;/td>
+&lt;td>Retrieve the name of the plugin that will be instantiated by this factory (can be static or dynamic)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>Plugin getPlugin()&lt;/strong>&lt;/td>
+&lt;td>Retrieve an instance of a plugin (can be a singleton)&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>Example of implementations are provided
+&lt;a href="#abstractthreadedobservableplugin">here&lt;/a>.&lt;/p>
+&lt;h2 id="examples-of-implementation">Examples of implementation&lt;/h2>
+&lt;h3 id="abstractlocalreader">AbstractLocalReader&lt;/h3>
+&lt;h4 id="checkcardpresence">checkCardPresence()&lt;/h4>
+&lt;p>Allow Keyple to check if the secure elements is present within the reader (inserted, in NFC field&amp;hellip;)&lt;/p>
+&lt;p>OMAPI Example&lt;/p>
+&lt;pre>&lt;code class="language-kotlin">//nativeReader is an instance of android.se.omapi.Reader. It natively provides a method to check Card presence.
+override fun checkCardPresence(): Boolean {
 return nativeReader.isSecureElementPresent
 }
 &lt;/code>&lt;/pre>
 &lt;p>Android NFC Example&lt;/p>
 &lt;pre>&lt;code class="language-kotlin">//When a SE is presented in the NFC field, we can get a tagproxy object. When the SE is removed,
 //this value is reinited. So when it is not null, we can assume the SE is currently in the field.
-public override fun checkSePresence(): Boolean {
+//The presence information is not directly available be we can find a way to implement checkCardPresence()
+public override fun checkCardPresence(): Boolean {
 return tagProxy != null
+}
+&lt;/code>&lt;/pre>
+&lt;p>PC/SC Example&lt;/p>
+&lt;pre>&lt;code class="language-java">public override fun checkCardPresence(): Boolean {
+//Terminal is an instance of CardTerminal provided by javax.smartcardio
+return terminal.isCardPresent();
 }
 &lt;/code>&lt;/pre>
 &lt;h4 id="getatr">getAtr()&lt;/h4>
 &lt;p>OMAPI Exemple&lt;/p>
-&lt;pre>&lt;code class="language-kotlin">//Session is a native object of android.se.omapi package
-override fun getATR(): ByteArray? {
+&lt;pre>&lt;code class="language-kotlin">override fun getATR(): ByteArray? {
+//Session is a native object of android.se.omapi package
 return session?.let {
 it.atr
 }
 }
 &lt;/code>&lt;/pre>
 &lt;p>Android NFC Example&lt;/p>
-&lt;pre>&lt;code class="language-kotlin">//TagProxy is an object mapping android.nfc.tech.TagTechnology. Atr is obtained from data of this object (epending of protocol)
-public override fun getATR(): ByteArray? {
+&lt;pre>&lt;code class="language-kotlin">public override fun getATR(): ByteArray? {
+//TagProxy is an object mapping android.nfc.tech.TagTechnology. Atr is obtained from data of this object (depending of protocol)
 val atr = tagProxy?.atr
 return if (atr?.isNotEmpty() == true) atr else null
+}
+&lt;/code>&lt;/pre>
+&lt;p>PC/SC Example&lt;/p>
+&lt;pre>&lt;code class="language-java">public override fun checkCardPresence(): Boolean {
+//Card is an instance of card provided by javax.smartcardio
+return return card.getATR().getBytes();;
 }
 &lt;/code>&lt;/pre>
 &lt;h4 id="openphysicalchannel">openPhysicalChannel()&lt;/h4>
@@ -2160,6 +2468,7 @@ return if (atr?.isNotEmpty() == true) atr else null
 &lt;pre>&lt;code class="language-kotlin">@Throws(KeypleReaderIOException::class)
 override fun openPhysicalChannel() {
 try {
+//nativeReader is an instance of import android.se.omapi.Reader
 session = nativeReader.openSession()
 } catch (e: IOException) {
 throw KeypleReaderIOException(&amp;quot;IOException while opening physical channel.&amp;quot;, e)
@@ -2169,6 +2478,8 @@ throw KeypleReaderIOException(&amp;quot;IOException while opening physical chann
 &lt;p>Android NFC Example&lt;/p>
 &lt;pre>&lt;code class="language-kotlin">@Throws(KeypleReaderIOException::class)
 public override fun openPhysicalChannel() {
+//TagProxy is a wrapper we created in the plugin
+//To handle android.nfc.Tag
 if (tagProxy?.isConnected != true) {
 try {
 tagProxy?.connect()
@@ -2178,17 +2489,433 @@ throw KeypleReaderIOException(&amp;quot;Error while opening physical channel&amp
 }
 }
 &lt;/code>&lt;/pre>
-&lt;p>Also, this implementation could be done extending AbstractObservableLocalReader. It provides :&lt;/p>
-&lt;ul>
-&lt;li>State machine regarding SE event: &amp;lsquo;WAIT_FOR_START_DETECTION&amp;rsquo;, &amp;lsquo;WAIT_FOR_SE_INSERTION&amp;rsquo;&amp;hellip;&lt;/li>
-&lt;li>Extended readers features
-&lt;ul>
-&lt;li>Smart Insertion Reader: Allow to detect SE insertion&lt;/li>
-&lt;li>Smart Removal Reader: Allow to detect SE Removal&lt;/li>
-&lt;li>Smart Selection Reader: Allow to use native SE selection process&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul></description></item><item><title>Develop an Extension</title><link>/keyple-website/docs/developer-guide/develop-extension/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/developer-guide/develop-extension/</guid><description/></item><item><title>Migration Guide - Keyple Java 0.8.1 to 0.9.0</title><link>/keyple-website/docs/developer-guide/migration-0.8.1-to-0.9.0/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/developer-guide/migration-0.8.1-to-0.9.0/</guid><description>&lt;p>This guide is intended to help a user of version 0.8.1 of Keyple Java to upgrade his application to the 0.9.0 version of the library.&lt;/p>
+&lt;p>PC/SC Example&lt;/p>
+&lt;pre>&lt;code class="language-java">public override fun checkCardPresence(): Boolean {
+//card is an instance of Card provided by javax.smartcardio
+if (card == null) {
+this.card = this.terminal.connect(parameterCardProtocol);
+} else {
+logger.debug(&amp;quot;[{}] Opening of a card physical channel in shared mode.&amp;quot;, this.getName());
+}
+}
+//CardChannel is an instance of card provided by javax.smartcardio
+this.channel = card.getBasicChannel();
+}
+&lt;/code>&lt;/pre>
+&lt;h4 id="closephysicalchannel">closePhysicalChannel()&lt;/h4>
+&lt;p>OMAPI Exemple&lt;/p>
+&lt;pre>&lt;code class="language-kotlin">override fun closePhysicalChannel() {
+//openChannel is an instance of android.se.omapi.Channel
+openChannel?.let {
+it.session.close()
+openChannel = null
+}
+}
+&lt;/code>&lt;/pre>
+&lt;p>Android NFC Example&lt;/p>
+&lt;pre>&lt;code class="language-kotlin">@Throws(KeypleReaderIOException::class)
+public override fun closePhysicalChannel() {
+try {
+//TagProxy is a wrapper we created in the plugin
+//To handle android.nfc.Tag
+tagProxy?.close()
+} catch (e: IOException) {
+throw KeypleReaderIOException(&amp;quot;Error while closing physical channel&amp;quot;, e)
+} finally {
+tagProxy = null
+}
+}
+&lt;/code>&lt;/pre>
+&lt;p>PC/SC Example&lt;/p>
+&lt;pre>&lt;code class="language-java">protected void closePhysicalChannel() {
+try {
+//card is an instance of Card provided by javax.smartcardio
+if (card != null) {
+channel = null;
+card.disconnect(true);
+card = null;
+}
+} catch (CardException e) {
+throw new KeypleReaderIOException(&amp;quot;Error while closing physical channel&amp;quot;, e);
+}
+}
+&lt;/code>&lt;/pre>
+&lt;h4 id="isphysicalchannelopen">isPhysicalChannelOpen()&lt;/h4>
+&lt;p>OMAPI Exemple&lt;/p>
+&lt;pre>&lt;code class="language-kotlin"> override fun isPhysicalChannelOpen(): Boolean {
+//Session is an instance of android.se.omapi.Session
+return session?.isClosed == false
+}
+&lt;/code>&lt;/pre>
+&lt;p>Android NFC Example&lt;/p>
+&lt;pre>&lt;code class="language-kotlin"> public override fun isPhysicalChannelOpen(): Boolean {
+//TagProxy is a wrapper we created in the plugin
+//To handle android.nfc.Tag
+return tagProxy?.isConnected == true
+}
+&lt;/code>&lt;/pre>
+&lt;p>PC/SC Example&lt;/p>
+&lt;pre>&lt;code class="language-java">protected void closePhysicalChannel() {
+try {
+//card is an instance of Card provided by javax.smartcardio
+if (card != null) {
+channel = null;
+card.disconnect(true);
+card = null;
+}
+} catch (CardException e) {
+throw new KeypleReaderIOException(&amp;quot;Error while closing physical channel&amp;quot;, e);
+}
+}
+&lt;/code>&lt;/pre>
+&lt;h4 id="transmitapdubyte-apduin">transmitApdu(byte[] apduIn)&lt;/h4>
+&lt;p>OMAPI Exemple&lt;/p>
+&lt;pre>&lt;code class="language-kotlin"> override fun transmitApdu(apduIn: ByteArray): ByteArray {
+// Initialization
+Timber.d(&amp;quot;Data Length to be sent to tag : &amp;quot; + apduIn.size)
+Timber.d(&amp;quot;Data in : &amp;quot; + ByteArrayUtil.toHex(apduIn))
+var dataOut = byteArrayOf(0)
+try {
+openChannel.let {
+dataOut = it?.transmit(apduIn) ?: throw IOException(&amp;quot;Channel is not open&amp;quot;)
+}
+} catch (e: IOException) {
+throw KeypleReaderIOException(&amp;quot;Error while transmitting APDU&amp;quot;, e)
+}
+Timber.d(&amp;quot;Data out : &amp;quot; + ByteArrayUtil.toHex(dataOut))
+return dataOut
+}
+&lt;/code>&lt;/pre>
+&lt;p>Android NFC Example&lt;/p>
+&lt;pre>&lt;code class="language-kotlin"> public override fun transmitApdu(apduIn: ByteArray): ByteArray {
+Timber.d(&amp;quot;Send data to card : ${apduIn.size} bytes&amp;quot;)
+return with(tagProxy) {
+if (this == null) {
+throw KeypleReaderIOException(
+&amp;quot;Error while transmitting APDU, invalid out data buffer&amp;quot;)
+} else {
+try {
+val bytes = transceive(apduIn)
+if (bytes.size &amp;lt;2) {
+throw KeypleReaderIOException(
+&amp;quot;Error while transmitting APDU, invalid out data buffer&amp;quot;)
+} else {
+Timber.d(&amp;quot;Receive data from card : ${ByteArrayUtil.toHex(bytes)}&amp;quot;)
+bytes
+}
+} catch (e: IOException) {
+throw KeypleReaderIOException(
+&amp;quot;Error while transmitting APDU, invalid out data buffer&amp;quot;, e)
+} catch (e: NoSuchElementException) {
+throw KeypleReaderIOException(&amp;quot;Error while transmitting APDU, no such Element&amp;quot;, e)
+}
+}
+}
+}
+&lt;/code>&lt;/pre>
+&lt;p>PC/SC Example&lt;/p>
+&lt;pre>&lt;code class="language-java">protected byte[] transmitApdu(byte[] apduIn) {
+ResponseAPDU apduResponseData;
+if (channel != null) {
+try {
+apduResponseData = channel.transmit(new CommandAPDU(apduIn));
+} catch (CardException e) {
+throw new KeypleReaderIOException(this.getName() + &amp;quot;:&amp;quot; + e.getMessage());
+} catch (IllegalArgumentException e) {
+// card could have been removed prematurely
+throw new KeypleReaderIOException(this.getName() + &amp;quot;:&amp;quot; + e.getMessage());
+}
+} else {
+// could occur if the card was removed
+throw new KeypleReaderIOException(this.getName() + &amp;quot;: null channel.&amp;quot;);
+}
+return apduResponseData.getBytes();
+}
+&lt;/code>&lt;/pre>
+&lt;h4 id="activatereaderprotocolstring-readerprotocolname">activateReaderProtocol(String readerProtocolName)&lt;/h4>
+&lt;p>OMAPI Exemple&lt;/p>
+&lt;pre>&lt;code class="language-kotlin"> override fun activateReaderProtocol(readerProtocolName: String?) {
+// do nothing as protocol ils not relevant for contact PO
+}
+&lt;/code>&lt;/pre>
+&lt;p>Android NFC Example&lt;/p>
+&lt;pre>&lt;code class="language-kotlin"> override fun activateReaderProtocol(readerProtocolName: String?) {
+if (!protocolsMap.containsKey(readerProtocolName)) {
+//we map the requested protocol to a custom android protocol
+protocolsMap.put(readerProtocolName!!, AndroidNfcProtocolSettings.getSetting(readerProtocolName!!)!!)
+}
+}
+&lt;/code>&lt;/pre>
+&lt;p>PC/SC Example&lt;/p>
+&lt;pre>&lt;code class="language-java"> protected void activateReaderProtocol(String readerProtocolName) {
+if (!PcscProtocolSetting.getSettings().containsKey(readerProtocolName)) {
+throw new KeypleReaderProtocolNotSupportedException(readerProtocolName);
+}
+}
+&lt;/code>&lt;/pre>
+&lt;h4 id="deactivatereaderprotocolstring-readerprotocolname">deactivateReaderProtocol(String readerProtocolName)&lt;/h4>
+&lt;p>OMAPI Exemple&lt;/p>
+&lt;pre>&lt;code class="language-kotlin"> override fun deactivateReaderProtocol(readerProtocolName: String?) {
+// do nothing
+}
+&lt;/code>&lt;/pre>
+&lt;p>Android NFC Example&lt;/p>
+&lt;pre>&lt;code class="language-kotlin"> override fun deactivateReaderProtocol(readerProtocolName: String?) {
+if (protocolsMap.containsKey(readerProtocolName)) {
+protocolsMap.remove(readerProtocolName)
+}
+Timber.d(&amp;quot;${getName()}: Deactivate protocol $readerProtocolName.&amp;quot;)
+}
+&lt;/code>&lt;/pre>
+&lt;p>PC/SC Example&lt;/p>
+&lt;pre>&lt;code class="language-java"> protected void deactivateReaderProtocol(String readerProtocolName) {
+if (!PcscProtocolSetting.getSettings().containsKey(readerProtocolName)) {
+throw new KeypleReaderProtocolNotSupportedException(readerProtocolName);
+}
+if (logger.isDebugEnabled()) {
+logger.debug(&amp;quot;{}: Deactivate protocol {}.&amp;quot;, getName(), readerProtocolName);
+}
+}
+&lt;/code>&lt;/pre>
+&lt;h4 id="iscurrentprotocolstring-readerprotocolname">isCurrentProtocol(String readerProtocolName)&lt;/h4>
+&lt;p>OMAPI Exemple&lt;/p>
+&lt;pre>&lt;code class="language-kotlin"> override fun isCurrentProtocol(readerProtocolName: String?): Boolean {
+return AndroidOmapiSupportedProtocols.ISO_7816_3.name == readerProtocolName
+}
+&lt;/code>&lt;/pre>
+&lt;p>Android NFC Example&lt;/p>
+&lt;pre>&lt;code class="language-kotlin"> override fun isCurrentProtocol(readerProtocolName: String?): Boolean {
+return readerProtocolName == null || protocolsMap.containsKey(readerProtocolName) &amp;amp;&amp;amp; protocolsMap[readerProtocolName] == tagProxy?.tech
+}
+&lt;/code>&lt;/pre>
+&lt;p>PC/SC Example&lt;/p>
+&lt;pre>&lt;code class="language-java"> protected boolean isCurrentProtocol(String readerProtocolName) {
+String protocolRule = PcscProtocolSetting.getSettings().get(readerProtocolName);
+String atr = ByteArrayUtil.toHex(card.getATR().getBytes());
+return Pattern.compile(protocolRule).matcher(atr).matches();
+}
+&lt;/code>&lt;/pre>
+&lt;h4 id="iscontactless">isContactless()&lt;/h4>
+&lt;p>OMAPI Exemple&lt;/p>
+&lt;pre>&lt;code class="language-kotlin"> override fun isContactless(): Boolean {
+//OMAPI is a contact Reader
+return false
+}
+&lt;/code>&lt;/pre>
+&lt;p>Android NFC Example&lt;/p>
+&lt;pre>&lt;code class="language-kotlin"> override fun isContactless(): Boolean {
+//NFC is a contactless Reader
+return true
+}
+&lt;/code>&lt;/pre>
+&lt;p>PC/SC Example&lt;/p>
+&lt;pre>&lt;code class="language-java"> public boolean isContactless() {
+//isContactless is a custom variable that can be set by the plugin
+//as PC/SC can be a contactless or contact reade.
+if (isContactless == null) {
+/* First time initialisation, the transmission mode has not yet been determined or fixed explicitly, let's ask the plugin to determine it (only once) */
+isContactless =
+((AbstractPcscPlugin) SmartCardService.getInstance().getPlugin(getPluginName()))
+.isContactless(getName());
+}
+return isContactless;
+}
+&lt;/code>&lt;/pre>
+&lt;h3 id="abstractobservablelocalreader">AbstractObservableLocalReader&lt;/h3>
+&lt;h4 id="onstartdetection">onStartDetection()&lt;/h4>
+&lt;p>Android NFC Example&lt;/p>
+&lt;pre>&lt;code class="language-kotlin"> override fun onStartDetection() {
+// When Keyple Core starts detection, we have to use native Android NFC adapter to start nfc scanning
+if (contextWeakRef.get() == null) {
+throw IllegalStateException(&amp;quot;onStartDetection() failed : no context available&amp;quot;)
+}
+if (nfcAdapter == null) {
+nfcAdapter = NfcAdapter.getDefaultAdapter(contextWeakRef.get()!!)
+}
+val flags = flags
+val options = options
+nfcAdapter?.enableReaderMode(contextWeakRef.get(), this, flags, options)
+}
+&lt;/code>&lt;/pre>
+&lt;p>PC/SC Example&lt;/p>
+&lt;pre>&lt;code class="language-java"> protected void onStartDetection() {
+//TODO: completion
+}
+&lt;/code>&lt;/pre>
+&lt;h4 id="onstopdetection">onStopDetection()&lt;/h4>
+&lt;p>Android NFC Example&lt;/p>
+&lt;pre>&lt;code class="language-kotlin"> override fun onStopDetection() {
+/When keyple core stop detection, we call native adapter stop NFC scanning
+nfcAdapter?.let {
+if (contextWeakRef.get() != null) {
+it.disableReaderMode(contextWeakRef.get())
+} else {
+throw IllegalStateException(&amp;quot;onStopDetection failed : no context available&amp;quot;)
+}
+}
+}
+&lt;/code>&lt;/pre>
+&lt;p>PC/SC Example&lt;/p>
+&lt;pre>&lt;code class="language-java"> protected void onStopDetection() {
+//TODO: completion
+}
+&lt;/code>&lt;/pre>
+&lt;h3 id="observablereadernotifiers">ObservableReaderNotifiers&lt;/h3>
+&lt;p>Android NFC Example&lt;/p>
+&lt;pre>&lt;code class="language-kotlin"> //Note simplified view of Android NFc implementation
+class AndroidNfcReader(activity: Activity) :
+//In android NFC, we want an easy way to callback Keyple Core when a card is inserted
+//because this event occurs through the native layer.
+AbstractObservableLocalAutonomousReader(
+AndroidNfcReader.PLUGIN_NAME,
+AndroidNfcReader.READER_NAME
+),
+//Our reader have an integrated management of card insertion detection
+WaitForCardInsertionAutonomous,
+//Our reader do not have an integrated management of card removal detection
+//but we can use it when the card is no longer in the field and trigger a removal event
+WaitForCardRemovalBlocking,
+//We do not want to catch card removal between exchanges with it
+DontWaitForCardRemovalDuringProcessing{}
+&lt;/code>&lt;/pre>
+&lt;p>PC/SC Example&lt;/p>
+&lt;pre>&lt;code class="language-java"> //We want to observe card events like insertion, removal...
+class AbstractPcscReader extends bstractObservableLocalReader implements PcscReader,
+//Our native reader do not have an integrated management of card insertion detection
+//but we can use it when the card is in the field and trigger an insertion event
+WaitForCardInsertionBlocking,
+//We want to detect when card is removed while exchanging data with our reader
+WaitForCardRemovalDuringProcessing,
+//Our native reader do not have an integrated management of card removal detection
+//but we can use it when the card is no longer in the field and trigger a removal event
+WaitForCardRemovalBlocking {}
+&lt;/code>&lt;/pre>
+&lt;h3 id="abstractobservablelocalautonomousreader">AbstractObservableLocalAutonomousReader&lt;/h3>
+&lt;h4 id="oncardinserted">onCardInserted()&lt;/h4>
+&lt;p>Android NFC Example&lt;/p>
+&lt;pre>&lt;code class="language-kotlin"> //Note simplified view of Android NFc implementation
+override fun onTagDiscovered(tag: Tag?) {
+tag?.let {
+try {
+tagProxy = TagProxy.getTagProxy(tag)
+//onTagDiscovered is triggered natively
+//we use below code to forward the information to Keyple core
+onCardInserted()
+} catch (e: KeypleReaderException) {
+Timber.e(e)
+}
+}
+}
+&lt;/code>&lt;/pre>
+&lt;h4 id="oncardremoved">onCardRemoved()&lt;/h4>
+&lt;h3 id="abstractplugin">AbstractPlugin&lt;/h3>
+&lt;h4 id="initnativereaders-1">initNativeReaders()&lt;/h4>
+&lt;p>OMAPI Exemple&lt;/p>
+&lt;pre>&lt;code class="language-kotlin"> override fun initNativeReaders(): ConcurrentSkipListMap&amp;lt;String, Reader&amp;gt; {
+val readers = ConcurrentSkipListMap&amp;lt;String, Reader&amp;gt;()
+//seService is an instance of android.se.omapi.SEService
+seService?.readers.forEach { nativeReader -&amp;gt;
+//mapToReader creates an instance of our Keyple reader from a native reader
+val reader = mapToReader(nativeReader)
+readers[reader.name] = reader
+}
+return readers
+}
+&lt;/code>&lt;/pre>
+&lt;p>Android NFC Example&lt;/p>
+&lt;pre>&lt;code class="language-kotlin"> override fun initNativeReaders(): ConcurrentMap&amp;lt;String, Reader&amp;gt;? {
+val readers = ConcurrentHashMap&amp;lt;String, Reader&amp;gt;()
+//AndroidNfcReaderImpl is our implementation of Keyple reader
+readers[AndroidNfcReader.READER_NAME] = AndroidNfcReaderImpl(activity)
+return readers
+}
+&lt;/code>&lt;/pre>
+&lt;p>PC/SC Example&lt;/p>
+&lt;pre>&lt;code class="language-java"> protected Map&amp;lt;String, Reader&amp;gt; initNativeReaders() {
+ConcurrentMap&amp;lt;String, Reader&amp;gt; nativeReaders = new ConcurrentHashMap&amp;lt;String, Reader&amp;gt;();
+//CardTerminal is a a class from javax.smartcardio
+CardTerminals terminals = getCardTerminals();
+try {
+for (CardTerminal terminal : terminals.list()) {
+final PcscReader pcscReader = createReader(this.getName(), terminal);
+nativeReaders.put(pcscReader.getName(), pcscReader);
+}
+} catch (CardException e) {
+}
+return nativeReaders;
+}
+&lt;/code>&lt;/pre>
+&lt;h3 id="abstractthreadedobservableplugin">AbstractThreadedObservablePlugin&lt;/h3>
+&lt;h4 id="fetchnativereadersnames">fetchNativeReadersNames()&lt;/h4>
+&lt;p>PC/SC Example&lt;/p>
+&lt;pre>&lt;code class="language-kotlin"> public SortedSet&amp;lt;String&amp;gt; fetchNativeReadersNames() {
+SortedSet&amp;lt;String&amp;gt; nativeReadersNames = new ConcurrentSkipListSet&amp;lt;String&amp;gt;();
+CardTerminals terminals = getCardTerminals();
+try {
+for (CardTerminal terminal : terminals.list()) {
+nativeReadersNames.add(terminal.getName());
+}
+} catch (CardException e) {
+}
+return nativeReadersNames;
+}
+&lt;/code>&lt;/pre>
+&lt;h4 id="fetchnativereader">fetchNativeReader()&lt;/h4>
+&lt;p>PC/SC Example&lt;/p>
+&lt;pre>&lt;code class="language-java"> protected Reader fetchNativeReader(String name) {
+// return the current reader if it is already listed
+Reader reader = readers.get(name);
+if (reader != null) {
+return reader;
+}
+/* parse the current PC/SC readers list to create the ProxyReader(s) associated with new reader(s) */
+CardTerminals terminals = getCardTerminals();
+try {
+for (CardTerminal terminal : terminals.list()) {
+if (terminal.getName().equals(name)) {
+reader = createReader(this.getName(), terminal);
+}
+}
+} catch (CardException e) {
+throw new KeypleReaderIOException(&amp;quot;Could not access terminals list&amp;quot;, e);
+}
+if (reader == null) {
+throw new KeypleReaderNotFoundException(&amp;quot;Reader &amp;quot; + name + &amp;quot; not found!&amp;quot;);
+}
+return reader;
+}
+&lt;/code>&lt;/pre>
+&lt;h3 id="pluginfactory">PluginFactory&lt;/h3>
+&lt;h4 id="getpluginname">getPluginName()&lt;/h4>
+&lt;p>Android NFC Example&lt;/p>
+&lt;pre>&lt;code class="language-kotlin"> override fun getPluginName(): String {
+return AndroidNfcPlugin.PLUGIN_NAME
+}
+&lt;/code>&lt;/pre>
+&lt;p>PC/SC Example&lt;/p>
+&lt;pre>&lt;code class="language-java"> public String getPluginName() {
+return PLUGIN_NAME;
+}
+&lt;/code>&lt;/pre>
+&lt;h4 id="getplugin">getPlugin()&lt;/h4>
+&lt;p>Android NFC Example&lt;/p>
+&lt;pre>&lt;code class="language-kotlin"> override fun getPlugin(): Plugin {
+return AndroidNfcPluginImpl(activity)
+}
+&lt;/code>&lt;/pre>
+&lt;p>PC/SC Example&lt;/p>
+&lt;pre>&lt;code class="language-java"> public PcscPlugin getPlugin() {
+try {
+if (isOsWin) {
+return PcscPluginWinImpl.getInstance();
+} else {
+return PcscPluginImpl.getInstance();
+}
+} catch (Exception e) {
+throw new KeyplePluginInstantiationException(&amp;quot;Can not access smartcard.io readers&amp;quot;, e);
+}
+}
+&lt;/code>&lt;/pre></description></item><item><title>Develop an Extension</title><link>/keyple-website/docs/developer-guide/develop-extension/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/developer-guide/develop-extension/</guid><description/></item><item><title>Migration Guide - Keyple Java 0.8.1 to 0.9.0</title><link>/keyple-website/docs/developer-guide/migration-0.8.1-to-0.9.0/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/developer-guide/migration-0.8.1-to-0.9.0/</guid><description>&lt;p>This guide is intended to help a user of version 0.8.1 of Keyple Java to upgrade his application to the 0.9.0 version of the library.&lt;/p>
 &lt;p>From a user API point of view, the changes relate to the following topics:&lt;/p>
 &lt;ul>
 &lt;li>
