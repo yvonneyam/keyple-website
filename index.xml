@@ -2128,7 +2128,7 @@ width: 240px;
 &lt;li>
 &lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/component/keyple-plugin/remote-plugin/local/README.md" target="_blank" rel="noopener">Local Lib&lt;/a>&lt;/li>
 &lt;/ul></description></item><item><title>Develop a Plugin</title><link>/keyple-website/docs/developer-guide/develop-plugin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/developer-guide/develop-plugin/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
-&lt;p>In order to provide an easy way to port a Keyple applications from a device with a specific card reader to another, a plugin system
+&lt;p>In order to provide an easy way to port a Keyple application from a device with a specific card reader to another, a plugin system
 as been developed. When a developer wants to include Keyple features within his project, he has to initialize the SmartCardService by providing a
 plugin Factory available with in the plugin library. The plugin to use depends on the targeted device and running environment.&lt;/p>
 &lt;p>For example, for an android device with native NFC we&amp;rsquo;ll use KeypleAndroidNfcPlugin.&lt;/p>
@@ -2186,7 +2186,7 @@ one must be developed.&lt;/p>
 &lt;h2 id="class-diagram-of-plugin-package">Class diagram of plugin package&lt;/h2>
 &lt;p>For the record, this is a wide view of classes implied in the plugin system. It is designed to natively handle as much
 use cas as possible while being easy to use. It results of several internal classes, however, plugin&amp;rsquo;s developers will
-only have to use a few part of this elements.&lt;/p>
+only have to use a few part of these elements.&lt;/p>
 &lt;figure >
 &lt;a data-fancybox="" href="/keyple-website/keyple-website/media/plugin-development/class/Plugin_Class_Full.svg" >
 &lt;img src="/keyple-website/keyple-website/media/plugin-development/class/Plugin_Class_Full.svg" alt="" >
@@ -2226,6 +2226,7 @@ call back the core when card insertion and removal events occurs.&lt;/li>
 documentation to implement this elements.&lt;/p>
 &lt;h3 id="implementation-of-abstractlocalreaders-abstract-classes">Implementation of AbstractLocalReader&amp;rsquo;s abstract classes&lt;/h3>
 &lt;p>Relying on the native smartcard reader of the device, implementations to be done are:&lt;/p>
+&lt;div id="plugins-table-1">
 &lt;table>
 &lt;thead>
 &lt;tr>
@@ -2276,6 +2277,12 @@ documentation to implement this elements.&lt;/p>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
+&lt;/div>
+&lt;style>
+#plugins-table-1 table th:first-of-type {
+width: 450px;
+}
+&lt;/style>
 &lt;p>Example of implementations are provided
 &lt;a href="#abstractlocalreader">here&lt;/a>.&lt;/p>
 &lt;h3 id="implementation-of-abstractobservablelocalreaders-abstract-classes">Implementation of AbstractObservableLocalReader&amp;rsquo;s abstract classes&lt;/h3>
@@ -2296,6 +2303,10 @@ documentation to implement this elements.&lt;/p>
 &lt;tr>
 &lt;td>&lt;strong>&lt;code>void onStopDetection()&lt;/code>&lt;/strong>&lt;/td>
 &lt;td>Invoked when the card detection is stopped by the Keyple Plugin&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>&lt;code>ReaderObservationExceptionHandler getObservationExceptionHandler()&lt;/code>&lt;/strong>&lt;/td>
+&lt;td>Allows to invoke the defined handler when an exception condition needs to be transmitted to the application level&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -2337,6 +2348,7 @@ table.&lt;/p>
 &lt;/tbody>
 &lt;/table>
 &lt;p>Description of the Insertion/Removal behaviours:&lt;/p>
+&lt;div id="plugins-table-2">
 &lt;table>
 &lt;thead>
 &lt;tr>
@@ -2359,7 +2371,14 @@ table.&lt;/p>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
+&lt;/div>
+&lt;style>
+#plugins-table-2 table th:first-of-type {
+width: 180px;
+}
+&lt;/style>
 &lt;p>Description of the processing behaviours:&lt;/p>
+&lt;div id="plugins-table-3">
 &lt;table>
 &lt;thead>
 &lt;tr>
@@ -2376,17 +2395,16 @@ table.&lt;/p>
 &lt;td>&lt;strong>&lt;code>DontWaitForCardRemovalDuringProcessing&lt;/code>&lt;/strong>&lt;/td>
 &lt;td>Interface to be implemented by readers &lt;strong>not able&lt;/strong> to detect a card &lt;strong>removal&lt;/strong> during processing, between two APDU commands.&lt;/td>
 &lt;/tr>
-&lt;tr>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>Example of implementations are provided
-&lt;a href="#abstractobservablelocalreader">here&lt;/a>.&lt;/td>
-&lt;td>&lt;/td>
-&lt;/tr>
 &lt;/tbody>
 &lt;/table>
+&lt;/div>
+&lt;style>
+#plugins-table-3 table th:first-of-type {
+width: 350px;
+}
+&lt;/style>
+&lt;p>Example of implementations are provided
+&lt;a href="#abstractobservablelocalreader">here&lt;/a>.&lt;/p>
 &lt;h3 id="implementation-of-abstractobservablelocalautonomousreaders-abstract-classes">Implementation of AbstractObservableLocalAutonomousReader&amp;rsquo;s abstract classes&lt;/h3>
 &lt;p>In addition of AbstractObservableLocalReader&amp;rsquo;s methods and ObservableReaderNotifiers implementation, specific methods invocation must be done:&lt;/p>
 &lt;table>
@@ -2447,6 +2465,7 @@ The choice depends on expected behaviour of the plugin:&lt;/p>
 &lt;p>There is no additional methods to implement compared to AbstractPlugin&lt;/p>
 &lt;h3 id="implementation-of-abstractthreadedobservableplugins-abstract-classes">Implementation of AbstractThreadedObservablePlugin&amp;rsquo;s abstract classes&lt;/h3>
 &lt;p>In addition of AbstractObservablePlugin&amp;rsquo;s methods and ObservableReaderNotifiers implementation, specific methods invocations must be done:&lt;/p>
+&lt;div id="plugins-table-4">
 &lt;table>
 &lt;thead>
 &lt;tr>
@@ -2465,10 +2484,17 @@ The choice depends on expected behaviour of the plugin:&lt;/p>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
+&lt;/div>
+&lt;style>
+#plugins-table-4 table th:first-of-type {
+width: 300px;
+}
+&lt;/style>
 &lt;p>Example of implementations are provided
 &lt;a href="#abstractthreadedobservableplugin">here&lt;/a>.&lt;/p>
 &lt;h3 id="implementation-of-abstractpluginfactorys-abstract-classes">Implementation of AbstractPluginFactory&amp;rsquo;s abstract classes&lt;/h3>
 &lt;p>The last step is to implement the Plugin factory which is going to be use by Keyple core to handle the plugin.&lt;/p>
+&lt;div id="plugins-table-5">
 &lt;table>
 &lt;thead>
 &lt;tr>
@@ -2487,12 +2513,18 @@ The choice depends on expected behaviour of the plugin:&lt;/p>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
+&lt;/div>
+&lt;style>
+#plugins-table-5 table th:first-of-type {
+width: 220px;
+}
+&lt;/style>
 &lt;p>Example of implementations are provided
 &lt;a href="#abstractthreadedobservableplugin">here&lt;/a>.&lt;/p>
 &lt;h2 id="examples-of-implementation">Examples of implementation&lt;/h2>
 &lt;h3 id="abstractlocalreader">AbstractLocalReader&lt;/h3>
 &lt;h4 id="checkcardpresence">checkCardPresence()&lt;/h4>
-&lt;p>Allow Keyple to check if the secure elements is present within the reader (inserted, in NFC field&amp;hellip;)&lt;/p>
+&lt;p>Allow Keyple to check if the smartcard is present within the reader (inserted, in NFC field&amp;hellip;)&lt;/p>
 &lt;p>OMAPI Example&lt;/p>
 &lt;pre>&lt;code class="language-kotlin">[kotlin]
 //nativeReader is an instance of android.se.omapi.Reader. It natively provides a method to check Card presence.
@@ -2571,7 +2603,7 @@ throw KeypleReaderIOException(&amp;quot;Error while opening physical channel&amp
 &lt;/code>&lt;/pre>
 &lt;p>PC/SC Example&lt;/p>
 &lt;pre>&lt;code class="language-java">[java]
-public override fun checkCardPresence(): Boolean {
+public void openPhysicalChannel() {
 //card is an instance of Card provided by javax.smartcardio
 if (card == null) {
 this.card = this.terminal.connect(parameterCardProtocol);
@@ -2642,17 +2674,8 @@ return tagProxy?.isConnected == true
 &lt;/code>&lt;/pre>
 &lt;p>PC/SC Example&lt;/p>
 &lt;pre>&lt;code class="language-java">[java]
-protected void closePhysicalChannel() {
-try {
-//card is an instance of Card provided by javax.smartcardio
-if (card != null) {
-channel = null;
-card.disconnect(true);
-card = null;
-}
-} catch (CardException e) {
-throw new KeypleReaderIOException(&amp;quot;Error while closing physical channel&amp;quot;, e);
-}
+protected boolean isPhysicalChannelOpen() {
+return card != null;
 }
 &lt;/code>&lt;/pre>
 &lt;h4 id="transmitapdubyte-apduin">transmitApdu(byte[] apduIn)&lt;/h4>
@@ -2937,7 +2960,7 @@ return readers
 override fun initNativeReaders(): ConcurrentMap&amp;lt;String, Reader&amp;gt;? {
 val readers = ConcurrentHashMap&amp;lt;String, Reader&amp;gt;()
 //AndroidNfcReaderImpl is our implementation of Keyple reader
-readers[AndroidNfcReader.READER_NAME] = AndroidNfcReaderImpl(activity)
+readers[AndroidNfcReader.READER_NAME] = AndroidNfcReaderImpl(activity, readerObservationExceptionHandler)
 return readers
 }
 &lt;/code>&lt;/pre>
@@ -3017,7 +3040,7 @@ return PLUGIN_NAME;
 &lt;p>Android NFC Example&lt;/p>
 &lt;pre>&lt;code class="language-kotlin">[kotlin]
 override fun getPlugin(): Plugin {
-return AndroidNfcPluginImpl(activity)
+return AndroidNfcPluginImpl(activity, readerObservationExceptionHandler)
 }
 &lt;/code>&lt;/pre>
 &lt;p>PC/SC Example&lt;/p>
