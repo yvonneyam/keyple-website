@@ -1695,21 +1695,21 @@ width: 220px;
 &lt;p>The associated &lt;strong>API&lt;/strong> documentations are accessible from the page
 &lt;a href="/keyple-website/keyple-website/docs/api-reference/">API Reference&lt;/a>.&lt;/p>
 &lt;h3 id="network-api">Network API&lt;/h3>
-&lt;p>The associated &lt;strong>API&lt;/strong> documentation is available &lt;a href="/keyple-website/reference/keyple-plugin-remote-network/index.html" target="blank">here&lt;/a>.&lt;/p>
+&lt;p>The associated &lt;strong>API&lt;/strong> documentation is available &lt;a href="../../../api-reference/keyple-plugin-remote-network/1.0.0-alpha-1/index.html" target="blank">here&lt;/a>.&lt;/p>
 &lt;figure >
 &lt;a data-fancybox="" href="/keyple-website/keyple-website/media/remote-plugin/class/Remote_Class_Network_API.svg" >
 &lt;img src="/keyple-website/keyple-website/media/remote-plugin/class/Remote_Class_Network_API.svg" alt="" >
 &lt;/a>
 &lt;/figure>
 &lt;h3 id="remote-plugin-api">Remote Plugin API&lt;/h3>
-&lt;p>The associated &lt;strong>API&lt;/strong> documentation is available &lt;a href="/keyple-website/reference/keyple-plugin-remote-remote/index.html" target="blank">here&lt;/a>.&lt;/p>
+&lt;p>The associated &lt;strong>API&lt;/strong> documentation is available &lt;a href="../../../api-reference/keyple-plugin-remote-remote/index.html" target="blank">here&lt;/a>.&lt;/p>
 &lt;figure >
 &lt;a data-fancybox="" href="/keyple-website/keyple-website/media/remote-plugin/class/Remote_Class_RemotePlugin_API.svg" >
 &lt;img src="/keyple-website/keyple-website/media/remote-plugin/class/Remote_Class_RemotePlugin_API.svg" alt="" >
 &lt;/a>
 &lt;/figure>
 &lt;h3 id="local-service-api">Local Service API&lt;/h3>
-&lt;p>The associated &lt;strong>API&lt;/strong> documentation is available &lt;a href="/keyple-website/reference/keyple-plugin-remote-local/index.html" target="blank">here&lt;/a>.&lt;/p>
+&lt;p>The associated &lt;strong>API&lt;/strong> documentation is available &lt;a href="../../../api-reference/keyple-plugin-remote-local/index.html" target="blank">here&lt;/a>.&lt;/p>
 &lt;figure >
 &lt;a data-fancybox="" href="/keyple-website/keyple-website/media/remote-plugin/class/Remote_Class_LocalService_API.svg" >
 &lt;img src="/keyple-website/keyple-website/media/remote-plugin/class/Remote_Class_LocalService_API.svg" alt="" >
