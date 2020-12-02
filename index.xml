@@ -1293,9 +1293,9 @@ override fun checkSePresence(): Boolean {
 return nativeReader.isSecureElementPresent
 }
 &lt;/code>&lt;/pre></description></item><item><title>Develop a Remote Ticketing Application</title><link>/keyple-website/docs/developer-guide/develop-ticketing-app-remote/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/developer-guide/develop-ticketing-app-remote/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
-&lt;p>&lt;strong>Keyple provides the &amp;ldquo;Keyple Remote Plugin&amp;rdquo; solution which allows a terminal to communicate with a smart card reader available in another terminal&lt;/strong>.&lt;/p>
+&lt;p>&lt;strong>Keyple provides the &amp;ldquo;Keyple Remote Plugins&amp;rdquo; solution which allows a terminal to communicate with a smart card reader available in another terminal&lt;/strong>.&lt;/p>
 &lt;p>In this way, you can manage transactions within a distributed architecture.&lt;/p>
-&lt;p>The diagram below shows the role of the &lt;strong>Keyple Remote Plugin&lt;/strong> components in the software layers used in a distributed architecture :&lt;/p>
+&lt;p>The diagram below shows the role of the &lt;strong>Keyple Remote Plugins&lt;/strong> components in the software layers used in a distributed architecture :&lt;/p>
 &lt;figure >
 &lt;a data-fancybox="" href="/keyple-website/keyple-website/media/remote-plugin/component/Remote_Component_Overview.svg" >
 &lt;img src="/keyple-website/keyple-website/media/remote-plugin/component/Remote_Component_Overview.svg" alt="" >
@@ -1306,7 +1306,7 @@ return nativeReader.isSecureElementPresent
 &lt;li>In pre-requisite, read page
 &lt;a href="/keyple-website/keyple-website/docs/developer-guide/develop-ticketing-app-local/">Develop a Local Ticketing Application&lt;/a> to understand the main concepts of Keyple in a local application.&lt;/li>
 &lt;li>Read chapter
-&lt;a href="#concepts">Concepts&lt;/a> to understand the main terms and concepts of the &lt;strong>Keyple Remote Plugin&lt;/strong> solution.&lt;/li>
+&lt;a href="#concepts">Concepts&lt;/a> to understand the main terms and concepts of the &lt;strong>Keyple Remote Plugins&lt;/strong> solution.&lt;/li>
 &lt;li>Read the introduction of chapter
 &lt;a href="#remote-plugins">Remote Plugins&lt;/a> to be informed about the different remote plugins and APIs proposed by the solution.&lt;/li>
 &lt;li>Using chapter
@@ -1330,15 +1330,15 @@ return nativeReader.isSecureElementPresent
 &lt;tbody>
 &lt;tr>
 &lt;td>&lt;strong>Remote Lib&lt;/strong>&lt;/td>
-&lt;td>This is the library &lt;code>keyple-java-plugin-remote-remote&lt;/code>.&lt;br>It must be imported and used by the application installed on the terminal not having local access to the smart card reader and that wishes to control the reader remotely.&lt;/td>
+&lt;td>This is the library &lt;code>keyple-plugin-remote-remote&lt;/code>.&lt;br>It must be imported and used by the application installed on the terminal not having local access to the smart card reader and that wishes to control the reader remotely.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>Local Lib&lt;/strong>&lt;/td>
-&lt;td>This is the library &lt;code>keyple-java-plugin-remote-local&lt;/code>.&lt;br>It must be imported and used by the application installed on the terminal having local access to the smart card reader but wishes to delegate all or part of the ticketing processing to a remote application.&lt;/td>
+&lt;td>This is the library &lt;code>keyple-plugin-remote-local&lt;/code>.&lt;br>It must be imported and used by the application installed on the terminal having local access to the smart card reader but wishes to delegate all or part of the ticketing processing to a remote application.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;strong>Common Lib&lt;/strong>&lt;/td>
-&lt;td>This is the library &lt;code>keyple-java-plugin-remote-common&lt;/code>.&lt;br>This library is &lt;strong>implicitly&lt;/strong> imported by &lt;strong>Remote Lib&lt;/strong> and &lt;strong>Local Lib&lt;/strong> because it contains common elements.&lt;/td>
+&lt;td>&lt;strong>Network Lib&lt;/strong>&lt;/td>
+&lt;td>This is the library &lt;code>keyple-plugin-remote-network&lt;/code>.&lt;br>This library is &lt;strong>implicitly&lt;/strong> imported by &lt;strong>Remote Lib&lt;/strong> and &lt;strong>Local Lib&lt;/strong> because it contains common network elements.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>Remote Plugin&lt;/strong>&lt;/td>
@@ -1384,22 +1384,22 @@ width: 130px;
 &lt;/figure>
 &lt;p>The second diagram below illustrates an arbitrary more complex possible use case with several hardware readers connected to different terminals.&lt;/p>
 &lt;p>These could be for example a ticketing reloading service, where the intelligence would be on the terminal with remote readers, with thin clients on A &amp;amp; B terminals communicating locally with the cards.&lt;/p>
-&lt;p>In this use case, the &lt;strong>Remote Plugin&lt;/strong> is used for card communication.&lt;/p>
+&lt;p>In this use case, the &lt;strong>Keyple Remote Plugins&lt;/strong> solution is use for card communication.&lt;/p>
 &lt;figure >
 &lt;a data-fancybox="" href="/keyple-website/keyple-website/media/remote-plugin/component/Remote_Component_Concepts_2.svg" >
 &lt;img src="/keyple-website/keyple-website/media/remote-plugin/component/Remote_Component_Concepts_2.svg" alt="" >
 &lt;/a>
 &lt;/figure>
-&lt;p>Here is another example, but this time it illustrates several &lt;strong>Remote Plugins&lt;/strong> connected to the same &lt;strong>Local Service&lt;/strong>.&lt;/p>
+&lt;p>Here is another example, but this time it illustrates several &lt;strong>Remote Plugin&lt;/strong> components connected to the same &lt;strong>Local Service&lt;/strong>.&lt;/p>
 &lt;p>These could be for example ticketing terminals with transaction logic, which communicate locally with cards, but which do not have SAM, and which use a SAM server with hardware reader.&lt;/p>
-&lt;p>In this use case, the &lt;strong>Remote Plugin&lt;/strong> is used for SAM communication.&lt;/p>
+&lt;p>In this use case, the &lt;strong>Keyple Remote Plugins&lt;/strong> solution is use for SAM communication.&lt;/p>
 &lt;figure >
 &lt;a data-fancybox="" href="/keyple-website/keyple-website/media/remote-plugin/component/Remote_Component_Concepts_3.svg" >
 &lt;img src="/keyple-website/keyple-website/media/remote-plugin/component/Remote_Component_Concepts_3.svg" alt="" >
 &lt;/a>
 &lt;/figure>
 &lt;h2 id="remote-plugins">Remote Plugins&lt;/h2>
-&lt;p>The &lt;strong>Keyple Remote Plugin&lt;/strong> solution provides &lt;strong>3&lt;/strong> different specific &lt;strong>Remote Plugin&lt;/strong> components, each one having a specific API described in chapter
+&lt;p>The &lt;strong>Keyple Remote Plugins&lt;/strong> solution provides &lt;strong>3&lt;/strong> different specific &lt;strong>Remote Plugin&lt;/strong> components, each one having a specific API described in chapter
 &lt;a href="#remote-plugins-apis">Remote Plugins APIs&lt;/a> designed on a &lt;strong>Client-Server&lt;/strong> model in which &lt;strong>the Client is always the initiator of the communication&lt;/strong> :&lt;/p>
 &lt;div id="plugins-table-1">
 &lt;table>
@@ -1660,7 +1660,7 @@ width: 220px;
 &lt;/li>
 &lt;/ul>
 &lt;h2 id="remote-plugins-apis">Remote Plugins APIs&lt;/h2>
-&lt;p>The class diagrams below shows the different APIs exposed and SPIs required by the &lt;strong>Keyple Remote Plugin&lt;/strong> solution.&lt;/p>
+&lt;p>The class diagrams below shows the different APIs exposed and SPIs required by the &lt;strong>Keyple Remote Plugins&lt;/strong> solution.&lt;/p>
 &lt;p>An &lt;strong>SPI&lt;/strong> (Service Provider Interface) is an interface that must be implemented by the user.&lt;/p>
 &lt;p>Here are the available APIs depending on the library imported by your project :&lt;/p>
 &lt;table>
@@ -1674,7 +1674,7 @@ width: 220px;
 &lt;tbody>
 &lt;tr>
 &lt;td>
-&lt;a href="#common-api">Common API&lt;/a>&lt;/td>
+&lt;a href="#network-api">Network API&lt;/a>&lt;/td>
 &lt;td style="text-align:center">✔️&lt;/td>
 &lt;td style="text-align:center">✔️&lt;/td>
 &lt;/tr>
@@ -1694,22 +1694,22 @@ width: 220px;
 &lt;/table>
 &lt;p>The associated &lt;strong>API&lt;/strong> documentations are accessible from the page
 &lt;a href="/keyple-website/keyple-website/docs/api-reference/">API Reference&lt;/a>.&lt;/p>
-&lt;h3 id="common-api">Common API&lt;/h3>
-&lt;p>The associated &lt;strong>API&lt;/strong> documentation is available &lt;a href="/keyple-website/reference/keyple-java-plugin-remote-common/index.html" target="blank">here&lt;/a>.&lt;/p>
+&lt;h3 id="network-api">Network API&lt;/h3>
+&lt;p>The associated &lt;strong>API&lt;/strong> documentation is available &lt;a href="/keyple-website/reference/keyple-plugin-remote-network/index.html" target="blank">here&lt;/a>.&lt;/p>
 &lt;figure >
-&lt;a data-fancybox="" href="/keyple-website/keyple-website/media/remote-plugin/class/Remote_Class_Common_API.svg" >
-&lt;img src="/keyple-website/keyple-website/media/remote-plugin/class/Remote_Class_Common_API.svg" alt="" >
+&lt;a data-fancybox="" href="/keyple-website/keyple-website/media/remote-plugin/class/Remote_Class_Network_API.svg" >
+&lt;img src="/keyple-website/keyple-website/media/remote-plugin/class/Remote_Class_Network_API.svg" alt="" >
 &lt;/a>
 &lt;/figure>
 &lt;h3 id="remote-plugin-api">Remote Plugin API&lt;/h3>
-&lt;p>The associated &lt;strong>API&lt;/strong> documentation is available &lt;a href="/keyple-website/reference/keyple-java-plugin-remote-remote/index.html" target="blank">here&lt;/a>.&lt;/p>
+&lt;p>The associated &lt;strong>API&lt;/strong> documentation is available &lt;a href="/keyple-website/reference/keyple-plugin-remote-remote/index.html" target="blank">here&lt;/a>.&lt;/p>
 &lt;figure >
 &lt;a data-fancybox="" href="/keyple-website/keyple-website/media/remote-plugin/class/Remote_Class_RemotePlugin_API.svg" >
 &lt;img src="/keyple-website/keyple-website/media/remote-plugin/class/Remote_Class_RemotePlugin_API.svg" alt="" >
 &lt;/a>
 &lt;/figure>
 &lt;h3 id="local-service-api">Local Service API&lt;/h3>
-&lt;p>The associated &lt;strong>API&lt;/strong> documentation is available &lt;a href="/keyple-website/reference/keyple-java-plugin-remote-local/index.html" target="blank">here&lt;/a>.&lt;/p>
+&lt;p>The associated &lt;strong>API&lt;/strong> documentation is available &lt;a href="/keyple-website/reference/keyple-plugin-remote-local/index.html" target="blank">here&lt;/a>.&lt;/p>
 &lt;figure >
 &lt;a data-fancybox="" href="/keyple-website/keyple-website/media/remote-plugin/class/Remote_Class_LocalService_API.svg" >
 &lt;img src="/keyple-website/keyple-website/media/remote-plugin/class/Remote_Class_LocalService_API.svg" alt="" >
@@ -1991,7 +1991,7 @@ width: 240px;
 &lt;/tbody>
 &lt;/table>
 &lt;h2 id="network-configuration">Network configuration&lt;/h2>
-&lt;p>The &lt;strong>Keyple Remote Plugin&lt;/strong> solution &lt;strong>does not provide&lt;/strong> the network layer implementation, but it provides a set of SPIs (Service Provider Interfaces) to be implemented by the user in order to enable it to exchange data between &lt;strong>Remote Plugin&lt;/strong> and &lt;strong>Local Service&lt;/strong> components.&lt;/p>
+&lt;p>The &lt;strong>Keyple Remote Plugins&lt;/strong> solution &lt;strong>does not provide&lt;/strong> the network layer implementation, but it provides a set of SPIs (Service Provider Interfaces) to be implemented by the user in order to enable it to exchange data between &lt;strong>Remote Plugin&lt;/strong> and &lt;strong>Local Service&lt;/strong> components.&lt;/p>
 &lt;h3 id="synchronous">Synchronous&lt;/h3>
 &lt;p>Choose this mode if you want to implement a Client-Server &lt;strong>Synchronous&lt;/strong> communication protocol, such as standard HTTP for example.&lt;/p>
 &lt;table>
@@ -2086,12 +2086,12 @@ width: 240px;
 &lt;ul>
 &lt;li>Remote Lib&lt;/li>
 &lt;/ul>
-&lt;pre>&lt;code>implementation 'org.eclipse.keyple:keyple-java-plugin-remote-remote:1.0.0'
+&lt;pre>&lt;code>implementation 'org.eclipse.keyple:keyple-plugin-remote-remote:1.0.0'
 &lt;/code>&lt;/pre>
 &lt;ul>
 &lt;li>Local Lib&lt;/li>
 &lt;/ul>
-&lt;pre>&lt;code>implementation 'org.eclipse.keyple:keyple-java-plugin-remote-local:1.0.0'
+&lt;pre>&lt;code>implementation 'org.eclipse.keyple:keyple-plugin-remote-local:1.0.0'
 &lt;/code>&lt;/pre>
 &lt;h4 id="maven">MAVEN&lt;/h4>
 &lt;ul>
@@ -2099,7 +2099,7 @@ width: 240px;
 &lt;/ul>
 &lt;pre>&lt;code>&amp;lt;dependency&amp;gt;
 &amp;lt;groupId&amp;gt;org.eclipse.keyple&amp;lt;/groupId&amp;gt;
-&amp;lt;artifactId&amp;gt;keyple-java-plugin-remote-remote&amp;lt;/artifactId&amp;gt;
+&amp;lt;artifactId&amp;gt;keyple-plugin-remote-remote&amp;lt;/artifactId&amp;gt;
 &amp;lt;version&amp;gt;1.0.0&amp;lt;/version&amp;gt;
 &amp;lt;/dependency&amp;gt;
 &lt;/code>&lt;/pre>
@@ -2108,25 +2108,25 @@ width: 240px;
 &lt;/ul>
 &lt;pre>&lt;code>&amp;lt;dependency&amp;gt;
 &amp;lt;groupId&amp;gt;org.eclipse.keyple&amp;lt;/groupId&amp;gt;
-&amp;lt;artifactId&amp;gt;keyple-java-plugin-remote-local&amp;lt;/artifactId&amp;gt;
+&amp;lt;artifactId&amp;gt;keyple-plugin-remote-local&amp;lt;/artifactId&amp;gt;
 &amp;lt;version&amp;gt;1.0.0&amp;lt;/version&amp;gt;
 &amp;lt;/dependency&amp;gt;
 &lt;/code>&lt;/pre>
 &lt;h4 id="maven-central-repository">MAVEN CENTRAL REPOSITORY&lt;/h4>
 &lt;ul>
-&lt;li>&lt;a href="https://search.maven.org/search?q=a:keyple-java-plugin-remote-common" target="blank">Common Lib&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://search.maven.org/search?q=a:keyple-java-plugin-remote-remote" target="blank">Remote Lib&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://search.maven.org/search?q=a:keyple-java-plugin-remote-local" target="blank">Local Lib&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://search.maven.org/search?q=a:keyple-plugin-remote-network" target="blank">Network Lib&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://search.maven.org/search?q=a:keyple-plugin-remote-remote" target="blank">Remote Lib&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://search.maven.org/search?q=a:keyple-plugin-remote-local" target="blank">Local Lib&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;h3 id="sources">Sources&lt;/h3>
 &lt;p>The sources are available on &lt;a href="https://github.com/" target="blank">GitHub&lt;/a> :&lt;/p>
 &lt;ul>
 &lt;li>
-&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/component/keyple-plugin/remote-plugin/common/README.md" target="_blank" rel="noopener">Common Lib&lt;/a>&lt;/li>
+&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/component/keyple-plugin/remote/network/README.md" target="_blank" rel="noopener">Network Lib&lt;/a>&lt;/li>
 &lt;li>
-&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/component/keyple-plugin/remote-plugin/remote/README.md" target="_blank" rel="noopener">Remote Lib&lt;/a>&lt;/li>
+&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/component/keyple-plugin/remote/remote/README.md" target="_blank" rel="noopener">Remote Lib&lt;/a>&lt;/li>
 &lt;li>
-&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/component/keyple-plugin/remote-plugin/local/README.md" target="_blank" rel="noopener">Local Lib&lt;/a>&lt;/li>
+&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/component/keyple-plugin/remote/local/README.md" target="_blank" rel="noopener">Local Lib&lt;/a>&lt;/li>
 &lt;/ul></description></item><item><title>Develop a Plugin</title><link>/keyple-website/docs/developer-guide/develop-plugin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/developer-guide/develop-plugin/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
 &lt;p>In order to provide an easy way to port a Keyple application from a device with a specific card reader to another, a plugin system
 as been developed. When a developer wants to include Keyple features within his project, he has to initialize the SmartCardService by providing a
