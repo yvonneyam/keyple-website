@@ -294,7 +294,7 @@ width: 220px;
 &lt;li>the server subscription to observable reader events ;&lt;/li>
 &lt;li>the sending of information to the client at the end of processing.&lt;/li>
 &lt;/ul>
-&lt;p>Note that the network layer is deliberately hide in this diagram. Its implementation is describe in the
+&lt;p>Note that the network layer is deliberately hide in this diagram. Its implementation is described in the
 &lt;a href="#network-configuration">Network configuration&lt;/a> chapter.&lt;/p>
 &lt;figure >
 &lt;a data-fancybox="" href="/keyple-website/keyple-website/media/remote-plugin/sequence/Remote_Sequence_RemotePluginServer_API.svg" >
@@ -493,14 +493,14 @@ width: 220px;
 &lt;/a>
 &lt;/figure>
 &lt;h3 id="remote-plugin-api">Remote Plugin API&lt;/h3>
-&lt;p>The associated &lt;strong>API&lt;/strong> documentation is available &lt;a href="../../api-reference/keyple-plugin-remote-remote/index.html" target="blank">here&lt;/a>.&lt;/p>
+&lt;p>The associated &lt;strong>API&lt;/strong> documentation is available &lt;a href="../../api-reference/keyple-plugin-remote-remote/1.0.0-alpha-1/index.html" target="blank">here&lt;/a>.&lt;/p>
 &lt;figure >
 &lt;a data-fancybox="" href="/keyple-website/keyple-website/media/remote-plugin/class/Remote_Class_RemotePlugin_API.svg" >
 &lt;img src="/keyple-website/keyple-website/media/remote-plugin/class/Remote_Class_RemotePlugin_API.svg" alt="" >
 &lt;/a>
 &lt;/figure>
 &lt;h3 id="local-service-api">Local Service API&lt;/h3>
-&lt;p>The associated &lt;strong>API&lt;/strong> documentation is available &lt;a href="../../api-reference/keyple-plugin-remote-local/index.html" target="blank">here&lt;/a>.&lt;/p>
+&lt;p>The associated &lt;strong>API&lt;/strong> documentation is available &lt;a href="../../api-reference/keyple-plugin-remote-local/1.0.0-alpha-1/index.html" target="blank">here&lt;/a>.&lt;/p>
 &lt;figure >
 &lt;a data-fancybox="" href="/keyple-website/keyple-website/media/remote-plugin/class/Remote_Class_LocalService_API.svg" >
 &lt;img src="/keyple-website/keyple-website/media/remote-plugin/class/Remote_Class_LocalService_API.svg" alt="" >
@@ -863,8 +863,11 @@ width: 240px;
 &lt;/a>
 &lt;/figure>
 &lt;h3 id="exchanged-data">Exchanged data&lt;/h3>
-&lt;p>The data exchanged between &lt;strong>Remote Plugin&lt;/strong> and &lt;strong>Local Service&lt;/strong> components are contain in the DTO (Data Transfer Object) &lt;code>MessageDto&lt;/code>. It is built and processed by the plugin and &lt;strong>you don&amp;rsquo;t need to modify it&lt;/strong>.&lt;/p>
+&lt;p>The data exchanged between &lt;strong>Remote Plugin&lt;/strong> and &lt;strong>Local Service&lt;/strong> components are contained in the DTO (Data Transfer Object) &lt;code>MessageDto&lt;/code>. It is built and processed by the plugin and &lt;strong>you don&amp;rsquo;t need to modify it&lt;/strong>.&lt;/p>
 &lt;p>However, it is necessary in some contexts to access certain information such as the &lt;code>sessionId&lt;/code> in the case of asynchronous communication or the &lt;code>serverNodeId&lt;/code> in the case of synchronous communication with several server instances.&lt;/p>
+&lt;h2 id="examples">Examples&lt;/h2>
+&lt;p>All examples are available
+&lt;a href="https://github.com/eclipse/keyple-java/tree/develop/java/example/generic/remote" target="_blank" rel="noopener">here&lt;/a>.&lt;/p>
 &lt;h2 id="download">Download&lt;/h2>
 &lt;h3 id="jars">JARs&lt;/h3>
 &lt;p>All deliverables (JARs, changelogs, javadocs) are available on the
@@ -913,11 +916,11 @@ width: 240px;
 &lt;p>The sources are available on &lt;a href="https://github.com/" target="blank">GitHub&lt;/a> :&lt;/p>
 &lt;ul>
 &lt;li>
-&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/component/keyple-plugin/remote/network/README.md" target="_blank" rel="noopener">Network Lib&lt;/a>&lt;/li>
+&lt;a href="https://github.com/eclipse/keyple-java/tree/develop/java/component/keyple-plugin/remote/network/" target="_blank" rel="noopener">Network Lib&lt;/a>&lt;/li>
 &lt;li>
-&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/component/keyple-plugin/remote/remote/README.md" target="_blank" rel="noopener">Remote Lib&lt;/a>&lt;/li>
+&lt;a href="https://github.com/eclipse/keyple-java/tree/develop/java/component/keyple-plugin/remote/remote/" target="_blank" rel="noopener">Remote Lib&lt;/a>&lt;/li>
 &lt;li>
-&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/component/keyple-plugin/remote/local/README.md" target="_blank" rel="noopener">Local Lib&lt;/a>&lt;/li>
+&lt;a href="https://github.com/eclipse/keyple-java/tree/develop/java/component/keyple-plugin/remote/local/" target="_blank" rel="noopener">Local Lib&lt;/a>&lt;/li>
 &lt;/ul></description></item><item><title>Develop a Plugin</title><link>/keyple-website/docs/developer-guide/develop-plugin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/developer-guide/develop-plugin/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
 &lt;p>In order to provide an easy way to port a Keyple application from a device with a specific card reader to another, a plugin system
 as been developed. When a developer wants to include Keyple features within his project, he has to initialize the SmartCardService by providing a
