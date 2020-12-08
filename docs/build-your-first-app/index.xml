@@ -239,8 +239,8 @@ private final static String SAM_READER_NAME = &amp;quot;XXX&amp;quot;;
 &lt;div>
 All project dependencies, including Keyple components, are downloaded during the first run, which can take several minutes.
 &lt;/div>
-&lt;/div></description></item><item><title>Build your First Android Application</title><link>/keyple-website/docs/build-your-first-app/android-app/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/build-your-first-app/android-app/</guid><description>&lt;h1 id="introduction">Introduction&lt;/h1>
-&lt;h2 id="overview">Overview&lt;/h2>
+&lt;/div></description></item><item><title>Build your First Android Application</title><link>/keyple-website/docs/build-your-first-app/android-app/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/build-your-first-app/android-app/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;h3 id="overview">Overview&lt;/h3>
 &lt;p>&lt;strong>Since Keyple is supported by the Android operating system, developers can take advantage of this quick and easy way to implement solution to provide SmartCard communication functionalities in their own mobile application.&lt;/strong>&lt;/p>
 &lt;p>For example, Keyple could be used to facilitate the development of a ticketing application based on the use of conteners on a SIM card and relying on
 &lt;a href="https://developer.android.com/reference/android/se/omapi/package-summary" target="_blank" rel="noopener">Android SE OMAPI&lt;/a>.
@@ -253,14 +253,14 @@ Keyple could also be used to develop an application reading SmartCard content th
 &lt;/figure>
 &lt;p>As Keyple request low level reader access, the key features of Keyple SDK relies on components called &amp;lsquo;Plugins&amp;rsquo;. These are the plugins that allow access to the hardware functionality of the terminal by using the native Android SDK or the terminal manufacturer&amp;rsquo;s own custom SDKs.&lt;/p>
 &lt;p>This guide will describe how to start a ticketing application using Keyple SDK and Android NFC plugin to read the content of a Calypso SmartCard. As we want to focus on Keyple integration, the Android application architecture will remain the simplest as possible.&lt;/p>
-&lt;h2 id="what-to-we-need-for-this-guide">What to we need for this guide?&lt;/h2>
+&lt;h3 id="what-to-we-need-for-this-guide">What to we need for this guide?&lt;/h3>
 &lt;ul>
 &lt;li>Retail Device with NFC powered by android.nfc library (integrated into standard Android SDK).&lt;/li>
 &lt;li>Android OS 19+&lt;/li>
 &lt;li>A NFC SmartCard with Calypso PO&lt;/li>
 &lt;/ul>
-&lt;h1 id="integration">Integration&lt;/h1>
-&lt;h2 id="application-setup">Application setup&lt;/h2>
+&lt;h2 id="integration">Integration&lt;/h2>
+&lt;h3 id="application-setup">Application setup&lt;/h3>
 &lt;p>Like for any other Android NFC Application, we need to declare items in the application manifest.&lt;/p>
 &lt;pre>&lt;code class="language-xml">&amp;lt;manifest xmlns:android=&amp;quot;http://schemas.android.com/apk/res/android&amp;quot;&amp;gt;
 ...
@@ -269,8 +269,8 @@ Keyple could also be used to develop an application reading SmartCard content th
 ...
 &amp;lt;/manifest&amp;gt;
 &lt;/code>&lt;/pre>
-&lt;h2 id="sdk-integration">SDK Integration&lt;/h2>
-&lt;h3 id="keyple-core">Keyple Core&lt;/h3>
+&lt;h3 id="sdk-integration">SDK Integration&lt;/h3>
+&lt;h4 id="keyple-core">Keyple Core&lt;/h4>
 &lt;p>This high-level API is convenient for developers implementing smart card processing application for terminal interfaced
 with smart card readers. Access to the readers is provided by the plugins.&lt;/p>
 &lt;p>To use Keyple core API (and in fact, anything keyple&amp;rsquo;s related) import the jar within the gradle dependencies of your
@@ -278,21 +278,21 @@ Android application.&lt;/p>
 &lt;pre>&lt;code class="language-gradle">implementation &amp;quot;org.eclipse.keyple:keyple-java-core:$keyple_version&amp;quot;
 &lt;/code>&lt;/pre>
 &lt;p>Please refer to Architecture/Keyle Core&lt;/p>
-&lt;h3 id="keyple-plugins">Keyple Plugins&lt;/h3>
+&lt;h4 id="keyple-plugins">Keyple Plugins&lt;/h4>
 &lt;p>There are many Keyple plugins available, the one to use depends on the device and ticketing tools you are aiming to
 use.&lt;/p>
 &lt;p>To use the NFC plugin simply import it within the gradle dependencies of your Android application.&lt;/p>
 &lt;pre>&lt;code class="language-gradle">implementation &amp;quot;org.eclipse.keyple:keyple-android-nfc:$keyple_version&amp;quot;
 &lt;/code>&lt;/pre>
-&lt;h3 id="keyple-calypso">Keyple Calypso&lt;/h3>
+&lt;h4 id="keyple-calypso">Keyple Calypso&lt;/h4>
 &lt;p>The Keyple Calypso User API is an extension of the Keyple Core User API to manage Calypso Portable Objects.&lt;/p>
 &lt;p>Please refer to Architecture/Keyle Calypso&lt;/p>
 &lt;p>To use Keyple Calypso User API simply import the jar within the gradle dependencies of your Android application.&lt;/p>
 &lt;pre>&lt;code class="language-gradle">implementation &amp;quot;org.eclipse.keyple:keyple-java-calypso:$keyple_version&amp;quot;
 &lt;/code>&lt;/pre>
-&lt;h1 id="lets-code">Let&amp;rsquo;s code&lt;/h1>
-&lt;h2 id="initializing-the-sdk">Initializing the SDK&lt;/h2>
-&lt;h3 id="register-a-plugin">Register a plugin&lt;/h3>
+&lt;h2 id="lets-code">Let&amp;rsquo;s code&lt;/h2>
+&lt;h3 id="initializing-the-sdk">Initializing the SDK&lt;/h3>
+&lt;h4 id="register-a-plugin">Register a plugin&lt;/h4>
 &lt;p>In order to setup Keyple, we need to register at least one plugin. Here we register our NFC plugin. To do so, we use the singleton SmartCardService and the plugin Factory. (See plugin development guide to know more about plugins)&lt;/p>
 &lt;pre>&lt;code class="language-kotlin">override fun onCreate(savedInstanceState: Bundle?) {
 super.onCreate(savedInstanceState)
@@ -306,7 +306,7 @@ SmartCardService.getInstance().registerPlugin(AndroidNfcPluginFactory(this, read
 }
 &lt;/code>&lt;/pre>
 &lt;p>Note: Plugins Factory&amp;rsquo;s initialisation could request more steps to execute before passing it to registerPlugin(). It depends on plugins, please check the documentation or usage example of desired plugin.&lt;/p>
-&lt;h3 id="unregister-a-plugin">Unregister a plugin&lt;/h3>
+&lt;h4 id="unregister-a-plugin">Unregister a plugin&lt;/h4>
 &lt;p>Clean resources.&lt;/p>
 &lt;pre>&lt;code class="language-kotlin">override fun onDestroy() {
 ...
@@ -316,7 +316,7 @@ reader = null
 super.onDestroy()
 }
 &lt;/code>&lt;/pre>
-&lt;h2 id="retrieve-a-specific-reader">Retrieve a specific reader&lt;/h2>
+&lt;h3 id="retrieve-a-specific-reader">Retrieve a specific reader&lt;/h3>
 &lt;p>With the plugin registered we can retrieve all instances of the component mapping the SmartCard readers. Here we want to retrieve the NFC reader.&lt;/p>
 &lt;pre>&lt;code class="language-kotlin">//We keep a reference to the reader for later use
 private lateinit var reader: AndroidNfcReader
@@ -324,7 +324,7 @@ private lateinit var reader: AndroidNfcReader
 //PLUGIN_NAME and READER_NAME are constants provided by the used Keyple plugin
 reader = plugin.readers[AndroidNfcReader.READER_NAME] as AndroidNfcReader
 &lt;/code>&lt;/pre>
-&lt;h2 id="add-observer-to-handle-nfc-events">Add observer to handle NFC events&lt;/h2>
+&lt;h3 id="add-observer-to-handle-nfc-events">Add observer to handle NFC events&lt;/h3>
 &lt;p>When native NFC is activated on an Android device, the OS dispatches insertion events occurring in the NFC detection field. In our application, we need detect it in order to proceed to exchanges with the SmartCard.&lt;/p>
 &lt;pre>&lt;code class="language-kotlin">//To keep it simple we choose to have our MainActivity implementing ObservableReader.ReaderObserver
 //interface.
@@ -344,7 +344,7 @@ handlePo()
 }
 }
 &lt;/code>&lt;/pre>
-&lt;h2 id="activate-a-protocol">Activate a protocol&lt;/h2>
+&lt;h3 id="activate-a-protocol">Activate a protocol&lt;/h3>
 &lt;p>Before starting to read a NFC tag, you must activate the protocol in which you wish to detect it.
 If you do not activate any protocol, no card will be detected by the Keyple library.&lt;/p>
 &lt;pre>&lt;code class="language-kotlin">class MainActivity : AppCompatActivity(), ObservableReader.ReaderObserver {
@@ -360,7 +360,7 @@ AndroidNfcProtocolSettings.getSetting(ContactlessCardCommonProtocols.ISO_14443_4
 }
 }
 &lt;/code>&lt;/pre>
-&lt;h2 id="deactivate-a-protocol">Deactivate a protocol&lt;/h2>
+&lt;h3 id="deactivate-a-protocol">Deactivate a protocol&lt;/h3>
 &lt;p>When your are done with your NFC operations, you can deactivate the NFC protocol :&lt;/p>
 &lt;pre>&lt;code class="language-kotlin">class MainActivity : AppCompatActivity(), ObservableReader.ReaderObserver {
 override fun onDestroy() {
@@ -373,7 +373,7 @@ super.onDestroy()
 }
 &lt;/code>&lt;/pre>
 &lt;p>Now we have an access to our NFC Reader, we can activate Card Detection.&lt;/p>
-&lt;h2 id="activate-card-detection">Activate Card detection&lt;/h2>
+&lt;h3 id="activate-card-detection">Activate Card detection&lt;/h3>
 &lt;p>We will start detection as soon as our application comes in foreground and stop when application go background.&lt;/p>
 &lt;pre>&lt;code class="language-kotlin">class MainActivity : AppCompatActivity(), ObservableReader.ReaderObserver {
 override fun onResume() {
@@ -385,7 +385,7 @@ it.startCardDetection(ObservableReader.PollingMode.REPEATING)
 }
 }
 &lt;/code>&lt;/pre>
-&lt;h2 id="deactivate-card-detection">Deactivate Card detection&lt;/h2>
+&lt;h3 id="deactivate-card-detection">Deactivate Card detection&lt;/h3>
 &lt;pre>&lt;code class="language-kotlin">class MainActivity : AppCompatActivity(), ObservableReader.ReaderObserver {
 override fun onPause() {
 reader?.let {
@@ -396,8 +396,8 @@ super.onPause()
 }
 &lt;/code>&lt;/pre>
 &lt;p>Now we can detect when a SmartCard is presented in the field, we can proceed to card application selection and data reading.&lt;/p>
-&lt;h2 id="handling-a-calypso-po">Handling a Calypso PO&lt;/h2>
-&lt;h3 id="calypso-selection-api">Calypso Selection API&lt;/h3>
+&lt;h3 id="handling-a-calypso-po">Handling a Calypso PO&lt;/h3>
+&lt;h4 id="calypso-selection-api">Calypso Selection API&lt;/h4>
 &lt;p>With Keyple, PO selection and FCI retrieving can be done using only Keyple Core, but Keyple Calypso API provides specific tools to handle Calypso POs and make the process a bit more simple.&lt;/p>
 &lt;pre>&lt;code class="language-kotlin">fun handlePo(){
 reader?.let {
@@ -445,7 +445,7 @@ String.format(&amp;quot;Not selected&amp;quot;), Toast.LENGTH_SHORT).show()
 }
 &lt;/code>&lt;/pre>
 &lt;p>Now we&amp;rsquo;ve seen we can select our PO we can retrieve more data from it.&lt;/p>
-&lt;h3 id="reading-environment-and-usage">Reading Environment and usage&lt;/h3>
+&lt;h4 id="reading-environment-and-usage">Reading Environment and usage&lt;/h4>
 &lt;p>In the below example we&amp;rsquo;ll read Environment and Usage data of an Hoplink container.&lt;/p>
 &lt;pre>&lt;code class="language-kotlin"> ...
 //Data related to Hoplink
@@ -471,7 +471,7 @@ Toast.makeText(this, String.format(&amp;quot;Usage %s&amp;quot;,
 ByteArrayUtil.toHex(usage.data.content)), Toast.LENGTH_SHORT).show()
 }
 &lt;/code>&lt;/pre>
-&lt;h2 id="full-code">Full code&lt;/h2>
+&lt;h3 id="full-code">Full code&lt;/h3>
 &lt;pre>&lt;code class="language-xml">&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;utf-8&amp;quot;?&amp;gt;
 &amp;lt;manifest xmlns:android=&amp;quot;http://schemas.android.com/apk/res/android&amp;quot;
 package=&amp;quot;org.eclipse.keyple.android.quickstart&amp;quot;&amp;gt;
@@ -600,7 +600,7 @@ Toast.makeText(this, String.format(&amp;quot;Not selected&amp;quot;), Toast.LENG
 }
 }
 &lt;/code>&lt;/pre>
-&lt;h1 id="faq">FAQ:&lt;/h1>
+&lt;h2 id="faq">FAQ&lt;/h2>
 &lt;p>&lt;strong>How to fix &amp;ldquo;More than one file was found with OS independent path &amp;lsquo;META-INF/NOTICE.md&amp;rsquo;.&amp;quot;&lt;/strong>&lt;/p>
 &lt;p>Add lines below to your :app build.gradle file&lt;/p>
 &lt;pre>&lt;code class="language-gradle">android{
