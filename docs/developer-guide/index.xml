@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Developer Guides | Eclipse Keyple</title><link>/keyple-website/docs/developer-guide/</link><atom:link href="/keyple-website/docs/developer-guide/index.xml" rel="self" type="application/rss+xml"/><description>Developer Guides</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Copyright © Eclipse Foundation, Inc. All Rights Reserved.</copyright><image><url>/keyple-website/images/logo_hu673a59176cd62c570f44ed2728665b48_42188_300x300_fit_lanczos_2.png</url><title>Developer Guides</title><link>/keyple-website/docs/developer-guide/</link></image><item><title>Develop a Local Application</title><link>/keyple-website/docs/developer-guide/develop-local-application/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/developer-guide/develop-local-application/</guid><description>&lt;h2 id="foreword">Foreword&lt;/h2>
-&lt;p>&lt;strong>Work in Progress&lt;/strong>&lt;/p>
-&lt;p>This section describes the core elements of Eclipse Keyple, i.e. the concepts and APIs of Keyple Core that are used to build any application implementing Eclipse Keyple.&lt;/p>
-&lt;p>It is essential for the future user of Eclipse Keyple to be familiar with what is said in this chapter because the other modules made available by the project are all dependent on Keyple Core.&lt;/p>
-&lt;p>TBC&lt;/p>
+&lt;p>&lt;em>Work in Progress&lt;/em>&lt;/p>
+&lt;p>This section describes the core elements of &lt;strong>Eclipse Keyple&lt;/strong>, i.e. the concepts and APIs of &lt;strong>Keyple Core&lt;/strong> that are used to build any application implementing &lt;strong>Eclipse Keyple&lt;/strong>.&lt;/p>
+&lt;p>It is essential for the future user of &lt;strong>Eclipse Keyple&lt;/strong> to be familiar with what is said in this chapter because the other modules made available by the project are all dependent on &lt;strong>Keyple Core&lt;/strong>.&lt;/p>
 &lt;h2 id="concepts">Concepts&lt;/h2>
 &lt;h3 id="reader">Reader&lt;/h3>
 &lt;p>Keyple&amp;rsquo;s primary goal being to interact with smart cards (or smartphones) worn by individuals, it is logical to put the Reader at the top of Keyple Core&amp;rsquo;s concepts.&lt;/p>
