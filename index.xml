@@ -2132,7 +2132,47 @@ width: 240px;
 &lt;a href="https://github.com/eclipse/keyple-java/tree/develop/java/component/keyple-plugin/remote/remote/" target="_blank" rel="noopener">Remote Lib&lt;/a>&lt;/li>
 &lt;li>
 &lt;a href="https://github.com/eclipse/keyple-java/tree/develop/java/component/keyple-plugin/remote/local/" target="_blank" rel="noopener">Local Lib&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Develop a Plugin</title><link>/keyple-website/docs/developer-guide/develop-plugin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/developer-guide/develop-plugin/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;/ul></description></item><item><title>Develop a Calypso Application</title><link>/keyple-website/docs/developer-guide/develop-calypso-application/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/developer-guide/develop-calypso-application/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>&lt;strong>Work in Progress&lt;/strong>&lt;/p>
+&lt;p>Keyple API was designed to support an extension system. On top of &lt;strong>Keyple Core&lt;/strong>, APIs can be developed to extend
+Keyple features. For example, Calypso Network Association provides &lt;strong>Keyple Calypso Extension&lt;/strong>.&lt;/p>
+&lt;p>The use of &lt;strong>Keyple Calypso Extension&lt;/strong> open the ability to operate commands with a calypso Portable Object and to manage a
+secure calypso transaction.&lt;/p>
+&lt;p>The diagram below shows the role of the &lt;strong>Keyple Calypso Extension&lt;/strong> components in the software layers for a local application :&lt;/p>
+&lt;figure >
+&lt;a data-fancybox="" href="/keyple-website/keyple-website/media/calypso-app-development/component/Local_Component_Overview.svg" >
+&lt;img src="/keyple-website/keyple-website/media/calypso-app-development/component/Local_Component_Overview.svg" alt="" >
+&lt;/a>
+&lt;/figure>
+&lt;h2 id="how-to-use-it">How to use it&lt;/h2>
+&lt;ol>
+&lt;li>In pre-requisite, read page
+&lt;a href="/keyple-website/keyple-website/docs/developer-guide/develop-ticketing-app-local/">Develop a Local Ticketing Application&lt;/a> to understand the main concepts of Keyple in a local application.&lt;/li>
+&lt;li>Read chapter
+&lt;a href="#concepts">Concepts&lt;/a> to understand the main terms and concepts of the &lt;strong>Keyple Calypso Extension&lt;/strong> API.&lt;/li>
+&lt;/ol>
+&lt;h2 id="concepts">Concepts&lt;/h2>
+&lt;p>Here are the main concepts to keep in mind before continuing to read this developer guide :&lt;/p>
+&lt;h4 id="calypso-po">Calypso PO&lt;/h4>
+&lt;p>Concentrate all known informations about the Personal Object being processed. Accessible informations are&lt;/p>
+&lt;ul>
+&lt;li>The application identification fields (revision/version, class, DF name, serial number, ATR, issuer)&lt;/li>
+&lt;li>The indication of the presence of optional features (Stored Value, PIN, Rev3.2 mode, ratification management)&lt;/li>
+&lt;li>The management information of the modification buffer&lt;/li>
+&lt;li>The invalidation status&lt;/li>
+&lt;li>The files, counters, SV data read or modified during the execution of the processes defined by PoTransaction&lt;/li>
+&lt;/ul>
+&lt;p>Calypso PO fields are populated from a CardSelectionResponse optained through the process of a card selection.&lt;/p>
+&lt;h3 id="potransaction">PoTransaction&lt;/h3>
+&lt;p>Service providing high-level API to manage transactions with a Calypso PO.&lt;/p>
+&lt;h4 id="elementaryfile">ElementaryFile&lt;/h4>
+&lt;p>Contains the description of a Calypso Elementary File.&lt;/p>
+&lt;h3 id="card-selection-service">Card Selection Service&lt;/h3>
+&lt;h4 id="po">PO&lt;/h4>
+&lt;h4 id="sam">SAM&lt;/h4>
+&lt;h2 id="api">API&lt;/h2>
+&lt;h2 id="workflowuse-cases">Workflow/Use Cases&lt;/h2>
+&lt;h2 id="examples">Examples&lt;/h2></description></item><item><title>Develop a Plugin</title><link>/keyple-website/docs/developer-guide/develop-plugin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/developer-guide/develop-plugin/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
 &lt;p>In order to provide an easy way to port a Keyple application from a device with a specific card reader to another, a plugin system
 as been developed. When a developer wants to include Keyple features within his project, he has to initialize the SmartCardService by providing a
 plugin Factory available with in the plugin library. The plugin to use depends on the targeted device and running environment.&lt;/p>
