@@ -1209,92 +1209,46 @@ exclude 'META-INF/NOTICE.md'
 &lt;/code>&lt;/pre>
 &lt;p>&lt;strong>Where can I see more examples&lt;/strong>&lt;/p>
 &lt;p>Android native plugins are provided with example applications. Check it to see more use cases:
-&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/example" target="_blank" rel="noopener">Examples&lt;/a>&lt;/p></description></item><item><title>Build your First C++ Application</title><link>/keyple-website/docs/build-your-first-app/cpp-app/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/build-your-first-app/cpp-app/</guid><description/></item><item><title>Develop a Local Ticketing Application</title><link>/keyple-website/docs/developer-guide/develop-ticketing-app-local/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/developer-guide/develop-ticketing-app-local/</guid><description>&lt;h2 id="test-shortcode-java-kotlin-cpp">Test shortcode &amp;ldquo;java-kotlin-cpp&amp;rdquo;&lt;/h2>
-&lt;section class="project-tab" id="tabs">
-&lt;div class="container" style="margin: 0; padding: 0">
-&lt;div class="flex-row">
-&lt;div>
-&lt;nav>
-&lt;div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
-&lt;a aria-controls="nav-java" aria-selected="true" class="nav-item nav-link active"
-data-toggle="tab" href="#nav-java" id="nav-java-tab" role="tab">
-JAVA
-&lt;/a>
-&lt;a aria-controls="nav-kotlin" aria-selected="false" class="nav-item nav-link" data-toggle="tab"
-href="#nav-kotlin" id="nav-kotlin-tab" role="tab">
-KOTLIN
-&lt;/a>
-&lt;a aria-controls="nav-cpp" aria-selected="false" class="nav-item nav-link" data-toggle="tab"
-href="#nav-cpp" id="nav-cpp-tab" role="tab">
-C++
-&lt;/a>
-&lt;/div>
-&lt;/nav>
-&lt;div class="tab-content" id="nav-tabContent">
-&lt;div aria-labelledby="nav-java-tab" class="tab-pane fade show active" id="nav-java" role="tabpanel">
-&lt;div>&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">SelectionsResult selectionsResult &lt;span style="color:#f92672">=&lt;/span> seSelection&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">processExplicitSelection&lt;/span>&lt;span style="color:#f92672">(&lt;/span>reader&lt;span style="color:#f92672">);&lt;/span>
-&lt;span style="color:#66d9ef">if&lt;/span> &lt;span style="color:#f92672">(&lt;/span>selectionsResult&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">hasActiveSelection&lt;/span>&lt;span style="color:#f92672">())&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
-MatchingSe matchingSe &lt;span style="color:#f92672">=&lt;/span> selectionsResult&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">getActiveMatchingSe&lt;/span>&lt;span style="color:#f92672">();&lt;/span>
-&lt;span style="color:#f92672">}&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;/div>
-&lt;/div>
-&lt;div aria-labelledby="nav-kotlin-tab" class="tab-pane fade" id="nav-kotlin" role="tabpanel">
-&lt;div>&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-kt" data-lang="kt">&lt;span style="color:#66d9ef">val&lt;/span> selectionsResult = seSelection.processExplicitSelection(reader)
-&lt;span style="color:#66d9ef">if&lt;/span> (selectionsResult.hasActiveSelection()) {
-&lt;span style="color:#66d9ef">val&lt;/span> matchingSe = selectionsResult.activeMatchingSe
-}&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;/div>
-&lt;/div>
-&lt;div aria-labelledby="nav-cpp-tab" class="tab-pane fade" id="nav-cpp" role="tabpanel">
-&lt;div>&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-cpp" data-lang="cpp">&lt;span style="color:#66d9ef">if&lt;/span> (selectionResult&lt;span style="color:#f92672">-&amp;gt;&lt;/span>hasActiveSelection()) {
-std&lt;span style="color:#f92672">::&lt;/span>shared_ptr&lt;span style="color:#f92672">&amp;lt;&lt;/span>MatchingSelection&lt;span style="color:#f92672">&amp;gt;&lt;/span> matchingSelection &lt;span style="color:#f92672">=&lt;/span>
-selectionResult&lt;span style="color:#f92672">-&amp;gt;&lt;/span>getActiveSelection();
-std&lt;span style="color:#f92672">::&lt;/span>shared_ptr&lt;span style="color:#f92672">&amp;lt;&lt;/span>CalypsoPo&lt;span style="color:#f92672">&amp;gt;&lt;/span> calypsoPo &lt;span style="color:#f92672">=&lt;/span>
-std&lt;span style="color:#f92672">::&lt;/span>dynamic_pointer_cast&lt;span style="color:#f92672">&amp;lt;&lt;/span>CalypsoPo&lt;span style="color:#f92672">&amp;gt;&lt;/span>(
-matchingSelection&lt;span style="color:#f92672">-&amp;gt;&lt;/span>getMatchingSe());
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;/div>
-&lt;/div>
-&lt;/div>
-&lt;/div>
-&lt;/div>
-&lt;/div>
-&lt;/section>
-&lt;h2 id="standard-code-insertion">Standard code insertion&lt;/h2>
-&lt;pre>&lt;code class="language-kotlin">//nativeReader is an instance of android.se.omapi.Reader
-override fun checkSePresence(): Boolean {
-return nativeReader.isSecureElementPresent
-}
-&lt;/code>&lt;/pre></description></item><item><title>Develop a Remote Ticketing Application</title><link>/keyple-website/docs/developer-guide/develop-ticketing-app-remote/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/developer-guide/develop-ticketing-app-remote/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/example" target="_blank" rel="noopener">Examples&lt;/a>&lt;/p></description></item><item><title>Build your First C++ Application</title><link>/keyple-website/docs/build-your-first-app/cpp-app/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/build-your-first-app/cpp-app/</guid><description/></item><item><title>Develop a Local Application</title><link>/keyple-website/docs/developer-guide/develop-local-application/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/developer-guide/develop-local-application/</guid><description>&lt;h2 id="foreword">Foreword&lt;/h2>
+&lt;p>&lt;strong>Work in Progress&lt;/strong>&lt;/p>
+&lt;p>This section describes the core elements of Eclipse Keyple, i.e. the concepts and APIs of Keyple Core that are used to build any application implementing Eclipse Keyple.&lt;/p>
+&lt;p>It is essential for the future user of Eclipse Keyple to be familiar with what is said in this chapter because the other modules made available by the project are all dependent on Keyple Core.&lt;/p>
+&lt;p>TBC&lt;/p>
+&lt;h2 id="concepts">Concepts&lt;/h2>
+&lt;h3 id="reader">Reader&lt;/h3>
+&lt;p>Keyple&amp;rsquo;s primary goal being to interact with smart cards (or smartphones) worn by individuals, it is logical to put the Reader at the top of Keyple Core&amp;rsquo;s concepts.&lt;/p>
+&lt;p>Indeed, it is through the reader interfaces that all interactions with the smart cards will take place, either directly via Keyple Core or using an extension (such as Keyple Calypso).&lt;/p>
+&lt;p>These interfaces provide the means to&lt;/p>
+&lt;ul>
+&lt;li>identify the underlying physical reader,&lt;/li>
+&lt;li>manage communication protocols,&lt;/li>
+&lt;li>detect the presence and communicate with smart cards.&lt;/li>
+&lt;/ul>
+&lt;p>The reader concept also applies to the hardware interfaces used to communicate with security elements such as SAMs (Secure Access Modules), which are sometimes integrated into devices and the virtual interfaces represented by the remote implementations.&lt;/p>
+&lt;h3 id="plugin">Plugin&lt;/h3>
+&lt;p>In Keyple language a plugin is a service that allows the management of readers of a certain type. The plugin is responsible for informing the application about the availability of readers. The readers of the same plugin are usually hardware linked to the same physical interface.&lt;/p>
+&lt;p>Depending on its profile, an application may use different types of plugins to communicate with the different elements it needs (card, SAM).&lt;/p>
+&lt;p>The Plugin interface essentially allows to list and retrieve the available readers.&lt;/p>
+&lt;h3 id="smartcardservice">SmartCardService&lt;/h3>
+&lt;p>This is the Keyple Core service that concentrates the knowledge of active plugins and readers.&lt;/p>
+&lt;p>At startup, a Keyple application must register the plugins it uses. Conversely, it can also unregister them.&lt;/p>
+&lt;p>The SmartCardService will then make sure that the resources used are properly released.&lt;/p>
+&lt;h3 id="observation">Observation&lt;/h3>
+&lt;p>The observation concept applies to readers as well as to plugins; optional, it is used depending on the needs.&lt;/p>
+&lt;p>It consists in monitoring changes such as reader connection/disconnection or card insertion/removal and informing the observing application through a dedicated interface.&lt;/p>
+&lt;p>Not all plugins and readers are observable.&lt;/p>
+&lt;h3 id="selection-and-default-selection">Selection and default selection&lt;/h3>
+&lt;p>In Keyple the concept of selection is derived from the application selection defined by the ISO7816-4 standard.&lt;/p>
+&lt;p>It supplements it by managing cards that do not have the standard command using identification mechanisms based on Answer To Reset and the communication protocol, and also by allowing the execution of commands immediately following application selection or detection.&lt;/p>
+&lt;p>This principle optimizes the processing by allowing the application to elaborate advanced card discovery requests.&lt;/p>
+&lt;p>Several targets can be defined by the application according to the different customer cards expected.&lt;/p>
+&lt;p>The default selection principle consists in providing an observable reader with a set of selection cases corresponding to the expected cards and receiving notifications containing not only the card identification but also the result of all additional commands that the application will have attached.&lt;/p>
+&lt;h3 id="abstractsmartcard">AbstractSmartCard&lt;/h3>
+&lt;p>The AbstractSmartCard concept is used by specific extensions (e.g. Keyple Calypso) and by the Keyple Core selection mechanism. It corresponds to an abstract container model implemented by the extension specific to a card type and returned by the selection process.&lt;/p>
+&lt;p>This container will be able to carry all the useful information known about the card.&lt;/p>
+&lt;p>Note: this concept, mentioned here for understanding, should not appear to the application developer if he uses a card extension.&lt;/p>
+&lt;h2 id="keyple-core-api">Keyple Core API&lt;/h2>
+&lt;p>TDB&lt;/p></description></item><item><title>Develop a Remote Application</title><link>/keyple-website/docs/developer-guide/develop-remote-application/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/developer-guide/develop-remote-application/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
 &lt;p>&lt;strong>Keyple provides the &amp;ldquo;Keyple Remote Plugins&amp;rdquo; solution which allows a terminal to communicate with a smart card reader available in another terminal&lt;/strong>.&lt;/p>
 &lt;p>In this way, you can manage transactions within a distributed architecture.&lt;/p>
 &lt;p>The diagram below shows the role of the &lt;strong>Keyple Remote Plugins&lt;/strong> components in the software layers used in a distributed architecture :&lt;/p>
@@ -1306,7 +1260,7 @@ return nativeReader.isSecureElementPresent
 &lt;h2 id="how-to-use-it-">How to use it ?&lt;/h2>
 &lt;ol>
 &lt;li>In pre-requisite, read page
-&lt;a href="/keyple-website/keyple-website/docs/developer-guide/develop-ticketing-app-local/">Develop a Local Ticketing Application&lt;/a> to understand the main concepts of Keyple in a local application.&lt;/li>
+&lt;a href="/keyple-website/keyple-website/docs/developer-guide/develop-local-application/">Develop a Local Application&lt;/a> to understand the main concepts of Keyple in a local application.&lt;/li>
 &lt;li>Read chapter
 &lt;a href="#concepts">Concepts&lt;/a> to understand the main terms and concepts of the &lt;strong>Keyple Remote Plugins&lt;/strong> solution.&lt;/li>
 &lt;li>Read the introduction of chapter
@@ -2147,7 +2101,7 @@ secure calypso transaction.&lt;/p>
 &lt;h2 id="how-to-use-it">How to use it&lt;/h2>
 &lt;ol>
 &lt;li>In pre-requisite, read page
-&lt;a href="/keyple-website/keyple-website/docs/developer-guide/develop-ticketing-app-local/">Develop a Local Ticketing Application&lt;/a> to understand the main concepts of Keyple in a local application.&lt;/li>
+&lt;a href="/keyple-website/keyple-website/docs/developer-guide/develop-local-application/">Develop a Local Application&lt;/a> to understand the main concepts of Keyple in a local application.&lt;/li>
 &lt;li>Read chapter
 &lt;a href="#concepts">Concepts&lt;/a> to understand the main terms and concepts of the &lt;strong>Keyple Calypso Extension&lt;/strong> API.&lt;/li>
 &lt;/ol>
