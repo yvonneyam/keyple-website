@@ -4,8 +4,8 @@
 &lt;p>It is essential for the future user of &lt;strong>Eclipse Keyple&lt;/strong> to be familiar with what is said in this chapter because the other modules made available by the project are all dependent on &lt;strong>Keyple Core&lt;/strong>.&lt;/p>
 &lt;h2 id="concepts">Concepts&lt;/h2>
 &lt;h3 id="reader">Reader&lt;/h3>
-&lt;p>Keyple&amp;rsquo;s primary goal being to interact with smart cards (or smartphones) worn by individuals, it is logical to put the Reader at the top of Keyple Core&amp;rsquo;s concepts.&lt;/p>
-&lt;p>Indeed, it is through the reader interfaces that all interactions with the smart cards will take place, either directly via Keyple Core or using an extension (such as Keyple Calypso).&lt;/p>
+&lt;p>Keyple&amp;rsquo;s primary goal being to interact with smart cards (or smartphones) worn by individuals, it is logical to put the Reader at the top of &lt;strong>Keyple Core&lt;/strong>&amp;rsquo;s concepts.&lt;/p>
+&lt;p>Indeed, it is through the reader interfaces that all interactions with the smart cards will take place, either directly via &lt;strong>Keyple Core&lt;/strong> or using an extension (such as Keyple Calypso).&lt;/p>
 &lt;p>These interfaces provide the means to&lt;/p>
 &lt;ul>
 &lt;li>identify the underlying physical reader,&lt;/li>
@@ -18,7 +18,7 @@
 &lt;p>Depending on its profile, an application may use different types of plugins to communicate with the different elements it needs (card, SAM).&lt;/p>
 &lt;p>The Plugin interface essentially allows to list and retrieve the available readers.&lt;/p>
 &lt;h3 id="smartcardservice">SmartCardService&lt;/h3>
-&lt;p>This is the Keyple Core service that concentrates the knowledge of active plugins and readers.&lt;/p>
+&lt;p>This is the &lt;strong>Keyple Core&lt;/strong> service that concentrates the knowledge of active plugins and readers.&lt;/p>
 &lt;p>At startup, a Keyple application must register the plugins it uses. Conversely, it can also unregister them.&lt;/p>
 &lt;p>The SmartCardService will then make sure that the resources used are properly released.&lt;/p>
 &lt;h3 id="observation">Observation&lt;/h3>
@@ -32,11 +32,11 @@
 &lt;p>Several targets can be defined by the application according to the different customer cards expected.&lt;/p>
 &lt;p>The default selection principle consists in providing an observable reader with a set of selection cases corresponding to the expected cards and receiving notifications containing not only the card identification but also the result of all additional commands that the application will have attached.&lt;/p>
 &lt;h3 id="abstractsmartcard">AbstractSmartCard&lt;/h3>
-&lt;p>The AbstractSmartCard concept is used by specific extensions (e.g. Keyple Calypso) and by the Keyple Core selection mechanism. It corresponds to an abstract container model implemented by the extension specific to a card type and returned by the selection process.&lt;/p>
+&lt;p>The AbstractSmartCard concept is used by specific extensions (e.g. Keyple Calypso) and by the &lt;strong>Keyple Core&lt;/strong> selection mechanism. It corresponds to an abstract container model implemented by the extension specific to a card type and returned by the selection process.&lt;/p>
 &lt;p>This container will be able to carry all the useful information known about the card.&lt;/p>
 &lt;p>Note: this concept, mentioned here for understanding, should not appear to the application developer if he uses a card extension.&lt;/p>
 &lt;h2 id="keyple-core-api">Keyple Core API&lt;/h2>
-&lt;p>TDB&lt;/p></description></item><item><title>Develop a Remote Application</title><link>/keyple-website/docs/developer-guide/develop-remote-application/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/developer-guide/develop-remote-application/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>TBC&lt;/p></description></item><item><title>Develop a Remote Application</title><link>/keyple-website/docs/developer-guide/develop-remote-application/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/developer-guide/develop-remote-application/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
 &lt;p>&lt;strong>Keyple provides the &amp;ldquo;Keyple Remote Plugins&amp;rdquo; solution which allows a terminal to communicate with a smart card reader available in another terminal&lt;/strong>.&lt;/p>
 &lt;p>In this way, you can manage transactions within a distributed architecture.&lt;/p>
 &lt;p>The diagram below shows the role of the &lt;strong>Keyple Remote Plugins&lt;/strong> components in the software layers used in a distributed architecture :&lt;/p>
