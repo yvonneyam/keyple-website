@@ -1209,10 +1209,12 @@ exclude 'META-INF/NOTICE.md'
 &lt;/code>&lt;/pre>
 &lt;p>&lt;strong>Where can I see more examples&lt;/strong>&lt;/p>
 &lt;p>Android native plugins are provided with example applications. Check it to see more use cases:
-&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/example" target="_blank" rel="noopener">Examples&lt;/a>&lt;/p></description></item><item><title>Build your First C++ Application</title><link>/keyple-website/docs/build-your-first-app/cpp-app/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/build-your-first-app/cpp-app/</guid><description/></item><item><title>Develop a Local App</title><link>/keyple-website/docs/developer-guide/develop-local-application/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/developer-guide/develop-local-application/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
-&lt;p>&lt;em>Work in Progress&lt;/em>&lt;/p>
+&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/example" target="_blank" rel="noopener">Examples&lt;/a>&lt;/p></description></item><item><title>Build your First C++ Application</title><link>/keyple-website/docs/build-your-first-app/cpp-app/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/build-your-first-app/cpp-app/</guid><description/></item><item><title>Develop a Local App</title><link>/keyple-website/docs/developer-guide/develop-local-application/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/developer-guide/develop-local-application/</guid><description>&lt;div class="alert alert-note">
+&lt;div>
 &lt;p>This page describes the core elements of &lt;strong>Eclipse Keyple&lt;/strong>, i.e. the concepts and APIs of &lt;strong>Keyple Core&lt;/strong> that are used to build any application implementing &lt;strong>Eclipse Keyple&lt;/strong>.&lt;/p>
 &lt;p>It is essential for the future user of &lt;strong>Eclipse Keyple&lt;/strong> to be familiar with what is said in this chapter because the other modules made available by the project are all dependent on &lt;strong>Keyple Core&lt;/strong>.&lt;/p>
+&lt;/div>
+&lt;/div>
 &lt;h2 id="concepts">Concepts&lt;/h2>
 &lt;h3 id="reader">Reader&lt;/h3>
 &lt;p>Keyple&amp;rsquo;s primary goal being to interact with smart cards (or smartphones) worn by individuals, it is logical to put the Reader at the top of &lt;strong>Keyple Core&lt;/strong>&amp;rsquo;s concepts.&lt;/p>
@@ -1247,13 +1249,32 @@ exclude 'META-INF/NOTICE.md'
 &lt;p>This container will be able to carry all the useful information known about the card.&lt;/p>
 &lt;p>Note: this concept, mentioned here for understanding, should not appear to the application developer if he uses a card extension.&lt;/p>
 &lt;h2 id="workflow">Workflow&lt;/h2>
-&lt;p>TBC&lt;/p>
+&lt;ul>
+&lt;li>Creation of the Smart Card Service&lt;/li>
+&lt;li>Choose the plugin&lt;/li>
+&lt;li>Register the plugin&lt;/li>
+&lt;li>Observation of the plugin&lt;/li>
+&lt;li>Retrieve the reader&lt;/li>
+&lt;li>Observation of the reader&lt;/li>
+&lt;li>Container selection&lt;/li>
+&lt;li>Implementation of the application service&lt;/li>
+&lt;li>Stopping the application&lt;/li>
+&lt;/ul>
 &lt;h2 id="keyple-core-api">Keyple Core API&lt;/h2>
-&lt;p>TBC&lt;/p>
+&lt;p>[Plugin-Reader class diagram]&lt;/p>
+&lt;p>[Selection class diagram]&lt;/p>
 &lt;h2 id="examples">Examples&lt;/h2>
-&lt;p>TBC&lt;/p>
+&lt;ul>
+&lt;li>UseCase1_ExplicitSelectionAid&lt;/li>
+&lt;li>UseCase2_DefaultSelectionNotification&lt;/li>
+&lt;li>UseCase3_SequentialMultiSelection&lt;/li>
+&lt;li>UseCase4_GroupedMultiSelection&lt;/li>
+&lt;li>Demo_CardProtocolDetection&lt;/li>
+&lt;li>Demo_ObservableReaderNotification&lt;/li>
+&lt;/ul>
 &lt;h2 id="download">Download&lt;/h2>
-&lt;p>TBC&lt;/p></description></item><item><title>Develop a Remote App</title><link>/keyple-website/docs/developer-guide/develop-remote-application/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/developer-guide/develop-remote-application/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>
+&lt;a href="/keyple-website/keyple-website/components/">Keyple Core component&lt;/a>&lt;/p></description></item><item><title>Develop a Remote App</title><link>/keyple-website/docs/developer-guide/develop-remote-application/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/developer-guide/develop-remote-application/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
 &lt;p>&lt;strong>Keyple provides the &amp;ldquo;Keyple Remote Plugins&amp;rdquo; solution which allows a terminal to communicate with a smart card reader available in another terminal&lt;/strong>.&lt;/p>
 &lt;p>In this way, you can manage transactions within a distributed architecture.&lt;/p>
 &lt;p>The diagram below shows the role of the &lt;strong>Keyple Remote Plugins&lt;/strong> components in the software layers used in a distributed architecture :&lt;/p>
