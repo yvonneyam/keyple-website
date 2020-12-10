@@ -1209,13 +1209,12 @@ exclude 'META-INF/NOTICE.md'
 &lt;/code>&lt;/pre>
 &lt;p>&lt;strong>Where can I see more examples&lt;/strong>&lt;/p>
 &lt;p>Android native plugins are provided with example applications. Check it to see more use cases:
-&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/example" target="_blank" rel="noopener">Examples&lt;/a>&lt;/p></description></item><item><title>Build your First C++ Application</title><link>/keyple-website/docs/build-your-first-app/cpp-app/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/build-your-first-app/cpp-app/</guid><description/></item><item><title>Develop a Local App</title><link>/keyple-website/docs/developer-guide/develop-local-application/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/developer-guide/develop-local-application/</guid><description>&lt;div class="alert alert-note">
+&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/example" target="_blank" rel="noopener">Examples&lt;/a>&lt;/p></description></item><item><title>Build your First C++ Application</title><link>/keyple-website/docs/build-your-first-app/cpp-app/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/build-your-first-app/cpp-app/</guid><description/></item><item><title>Common concepts</title><link>/keyple-website/docs/developer-guide/common-concepts/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/developer-guide/common-concepts/</guid><description>&lt;div class="alert alert-note">
 &lt;div>
 &lt;p>This page describes the core elements of &lt;strong>Eclipse Keyple&lt;/strong>, i.e. the concepts and APIs of &lt;strong>Keyple Core&lt;/strong> that are used to build any application implementing &lt;strong>Eclipse Keyple&lt;/strong>.&lt;/p>
 &lt;p>It is essential for the future user of &lt;strong>Eclipse Keyple&lt;/strong> to be familiar with what is said in this chapter because the other modules made available by the project are all dependent on &lt;strong>Keyple Core&lt;/strong>.&lt;/p>
 &lt;/div>
 &lt;/div>
-&lt;h2 id="concepts">Concepts&lt;/h2>
 &lt;h3 id="reader">Reader&lt;/h3>
 &lt;p>Keyple&amp;rsquo;s primary goal being to interact with smart cards (or smartphones) worn by individuals, it is logical to put the Reader at the top of &lt;strong>Keyple Core&lt;/strong>&amp;rsquo;s concepts.&lt;/p>
 &lt;p>Indeed, it is through the reader interfaces that all interactions with the smart cards will take place, either directly via &lt;strong>Keyple Core&lt;/strong> or using an extension (such as Keyple Calypso).&lt;/p>
@@ -1247,7 +1246,8 @@ exclude 'META-INF/NOTICE.md'
 &lt;h3 id="abstract-smart-card">Abstract smart card&lt;/h3>
 &lt;p>The &lt;strong>abstract smart card&lt;/strong> concept is used by specific extensions (e.g. Keyple Calypso) and by the &lt;strong>Keyple Core&lt;/strong> selection mechanism. It corresponds to an abstract container model implemented by the extension specific to a card type and returned by the selection process.&lt;/p>
 &lt;p>This container will be able to carry all the useful information known about the card.&lt;/p>
-&lt;p>Note: this concept, mentioned here for understanding, should not appear to the application developer if he uses a card extension.&lt;/p>
+&lt;p>Note: this concept, mentioned here for understanding, should not appear to the application developer if he uses a card extension.&lt;/p></description></item><item><title>Develop a Local App</title><link>/keyple-website/docs/developer-guide/develop-local-application/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/developer-guide/develop-local-application/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>TBC&lt;/p>
 &lt;h2 id="workflow">Workflow&lt;/h2>
 &lt;ul>
 &lt;li>Creation of the Smart Card Service&lt;/li>
