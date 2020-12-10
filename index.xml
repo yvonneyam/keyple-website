@@ -596,7 +596,7 @@ A ‘PO resource’ is the set of a Calypso PO and the reader on which it is sel
 &lt;blockquote>
 &lt;p>cf.
 &lt;a href="https://github.com/eclipse/keyple-java/blob/develop/java/example/calypso/pc/UseCase5_MultipleSession/src/main/java/org/eclipse/keyple/example/calypso/pc/usecase5/MultipleSession_Pcsc.java" target="_blank" rel="noopener">“Calypso Use Case 5 / PO Multiple Session&amp;quot;&lt;/a> example&lt;/p>
-&lt;/blockquote></description></item><item><title>Build your First Java Application</title><link>/keyple-website/docs/build-your-first-app/java-app/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/build-your-first-app/java-app/</guid><description>&lt;p>This getting started contains one ready-to-execute JAVA example starting from a new Gradle project.&lt;/p>
+&lt;/blockquote></description></item><item><title>Build your first Java application</title><link>/keyple-website/docs/build-your-first-app/java-app/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/build-your-first-app/java-app/</guid><description>&lt;p>This getting started contains one ready-to-execute JAVA example starting from a new Gradle project.&lt;/p>
 &lt;p>The example demonstrate Keyple capabilities with the Keyple PCSC plugin and PO/SAM provided in the Calypso Test Kit.&lt;/p>
 &lt;h2 id="build">Build&lt;/h2>
 &lt;p>The example can run on any machine: Linux, Windows and MacOS. If not installed in your machine, you will need to download :&lt;/p>
@@ -837,7 +837,7 @@ private final static String SAM_READER_NAME = &amp;quot;XXX&amp;quot;;
 &lt;div>
 All project dependencies, including Keyple components, are downloaded during the first run, which can take several minutes.
 &lt;/div>
-&lt;/div></description></item><item><title>Build your First Android Application</title><link>/keyple-website/docs/build-your-first-app/android-app/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/build-your-first-app/android-app/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;/div></description></item><item><title>Build your first Android application</title><link>/keyple-website/docs/build-your-first-app/android-app/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/build-your-first-app/android-app/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
 &lt;h3 id="overview">Overview&lt;/h3>
 &lt;p>&lt;strong>Since Keyple is supported by the Android operating system, developers can take advantage of this quick and easy way to implement solution to provide SmartCard communication functionalities in their own mobile application.&lt;/strong>&lt;/p>
 &lt;p>For example, Keyple could be used to facilitate the development of a ticketing application based on the use of conteners on a SIM card and relying on
@@ -1209,15 +1209,15 @@ exclude 'META-INF/NOTICE.md'
 &lt;/code>&lt;/pre>
 &lt;p>&lt;strong>Where can I see more examples&lt;/strong>&lt;/p>
 &lt;p>Android native plugins are provided with example applications. Check it to see more use cases:
-&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/example" target="_blank" rel="noopener">Examples&lt;/a>&lt;/p></description></item><item><title>Build your First C++ Application</title><link>/keyple-website/docs/build-your-first-app/cpp-app/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/build-your-first-app/cpp-app/</guid><description/></item><item><title>Common concepts</title><link>/keyple-website/docs/developer-guide/common-concepts/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/developer-guide/common-concepts/</guid><description>&lt;div class="alert alert-note">
+&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/example" target="_blank" rel="noopener">Examples&lt;/a>&lt;/p></description></item><item><title>Build your first C++ application</title><link>/keyple-website/docs/build-your-first-app/cpp-app/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/build-your-first-app/cpp-app/</guid><description/></item><item><title>Common concepts</title><link>/keyple-website/docs/developer-guide/common-concepts/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/developer-guide/common-concepts/</guid><description>&lt;div class="alert alert-note">
 &lt;div>
-&lt;p>This page describes the core elements of &lt;strong>Eclipse Keyple&lt;/strong>, i.e. the concepts and APIs of &lt;strong>Keyple Core&lt;/strong> that are used to build any application implementing &lt;strong>Eclipse Keyple&lt;/strong>.&lt;/p>
-&lt;p>It is essential for the future user of &lt;strong>Eclipse Keyple&lt;/strong> to be familiar with what is said in this chapter because the other modules made available by the project are all dependent on &lt;strong>Keyple Core&lt;/strong>.&lt;/p>
+&lt;p>This page describes the core elements of &lt;strong>Keyple&lt;/strong>, i.e. the concepts and APIs of &lt;strong>Keyple Core&lt;/strong> that are used to build any application implementing &lt;strong>Keyple&lt;/strong>.&lt;/p>
+&lt;p>It is essential for the future user of &lt;strong>Keyple&lt;/strong> to be familiar with what is said in this chapter because the other modules made available by the project are all dependent on &lt;strong>Keyple Core&lt;/strong>.&lt;/p>
 &lt;/div>
 &lt;/div>
 &lt;h3 id="reader">Reader&lt;/h3>
 &lt;p>Keyple&amp;rsquo;s primary goal being to interact with smart cards (or smartphones) worn by individuals, it is logical to put the Reader at the top of &lt;strong>Keyple Core&lt;/strong>&amp;rsquo;s concepts.&lt;/p>
-&lt;p>Indeed, it is through the reader interfaces that all interactions with the smart cards will take place, either directly via &lt;strong>Keyple Core&lt;/strong> or using an extension (such as Keyple Calypso).&lt;/p>
+&lt;p>Indeed, it is through the reader interfaces that all interactions with the smart cards will take place, either directly via &lt;strong>Keyple Core&lt;/strong> or using an extension (such as &lt;strong>Keyple Calypso&lt;/strong>).&lt;/p>
 &lt;p>These interfaces provide the means to&lt;/p>
 &lt;ul>
 &lt;li>identify the underlying physical reader,&lt;/li>
@@ -1244,9 +1244,9 @@ exclude 'META-INF/NOTICE.md'
 &lt;p>Several targets can be defined by the application according to the different customer cards expected.&lt;/p>
 &lt;p>The &lt;strong>default selection&lt;/strong> principle consists in providing an observable reader with a set of selection cases corresponding to the expected cards and receiving notifications containing not only the card identification but also the result of all additional commands that the application will have attached.&lt;/p>
 &lt;h3 id="abstract-smart-card">Abstract smart card&lt;/h3>
-&lt;p>The &lt;strong>abstract smart card&lt;/strong> concept is used by specific extensions (e.g. Keyple Calypso) and by the &lt;strong>Keyple Core&lt;/strong> selection mechanism. It corresponds to an abstract container model implemented by the extension specific to a card type and returned by the selection process.&lt;/p>
+&lt;p>The &lt;strong>abstract smart card&lt;/strong> concept is used by specific extensions (e.g. &lt;strong>Keyple Calypso&lt;/strong>) and by the &lt;strong>Keyple Core&lt;/strong> selection mechanism. It corresponds to an abstract container model implemented by the extension specific to a card type and returned by the selection process.&lt;/p>
 &lt;p>This container will be able to carry all the useful information known about the card.&lt;/p>
-&lt;p>Note: this concept, mentioned here for understanding, should not appear to the application developer if he uses a card extension.&lt;/p></description></item><item><title>Develop a Local App</title><link>/keyple-website/docs/developer-guide/develop-local-application/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/developer-guide/develop-local-application/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>Note: this concept, mentioned here for understanding, should not appear to the application developer if he uses a card extension.&lt;/p></description></item><item><title>Local application</title><link>/keyple-website/docs/developer-guide/local-application/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/developer-guide/local-application/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
 &lt;p>TBC&lt;/p>
 &lt;h2 id="workflow">Workflow&lt;/h2>
 &lt;ul>
@@ -1274,7 +1274,7 @@ exclude 'META-INF/NOTICE.md'
 &lt;/ul>
 &lt;h2 id="download">Download&lt;/h2>
 &lt;p>
-&lt;a href="/keyple-website/keyple-website/components/">Keyple Core component&lt;/a>&lt;/p></description></item><item><title>Develop a Remote App</title><link>/keyple-website/docs/developer-guide/develop-remote-application/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/developer-guide/develop-remote-application/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;a href="/keyple-website/keyple-website/components/">Keyple Core component&lt;/a>&lt;/p></description></item><item><title>Remote application</title><link>/keyple-website/docs/developer-guide/remote-application/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/developer-guide/remote-application/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
 &lt;p>&lt;strong>Keyple provides the &amp;ldquo;Keyple Remote Plugins&amp;rdquo; solution which allows a terminal to communicate with a smart card reader available in another terminal&lt;/strong>.&lt;/p>
 &lt;p>In this way, you can manage transactions within a distributed architecture.&lt;/p>
 &lt;p>The diagram below shows the role of the &lt;strong>Keyple Remote Plugins&lt;/strong> components in the software layers used in a distributed architecture :&lt;/p>
@@ -1286,7 +1286,7 @@ exclude 'META-INF/NOTICE.md'
 &lt;h2 id="how-to-use-it-">How to use it ?&lt;/h2>
 &lt;ol>
 &lt;li>In pre-requisite, read page
-&lt;a href="/keyple-website/keyple-website/docs/developer-guide/develop-local-application/">Develop a Local Application&lt;/a> to understand the main concepts of Keyple in a local application.&lt;/li>
+&lt;a href="/keyple-website/keyple-website/docs/developer-guide/local-application/">Develop a Local Application&lt;/a> to understand the main concepts of Keyple in a local application.&lt;/li>
 &lt;li>Read chapter
 &lt;a href="#concepts">Concepts&lt;/a> to understand the main terms and concepts of the &lt;strong>Keyple Remote Plugins&lt;/strong> solution.&lt;/li>
 &lt;li>Read the introduction of chapter
@@ -2112,7 +2112,7 @@ width: 240px;
 &lt;a href="https://github.com/eclipse/keyple-java/tree/develop/java/component/keyple-plugin/remote/remote/" target="_blank" rel="noopener">Remote Lib&lt;/a>&lt;/li>
 &lt;li>
 &lt;a href="https://github.com/eclipse/keyple-java/tree/develop/java/component/keyple-plugin/remote/local/" target="_blank" rel="noopener">Local Lib&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Develop a Calypso Application</title><link>/keyple-website/docs/developer-guide/develop-calypso-application/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/developer-guide/develop-calypso-application/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;/ul></description></item><item><title>Calypso application</title><link>/keyple-website/docs/developer-guide/calypso-application/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/developer-guide/calypso-application/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
 &lt;p>&lt;strong>Work in Progress&lt;/strong>&lt;/p>
 &lt;p>Keyple API was designed to support an extension system. On top of &lt;strong>Keyple Core&lt;/strong>, APIs can be developed to extend
 Keyple features. For example, Calypso Network Association provides &lt;strong>Keyple Calypso Extension&lt;/strong>.&lt;/p>
@@ -2127,7 +2127,7 @@ secure calypso transaction.&lt;/p>
 &lt;h2 id="how-to-use-it">How to use it&lt;/h2>
 &lt;ol>
 &lt;li>In pre-requisite, read page
-&lt;a href="/keyple-website/keyple-website/docs/developer-guide/develop-local-application/">Develop a Local Application&lt;/a> to understand the main concepts of Keyple in a local application.&lt;/li>
+&lt;a href="/keyple-website/keyple-website/docs/developer-guide/local-application/">Develop a Local Application&lt;/a> to understand the main concepts of Keyple in a local application.&lt;/li>
 &lt;li>Read chapter
 &lt;a href="#concepts">Concepts&lt;/a> to understand the main terms and concepts of the &lt;strong>Keyple Calypso Extension&lt;/strong> API.&lt;/li>
 &lt;/ol>
@@ -2152,7 +2152,7 @@ secure calypso transaction.&lt;/p>
 &lt;h4 id="sam">SAM&lt;/h4>
 &lt;h2 id="api">API&lt;/h2>
 &lt;h2 id="workflowuse-cases">Workflow/Use Cases&lt;/h2>
-&lt;h2 id="examples">Examples&lt;/h2></description></item><item><title>Develop a Plugin</title><link>/keyple-website/docs/developer-guide/develop-plugin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/developer-guide/develop-plugin/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;h2 id="examples">Examples&lt;/h2></description></item><item><title>Create a plugin</title><link>/keyple-website/docs/developer-guide/create-plugin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/developer-guide/create-plugin/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
 &lt;p>In order to provide an easy way to port a Keyple application from a device with a specific card reader to another, a plugin system
 as been developed. When a developer wants to include Keyple features within his project, he has to initialize the SmartCardService by providing a
 plugin Factory available with in the plugin library. The plugin to use depends on the targeted device and running environment.&lt;/p>
@@ -3168,7 +3168,7 @@ throw new KeyplePluginInstantiationException(&amp;quot;Can not access smartcard.
 &lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/component/keyple-plugin/pcsc" target="_blank" rel="noopener">Plugin&lt;/a>&lt;/li>
 &lt;li>
 &lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/example/calypso/pc" target="_blank" rel="noopener">Example Apps&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Develop an Extension</title><link>/keyple-website/docs/developer-guide/develop-extension/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/developer-guide/develop-extension/</guid><description/></item><item><title>Migration Guide - Keyple Java 0.8.1 to 0.9.0</title><link>/keyple-website/docs/developer-guide/migration-0.8.1-to-0.9.0/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/developer-guide/migration-0.8.1-to-0.9.0/</guid><description>&lt;p>This guide is intended to help a user of version 0.8.1 of Keyple Java to upgrade his application to the 0.9.0 version of the library.&lt;/p>
+&lt;/ul></description></item><item><title>Create an extension</title><link>/keyple-website/docs/developer-guide/create-extension/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/developer-guide/create-extension/</guid><description/></item><item><title>Migration Guide - Keyple Java 0.8.1 to 0.9.0</title><link>/keyple-website/docs/developer-guide/migration-0.8.1-to-0.9.0/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/developer-guide/migration-0.8.1-to-0.9.0/</guid><description>&lt;p>This guide is intended to help a user of version 0.8.1 of Keyple Java to upgrade his application to the 0.9.0 version of the library.&lt;/p>
 &lt;p>From a user API point of view, the changes relate to the following topics:&lt;/p>
 &lt;ul>
 &lt;li>
