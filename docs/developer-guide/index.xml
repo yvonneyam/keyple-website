@@ -36,12 +36,18 @@
 &lt;h3 id="abstract-smart-card">Abstract smart card&lt;/h3>
 &lt;p>The &lt;strong>abstract smart card&lt;/strong> concept is used by specific extensions (e.g. &lt;strong>Keyple Calypso&lt;/strong>) and by the &lt;strong>Keyple Core&lt;/strong> selection mechanism. It corresponds to an abstract container model implemented by the extension specific to a card type and returned by the selection process.&lt;/p>
 &lt;p>This container will be able to carry all the useful information known about the card.&lt;/p>
-&lt;p>Note: this concept, mentioned here for understanding, should not appear to the application developer if he uses a card extension.&lt;/p></description></item><item><title>Local application</title><link>/keyple-website/docs/developer-guide/local-application/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/developer-guide/local-application/</guid><description>&lt;blockquote>
+&lt;p>Note: this concept, mentioned here for understanding, should not appear to the application developer if he uses a card extension.&lt;/p></description></item><item><title>Local application</title><link>/keyple-website/docs/developer-guide/local-application/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/developer-guide/local-application/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
 &lt;p>A local application is an application that runs in a device in contact with the end user.&lt;/p>
 &lt;p>It has at least one local smart card reader and manages itself the interaction with the user.&lt;/p>
 &lt;p>In the ticketing industry, it is typically the software that runs a validator, a vending machine or a control terminal.&lt;/p>
-&lt;/blockquote>
-&lt;h2 id="how-to-create-such-an-application">How to create such an application?&lt;/h2>
+&lt;p>The diagram below illustrates the organization of the local application components:
+&lt;figure >
+&lt;a data-fancybox="" href="/keyple-website/keyple-website/media/local-app/component/Local_Application_Components_Overview.svg" >
+&lt;img src="/keyple-website/keyple-website/media/local-app/component/Local_Application_Components_Overview.svg" alt="" >
+&lt;/a>
+&lt;/figure>
+&lt;/p>
+&lt;h2 id="before-you-start">Before you start&lt;/h2>
 &lt;ol>
 &lt;li>In pre-requisite, read the
 &lt;a href="/keyple-website/keyple-website/docs/developer-guide/common-concepts/">common concepts&lt;/a> page and become familiar with the basic concepts on which &lt;strong>Keyple&lt;/strong> is based.&lt;/li>
@@ -63,7 +69,7 @@
 &lt;p>The purpose of this section is to guide you in its use.&lt;/p>
 &lt;h3 id="creation-of-the-smart-card-service">Creation of the Smart Card Service&lt;/h3>
 &lt;p>This is the very first step in the realization of a Keyple application:&lt;/p>
-&lt;pre>&lt;code class="language-java"> /* Get the instance of the SmartCardService */
+&lt;pre>&lt;code class="language-java">/* Get the instance of the SmartCardService */
 SmartCardService smartCardService = SmartCardService.getInstance();
 &lt;/code>&lt;/pre>
 &lt;p>The Smart Card Service is based on the SmartCardService object, which is a singleton that must be held by the application all along its execution.&lt;/p>
@@ -79,13 +85,63 @@ A new plugin can also be &lt;a href="/keyple-website/keyple-website/docs/develop
 &lt;/div>
 &lt;/div>
 &lt;h3 id="register-the-plugin">Register the plugin&lt;/h3>
+&lt;p>All Keyple plugins implement the &lt;code>Plugin&lt;/code> interface.&lt;/p>
 &lt;p>The plugin registration consists in submitting its factory to the Smart Card Service.&lt;/p>
-&lt;pre>&lt;code class="language-java"> /* Create a Exception Handler for plugin and reader observation */
-ExceptionHandlerImpl readerExceptionHandlerImpl = new ExceptionHandlerImpl();
-/* Assign PcscPlugin to the SmartCardService */
+&lt;pre>&lt;code class="language-java">/* Assign the PcscPlugin to the SmartCardService */
 plugin = smartCardService.registerPlugin(new PcscPluginFactory(null, readerExceptionHandlerImpl));
 &lt;/code>&lt;/pre>
+&lt;div class="alert alert-note">
+&lt;div>
+&lt;p>The plugin factories all implement the interface expected by SmartCardService.&lt;/p>
+&lt;p>Depending on the case, the constructor of the factory provided by the plugin can take parameters as argument.&lt;/p>
+&lt;p>For example, in the code above, the PC/SC plugin expects exception handlers, but in other cases it could be other parameters.&lt;/p>
+&lt;/div>
+&lt;/div>
 &lt;h3 id="observation-of-the-plugin">Observation of the plugin&lt;/h3>
+&lt;div class="alert alert-warning">
+&lt;div>
+The notion of plugin observation applies only to hardware environments in which the readers are removable.
+&lt;/div>
+&lt;/div>
+&lt;p>The observation of reader connections and disconnections is achieved through a background task managed by &lt;strong>Keyple Core&lt;/strong>.&lt;/p>
+&lt;p>It is therefore imperative to provide an exception handler to allow &lt;strong>Keyple Core&lt;/strong> to warn the application in case of an execution error during monitoring or event notification.&lt;/p>
+&lt;p>Here is an example with the PC/SC plugin:&lt;/p>
+&lt;pre>&lt;code class="language-java">private static class ExceptionHandlerImpl implements PluginObservationExceptionHandler {
+@Override
+public void onReaderObservationError(
+String pluginName, String readerName, Throwable throwable) {
+logger.error(&amp;quot;An unexpected reader error occurred: {}:{}&amp;quot;, pluginName, readerName, throwable);
+}
+}
+}
+/* Create an exception handler for plugin observation */
+ExceptionHandlerImpl pluginExceptionHandlerImpl = new ExceptionHandlerImpl();
+/* Assign the PcscPlugin to the SmartCardService */
+plugin = smartCardService.registerPlugin(new PcscPluginFactory(pluginExceptionHandlerImpl, null));
+&lt;/code>&lt;/pre>
+&lt;p>For the observation of the plugin itself, the application must provide an object implementing the &lt;code>PluginObserver&lt;/code> interface.&lt;/p>
+&lt;pre>&lt;code>((ObservablePlugin) plugin).addObserver(new PluginObserver());
+&lt;/code>&lt;/pre>
+&lt;p>The &lt;code>PluginObserver&lt;/code> interface requires the implementation of the &lt;code>update&lt;/code> method that will be called by Keyple Core when notifying plugin events.&lt;/p>
+&lt;pre>&lt;code>class PluginObserver implements ObservablePlugin.PluginObserver {
+@Override
+public void update(PluginEvent event) {
+switch (event.getEventType()) {
+case READER_CONNECTED:
+// here the processing to be done when a reader is connected
+...
+break;
+case READER_DISCONNECTED:
+// here the processing to be done when a reader is disconnected
+...
+break;
+default:
+break;
+}
+}
+}
+}
+&lt;/code>&lt;/pre>
 &lt;h3 id="retrieve-the-reader">Retrieve the reader&lt;/h3>
 &lt;h3 id="observation-of-the-reader">Observation of the reader&lt;/h3>
 &lt;h3 id="container-selection">Container selection&lt;/h3>
