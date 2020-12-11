@@ -60,7 +60,7 @@
 &lt;li>Follow the explanations given in the
 &lt;a href="/keyple-website/keyple-website/docs/build-your-first-app/">Build your first app&lt;/a> section to configure your environment.&lt;/li>
 &lt;li>Using the
-&lt;a href="/keyple-website/keyple-website/components/">Component&lt;/a> link, import &lt;strong>Keyple Core&lt;/strong> into your project and start playing with &lt;strong>Keyple&lt;/strong>.&lt;/li>
+&lt;a href="/keyple-website/keyple-website/components/">component&lt;/a> page, import &lt;strong>Keyple Core&lt;/strong> into your project and start playing with &lt;strong>Keyple&lt;/strong>.&lt;/li>
 &lt;li>Don&amp;rsquo;t forget to explore the potential of Keyple card-specific extensions such as &lt;strong>Keyple Calypso&lt;/strong>.&lt;/li>
 &lt;/ol>
 &lt;h2 id="workflow">Workflow&lt;/h2>
@@ -105,25 +105,26 @@ The notion of plugin observation applies only to hardware environments in which 
 &lt;/div>
 &lt;p>The observation of reader connections and disconnections is achieved through a background task managed by &lt;strong>Keyple Core&lt;/strong>.&lt;/p>
 &lt;p>It is therefore imperative to provide an exception handler to allow &lt;strong>Keyple Core&lt;/strong> to warn the application in case of an execution error during monitoring or event notification.&lt;/p>
-&lt;p>Here is an example with the PC/SC plugin:&lt;/p>
-&lt;pre>&lt;code class="language-java">private static class ExceptionHandlerImpl implements PluginObservationExceptionHandler {
+&lt;p>Here is an example of exception handler implementation in a PC/SC plugin context:&lt;/p>
+&lt;pre>&lt;code class="language-java">...
+private static class PluginExceptionHandlerImpl implements PluginObservationExceptionHandler {
 @Override
-public void onReaderObservationError(
-String pluginName, String readerName, Throwable throwable) {
-logger.error(&amp;quot;An unexpected reader error occurred: {}:{}&amp;quot;, pluginName, readerName, throwable);
+public void onPluginObservationError(String pluginName, Throwable throwable) {
+logger.error(&amp;quot;An unexpected plugin error occurred: {}&amp;quot;, pluginName, throwable);
 }
 }
 }
 /* Create an exception handler for plugin observation */
-ExceptionHandlerImpl pluginExceptionHandlerImpl = new ExceptionHandlerImpl();
+PluginExceptionHandlerImpl pluginExceptionHandlerImpl = new ExceptionHandlerImpl();
 /* Assign the PcscPlugin to the SmartCardService */
 plugin = smartCardService.registerPlugin(new PcscPluginFactory(pluginExceptionHandlerImpl, null));
+...
 &lt;/code>&lt;/pre>
-&lt;p>For the observation of the plugin itself, the application must provide an object implementing the &lt;code>PluginObserver&lt;/code> interface.&lt;/p>
-&lt;pre>&lt;code>((ObservablePlugin) plugin).addObserver(new PluginObserver());
+&lt;p>For the observation of the plugin itself, the application must provide an object implementing the &lt;code>PluginObserver&lt;/code> interface to the plugin after having casted it in &lt;code>ObservablePlugin&lt;/code>.&lt;/p>
+&lt;pre>&lt;code class="language-java">((ObservablePlugin) plugin).addObserver(new PluginObserver());
 &lt;/code>&lt;/pre>
 &lt;p>The &lt;code>PluginObserver&lt;/code> interface requires the implementation of the &lt;code>update&lt;/code> method that will be called by Keyple Core when notifying plugin events.&lt;/p>
-&lt;pre>&lt;code>class PluginObserver implements ObservablePlugin.PluginObserver {
+&lt;pre>&lt;code class="language-java">class PluginObserver implements ObservablePlugin.PluginObserver {
 @Override
 public void update(PluginEvent event) {
 switch (event.getEventType()) {
@@ -143,9 +144,223 @@ break;
 }
 &lt;/code>&lt;/pre>
 &lt;h3 id="retrieve-the-reader">Retrieve the reader&lt;/h3>
+&lt;p>Readers are objects implementing the &lt;code>Reader&lt;/code> interface and are returned by the plugin&amp;rsquo;s &lt;code>getReader&lt;/code> method taking the name of the reader as argument.&lt;/p>
+&lt;p>The names of the readers available from the plugin are returned as a list of strings by the &lt;code>getReaderNames&lt;/code> method.&lt;/p>
+&lt;p>The &lt;code>getReaders&lt;/code> method also allows to retrieve all readers in a Map whose key is the name of the reader and the value the &lt;code>Reader&lt;/code> object.&lt;/p>
+&lt;p>Here is an example to get the 1st PC/SC reader:&lt;/p>
+&lt;pre>&lt;code class="language-java">String readerName = plugin.getReaderNames().get(0);
+Reader reader = plugin.getReader(readerName);
+&lt;/code>&lt;/pre>
+&lt;div class="alert alert-note">
+&lt;div>
+Depending on the type of plugin, the reader names are more or less dynamic (e.g. a PC/SC based system vs. an embedded terminal), it is sometimes necessary to implement an identification mechanism in order to assign the right reader to the right place in the system (for example by using regular expressions).
+&lt;/div>
+&lt;/div>
+&lt;h3 id="customize-the-reader-settings">Customize the reader settings&lt;/h3>
+&lt;p>Take a close look at the parameters proposed by the plugin and its readers.&lt;/p>
+&lt;p>In particular, it is necessary to configure the expected communication protocols, but it is also possible that other settings exist depending on the hardware context.&lt;/p>
 &lt;h3 id="observation-of-the-reader">Observation of the reader&lt;/h3>
-&lt;h3 id="container-selection">Container selection&lt;/h3>
+&lt;p>The observation of inserting and removing cards from readers is similar to the observation of plugins in that it requires the same operations, i.e. the use of an exception handler and an object implementing a dedicated interface.&lt;/p>
+&lt;pre>&lt;code class="language-java">...
+private static class ReaderExceptionHandlerImpl implements ReaderObservationExceptionHandler {
+@Override
+public void onReaderObservationError(String pluginName, String readerName, Throwable throwable) {
+logger.error(&amp;quot;An unexpected reader error occurred: {}:{}&amp;quot;, pluginName, readerName, throwable);
+}
+}
+}
+/* Create an exception handler for reader observation */
+ReaderExceptionHandlerImpl readerExceptionHandlerImpl = new ExceptionHandlerImpl();
+/* Assign the PcscPlugin to the SmartCardService */
+plugin = smartCardService.registerPlugin(new PcscPluginFactory(pluginExceptionHandlerImpl, readerExceptionHandlerImpl));
+...
+&lt;/code>&lt;/pre>
+&lt;p>The observation of the events of the reader is done in a similar way to that of the plugin, by adding an observer:&lt;/p>
+&lt;pre>&lt;code class="language-java">((ObservableReader) reader).addObserver(new ReaderObserver());
+&lt;/code>&lt;/pre>
+&lt;p>and implementing the ReaderObserver interface:&lt;/p>
+&lt;pre>&lt;code class="language-java">class ReaderObserver implements ObservableReader.ReaderObserver {
+@Override
+public void update(ReaderEvent event) {
+switch (event.getEventType()) {
+case CARD_INSERTED:
+// here the processing to be done when a card is inserted
+...
+break;
+case CARD_MATCHED:
+// here the processing to be done when a card matched the selection
+...
+break;
+case CARD_REMOVED:
+// here the processing to be done when a card is removed
+...
+break;
+default:
+break;
+}
+}
+}
+}
+&lt;/code>&lt;/pre>
+&lt;div class="alert alert-note">
+&lt;div>
+Observation of the readers is optional in Keyple. It facilitates an event-driven programming mode, but an application developer can choose not to observe a reader, either because this reader is not designed to manage card insertions/withdrawals (for example an Android OMAPI reader or a SAM reader), or because the application is designed to directly manage the presence of a card (refer to the &lt;code>Reader&lt;/code> interface).
+&lt;/div>
+&lt;/div>
+&lt;h3 id="card-selection">Card selection&lt;/h3>
+&lt;p>The card selection service offered by &lt;strong>Keyple Core&lt;/strong> gives multiple possibilities to choose the processing according to the type of card presented to the reader.&lt;/p>
+&lt;p>It is based on a filtering process according to three possible criteria, each of which is optional:&lt;/p>
+&lt;ul>
+&lt;li>the communication protocol of the card (usually also identifying a card technology)&lt;/li>
+&lt;li>the answer to reset of the card (ATR)&lt;/li>
+&lt;li>the ISO standardized application identifier (AID)&lt;/li>
+&lt;/ul>
+&lt;p>Each of these criteria can be defined in a &lt;code>CardSelector&lt;/code> object.&lt;/p>
+&lt;p>When a card is inserted, it is evaluated according to these criteria and will be given the status &amp;ldquo;selected&amp;rdquo; or not.&lt;/p>
+&lt;p>When a card is not selected, no other operation will be possible with it. Depending on the chosen setting, the result of the selection will or will not be made available to the application. It is thus possible to directly ignore cards that do not correspond to the defined selection criteria.&lt;/p>
+&lt;p>When a card is selected, the result is an object that extends the AbstractSmartCard and contains all the information known about the card at that stage.&lt;/p>
+&lt;p>In the case of a ISO standardized card, the application is selected with the provided AID (additional settings are available to specify the desired navigation within the card applications list).&lt;/p>
+&lt;p>In addition to the selection process itself, specific APDU commands can be sent to the card if the selection is successful. The output data of these commands are available in the instance of the object &lt;code>AbstractSmarCard&lt;/code>.&lt;/p>
+&lt;p>The &lt;code>CardSelector&lt;/code> and the additional APDU commands are grouped in a &lt;code>CardSelectionRequest&lt;/code> object.&lt;/p>
+&lt;p>One or more &lt;code>CardSelectionRequest&lt;/code> can be set up to perform as many selection cases, each targeting a particular card or application.&lt;/p>
+&lt;p>The final selection process takes as input a list of &lt;code>CardSelectionRequest&lt;/code> and gets in return a list of &lt;code>CardSelectionResponse&lt;/code>.&lt;/p>
+&lt;h4 id="card-selection-steps">Card selection steps&lt;/h4>
+&lt;p>In this guide we will not show the addition of supplementary APDU commands. Please refer to the Calypso guide for an implementation example.&lt;/p>
+&lt;h5 id="create-the-card-selection-service">Create the card selection service&lt;/h5>
+&lt;p>The card selection service will be used all along the card search process.&lt;/p>
+&lt;pre>&lt;code class="language-java"> cardSelectionService = new CardSelectionsService();
+&lt;/code>&lt;/pre>
+&lt;h5 id="create-the-selection-cases">Create the selection cases&lt;/h5>
+&lt;p>The application can create as many selection cases as the type of cards expected. The order in which the selection cases are prepared is important because it will favor the latency delay for the processing of the cards corresponding to the first case. It is therefore recommended to place the most common card profile in the application context first.&lt;/p>
+&lt;pre>&lt;code class="language-java">/** Create a new class extending AbstractCardSelection */
+public final class GenericCardSelection extends AbstractCardSelection {
+public GenericCardSelection(CardSelector cardSelector) {
+super(cardSelector);
+}
+@Override
+protected AbstractSmartCard parse(CardSelectionResponse cardSelectionResponse) {
+class GenericSmartCard extends AbstractSmartCard {
+public GenericSmartCard(CardSelectionResponse cardSelectionResponse) {
+super(cardSelectionResponse);
+}
+public String toJson() {
+return &amp;quot;{}&amp;quot;;
+}
+}
+return new GenericSmartCard(cardSelectionResponse);
+}
+}
+final String aid1 = &amp;quot;AABBCCDDEE&amp;quot;;
+final String aid2 = &amp;quot;EEDDCCBBAA&amp;quot;;
+// first selection case targeting cards with AID1
+GenericCardSelection cardSelector1 =
+new GenericCardSelection(
+CardSelector.builder()
+.cardProtocol(ContactlessCardCommonProtocols.ISO_14443_4.name())
+.aidSelector(CardSelector.AidSelector.builder().aidToSelect(aid1).build())
+.build());
+// Add the selection case to the current selection
+cardSelectionsService.prepareSelection(cardSelector1);
+// first selection case targeting cards with AID1
+GenericCardSelection cardSelector2 =
+new GenericCardSelection(
+CardSelector.builder()
+.cardProtocol(ContactlessCardCommonProtocols.ISO_14443_4.name())
+.aidSelector(CardSelector.AidSelector.builder().aidToSelect(aid2).build())
+.build());
+// Add the selection case to the current selection
+cardSelectionsService.prepareSelection(cardSelector2);
+&lt;/code>&lt;/pre>
+&lt;h5 id="proceed-to-the-selection-with-a-non-observable-reader">Proceed to the selection with a non-observable reader&lt;/h5>
+&lt;p>The &lt;code>processExplicitSelections&lt;/code> method of &lt;code>CardSelectionService&lt;/code> performs the actual communication with the card.&lt;/p>
+&lt;pre>&lt;code class="language-java">...
+// Check if a card is present in the reader
+if (!reader.isCardPresent()) {
+logger.error(&amp;quot;No Po Card is present in the reader.&amp;quot;);
+return;
+}
+// Actual card communication: operate through a single request the card selection
+CardSelectionsResult cardSelectionsResult =
+cardSelectionsService.processExplicitSelections(reader);
+...
+&lt;/code>&lt;/pre>
+&lt;h5 id="proceed-to-the-selection-with-an-observable-reader">Proceed to the selection with an observable reader&lt;/h5>
+&lt;p>In the case of an observable reader, the selection request is provided to the reader (it is then named Default Selection) and will be processed automatically as soon as a card is presented. The application is then notified of the event with the data resulting from the selection.
+Depending on the selection settings, the application will be notified of all card presentations (CARD_INSERTED event) or only those presentations that led to a successful selection (CARD_MATCHED event).&lt;/p>
+&lt;h6 id="add-a-default-selection">Add a default selection&lt;/h6>
+&lt;pre>&lt;code class="language-java">// Provide the Reader with the selection operation to be processed when a card is inserted.
+((ObservableReader) reader)
+.setDefaultSelectionRequest(
+cardSelectionService.getDefaultSelection().getDefaultSelectionsRequest(),
+ObservableReader.NotificationMode.MATCHED_ONLY,
+ObservableReader.PollingMode.REPEATING);
+&lt;/code>&lt;/pre>
+&lt;h6 id="receive-the-result-as-an-event">Receive the result as an event&lt;/h6>
+&lt;pre>&lt;code class="language-java">...
+@Override
+public void update(ReaderEvent event) {
+switch (event.getEventType()) {
+case CARD_MATCHED:
+AbstractSmartCard selectedCard = null;
+try {
+selectedCard =
+getDefaultSelection()
+.processDefaultSelectionsResponse(event.getDefaultSelectionsResponse())
+.getActiveSmartCard();
+} catch (KeypleException e) {
+logger.error(&amp;quot;Exception: {}&amp;quot;, e.getMessage());
+((ObservableReader) (event.getReader())).finalizeCardProcessing();
+}
+if (selectedCard != null) {
+logger.info(&amp;quot;Observer notification: the selection of the card has succeeded.&amp;quot;);
+// insert the processing of the card here
+...
+logger.info(&amp;quot;= #### End of the card processing.&amp;quot;);
+} else {
+logger.error(
+&amp;quot;The selection of the card has failed. Should not have occurred due to the MATCHED_ONLY selection mode.&amp;quot;);
+}
+break;
+case CARD_INSERTED:
+logger.error(
+&amp;quot;CARD_INSERTED event: should not have occurred due to the MATCHED_ONLY selection mode.&amp;quot;);
+break;
+case CARD_REMOVED:
+logger.trace(&amp;quot;There is no PO inserted anymore. Return to the waiting state...&amp;quot;);
+break;
+default:
+break;
+}
+if (event.getEventType() == ReaderEvent.EventType.CARD_INSERTED
+|| event.getEventType() == ReaderEvent.EventType.CARD_MATCHED) {
+// Informs the underlying layer of the end of the card processing, in order to manage the
+// removal sequence.
+((ObservableReader) (event.getReader())).finalizeCardProcessing();
+}
+}
+...
+&lt;/code>&lt;/pre>
+&lt;h5 id="get-the-selection-result">Get the selection result&lt;/h5>
+&lt;p>The result of the selection is available in the &lt;code>AbstractSmartCard&lt;/code> object.&lt;/p>
+&lt;pre>&lt;code class="language-java">...
+if (!cardSelectionsResult.hasActiveSelection()) {
+logger.warn(&amp;quot;The selection of the application &amp;quot; + cardAid + &amp;quot; failed.&amp;quot;);
+}
+AbstractSmartCard smartCard = cardSelectionsResult.getActiveSmartCard();
+logger.info(&amp;quot;The selection of the card has succeeded.&amp;quot;);
+if (smartCard.hasFci()) {
+String fci = ByteArrayUtil.toHex(smartCard.getFciBytes());
+logger.info(&amp;quot;Application FCI = {}&amp;quot;, fci);
+}
+if (smartCard.hasAtr()) {
+String atr = ByteArrayUtil.toHex(smartCard.getAtrBytes());
+logger.info(&amp;quot;Card ATR = {}&amp;quot;, atr);
+}
+...
+&lt;/code>&lt;/pre>
 &lt;h3 id="implementation-of-the-application-service">Implementation of the application service&lt;/h3>
+&lt;p>The applicative processing of the card that follows the selection of the card is to be inserted in the processing of the CARD_INSERTED or CARD_MATCHED event.&lt;/p>
+&lt;p>It can be processed in the thread provided by the monitoring task or detached in a separate thread. The application developer must pay attention to the handling of exceptions in this part of the application. Indeed, in case of a runtime exception, the information will be given to the application via the exception handler configured beforehand.&lt;/p>
 &lt;h3 id="stopping-the-application">Stopping the application&lt;/h3>
 &lt;h2 id="keyple-core-api">Keyple Core API&lt;/h2>
 &lt;p>[Plugin-Reader class diagram]&lt;/p>
