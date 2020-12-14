@@ -1222,6 +1222,24 @@ secure calypso transaction.&lt;/p>
 &lt;img src="/keyple-website/keyple-website/media/calypso-app-development/component/Local_Component_Overview.svg" alt="" >
 &lt;/a>
 &lt;/figure>
+&lt;h2 id="before-you-start">Before you start&lt;/h2>
+&lt;ol>
+&lt;li>In pre-requisite, have knowledge of the standard Calypso.&lt;/li>
+&lt;li>Read the
+&lt;a href="/keyple-website/keyple-website/docs/developer-guide/common-concepts/">common concepts&lt;/a> page and become familiar with the basic concepts on which &lt;strong>Keyple&lt;/strong> is based.&lt;/li>
+&lt;li>Any implementation of a Keyple application starts with the implementation of &lt;strong>Keyple Core&lt;/strong>, please study the
+&lt;a href="/keyple-website/keyple-website/docs/developer-guide/local-application/">workflow&lt;/a> proposed in Local application guide.&lt;/li>
+&lt;li>Read chapter
+&lt;a href="#concepts">Concepts&lt;/a> to understand the main terms and concepts of the &lt;strong>Keyple Calypso Extension&lt;/strong> API.&lt;/li>
+&lt;li>Explore the
+&lt;a href="#keyplecalypsoapi">Keyple Calypso API&lt;/a> to discover all the possibilities offered by &lt;strong>Keyple Calypso Extension&lt;/strong>.&lt;/li>
+&lt;li>Take inspiration from the
+&lt;a href="#examples">examples&lt;/a>.&lt;/li>
+&lt;li>Follow the explanations given in the
+&lt;a href="/keyple-website/keyple-website/docs/build-your-first-app/">Build your first app&lt;/a> section to configure your environment.&lt;/li>
+&lt;li>Using the
+&lt;a href="/keyple-website/keyple-website/components/">component&lt;/a> page, import &lt;strong>Keyple Core&lt;/strong> and &lt;strong>Keyple Calyspo Extension&lt;/strong> into your project and start playing with &lt;strong>Keyple&lt;/strong>.&lt;/li>
+&lt;/ol>
 &lt;h2 id="how-to-use-it">How to use it&lt;/h2>
 &lt;ol>
 &lt;li>In pre-requisite, read page
@@ -1240,14 +1258,31 @@ secure calypso transaction.&lt;/p>
 &lt;li>The invalidation status&lt;/li>
 &lt;li>The files, counters, SV data read or modified during the execution of the processes defined by PoTransaction&lt;/li>
 &lt;/ul>
-&lt;p>Calypso PO fields are populated from a CardSelectionResponse optained through the process of a card selection.&lt;/p>
-&lt;h3 id="potransaction">PoTransaction&lt;/h3>
-&lt;p>Service providing high-level API to manage transactions with a Calypso PO.&lt;/p>
+&lt;p>Calypso PO fields are populated from a CardSelectionResponse obtained through the process of a PO selection.&lt;/p>
 &lt;h4 id="elementaryfile">ElementaryFile&lt;/h4>
-&lt;p>Contains the description of a Calypso Elementary File.&lt;/p>
-&lt;h3 id="card-selection-service">Card Selection Service&lt;/h3>
-&lt;h4 id="po">PO&lt;/h4>
-&lt;h4 id="sam">SAM&lt;/h4>
+&lt;p>Object containing the description of a Calypso Elementary File. Can be retrieved from Calypso PO using its SFI.&lt;/p>
+&lt;h4 id="calypso-sam">Calypso SAM&lt;/h4>
+&lt;p>Concentrates all the informations we know about the SAM currently selected. Accessible informations are:&lt;/p>
+&lt;ul>
+&lt;li>The Sam Revision&lt;/li>
+&lt;li>The Serial number&lt;/li>
+&lt;li>The Platform identifier&lt;/li>
+&lt;li>The Application Type&lt;/li>
+&lt;li>The Application SubType&lt;/li>
+&lt;li>The Software Issuer identifier&lt;/li>
+&lt;li>The Software Version number&lt;/li>
+&lt;li>The Software Revision number&lt;/li>
+&lt;/ul>
+&lt;p>Calypso SAM fields are populated are extracted from an analysis of the ATR within a CardSelectionResponse obtained through
+the process of a SAM selection.&lt;/p>
+&lt;h3 id="potransaction">PoTransaction&lt;/h3>
+&lt;p>Service providing high-level API to manage transactions with a Calypso PO. The calypso PO Object tied is kept and updated at
+each step of using this service.&lt;/p>
+&lt;p>This service workflow is composed of two steps:&lt;/p>
+&lt;ul>
+&lt;li>Prepare the commands to be executed to the PO&lt;/li>
+&lt;li>Process the prepared commands. Regarding of commands, the presence of SAM could be mandatory.&lt;/li>
+&lt;/ul>
 &lt;h2 id="api">API&lt;/h2>
 &lt;h2 id="workflowuse-cases">Workflow/Use Cases&lt;/h2>
 &lt;h2 id="examples">Examples&lt;/h2></description></item><item><title>Create a plugin</title><link>/keyple-website/docs/developer-guide/create-plugin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/developer-guide/create-plugin/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
