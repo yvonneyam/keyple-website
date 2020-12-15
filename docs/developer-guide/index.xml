@@ -67,7 +67,8 @@ possibilities offered by &lt;strong>Keyple Core&lt;/strong>.&lt;/li>
 &lt;a href="/keyple-website/keyple-website/docs/build-your-first-app/">Build your first app&lt;/a> section to configure your
 environment.&lt;/li>
 &lt;li>Using the
-&lt;a href="/keyple-website/keyple-website/components/">component&lt;/a> page, import
+&lt;a href="/keyple-website/keyple-website/components-java/">Java components&lt;/a> or
+&lt;a href="/keyple-website/keyple-website/components-cpp/">C++ components&lt;/a> pages, import
 &lt;strong>Keyple Core&lt;/strong> into your project and start playing with &lt;strong>Keyple&lt;/strong>.&lt;/li>
 &lt;li>Don&amp;rsquo;t forget to explore the potential of Keyple card-specific
 extensions such as &lt;strong>Keyple Calypso&lt;/strong>.&lt;/li>
@@ -96,8 +97,9 @@ without obligation, go for the PC/SC plugin.&lt;/p>
 &lt;p>For an Andoid terminal environment, the plugin could be the standard
 Android NFC plugin or one of the plugins available from the industrial
 partners of the project. For a complete list of available plugins,
-please see this
-&lt;a href="/keyple-website/keyple-website/components/">page&lt;/a>.&lt;/p>
+please see the
+&lt;a href="/keyple-website/keyple-website/components-java/">Java&lt;/a> or
+&lt;a href="/keyple-website/keyple-website/components-cpp/">C++&lt;/a> pages.&lt;/p>
 &lt;div class="alert alert-note">
 &lt;div>
 A new plugin can also be &lt;a href="/keyple-website/keyple-website/docs/developer-guide/create-plugin/">created&lt;/a> if the envisaged hardware does not yet have its
@@ -545,8 +547,12 @@ assigned to them.&lt;/p>
 &lt;h2 id="download">Download&lt;/h2>
 &lt;p>The artifact &lt;strong>Keyple Core&lt;/strong> and how to integrate it into your
 application is available here:&lt;/p>
-&lt;p>
-&lt;a href="/keyple-website/keyple-website/components/">Keyple Core component&lt;/a>&lt;/p></description></item><item><title>Remote application</title><link>/keyple-website/docs/developer-guide/remote-application/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/developer-guide/remote-application/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;ul>
+&lt;li>
+&lt;a href="/keyple-website/keyple-website/components-java/base/core/">Keyple Core Java component&lt;/a>&lt;/li>
+&lt;li>
+&lt;a href="/keyple-website/keyple-website/components-cpp/base/core/">Keyple Core C++ component&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>Remote application</title><link>/keyple-website/docs/developer-guide/remote-application/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/developer-guide/remote-application/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
 &lt;p>&lt;strong>Keyple provides the &amp;ldquo;Keyple Remote Plugins&amp;rdquo; solution which allows a terminal to communicate with a smart card reader available in another terminal&lt;/strong>.&lt;/p>
 &lt;p>In this way, you can manage transactions within a distributed architecture.&lt;/p>
 &lt;p>The diagram below shows the role of the &lt;strong>Keyple Remote Plugins&lt;/strong> components in the software layers used in a distributed architecture :&lt;/p>
@@ -1343,18 +1349,18 @@ width: 240px;
 &lt;ul>
 &lt;li>Remote Lib&lt;/li>
 &lt;/ul>
-&lt;pre>&lt;code>implementation 'org.eclipse.keyple:keyple-plugin-remote-remote:1.0.0'
+&lt;pre>&lt;code class="language-gradle">implementation 'org.eclipse.keyple:keyple-plugin-remote-remote:1.0.0'
 &lt;/code>&lt;/pre>
 &lt;ul>
 &lt;li>Local Lib&lt;/li>
 &lt;/ul>
-&lt;pre>&lt;code>implementation 'org.eclipse.keyple:keyple-plugin-remote-local:1.0.0'
+&lt;pre>&lt;code class="language-gradle">implementation 'org.eclipse.keyple:keyple-plugin-remote-local:1.0.0'
 &lt;/code>&lt;/pre>
 &lt;h4 id="maven">MAVEN&lt;/h4>
 &lt;ul>
 &lt;li>Remote Lib&lt;/li>
 &lt;/ul>
-&lt;pre>&lt;code>&amp;lt;dependency&amp;gt;
+&lt;pre>&lt;code class="language-xml">&amp;lt;dependency&amp;gt;
 &amp;lt;groupId&amp;gt;org.eclipse.keyple&amp;lt;/groupId&amp;gt;
 &amp;lt;artifactId&amp;gt;keyple-plugin-remote-remote&amp;lt;/artifactId&amp;gt;
 &amp;lt;version&amp;gt;1.0.0&amp;lt;/version&amp;gt;
@@ -1363,7 +1369,7 @@ width: 240px;
 &lt;ul>
 &lt;li>Local Lib&lt;/li>
 &lt;/ul>
-&lt;pre>&lt;code>&amp;lt;dependency&amp;gt;
+&lt;pre>&lt;code class="language-xml">&amp;lt;dependency&amp;gt;
 &amp;lt;groupId&amp;gt;org.eclipse.keyple&amp;lt;/groupId&amp;gt;
 &amp;lt;artifactId&amp;gt;keyple-plugin-remote-local&amp;lt;/artifactId&amp;gt;
 &amp;lt;version&amp;gt;1.0.0&amp;lt;/version&amp;gt;
@@ -1412,7 +1418,8 @@ secure calypso transaction.&lt;/p>
 &lt;li>Follow the explanations given in the
 &lt;a href="/keyple-website/keyple-website/docs/build-your-first-app/">Build your first app&lt;/a> section to configure your environment.&lt;/li>
 &lt;li>Using the
-&lt;a href="/keyple-website/keyple-website/components/">component&lt;/a> page, import &lt;strong>Keyple Core&lt;/strong> and &lt;strong>Keyple Calyspo Extension&lt;/strong> into your project and start playing with &lt;strong>Keyple&lt;/strong>.&lt;/li>
+&lt;a href="/keyple-website/keyple-website/components-java/">Java components&lt;/a> or
+&lt;a href="/keyple-website/keyple-website/components-cpp/">C++ components&lt;/a> page, import &lt;strong>Keyple Core&lt;/strong> and &lt;strong>Keyple Calyspo Extension&lt;/strong> into your project and start playing with &lt;strong>Keyple&lt;/strong>.&lt;/li>
 &lt;/ol>
 &lt;h2 id="how-to-use-it">How to use it&lt;/h2>
 &lt;ol>
