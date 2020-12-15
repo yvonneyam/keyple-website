@@ -1167,15 +1167,15 @@ exclude 'META-INF/NOTICE.md'
 &lt;h3 id="abstract-smart-card">Abstract smart card&lt;/h3>
 &lt;p>The &lt;strong>abstract smart card&lt;/strong> concept is used by specific extensions (e.g. &lt;strong>Keyple Calypso&lt;/strong>) and by the &lt;strong>Keyple Core&lt;/strong> selection mechanism. It corresponds to an abstract container model implemented by the extension specific to a card type and returned by the selection process.&lt;/p>
 &lt;p>This container will be able to carry all the useful information known about the card.&lt;/p>
-&lt;p>Note: this concept, mentioned here for understanding, should not appear to the application developer if he uses a card extension.&lt;/p></description></item><item><title>Local application</title><link>/keyple-website/docs/developer-guide/local-application/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/developer-guide/local-application/</guid><description>&lt;hr>
+&lt;p>Note: this concept, mentioned here for understanding, should not appear to the application developer if he uses a card extension.&lt;/p></description></item><item><title>Centralized application</title><link>/keyple-website/docs/developer-guide/centralized-application/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/developer-guide/centralized-application/</guid><description>&lt;hr>
 &lt;h2 id="overview">Overview&lt;/h2>
-&lt;p>A local application is an application that runs in a device in contact
+&lt;p>A centralized application is an application that runs in a device in contact
 with the end user.&lt;/p>
 &lt;p>It has at least one local smart card reader and manages itself the
 interaction with the user.&lt;/p>
 &lt;p>In the ticketing industry, it is typically the software that runs a
 validator, a vending machine or a control terminal.&lt;/p>
-&lt;p>The diagram below illustrates the organization of the local application
+&lt;p>The diagram below illustrates the organization of the local centralized
 components:
 &lt;figure >
 &lt;a data-fancybox="" href="/keyple-website/keyple-website/media/local-app/component/Local_Application_Components_Overview.svg" >
@@ -1506,8 +1506,9 @@ to the reader (it is then named Default Selection) and will be processed
 automatically as soon as a card is presented. The application is then
 notified of the event with the data resulting from the selection.
 Depending on the selection settings, the application will be notified of
-all card presentations (CARD_INSERTED event) or only those presentations
-that led to a successful selection (CARD_MATCHED event).&lt;/p>
+all card presentations (&lt;code>CARD_INSERTED&lt;/code> event) or only those
+presentations that led to a successful selection (&lt;code>CARD_MATCHED&lt;/code>
+event).&lt;/p>
 &lt;h6 id="add-a-default-selection">Add a default selection&lt;/h6>
 &lt;pre>&lt;code class="language-java">// Provide the Reader with the selection operation to be processed when a card is inserted.
 ((ObservableReader) reader)
@@ -1592,8 +1593,8 @@ logger.info(&amp;quot;Card ATR = {}&amp;quot;, atr);
 &lt;/code>&lt;/pre>
 &lt;h3 id="implementation-of-the-application-service">Implementation of the application service&lt;/h3>
 &lt;p>The applicative processing of the card that follows the selection of the
-card is to be inserted in the processing of the CARD_INSERTED or
-CARD_MATCHED event.&lt;/p>
+card is to be inserted in the processing of the &lt;code>CARD_INSERTED&lt;/code> or
+&lt;code>CARD_MATCHED&lt;/code> event.&lt;/p>
 &lt;p>It can be processed in the thread provided by the monitoring task or
 detached in a separate thread. The application developer must pay
 attention to the handling of exceptions in this part of the application.
@@ -1606,37 +1607,74 @@ resources and in particular the shutdown of the observation threads.&lt;/p>
 &lt;pre>&lt;code class="language-java">smartCardService.unregisterPlugin(plugin.getName());
 &lt;/code>&lt;/pre>
 &lt;h2 id="keyple-core-api">Keyple Core API&lt;/h2>
-&lt;p>[Plugin-Reader class diagram]&lt;/p>
-&lt;p>[Selection class diagram]&lt;/p>
+&lt;p>To learn all the details of the &lt;strong>Keyple Core&lt;/strong> API, please consult the
+&lt;a href="/keyple-website/keyple-website/docs/api-reference/">Javadoc documentation&lt;/a>.&lt;/p>
+&lt;p>However, here are two diagrams showing the main features of Keyple Core:&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>The diagram below represents the main classes implemented around the
+&lt;strong>Smart Card Service&lt;/strong> with in particular the observation mechanisms.
+&lt;figure >
+&lt;a data-fancybox="" href="/keyple-website/keyple-website/media/local-app/component/KeypleCore_Reader_ClassDiag_PluginSettingAndReaderAccess_1_0_0.svg" >
+&lt;img src="/keyple-website/keyple-website/media/local-app/component/KeypleCore_Reader_ClassDiag_PluginSettingAndReaderAccess_1_0_0.svg" alt="" >
+&lt;/a>
+&lt;/figure>
+&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>The diagram below represents the main classes used for selection
+operations.
+&lt;figure >
+&lt;a data-fancybox="" href="/keyple-website/keyple-website/media/local-app/component/KeypleCore_CardSelection_ClassDiag_SelectorAndSelection_1_0_0.svg" >
+&lt;img src="/keyple-website/keyple-website/media/local-app/component/KeypleCore_CardSelection_ClassDiag_SelectorAndSelection_1_0_0.svg" alt="" >
+&lt;/a>
+&lt;/figure>
+&lt;/p>
+&lt;/li>
+&lt;/ul>
 &lt;h2 id="examples">Examples&lt;/h2>
 &lt;p>To help in the implementation of the different facilities offered by
 Keyple to process smart cards, a set of examples is present in the
-project repository.&lt;/p>
-&lt;p>You will find below a short description of it:&lt;/p>
-&lt;h3 id="usecase1_explicitselectionaid">UseCase1_ExplicitSelectionAid&lt;/h3>
+project repository
+&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/example/generic/pc" target="_blank" rel="noopener">
+&lt;i class="fab fa-github pr-1 fa-fw">&lt;/i> examples&lt;/a>&lt;/p>
+&lt;p>Nevertheless, you will find below a brief description of them:&lt;/p>
+&lt;h3 id="explicit-selection">Explicit Selection&lt;/h3>
 &lt;p>Shows the use of Keyple to make a card selection without observing the
 reader, based on testing the presence of the card by the application.&lt;/p>
-&lt;h3 id="usecase2_defaultselectionnotification">UseCase2_DefaultSelectionNotification&lt;/h3>
+&lt;p>
+&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/example/generic/pc/UseCase1_ExplicitSelectionAid" target="_blank" rel="noopener">see the code&lt;/a>&lt;/p>
+&lt;h3 id="default-selection">Default Selection&lt;/h3>
 &lt;p>Shows the use of Keyple to make a card selection with observation of the
 reader. A default selection is prepared, the presentation of a card
 triggers the notification of a reader event to the application.&lt;/p>
-&lt;h3 id="usecase3_sequentialmultiselection">UseCase3_SequentialMultiSelection&lt;/h3>
+&lt;p>
+&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/example/generic/pc/UseCase2_DefaultSelectionNotification" target="_blank" rel="noopener">see the code&lt;/a>&lt;/p>
+&lt;h3 id="sequential-multiple-selection">Sequential Multiple Selection&lt;/h3>
 &lt;p>Executes successively several independent selection operations with the
 use of the ISO &amp;lsquo;NEXT&amp;rsquo; navigation flag.&lt;/p>
+&lt;p>
+&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/example/generic/pc/UseCase3_SequentialMultiSelection" target="_blank" rel="noopener">see the code&lt;/a>&lt;/p>
 &lt;p>Illustrates the case of a card exploration avec maintient du canal
 physique ouvert.&lt;/p>
-&lt;h3 id="usecase4_groupedmultiselection">UseCase4_GroupedMultiSelection&lt;/h3>
+&lt;h3 id="grouped-multiple-selection">Grouped Multiple Selection&lt;/h3>
 &lt;p>Executes a multiple selection with logical channel closure between each
 selection.&lt;/p>
+&lt;p>
+&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/example/generic/pc/UseCase4_GroupedMultiSelection" target="_blank" rel="noopener">see the code&lt;/a>&lt;/p>
 &lt;p>Allows the exploration of the applications of a card in a single
 operation but without selection at the end.&lt;/p>
-&lt;h3 id="demo_cardprotocoldetection">Demo_CardProtocolDetection&lt;/h3>
+&lt;h3 id="demo-card-protocol-detection">Demo Card Protocol Detection&lt;/h3>
 &lt;p>Demonstrates the use of Keyple in a context where several card
 technologies are likely to be processed by the application.&lt;/p>
-&lt;h3 id="demo_observablereadernotification">Demo_ObservableReaderNotification&lt;/h3>
+&lt;p>
+&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/example/generic/pc/Demo_CardProtocolDetection" target="_blank" rel="noopener">see the code&lt;/a>&lt;/p>
+&lt;h3 id="demo-observable-reader-notification">Demo Observable Reader Notification&lt;/h3>
 &lt;p>Demonstrates the use of Keyple to implement the observation of a plugin
 and its readers. Readers are dynamically created and an observer is
 assigned to them.&lt;/p>
+&lt;p>
+&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/example/generic/pc/Demo_ObservableReaderNotification" target="_blank" rel="noopener">see the code&lt;/a>&lt;/p>
 &lt;h2 id="download">Download&lt;/h2>
 &lt;p>The artifact &lt;strong>Keyple Core&lt;/strong> and how to integrate it into your
 application is available here:&lt;/p>
@@ -1653,7 +1691,7 @@ application is available here:&lt;/p>
 &lt;h2 id="how-to-use-it-">How to use it ?&lt;/h2>
 &lt;ol>
 &lt;li>In pre-requisite, read page
-&lt;a href="/keyple-website/keyple-website/docs/developer-guide/local-application/">Develop a Local Application&lt;/a> to understand the main concepts of Keyple in a local application.&lt;/li>
+&lt;a href="/keyple-website/keyple-website/docs/developer-guide/centralized-application/">Develop a Centralized Application&lt;/a> to understand the main concepts of Keyple in a centralized application.&lt;/li>
 &lt;li>Read chapter
 &lt;a href="#concepts">Concepts&lt;/a> to understand the main terms and concepts of the &lt;strong>Keyple Remote Plugins&lt;/strong> solution.&lt;/li>
 &lt;li>Read the introduction of chapter
@@ -2485,7 +2523,7 @@ width: 240px;
 Keyple features. For example, Calypso Network Association provides &lt;strong>Keyple Calypso Extension&lt;/strong>.&lt;/p>
 &lt;p>The use of &lt;strong>Keyple Calypso Extension&lt;/strong> open the ability to operate commands with a calypso Portable Object and to manage a
 secure calypso transaction.&lt;/p>
-&lt;p>The diagram below shows the role of the &lt;strong>Keyple Calypso Extension&lt;/strong> components in the software layers for a local application :&lt;/p>
+&lt;p>The diagram below shows the role of the &lt;strong>Keyple Calypso Extension&lt;/strong> components in the software layers for a centralized application :&lt;/p>
 &lt;figure >
 &lt;a data-fancybox="" href="/keyple-website/keyple-website/media/calypso-app-development/component/Local_Component_Overview.svg" >
 &lt;img src="/keyple-website/keyple-website/media/calypso-app-development/component/Local_Component_Overview.svg" alt="" >
@@ -2497,7 +2535,7 @@ secure calypso transaction.&lt;/p>
 &lt;li>Read the
 &lt;a href="/keyple-website/keyple-website/docs/developer-guide/common-concepts/">common concepts&lt;/a> page and become familiar with the basic concepts on which &lt;strong>Keyple&lt;/strong> is based.&lt;/li>
 &lt;li>Any implementation of a Keyple application starts with the implementation of &lt;strong>Keyple Core&lt;/strong>, please study the
-&lt;a href="/keyple-website/keyple-website/docs/developer-guide/local-application/">workflow&lt;/a> proposed in Local application guide.&lt;/li>
+&lt;a href="/keyple-website/keyple-website/docs/developer-guide/centralized-application/">workflow&lt;/a> proposed in Centralized application guide.&lt;/li>
 &lt;li>Read chapter
 &lt;a href="#concepts">Concepts&lt;/a> to understand the main terms and concepts of the &lt;strong>Keyple Calypso Extension&lt;/strong> API.&lt;/li>
 &lt;li>Explore the
@@ -2512,7 +2550,7 @@ secure calypso transaction.&lt;/p>
 &lt;h2 id="how-to-use-it">How to use it&lt;/h2>
 &lt;ol>
 &lt;li>In pre-requisite, read page
-&lt;a href="/keyple-website/keyple-website/docs/developer-guide/local-application/">Develop a Local Application&lt;/a> to understand the main concepts of Keyple in a local application.&lt;/li>
+&lt;a href="/keyple-website/keyple-website/docs/developer-guide/centralized-application/">Develop a Centralized Application&lt;/a> to understand the main concepts of Keyple in a centralized application.&lt;/li>
 &lt;li>Read chapter
 &lt;a href="#concepts">Concepts&lt;/a> to understand the main terms and concepts of the &lt;strong>Keyple Calypso Extension&lt;/strong> API.&lt;/li>
 &lt;/ol>
