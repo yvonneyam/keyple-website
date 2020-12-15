@@ -529,10 +529,10 @@ physique ouvert.&lt;/p>
 &lt;h3 id="grouped-multiple-selection">Grouped Multiple Selection&lt;/h3>
 &lt;p>Executes a multiple selection with logical channel closure between each
 selection.&lt;/p>
-&lt;p>
-&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/example/generic/pc/UseCase4_GroupedMultiSelection" target="_blank" rel="noopener">see the code&lt;/a>&lt;/p>
 &lt;p>Allows the exploration of the applications of a card in a single
 operation but without selection at the end.&lt;/p>
+&lt;p>
+&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/example/generic/pc/UseCase4_GroupedMultiSelection" target="_blank" rel="noopener">see the code&lt;/a>&lt;/p>
 &lt;h3 id="demo-card-protocol-detection">Demo Card Protocol Detection&lt;/h3>
 &lt;p>Demonstrates the use of Keyple in a context where several card
 technologies are likely to be processed by the application.&lt;/p>
