@@ -605,124 +605,84 @@ A ‘PO resource’ is the set of a Calypso PO and the reader on which it is sel
 &lt;blockquote>
 &lt;p>cf.
 &lt;a href="https://github.com/eclipse/keyple-java/blob/develop/java/example/calypso/pc/UseCase5_MultipleSession/src/main/java/org/eclipse/keyple/example/calypso/pc/usecase5/MultipleSession_Pcsc.java" target="_blank" rel="noopener">“Calypso Use Case 5 / PO Multiple Session&amp;quot;&lt;/a> example&lt;/p>
-&lt;/blockquote></description></item><item><title>Build your first Java application</title><link>/keyple-website/docs/build-your-first-app/java-app/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/build-your-first-app/java-app/</guid><description>&lt;p>This getting started contains one ready-to-execute JAVA example starting from a new Gradle project.&lt;/p>
-&lt;p>The example demonstrate Keyple capabilities with the Keyple PCSC plugin and PO/SAM provided in the Calypso Test Kit.&lt;/p>
-&lt;h2 id="build">Build&lt;/h2>
+&lt;/blockquote></description></item><item><title>Build your first Java application</title><link>/keyple-website/docs/build-your-first-app/java-app/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/build-your-first-app/java-app/</guid><description>&lt;p>This quick-start escribes how to create a ready-to-execute JAVA app that operate a simple Calypso transaction.&lt;/p>
+&lt;p>In order to communicate with the smart card we use
+&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/component/keyple-plugin/pcsc" target="_blank" rel="noopener">Keyple PCSC plugin&lt;/a> and and the
+&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/component/keyple-calypso" target="_blank" rel="noopener">Calypso extension&lt;/a> to communicate with the Calypso Portable Object (PO) and the Secure Access Module (SAM).&lt;/p>
 &lt;p>The example can run on any machine: Linux, Windows and MacOS. If not installed in your machine, you will need to download :&lt;/p>
-&lt;p>Java 1.6 or newer&lt;/p>
-&lt;p>
-&lt;a href="https://gradle.org/install/" target="_blank" rel="noopener">Gradle (any version)&lt;/a>&lt;/p>
+&lt;ul>
+&lt;li>Java 1.6 or newer&lt;/li>
+&lt;li>
+&lt;a href="https://gradle.org/install/" target="_blank" rel="noopener">Gradle (any version)&lt;/a>&lt;/li>
+&lt;/ul>
 &lt;p>We recommend that you use a Java IDE like Eclipse or Intellij to create your new Gradle project.&lt;/p>
-&lt;p>Create a new Gradle project.&lt;/p>
-&lt;p>Add the following statements to your build.gradle file to import Keyple components into your project:&lt;/p>
-&lt;pre>&lt;code class="language-java">repositories {
-//to import snapshots
-//maven {url 'https://oss.sonatype.org/content/repositories/snapshots' }
-//to import releases
-maven { url 'https://oss.sonatype.org/content/repositories/releases' }
+&lt;h2 id="create-the-gradle-project">Create the Gradle project&lt;/h2>
+&lt;p>Create a gradle project and add the following statements to your build.gradle file to import Keyple components into your project:&lt;/p>
+&lt;pre>&lt;code class="language-gradle">repositories {
+mavenCentral()
 }
 dependencies {
 //Keyple core is a mandatory library for using Keyple, in this case import the last version of keyple-java-core
-implementation group: 'org.eclipse.keyple', name: 'keyple-java-core', version: '+'
+implementation group: 'org.eclipse.keyple', name: 'keyple-java-core', version: '1.0.0'
 //Import Calypso library to support Calypso Portable Object, in this case import the last version of keyple-java-calypso
-implementation group: 'org.eclipse.keyple', name: 'keyple-java-calypso', version: '+'
+implementation group: 'org.eclipse.keyple', name: 'keyple-java-calypso', version: '1.0.0'
 //Import PCSC library to use a Pcsc reader, in this case import the last version of keyple-java-plugin-pcsc
-implementation group: 'org.eclipse.keyple', name: 'keyple-java-plugin-pcsc', version: '+'
+implementation group: 'org.eclipse.keyple', name: 'keyple-java-plugin-pcsc', version: '1.0.0'
 }
 &lt;/code>&lt;/pre>
-&lt;p>Add the following statements to your build.gradle file to import Logger components into your project:&lt;/p>
-&lt;pre>&lt;code class="language-java">dependencies {
-implementation &amp;quot;org.slf4j:slf4j-simple:1.7.25&amp;quot;
-implementation &amp;quot;org.slf4j:slf4j-ext:1.7.25&amp;quot;
-}
-&lt;/code>&lt;/pre>
-&lt;p>Copy the source code below in a new Java Class named DemoPoAuthentication:&lt;/p>
-&lt;pre>&lt;code class="language-java">/* **************************************************************************************
-* Copyright (c) 2020 Calypso Networks Association https://www.calypsonet-asso.org/
-*
-* See the NOTICE file(s) distributed with this work for additional information
-* regarding copyright ownership.
-*
-* This program and the accompanying materials are made available under the terms of the
-* Eclipse Public License 2.0 which is available at http://www.eclipse.org/legal/epl-2.0
-*
-* SPDX-License-Identifier: EPL-2.0
-************************************************************************************** */
+&lt;h2 id="lets-code">Let&amp;rsquo;s code&lt;/h2>
+&lt;h3 id="configure-pcsc-plugin-and-readers">Configure PCSC plugin and readers&lt;/h3>
+&lt;p>The first step to use Keyple SDK is to initialize the plugin and smart card readers. In this snippet the PCSC plugin is registered to the SmartCardService. Two readers needs to be connected to the local machine. Replace &amp;ldquo;PO_READER_NAME&amp;rdquo; and &amp;ldquo;SAM_READER_NAME&amp;rdquo; with the name of the USB readers. If you don’t know the reader name, run the application in debug mode and get the reader names from the Plugin object.&lt;/p>
+&lt;p>Copy the source code below in a new Java Class named DemoPoAuthentication.&lt;/p>
+&lt;pre>&lt;code class="language-java">import org.eclipse.keyple.calypso.command.sam.SamRevision;
 import org.eclipse.keyple.calypso.transaction.*;
-import org.eclipse.keyple.calypso.transaction.PoSelector.*;
-import org.eclipse.keyple.calypso.command.sam.SamRevision;
-import org.eclipse.keyple.core.selection.*;
-import org.eclipse.keyple.core.seproxy.*;
-import org.eclipse.keyple.core.seproxy.SeSelector.*;
+import org.eclipse.keyple.core.card.selection.*;
+import org.eclipse.keyple.core.service.*;
 import org.eclipse.keyple.core.util.ByteArrayUtil;
 import org.eclipse.keyple.plugin.pcsc.*;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 public class DemoPoAuthentication {
-private static final Logger logger = LoggerFactory.getLogger(DemoPoAuthentication.class);
-// PO Reader name
-private final static String PO_READER_NAME = &amp;quot;XXX&amp;quot;;
-// SAM Reader name
-private final static String SAM_READER_NAME = &amp;quot;XXX&amp;quot;;
-// Keyple test kit profile 1, Application 2
-private final static String AID = &amp;quot;315449432E49434131&amp;quot;;
-private final static byte RECORD_NUMBER_1 = 1;
-private final static byte SFI_Environment = (byte) 0x07;
 public static void main(String[] args) {
-// Get the instance of the SeProxyService (Singleton pattern)
-SeProxyService seProxyService = SeProxyService.getInstance();
-logger.info(&amp;quot;============================================================================&amp;quot;);
-logger.info(&amp;quot;= Get and Configure the PO &amp;amp; SAM Readers =&amp;quot;);
-logger.info(&amp;quot;============================================================================&amp;quot;);
-// Register the PcscPlugin with SeProxyService, get the corresponding generic ReaderPlugin
-ReaderPlugin readerPlugin = seProxyService.registerPlugin(new PcscPluginFactory());
+// Get the instance of the SmartCardService : main service of Keyple SDK
+SmartCardService smartCardService = SmartCardService.getInstance();
+// Register a PcscPlugin within the SmartCardService to use PCSC USB Readers
+Plugin plugin = smartCardService.registerPlugin(new PcscPluginFactory());
 // Get the PO reader
-SeReader poReader = readerPlugin.getReader(PO_READER_NAME);
+PcscReader poReader = (PcscReader) plugin.getReader(&amp;quot;PO_READER_NAME&amp;quot;);
 // Configure the PO reader parameters
-((PcscReader)poReader).setContactless(true);
+poReader.setContactless(true);
 // Get a SAM reader
-SeReader samReader = readerPlugin.getReader(SAM_READER_NAME);
-// Eventually, configure the SAM reader parameters
-// ...
-logger.info(&amp;quot;============================================================================&amp;quot;);
-logger.info(&amp;quot;= Create a SAM resource after selecting the SAM =&amp;quot;);
-logger.info(&amp;quot;============================================================================&amp;quot;);
+PcscReader samReader = (PcscReader) plugin.getReader(&amp;quot;SAM_READER_NAME&amp;quot;);
+//...
+}
+}
+&lt;/code>&lt;/pre>
+&lt;h3 id="select-sam-resource">Select SAM resource&lt;/h3>
+&lt;p>Before executing a transaction each smart card should be selected. The next step is the selection of the SAM smart card, followed by the creation of the CalypsoSam resource which is necessary for the Calypso transaction.&lt;/p>
+&lt;pre>&lt;code class="language-java"> //...
 // Prepare the selector to ensure the correct SAM is used
 SamSelector samSelector = SamSelector.builder().samRevision(SamRevision.AUTO).build();
 // Make the SAM selection
-SeSelection samSelection = new SeSelection();
+CardSelection samSelection = new CardSelection();
 samSelection.prepareSelection(new SamSelectionRequest(samSelector));
 CalypsoSam calypsoSam;
-if (samReader.isSePresent()) {
-SelectionsResult selectionsResult = samSelection.processExplicitSelection(samReader);
-if (selectionsResult.hasActiveSelection()) {
-calypsoSam = (CalypsoSam) selectionsResult.getActiveMatchingSe();
-} else {
-throw new IllegalStateException(&amp;quot;SAM matching failed!&amp;quot;);
-}
-} else {
+//check that a smartcard is present in the SAM reader
+if (!samReader.isCardPresent()) {
 throw new IllegalStateException(&amp;quot;No SAM is present in the reader &amp;quot; + samReader.getName());
 }
+SelectionsResult selectionsResult = samSelection.processExplicitSelection(samReader);
+if (!selectionsResult.hasActiveSelection()) {
+throw new IllegalStateException(&amp;quot;SAM matching failed!&amp;quot;);
+}
+calypsoSam = (CalypsoSam) selectionsResult.getActiveSmartCard();
 // Associate the calypsoSam and the samReader to create the samResource
-SeResource&amp;lt;CalypsoSam&amp;gt; samResource = new SeResource&amp;lt;CalypsoSam&amp;gt;(samReader, calypsoSam);
-// Prepare the security settings used during the Calypso transaction
-PoSecuritySettings poSecuritySettings = new PoSecuritySettings.PoSecuritySettingsBuilder(samResource).build();
-logger.info(&amp;quot;============================================================================&amp;quot;);
-logger.info(&amp;quot;= Display basic information about the readers and SAM =&amp;quot;);
-logger.info(&amp;quot;============================================================================&amp;quot;);
-logger.info(
-&amp;quot;= PO Reader Name = {}&amp;quot;,
-poReader.getName());
-String samSerialNumber = ByteArrayUtil.toHex(samResource.getMatchingSe().getSerialNumber());
-logger.info(
-&amp;quot;= SAM Reader Name = {}, Serial Number = {}&amp;quot;,
-samResource.getSeReader().getName(),
-samSerialNumber);
-logger.info(&amp;quot;============================================================================&amp;quot;);
-logger.info(&amp;quot;= Prepare the Calypso PO selection =&amp;quot;);
-logger.info(&amp;quot;============================================================================&amp;quot;);
+CardResource&amp;lt;CalypsoSam&amp;gt; samResource = new CardResource&amp;lt;CalypsoSam&amp;gt;(samReader, calypsoSam);
+//...
+&lt;/code>&lt;/pre>
+&lt;h3 id="select-po-resource">Select PO resource&lt;/h3>
+&lt;p>Preparing the 1st PO exchange : after the selection of the SAM smart card, we operate the AID based selection on the PO.&lt;/p>
+&lt;pre>&lt;code class="language-java"> //...
 // Prepare a Calypso PO selection
-SeSelection seSelection = new SeSelection();
+CardSelection seSelection = new CardSelection();
 // Setting of an AID based selection of a Calypso Revision 3.1 PO
 //
 // Select the first application matching the selection AID whatever the card communication protocol
@@ -732,35 +692,27 @@ SeSelection seSelection = new SeSelection();
 // make the selection and read additional information afterwards
 PoSelectionRequest poSelectionRequest = new PoSelectionRequest(
 PoSelector.builder()
-.aidSelector(AidSelector.builder().aidToSelect(AID).build()) // the application identifier
-.invalidatedPo(InvalidatedPo.REJECT) // to indicate if an invalidated PO should be accepted or not
+.aidSelector(CardSelector.AidSelector.builder().aidToSelect(AID).build()) // the application identifier
+.invalidatedPo(PoSelector.InvalidatedPo.REJECT) // to indicate if an invalidated PO should be accepted or not
 .build());
 // Add the selection case to the current selection
 // (we could have added other cases)
 seSelection.prepareSelection(poSelectionRequest);
-logger.info(&amp;quot;============================================================================&amp;quot;);
-logger.info(&amp;quot;= Check if a PO is present in the reader =&amp;quot;);
-logger.info(&amp;quot;============================================================================&amp;quot;);
-if (poReader.isSePresent()) {
-logger.info(&amp;quot;============================================================================&amp;quot;);
-logger.info(&amp;quot;= Start of the Calypso PO processing =&amp;quot;);
-logger.info(&amp;quot;============================================================================&amp;quot;);
-logger.info(&amp;quot;= 1st PO exchange =&amp;quot;);
-logger.info(&amp;quot;= AID based selection =&amp;quot;);
-logger.info(&amp;quot;============================================================================&amp;quot;);
-try {
+if (!poReader.isCardPresent()) {
+throw new IllegalStateException(&amp;quot;The selection of the PO has failed.&amp;quot;);
+}
 // Actual PO communication: operate through a single request the Calypso PO selection
-CalypsoPo calypsoPo =
-(CalypsoPo) seSelection.processExplicitSelection(poReader).getActiveMatchingSe();
-logger.info(&amp;quot;The selection of the PO has succeeded.&amp;quot;);
-logger.info(&amp;quot;============================================================================&amp;quot;);
-logger.info(&amp;quot;= 2nd PO exchange =&amp;quot;);
-logger.info(&amp;quot;= Open a Calypso secure session =&amp;quot;);
-logger.info(&amp;quot;= Reading of Environment file (SFI=07h) =&amp;quot;);
-logger.info(&amp;quot;============================================================================&amp;quot;);
+CalypsoPo calypsoPo = (CalypsoPo) seSelection.processExplicitSelection(poReader).getActiveSmartCard();
+//...
+&lt;/code>&lt;/pre>
+&lt;h3 id="transaction--open-session">Transaction : open session&lt;/h3>
+&lt;p>2nd PO exchange : prepare the PoTransaction object with the reading of the environment file (SFI=07h) .&lt;/p>
+&lt;pre>&lt;code class="language-java"> //...
+// Prepare the security settings used during the Calypso transaction
+PoSecuritySettings poSecuritySettings = new PoSecuritySettings.PoSecuritySettingsBuilder(samResource).build();
 // Create a PoTransaction object to manage the Calypso transaction
 PoTransaction poTransaction = new PoTransaction(
-new SeResource&amp;lt;CalypsoPo&amp;gt;(poReader, calypsoPo),
+new CardResource&amp;lt;&amp;gt;(poReader, calypsoPo),
 poSecuritySettings);
 // Read the Environment file at the Session Opening
 // (we could have added other commands)
@@ -772,76 +724,37 @@ poTransaction.processOpening(PoTransaction.SessionSetting.AccessLevel.SESSION_LV
 // Get the Environment data
 ElementaryFile efEnvironment = calypsoPo.getFileBySfi(SFI_Environment);
 String environmentLog = ByteArrayUtil.toHex(efEnvironment.getData().getContent());
-logger.info(&amp;quot;File Environment log: {}&amp;quot;, environmentLog);
+System.out.println(&amp;quot;File Environment log: &amp;quot;+ environmentLog);
 if (!calypsoPo.isDfRatified()) {
-logger.info(&amp;quot;============= Previous Calypso Secure Session was not ratified =============&amp;quot;);
+System.out.println(&amp;quot;============= Previous Calypso Secure Session was not ratified =============&amp;quot;);
 }
-logger.info(&amp;quot;============================================================================&amp;quot;);
-logger.info(&amp;quot;= 3th PO exchange =&amp;quot;);
-logger.info(&amp;quot;= Close the Calypso secure session =&amp;quot;);
-logger.info(&amp;quot;============================================================================&amp;quot;);
+//...
+&lt;/code>&lt;/pre>
+&lt;h3 id="transaction--close-session">Transaction : close session&lt;/h3>
+&lt;p>The 3th PO exchange : the Calypso secure session is closed&lt;/p>
+&lt;pre>&lt;code class="language-java"> //...
 // To close the channel with the PO after the closing
 poTransaction.prepareReleasePoChannel();
 // Close the Calypso Secure Session
 // A ratification command will be sent (CONTACTLESS_MODE)
 poTransaction.processClosing();
-logger.info(&amp;quot;============================================================================&amp;quot;);
-logger.info(&amp;quot;= The Calypso secure session ended successfully =&amp;quot;);
-logger.info(&amp;quot;= (Successful mutual authentication) =&amp;quot;);
-logger.info(&amp;quot;= End of the Calypso PO processing =&amp;quot;);
-logger.info(&amp;quot;============================================================================&amp;quot;);
-} catch (Exception e) {
-logger.error(&amp;quot;Exception: {}&amp;quot;, e.getMessage());
-}
-} else {
-logger.error(&amp;quot;The selection of the PO has failed.&amp;quot;);
-}
+//...
+&lt;/code>&lt;/pre>
+&lt;p>Finally unregister the plugin before shutting down the application&lt;/p>
+&lt;pre>&lt;code class="language-java"> //...
+// To shutdown the application
+smartCardService.unregisterPlugin(plugin.getName());
 System.exit(0);
-}
-}
 &lt;/code>&lt;/pre>
-&lt;p>Copy the properties file below in a new properties file named simplelogger.properties in resources. The application log output format is configurable in this properties files.&lt;/p>
-&lt;pre>&lt;code class="language-properties"># SLF4J's SimpleLogger configuration file
-# Simple implementation of Logger that sends all enabled log messages, for all defined loggers, to System.err.
-# Default logging detail level for all instances of SimpleLogger.
-# Must be one of (&amp;quot;trace&amp;quot;, &amp;quot;debug&amp;quot;, &amp;quot;info&amp;quot;, &amp;quot;warn&amp;quot;, or &amp;quot;error&amp;quot;).
-# If not specified, defaults to &amp;quot;info&amp;quot;.
-org.slf4j.simpleLogger.defaultLogLevel=debug
-# Logging detail level for a SimpleLogger instance named &amp;quot;xxxxx&amp;quot;.
-# Must be one of (&amp;quot;trace&amp;quot;, &amp;quot;debug&amp;quot;, &amp;quot;info&amp;quot;, &amp;quot;warn&amp;quot;, or &amp;quot;error&amp;quot;).
-# If not specified, the default logging detail level is used.
-#org.slf4j.simpleLogger.log.xxxxx=
-# Set to true if you want the current date and time to be included in output messages.
-# Default is false, and will output the number of milliseconds elapsed since startup.
-org.slf4j.simpleLogger.showDateTime=true
-# The date and time format to be used in the output messages.
-# The pattern describing the date and time format is the same that is used in java.text.SimpleDateFormat.
-# If the format is not specified or is invalid, the default format is used.
-# The default format is yyyy-MM-dd HH:mm:ss:SSS Z.
-org.slf4j.simpleLogger.dateTimeFormat=[HH:mm:ss:SSS]
-# Set to true if you want to output the current thread name.
-# Defaults to true.
-org.slf4j.simpleLogger.showThreadName=true
-# Set to true if you want the Logger instance name to be included in output messages.
-# Defaults to true.
-org.slf4j.simpleLogger.showLogName=false
-# Set to true if you want the last component of the name to be included in output messages.
-# Defaults to false.
-org.slf4j.simpleLogger.showShortLogName=true
-org.slf4j.simpleLogger.levelInBrackets=true
-&lt;/code>&lt;/pre>
+&lt;p>Find the complete code source in the
+&lt;a href="https://github.com/eclipse/keyple-java/blob/develop/java/example/calypso/src/main/java/org/eclipse/keyple/example/calypso/UseCase1_ExplicitSelectionAid/Main_ExplicitSelectionAid_Pcsc.java" target="_blank" rel="noopener">example project&lt;/a>&lt;/p>
 &lt;h2 id="run">Run&lt;/h2>
-&lt;p>Connect your PO and SAM readers.&lt;/p>
-&lt;p>Put the SAM in the SAM reader.&lt;/p>
-&lt;p>Place the PO on the PO reader.&lt;/p>
-&lt;p>Configure the PO and SAM readers you use in the java file (you have to respect the case for the reader name) :&lt;/p>
-&lt;pre>&lt;code class="language-java"> /* PO Reader name */
-private final static String PO_READER_NAME = &amp;quot;XXX&amp;quot;;
-/* SAM Reader name */
-private final static String SAM_READER_NAME = &amp;quot;XXX&amp;quot;;
-&lt;/code>&lt;/pre>
-&lt;p>If you don’t know the reader name, run the application in debug mode and get the reader name in plugin variable&lt;/p>
-&lt;p>Run the application.&lt;/p>
+&lt;ol>
+&lt;li>Connect two USB PCSC Readers.&lt;/li>
+&lt;li>Insert the SAM smart card in the SAM reader.&lt;/li>
+&lt;li>Insert the PO smart card in the PO reader.&lt;/li>
+&lt;li>Run the application.&lt;/li>
+&lt;/ol>
 &lt;div class="alert alert-note">
 &lt;div>
 All project dependencies, including Keyple components, are downloaded during the first run, which can take several minutes.
