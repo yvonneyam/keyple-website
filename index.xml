@@ -2502,8 +2502,6 @@ new PoSecuritySettings.PoSecuritySettingsBuilder(samResource)
 &lt;h3 id="sam-resource-managers">SAM Resource Managers&lt;/h3>
 &lt;p>Services providing methods to allocate/deallocate SAM resources. Keyple Calypso API provides 3 type of managers: Default,
 Factory, Pool. The choice of the manager to use depends on the abilities of the plugin used for the SAM connexion.&lt;/p>
-&lt;pre>&lt;code class="language-java">
-&lt;/code>&lt;/pre>
 &lt;h3 id="potransaction">PoTransaction&lt;/h3>
 &lt;p>Service providing high-level API to manage transactions with a Calypso PO. The tied Calypso PO Object is kept and updated at
 each step of using this service.&lt;/p>
@@ -2535,7 +2533,9 @@ int svLastTNum = calypsoPo.getSvLastTNum()
 ...
 &lt;/code>&lt;/pre>
 &lt;h2 id="api">API&lt;/h2>
-&lt;h2 id="examples">Examples&lt;/h2></description></item><item><title>Create a plugin</title><link>/keyple-website/docs/developer-guide/create-plugin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/developer-guide/create-plugin/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;h2 id="examples">Examples&lt;/h2>
+&lt;p>Detailed use case examples can be seen here:
+&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/example/calypso/pc" target="_blank" rel="noopener">Example&lt;/a>&lt;/p></description></item><item><title>Create a plugin</title><link>/keyple-website/docs/developer-guide/create-plugin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/developer-guide/create-plugin/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
 &lt;p>In order to provide an easy way to port a Keyple application from a device with a specific card reader to another, a plugin system
 as been developed. When a developer wants to include Keyple features within his project, he has to initialize the SmartCardService by providing a
 plugin Factory available with in the plugin library. The plugin to use depends on the targeted device and running environment.&lt;/p>
