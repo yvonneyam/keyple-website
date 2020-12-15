@@ -78,7 +78,7 @@ DemoPoAuthentication.&lt;/p>
 &lt;p>In this snippet the PC/SC plugin is registered to the SmartCardService.&lt;/p>
 &lt;p>Two readers needs to be connected to the local machine. Replace
 &amp;ldquo;PO_READER_NAME&amp;rdquo; and &amp;ldquo;SAM_READER_NAME&amp;rdquo; with the name of the USB readers.&lt;/p>
-&lt;p>If you don’t know the reader name, follow this
+&lt;p>If you don’t know the reader&amp;rsquo;s names, follow this
 &lt;a href="#find-out-reader-names">note&lt;/a>.&lt;/p>
 &lt;pre>&lt;code class="language-java">import org.eclipse.keyple.calypso.command.sam.SamRevision;
 import org.eclipse.keyple.calypso.transaction.*;
@@ -289,7 +289,7 @@ System.out.println('&amp;quot;' + name + '&amp;quot;');
 (contact) reader and replace &lt;code>PO_READER_NAME&lt;/code> and
 &lt;code>SAM_READER_NAME&lt;/code> with their values.&lt;/p>
 &lt;p>
-&lt;a href="#create-the-class-skeleton-and-configure-the-pcsc-plugin-and-the-readers">Back to top&lt;/a>&lt;/p>
+&lt;a href="#create-the-class-skeleton">Back to top&lt;/a>&lt;/p>
 &lt;h4 id="full-code">Full code&lt;/h4>
 &lt;pre>&lt;code class="language-java">import org.eclipse.keyple.calypso.command.sam.SamRevision;
 import org.eclipse.keyple.calypso.transaction.*;
