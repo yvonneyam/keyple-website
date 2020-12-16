@@ -1418,15 +1418,12 @@ secure calypso transaction.&lt;/p>
 &lt;li>Follow the explanations given in the
 &lt;a href="/keyple-website/keyple-website/docs/build-your-first-app/">Build your first app&lt;/a> section to configure your environment.&lt;/li>
 &lt;li>Using the
-&lt;a href="/keyple-website/keyple-website/components-java/">Java components&lt;/a> or
-&lt;a href="/keyple-website/keyple-website/components-cpp/">C++ components&lt;/a> page, import &lt;strong>Keyple Core&lt;/strong> and &lt;strong>Keyple Calyspo Extension&lt;/strong> into your project and start playing with &lt;strong>Keyple&lt;/strong>.&lt;/li>
-&lt;/ol>
-&lt;h2 id="how-to-use-it">How to use it&lt;/h2>
-&lt;ol>
-&lt;li>In pre-requisite, read page
-&lt;a href="/keyple-website/keyple-website/docs/developer-guide/centralized-application/">Develop a Centralized Application&lt;/a> to understand the main concepts of Keyple in a centralized application.&lt;/li>
-&lt;li>Read chapter
-&lt;a href="#concepts">Concepts&lt;/a> to understand the main terms and concepts of the &lt;strong>Keyple Calypso Extension&lt;/strong> API.&lt;/li>
+&lt;a href="/keyple-website/keyple-website/components-java/core/">Java components&lt;/a> or
+&lt;a href="/keyple-website/keyple-website/components-cpp/core/">C++ components&lt;/a> pages, import &lt;strong>Keyple Core&lt;/strong> into your project.&lt;/li>
+&lt;li>Using the
+&lt;a href="/keyple-website/keyple-website/components-java/extensions/calypso/">Java components&lt;/a> or
+&lt;a href="/keyple-website/keyple-website/components-cpp/extensions/calypso/">C++ components&lt;/a> pages, import &lt;strong>Keyple Calypso Extension&lt;/strong> into your project.&lt;/li>
+&lt;li>Start playing with &lt;strong>Keyple&lt;/strong>.&lt;/li>
 &lt;/ol>
 &lt;h2 id="concepts">Concepts&lt;/h2>
 &lt;p>Here are the main concepts to keep in mind before continuing to read this developer guide :&lt;/p>
@@ -1581,9 +1578,23 @@ int svLastTNum = calypsoPo.getSvLastTNum()
 ...
 &lt;/code>&lt;/pre>
 &lt;h2 id="api">API&lt;/h2>
+&lt;ul>
+&lt;li>The diagram below represents the main classes implemented around the &lt;strong>Transaction package&lt;/strong>.
+&lt;figure >
+&lt;a data-fancybox="" href="/keyple-website/keyple-website/media/calypso-app-development/class/TransactionPackage_Class.svg" >
+&lt;img src="/keyple-website/keyple-website/media/calypso-app-development/class/TransactionPackage_Class.svg" alt="" >
+&lt;/a>
+&lt;/figure>
+&lt;/li>
+&lt;/ul>
 &lt;h2 id="examples">Examples&lt;/h2>
-&lt;p>Detailed use case examples can be seen here:
-&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/example/calypso/pc" target="_blank" rel="noopener">Example&lt;/a>&lt;/p></description></item><item><title>Create a plugin</title><link>/keyple-website/docs/developer-guide/create-plugin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/developer-guide/create-plugin/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>Detailed use case examples can be seen here:&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/example/calypso/pc" target="_blank" rel="noopener">PC&lt;/a>&lt;/li>
+&lt;li>
+&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/example/calypso/android" target="_blank" rel="noopener">Android&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>Create a plugin</title><link>/keyple-website/docs/developer-guide/create-plugin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/developer-guide/create-plugin/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
 &lt;p>In order to provide an easy way to port a Keyple application from a device with a specific card reader to another, a plugin system
 as been developed. When a developer wants to include Keyple features within his project, he has to initialize the SmartCardService by providing a
 plugin Factory available with in the plugin library. The plugin to use depends on the targeted device and running environment.&lt;/p>
