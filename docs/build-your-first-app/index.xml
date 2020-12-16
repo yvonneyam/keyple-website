@@ -78,8 +78,8 @@ DemoPoAuthentication.&lt;/p>
 &lt;p>In this snippet the PC/SC plugin is registered to the SmartCardService.&lt;/p>
 &lt;p>Two readers needs to be connected to the local machine. Replace
 &amp;ldquo;PO_READER_NAME&amp;rdquo; and &amp;ldquo;SAM_READER_NAME&amp;rdquo; with the name of the USB readers.&lt;/p>
-&lt;p>If you don’t know the reader&amp;rsquo;s names, follow this
-&lt;a href="#find-out-reader-names">note&lt;/a>.&lt;/p>
+&lt;p>If you don’t know the reader&amp;rsquo;s names, read the
+&lt;a href="#faq">FAQ&lt;/a>.&lt;/p>
 &lt;pre>&lt;code class="language-java">import org.eclipse.keyple.calypso.command.sam.SamRevision;
 import org.eclipse.keyple.calypso.transaction.*;
 import org.eclipse.keyple.core.card.selection.*;
@@ -209,11 +209,40 @@ System.exit(0);
 &lt;div class="alert alert-note">
 &lt;div>
 All project dependencies, including Keyple
-components, are downloaded during the first run, which can take some time.
+components, are downloaded during the first run, which can take some
+time.
 &lt;/div>
 &lt;/div>
 &lt;h2 id="faq">FAQ&lt;/h2>
-&lt;p>&lt;strong>How to activate Keyple logs?&lt;/strong>&lt;/p>
+&lt;p>&lt;strong>How do I find out the names of the readers?&lt;/strong>&lt;/p>
+&lt;p>To find out the names of the readers connected to your computer, we will
+use Keyple with the following class which prints in the console the
+number and names of the readers present:&lt;/p>
+&lt;pre>&lt;code class="language-java">import org.eclipse.keyple.core.service.Plugin;
+import org.eclipse.keyple.core.service.SmartCardService;
+import org.eclipse.keyple.plugin.pcsc.PcscPluginFactory;
+import java.util.Set;
+public class ReaderDiscovery {
+public static void main(String[] args) {
+SmartCardService smartCardService = SmartCardService.getInstance();
+Plugin plugin = smartCardService.registerPlugin(new PcscPluginFactory());
+Set&amp;lt;String&amp;gt; names = plugin.getReaderNames();
+System.out.println(names.size() + &amp;quot; readers found.&amp;quot;);
+for (String name : names) {
+System.out.println('&amp;quot;' + name + '&amp;quot;');
+}
+}
+}
+&lt;/code>&lt;/pre>
+&lt;p>The console output should look something like:&lt;/p>
+&lt;pre>&lt;code>2 readers found.
+&amp;quot;ASK LoGO 0&amp;quot;
+&amp;quot;Identive CLOUD 2700 R Smart Card Reader 0&amp;quot;
+&lt;/code>&lt;/pre>
+&lt;p>Identify which reader will be the PO (contactless) reader and the SAM
+(contact) reader and replace &lt;code>PO_READER_NAME&lt;/code> and
+&lt;code>SAM_READER_NAME&lt;/code> with their values.&lt;/p>
+&lt;p>&lt;strong>How to activate the Keyple&amp;rsquo;s logs?&lt;/strong>&lt;/p>
 &lt;p>As soon as the &lt;code>slf4j&lt;/code> library is imported into the project, Keyple
 modules are able to produce logs.&lt;/p>
 &lt;p>However, to take full advantage of the possibilities of this library, it
@@ -260,37 +289,8 @@ correct monitoring of the readers in the PC/SC plugin. This has the
 disadvantage of generating a warning message with recent versions of the
 JVM. However, we have not found any problems with this implementation of
 the PC/SC plugin so far.&lt;/p>
-&lt;h4 id="find-out-reader-names">Find out reader names&lt;/h4>
-&lt;p>To find out the names of the readers connected to your computer, we will
-use Keyple with the following class which prints in the console the
-number and names of the readers present:&lt;/p>
-&lt;pre>&lt;code class="language-java">import org.eclipse.keyple.core.service.Plugin;
-import org.eclipse.keyple.core.service.SmartCardService;
-import org.eclipse.keyple.plugin.pcsc.PcscPluginFactory;
-import java.util.Set;
-public class ReaderDiscovery {
-public static void main(String[] args) {
-SmartCardService smartCardService = SmartCardService.getInstance();
-Plugin plugin = smartCardService.registerPlugin(new PcscPluginFactory());
-Set&amp;lt;String&amp;gt; names = plugin.getReaderNames();
-System.out.println(names.size() + &amp;quot; readers found.&amp;quot;);
-for (String name : names) {
-System.out.println('&amp;quot;' + name + '&amp;quot;');
-}
-}
-}
-&lt;/code>&lt;/pre>
-&lt;p>The console output should look something like:&lt;/p>
-&lt;pre>&lt;code>2 readers found.
-&amp;quot;ASK LoGO 0&amp;quot;
-&amp;quot;Identive CLOUD 2700 R Smart Card Reader 0&amp;quot;
-&lt;/code>&lt;/pre>
-&lt;p>Identify which reader will be the PO (contactless) reader and the SAM
-(contact) reader and replace &lt;code>PO_READER_NAME&lt;/code> and
-&lt;code>SAM_READER_NAME&lt;/code> with their values.&lt;/p>
-&lt;p>
-&lt;a href="#create-the-class-skeleton">Back to top&lt;/a>&lt;/p>
 &lt;h4 id="full-code">Full code&lt;/h4>
+&lt;p>Here is the complete code of this quick start in one single block.&lt;/p>
 &lt;pre>&lt;code class="language-java">import org.eclipse.keyple.calypso.command.sam.SamRevision;
 import org.eclipse.keyple.calypso.transaction.*;
 import org.eclipse.keyple.core.card.selection.*;
