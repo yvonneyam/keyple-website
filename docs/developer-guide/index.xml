@@ -2610,7 +2610,11 @@ throw new KeyplePluginInstantiationException(&amp;quot;Can not access smartcard.
 &lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/component/keyple-plugin/pcsc" target="_blank" rel="noopener">Plugin&lt;/a>&lt;/li>
 &lt;li>
 &lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/example/calypso/pc" target="_blank" rel="noopener">Example Apps&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Create an extension</title><link>/docs/developer-guide/create-extension/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/developer-guide/create-extension/</guid><description/></item><item><title>Migration Guide - Keyple Java 0.8.1 to 0.9.0</title><link>/docs/developer-guide/migration-0.8.1-to-0.9.0/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/developer-guide/migration-0.8.1-to-0.9.0/</guid><description>&lt;p>This guide is intended to help a user of version 0.8.1 of Keyple Java to upgrade his application to the 0.9.0 version of the library.&lt;/p>
+&lt;/ul></description></item><item><title>Create an extension</title><link>/docs/developer-guide/create-extension/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/developer-guide/create-extension/</guid><description>&lt;div class="alert alert-note">
+&lt;div>
+Coming soon
+&lt;/div>
+&lt;/div></description></item><item><title>Migration Guide - Keyple Java 0.8.1 to 0.9.0</title><link>/docs/developer-guide/migration-0.8.1-to-0.9.0/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/developer-guide/migration-0.8.1-to-0.9.0/</guid><description>&lt;p>This guide is intended to help a user of version 0.8.1 of Keyple Java to upgrade his application to the 0.9.0 version of the library.&lt;/p>
 &lt;p>From a user API point of view, the changes relate to the following topics:&lt;/p>
 &lt;ul>
 &lt;li>

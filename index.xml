@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Eclipse Keyple</title><link>/</link><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><description>Eclipse Keyple</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Copyright © Eclipse Foundation, Inc. All Rights Reserved.</copyright><lastBuildDate>Fri, 25 Sep 2020 14:57:23 +0200</lastBuildDate><image><url>/images/logo_hu673a59176cd62c570f44ed2728665b48_42188_300x300_fit_lanczos_2.png</url><title>Eclipse Keyple</title><link>/</link></image><item><title>Add your support &amp; trainings</title><link>/support-trainings/add-support-trainings/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/support-trainings/add-support-trainings/</guid><description>&lt;p>To add your support &amp;amp; trainings made a
-&lt;a href="https://github.com/eclipse/keyple-website/pulls" target="_blank" rel="noopener">Pull request&lt;/a> contributions on GitHub.&lt;/p></description></item><item><title>Keyple Calypso</title><link>/components-cpp/extensions/calypso/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/components-cpp/extensions/calypso/</guid><description>&lt;div class="alert alert-note">
+&lt;a href="https://github.com/eclipse/keyple-website/pulls" target="_blank" rel="noopener">Pull request&lt;/a> contributions on GitHub.&lt;/p>
+&lt;p>In order for your contribution to be accepted you must comply with one of the conditions below:&lt;/p>
+&lt;ul>
+&lt;li>Be a commiter of Eclipse Keyple™ project&lt;/li>
+&lt;li>Having contributed to one of the components of Eclipse Keyple™ project&lt;/li>
+&lt;li>Be a
+&lt;a href="https://iot.eclipse.org/adopters/" target="_blank" rel="noopener">adopter/user&lt;/a> of Eclipse Keyple™&lt;/li>
+&lt;/ul></description></item><item><title>Keyple Calypso</title><link>/components-cpp/extensions/calypso/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/components-cpp/extensions/calypso/</guid><description>&lt;div class="alert alert-note">
 &lt;div>
 &lt;strong>&lt;code>0.9.0&lt;/code>&lt;/strong>
      
@@ -491,17 +498,15 @@ Keyple project
 &lt;/ul></description></item><item><title>Calypso Networks Association</title><link>/support-trainings/cna/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/support-trainings/cna/</guid><description>&lt;p>Calypso Networks Association (CNA) is a non-profit organization dedicated to improve contactless
 electronic ticketing for transportation and access control standards since 2003.
 For many years, our mission has been to create innovative solutions that are fully interoperable,
-reliable, secure, and open.&lt;/p>
+reliable, secure, and open. We collaborate with a dynamic network of city leaders and transport
+authorities that are keen to work with system integrators with Calypso® standard expertise.&lt;/p>
 &lt;p>Discover more about CNA here : &lt;a href="http://calypsonet.org">http://calypsonet.org&lt;/a>&lt;/p>
 &lt;p>Calypso Networks Association offers comprehensive
 &lt;a href="https://calypsonet.org/technical-support-documentation/" target="_blank" rel="noopener">technical support and documentation&lt;/a>
 to ensure all users can get the most out of Calypso® technology and Eclipse Keyple™.&lt;/p>
 &lt;p>Calypso Networks Association provides a Calypso Test Kit. The Calypso Test Kit aims at helping
 ticketing system developers to fully experience Eclipse Keyple™ with a set of Calypso® SAM and
-Calypso® certified portable objects from several manufacturers in various configurations.&lt;/p>
-&lt;p>For many years, our mission has been to create innovative solutions that are fully interoperable,
-reliable, secure, and open. We collaborate with a dynamic network of city leaders and transport
-authorities that are keen to work with system integrators with Calypso® standard expertise.&lt;/p></description></item><item><title>Why trust Eclipse Keyple™?</title><link>/what-is-keyple/why-trust/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/what-is-keyple/why-trust/</guid><description>&lt;p>Eclipse Keyple™ is an Eclipse open source project currently leaded by Calypso Networks Association, which has been the leader in contactless
+Calypso® certified portable objects from several manufacturers in various configurations.&lt;/p></description></item><item><title>Why trust Eclipse Keyple™?</title><link>/what-is-keyple/why-trust/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/what-is-keyple/why-trust/</guid><description>&lt;p>Eclipse Keyple™ is an Eclipse open source project currently leaded by Calypso Networks Association, which has been the leader in contactless
 electronic ticketing transportation standards since 2003.&lt;/p>
 &lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
 &lt;iframe src="https://www.youtube.com/embed/3CWNho1rrSw" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
@@ -1083,12 +1088,13 @@ A ‘PO resource’ is the set of a Calypso PO and the reader on which it is sel
 &lt;a href="https://github.com/eclipse/keyple-java/blob/develop/java/example/calypso/pc/UseCase5_MultipleSession/src/main/java/org/eclipse/keyple/example/calypso/pc/usecase5/MultipleSession_Pcsc.java" target="_blank" rel="noopener">“Calypso Use Case 5 / PO Multiple Session&amp;quot;&lt;/a> example&lt;/p>
 &lt;/blockquote></description></item><item><title>Build your first Java application</title><link>/docs/build-your-first-app/java-app/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/build-your-first-app/java-app/</guid><description>&lt;hr>
 &lt;p>This quick start describes how to create a ready-to-execute Java
-command-line application that runs a simple Calypso card-based
-transaction involving two readers.&lt;/p>
+command-line application that runs a simple transaction based on
+a Calypso portable object (PO) involving two smart card readers.&lt;/p>
 &lt;div class="alert alert-note">
 &lt;div>
 The demonstration application created for this quick start requires a
-Calypo card and a Calypo SAM.
+Calypo PO (contactless smart card, mobile phone with contactless
+communication) and a Calypo Secure Access Module (SAM).
 &lt;/div>
 &lt;/div>
 &lt;p>We will use three main components of Keyple:&lt;/p>
@@ -1101,8 +1107,7 @@ which is the base component to which all the others refer,&lt;/li>
 to provide the ability to manage PC/SC readers,&lt;/li>
 &lt;li>
 &lt;a href="./components-java/extensions/calypso/">Keyple Calypso extension&lt;/a>
-to handle the commands sent to the Calypso Portable Object (PO) and
-the Secure Access Module (SAM).&lt;/li>
+to handle the commands sent to the Calypso PO and the Calypso SAM.&lt;/li>
 &lt;/ul>
 &lt;p>In this guide
 &lt;a href="https://gradle.org/" target="_blank" rel="noopener">Gradle&lt;/a> is used as build automation
@@ -1153,16 +1158,8 @@ here.&lt;/p>
 &lt;p>You can either progressively copy each of the small portions of code
 that follow or copy the whole class at the bottom of this page.&lt;/p>
 &lt;h3 id="create-the-class-skeleton">Create the class skeleton&lt;/h3>
-&lt;h4 id="and-configure-the-pcsc-plugin-and-the-readers">and configure the PC/SC plugin and the readers&lt;/h4>
-&lt;p>The first step to use Keyple SDK is to initialize the plugin and smart
-card readers.&lt;/p>
 &lt;p>Copy the source code below in a new Java Class named
 DemoPoAuthentication.&lt;/p>
-&lt;p>In this snippet the PC/SC plugin is registered to the SmartCardService.&lt;/p>
-&lt;p>Two readers needs to be connected to the local machine. Replace
-&amp;ldquo;PO_READER_NAME&amp;rdquo; and &amp;ldquo;SAM_READER_NAME&amp;rdquo; with the name of the USB readers.&lt;/p>
-&lt;p>If you don&amp;rsquo;t know the names of the readers, read how to find them in the
-&lt;a href="#faq">FAQ&lt;/a>.&lt;/p>
 &lt;pre>&lt;code class="language-java">import org.eclipse.keyple.calypso.command.sam.SamRevision;
 import org.eclipse.keyple.calypso.transaction.*;
 import org.eclipse.keyple.core.card.selection.*;
@@ -1171,6 +1168,18 @@ import org.eclipse.keyple.core.util.ByteArrayUtil;
 import org.eclipse.keyple.plugin.pcsc.*;
 public class DemoPoAuthentication {
 public static void main(String[] args) {
+// ...
+}
+}
+&lt;/code>&lt;/pre>
+&lt;h3 id="configure-the-pcsc-plugin-and-the-readers">Configure the PC/SC plugin and the readers&lt;/h3>
+&lt;p>The first step to use Keyple is to initialize the plugin and smart card readers.&lt;/p>
+&lt;p>In this snippet the PC/SC plugin is registered to the SmartCardService.&lt;/p>
+&lt;p>Two readers needs to be connected to the local machine. Replace
+&amp;ldquo;PO_READER_NAME&amp;rdquo; and &amp;ldquo;SAM_READER_NAME&amp;rdquo; with the name of the USB readers.&lt;/p>
+&lt;p>If you don&amp;rsquo;t know the names of the readers, read how to find them in the
+&lt;a href="#faq">FAQ&lt;/a>.&lt;/p>
+&lt;pre>&lt;code class="language-java">//...
 // Get the instance of the SmartCardService : main service of Keyple SDK
 SmartCardService smartCardService = SmartCardService.getInstance();
 // Register the PcscPlugin within the SmartCardService to use PC/SC readers
@@ -1182,16 +1191,15 @@ poReader.setContactless(true);
 // Get the SAM reader
 PcscReader samReader = (PcscReader) plugin.getReader(&amp;quot;SAM_READER_NAME&amp;quot;);
 // ...
-}
-}
 &lt;/code>&lt;/pre>
-&lt;h3 id="select-the-sam">Select the SAM&lt;/h3>
+&lt;h3 id="select-the-calypso-sam">Select the Calypso SAM&lt;/h3>
 &lt;p>Before executing a transaction each smart card should be selected. The
-next step is the selection of the SAM smart card resulting in a
+next step is the selection of the Calypso SAM resulting in a
 CalypsoSam object.&lt;/p>
 &lt;p>It is then combined with the SAM reader to form the SAM resource needed
 later within the transaction service.&lt;/p>
-&lt;pre>&lt;code class="language-java">// Prepare a SamSelector that identifies the Calypso SAM
+&lt;pre>&lt;code class="language-java">//...
+// Prepare a SamSelector that identifies the Calypso SAM
 SamSelector samSelector = SamSelector.builder().samRevision(SamRevision.AUTO).build();
 // Perform the SAM selection
 CardSelection samSelection = new CardSelection();
@@ -1208,11 +1216,11 @@ CalypsoSam calypsoSam = (CalypsoSam) selectionsResult.getActiveSmartCard();
 CardResource&amp;lt;CalypsoSam&amp;gt; samResource = new CardResource&amp;lt;&amp;gt;(samReader, calypsoSam);
 //...
 &lt;/code>&lt;/pre>
-&lt;h3 id="select-the-po">Select the PO&lt;/h3>
+&lt;h3 id="select-the-calypso-po">Select the Calypso PO&lt;/h3>
 &lt;p>1st PO exchange:&lt;/p>
-&lt;p>The PO selection is made using the application&amp;rsquo;s AID and results in a
-CalypsoPo object that will contain all the information extracted from
-the PO all along the transaction.&lt;/p>
+&lt;p>The Calypso PO selection is made using the portable object application&amp;rsquo;s AID
+and results in a CalypsoPo object that will contain all the information extracted
+from the Calypso PO all along the transaction.&lt;/p>
 &lt;pre>&lt;code class="language-java">// Prepare a Calypso PO selection
 final String AID = &amp;quot;315449432E49434131&amp;quot;; /* AID: Keyple test kit profile 1, Application 2 */
 CardSelection seSelection = new CardSelection();
@@ -1234,11 +1242,11 @@ throw new IllegalStateException(&amp;quot;The selection of the PO has failed.&am
 CalypsoPo calypsoPo = (CalypsoPo) seSelection.processExplicitSelection(poReader).getActiveSmartCard();
 //...
 &lt;/code>&lt;/pre>
-&lt;h3 id="opening-the-secure-session">Opening the secure session&lt;/h3>
+&lt;h3 id="open-the-calypso-secure-session">Open the Calypso secure session&lt;/h3>
 &lt;p>2nd PO exchange :&lt;/p>
 &lt;p>The secure session opening operated by the PoTransaction service is
 combined with the reading of the environment file (SFI=07h).&lt;/p>
-&lt;p>The PO/SAM mutual authentication process is initiated transparently.&lt;/p>
+&lt;p>The mutual authentication process between Calypso PO and Calypso SAM is initiated transparently.&lt;/p>
 &lt;pre>&lt;code class="language-java">// Prepare the security settings used during the Calypso transaction
 PoSecuritySettings poSecuritySettings = new PoSecuritySettings.PoSecuritySettingsBuilder(samResource).build();
 // Create a PoTransaction service to manage the Calypso transaction
@@ -1260,12 +1268,12 @@ String environmentLog = ByteArrayUtil.toHex(efEnvironment.getData().getContent()
 System.out.println(&amp;quot;Environment file content: &amp;quot;+ environmentLog);
 //...
 &lt;/code>&lt;/pre>
-&lt;h3 id="transaction--close-session">Transaction : close session&lt;/h3>
+&lt;h3 id="close-the-calypso-secure-session">Close the Calypso secure session&lt;/h3>
 &lt;p>3rd PO exchange:&lt;/p>
-&lt;p>Simply close the secure session.&lt;/p>
+&lt;p>Simply close the Calypso secure session&lt;/p>
 &lt;p>The mutual authentication is finalized, it includes the authentication
 of the data in the read file.&lt;/p>
-&lt;p>Note: any technical, crytographic or content-related incident in the PO
+&lt;p>Note: any technical, crytographic or content-related incident in the Calypso PO
 would be signalled by an exception and would interrupt the thread of
 execution.&lt;/p>
 &lt;pre>&lt;code class="language-java">// Schedule the closure of the channel with the PO after the closing of the secure session
@@ -1275,6 +1283,7 @@ poTransaction.processClosing();
 System.out.println(&amp;quot;The data read in session have been certified by the successful closing.&amp;quot;);
 //...
 &lt;/code>&lt;/pre>
+&lt;h3 id="unregister-the-plugin">Unregister the plugin&lt;/h3>
 &lt;p>Finally unregister the plugin before shutting down the application&lt;/p>
 &lt;pre>&lt;code class="language-java">// Shutdown the application
 smartCardService.unregisterPlugin(plugin.getName());
@@ -1285,8 +1294,8 @@ System.exit(0);
 &lt;h2 id="run">Run&lt;/h2>
 &lt;ol>
 &lt;li>Connect two USB PC/SC Readers.&lt;/li>
-&lt;li>Insert the SAM smart card in the SAM reader.&lt;/li>
-&lt;li>Insert the PO smart card in the PO reader.&lt;/li>
+&lt;li>Insert the Calypso SAM in the SAM reader.&lt;/li>
+&lt;li>Insert the Calypso PO in the PO reader.&lt;/li>
 &lt;li>Run the application.&lt;/li>
 &lt;/ol>
 &lt;div class="alert alert-note">
@@ -1827,7 +1836,11 @@ exclude 'META-INF/NOTICE.md'
 &lt;/code>&lt;/pre>
 &lt;p>&lt;strong>Where can I see more examples&lt;/strong>&lt;/p>
 &lt;p>Android native plugins are provided with example applications. Check it to see more use cases:
-&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/example" target="_blank" rel="noopener">Examples&lt;/a>&lt;/p></description></item><item><title>Build your first C++ application</title><link>/docs/build-your-first-app/cpp-app/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/build-your-first-app/cpp-app/</guid><description/></item><item><title>Common concepts</title><link>/docs/developer-guide/common-concepts/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/developer-guide/common-concepts/</guid><description>&lt;p>This page describes the core elements of &lt;strong>Keyple&lt;/strong>, i.e. the concepts and APIs of &lt;strong>Keyple Core&lt;/strong> that are used to build any application implementing &lt;strong>Keyple&lt;/strong>.&lt;/p>
+&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/example" target="_blank" rel="noopener">Examples&lt;/a>&lt;/p></description></item><item><title>Build your first C++ application</title><link>/docs/build-your-first-app/cpp-app/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/build-your-first-app/cpp-app/</guid><description>&lt;div class="alert alert-note">
+&lt;div>
+Coming soon
+&lt;/div>
+&lt;/div></description></item><item><title>Common concepts</title><link>/docs/developer-guide/common-concepts/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/developer-guide/common-concepts/</guid><description>&lt;p>This page describes the core elements of &lt;strong>Keyple&lt;/strong>, i.e. the concepts and APIs of &lt;strong>Keyple Core&lt;/strong> that are used to build any application implementing &lt;strong>Keyple&lt;/strong>.&lt;/p>
 &lt;p>It is essential for the future user of &lt;strong>Keyple&lt;/strong> to be familiar with what is said in this chapter because the other modules made available by the project are all dependent on &lt;strong>Keyple Core&lt;/strong>.&lt;/p>
 &lt;h3 id="reader">Reader&lt;/h3>
 &lt;p>Keyple&amp;rsquo;s primary goal being to interact with smart cards (or smartphones) worn by individuals, it is logical to put the Reader at the top of &lt;strong>Keyple Core&lt;/strong>&amp;rsquo;s concepts.&lt;/p>
@@ -4439,7 +4452,11 @@ throw new KeyplePluginInstantiationException(&amp;quot;Can not access smartcard.
 &lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/component/keyple-plugin/pcsc" target="_blank" rel="noopener">Plugin&lt;/a>&lt;/li>
 &lt;li>
 &lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/example/calypso/pc" target="_blank" rel="noopener">Example Apps&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Create an extension</title><link>/docs/developer-guide/create-extension/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/developer-guide/create-extension/</guid><description/></item><item><title>Migration Guide - Keyple Java 0.8.1 to 0.9.0</title><link>/docs/developer-guide/migration-0.8.1-to-0.9.0/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/developer-guide/migration-0.8.1-to-0.9.0/</guid><description>&lt;p>This guide is intended to help a user of version 0.8.1 of Keyple Java to upgrade his application to the 0.9.0 version of the library.&lt;/p>
+&lt;/ul></description></item><item><title>Create an extension</title><link>/docs/developer-guide/create-extension/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/developer-guide/create-extension/</guid><description>&lt;div class="alert alert-note">
+&lt;div>
+Coming soon
+&lt;/div>
+&lt;/div></description></item><item><title>Migration Guide - Keyple Java 0.8.1 to 0.9.0</title><link>/docs/developer-guide/migration-0.8.1-to-0.9.0/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/developer-guide/migration-0.8.1-to-0.9.0/</guid><description>&lt;p>This guide is intended to help a user of version 0.8.1 of Keyple Java to upgrade his application to the 0.9.0 version of the library.&lt;/p>
 &lt;p>From a user API point of view, the changes relate to the following topics:&lt;/p>
 &lt;ul>
 &lt;li>
@@ -4668,7 +4685,22 @@ ByteArrayUtil.toHex(entry.getValue()));
 &lt;p>Catching exceptions is therefore now optional.&lt;/p>
 &lt;p>However, it is possible to selectively catch certain exceptions in order to deal with particular cases.&lt;/p>
 &lt;p>The new hierarchy of Keyple exceptions is shown
-&lt;a href="https://keyple.atlassian.net/projects/KEYP/issues/KEYP-154?filter=allissues&amp;amp;orderby=priority%20DESC&amp;amp;keyword=exceptions" target="_blank" rel="noopener">here&lt;/a>&lt;/p></description></item><item><title>Webinar Eclipse Keyple™ for Developers, Thursday, October 15, 2020</title><link>/post/webinar-eclipse-keyple-developers-oct15-2020/</link><pubDate>Fri, 25 Sep 2020 14:57:23 +0200</pubDate><guid>/post/webinar-eclipse-keyple-developers-oct15-2020/</guid><description>&lt;h2 id="are-you-a-mobility-aggregator-a-system-integrator-an-event-manager-a-developer-or-a-multi-mobility-startup">Are you a mobility aggregator, a system integrator, an event manager, a developer or a multi-mobility startup?&lt;/h2>
+&lt;a href="https://keyple.atlassian.net/projects/KEYP/issues/KEYP-154?filter=allissues&amp;amp;orderby=priority%20DESC&amp;amp;keyword=exceptions" target="_blank" rel="noopener">here&lt;/a>&lt;/p></description></item><item><title>JavaDoc</title><link>/docs/api-reference/java-api/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/api-reference/java-api/</guid><description>&lt;p>The JavaDoc for the Keyple project is available online. The documentation is split into the following parts:&lt;/p>
+&lt;div>
+&lt;select id="version_selection" style="float: right;" onchange="selectVersion()">
+&lt;option>1.0.0&lt;/option>
+&lt;option>1.0.0-alpha-1&lt;/option>
+&lt;option>0.9.0&lt;/option>
+&lt;option>0.8.1&lt;/option>
+&lt;/select>
+&lt;h3>Modules&lt;/h3>
+&lt;/div>
+&lt;ul id="module_list">&lt;/ul>
+&lt;script src="select-api-version.js">&lt;/script></description></item><item><title>C++ Documentation</title><link>/docs/api-reference/cpp-api/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/api-reference/cpp-api/</guid><description>&lt;div class="alert alert-note">
+&lt;div>
+Coming soon
+&lt;/div>
+&lt;/div></description></item><item><title>Webinar Eclipse Keyple™ for Developers, Thursday, October 15, 2020</title><link>/post/webinar-eclipse-keyple-developers-oct15-2020/</link><pubDate>Fri, 25 Sep 2020 14:57:23 +0200</pubDate><guid>/post/webinar-eclipse-keyple-developers-oct15-2020/</guid><description>&lt;h2 id="are-you-a-mobility-aggregator-a-system-integrator-an-event-manager-a-developer-or-a-multi-mobility-startup">Are you a mobility aggregator, a system integrator, an event manager, a developer or a multi-mobility startup?&lt;/h2>
 &lt;p>Do you want to have easy access to a highly secure and interoperable standard, Calypso®, to reduce your costs and
 accelerate your developments, to move from a black box to an open and modular solution with access to multiple
 hardware platforms, to enable partnerships with multimodal transport, building facilities including parking,
