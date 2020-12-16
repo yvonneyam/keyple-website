@@ -11,13 +11,13 @@ Calypo card and a Calypo SAM.
 &lt;p>We will use three main components of Keyple:&lt;/p>
 &lt;ul>
 &lt;li>
-&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/component/keyple-core" target="_blank" rel="noopener">Keyple Core&lt;/a>
+&lt;a href="../../components-java/core/">Keyple Core&lt;/a>
 which is the base component to which all the others refer,&lt;/li>
 &lt;li>
-&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/component/keyple-plugin/pcsc" target="_blank" rel="noopener">Keyple PC/SC plugin&lt;/a>
+&lt;a href="../../components-java/plugins/pcsc/">Keyple PC/SC plugin&lt;/a>
 to provide the ability to manage PC/SC readers,&lt;/li>
 &lt;li>
-&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/component/keyple-calypso" target="_blank" rel="noopener">Keyple Calypso extension&lt;/a>
+&lt;a href="../../components-java/extensions/calypso/">Keyple Calypso extension&lt;/a>
 to handle the commands sent to the Calypso Portable Object (PO) and
 the Secure Access Module (SAM).&lt;/li>
 &lt;/ul>
@@ -78,7 +78,7 @@ DemoPoAuthentication.&lt;/p>
 &lt;p>In this snippet the PC/SC plugin is registered to the SmartCardService.&lt;/p>
 &lt;p>Two readers needs to be connected to the local machine. Replace
 &amp;ldquo;PO_READER_NAME&amp;rdquo; and &amp;ldquo;SAM_READER_NAME&amp;rdquo; with the name of the USB readers.&lt;/p>
-&lt;p>If you don’t know the reader&amp;rsquo;s names, read the
+&lt;p>If you don&amp;rsquo;t know the names of the readers, read how to find them in the
 &lt;a href="#faq">FAQ&lt;/a>.&lt;/p>
 &lt;pre>&lt;code class="language-java">import org.eclipse.keyple.calypso.command.sam.SamRevision;
 import org.eclipse.keyple.calypso.transaction.*;
