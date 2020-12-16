@@ -549,13 +549,13 @@ assigned to them.&lt;/p>
 application is available here:&lt;/p>
 &lt;ul>
 &lt;li>
-&lt;a href="/keyple-website/keyple-website/components-java/base/core/">Keyple Core Java component&lt;/a>&lt;/li>
+&lt;a href="/keyple-website/keyple-website/components-java/core/">Keyple Core Java component&lt;/a>&lt;/li>
 &lt;li>
-&lt;a href="/keyple-website/keyple-website/components-cpp/base/core/">Keyple Core C++ component&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Remote application</title><link>/keyple-website/docs/developer-guide/remote-application/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/developer-guide/remote-application/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
-&lt;p>&lt;strong>Keyple provides the &amp;ldquo;Keyple Remote Plugins&amp;rdquo; solution which allows a terminal to communicate with a smart card reader available in another terminal&lt;/strong>.&lt;/p>
+&lt;a href="/keyple-website/keyple-website/components-cpp/core/">Keyple Core C++ component&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>Distributed application</title><link>/keyple-website/docs/developer-guide/distributed-application/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/developer-guide/distributed-application/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>&lt;strong>Keyple provides the &amp;ldquo;Keyple Distributed&amp;rdquo; solution which allows a terminal to communicate with a smart card reader available in another terminal&lt;/strong>.&lt;/p>
 &lt;p>In this way, you can manage transactions within a distributed architecture.&lt;/p>
-&lt;p>The diagram below shows the role of the &lt;strong>Keyple Remote Plugins&lt;/strong> components in the software layers used in a distributed architecture :&lt;/p>
+&lt;p>The diagram below shows the role of the &lt;strong>Keyple Distributed&lt;/strong> components in the software layers used in a distributed architecture :&lt;/p>
 &lt;figure >
 &lt;a data-fancybox="" href="/keyple-website/keyple-website/media/remote-plugin/component/Remote_Component_Overview.svg" >
 &lt;img src="/keyple-website/keyple-website/media/remote-plugin/component/Remote_Component_Overview.svg" alt="" >
@@ -566,7 +566,7 @@ application is available here:&lt;/p>
 &lt;li>In pre-requisite, read page
 &lt;a href="/keyple-website/keyple-website/docs/developer-guide/centralized-application/">Develop a Centralized Application&lt;/a> to understand the main concepts of Keyple in a centralized application.&lt;/li>
 &lt;li>Read chapter
-&lt;a href="#concepts">Concepts&lt;/a> to understand the main terms and concepts of the &lt;strong>Keyple Remote Plugins&lt;/strong> solution.&lt;/li>
+&lt;a href="#concepts">Concepts&lt;/a> to understand the main terms and concepts of the &lt;strong>Keyple Distributed&lt;/strong> solution.&lt;/li>
 &lt;li>Read the introduction of chapter
 &lt;a href="#remote-plugins">Remote Plugins&lt;/a> to be informed about the different remote plugins and APIs proposed by the solution.&lt;/li>
 &lt;li>Using chapter
@@ -644,7 +644,7 @@ width: 130px;
 &lt;/figure>
 &lt;p>The second diagram below illustrates an arbitrary more complex possible use case with several hardware readers connected to different terminals.&lt;/p>
 &lt;p>These could be for example a ticketing reloading service, where the intelligence would be on the terminal with remote readers, with thin clients on A &amp;amp; B terminals communicating locally with the cards.&lt;/p>
-&lt;p>In this use case, the &lt;strong>Keyple Remote Plugins&lt;/strong> solution is use for card communication.&lt;/p>
+&lt;p>In this use case, the &lt;strong>Keyple Distributed&lt;/strong> solution is use for card communication.&lt;/p>
 &lt;figure >
 &lt;a data-fancybox="" href="/keyple-website/keyple-website/media/remote-plugin/component/Remote_Component_Concepts_2.svg" >
 &lt;img src="/keyple-website/keyple-website/media/remote-plugin/component/Remote_Component_Concepts_2.svg" alt="" >
@@ -652,14 +652,14 @@ width: 130px;
 &lt;/figure>
 &lt;p>Here is another example, but this time it illustrates several &lt;strong>Remote Plugin&lt;/strong> components connected to the same &lt;strong>Local Service&lt;/strong>.&lt;/p>
 &lt;p>These could be for example ticketing terminals with transaction logic, which communicate locally with cards, but which do not have SAM, and which use a SAM server with hardware reader.&lt;/p>
-&lt;p>In this use case, the &lt;strong>Keyple Remote Plugins&lt;/strong> solution is use for SAM communication.&lt;/p>
+&lt;p>In this use case, the &lt;strong>Keyple Distributed&lt;/strong> solution is use for SAM communication.&lt;/p>
 &lt;figure >
 &lt;a data-fancybox="" href="/keyple-website/keyple-website/media/remote-plugin/component/Remote_Component_Concepts_3.svg" >
 &lt;img src="/keyple-website/keyple-website/media/remote-plugin/component/Remote_Component_Concepts_3.svg" alt="" >
 &lt;/a>
 &lt;/figure>
 &lt;h2 id="remote-plugins">Remote Plugins&lt;/h2>
-&lt;p>The &lt;strong>Keyple Remote Plugins&lt;/strong> solution provides &lt;strong>3&lt;/strong> different specific &lt;strong>Remote Plugin&lt;/strong> components, each one having a specific API described in chapter
+&lt;p>The &lt;strong>Keyple Distributed&lt;/strong> solution provides &lt;strong>3&lt;/strong> different specific &lt;strong>Remote Plugin&lt;/strong> components, each one having a specific API described in chapter
 &lt;a href="#remote-plugins-apis">Remote Plugins APIs&lt;/a> designed on a &lt;strong>Client-Server&lt;/strong> model in which &lt;strong>the Client is always the initiator of the communication&lt;/strong> :&lt;/p>
 &lt;div id="plugins-table-1">
 &lt;table>
@@ -920,7 +920,7 @@ width: 220px;
 &lt;/li>
 &lt;/ul>
 &lt;h2 id="remote-plugins-apis">Remote Plugins APIs&lt;/h2>
-&lt;p>The class diagrams below shows the different APIs exposed and SPIs required by the &lt;strong>Keyple Remote Plugins&lt;/strong> solution.&lt;/p>
+&lt;p>The class diagrams below shows the different APIs exposed and SPIs required by the &lt;strong>Keyple Distributed&lt;/strong> solution.&lt;/p>
 &lt;p>An &lt;strong>SPI&lt;/strong> (Service Provider Interface) is an interface that must be implemented by the user.&lt;/p>
 &lt;p>Here are the available APIs depending on the library imported by your project :&lt;/p>
 &lt;table>
@@ -1251,7 +1251,7 @@ width: 240px;
 &lt;/tbody>
 &lt;/table>
 &lt;h2 id="network-configuration">Network configuration&lt;/h2>
-&lt;p>The &lt;strong>Keyple Remote Plugins&lt;/strong> solution &lt;strong>does not provide&lt;/strong> the network layer implementation, but it provides a set of SPIs (Service Provider Interfaces) to be implemented by the user in order to enable it to exchange data between &lt;strong>Remote Plugin&lt;/strong> and &lt;strong>Local Service&lt;/strong> components.&lt;/p>
+&lt;p>The &lt;strong>Keyple Distributed&lt;/strong> solution &lt;strong>does not provide&lt;/strong> the network layer implementation, but it provides a set of SPIs (Service Provider Interfaces) to be implemented by the user in order to enable it to exchange data between &lt;strong>Remote Plugin&lt;/strong> and &lt;strong>Local Service&lt;/strong> components.&lt;/p>
 &lt;h3 id="synchronous">Synchronous&lt;/h3>
 &lt;p>Choose this mode if you want to implement a Client-Server &lt;strong>Synchronous&lt;/strong> communication protocol, such as standard HTTP for example.&lt;/p>
 &lt;table>

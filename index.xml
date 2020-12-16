@@ -17,11 +17,12 @@ Keyple project
 &lt;/div>
 &lt;/div>
 &lt;h2 id="overview">Overview&lt;/h2>
-&lt;p>The &lt;strong>Keyple Calypso&lt;/strong> C++ component is a Keyple extension for &lt;strong>Calypso®&lt;/strong> technology.&lt;/p>
+&lt;p>The &lt;strong>Keyple Calypso&lt;/strong> C++ component is a Keyple reader extension for &lt;strong>Calypso®&lt;/strong> technology.&lt;/p>
 &lt;p>It can be used on &lt;strong>PC&lt;/strong> and &lt;strong>MAC&lt;/strong> platforms.&lt;/p>
 &lt;h2 id="documentation">Documentation&lt;/h2>
 &lt;ul>
-&lt;li>&lt;a href="../../../docs/developer-guide/calypso-application">Developer guide&lt;/a>&lt;/li>
+&lt;li>
+&lt;a href="/keyple-website/keyple-website/docs/developer-guide/calypso-application/">Developer guide&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;h2 id="download">Download&lt;/h2>
 &lt;p>All sources are available on
@@ -47,7 +48,8 @@ Keyple project
 &lt;p>It can be used on &lt;strong>PC&lt;/strong>, &lt;strong>MAC&lt;/strong> and &lt;strong>Android&lt;/strong> platforms.&lt;/p>
 &lt;h2 id="documentation">Documentation&lt;/h2>
 &lt;ul>
-&lt;li>&lt;a href="../../../docs/developer-guide/calypso-application">Developer guide&lt;/a>&lt;/li>
+&lt;li>
+&lt;a href="/keyple-website/keyple-website/docs/developer-guide/calypso-application/">Developer guide&lt;/a>&lt;/li>
 &lt;li>&lt;a href="../../../docs/api-reference/keyple-java-calypso/1.0.0/index.html">JavaDoc API&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;h2 id="download">Download&lt;/h2>
@@ -72,78 +74,7 @@ Keyple project
 &lt;ul>
 &lt;li>Direct
 &lt;a href="https://search.maven.org/search?q=a:keyple-java-calypso" target="_blank" rel="noopener">download&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Keyple Core</title><link>/keyple-website/components-cpp/base/core/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/components-cpp/base/core/</guid><description>&lt;div class="alert alert-note">
-&lt;div>
-&lt;strong>&lt;code>0.9.0&lt;/code>&lt;/strong>
-     
-&lt;i class="fas fa-users-cog pr-1 fa-fw">&lt;/i>
-Keyple project
-     
-&lt;i class="fas fa-download pr-1 fa-fw">&lt;/i>
-&lt;a href="#download">Download&lt;/a>
-     
-&lt;i class="fab fa-github pr-1 fa-fw">&lt;/i>
-&lt;a href="https://github.com/eclipse/keyple-cpp/tree/master/component/keyple-core">GitHub&lt;/a>
-     
-&lt;i class="fas fa-exchange-alt pr-1 fa-fw">&lt;/i>
-&lt;a href="https://github.com/eclipse/keyple-cpp/releases/">Changelogs&lt;/a>
-&lt;/div>
-&lt;/div>
-&lt;h2 id="overview">Overview&lt;/h2>
-&lt;p>The &lt;strong>Keyple Core&lt;/strong> C++ component is compatible with &lt;strong>PC&lt;/strong> and &lt;strong>MAC&lt;/strong> platforms.&lt;/p>
-&lt;h2 id="documentation">Documentation&lt;/h2>
-&lt;ul>
-&lt;li>&lt;a href="../../../docs/developer-guide/centralized-application">Developer guide&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;h2 id="download">Download&lt;/h2>
-&lt;p>All sources are available on
-&lt;a href="https://github.com/eclipse/keyple-cpp/" target="_blank" rel="noopener">GitHub&lt;/a>.&lt;/p></description></item><item><title>Keyple Core</title><link>/keyple-website/components-java/base/core/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/components-java/base/core/</guid><description>&lt;div class="alert alert-note">
-&lt;div>
-&lt;strong>&lt;code>1.0.0&lt;/code>&lt;/strong>
-     
-&lt;i class="fas fa-users-cog pr-1 fa-fw">&lt;/i>
-Keyple project
-     
-&lt;i class="fas fa-download pr-1 fa-fw">&lt;/i>
-&lt;a href="#download">Download&lt;/a>
-     
-&lt;i class="fab fa-github pr-1 fa-fw">&lt;/i>
-&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/component/keyple-core">GitHub&lt;/a>
-     
-&lt;i class="fas fa-exchange-alt pr-1 fa-fw">&lt;/i>
-&lt;a href="https://github.com/eclipse/keyple-java/releases/">Changelogs&lt;/a>
-&lt;/div>
-&lt;/div>
-&lt;h2 id="overview">Overview&lt;/h2>
-&lt;p>The &lt;strong>Keyple Core&lt;/strong> Java component is compatible with &lt;strong>PC&lt;/strong>, &lt;strong>MAC&lt;/strong> and &lt;strong>Android&lt;/strong> platforms.&lt;/p>
-&lt;h2 id="documentation">Documentation&lt;/h2>
-&lt;ul>
-&lt;li>&lt;a href="../../../docs/developer-guide/centralized-application">Developer guide&lt;/a>&lt;/li>
-&lt;li>&lt;a href="../../../docs/api-reference/keyple-java-core/1.0.0/index.html">JavaDoc API&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;h2 id="download">Download&lt;/h2>
-&lt;p>All deliverables are available on the
-&lt;a href="https://search.maven.org/" target="_blank" rel="noopener">Maven Central Repository&lt;/a>.&lt;/p>
-&lt;ul>
-&lt;li>Using
-&lt;a href="https://gradle.org/" target="_blank" rel="noopener">Gradle&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;pre>&lt;code class="language-gradle">implementation 'org.eclipse.keyple:keyple-java-core:1.0.0'
-&lt;/code>&lt;/pre>
-&lt;ul>
-&lt;li>Using
-&lt;a href="https://maven.apache.org/" target="_blank" rel="noopener">Maven&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;pre>&lt;code class="language-xml">&amp;lt;dependency&amp;gt;
-&amp;lt;groupId&amp;gt;org.eclipse.keyple&amp;lt;/groupId&amp;gt;
-&amp;lt;artifactId&amp;gt;keyple-java-core&amp;lt;/artifactId&amp;gt;
-&amp;lt;version&amp;gt;1.0.0&amp;lt;/version&amp;gt;
-&amp;lt;/dependency&amp;gt;
-&lt;/code>&lt;/pre>
-&lt;ul>
-&lt;li>Direct
-&lt;a href="https://search.maven.org/search?q=a:keyple-java-core" target="_blank" rel="noopener">download&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Keyple DS Local</title><link>/keyple-website/components-java/base/ds-local/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/components-java/base/ds-local/</guid><description>&lt;div class="alert alert-note">
+&lt;/ul></description></item><item><title>Keyple Distributed Local</title><link>/keyple-website/components-java/distributed-systems/local/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/components-java/distributed-systems/local/</guid><description>&lt;div class="alert alert-note">
 &lt;div>
 &lt;strong>&lt;code>1.0.0&lt;/code>&lt;/strong>
      
@@ -161,14 +92,15 @@ Keyple project
 &lt;/div>
 &lt;/div>
 &lt;h2 id="overview">Overview&lt;/h2>
-&lt;p>The &lt;strong>Keyple DS Local&lt;/strong> Java component is the part of the &lt;strong>Keyple DS (Distributed System)&lt;/strong> solution which contains all the &lt;strong>local&lt;/strong> services.&lt;/p>
+&lt;p>The &lt;strong>Keyple Distributed Local&lt;/strong> Java component is the part of the &lt;strong>Keyple Distributed&lt;/strong> solution which contains all the &lt;strong>local&lt;/strong> services.&lt;/p>
 &lt;p>It must be imported and used by the application installed on the terminal having local access to the smart card reader but wishes to delegate all or part of the ticketing processing to a remote application.&lt;/p>
 &lt;p>It is important to note that it uses and exposes the APIs exposed by
-&lt;a href="/keyple-website/keyple-website/components-java/base/ds-network/">Keyple DS Network&lt;/a> component.&lt;/p>
+&lt;a href="/keyple-website/keyple-website/components-java/distributed-systems/network/">Keyple Distributed Network&lt;/a> component.&lt;/p>
 &lt;p>It is compatible with &lt;strong>PC&lt;/strong>, &lt;strong>MAC&lt;/strong> and &lt;strong>Android&lt;/strong> platforms.&lt;/p>
 &lt;h2 id="documentation">Documentation&lt;/h2>
 &lt;ul>
-&lt;li>&lt;a href="../../../docs/developer-guide/remote-application">Developer guide&lt;/a>&lt;/li>
+&lt;li>
+&lt;a href="/keyple-website/keyple-website/docs/developer-guide/distributed-application/">Developer guide&lt;/a>&lt;/li>
 &lt;li>&lt;a href="../../../docs/api-reference/keyple-plugin-remote-local/1.0.0/index.html">JavaDoc API&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;h2 id="download">Download&lt;/h2>
@@ -193,7 +125,7 @@ Keyple project
 &lt;ul>
 &lt;li>Direct
 &lt;a href="https://search.maven.org/search?q=a:keyple-plugin-remote-local" target="_blank" rel="noopener">download&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Keyple DS Network</title><link>/keyple-website/components-java/base/ds-network/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/components-java/base/ds-network/</guid><description>&lt;div class="alert alert-note">
+&lt;/ul></description></item><item><title>Keyple Distributed Network</title><link>/keyple-website/components-java/distributed-systems/network/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/components-java/distributed-systems/network/</guid><description>&lt;div class="alert alert-note">
 &lt;div>
 &lt;strong>&lt;code>1.0.0&lt;/code>&lt;/strong>
      
@@ -211,14 +143,15 @@ Keyple project
 &lt;/div>
 &lt;/div>
 &lt;h2 id="overview">Overview&lt;/h2>
-&lt;p>The &lt;strong>Keyple DS Network&lt;/strong> Java component is the part of the &lt;strong>Keyple DS (Distributed System)&lt;/strong> solution which contains the common network elements used by
-&lt;a href="/keyple-website/keyple-website/components-java/base/ds-local/">Keyple DS Local&lt;/a> and
-&lt;a href="/keyple-website/keyple-website/components-java/base/ds-remote/">Keyple DS Remote&lt;/a> components.&lt;/p>
-&lt;p>This library &lt;strong>should not be import explicitly because it&amp;rsquo;s imported by transitivity&lt;/strong> by the main libraries.&lt;/p>
+&lt;p>The &lt;strong>Keyple Distributed Network&lt;/strong> Java component is the part of the &lt;strong>Keyple Distributed&lt;/strong> solution which contains the common network elements used by
+&lt;a href="/keyple-website/keyple-website/components-java/distributed-systems/local/">Keyple Distributed Local&lt;/a> and
+&lt;a href="/keyple-website/keyple-website/components-java/distributed-systems/remote/">Keyple Distributed Remote&lt;/a> components.&lt;/p>
+&lt;p>This library &lt;strong>should not be import explicitly because it&amp;rsquo;s imported by transitivity&lt;/strong> by the other components.&lt;/p>
 &lt;p>It is compatible with &lt;strong>PC&lt;/strong>, &lt;strong>MAC&lt;/strong> and &lt;strong>Android&lt;/strong> platforms.&lt;/p>
 &lt;h2 id="documentation">Documentation&lt;/h2>
 &lt;ul>
-&lt;li>&lt;a href="../../../docs/developer-guide/remote-application">Developer guide&lt;/a>&lt;/li>
+&lt;li>
+&lt;a href="/keyple-website/keyple-website/docs/developer-guide/distributed-application/">Developer guide&lt;/a>&lt;/li>
 &lt;li>&lt;a href="../../../docs/api-reference/keyple-plugin-remote-network/1.0.0/index.html">JavaDoc API&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;h2 id="download">Download&lt;/h2>
@@ -243,56 +176,6 @@ Keyple project
 &lt;ul>
 &lt;li>Direct
 &lt;a href="https://search.maven.org/search?q=a:keyple-plugin-remote-network" target="_blank" rel="noopener">download&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Keyple DS Remote</title><link>/keyple-website/components-java/base/ds-remote/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/components-java/base/ds-remote/</guid><description>&lt;div class="alert alert-note">
-&lt;div>
-&lt;strong>&lt;code>1.0.0&lt;/code>&lt;/strong>
-     
-&lt;i class="fas fa-users-cog pr-1 fa-fw">&lt;/i>
-Keyple project
-     
-&lt;i class="fas fa-download pr-1 fa-fw">&lt;/i>
-&lt;a href="#download">Download&lt;/a>
-     
-&lt;i class="fab fa-github pr-1 fa-fw">&lt;/i>
-&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/component/keyple-plugin/remote/remote">GitHub&lt;/a>
-     
-&lt;i class="fas fa-exchange-alt pr-1 fa-fw">&lt;/i>
-&lt;a href="https://github.com/eclipse/keyple-java/releases/">Changelogs&lt;/a>
-&lt;/div>
-&lt;/div>
-&lt;h2 id="overview">Overview&lt;/h2>
-&lt;p>The &lt;strong>Keyple DS Remote&lt;/strong> Java component is the part of the &lt;strong>Keyple DS (Distributed System)&lt;/strong> solution which contains all the &lt;strong>remote&lt;/strong> plugins.&lt;/p>
-&lt;p>It must be imported and used by the application installed on the terminal not having local access to the smart card reader and that wishes to control the reader remotely.&lt;/p>
-&lt;p>It is important to note that it uses and exposes the APIs exposed by
-&lt;a href="/keyple-website/keyple-website/components-java/base/ds-network/">Keyple DS Network&lt;/a> component.&lt;/p>
-&lt;p>It is compatible with &lt;strong>PC&lt;/strong>, &lt;strong>MAC&lt;/strong> and &lt;strong>Android&lt;/strong> platforms.&lt;/p>
-&lt;h2 id="documentation">Documentation&lt;/h2>
-&lt;ul>
-&lt;li>&lt;a href="../../../docs/developer-guide/remote-application">Developer guide&lt;/a>&lt;/li>
-&lt;li>&lt;a href="../../../docs/api-reference/keyple-plugin-remote-remote/1.0.0/index.html">JavaDoc API&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;h2 id="download">Download&lt;/h2>
-&lt;p>All deliverables are available on the
-&lt;a href="https://search.maven.org/" target="_blank" rel="noopener">Maven Central Repository&lt;/a>.&lt;/p>
-&lt;ul>
-&lt;li>Using
-&lt;a href="https://gradle.org/" target="_blank" rel="noopener">Gradle&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;pre>&lt;code class="language-gradle">implementation 'org.eclipse.keyple:keyple-plugin-remote-remote:1.0.0'
-&lt;/code>&lt;/pre>
-&lt;ul>
-&lt;li>Using
-&lt;a href="https://maven.apache.org/" target="_blank" rel="noopener">Maven&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;pre>&lt;code class="language-xml">&amp;lt;dependency&amp;gt;
-&amp;lt;groupId&amp;gt;org.eclipse.keyple&amp;lt;/groupId&amp;gt;
-&amp;lt;artifactId&amp;gt;keyple-plugin-remote-remote&amp;lt;/artifactId&amp;gt;
-&amp;lt;version&amp;gt;1.0.0&amp;lt;/version&amp;gt;
-&amp;lt;/dependency&amp;gt;
-&lt;/code>&lt;/pre>
-&lt;ul>
-&lt;li>Direct
-&lt;a href="https://search.maven.org/search?q=a:keyple-plugin-remote-remote" target="_blank" rel="noopener">download&lt;/a>&lt;/li>
 &lt;/ul></description></item><item><title>Keyple Plugin NFC</title><link>/keyple-website/components-java/plugins/nfc/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/components-java/plugins/nfc/</guid><description>&lt;div class="alert alert-note">
 &lt;div>
 &lt;strong>&lt;code>1.0.0&lt;/code>&lt;/strong>
@@ -315,7 +198,8 @@ Keyple project
 &lt;p>It is compatible with &lt;strong>Android 4.4 minimum&lt;/strong>.&lt;/p>
 &lt;h2 id="documentation">Documentation&lt;/h2>
 &lt;ul>
-&lt;li>&lt;a href="../../../docs/developer-guide/centralized-application">Developer guide&lt;/a>&lt;/li>
+&lt;li>
+&lt;a href="/keyple-website/keyple-website/docs/developer-guide/centralized-application/">Developer guide&lt;/a>&lt;/li>
 &lt;li>&lt;a href="../../../docs/api-reference/keyple-android-plugin-nfc/1.0.0/index.html">JavaDoc API&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;h2 id="download">Download&lt;/h2>
@@ -364,7 +248,8 @@ Keyple project
 This allows the app to benefit from enhanced SE-based security services.&lt;/p>
 &lt;h2 id="documentation">Documentation&lt;/h2>
 &lt;ul>
-&lt;li>&lt;a href="../../../docs/developer-guide/centralized-application">Developer guide&lt;/a>&lt;/li>
+&lt;li>
+&lt;a href="/keyple-website/keyple-website/docs/developer-guide/centralized-application/">Developer guide&lt;/a>&lt;/li>
 &lt;li>&lt;a href="../../../docs/api-reference/keyple-android-plugin-omapi/1.0.0/index.html">JavaDoc API&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;h2 id="download">Download&lt;/h2>
@@ -424,7 +309,8 @@ Keyple project
 &lt;p>It is compatible with &lt;strong>PC/SC Reader&lt;/strong> (Windows PC/SC WinScard API, Unix PC/SC lite API) equipment.&lt;/p>
 &lt;h2 id="documentation">Documentation&lt;/h2>
 &lt;ul>
-&lt;li>&lt;a href="../../../docs/developer-guide/centralized-application">Developer guide&lt;/a>&lt;/li>
+&lt;li>
+&lt;a href="/keyple-website/keyple-website/docs/developer-guide/centralized-application/">Developer guide&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;h2 id="download">Download&lt;/h2>
 &lt;p>All sources are available on
@@ -450,7 +336,8 @@ Keyple project
 &lt;p>It is compatible with &lt;strong>PC/SC Reader&lt;/strong> (Windows PC/SC WinScard API, Unix PC/SC lite API) equipment.&lt;/p>
 &lt;h2 id="documentation">Documentation&lt;/h2>
 &lt;ul>
-&lt;li>&lt;a href="../../../docs/developer-guide/centralized-application">Developer guide&lt;/a>&lt;/li>
+&lt;li>
+&lt;a href="/keyple-website/keyple-website/docs/developer-guide/centralized-application/">Developer guide&lt;/a>&lt;/li>
 &lt;li>&lt;a href="../../../docs/api-reference/keyple-java-plugin-pcsc/1.0.0/index.html">JavaDoc API&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;h2 id="download">Download&lt;/h2>
@@ -475,6 +362,57 @@ Keyple project
 &lt;ul>
 &lt;li>Direct
 &lt;a href="https://search.maven.org/search?q=a:keyple-java-plugin-pcsc" target="_blank" rel="noopener">download&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>Keyple Distributed Remote</title><link>/keyple-website/components-java/distributed-systems/remote/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/components-java/distributed-systems/remote/</guid><description>&lt;div class="alert alert-note">
+&lt;div>
+&lt;strong>&lt;code>1.0.0&lt;/code>&lt;/strong>
+     
+&lt;i class="fas fa-users-cog pr-1 fa-fw">&lt;/i>
+Keyple project
+     
+&lt;i class="fas fa-download pr-1 fa-fw">&lt;/i>
+&lt;a href="#download">Download&lt;/a>
+     
+&lt;i class="fab fa-github pr-1 fa-fw">&lt;/i>
+&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/component/keyple-plugin/remote/remote">GitHub&lt;/a>
+     
+&lt;i class="fas fa-exchange-alt pr-1 fa-fw">&lt;/i>
+&lt;a href="https://github.com/eclipse/keyple-java/releases/">Changelogs&lt;/a>
+&lt;/div>
+&lt;/div>
+&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>The &lt;strong>Keyple Distributed Remote&lt;/strong> Java component is the part of the &lt;strong>Keyple Distributed&lt;/strong> solution which contains all the &lt;strong>remote&lt;/strong> plugins.&lt;/p>
+&lt;p>It must be imported and used by the application installed on the terminal not having local access to the smart card reader and that wishes to control the reader remotely.&lt;/p>
+&lt;p>It is important to note that it uses and exposes the APIs exposed by
+&lt;a href="/keyple-website/keyple-website/components-java/distributed-systems/network/">Keyple Distributed Network&lt;/a> component.&lt;/p>
+&lt;p>It is compatible with &lt;strong>PC&lt;/strong>, &lt;strong>MAC&lt;/strong> and &lt;strong>Android&lt;/strong> platforms.&lt;/p>
+&lt;h2 id="documentation">Documentation&lt;/h2>
+&lt;ul>
+&lt;li>
+&lt;a href="/keyple-website/keyple-website/docs/developer-guide/distributed-application/">Developer guide&lt;/a>&lt;/li>
+&lt;li>&lt;a href="../../../docs/api-reference/keyple-plugin-remote-remote/1.0.0/index.html">JavaDoc API&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="download">Download&lt;/h2>
+&lt;p>All deliverables are available on the
+&lt;a href="https://search.maven.org/" target="_blank" rel="noopener">Maven Central Repository&lt;/a>.&lt;/p>
+&lt;ul>
+&lt;li>Using
+&lt;a href="https://gradle.org/" target="_blank" rel="noopener">Gradle&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;pre>&lt;code class="language-gradle">implementation 'org.eclipse.keyple:keyple-plugin-remote-remote:1.0.0'
+&lt;/code>&lt;/pre>
+&lt;ul>
+&lt;li>Using
+&lt;a href="https://maven.apache.org/" target="_blank" rel="noopener">Maven&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;pre>&lt;code class="language-xml">&amp;lt;dependency&amp;gt;
+&amp;lt;groupId&amp;gt;org.eclipse.keyple&amp;lt;/groupId&amp;gt;
+&amp;lt;artifactId&amp;gt;keyple-plugin-remote-remote&amp;lt;/artifactId&amp;gt;
+&amp;lt;version&amp;gt;1.0.0&amp;lt;/version&amp;gt;
+&amp;lt;/dependency&amp;gt;
+&lt;/code>&lt;/pre>
+&lt;ul>
+&lt;li>Direct
+&lt;a href="https://search.maven.org/search?q=a:keyple-plugin-remote-remote" target="_blank" rel="noopener">download&lt;/a>&lt;/li>
 &lt;/ul></description></item><item><title>Keyple Plugin Stub</title><link>/keyple-website/components-cpp/plugins/stub/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/components-cpp/plugins/stub/</guid><description>&lt;div class="alert alert-note">
 &lt;div>
 &lt;strong>&lt;code>0.9.0&lt;/code>&lt;/strong>
@@ -497,7 +435,8 @@ Keyple project
 &lt;p>It is compatible with &lt;strong>PC&lt;/strong> and &lt;strong>MAC&lt;/strong> platforms.&lt;/p>
 &lt;h2 id="documentation">Documentation&lt;/h2>
 &lt;ul>
-&lt;li>&lt;a href="../../../docs/developer-guide/centralized-application">Developer guide&lt;/a>&lt;/li>
+&lt;li>
+&lt;a href="/keyple-website/keyple-website/docs/developer-guide/centralized-application/">Developer guide&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;h2 id="download">Download&lt;/h2>
 &lt;p>All sources are available on
@@ -523,7 +462,8 @@ Keyple project
 &lt;p>It is compatible with &lt;strong>PC&lt;/strong>, &lt;strong>MAC&lt;/strong> and &lt;strong>Android&lt;/strong> platforms.&lt;/p>
 &lt;h2 id="documentation">Documentation&lt;/h2>
 &lt;ul>
-&lt;li>&lt;a href="../../../docs/developer-guide/centralized-application">Developer guide&lt;/a>&lt;/li>
+&lt;li>
+&lt;a href="/keyple-website/keyple-website/docs/developer-guide/centralized-application/">Developer guide&lt;/a>&lt;/li>
 &lt;li>&lt;a href="../../../docs/api-reference/keyple-java-plugin-stub/1.0.0/index.html">JavaDoc API&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;h2 id="download">Download&lt;/h2>
@@ -2438,13 +2378,13 @@ assigned to them.&lt;/p>
 application is available here:&lt;/p>
 &lt;ul>
 &lt;li>
-&lt;a href="/keyple-website/keyple-website/components-java/base/core/">Keyple Core Java component&lt;/a>&lt;/li>
+&lt;a href="/keyple-website/keyple-website/components-java/core/">Keyple Core Java component&lt;/a>&lt;/li>
 &lt;li>
-&lt;a href="/keyple-website/keyple-website/components-cpp/base/core/">Keyple Core C++ component&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Remote application</title><link>/keyple-website/docs/developer-guide/remote-application/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/developer-guide/remote-application/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
-&lt;p>&lt;strong>Keyple provides the &amp;ldquo;Keyple Remote Plugins&amp;rdquo; solution which allows a terminal to communicate with a smart card reader available in another terminal&lt;/strong>.&lt;/p>
+&lt;a href="/keyple-website/keyple-website/components-cpp/core/">Keyple Core C++ component&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>Distributed application</title><link>/keyple-website/docs/developer-guide/distributed-application/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/keyple-website/docs/developer-guide/distributed-application/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>&lt;strong>Keyple provides the &amp;ldquo;Keyple Distributed&amp;rdquo; solution which allows a terminal to communicate with a smart card reader available in another terminal&lt;/strong>.&lt;/p>
 &lt;p>In this way, you can manage transactions within a distributed architecture.&lt;/p>
-&lt;p>The diagram below shows the role of the &lt;strong>Keyple Remote Plugins&lt;/strong> components in the software layers used in a distributed architecture :&lt;/p>
+&lt;p>The diagram below shows the role of the &lt;strong>Keyple Distributed&lt;/strong> components in the software layers used in a distributed architecture :&lt;/p>
 &lt;figure >
 &lt;a data-fancybox="" href="/keyple-website/keyple-website/media/remote-plugin/component/Remote_Component_Overview.svg" >
 &lt;img src="/keyple-website/keyple-website/media/remote-plugin/component/Remote_Component_Overview.svg" alt="" >
@@ -2455,7 +2395,7 @@ application is available here:&lt;/p>
 &lt;li>In pre-requisite, read page
 &lt;a href="/keyple-website/keyple-website/docs/developer-guide/centralized-application/">Develop a Centralized Application&lt;/a> to understand the main concepts of Keyple in a centralized application.&lt;/li>
 &lt;li>Read chapter
-&lt;a href="#concepts">Concepts&lt;/a> to understand the main terms and concepts of the &lt;strong>Keyple Remote Plugins&lt;/strong> solution.&lt;/li>
+&lt;a href="#concepts">Concepts&lt;/a> to understand the main terms and concepts of the &lt;strong>Keyple Distributed&lt;/strong> solution.&lt;/li>
 &lt;li>Read the introduction of chapter
 &lt;a href="#remote-plugins">Remote Plugins&lt;/a> to be informed about the different remote plugins and APIs proposed by the solution.&lt;/li>
 &lt;li>Using chapter
@@ -2533,7 +2473,7 @@ width: 130px;
 &lt;/figure>
 &lt;p>The second diagram below illustrates an arbitrary more complex possible use case with several hardware readers connected to different terminals.&lt;/p>
 &lt;p>These could be for example a ticketing reloading service, where the intelligence would be on the terminal with remote readers, with thin clients on A &amp;amp; B terminals communicating locally with the cards.&lt;/p>
-&lt;p>In this use case, the &lt;strong>Keyple Remote Plugins&lt;/strong> solution is use for card communication.&lt;/p>
+&lt;p>In this use case, the &lt;strong>Keyple Distributed&lt;/strong> solution is use for card communication.&lt;/p>
 &lt;figure >
 &lt;a data-fancybox="" href="/keyple-website/keyple-website/media/remote-plugin/component/Remote_Component_Concepts_2.svg" >
 &lt;img src="/keyple-website/keyple-website/media/remote-plugin/component/Remote_Component_Concepts_2.svg" alt="" >
@@ -2541,14 +2481,14 @@ width: 130px;
 &lt;/figure>
 &lt;p>Here is another example, but this time it illustrates several &lt;strong>Remote Plugin&lt;/strong> components connected to the same &lt;strong>Local Service&lt;/strong>.&lt;/p>
 &lt;p>These could be for example ticketing terminals with transaction logic, which communicate locally with cards, but which do not have SAM, and which use a SAM server with hardware reader.&lt;/p>
-&lt;p>In this use case, the &lt;strong>Keyple Remote Plugins&lt;/strong> solution is use for SAM communication.&lt;/p>
+&lt;p>In this use case, the &lt;strong>Keyple Distributed&lt;/strong> solution is use for SAM communication.&lt;/p>
 &lt;figure >
 &lt;a data-fancybox="" href="/keyple-website/keyple-website/media/remote-plugin/component/Remote_Component_Concepts_3.svg" >
 &lt;img src="/keyple-website/keyple-website/media/remote-plugin/component/Remote_Component_Concepts_3.svg" alt="" >
 &lt;/a>
 &lt;/figure>
 &lt;h2 id="remote-plugins">Remote Plugins&lt;/h2>
-&lt;p>The &lt;strong>Keyple Remote Plugins&lt;/strong> solution provides &lt;strong>3&lt;/strong> different specific &lt;strong>Remote Plugin&lt;/strong> components, each one having a specific API described in chapter
+&lt;p>The &lt;strong>Keyple Distributed&lt;/strong> solution provides &lt;strong>3&lt;/strong> different specific &lt;strong>Remote Plugin&lt;/strong> components, each one having a specific API described in chapter
 &lt;a href="#remote-plugins-apis">Remote Plugins APIs&lt;/a> designed on a &lt;strong>Client-Server&lt;/strong> model in which &lt;strong>the Client is always the initiator of the communication&lt;/strong> :&lt;/p>
 &lt;div id="plugins-table-1">
 &lt;table>
@@ -2809,7 +2749,7 @@ width: 220px;
 &lt;/li>
 &lt;/ul>
 &lt;h2 id="remote-plugins-apis">Remote Plugins APIs&lt;/h2>
-&lt;p>The class diagrams below shows the different APIs exposed and SPIs required by the &lt;strong>Keyple Remote Plugins&lt;/strong> solution.&lt;/p>
+&lt;p>The class diagrams below shows the different APIs exposed and SPIs required by the &lt;strong>Keyple Distributed&lt;/strong> solution.&lt;/p>
 &lt;p>An &lt;strong>SPI&lt;/strong> (Service Provider Interface) is an interface that must be implemented by the user.&lt;/p>
 &lt;p>Here are the available APIs depending on the library imported by your project :&lt;/p>
 &lt;table>
@@ -3140,7 +3080,7 @@ width: 240px;
 &lt;/tbody>
 &lt;/table>
 &lt;h2 id="network-configuration">Network configuration&lt;/h2>
-&lt;p>The &lt;strong>Keyple Remote Plugins&lt;/strong> solution &lt;strong>does not provide&lt;/strong> the network layer implementation, but it provides a set of SPIs (Service Provider Interfaces) to be implemented by the user in order to enable it to exchange data between &lt;strong>Remote Plugin&lt;/strong> and &lt;strong>Local Service&lt;/strong> components.&lt;/p>
+&lt;p>The &lt;strong>Keyple Distributed&lt;/strong> solution &lt;strong>does not provide&lt;/strong> the network layer implementation, but it provides a set of SPIs (Service Provider Interfaces) to be implemented by the user in order to enable it to exchange data between &lt;strong>Remote Plugin&lt;/strong> and &lt;strong>Local Service&lt;/strong> components.&lt;/p>
 &lt;h3 id="synchronous">Synchronous&lt;/h3>
 &lt;p>Choose this mode if you want to implement a Client-Server &lt;strong>Synchronous&lt;/strong> communication protocol, such as standard HTTP for example.&lt;/p>
 &lt;table>
