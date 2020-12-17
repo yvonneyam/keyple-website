@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Eclipse Keyple</title><link>/</link><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><description>Eclipse Keyple</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Copyright © Eclipse Foundation, Inc. All Rights Reserved.</copyright><lastBuildDate>Fri, 25 Sep 2020 14:57:23 +0200</lastBuildDate><image><url>/images/logo_hu673a59176cd62c570f44ed2728665b48_42188_300x300_fit_lanczos_2.png</url><title>Eclipse Keyple</title><link>/</link></image><item><title>Add your support &amp; trainings</title><link>/support-trainings/add-support-trainings/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/support-trainings/add-support-trainings/</guid><description>&lt;p>To add your support &amp;amp; trainings made a
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Eclipse Keyple</title><link>https://keyple.org/</link><atom:link href="https://keyple.org/index.xml" rel="self" type="application/rss+xml"/><description>Eclipse Keyple</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Copyright © Eclipse Foundation, Inc. All Rights Reserved.</copyright><lastBuildDate>Fri, 25 Sep 2020 14:57:23 +0200</lastBuildDate><image><url>https://keyple.org/images/logo_hu673a59176cd62c570f44ed2728665b48_42188_300x300_fit_lanczos_2.png</url><title>Eclipse Keyple</title><link>https://keyple.org/</link></image><item><title>Add your support &amp; trainings</title><link>https://keyple.org/support-trainings/add-support-trainings/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/support-trainings/add-support-trainings/</guid><description>&lt;p>To add your support &amp;amp; trainings made a
 &lt;a href="https://github.com/eclipse/keyple-website/pulls" target="_blank" rel="noopener">Pull request&lt;/a> contributions on GitHub.&lt;/p>
 &lt;p>In order for your contribution to be accepted you must comply with one of the conditions below:&lt;/p>
 &lt;ul>
@@ -6,7 +6,7 @@
 &lt;li>Having contributed to one of the components of Eclipse Keyple™ project&lt;/li>
 &lt;li>Be a
 &lt;a href="https://iot.eclipse.org/adopters/" target="_blank" rel="noopener">adopter/user&lt;/a> of Eclipse Keyple™&lt;/li>
-&lt;/ul></description></item><item><title>Keyple Calypso</title><link>/components-cpp/extensions/calypso/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/components-cpp/extensions/calypso/</guid><description>&lt;div class="alert alert-note">
+&lt;/ul></description></item><item><title>Keyple Calypso</title><link>https://keyple.org/components-cpp/extensions/calypso/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/components-cpp/extensions/calypso/</guid><description>&lt;div class="alert alert-note">
 &lt;div>
 &lt;strong>&lt;code>0.9.0&lt;/code>&lt;/strong>
      
@@ -33,7 +33,7 @@ Keyple project
 &lt;/ul>
 &lt;h2 id="download">Download&lt;/h2>
 &lt;p>All sources are available on
-&lt;a href="https://github.com/eclipse/keyple-cpp/" target="_blank" rel="noopener">GitHub&lt;/a>.&lt;/p></description></item><item><title>Keyple Calypso</title><link>/components-java/extensions/calypso/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/components-java/extensions/calypso/</guid><description>&lt;div class="alert alert-note">
+&lt;a href="https://github.com/eclipse/keyple-cpp/" target="_blank" rel="noopener">GitHub&lt;/a>.&lt;/p></description></item><item><title>Keyple Calypso</title><link>https://keyple.org/components-java/extensions/calypso/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/components-java/extensions/calypso/</guid><description>&lt;div class="alert alert-note">
 &lt;div>
 &lt;strong>&lt;code>1.0.0&lt;/code>&lt;/strong>
      
@@ -81,7 +81,7 @@ Keyple project
 &lt;ul>
 &lt;li>Direct
 &lt;a href="https://search.maven.org/search?q=a:keyple-java-calypso" target="_blank" rel="noopener">download&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Keyple Distributed Local</title><link>/components-java/distributed-systems/local/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/components-java/distributed-systems/local/</guid><description>&lt;div class="alert alert-note">
+&lt;/ul></description></item><item><title>Keyple Distributed Local</title><link>https://keyple.org/components-java/distributed-systems/local/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/components-java/distributed-systems/local/</guid><description>&lt;div class="alert alert-note">
 &lt;div>
 &lt;strong>&lt;code>1.0.0&lt;/code>&lt;/strong>
      
@@ -132,7 +132,7 @@ Keyple project
 &lt;ul>
 &lt;li>Direct
 &lt;a href="https://search.maven.org/search?q=a:keyple-java-distributed-local" target="_blank" rel="noopener">download&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Keyple Distributed Network</title><link>/components-java/distributed-systems/network/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/components-java/distributed-systems/network/</guid><description>&lt;div class="alert alert-note">
+&lt;/ul></description></item><item><title>Keyple Distributed Network</title><link>https://keyple.org/components-java/distributed-systems/network/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/components-java/distributed-systems/network/</guid><description>&lt;div class="alert alert-note">
 &lt;div>
 &lt;strong>&lt;code>1.0.0&lt;/code>&lt;/strong>
      
@@ -183,7 +183,7 @@ Keyple project
 &lt;ul>
 &lt;li>Direct
 &lt;a href="https://search.maven.org/search?q=a:keyple-java-distributed-network" target="_blank" rel="noopener">download&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Keyple Plugin NFC</title><link>/components-java/plugins/nfc/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/components-java/plugins/nfc/</guid><description>&lt;div class="alert alert-note">
+&lt;/ul></description></item><item><title>Keyple Plugin NFC</title><link>https://keyple.org/components-java/plugins/nfc/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/components-java/plugins/nfc/</guid><description>&lt;div class="alert alert-note">
 &lt;div>
 &lt;strong>&lt;code>1.0.0&lt;/code>&lt;/strong>
      
@@ -231,7 +231,7 @@ Keyple project
 &lt;ul>
 &lt;li>Direct
 &lt;a href="https://search.maven.org/search?q=a:keyple-android-plugin-nfc" target="_blank" rel="noopener">download&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Keyple Plugin OMAPI</title><link>/components-java/plugins/omapi/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/components-java/plugins/omapi/</guid><description>&lt;div class="alert alert-note">
+&lt;/ul></description></item><item><title>Keyple Plugin OMAPI</title><link>https://keyple.org/components-java/plugins/omapi/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/components-java/plugins/omapi/</guid><description>&lt;div class="alert alert-note">
 &lt;div>
 &lt;strong>&lt;code>1.0.0&lt;/code>&lt;/strong>
      
@@ -281,7 +281,7 @@ This allows the app to benefit from enhanced SE-based security services.&lt;/p>
 &lt;ul>
 &lt;li>Direct
 &lt;a href="https://search.maven.org/search?q=a:keyple-android-plugin-omapi" target="_blank" rel="noopener">download&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Overview</title><link>/what-is-keyple/overview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/what-is-keyple/overview/</guid><description>&lt;p>Coming from a rather closed technical environment, ticketing for transport is essentially based on proprietary solutions provided by manufacturers.
+&lt;/ul></description></item><item><title>Overview</title><link>https://keyple.org/what-is-keyple/overview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/what-is-keyple/overview/</guid><description>&lt;p>Coming from a rather closed technical environment, ticketing for transport is essentially based on proprietary solutions provided by manufacturers.
 However, in order for the concept of Mobility as a Service to become a reality, and at a reasonable cost, the ecosystem should, as far as possible,
 rely on open standards, APIs and SDKs as well as Open Source technologies. This openness has already been a reality for several years in the field
 of passenger information and has enabled the explosion of rich and high-quality applications, thanks in particular to Open Data. Today, Eclipse
@@ -294,7 +294,7 @@ security and interoperability.&lt;/p>
 readers and portals that use smart cards and mobile applications to enter and exit.&lt;/p>
 &lt;p>As an open source technology, Eclipse Keyple™ offers uniformity of structure but does not lock you into a specific ticketing system. Plugins and
 extensions are being created, or may be created by developers, to allow ticket processing integrating technologies other than Calypso®, based on
-several programming languages.&lt;/p></description></item><item><title>Keyple Plugin PC/SC</title><link>/components-cpp/plugins/pcsc/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/components-cpp/plugins/pcsc/</guid><description>&lt;div class="alert alert-note">
+several programming languages.&lt;/p></description></item><item><title>Keyple Plugin PC/SC</title><link>https://keyple.org/components-cpp/plugins/pcsc/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/components-cpp/plugins/pcsc/</guid><description>&lt;div class="alert alert-note">
 &lt;div>
 &lt;strong>&lt;code>0.9.0&lt;/code>&lt;/strong>
      
@@ -321,7 +321,7 @@ Keyple project
 &lt;/ul>
 &lt;h2 id="download">Download&lt;/h2>
 &lt;p>All sources are available on
-&lt;a href="https://github.com/eclipse/keyple-cpp/" target="_blank" rel="noopener">GitHub&lt;/a>.&lt;/p></description></item><item><title>Keyple Plugin PC/SC</title><link>/components-java/plugins/pcsc/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/components-java/plugins/pcsc/</guid><description>&lt;div class="alert alert-note">
+&lt;a href="https://github.com/eclipse/keyple-cpp/" target="_blank" rel="noopener">GitHub&lt;/a>.&lt;/p></description></item><item><title>Keyple Plugin PC/SC</title><link>https://keyple.org/components-java/plugins/pcsc/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/components-java/plugins/pcsc/</guid><description>&lt;div class="alert alert-note">
 &lt;div>
 &lt;strong>&lt;code>1.0.0&lt;/code>&lt;/strong>
      
@@ -369,7 +369,7 @@ Keyple project
 &lt;ul>
 &lt;li>Direct
 &lt;a href="https://search.maven.org/search?q=a:keyple-java-plugin-pcsc" target="_blank" rel="noopener">download&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Keyple Distributed Remote</title><link>/components-java/distributed-systems/remote/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/components-java/distributed-systems/remote/</guid><description>&lt;div class="alert alert-note">
+&lt;/ul></description></item><item><title>Keyple Distributed Remote</title><link>https://keyple.org/components-java/distributed-systems/remote/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/components-java/distributed-systems/remote/</guid><description>&lt;div class="alert alert-note">
 &lt;div>
 &lt;strong>&lt;code>1.0.0&lt;/code>&lt;/strong>
      
@@ -420,7 +420,7 @@ Keyple project
 &lt;ul>
 &lt;li>Direct
 &lt;a href="https://search.maven.org/search?q=a:keyple-java-distributed-remote" target="_blank" rel="noopener">download&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Keyple Plugin Stub</title><link>/components-cpp/plugins/stub/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/components-cpp/plugins/stub/</guid><description>&lt;div class="alert alert-note">
+&lt;/ul></description></item><item><title>Keyple Plugin Stub</title><link>https://keyple.org/components-cpp/plugins/stub/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/components-cpp/plugins/stub/</guid><description>&lt;div class="alert alert-note">
 &lt;div>
 &lt;strong>&lt;code>0.9.0&lt;/code>&lt;/strong>
      
@@ -447,7 +447,7 @@ Keyple project
 &lt;/ul>
 &lt;h2 id="download">Download&lt;/h2>
 &lt;p>All sources are available on
-&lt;a href="https://github.com/eclipse/keyple-cpp/" target="_blank" rel="noopener">GitHub&lt;/a>.&lt;/p></description></item><item><title>Keyple Plugin Stub</title><link>/components-java/plugins/stub/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/components-java/plugins/stub/</guid><description>&lt;div class="alert alert-note">
+&lt;a href="https://github.com/eclipse/keyple-cpp/" target="_blank" rel="noopener">GitHub&lt;/a>.&lt;/p></description></item><item><title>Keyple Plugin Stub</title><link>https://keyple.org/components-java/plugins/stub/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/components-java/plugins/stub/</guid><description>&lt;div class="alert alert-note">
 &lt;div>
 &lt;strong>&lt;code>1.0.0&lt;/code>&lt;/strong>
      
@@ -495,7 +495,7 @@ Keyple project
 &lt;ul>
 &lt;li>Direct
 &lt;a href="https://search.maven.org/search?q=a:keyple-java-plugin-stub" target="_blank" rel="noopener">download&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Calypso Networks Association</title><link>/support-trainings/cna/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/support-trainings/cna/</guid><description>&lt;p>Calypso Networks Association (CNA) is a non-profit organization dedicated to improve contactless
+&lt;/ul></description></item><item><title>Calypso Networks Association</title><link>https://keyple.org/support-trainings/cna/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/support-trainings/cna/</guid><description>&lt;p>Calypso Networks Association (CNA) is a non-profit organization dedicated to improve contactless
 electronic ticketing for transportation and access control standards since 2003.
 For many years, our mission has been to create innovative solutions that are fully interoperable,
 reliable, secure, and open. We collaborate with a dynamic network of city leaders and transport
@@ -506,7 +506,7 @@ authorities that are keen to work with system integrators with Calypso® standar
 to ensure all users can get the most out of Calypso® technology and Eclipse Keyple™.&lt;/p>
 &lt;p>Calypso Networks Association provides a Calypso Test Kit. The Calypso Test Kit aims at helping
 ticketing system developers to fully experience Eclipse Keyple™ with a set of Calypso® SAM and
-Calypso® certified portable objects from several manufacturers in various configurations.&lt;/p></description></item><item><title>Why trust Eclipse Keyple™?</title><link>/what-is-keyple/why-trust/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/what-is-keyple/why-trust/</guid><description>&lt;p>Eclipse Keyple™ is an Eclipse open source project currently leaded by Calypso Networks Association, which has been the leader in contactless
+Calypso® certified portable objects from several manufacturers in various configurations.&lt;/p></description></item><item><title>Why trust Eclipse Keyple™?</title><link>https://keyple.org/what-is-keyple/why-trust/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/what-is-keyple/why-trust/</guid><description>&lt;p>Eclipse Keyple™ is an Eclipse open source project currently leaded by Calypso Networks Association, which has been the leader in contactless
 electronic ticketing transportation standards since 2003.&lt;/p>
 &lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
 &lt;iframe src="https://www.youtube.com/embed/3CWNho1rrSw" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
@@ -546,7 +546,7 @@ electronic ticketing transportation standards since 2003.&lt;/p>
 &lt;td>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>Who is it for?</title><link>/what-is-keyple/who-is-it-for/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/what-is-keyple/who-is-it-for/</guid><description>&lt;p>Whether you are a transport authority or operator, a mobility provider, a system integrator, an event manager, a mobility aggregator
+&lt;/table></description></item><item><title>Who is it for?</title><link>https://keyple.org/what-is-keyple/who-is-it-for/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/what-is-keyple/who-is-it-for/</guid><description>&lt;p>Whether you are a transport authority or operator, a mobility provider, a system integrator, an event manager, a mobility aggregator
 or a multi-mobility startup, Eclipse Keyple™ allows you to:&lt;/p>
 &lt;ul>
 &lt;li>Reduce your costs and accelerate your developments.&lt;/li>
@@ -565,7 +565,7 @@ or a multi-mobility startup, Eclipse Keyple™ allows you to:&lt;/p>
 &lt;li>Quickly build new apps and integrations that conform to the Calypso® standard and other ticketing schemas.&lt;/li>
 &lt;li>Easily migrate from an existing, closed ticketing schemes to Calypso®, a high-end open ticketing, certified solution.&lt;/li>
 &lt;li>Easily integrate with public transport providers that are using the Calypso® standard, today used in major cities around the world in over 25 countries.&lt;/li>
-&lt;/ul></description></item><item><title>What is Calypso®?</title><link>/what-is-keyple/what-is-calypso/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/what-is-keyple/what-is-calypso/</guid><description>&lt;p>Calypso® is a set of specifications describing a fast and secure off-line contactless transaction, between a portable object and a terminal.
+&lt;/ul></description></item><item><title>What is Calypso®?</title><link>https://keyple.org/what-is-keyple/what-is-calypso/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/what-is-keyple/what-is-calypso/</guid><description>&lt;p>Calypso® is a set of specifications describing a fast and secure off-line contactless transaction, between a portable object and a terminal.
 It has been created for public transport ticketing at the end of the 1990s by some European public transport operators or authority
 (RATP and SNCF in Paris and all France, STIB in Brussels, OTLIS in Lisbon, ACTV in Venice, Konstanz in Germany), in order to create an open,
 interoperable and secure standard independent from industrials to ensure a real competition.&lt;/p>
@@ -574,7 +574,7 @@ It brings to his user a guarantee of security and interoperability which relies 
 (ISO 14443, ISO 7816-4, Global Platform). The Calypso® standard is managed by the Calypso Networks Association (CNA),
 which is led by transports operators and public authorities in order to ensure openness and independence from industrials
 in confront of other proprietary schemes.&lt;/p>
-&lt;p>Discover more about Calypso® here : &lt;a href="https://calypsonet.org/solutions-overview/">https://calypsonet.org/solutions-overview/&lt;/a>&lt;/p></description></item><item><title>Keyple's main features</title><link>/what-is-keyple/main-features/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/what-is-keyple/main-features/</guid><description>&lt;p>The goal of Eclipse Keyple™ is to allow developers to easily implement fast and secure off-line contactless transactions
+&lt;p>Discover more about Calypso® here : &lt;a href="https://calypsonet.org/solutions-overview/">https://calypsonet.org/solutions-overview/&lt;/a>&lt;/p></description></item><item><title>Keyple's main features</title><link>https://keyple.org/what-is-keyple/main-features/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/what-is-keyple/main-features/</guid><description>&lt;p>The goal of Eclipse Keyple™ is to allow developers to easily implement fast and secure off-line contactless transactions
 (using NFC cards, mobile phones, …) based on ticket processing integrating technologies other than Calypso®the Calypso standard.&lt;/p>
 &lt;p>More specifically, Keyple™ is a set of open source libraries that will initially be available in Java and C++,
 designed on the same mutual Object-Oriented Model compatible with any terminal architecture: mobile, embedded
@@ -604,7 +604,7 @@ software interfaces including PC/SC, Android NFC reader, and Android OMAPI.&lt;/
 a smart card terminal can be operated remotely, as if it were local to the terminal, and ensures that robust security and
 speed is not sacrificed in a cloud-based system.&lt;/p>
 &lt;p>The Calypso Processing API is also available as a Keyple™ extension. This component carries out the terminal processing
-element of ticketing technology. Access to Calypso’s security features are automatically managed by the Keyple™ extension.&lt;/p></description></item><item><title>Keyple Global Solution</title><link>/docs/architecture/keyple-global/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/architecture/keyple-global/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+element of ticketing technology. Access to Calypso’s security features are automatically managed by the Keyple™ extension.&lt;/p></description></item><item><title>Keyple Global Solution</title><link>https://keyple.org/docs/architecture/keyple-global/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/docs/architecture/keyple-global/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
 &lt;p>The Eclipse Keyple solution provides currently 2 modules:&lt;/p>
 &lt;ul>
 &lt;li>the &amp;lsquo;Keyple Core&amp;rsquo;, a universal smart card reader interface to manage the setting of smart card reader, the detection and the communication with smart card, and the selection of card application.&lt;/li>
@@ -730,7 +730,7 @@ Keyple Architecture Remote Plugin
 &lt;figcaption>
 [Keyple Transaction Default Selection
 &lt;/figcaption>
-&lt;/figure></description></item><item><title>Keyple Core</title><link>/docs/architecture/keyple-core/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/architecture/keyple-core/</guid><description>&lt;h2 id="features--packages-and-corresponding-usages">Features / packages and corresponding usages&lt;/h2>
+&lt;/figure></description></item><item><title>Keyple Core</title><link>https://keyple.org/docs/architecture/keyple-core/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/docs/architecture/keyple-core/</guid><description>&lt;h2 id="features--packages-and-corresponding-usages">Features / packages and corresponding usages&lt;/h2>
 &lt;p>The Keyple Core is a tool to handle smart card reader and to operate generic processing with smart cards.&lt;/p>
 &lt;p>The Core is divided in 4 sub-modules:&lt;/p>
 &lt;ul>
@@ -986,7 +986,7 @@ APDU Transmission v1.0.0
 &lt;figcaption>
 Plugin Factorized Processing v1.0.0
 &lt;/figcaption>
-&lt;/figure></description></item><item><title>Keyple Calypso</title><link>/docs/architecture/keyple-calypso/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/architecture/keyple-calypso/</guid><description>&lt;h2 id="features--packages-and-corresponding-usages">Features / packages and corresponding usages&lt;/h2>
+&lt;/figure></description></item><item><title>Keyple Calypso</title><link>https://keyple.org/docs/architecture/keyple-calypso/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/docs/architecture/keyple-calypso/</guid><description>&lt;h2 id="features--packages-and-corresponding-usages">Features / packages and corresponding usages&lt;/h2>
 &lt;p>The Calypso transaction API provides a high-level of abstraction to define functional commands to manage a secure session with a Calypso Portable Object, to update or authenticate its data.&lt;/p>
 &lt;p>The transaction API is defined on a low-level Calypso commands API which contains the builders of PO and SAM APDU commands, and the corresponding parsers of APDU responses.&lt;/p>
 &lt;table>
@@ -1122,7 +1122,7 @@ Calypso Data Model
 &lt;figcaption>
 Calypso session
 &lt;/figcaption>
-&lt;/figure></description></item><item><title>Build your first Java application</title><link>/docs/build-your-first-app/java-app/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/build-your-first-app/java-app/</guid><description>&lt;hr>
+&lt;/figure></description></item><item><title>Build your first Java application</title><link>https://keyple.org/docs/build-your-first-app/java-app/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/docs/build-your-first-app/java-app/</guid><description>&lt;hr>
 &lt;p>This quick start describes how to create a ready-to-execute Java
 command-line application that runs a simple transaction based on
 a Calypso portable object (PO) involving two smart card readers.&lt;/p>
@@ -1136,13 +1136,13 @@ communication) and a Calypo Secure Access Module (SAM).
 &lt;p>We will use three main components of Keyple:&lt;/p>
 &lt;ul>
 &lt;li>
-&lt;a href="./components-java/core/">Keyple Core&lt;/a>
+&lt;a href="https://keyple.org/components-java/core/">Keyple Core&lt;/a>
 which is the base component to which all the others refer,&lt;/li>
 &lt;li>
-&lt;a href="./components-java/plugins/pcsc/">Keyple PC/SC plugin&lt;/a>
+&lt;a href="https://keyple.org/components-java/plugins/pcsc/">Keyple PC/SC plugin&lt;/a>
 to provide the ability to manage PC/SC readers,&lt;/li>
 &lt;li>
-&lt;a href="./components-java/extensions/calypso/">Keyple Calypso extension&lt;/a>
+&lt;a href="https://keyple.org/components-java/extensions/calypso/">Keyple Calypso extension&lt;/a>
 to handle the commands sent to the Calypso PO and the Calypso SAM.&lt;/li>
 &lt;/ul>
 &lt;p>In this guide
@@ -1500,7 +1500,7 @@ smartCardService.unregisterPlugin(plugin.getName());
 System.exit(0);
 }
 }
-&lt;/code>&lt;/pre></description></item><item><title>Build your first Android application</title><link>/docs/build-your-first-app/android-app/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/build-your-first-app/android-app/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;/code>&lt;/pre></description></item><item><title>Build your first Android application</title><link>https://keyple.org/docs/build-your-first-app/android-app/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/docs/build-your-first-app/android-app/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
 &lt;h3 id="overview">Overview&lt;/h3>
 &lt;p>&lt;strong>Since Keyple is supported by the Android operating system, developers can take advantage of this quick and easy way to implement solution to provide SmartCard communication functionalities in their own mobile application.&lt;/strong>&lt;/p>
 &lt;p>For example, Keyple could be used to facilitate the development of a ticketing application based on the use of conteners on a SIM card and relying on
@@ -1872,11 +1872,11 @@ exclude 'META-INF/NOTICE.md'
 &lt;/code>&lt;/pre>
 &lt;p>&lt;strong>Where can I see more examples&lt;/strong>&lt;/p>
 &lt;p>Android native plugins are provided with example applications. Check it to see more use cases:
-&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/example" target="_blank" rel="noopener">Examples&lt;/a>&lt;/p></description></item><item><title>Build your first C++ application</title><link>/docs/build-your-first-app/cpp-app/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/build-your-first-app/cpp-app/</guid><description>&lt;div class="alert alert-note">
+&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/example" target="_blank" rel="noopener">Examples&lt;/a>&lt;/p></description></item><item><title>Build your first C++ application</title><link>https://keyple.org/docs/build-your-first-app/cpp-app/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/docs/build-your-first-app/cpp-app/</guid><description>&lt;div class="alert alert-note">
 &lt;div>
 Coming soon
 &lt;/div>
-&lt;/div></description></item><item><title>Common concepts</title><link>/docs/developer-guide/common-concepts/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/developer-guide/common-concepts/</guid><description>&lt;p>This page describes the core elements of &lt;strong>Keyple&lt;/strong>, i.e. the concepts and APIs of &lt;strong>Keyple Core&lt;/strong> that are used to build any application implementing &lt;strong>Keyple&lt;/strong>.&lt;/p>
+&lt;/div></description></item><item><title>Common concepts</title><link>https://keyple.org/docs/developer-guide/common-concepts/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/docs/developer-guide/common-concepts/</guid><description>&lt;p>This page describes the core elements of &lt;strong>Keyple&lt;/strong>, i.e. the concepts and APIs of &lt;strong>Keyple Core&lt;/strong> that are used to build any application implementing &lt;strong>Keyple&lt;/strong>.&lt;/p>
 &lt;p>It is essential for the future user of &lt;strong>Keyple&lt;/strong> to be familiar with what is said in this chapter because the other modules made available by the project are all dependent on &lt;strong>Keyple Core&lt;/strong>.&lt;/p>
 &lt;h3 id="reader">Reader&lt;/h3>
 &lt;p>Keyple&amp;rsquo;s primary goal being to interact with smart cards (or smartphones) worn by individuals, it is logical to put the Reader at the top of &lt;strong>Keyple Core&lt;/strong>&amp;rsquo;s concepts.&lt;/p>
@@ -1912,7 +1912,7 @@ Coming soon
 &lt;h3 id="abstract-smart-card">Abstract smart card&lt;/h3>
 &lt;p>The &lt;strong>abstract smart card&lt;/strong> concept is used by specific extensions (e.g. &lt;strong>Keyple Calypso&lt;/strong>) and by the &lt;strong>Keyple Core&lt;/strong> selection mechanism. It corresponds to an abstract container model implemented by the extension specific to a card type and returned by the selection process.&lt;/p>
 &lt;p>This container will be able to carry all the useful information known about the card.&lt;/p>
-&lt;p>Note: this concept, mentioned here for understanding, should not appear to the application developer if he uses a card extension.&lt;/p></description></item><item><title>Standalone application</title><link>/docs/developer-guide/standalone-application/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/developer-guide/standalone-application/</guid><description>&lt;hr>
+&lt;p>Note: this concept, mentioned here for understanding, should not appear to the application developer if he uses a card extension.&lt;/p></description></item><item><title>Standalone application</title><link>https://keyple.org/docs/developer-guide/standalone-application/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/docs/developer-guide/standalone-application/</guid><description>&lt;hr>
 &lt;h2 id="overview">Overview&lt;/h2>
 &lt;p>A standalone application is an application that runs in a device in contact
 with the end user.&lt;/p>
@@ -1945,8 +1945,8 @@ possibilities offered by &lt;strong>Keyple Core&lt;/strong>.&lt;/li>
 &lt;a href="./docs/build-your-first-app/">Build your first app&lt;/a> section to configure your
 environment.&lt;/li>
 &lt;li>Using the
-&lt;a href="./components-java/">Java components&lt;/a> or
-&lt;a href="./components-cpp/">C++ components&lt;/a> pages, import
+&lt;a href="https://keyple.org/components-java/">Java components&lt;/a> or
+&lt;a href="https://keyple.org/components-cpp/">C++ components&lt;/a> pages, import
 &lt;strong>Keyple Core&lt;/strong> into your project and start playing with &lt;strong>Keyple&lt;/strong>.&lt;/li>
 &lt;li>Don&amp;rsquo;t forget to explore the potential of Keyple card-specific
 extensions such as &lt;strong>Keyple Calypso&lt;/strong>.&lt;/li>
@@ -1976,8 +1976,8 @@ without obligation, go for the PC/SC plugin.&lt;/p>
 Android NFC plugin or one of the plugins available from the industrial
 partners of the project. For a complete list of available plugins,
 please see the
-&lt;a href="./components-java/">Java&lt;/a> or
-&lt;a href="./components-cpp/">C++&lt;/a> pages.&lt;/p>
+&lt;a href="https://keyple.org/components-java/">Java&lt;/a> or
+&lt;a href="https://keyple.org/components-cpp/">C++&lt;/a> pages.&lt;/p>
 &lt;div class="alert alert-note">
 &lt;div>
 A new plugin can also be &lt;a href="./docs/developer-guide/create-plugin/">created&lt;/a> if the envisaged hardware does not yet have its
@@ -2427,10 +2427,10 @@ assigned to them.&lt;/p>
 application is available here:&lt;/p>
 &lt;ul>
 &lt;li>
-&lt;a href="./components-java/core/">Keyple Core Java component&lt;/a>&lt;/li>
+&lt;a href="https://keyple.org/components-java/core/">Keyple Core Java component&lt;/a>&lt;/li>
 &lt;li>
-&lt;a href="./components-cpp/core/">Keyple Core C++ component&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Distributed application</title><link>/docs/developer-guide/distributed-application/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/developer-guide/distributed-application/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;a href="https://keyple.org/components-cpp/core/">Keyple Core C++ component&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>Distributed application</title><link>https://keyple.org/docs/developer-guide/distributed-application/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/docs/developer-guide/distributed-application/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
 &lt;p>&lt;strong>Keyple provides the &amp;ldquo;Keyple Distributed&amp;rdquo; solution which allows a terminal to communicate with a smart card reader available in another terminal&lt;/strong>.&lt;/p>
 &lt;p>In this way, you can manage transactions within a distributed architecture.&lt;/p>
 &lt;p>The diagram below shows the role of the &lt;strong>Keyple Distributed&lt;/strong> components in the software layers used in a distributed architecture :&lt;/p>
@@ -3186,7 +3186,7 @@ width: 240px;
 &lt;ul>
 &lt;li>
 &lt;a href="./components-java/distributed-systems/">Java components&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Calypso application</title><link>/docs/developer-guide/calypso-application/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/developer-guide/calypso-application/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;/ul></description></item><item><title>Calypso application</title><link>https://keyple.org/docs/developer-guide/calypso-application/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/docs/developer-guide/calypso-application/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
 &lt;p>&lt;strong>Work in Progress&lt;/strong>&lt;/p>
 &lt;p>Keyple API was designed to support an extension system. On top of &lt;strong>Keyple Core&lt;/strong>, APIs can be developed to extend
 Keyple features. For example, Calypso Network Association provides &lt;strong>Keyple Calypso Extension&lt;/strong>.&lt;/p>
@@ -3214,11 +3214,11 @@ secure calypso transaction.&lt;/p>
 &lt;li>Follow the explanations given in the
 &lt;a href="./docs/build-your-first-app/">Build your first app&lt;/a> section to configure your environment.&lt;/li>
 &lt;li>Using the
-&lt;a href="./components-java/core/">Java components&lt;/a> or
-&lt;a href="./components-cpp/core/">C++ components&lt;/a> pages, import &lt;strong>Keyple Core&lt;/strong> into your project.&lt;/li>
+&lt;a href="https://keyple.org/components-java/core/">Java components&lt;/a> or
+&lt;a href="https://keyple.org/components-cpp/core/">C++ components&lt;/a> pages, import &lt;strong>Keyple Core&lt;/strong> into your project.&lt;/li>
 &lt;li>Using the
-&lt;a href="./components-java/extensions/calypso/">Java components&lt;/a> or
-&lt;a href="./components-cpp/extensions/calypso/">C++ components&lt;/a> pages, import &lt;strong>Keyple Calypso Extension&lt;/strong> into your project.&lt;/li>
+&lt;a href="https://keyple.org/components-java/extensions/calypso/">Java components&lt;/a> or
+&lt;a href="https://keyple.org/components-cpp/extensions/calypso/">C++ components&lt;/a> pages, import &lt;strong>Keyple Calypso Extension&lt;/strong> into your project.&lt;/li>
 &lt;li>Start playing with &lt;strong>Keyple&lt;/strong>.&lt;/li>
 &lt;/ol>
 &lt;h2 id="concepts">Concepts&lt;/h2>
@@ -3400,7 +3400,7 @@ int svLastTNum = calypsoPo.getSvLastTNum()
 &lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/example/calypso/pc" target="_blank" rel="noopener">PC&lt;/a>&lt;/li>
 &lt;li>
 &lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/example/calypso/android" target="_blank" rel="noopener">Android&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Create a plugin</title><link>/docs/developer-guide/create-plugin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/developer-guide/create-plugin/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;/ul></description></item><item><title>Create a plugin</title><link>https://keyple.org/docs/developer-guide/create-plugin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/docs/developer-guide/create-plugin/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
 &lt;p>In order to provide an easy way to port a Keyple application from a device with a specific card reader to another, a plugin system
 as been developed. When a developer wants to include Keyple features within his project, he has to initialize the SmartCardService by providing a
 plugin Factory available with in the plugin library. The plugin to use depends on the targeted device and running environment.&lt;/p>
@@ -3417,9 +3417,9 @@ one must be developed.&lt;/p>
 &lt;h2 id="existing-plugins">Existing plugins&lt;/h2>
 &lt;p>The list of reader plugins is maintained on this pages:&lt;/p>
 &lt;p>
-&lt;a href="./components-java/plugins/">Java Reader Plugins&lt;/a>&lt;/p>
+&lt;a href="https://keyple.org/components-java/plugins/">Java Reader Plugins&lt;/a>&lt;/p>
 &lt;p>
-&lt;a href="./components-cpp/plugins/">C++ Reader Plugins&lt;/a>&lt;/p>
+&lt;a href="https://keyple.org/components-cpp/plugins/">C++ Reader Plugins&lt;/a>&lt;/p>
 &lt;h2 id="class-diagram-of-plugin-package">Class diagram of plugin package&lt;/h2>
 &lt;p>For the record, this is a wide view of classes implied in the plugin system. It is designed to natively handle as much
 use cas as possible while being easy to use. It results of several internal classes, however, plugin&amp;rsquo;s developers will
@@ -3441,8 +3441,8 @@ plugin package from Keyple Core API:&lt;/p>
 &lt;h2 id="imports">Imports&lt;/h2>
 &lt;p>Your plugin will use be based upon Keyple Core library.&lt;/p>
 &lt;p>Using the
-&lt;a href="./components-java/core/">Java components&lt;/a> or
-&lt;a href="./components-cpp/core/">C++ components&lt;/a>
+&lt;a href="https://keyple.org/components-java/core/">Java components&lt;/a> or
+&lt;a href="https://keyple.org/components-cpp/core/">C++ components&lt;/a>
 pages, import &lt;strong>Keyple Core&lt;/strong> into your project.&lt;/p>
 &lt;h2 id="implement-keyple-reader">Implement Keyple Reader&lt;/h2>
 &lt;p>The first step of a Keyple plugin development is the implementation of Keyple Reader Interface (org.eclipse.keyple.core.Reader).
@@ -4317,11 +4317,11 @@ throw new KeyplePluginInstantiationException(&amp;quot;Can not access smartcard.
 &lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/component/keyple-plugin/pcsc" target="_blank" rel="noopener">Plugin&lt;/a>&lt;/li>
 &lt;li>
 &lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/example/calypso/pc" target="_blank" rel="noopener">Example Apps&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Create an extension</title><link>/docs/developer-guide/create-extension/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/developer-guide/create-extension/</guid><description>&lt;div class="alert alert-note">
+&lt;/ul></description></item><item><title>Create an extension</title><link>https://keyple.org/docs/developer-guide/create-extension/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/docs/developer-guide/create-extension/</guid><description>&lt;div class="alert alert-note">
 &lt;div>
 Coming soon
 &lt;/div>
-&lt;/div></description></item><item><title>Migration Guide - Keyple Java 0.8.1 to 0.9.0</title><link>/docs/developer-guide/migration-0.8.1-to-0.9.0/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/developer-guide/migration-0.8.1-to-0.9.0/</guid><description>&lt;p>This guide is intended to help a user of version 0.8.1 of Keyple Java to upgrade his application to the 0.9.0 version of the library.&lt;/p>
+&lt;/div></description></item><item><title>Migration Guide - Keyple Java 0.8.1 to 0.9.0</title><link>https://keyple.org/docs/developer-guide/migration-0.8.1-to-0.9.0/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/docs/developer-guide/migration-0.8.1-to-0.9.0/</guid><description>&lt;p>This guide is intended to help a user of version 0.8.1 of Keyple Java to upgrade his application to the 0.9.0 version of the library.&lt;/p>
 &lt;p>From a user API point of view, the changes relate to the following topics:&lt;/p>
 &lt;ul>
 &lt;li>
@@ -4550,7 +4550,7 @@ ByteArrayUtil.toHex(entry.getValue()));
 &lt;p>Catching exceptions is therefore now optional.&lt;/p>
 &lt;p>However, it is possible to selectively catch certain exceptions in order to deal with particular cases.&lt;/p>
 &lt;p>The new hierarchy of Keyple exceptions is shown
-&lt;a href="https://keyple.atlassian.net/projects/KEYP/issues/KEYP-154?filter=allissues&amp;amp;orderby=priority%20DESC&amp;amp;keyword=exceptions" target="_blank" rel="noopener">here&lt;/a>&lt;/p></description></item><item><title>JavaDoc</title><link>/docs/api-reference/java-api/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/api-reference/java-api/</guid><description>&lt;p>The JavaDoc for the Keyple project is available online. The documentation is split into the following parts:&lt;/p>
+&lt;a href="https://keyple.atlassian.net/projects/KEYP/issues/KEYP-154?filter=allissues&amp;amp;orderby=priority%20DESC&amp;amp;keyword=exceptions" target="_blank" rel="noopener">here&lt;/a>&lt;/p></description></item><item><title>JavaDoc</title><link>https://keyple.org/docs/api-reference/java-api/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/docs/api-reference/java-api/</guid><description>&lt;p>The JavaDoc for the Keyple project is available online. The documentation is split into the following parts:&lt;/p>
 &lt;div>
 &lt;select id="version_selection" style="float: right;" onchange="selectVersion()">
 &lt;option>1.0.0&lt;/option>
@@ -4560,11 +4560,11 @@ ByteArrayUtil.toHex(entry.getValue()));
 &lt;h3>Modules&lt;/h3>
 &lt;/div>
 &lt;ul id="module_list">&lt;/ul>
-&lt;script src="select-api-version.js">&lt;/script></description></item><item><title>C++ Documentation</title><link>/docs/api-reference/cpp-api/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/api-reference/cpp-api/</guid><description>&lt;div class="alert alert-note">
+&lt;script src="select-api-version.js">&lt;/script></description></item><item><title>C++ Documentation</title><link>https://keyple.org/docs/api-reference/cpp-api/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/docs/api-reference/cpp-api/</guid><description>&lt;div class="alert alert-note">
 &lt;div>
 Coming soon
 &lt;/div>
-&lt;/div></description></item><item><title>Webinar Eclipse Keyple™ for Developers, Thursday, October 15, 2020</title><link>/post/webinar-eclipse-keyple-developers-oct15-2020/</link><pubDate>Fri, 25 Sep 2020 14:57:23 +0200</pubDate><guid>/post/webinar-eclipse-keyple-developers-oct15-2020/</guid><description>&lt;h2 id="are-you-a-mobility-aggregator-a-system-integrator-an-event-manager-a-developer-or-a-multi-mobility-startup">Are you a mobility aggregator, a system integrator, an event manager, a developer or a multi-mobility startup?&lt;/h2>
+&lt;/div></description></item><item><title>Webinar Eclipse Keyple™ for Developers, Thursday, October 15, 2020</title><link>https://keyple.org/post/webinar-eclipse-keyple-developers-oct15-2020/</link><pubDate>Fri, 25 Sep 2020 14:57:23 +0200</pubDate><guid>https://keyple.org/post/webinar-eclipse-keyple-developers-oct15-2020/</guid><description>&lt;h2 id="are-you-a-mobility-aggregator-a-system-integrator-an-event-manager-a-developer-or-a-multi-mobility-startup">Are you a mobility aggregator, a system integrator, an event manager, a developer or a multi-mobility startup?&lt;/h2>
 &lt;p>Do you want to have easy access to a highly secure and interoperable standard, Calypso®, to reduce your costs and
 accelerate your developments, to move from a black box to an open and modular solution with access to multiple
 hardware platforms, to enable partnerships with multimodal transport, building facilities including parking,
@@ -4577,18 +4577,18 @@ tourism and events… or just discover what Eclipse Keyple™ is and how it work
 &lt;/p>
 &lt;p>
 &lt;i class="fas fa-file-pdf pr-1 fa-fw">&lt;/i> Discover the
-&lt;a href="https://drive.google.com/file/d/1HdrThZD70bFIun8jFLYKfgozyCvX9SQg/view" target="_blank" rel="noopener">presentation&lt;/a>.&lt;/p></description></item><item><title>Release 0.9.0 Java on the field</title><link>/post/release-0-9-0-java/</link><pubDate>Fri, 18 Sep 2020 14:57:56 +0200</pubDate><guid>/post/release-0-9-0-java/</guid><description>&lt;p>We are pleased to announce that the version 0.9.0 of the Java implementation of Eclipse Keyple™ was released September 11th, 2020.&lt;/p>
+&lt;a href="https://drive.google.com/file/d/1HdrThZD70bFIun8jFLYKfgozyCvX9SQg/view" target="_blank" rel="noopener">presentation&lt;/a>.&lt;/p></description></item><item><title>Release 0.9.0 Java on the field</title><link>https://keyple.org/post/release-0-9-0-java/</link><pubDate>Fri, 18 Sep 2020 14:57:56 +0200</pubDate><guid>https://keyple.org/post/release-0-9-0-java/</guid><description>&lt;p>We are pleased to announce that the version 0.9.0 of the Java implementation of Eclipse Keyple™ was released September 11th, 2020.&lt;/p>
 &lt;p>The main improvement on the Calypso® extension is the addition of high-level API to manage the portable object response.
 Now the APDU responses of the Calypso® cards are automatically parsed to fill card images.
 Currently all the components of Eclipse Keyple™ Java are following the same versioning.&lt;/p>
 &lt;p>From the version 1.0.0 scheduled for November 2020, the components will be defined with their own versioning in order to stabilize as possible the different APIs.&lt;/p>
 &lt;p>
-&lt;a href="./docs/">Documentation&lt;/a> currently available:&lt;/p>
+&lt;a href="https://keyple.org/docs/">Documentation&lt;/a> currently available:&lt;/p>
 &lt;ul>
 &lt;li>the project plan,&lt;/li>
 &lt;li>the guides of the different public API,&lt;/li>
 &lt;li>and a guide to manage the migration between the release 0.8.1 &amp;amp; 0.9.0.&lt;/li>
-&lt;/ul></description></item><item><title>First Meet Up Eclipse Keyple™</title><link>/post/first-meetup-eclipse-keyple/</link><pubDate>Thu, 17 Oct 2019 00:00:00 +0000</pubDate><guid>/post/first-meetup-eclipse-keyple/</guid><description>&lt;p>On October 17, 2019, we organized the first Meet Up Eclipse Keyple™!
+&lt;/ul></description></item><item><title>First Meet Up Eclipse Keyple™</title><link>https://keyple.org/post/first-meetup-eclipse-keyple/</link><pubDate>Thu, 17 Oct 2019 00:00:00 +0000</pubDate><guid>https://keyple.org/post/first-meetup-eclipse-keyple/</guid><description>&lt;p>On October 17, 2019, we organized the first Meet Up Eclipse Keyple™!
 Great moments of exchanges around the first Open Source SDK for Ticketing with Benoît Boute,
 Nicolas Generali, Pierre Terree, Hicham Elbizy, Benoist Laforge, Gaël Blondelle, Camille Moulin,
 Philippe Vappereau, Valentina Zajackowski. Many thanks to them for their interventions and also

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Build your first app | Eclipse Keyple</title><link>/docs/build-your-first-app/</link><atom:link href="/docs/build-your-first-app/index.xml" rel="self" type="application/rss+xml"/><description>Build your first app</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Copyright © Eclipse Foundation, Inc. All Rights Reserved.</copyright><image><url>/images/logo_hu673a59176cd62c570f44ed2728665b48_42188_300x300_fit_lanczos_2.png</url><title>Build your first app</title><link>/docs/build-your-first-app/</link></image><item><title>Build your first Java application</title><link>/docs/build-your-first-app/java-app/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/build-your-first-app/java-app/</guid><description>&lt;hr>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Build your first app | Eclipse Keyple</title><link>https://keyple.org/docs/build-your-first-app/</link><atom:link href="https://keyple.org/docs/build-your-first-app/index.xml" rel="self" type="application/rss+xml"/><description>Build your first app</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Copyright © Eclipse Foundation, Inc. All Rights Reserved.</copyright><image><url>https://keyple.org/images/logo_hu673a59176cd62c570f44ed2728665b48_42188_300x300_fit_lanczos_2.png</url><title>Build your first app</title><link>https://keyple.org/docs/build-your-first-app/</link></image><item><title>Build your first Java application</title><link>https://keyple.org/docs/build-your-first-app/java-app/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/docs/build-your-first-app/java-app/</guid><description>&lt;hr>
 &lt;p>This quick start describes how to create a ready-to-execute Java
 command-line application that runs a simple transaction based on
 a Calypso portable object (PO) involving two smart card readers.&lt;/p>
@@ -12,13 +12,13 @@ communication) and a Calypo Secure Access Module (SAM).
 &lt;p>We will use three main components of Keyple:&lt;/p>
 &lt;ul>
 &lt;li>
-&lt;a href="../../components-java/core/">Keyple Core&lt;/a>
+&lt;a href="https://keyple.org/components-java/core/">Keyple Core&lt;/a>
 which is the base component to which all the others refer,&lt;/li>
 &lt;li>
-&lt;a href="../../components-java/plugins/pcsc/">Keyple PC/SC plugin&lt;/a>
+&lt;a href="https://keyple.org/components-java/plugins/pcsc/">Keyple PC/SC plugin&lt;/a>
 to provide the ability to manage PC/SC readers,&lt;/li>
 &lt;li>
-&lt;a href="../../components-java/extensions/calypso/">Keyple Calypso extension&lt;/a>
+&lt;a href="https://keyple.org/components-java/extensions/calypso/">Keyple Calypso extension&lt;/a>
 to handle the commands sent to the Calypso PO and the Calypso SAM.&lt;/li>
 &lt;/ul>
 &lt;p>In this guide
@@ -376,7 +376,7 @@ smartCardService.unregisterPlugin(plugin.getName());
 System.exit(0);
 }
 }
-&lt;/code>&lt;/pre></description></item><item><title>Build your first Android application</title><link>/docs/build-your-first-app/android-app/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/build-your-first-app/android-app/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;/code>&lt;/pre></description></item><item><title>Build your first Android application</title><link>https://keyple.org/docs/build-your-first-app/android-app/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/docs/build-your-first-app/android-app/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
 &lt;h3 id="overview">Overview&lt;/h3>
 &lt;p>&lt;strong>Since Keyple is supported by the Android operating system, developers can take advantage of this quick and easy way to implement solution to provide SmartCard communication functionalities in their own mobile application.&lt;/strong>&lt;/p>
 &lt;p>For example, Keyple could be used to facilitate the development of a ticketing application based on the use of conteners on a SIM card and relying on
@@ -748,7 +748,7 @@ exclude 'META-INF/NOTICE.md'
 &lt;/code>&lt;/pre>
 &lt;p>&lt;strong>Where can I see more examples&lt;/strong>&lt;/p>
 &lt;p>Android native plugins are provided with example applications. Check it to see more use cases:
-&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/example" target="_blank" rel="noopener">Examples&lt;/a>&lt;/p></description></item><item><title>Build your first C++ application</title><link>/docs/build-your-first-app/cpp-app/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/build-your-first-app/cpp-app/</guid><description>&lt;div class="alert alert-note">
+&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/example" target="_blank" rel="noopener">Examples&lt;/a>&lt;/p></description></item><item><title>Build your first C++ application</title><link>https://keyple.org/docs/build-your-first-app/cpp-app/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/docs/build-your-first-app/cpp-app/</guid><description>&lt;div class="alert alert-note">
 &lt;div>
 Coming soon
 &lt;/div>
