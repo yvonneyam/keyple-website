@@ -9,7 +9,7 @@ Keyple project
 &lt;a href="#download">Download&lt;/a>
      
 &lt;i class="fab fa-github pr-1 fa-fw">&lt;/i>
-&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/component/keyple-plugin/remote/local">GitHub&lt;/a>
+&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/component/keyple-distributed/local">GitHub&lt;/a>
      
 &lt;i class="fas fa-exchange-alt pr-1 fa-fw">&lt;/i>
 &lt;a href="https://github.com/eclipse/keyple-java/releases/">Changelogs&lt;/a>
@@ -25,7 +25,7 @@ Keyple project
 &lt;ul>
 &lt;li>
 &lt;a href="../../docs/developer-guide/distributed-application/">Developer guide&lt;/a>&lt;/li>
-&lt;li>&lt;a href="../../../docs/api-reference/keyple-plugin-remote-local/1.0.0/index.html">JavaDoc API&lt;/a>&lt;/li>
+&lt;li>&lt;a href="../../../docs/api-reference/java-api/keyple-java-distributed-local/1.0.0/index.html">JavaDoc API&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;h2 id="download">Download&lt;/h2>
 &lt;p>All deliverables are available on the
@@ -34,7 +34,7 @@ Keyple project
 &lt;li>Using
 &lt;a href="https://gradle.org/" target="_blank" rel="noopener">Gradle&lt;/a>&lt;/li>
 &lt;/ul>
-&lt;pre>&lt;code class="language-gradle">implementation 'org.eclipse.keyple:keyple-plugin-remote-local:1.0.0'
+&lt;pre>&lt;code class="language-gradle">implementation 'org.eclipse.keyple:keyple-java-distributed-local:1.0.0'
 &lt;/code>&lt;/pre>
 &lt;ul>
 &lt;li>Using
@@ -42,13 +42,13 @@ Keyple project
 &lt;/ul>
 &lt;pre>&lt;code class="language-xml">&amp;lt;dependency&amp;gt;
 &amp;lt;groupId&amp;gt;org.eclipse.keyple&amp;lt;/groupId&amp;gt;
-&amp;lt;artifactId&amp;gt;keyple-plugin-remote-local&amp;lt;/artifactId&amp;gt;
+&amp;lt;artifactId&amp;gt;keyple-java-distributed-local&amp;lt;/artifactId&amp;gt;
 &amp;lt;version&amp;gt;1.0.0&amp;lt;/version&amp;gt;
 &amp;lt;/dependency&amp;gt;
 &lt;/code>&lt;/pre>
 &lt;ul>
 &lt;li>Direct
-&lt;a href="https://search.maven.org/search?q=a:keyple-plugin-remote-local" target="_blank" rel="noopener">download&lt;/a>&lt;/li>
+&lt;a href="https://search.maven.org/search?q=a:keyple-java-distributed-local" target="_blank" rel="noopener">download&lt;/a>&lt;/li>
 &lt;/ul></description></item><item><title>Keyple Distributed Network</title><link>/components-java/distributed-systems/network/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/components-java/distributed-systems/network/</guid><description>&lt;div class="alert alert-note">
 &lt;div>
 &lt;strong>&lt;code>1.0.0&lt;/code>&lt;/strong>
@@ -60,7 +60,7 @@ Keyple project
 &lt;a href="#download">Download&lt;/a>
      
 &lt;i class="fab fa-github pr-1 fa-fw">&lt;/i>
-&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/component/keyple-plugin/remote/network">GitHub&lt;/a>
+&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/component/keyple-distributed/network">GitHub&lt;/a>
      
 &lt;i class="fas fa-exchange-alt pr-1 fa-fw">&lt;/i>
 &lt;a href="https://github.com/eclipse/keyple-java/releases/">Changelogs&lt;/a>
@@ -76,7 +76,7 @@ Keyple project
 &lt;ul>
 &lt;li>
 &lt;a href="../../docs/developer-guide/distributed-application/">Developer guide&lt;/a>&lt;/li>
-&lt;li>&lt;a href="../../../docs/api-reference/keyple-plugin-remote-network/1.0.0/index.html">JavaDoc API&lt;/a>&lt;/li>
+&lt;li>&lt;a href="../../../docs/api-reference/java-api/keyple-java-distributed-network/1.0.0/index.html">JavaDoc API&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;h2 id="download">Download&lt;/h2>
 &lt;p>All deliverables are available on the
@@ -85,7 +85,7 @@ Keyple project
 &lt;li>Using
 &lt;a href="https://gradle.org/" target="_blank" rel="noopener">Gradle&lt;/a>&lt;/li>
 &lt;/ul>
-&lt;pre>&lt;code class="language-gradle">implementation 'org.eclipse.keyple:keyple-plugin-remote-network:1.0.0'
+&lt;pre>&lt;code class="language-gradle">implementation 'org.eclipse.keyple:keyple-java-distributed-network:1.0.0'
 &lt;/code>&lt;/pre>
 &lt;ul>
 &lt;li>Using
@@ -93,13 +93,13 @@ Keyple project
 &lt;/ul>
 &lt;pre>&lt;code class="language-xml">&amp;lt;dependency&amp;gt;
 &amp;lt;groupId&amp;gt;org.eclipse.keyple&amp;lt;/groupId&amp;gt;
-&amp;lt;artifactId&amp;gt;keyple-plugin-remote-network&amp;lt;/artifactId&amp;gt;
+&amp;lt;artifactId&amp;gt;keyple-java-distributed-network&amp;lt;/artifactId&amp;gt;
 &amp;lt;version&amp;gt;1.0.0&amp;lt;/version&amp;gt;
 &amp;lt;/dependency&amp;gt;
 &lt;/code>&lt;/pre>
 &lt;ul>
 &lt;li>Direct
-&lt;a href="https://search.maven.org/search?q=a:keyple-plugin-remote-network" target="_blank" rel="noopener">download&lt;/a>&lt;/li>
+&lt;a href="https://search.maven.org/search?q=a:keyple-java-distributed-network" target="_blank" rel="noopener">download&lt;/a>&lt;/li>
 &lt;/ul></description></item><item><title>Keyple Distributed Remote</title><link>/components-java/distributed-systems/remote/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/components-java/distributed-systems/remote/</guid><description>&lt;div class="alert alert-note">
 &lt;div>
 &lt;strong>&lt;code>1.0.0&lt;/code>&lt;/strong>
@@ -111,7 +111,7 @@ Keyple project
 &lt;a href="#download">Download&lt;/a>
      
 &lt;i class="fab fa-github pr-1 fa-fw">&lt;/i>
-&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/component/keyple-plugin/remote/remote">GitHub&lt;/a>
+&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/component/keyple-distributed/remote">GitHub&lt;/a>
      
 &lt;i class="fas fa-exchange-alt pr-1 fa-fw">&lt;/i>
 &lt;a href="https://github.com/eclipse/keyple-java/releases/">Changelogs&lt;/a>
@@ -127,7 +127,7 @@ Keyple project
 &lt;ul>
 &lt;li>
 &lt;a href="../../docs/developer-guide/distributed-application/">Developer guide&lt;/a>&lt;/li>
-&lt;li>&lt;a href="../../../docs/api-reference/keyple-plugin-remote-remote/1.0.0/index.html">JavaDoc API&lt;/a>&lt;/li>
+&lt;li>&lt;a href="../../../docs/api-reference/java-api/keyple-java-distributed-remote/1.0.0/index.html">JavaDoc API&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;h2 id="download">Download&lt;/h2>
 &lt;p>All deliverables are available on the
@@ -136,7 +136,7 @@ Keyple project
 &lt;li>Using
 &lt;a href="https://gradle.org/" target="_blank" rel="noopener">Gradle&lt;/a>&lt;/li>
 &lt;/ul>
-&lt;pre>&lt;code class="language-gradle">implementation 'org.eclipse.keyple:keyple-plugin-remote-remote:1.0.0'
+&lt;pre>&lt;code class="language-gradle">implementation 'org.eclipse.keyple:keyple-java-distributed-remote:1.0.0'
 &lt;/code>&lt;/pre>
 &lt;ul>
 &lt;li>Using
@@ -144,11 +144,11 @@ Keyple project
 &lt;/ul>
 &lt;pre>&lt;code class="language-xml">&amp;lt;dependency&amp;gt;
 &amp;lt;groupId&amp;gt;org.eclipse.keyple&amp;lt;/groupId&amp;gt;
-&amp;lt;artifactId&amp;gt;keyple-plugin-remote-remote&amp;lt;/artifactId&amp;gt;
+&amp;lt;artifactId&amp;gt;keyple-java-distributed-remote&amp;lt;/artifactId&amp;gt;
 &amp;lt;version&amp;gt;1.0.0&amp;lt;/version&amp;gt;
 &amp;lt;/dependency&amp;gt;
 &lt;/code>&lt;/pre>
 &lt;ul>
 &lt;li>Direct
-&lt;a href="https://search.maven.org/search?q=a:keyple-plugin-remote-remote" target="_blank" rel="noopener">download&lt;/a>&lt;/li>
+&lt;a href="https://search.maven.org/search?q=a:keyple-java-distributed-remote" target="_blank" rel="noopener">download&lt;/a>&lt;/li>
 &lt;/ul></description></item></channel></rss>

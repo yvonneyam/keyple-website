@@ -22,7 +22,7 @@ Keyple project
 &lt;ul>
 &lt;li>
 &lt;a href="../../docs/developer-guide/standalone-application/">Developer guide&lt;/a>&lt;/li>
-&lt;li>&lt;a href="../../../docs/api-reference/keyple-android-plugin-nfc/1.0.0/index.html">JavaDoc API&lt;/a>&lt;/li>
+&lt;li>&lt;a href="../../../docs/api-reference/java-api/keyple-android-plugin-nfc/1.0.0/index.html">JavaDoc API&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;h2 id="download">Download&lt;/h2>
 &lt;p>All deliverables are available on the
@@ -72,7 +72,7 @@ This allows the app to benefit from enhanced SE-based security services.&lt;/p>
 &lt;ul>
 &lt;li>
 &lt;a href="../../docs/developer-guide/standalone-application/">Developer guide&lt;/a>&lt;/li>
-&lt;li>&lt;a href="../../../docs/api-reference/keyple-android-plugin-omapi/1.0.0/index.html">JavaDoc API&lt;/a>&lt;/li>
+&lt;li>&lt;a href="../../../docs/api-reference/java-api/keyple-android-plugin-omapi/1.0.0/index.html">JavaDoc API&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;h2 id="download">Download&lt;/h2>
 &lt;p>All deliverables are available on the
@@ -120,7 +120,7 @@ Keyple project
 &lt;ul>
 &lt;li>
 &lt;a href="../../docs/developer-guide/standalone-application/">Developer guide&lt;/a>&lt;/li>
-&lt;li>&lt;a href="../../../docs/api-reference/keyple-java-plugin-pcsc/1.0.0/index.html">JavaDoc API&lt;/a>&lt;/li>
+&lt;li>&lt;a href="../../../docs/api-reference/java-api/keyple-java-plugin-pcsc/1.0.0/index.html">JavaDoc API&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;h2 id="download">Download&lt;/h2>
 &lt;p>All deliverables are available on the
@@ -168,7 +168,7 @@ Keyple project
 &lt;ul>
 &lt;li>
 &lt;a href="../../docs/developer-guide/standalone-application/">Developer guide&lt;/a>&lt;/li>
-&lt;li>&lt;a href="../../../docs/api-reference/keyple-java-plugin-stub/1.0.0/index.html">JavaDoc API&lt;/a>&lt;/li>
+&lt;li>&lt;a href="../../../docs/api-reference/java-api/keyple-java-plugin-stub/1.0.0/index.html">JavaDoc API&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;h2 id="download">Download&lt;/h2>
 &lt;p>All deliverables are available on the
