@@ -2,7 +2,6 @@
 &lt;div>
 &lt;select id="version_selection" style="float: right;" onchange="selectVersion()">
 &lt;option>1.0.0&lt;/option>
-&lt;option>1.0.0-alpha-1&lt;/option>
 &lt;option>0.9.0&lt;/option>
 &lt;option>0.8.1&lt;/option>
 &lt;/select>
