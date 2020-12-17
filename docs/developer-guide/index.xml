@@ -1609,47 +1609,11 @@ SmartCardService.getInstance().registerPlugin(AndroidNfcPluginFactory())
 one must be developed.&lt;/p>
 &lt;p>The purpose of this guide is to support developers in this process.&lt;/p>
 &lt;h2 id="existing-plugins">Existing plugins&lt;/h2>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>plateform&lt;/th>
-&lt;th>Import&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>Keyple Android NFC&lt;/td>
-&lt;td>Android OS with android.nfc implementation&lt;/td>
-&lt;td>&lt;a href="https://search.maven.org/search?q=a:keyple-android-plugin-nfc" target="blank">Maven central&lt;/a>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>Keyple Android OMAPI&lt;/td>
-&lt;td>Android OS with android.se or Simalliance openmobileapi implementation&lt;/td>
-&lt;td>&lt;a href="https://search.maven.org/search?q=a:keyple-android-plugin-omapi" target="blank">Maven Central&lt;/a>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>Keyple Android Famoco&lt;/td>
-&lt;td>Famoco&amp;rsquo;s Android device using &lt;strong>lib-secommunication-1.7.0&lt;/strong> for NFC&lt;/td>
-&lt;td>Contact us&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>Keyple Android Coppernic&lt;/td>
-&lt;td>Coppernic&amp;rsquo;s Android OS using ASK&lt;/td>
-&lt;td>Contact us&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>Keyple Android Wizway&lt;/td>
-&lt;td>Android OS with Wizway NFC Agent&lt;/td>
-&lt;td>Contact us&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>Keyple Java PCSC&lt;/td>
-&lt;td>Device running JVM with connected PC/SC reader&lt;/td>
-&lt;td>&lt;a href="https://search.maven.org/search?q=a:keyple-java-plugin-pcsc" target="blank">Maven Central&lt;/a>&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
+&lt;p>The list of reader plugins is maintained on this pages:&lt;/p>
+&lt;p>
+&lt;a href="../../components-java/plugins/">Java Reader Plugins&lt;/a>&lt;/p>
+&lt;p>
+&lt;a href="../../components-cpp/plugins/">C++ Reader Plugins&lt;/a>&lt;/p>
 &lt;h2 id="class-diagram-of-plugin-package">Class diagram of plugin package&lt;/h2>
 &lt;p>For the record, this is a wide view of classes implied in the plugin system. It is designed to natively handle as much
 use cas as possible while being easy to use. It results of several internal classes, however, plugin&amp;rsquo;s developers will
@@ -1669,9 +1633,11 @@ plugin package from Keyple Core API:&lt;/p>
 &lt;li>Implement a Keyple Plugin Factory.&lt;/li>
 &lt;/ol>
 &lt;h2 id="imports">Imports&lt;/h2>
-&lt;p>Your plugin will use be based upon Keyple Core libraries:&lt;/p>
-&lt;pre>&lt;code class="language-gradle">implementation &amp;quot;org.eclipse.keyple:keyple-java-core:$keyple_version&amp;quot;
-&lt;/code>&lt;/pre>
+&lt;p>Your plugin will use be based upon Keyple Core library.&lt;/p>
+&lt;p>Using the
+&lt;a href="../../components-java/core/">Java components&lt;/a> or
+&lt;a href="../../components-cpp/core/">C++ components&lt;/a>
+pages, import &lt;strong>Keyple Core&lt;/strong> into your project.&lt;/p>
 &lt;h2 id="implement-keyple-reader">Implement Keyple Reader&lt;/h2>
 &lt;p>The first step of a Keyple plugin development is the implementation of Keyple Reader Interface (org.eclipse.keyple.core.Reader).
 This implementation should use device&amp;rsquo;s native smartcard reader library (or sdk package) to map interfaces used by Keyple API.&lt;/p>
@@ -2523,71 +2489,6 @@ return PcscPluginImpl.getInstance();
 throw new KeyplePluginInstantiationException(&amp;quot;Can not access smartcard.io readers&amp;quot;, e);
 }
 }
-&lt;/code>&lt;/pre>
-&lt;h1 id="imports-1">Imports&lt;/h1>
-&lt;h2 id="jars">JARs&lt;/h2>
-&lt;p>All deliverables (JARs, AARs, changelogs, javadocs) are available on the
-&lt;a href="https://search.maven.org/" target="_blank" rel="noopener">Maven Central Repository&lt;/a>.&lt;/p>
-&lt;p>So you can use
-&lt;a href="https://gradle.org/" target="_blank" rel="noopener">Gradle&lt;/a> or
-&lt;a href="https://maven.apache.org/" target="_blank" rel="noopener">Maven&lt;/a> to import the JARs into your project or download them directly from the &lt;strong>Maven Central Repository&lt;/strong>.&lt;/p>
-&lt;h2 id="gradle">GRADLE&lt;/h2>
-&lt;ul>
-&lt;li>Keyple Java Core&lt;/li>
-&lt;/ul>
-&lt;pre>&lt;code>implementation 'org.eclipse.keyple:keyple-java-core:1.0.0'
-&lt;/code>&lt;/pre>
-&lt;ul>
-&lt;li>Keyple Android Plugin NFC&lt;/li>
-&lt;/ul>
-&lt;pre>&lt;code>implementation 'org.eclipse.keyple:keyple-android-plugin-nfc:1.0.0'
-&lt;/code>&lt;/pre>
-&lt;ul>
-&lt;li>Keyple Android Plugin OMAPI&lt;/li>
-&lt;/ul>
-&lt;pre>&lt;code>implementation 'org.eclipse.keyple:keyple-android-plugin-omapi:1.0.0'
-&lt;/code>&lt;/pre>
-&lt;ul>
-&lt;li>Keyple Java Plugin PC/SC&lt;/li>
-&lt;/ul>
-&lt;pre>&lt;code>implementation 'org.eclipse.keyple:keyple-java-plugin-pcsc:1.0.0'
-&lt;/code>&lt;/pre>
-&lt;h2 id="maven">MAVEN&lt;/h2>
-&lt;ul>
-&lt;li>Keyple Java Core&lt;/li>
-&lt;/ul>
-&lt;pre>&lt;code>&amp;lt;dependency&amp;gt;
-&amp;lt;groupId&amp;gt;org.eclipse.keyple&amp;lt;/groupId&amp;gt;
-&amp;lt;artifactId&amp;gt;keyple-java-core&amp;lt;/artifactId&amp;gt;
-&amp;lt;version&amp;gt;1.0.0&amp;lt;/version&amp;gt;
-&amp;lt;/dependency&amp;gt;
-&lt;/code>&lt;/pre>
-&lt;ul>
-&lt;li>Keyple Android Plugin NFC&lt;/li>
-&lt;/ul>
-&lt;pre>&lt;code>&amp;lt;dependency&amp;gt;
-&amp;lt;groupId&amp;gt;org.eclipse.keyple&amp;lt;/groupId&amp;gt;
-&amp;lt;artifactId&amp;gt;keyple-android-plugin-nfc&amp;lt;/artifactId&amp;gt;
-&amp;lt;version&amp;gt;1.0.0&amp;lt;/version&amp;gt;
-&amp;lt;/dependency&amp;gt;
-&lt;/code>&lt;/pre>
-&lt;ul>
-&lt;li>Keyple Android Plugin OMAPI&lt;/li>
-&lt;/ul>
-&lt;pre>&lt;code>&amp;lt;dependency&amp;gt;
-&amp;lt;groupId&amp;gt;org.eclipse.keyple&amp;lt;/groupId&amp;gt;
-&amp;lt;artifactId&amp;gt;keyple-android-plugin-omapi&amp;lt;/artifactId&amp;gt;
-&amp;lt;version&amp;gt;1.0.0&amp;lt;/version&amp;gt;
-&amp;lt;/dependency&amp;gt;
-&lt;/code>&lt;/pre>
-&lt;ul>
-&lt;li>Keyple Java Plugin PC/SC&lt;/li>
-&lt;/ul>
-&lt;pre>&lt;code>&amp;lt;dependency&amp;gt;
-&amp;lt;groupId&amp;gt;org.eclipse.keyple&amp;lt;/groupId&amp;gt;
-&amp;lt;artifactId&amp;gt;keyple-java-plugin-pcsc&amp;lt;/artifactId&amp;gt;
-&amp;lt;version&amp;gt;1.0.0&amp;lt;/version&amp;gt;
-&amp;lt;/dependency&amp;gt;
 &lt;/code>&lt;/pre>
 &lt;h2 id="sources">Sources&lt;/h2>
 &lt;h3 id="keyple-android-nfc">Keyple Android NFC&lt;/h3>
