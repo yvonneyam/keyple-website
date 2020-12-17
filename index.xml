@@ -3407,7 +3407,6 @@ poTransaction.processOpening(PoTransaction.SessionSetting.AccessLevel.SESSION_LV
 // Get and display the EventLog data
 ElementaryFile efEventLog = calypsoPo.getFileBySfi(CalypsoClassicInfo.SFI_EventLog);
 String eventLog = ByteArrayUtil.toHex(efEventLog.getData().getContent());
-logger.info(&amp;quot;File Event log: {}&amp;quot;, eventLog);
 // Prepare a SV Debit (this command could also have been placed before processOpening
 // since it is not followed by any other command)
 poTransaction.prepareSvGet(SvSettings.Operation.DEBIT, SvSettings.Action.DO);
@@ -3421,12 +3420,23 @@ int svLastTNum = calypsoPo.getSvLastTNum()
 &lt;/code>&lt;/pre>
 &lt;h2 id="api">API&lt;/h2>
 &lt;ul>
-&lt;li>The diagram below represents the main classes implemented around the &lt;strong>Transaction package&lt;/strong>.
+&lt;li>
+&lt;p>The diagram below represents the main classes implemented around the &lt;strong>Transaction package&lt;/strong>.
 &lt;figure >
 &lt;a data-fancybox="" href="./media/calypso-app-development/class/TransactionPackage_Class.svg" >
 &lt;img src="./media/calypso-app-development/class/TransactionPackage_Class.svg" alt="" >
 &lt;/a>
 &lt;/figure>
+&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>The diagram below represents the main classes implemented around the &lt;strong>Command package&lt;/strong>.
+&lt;figure >
+&lt;a data-fancybox="" href="./media/calypso-app-development/class/CommandPackage_Class.svg" >
+&lt;img src="./media/calypso-app-development/class/CommandPackage_Class.svg" alt="" >
+&lt;/a>
+&lt;/figure>
+&lt;/p>
 &lt;/li>
 &lt;/ul>
 &lt;h2 id="examples">Examples&lt;/h2>
