@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Eclipse Keyple</title><link>https://keyple.org/</link><atom:link href="https://keyple.org/index.xml" rel="self" type="application/rss+xml"/><description>Eclipse Keyple</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Copyright © Eclipse Foundation, Inc. All Rights Reserved.</copyright><lastBuildDate>Thu, 17 Dec 2020 17:24:41 +0100</lastBuildDate><image><url>https://keyple.org/images/logo_hu673a59176cd62c570f44ed2728665b48_42188_300x300_fit_lanczos_2.png</url><title>Eclipse Keyple</title><link>https://keyple.org/</link></image><item><title>Add your support &amp; trainings</title><link>https://keyple.org/support-trainings/add-support-trainings/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/support-trainings/add-support-trainings/</guid><description>&lt;p>To add your support &amp;amp; trainings made a
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Eclipse Keyple</title><link>https://keyple.org/</link><atom:link href="https://keyple.org/index.xml" rel="self" type="application/rss+xml"/><description>Eclipse Keyple</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Copyright © Eclipse Foundation, Inc. All Rights Reserved.</copyright><lastBuildDate>Tue, 26 Jan 2021 14:57:56 +0200</lastBuildDate><image><url>https://keyple.org/images/logo_hu673a59176cd62c570f44ed2728665b48_42188_300x300_fit_lanczos_2.png</url><title>Eclipse Keyple</title><link>https://keyple.org/</link></image><item><title>Add your support &amp; trainings</title><link>https://keyple.org/support-trainings/add-support-trainings/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/support-trainings/add-support-trainings/</guid><description>&lt;p>To add your support &amp;amp; trainings made a
 &lt;a href="https://github.com/eclipse/keyple-website/pulls" target="_blank" rel="noopener">Pull request&lt;/a> contributions on GitHub.&lt;/p>
 &lt;p>In order for your contribution to be accepted you must comply with one of the conditions below:&lt;/p>
 &lt;ul>
@@ -51,7 +51,7 @@ Keyple project
 &lt;/div>
 &lt;/div>
 &lt;h2 id="overview">Overview&lt;/h2>
-&lt;p>The &lt;strong>Keyple Calypso&lt;/strong> Java component is a Keyple extension for &lt;strong>Calypso®&lt;/strong> technology.&lt;/p>
+&lt;p>The &lt;strong>Keyple Calypso&lt;/strong> Java component is a Keyple reader extension for &lt;strong>Calypso®&lt;/strong> technology.&lt;/p>
 &lt;p>It can be used on &lt;strong>PC&lt;/strong>, &lt;strong>MAC&lt;/strong> and &lt;strong>Android&lt;/strong> platforms.&lt;/p>
 &lt;h2 id="documentation">Documentation&lt;/h2>
 &lt;ul>
@@ -604,11 +604,12 @@ software interfaces including PC/SC, Android NFC reader, and Android OMAPI.&lt;/
 a smart card terminal can be operated remotely, as if it were local to the terminal, and ensures that robust security and
 speed is not sacrificed in a cloud-based system.&lt;/p>
 &lt;p>The Calypso Processing API is also available as a Keyple™ extension. This component carries out the terminal processing
-element of ticketing technology. Access to Calypso’s security features are automatically managed by the Keyple™ extension.&lt;/p></description></item><item><title>Keyple Global Solution</title><link>https://keyple.org/docs/architecture/keyple-global/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/docs/architecture/keyple-global/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+element of ticketing technology. Access to Calypso’s security features are automatically managed by the Keyple™ extension.&lt;/p></description></item><item><title>Global Solution</title><link>https://keyple.org/docs/architecture/keyple-global/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/docs/architecture/keyple-global/</guid><description>&lt;hr>
+&lt;h2 id="overview">Overview&lt;/h2>
 &lt;p>The Eclipse Keyple solution provides currently 2 modules:&lt;/p>
 &lt;ul>
-&lt;li>the &amp;lsquo;Keyple Core&amp;rsquo;, a universal smart card reader interface to manage the setting of smart card reader, the detection and the communication with smart card, and the selection of card application.&lt;/li>
-&lt;li>the &amp;lsquo;Keyple Calypso&amp;rsquo;, a first smart card solution extension built on the Keyple Core, dedicated to manage Calypso processing, Calypso card identification, card command generation, card data recovery, authentication with the secure session.&lt;/li>
+&lt;li>the &lt;strong>Keyple Core&lt;/strong>, a universal smart card reader interface to manage the setting of smart card reader, the detection and the communication with smart card, and the selection of card application.&lt;/li>
+&lt;li>the &lt;strong>Keyple Calypso&lt;/strong>, a first smart card solution extension built on the Keyple Core, dedicated to manage Calypso processing, Calypso card identification, card command generation, card data recovery, authentication with the secure session.&lt;/li>
 &lt;/ul>
 &lt;figure id="figure-keyple-architecture-global">
 &lt;a data-fancybox="" href="./media/architecture/Keyple_Architecture_Global.svg" data-caption="Keyple Architecture Global">
@@ -620,11 +621,12 @@ Keyple Architecture Global
 &lt;/figure>
 &lt;p>The Keyple Core provides 3 interfaces:&lt;/p>
 &lt;ul>
-&lt;li>the &amp;lsquo;Service API&amp;rsquo;, to allow terminal application to handle reader &amp;amp; select card&lt;/li>
-&lt;li>the &amp;lsquo;Card API&amp;rsquo;, for APDU command transmission, card data parsing&lt;/li>
-&lt;li>the &amp;lsquo;Plugin API&amp;rsquo;, to integrate specific smart card reader solutions.&lt;/li>
+&lt;li>the &lt;strong>Service API&lt;/strong>, to allow terminal application to handle reader &amp;amp; select card&lt;/li>
+&lt;li>the &lt;strong>Card API&lt;/strong>, for APDU command transmission, card data parsing&lt;/li>
+&lt;li>the &lt;strong>Plugin API&lt;/strong>, to integrate specific smart card reader solutions.&lt;/li>
 &lt;/ul>
 &lt;p>The Keyple Calypso extension provides the Calypso API: a high-level interface to manage Calypso card processing.&lt;/p>
+&lt;hr>
 &lt;h2 id="application-integration">Application integration&lt;/h2>
 &lt;p>The Card API is a low-level interface to manage the transmission of APDU commands with a smart card.
 A terminal application operating processing with a specific smart card solution could be implemented directly on top the Card API.&lt;/p>
@@ -638,6 +640,7 @@ Keyple Architecture Application Integration
 &lt;/figure>
 &lt;p>Another way offering a better abstraction on smart card technical settings could be to implement on the Card API a smart card solution library extension providing a high level interface: a specific Solution API.
 This is how the Keyple Calypso extension has be defined, the Calypso API is a high level functional interface, which hides the low-level APDU operations.&lt;/p>
+&lt;hr>
 &lt;h2 id="reader-integration">Reader integration&lt;/h2>
 &lt;h3 id="native-integration">native integration&lt;/h3>
 &lt;p>The smart card readers could be directly integrated with the Keyple Core. By interfacing through the Plugin API, a specific plugin dedicated to a smart card reader solution, the Keyple Core could have the capability to fully manage the smart card readers corresponding to this native plugin.&lt;/p>
@@ -675,6 +678,7 @@ Keyple Architecture Hybrid Plugins
 &lt;/figure>
 &lt;p>In this case a reader manager plugin, also based on the Plugin API, could allow the Keyple Core to operate the processing of a specific smart card, when requested by the Reader Manager.&lt;/p>
 &lt;p>For example, an EMV certified reader manager could call a Keyple application in case of PPSE selection failure.&lt;/p>
+&lt;hr>
 &lt;h2 id="smart-card-processing">Smart card processing&lt;/h2>
 &lt;h3 id="stand-alone">stand-alone&lt;/h3>
 &lt;p>By default, a terminal application manages the processing of a specific smart card in stand-alone with its local readers.&lt;/p>
@@ -687,7 +691,7 @@ Keyple Architecture Local Plugin
 &lt;/figcaption>
 &lt;/figure>
 &lt;h3 id="distributed">distributed&lt;/h3>
-&lt;p>The &amp;lsquo;Distributed&amp;rsquo; extension of the Keyple Core provides a solution allowing a master terminal application to manage the processing of a smart card localized in a remote driven terminal.
+&lt;p>The &lt;strong>Distributed&lt;/strong> extension of the Keyple Core provides a solution allowing a master terminal application to manage the processing of a smart card localized in a remote driven terminal.
 &lt;figure id="figure-keyple-architecture-remote-plugin">
 &lt;a data-fancybox="" href="./media/architecture/Keyple_Architecture_Remote_Plugin.svg" data-caption="Keyple Architecture Remote Plugin">
 &lt;img src="./media/architecture/Keyple_Architecture_Remote_Plugin.svg" alt="" >
@@ -697,6 +701,7 @@ Keyple Architecture Remote Plugin
 &lt;/figcaption>
 &lt;/figure>
 &lt;/p>
+&lt;hr>
 &lt;h2 id="smart-card-transaction">Smart card transaction&lt;/h2>
 &lt;p>There are two ways for a terminal application to manage a transaction with a smart card.&lt;/p>
 &lt;ul>
@@ -730,80 +735,71 @@ Keyple Architecture Remote Plugin
 &lt;figcaption>
 [Keyple Transaction Default Selection
 &lt;/figcaption>
-&lt;/figure></description></item><item><title>Keyple Core</title><link>https://keyple.org/docs/architecture/keyple-core/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/docs/architecture/keyple-core/</guid><description>&lt;h2 id="features--packages-and-corresponding-usages">Features / packages and corresponding usages&lt;/h2>
+&lt;/figure></description></item><item><title>Keyple Core</title><link>https://keyple.org/docs/architecture/keyple-core/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/docs/architecture/keyple-core/</guid><description>&lt;hr>
+&lt;h2 id="features--packages-and-corresponding-usages">Features / packages and corresponding usages&lt;/h2>
 &lt;p>The Keyple Core is a tool to handle smart card reader and to operate generic processing with smart cards.&lt;/p>
-&lt;p>The Core is divided in 4 sub-modules:&lt;/p>
+&lt;p>The Core is divided in 3 sub-modules:&lt;/p>
 &lt;ul>
-&lt;li>reader : includes the API to access and manage a reader.&lt;/li>
-&lt;li>plugin : provides factorized processing for the implementation of plugin.&lt;/li>
-&lt;li>card : the generic operation for smart cards.&lt;/li>
-&lt;li>service : the common interfaces and the main service of Keyple.&lt;/li>
-&lt;/ul>
-&lt;p>According to the developer’s objective different API must be imported:&lt;/p>
-&lt;ul>
-&lt;li>for the implementation of a smart card terminal application, only the high-level API of the ‘reader’ and ‘card’ modules.&lt;/li>
-&lt;li>to implement a plugin, all the ‘reader’ API and the low-level ‘plugin’ API.&lt;/li>
-&lt;li>to develop a dedicated library supporting the command sets and transaction features of a specific smart card solution, the low-level ‘reader’ and ‘card’ API.&lt;/li>
+&lt;li>&lt;strong>Service API&lt;/strong> : provides the interfaces to access to the smart card readers and to select a smart card.&lt;/li>
+&lt;li>&lt;strong>Card API&lt;/strong> : for the transmission of APDU commands with a smart card.&lt;/li>
+&lt;li>&lt;strong>Plugin API&lt;/strong> : includes the factorized processing for the implementation of plugin.&lt;/li>
 &lt;/ul>
 &lt;table>
 &lt;thead>
 &lt;tr>
 &lt;th>Module&lt;/th>
 &lt;th>Package&lt;/th>
-&lt;th>API&lt;br/>level&lt;/th>
 &lt;th>Feature&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td rowspan="4">Reader&lt;/td>
-&lt;td>org.eclipse.keyple.core.&lt;b>service&lt;/b>&lt;/td>
-&lt;td>high&lt;/td>
+&lt;td rowspan="4" width="13%">Service&lt;/td>
+&lt;td width="38%">org.eclipse.keyple.core.&lt;b>service&lt;/b>&lt;/td>
 &lt;td>Management of the smart card readers&lt;br/>
 &lt;ul>&lt;li>Registration of plugins to the smart card Service&lt;br/>&lt;/li>
 &lt;li>Access to the readers through plugins&lt;/li>&lt;/ul>&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>org.eclipse.keyple.core.service.&lt;b>event&lt;/b>&lt;/td>
-&lt;td>high&lt;/td>
 &lt;td>Notifications of reader plug/unplug, of smart card insertion/removed&lt;br/>
 &lt;ul>&lt;li>Define observers of plugins or readers&lt;br/>&lt;/li>
 &lt;li>Interface to be implemented by observers to be notified on plugin event or reader event&lt;br/>&lt;/li>
 &lt;li>For observable reader, setting of default selections, to automatically operate in case of smart card insertion&lt;/li>&lt;/ul>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>org.eclipse.keyple.core.service.util&lt;/td>
-&lt;td>high&lt;/td>
+&lt;td>org.eclipse.keyple.core.service.&lt;b>util&lt;/b>&lt;/td>
 &lt;td>Communication protocols setting for contactless/contacts Reader&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>org.eclipse.keyple.card.&lt;b>message&lt;/b>&lt;/td>
-&lt;td>low&lt;/td>
-&lt;td>Transmission of grouped APDU commands to a Reader&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>Plugin&lt;/td>
-&lt;td>org.eclipse.keyple.core.&lt;b>plugin&lt;/b>&lt;br/>
-&lt;td>low&lt;/td>
-&lt;td>Reader plugins implementation&lt;br/>
-&lt;ul>&lt;li>Utility classes providing generic processing for Readers &lt;/li>&lt;/ul>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td rowspan="2">smart card&lt;/td>
 &lt;td>org.eclipse.keyple.card.&lt;b>selection&lt;/b>&lt;/td>
-&lt;td>high&lt;/td>
 &lt;td>Generic selection of a smart card&lt;br/>
 &lt;ul>&lt;li>preparation of smart card selection requests&lt;br>&lt;/li>
 &lt;li>matching selection results as smart card images&lt;/li>&lt;/ul>&lt;/td>
 &lt;/tr>
 &lt;tr>
+&lt;td rowspan="2">Smart card&lt;/td>
+&lt;td>org.eclipse.keyple.card.&lt;b>message&lt;/b>&lt;/td>
+&lt;td>Transmission of grouped APDU commands to a Reader&lt;/td>
+&lt;/tr>
+&lt;tr>
 &lt;td>org.eclipse.keyple.core.card.&lt;b>command&lt;/b>&lt;/td>
-&lt;td>low&lt;/td>
 &lt;td>Generic API to develop a smart card specific library&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Plugin&lt;/td>
+&lt;td>org.eclipse.keyple.core.&lt;b>plugin&lt;/b>&lt;br/>
+&lt;td>Reader plugins implementation&lt;br/>
+&lt;ul>&lt;li>Utility classes providing generic processing for Readers &lt;/li>&lt;/ul>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;p>A terminal application operating smart card must only import the Keyple Core packages: ‘service’ and ‘card’.&lt;/p>
+&lt;p>According to the developer’s objective different packages must be imported:&lt;/p>
+&lt;ul>
+&lt;li>for the implementation of a smart card terminal application: the packages &lt;strong>service&lt;/strong>, &lt;strong>event&lt;/strong> and &lt;strong>selection&lt;/strong>.&lt;/li>
+&lt;li>to develop a dedicated library supporting the command sets and transaction features of a specific smart card solution: the packages &lt;strong>message&lt;/strong>, &lt;strong>command&lt;/strong>, and &lt;strong>selection&lt;/strong>.&lt;/li>
+&lt;li>to implement a plugin: the packages &lt;strong>plugin&lt;/strong>, &lt;strong>service&lt;/strong>, &lt;strong>event&lt;/strong>, and &lt;strong>message&lt;/strong>.&lt;/li>
+&lt;/ul>
 &lt;figure id="figure-core-packages">
 &lt;a data-fancybox="" href="./media/architecture/KeypleCore_Packages.svg" data-caption="Core packages">
 &lt;img src="./media/architecture/KeypleCore_Packages.svg" alt="" >
@@ -812,22 +808,21 @@ Keyple Architecture Remote Plugin
 Core packages
 &lt;/figcaption>
 &lt;/figure>
-&lt;p>A reader plugin could be implemented by importing the ‘plugin’, ‘card’ and ‘service’ packages.&lt;/p>
-&lt;p>A smart card specific library could be implemented on top of the ‘card’ package.&lt;/p>
-&lt;h2 id="service-interface">&amp;lsquo;Service Interface&amp;rsquo;&lt;/h2>
+&lt;hr>
+&lt;h2 id="service-interface---reader-access">Service Interface - Reader Access&lt;/h2>
 &lt;p>for the development of ticketing terminal application&lt;/p>
-&lt;h3 id="reader-access">Reader Access&lt;/h3>
+&lt;h3 id="types-of-plugin--reader">Types of plugin &amp;amp; reader&lt;/h3>
 &lt;p>On Keyple, the smart card readers are managed through plugins in order to integrate specific reader solutions.
-The &amp;lsquo;&lt;strong>SmartCard Service&lt;/strong>&amp;rsquo; singleton provides the unique name list of registered plugins. There can be three kinds of plugin:&lt;/p>
+The &lt;strong>SmartCard Service&lt;/strong> singleton provides the unique name list of registered plugins. There can be three kinds of plugin:&lt;/p>
 &lt;ul>
-&lt;li>‘&lt;strong>Plugin&lt;/strong>’ is the generic interface to list the readers of a plugin, or to access to a specific reader with its name.&lt;/li>
-&lt;li>The ‘&lt;strong>Observable Plugin&lt;/strong>’ interface extends Plugins which have the capability to be observed: in order to notify registered Plugin Observers about the plug or unplug of readers. Plugin Observers could be added or removed to the Observable Plugin. Useful for systems allowing the hot plug / unplug of Readers.&lt;/li>
-&lt;li>A ‘&lt;strong>Pool Plugin&lt;/strong>’ is a plugin for which a Reader is available only after an explicit allocation. When not more necessary, a Reader must be released. Useful for server solutions managing farms of Readers or interfaced with HSM: unallocated Readers or HSM instances could be shared between several smartcard terminal solutions.&lt;/li>
+&lt;li>&lt;strong>Plugin&lt;/strong> is the generic interface to list the readers of a plugin, or to access to a specific reader with its name.&lt;/li>
+&lt;li>The &lt;strong>Observable Plugin&lt;/strong> interface extends Plugins which have the capability to be observed: in order to notify registered Plugin Observers about the plug or unplug of readers. Plugin Observers could be added or removed to the Observable Plugin. Useful for systems allowing the hot plug / unplug of Readers.&lt;/li>
+&lt;li>A &lt;strong>Pool Plugin&lt;/strong> is a plugin for which a Reader is available only after an explicit allocation. When not more necessary, a Reader must be released. Useful for server solutions managing farms of Readers or interfaced with HSM: unallocated Readers or HSM instances could be shared between several smartcard terminal solutions.&lt;/li>
 &lt;/ul>
 &lt;p>A smartcard Reader is identified through its unique name in a Plugin. There are two kinds of Reader:&lt;/p>
 &lt;ul>
-&lt;li>The ‘&lt;strong>Reader&lt;/strong>’ is the generic interface to handle a smartcard reader. The presence of card in a Reader could be checked.&lt;/li>
-&lt;li>The ‘&lt;strong>Observable Reader&lt;/strong>’ interface extends Readers which have the capability to notify registered Reader Observers about the insertion or remove of a Card in the Reader. Reader Observers could be added or removed to the Observable Reader. Useful for systems automatically starting the processing of a Card at its insertion: like a ticketing validator.
+&lt;li>The &lt;strong>Reader&lt;/strong> is the generic interface to handle a smartcard reader. The presence of card in a Reader could be checked.&lt;/li>
+&lt;li>The &lt;strong>Observable Reader&lt;/strong> interface extends Readers which have the capability to notify registered Reader Observers about the insertion or remove of a Card in the Reader. Reader Observers could be added or removed to the Observable Reader. Useful for systems automatically starting the processing of a Card at its insertion: like a ticketing validator.
 &lt;figure id="figure-reader-access-v100">
 &lt;a data-fancybox="" href="./media/architecture/KeypleCore_Reader_ClassDiag_PluginSettingAndReaderAccess_1_0_0.svg" data-caption="[Reader Access v1.0.0">
 &lt;img src="./media/architecture/KeypleCore_Reader_ClassDiag_PluginSettingAndReaderAccess_1_0_0.svg" alt="" >
@@ -839,7 +834,7 @@ The &amp;lsquo;&lt;strong>SmartCard Service&lt;/strong>&amp;rsquo; singleton pro
 &lt;/li>
 &lt;/ul>
 &lt;p>(The APDU transmission with a Card is managed at a lower layer, through a Card Solution API.)&lt;/p>
-&lt;h4 id="specific-plugin-integration">Specific Plugin integration&lt;/h4>
+&lt;h3 id="specific-plugin-integration">Specific Plugin integration&lt;/h3>
 &lt;p>The Plugins are registered to the SmartCard Service through related specific Plugin Factory.
 &lt;figure id="figure-specific-plugin-v100">
 &lt;a data-fancybox="" href="./media/architecture/KeypleCore_Reader_ClassDiag_SpecificPluginFactoryAndProtocol_1_0_0.svg" data-caption="Specific Plugin v1.0.0">
@@ -850,8 +845,8 @@ Specific Plugin v1.0.0
 &lt;/figcaption>
 &lt;/figure>
 &lt;/p>
-&lt;h4 id="reader-notifications">Reader Notifications&lt;/h4>
-&lt;p>To be notified about &amp;lsquo;&lt;strong>Plugin Event&lt;/strong>&amp;rsquo; or &amp;lsquo;&lt;strong>Reader Event&lt;/strong>&amp;rsquo;, a terminal application must implement the dedicated &amp;lsquo;&lt;strong>Plugin Observer&lt;/strong>&amp;rsquo; or &amp;lsquo;&lt;strong>Reader Observer&lt;/strong>&amp;rsquo; interfaces.&lt;/p>
+&lt;h3 id="reader-notifications">Reader Notifications&lt;/h3>
+&lt;p>To be notified about &lt;strong>Plugin Event&lt;/strong> or &lt;strong>Reader Event&lt;/strong>, a terminal application must implement the dedicated &lt;strong>Plugin Observer&lt;/strong> or &lt;strong>Reader Observer&lt;/strong> interfaces.&lt;/p>
 &lt;figure id="figure-reader-notifications-v100">
 &lt;a data-fancybox="" href="./media/architecture/KeypleCore_Reader_ClassDiag_ObservablePluginAndReaderEvents_1_0_0.svg" data-caption="Reader Notifications v1.0.0">
 &lt;img src="./media/architecture/KeypleCore_Reader_ClassDiag_ObservablePluginAndReaderEvents_1_0_0.svg" alt="" >
@@ -860,22 +855,22 @@ Specific Plugin v1.0.0
 Reader Notifications v1.0.0
 &lt;/figcaption>
 &lt;/figure>
-&lt;h5 id="plugin-event">Plugin Event&lt;/h5>
-&lt;p>Several ‘Plugin Observers’ could be registered to an Observable Plugin.
+&lt;h3 id="plugin-event">Plugin Event&lt;/h3>
+&lt;p>Several &lt;strong>Plugin Observers&lt;/strong> could be registered to an Observable Plugin.
 In case of reader connection / disconnection, the Observable Plugin notifies sequentially the registered Plugin Observers with the corresponding Plugin Event.
 The Observable Plugin is a blocking API, the thread managing the issuance of the Plugin Event waits the acknowledge of the Plugin Observer currently notified.&lt;/p>
-&lt;h5 id="reader-event">Reader Event&lt;/h5>
-&lt;p>Several ‘Reader Observers’ could be registered to an Observable Reader.
+&lt;h3 id="reader-event">Reader Event&lt;/h3>
+&lt;p>Several &lt;strong>Reader Observers&lt;/strong> could be registered to an Observable Reader.
 In case of Card insertion / removal or selection match, the Observable Reader notifies sequentially the registered Reader Observers with the corresponding Reader Event. The Observable Reader could be a blocking API, the thread managing the issuance of the Plugin Event could wait the acknowledge of the notified Reader Observers.&lt;/p>
-&lt;p>An Observable Reader has the capability to be set with a ‘Default Selections Request’: in this case when a Card is inserted in the Reader, the Reader will try to operate the configured default selections. If a selection successfully matches with the Card, instead to simply notify about the insertion of a Card, the Observable Reader will notify about a successful selection with a Card application.&lt;/p>
+&lt;p>An Observable Reader has the capability to be set with a &lt;strong>Default Selections Request&lt;/strong>: in this case when a Card is inserted in the Reader, the Reader will try to operate the configured default selections. If a selection successfully matches with the Card, instead to simply notify about the insertion of a Card, the Observable Reader will notify about a successful selection with a Card application.&lt;/p>
 &lt;ul>
-&lt;li>If the notification mode is defined as ‘always’, then in case of Card insertion, the Observable Reader will notify a matched card Reader Event in case of successful selection, or a simple card insertion Reader Event if not.&lt;/li>
-&lt;li>If the notification mode is defined as ‘matched only’, then in case of Card insertion, simple card insertion Reader Events are not notified.&lt;/li>
+&lt;li>If the notification mode is defined as &lt;strong>always&lt;/strong>, then in case of Card insertion, the Observable Reader will notify a matched card Reader Event in case of successful selection, or a simple card insertion Reader Event if not.&lt;/li>
+&lt;li>If the notification mode is defined as &lt;strong>matched only&lt;/strong>, then in case of Card insertion, simple card insertion Reader Events are not notified.&lt;/li>
 &lt;/ul>
 &lt;p>When the processing of an inserted or matched Card is finished, a Reader Observer must release the logical channel with the Card, in order to prepare the Observable Reader to detect the removal of the Card.&lt;/p>
-&lt;h5 id="observable-reader-states">Observable Reader states&lt;/h5>
+&lt;h3 id="observable-reader-states">Observable Reader states&lt;/h3>
 &lt;p>An Observable Reader is active only when at least one Reader Observer is registered, and if the start of the detection has been requested.
-When active, an Observable Reader could switch between three internal states: ‘Wait for Card Insertion’, ‘Wait for Card Processing’, &amp;amp; ‘Wait for Card Removal’.&lt;/p>
+When active, an Observable Reader could switch between three internal states: &lt;strong>Wait for Card Insertion&lt;/strong>, &lt;strong>Wait for Card Processing&lt;/strong>, &amp;amp; &lt;strong>Wait for Card Removal&lt;/strong>.&lt;/p>
 &lt;p>In the nominal case, a Reader Observer indicates to the Observable Reader that the processing of the SE is finished by releasing the Card Channel.
 To manage a failure of the Reader Observer process, the Observable Reader interface provides also a method to finalize the Card processing.&lt;/p>
 &lt;figure id="figure-observable-reader-states">
@@ -901,16 +896,18 @@ Observable Reader States
 &lt;/li>
 &lt;li>Or because of an external event (red arrows), the insertion or the remove of a Card.
 &lt;ul>
-&lt;li>the insertion a Card causing the Observable Reader to notify a &amp;lsquo;Card matched&amp;rsquo; Reader Event (in case of successful default selection) or a &amp;lsquo;Card inserted&amp;rsquo; Reader Event (Notification Mode defined as always).&lt;/li>
-&lt;li>the removal of a Card causing the Observable Reader to notify a &amp;lsquo;Card removed&amp;rsquo; Reader Event.&lt;/li>
+&lt;li>the insertion a Card causing the Observable Reader to notify a &lt;strong>Card matched&lt;/strong> Reader Event (in case of successful default selection) or a &lt;strong>Card inserted&lt;/strong> Reader Event (Notification Mode defined as always).&lt;/li>
+&lt;li>the removal of a Card causing the Observable Reader to notify a &lt;strong>Card removed&lt;/strong> Reader Event.&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
-&lt;p>If a Card detection is started with the &amp;lsquo;repeating&amp;rsquo; polling mode, then later when the Card is removed, the Reader starts again the detection of a new Card.&lt;/p>
+&lt;p>If a Card detection is started with the &lt;strong>repeating&lt;/strong> polling mode, then later when the Card is removed, the Reader starts again the detection of a new Card.&lt;/p>
 &lt;p>Whatever the Plugin of Observable Reader, when waiting for the Card removal, any Observable Reader shall have the capability to notify the remove of the Card.
 Some Plugin solutions could have the capability to notify a Card removal also during the processing of the Card.&lt;/p>
-&lt;h3 id="card-selection">Card Selection&lt;/h3>
-&lt;h4 id="selection-scenarios">Selection scenarios&lt;/h4>
+&lt;hr>
+&lt;h2 id="service-interface---card-selection">Service Interface - Card Selection&lt;/h2>
+&lt;p>for the development of ticketing terminal application&lt;/p>
+&lt;h3 id="selection-scenarios">Selection scenarios&lt;/h3>
 &lt;p>Depending on the Card transaction use case, or on the Reader capability, there are two ways to manage the Selection of a Card:&lt;/p>
 &lt;ul>
 &lt;li>Either on a simple Reader, a Selection could be operated directly by transmitting the Selection Request. In this case the same entity manages both the Card Selection and the Card processing.&lt;/li>
@@ -924,7 +921,7 @@ Some Plugin solutions could have the capability to notify a Card removal also du
 Selection v1.0.0
 &lt;/figcaption>
 &lt;/figure>
-&lt;h4 id="selection-setting-and-processing">Selection setting and processing&lt;/h4>
+&lt;h3 id="selection-setting-and-processing">Selection setting and processing&lt;/h3>
 &lt;p>A Card Selection request is defined with a Card Selector. A Card Selector could be defined with tree optional levels of selection filter.&lt;/p>
 &lt;ul>
 &lt;li>The selection could be limited to match a specific card communication protocol.&lt;/li>
@@ -934,10 +931,10 @@ If a SE Selector is defined without any filter, the selection is always successf
 &lt;/ul>
 &lt;p>Depending on the Keyple Card Solution extension library, a card request could be completed with specific card commands to operate at the selection (for example, a Select File for a specific DF LID, the read of a specific file).&lt;/p>
 &lt;p>For terminal managing several kinds of card applications, a Card Selection could be prepared with several card selection request to operate sequentially with the card.&lt;/p>
-&lt;p>According to the defined &amp;lsquo;multi selection processing&amp;rsquo; mode, the card selection could stop at the first selection request matching card application, otherwise all the prepared card selection request could be operated.&lt;/p>
+&lt;p>According to the defined &lt;strong>multi selection processing&lt;/strong> mode, the card selection could stop at the first selection request matching card application, otherwise all the prepared card selection request could be operated.&lt;/p>
 &lt;ul>
 &lt;li>Before the new processing of card selection request, the logical channel previously opened is closed.&lt;/li>
-&lt;li>The &amp;lsquo;channel control&amp;rsquo; defines if the logical channel should be kept open or close after the last processed card selection request.&lt;/li>
+&lt;li>The &lt;strong>channel control&lt;/strong> defines if the logical channel should be kept open or close after the last processed card selection request.&lt;/li>
 &lt;/ul>
 &lt;figure id="figure-card-selection-v100">
 &lt;a data-fancybox="" href="./media/architecture/KeypleCore_CardSelection_ClassDiag_SelectorAndSelection_1_0_0.svg" data-caption="Card Selection v1.0.0">
@@ -948,7 +945,8 @@ Card Selection v1.0.0
 &lt;/figcaption>
 &lt;/figure>
 &lt;p>The result of a card request selection is a card image of a matching card. For a card selection with multiple requests, several matching card could be provided.&lt;/p>
-&lt;h2 id="card-interface">&amp;lsquo;Card Interface&amp;rsquo;&lt;/h2>
+&lt;hr>
+&lt;h2 id="card-interface">Card Interface&lt;/h2>
 &lt;p>for the development of smartcard solution library&lt;/p>
 &lt;p>The Keyple Calypso extension uses the card interface to exchange APDU commands with Calypso cards and SAM.&lt;/p>
 &lt;h3 id="apdu-transmission">APDU Transmission&lt;/h3>
@@ -960,7 +958,8 @@ Card Selection v1.0.0
 APDU Transmission v1.0.0
 &lt;/figcaption>
 &lt;/figure>
-&lt;h2 id="plugin-api">&amp;lsquo;Plugin API&amp;rsquo;&lt;/h2>
+&lt;hr>
+&lt;h2 id="plugin-api">Plugin API&lt;/h2>
 &lt;p>for the implementation of smartcard reader plugins&lt;/p>
 &lt;h3 id="plugin-factorized-processing">Plugin Factorized Processing&lt;/h3>
 &lt;p>The implementation of Plugins requires to extend the classes AbstractPlugin and AbstractLocalReader.&lt;/p>
@@ -986,9 +985,10 @@ APDU Transmission v1.0.0
 &lt;figcaption>
 Plugin Factorized Processing v1.0.0
 &lt;/figcaption>
-&lt;/figure></description></item><item><title>Keyple Calypso</title><link>https://keyple.org/docs/architecture/keyple-calypso/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/docs/architecture/keyple-calypso/</guid><description>&lt;h2 id="features--packages-and-corresponding-usages">Features / packages and corresponding usages&lt;/h2>
+&lt;/figure></description></item><item><title>Keyple Calypso</title><link>https://keyple.org/docs/architecture/keyple-calypso/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/docs/architecture/keyple-calypso/</guid><description>&lt;hr>
+&lt;h2 id="features--packages-and-corresponding-usages">Features / packages and corresponding usages&lt;/h2>
 &lt;p>The Calypso transaction API provides a high-level of abstraction to define functional commands to manage a secure session with a Calypso Portable Object, to update or authenticate its data.&lt;/p>
-&lt;p>The transaction API is defined on a low-level Calypso commands API which contains the builders of PO and SAM APDU commands, and the corresponding parsers of APDU responses.&lt;/p>
+&lt;p>The transaction API is defined on a low-level Calypso commands API which contains the builders of PO and SAM APDU commands, and the corresponding parsers of APDU responses. This internal library is deprecated, and will be refactorized for the version 2.0.0 of Keyple Calypso.&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
@@ -999,10 +999,10 @@ Plugin Factorized Processing v1.0.0
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>org.eclipse.keyple.calypso.&lt;b>transaction&lt;/b>&lt;/td>
-&lt;td>high&lt;/td>
+&lt;td width="50%">org.eclipse.keyple.calypso.&lt;b>transaction&lt;/b>&lt;/td>
+&lt;td width="8%">high&lt;/td>
 &lt;td>Calypso Portable Object commands and secure transaction management&lt;br/>
-&lt;ul>&lt;li>CalypsoAPI, commands’ settings are limited to functional parameters&lt;br/>&lt;/li>
+&lt;ul>&lt;li>CalypsoAPI, command’s settings are limited to functional parameters&lt;br/>&lt;/li>
 &lt;li>Calypso SAM (Secure Module) operations automatically processed&lt;br/>&lt;/li>&lt;/ul>
 (only functional parameters)&lt;/td>
 &lt;/tr>
@@ -1033,9 +1033,10 @@ org.eclipse.keyple.calypso.&lt;b>command&lt;/b>.sam.parser.session&lt;/td>
 Calypso packages
 &lt;/figcaption>
 &lt;/figure>
-&lt;p>The only exception is the implementation a Calypso PO/SAM test tool, the setting of low-level APDU commands with wrong settings could require the usage of the Calypso command packages.&lt;/p>
+&lt;!-- The only exception is the implementation a Calypso PO/SAM test tool, the setting of low-level APDU commands with wrong settings could require the usage of the Calypso command packages. -->
+&lt;hr>
 &lt;h2 id="calypso-portable-object-selection">Calypso Portable Object Selection&lt;/h2>
-&lt;p>Compared to the generic Card Selection API (cf. &lt;a href="https://calypsonet.github.io/keyple/KeypleCoreApi/KeypleCore_ApplicationApi.html#card-selection),">https://calypsonet.github.io/keyple/KeypleCoreApi/KeypleCore_ApplicationApi.html#card-selection),&lt;/a> a PO Selector could be defined to accept only non-invalidated Portable Object (in this cas an invalidated PO isn&amp;rsquo;t selected).&lt;/p>
+&lt;p>Compared to the generic Card Selection API (cf. &lt;a href="https://keyple.org/docs/architecture/keyple-core/#card-selection),">https://keyple.org/docs/architecture/keyple-core/#card-selection),&lt;/a> a PO Selector could be defined to accept only non-invalidated Portable Object (in this cas an invalidated PO isn&amp;rsquo;t selected).&lt;/p>
 &lt;p>In addition, a PO Selection Request provides methods:&lt;/p>
 &lt;ul>
 &lt;li>to prepare Select File command (useful in particular to manage REV1 Calypso PO for which the select of the targeted DF is required).&lt;/li>
@@ -1050,6 +1051,7 @@ Calypso packages
 Calypso Selection v1.0.0
 &lt;/figcaption>
 &lt;/figure>
+&lt;hr>
 &lt;h2 id="calypso-portable-object-transaction">Calypso Portable Object Transaction&lt;/h2>
 &lt;p>A Card Resource is a set of a Reader and a &lt;strong>selected&lt;/strong> Card application.&lt;/p>
 &lt;ul>
@@ -1058,14 +1060,14 @@ Calypso Selection v1.0.0
 &lt;/ul>
 &lt;p>To operate a Calypso transaction:&lt;/p>
 &lt;ul>
-&lt;li>At least a Calypso Resource (CardResource&lt;CalypsoPo>) is required.&lt;/li>
-&lt;li>A SAM Resource ((CardResource&lt;CalypsoSam>) is required too if security features are involved (Calypso secure session, Stored value transaction, PIN encryption, etc…).&lt;/li>
+&lt;li>At least a Calypso Resource (CardResource&amp;lt;CalypsoPo&amp;gt;) is required.&lt;/li>
+&lt;li>A SAM Resource ((CardResource&amp;lt;CalypsoSam&amp;gt;) is required too if security features are involved (Calypso secure session, Stored value transaction, PIN encryption, etc…).&lt;/li>
 &lt;/ul>
-&lt;p>A Calypso PO image provides public ‘getters’ in order to &lt;strong>recover&lt;/strong> the information of the selected PO (startup data, file data, … etc).&lt;/p>
+&lt;p>A Calypso PO image provides public &lt;strong>getters&lt;/strong> in order to &lt;strong>recover&lt;/strong> the information of the selected PO (startup data, file data, … etc).&lt;/p>
 &lt;p>A transaction with a Calypso PO is fully managed through the PoTransaction object:&lt;/p>
 &lt;ul>
-&lt;li>First a set of PO commands could be defined through ‘&lt;strong>prepare&lt;/strong>’ commands.&lt;/li>
-&lt;li>Next the prepared PO commands transmitted when operating a ‘&lt;strong>process&lt;/strong>’ command.&lt;/li>
+&lt;li>First a set of PO commands could be defined through &lt;strong>prepare&lt;/strong> commands.&lt;/li>
+&lt;li>Next the prepared PO commands transmitted when operating a &lt;strong>process&lt;/strong> command.&lt;/li>
 &lt;li>The responses of the PO are then recovered through the Calypso PO image.&lt;/li>
 &lt;/ul>
 &lt;figure id="figure-calypso-api-global-architecture">
@@ -1087,7 +1089,7 @@ Calypso PO card image
 &lt;/figcaption>
 &lt;/figure>
 &lt;h3 id="calypso-transaction">Calypso transaction&lt;/h3>
-&lt;p>Only the &amp;lsquo;process&amp;rsquo; methods generate communication with the Calypso PO and SAM.&lt;/p>
+&lt;p>Only the &lt;strong>process&lt;/strong> methods generate communication with the Calypso PO and SAM.&lt;/p>
 &lt;ul>
 &lt;li>processPoCommands is used to transmit a set of prepared PO commands (outside or inside a secure session).&lt;/li>
 &lt;li>processOpening issues an Open Secure Session followed by the prepared PO commands.&lt;/li>
@@ -1105,6 +1107,7 @@ Calypso PO card image
 Calypso transaction
 &lt;/figcaption>
 &lt;/figure>
+&lt;hr>
 &lt;h2 id="data-model-extension">Data model extension&lt;/h2>
 &lt;figure id="figure-calypso-data-model">
 &lt;a data-fancybox="" href="./media/architecture/KeypleCalypso_Transaction_ClassDiag_SpecificPoTransaction_1_0_0.svg" data-caption="Calypso Data Model">
@@ -1114,6 +1117,7 @@ Calypso transaction
 Calypso Data Model
 &lt;/figcaption>
 &lt;/figure>
+&lt;hr>
 &lt;h2 id="secure-session-sequence">Secure session sequence&lt;/h2>
 &lt;figure id="figure-calypso-session">
 &lt;a data-fancybox="" href="./media/architecture/KeypleCalypso_Transaction_SequenceDiag_SecureSessionProcessing_1_0_0.svg" data-caption="Calypso session">
@@ -1160,6 +1164,7 @@ installed in your machine, you will need to download :&lt;/p>
 &lt;a href="https://www.eclipse.org/ide/" target="_blank" rel="noopener">Eclipse&lt;/a> or
 &lt;a href="https://www.jetbrains.com/idea/" target="_blank" rel="noopener">Intellij IDEA&lt;/a> to create your new
 Gradle project.&lt;/p>
+&lt;hr>
 &lt;h2 id="create-a-gradle-based-empty-project">Create a Gradle-based empty project&lt;/h2>
 &lt;p>Create a new Java project and add the following statements to your
 &lt;code>build.gradle&lt;/code> file to import the Keyple components into your
@@ -1182,6 +1187,7 @@ implementation &amp;quot;org.slf4j:slf4j-simple:1.7.25&amp;quot;
 &lt;/code>&lt;/pre>
 &lt;p>If necessary, also create the usual tree in which the Java code of this
 guide will be placed, namely the folders: &lt;code>\src\main\java&lt;/code>&lt;/p>
+&lt;hr>
 &lt;h2 id="lets-code">Let&amp;rsquo;s code&lt;/h2>
 &lt;p>Now let&amp;rsquo;s see step by step how to create in one single class the
 elements that allow a certified reading of data through a Calypso secure
@@ -1238,18 +1244,18 @@ later within the transaction service.&lt;/p>
 // Prepare a SamSelector that identifies the Calypso SAM
 SamSelector samSelector = SamSelector.builder().samRevision(SamRevision.AUTO).build();
 // Perform the SAM selection
-CardSelection samSelection = new CardSelection();
-samSelection.prepareSelection(new SamSelectionRequest(samSelector));
+CardSelectionService samSelection = new CardSelectionService();
+samSelection.prepareSelection(new SamSelection(samSelector));
 if (!samReader.isCardPresent()) {
 throw new IllegalStateException(&amp;quot;No SAM is present in the reader &amp;quot; + samReader.getName());
 }
-SelectionsResult selectionsResult = samSelection.processExplicitSelection(samReader);
-if (!selectionsResult.hasActiveSelection()) {
+CardSelectionsResult cardSelectionsResult = samSelection.processExplicitSelections(samReader);
+if (!cardSelectionsResult.hasActiveSelection()) {
 throw new IllegalStateException(&amp;quot;SAM matching failed!&amp;quot;);
 }
-CalypsoSam calypsoSam = (CalypsoSam) selectionsResult.getActiveSmartCard();
+CalypsoSam calypsoSam = (CalypsoSam) cardSelectionsResult.getActiveSmartCard();
 // Associate the calypsoSam and the samReader to create a samResource
-CardResource&amp;lt;CalypsoSam&amp;gt; samResource = new CardResource&amp;lt;&amp;gt;(samReader, calypsoSam);
+CardResource&amp;lt;CalypsoSam&amp;gt; samResource = new CardResource&amp;lt;CalypsoSam&amp;gt;(samReader, calypsoSam);
 //...
 &lt;/code>&lt;/pre>
 &lt;h3 id="select-the-calypso-po">Select the Calypso PO&lt;/h3>
@@ -1259,23 +1265,23 @@ and results in a CalypsoPo object that will contain all the information extracte
 from the Calypso PO all along the transaction.&lt;/p>
 &lt;pre>&lt;code class="language-java">// Prepare a Calypso PO selection
 final String AID = &amp;quot;315449432E49434131&amp;quot;; /* AID: Keyple test kit profile 1, Application 2 */
-CardSelection seSelection = new CardSelection();
+CardSelectionService cardSelectionService = new CardSelectionService();
 // Setting up a selection based on the AID of a Calypso Revision 3.1 PO
 //
 // Select the first application matching the selection AID whatever the card communication protocol
-PoSelectionRequest poSelectionRequest = new PoSelectionRequest(
+PoSelection poSelection = new PoSelection(
 PoSelector.builder()
 .aidSelector(CardSelector.AidSelector.builder().aidToSelect(AID).build()) // the application identifier
 .invalidatedPo(PoSelector.InvalidatedPo.REJECT) // to indicate if an invalidated PO should be accepted or not
 .build());
 // Add the selection case to the current selection
 // (we could have added other cases)
-seSelection.prepareSelection(poSelectionRequest);
+cardSelectionService.prepareSelection(poSelection);
 if (!poReader.isCardPresent()) {
 throw new IllegalStateException(&amp;quot;The selection of the PO has failed.&amp;quot;);
 }
 // Perform the PO selection and get a CalypoPo container in return
-CalypsoPo calypsoPo = (CalypsoPo) seSelection.processExplicitSelection(poReader).getActiveSmartCard();
+CalypsoPo calypsoPo = (CalypsoPo) cardSelectionService.processExplicitSelections(poReader).getActiveSmartCard();
 //...
 &lt;/code>&lt;/pre>
 &lt;h3 id="open-the-calypso-secure-session">Open the Calypso secure session&lt;/h3>
@@ -1287,7 +1293,7 @@ combined with the reading of the environment file (SFI=07h).&lt;/p>
 PoSecuritySettings poSecuritySettings = new PoSecuritySettings.PoSecuritySettingsBuilder(samResource).build();
 // Create a PoTransaction service to manage the Calypso transaction
 PoTransaction poTransaction = new PoTransaction(
-new CardResource&amp;lt;&amp;gt;(poReader, calypsoPo),
+new CardResource&amp;lt;CalypsoPo(poReader, calypsoPo),
 poSecuritySettings);
 final byte RECORD_NUMBER_1 = 1;
 final byte SFI_Environment = (byte) 0x07;
@@ -1327,6 +1333,7 @@ System.exit(0);
 &lt;/code>&lt;/pre>
 &lt;p>Find the complete code source
 &lt;a href="#full-code">below&lt;/a>.&lt;/p>
+&lt;hr>
 &lt;h2 id="run">Run&lt;/h2>
 &lt;ol>
 &lt;li>Connect two USB PC/SC Readers.&lt;/li>
@@ -1341,6 +1348,7 @@ components, are downloaded during the first run, which can take some
 time.
 &lt;/div>
 &lt;/div>
+&lt;hr>
 &lt;h2 id="faq">FAQ&lt;/h2>
 &lt;p>&lt;strong>How do I find out the names of the readers?&lt;/strong>&lt;/p>
 &lt;p>To find out the names of the readers connected to your computer, we will
@@ -1430,7 +1438,7 @@ public static void main(String[] args) {
 // Get the instance of the SmartCardService : main service of Keyple SDK
 SmartCardService smartCardService = SmartCardService.getInstance();
 // Register a PcscPlugin within the SmartCardService to use PC/SC USB Readers
-Plugin plugin = smartCardService.registerPlugin(new PcscPluginFactory());
+Plugin plugin = smartCardService.registerPlugin(new PcscPluginFactory(null, null));
 // Get the PO reader
 PcscReader poReader = (PcscReader) plugin.getReader(&amp;quot;ASK LoGO 0&amp;quot;);
 // Configure the PO reader parameters
@@ -1440,44 +1448,44 @@ PcscReader samReader = (PcscReader) plugin.getReader(&amp;quot;Identive CLOUD 27
 // Prepare a SamSelector that identifies the Calypso SAM
 SamSelector samSelector = SamSelector.builder().samRevision(SamRevision.AUTO).build();
 // Perform the SAM selection
-CardSelection samSelection = new CardSelection();
-samSelection.prepareSelection(new SamSelectionRequest(samSelector));
+CardSelectionsService samSelection = new CardSelectionsService();
+samSelection.prepareSelection(new SamSelection(samSelector));
 if (!samReader.isCardPresent()) {
 throw new IllegalStateException(&amp;quot;No SAM is present in the reader &amp;quot; + samReader.getName());
 }
-SelectionsResult selectionsResult = samSelection.processExplicitSelection(samReader);
-if (!selectionsResult.hasActiveSelection()) {
+CardSelectionsResult cardSelectionsResult = samSelection.processExplicitSelections(samReader);
+if (!cardSelectionsResult.hasActiveSelection()) {
 throw new IllegalStateException(&amp;quot;SAM matching failed!&amp;quot;);
 }
-CalypsoSam calypsoSam = (CalypsoSam) selectionsResult.getActiveSmartCard();
+CalypsoSam calypsoSam = (CalypsoSam) cardSelectionsResult.getActiveSmartCard();
 // Associate the calypsoSam and the samReader to create a samResource
-CardResource&amp;lt;CalypsoSam&amp;gt; samResource = new CardResource&amp;lt;&amp;gt;(samReader, calypsoSam);
+CardResource&amp;lt;CalypsoSam&amp;gt; samResource = new CardResource&amp;lt;CalypsoSam&amp;gt;(samReader, calypsoSam);
 // Prepare a Calypso PO selection
 final String AID = &amp;quot;315449432E49434131&amp;quot;; /* AID: Keyple test kit profile 1, Application 2 */
 final byte RECORD_NUMBER_1 = 1;
 final byte SFI_Environment = (byte) 0x07;
-CardSelection seSelection = new CardSelection();
+CardSelectionsService cardSelectionService = new CardSelectionsService();
 // Setting up a selection based on the AID of a Calypso Revision 3.1 PO
 //
 // Select the first application matching the selection AID whatever the card communication protocol
-PoSelectionRequest poSelectionRequest = new PoSelectionRequest(
+PoSelection poSelection = new PoSelection(
 PoSelector.builder()
 .aidSelector(CardSelector.AidSelector.builder().aidToSelect(AID).build()) // the application identifier
 .invalidatedPo(PoSelector.InvalidatedPo.REJECT) // to indicate if an invalidated PO should be accepted or not
 .build());
 // Add the selection case to the current selection
 // (we could have added other cases)
-seSelection.prepareSelection(poSelectionRequest);
+cardSelectionService.prepareSelection(poSelection);
 if (!poReader.isCardPresent()) {
 throw new IllegalStateException(&amp;quot;The selection of the PO has failed.&amp;quot;);
 }
 // Perform the PO selection and get a CalypoPo container in return
-CalypsoPo calypsoPo = (CalypsoPo) seSelection.processExplicitSelection(poReader).getActiveSmartCard();
+CalypsoPo calypsoPo = (CalypsoPo) cardSelectionService.processExplicitSelections(poReader).getActiveSmartCard();
 // Prepare the security settings used during the Calypso transaction
 PoSecuritySettings poSecuritySettings = new PoSecuritySettings.PoSecuritySettingsBuilder(samResource).build();
 // Create a PoTransaction service to manage the Calypso transaction
 PoTransaction poTransaction = new PoTransaction(
-new CardResource&amp;lt;&amp;gt;(poReader, calypsoPo),
+new CardResource&amp;lt;CalypsoPo&amp;gt;(poReader, calypsoPo),
 poSecuritySettings);
 // Schedule the reading of the Environment file after the secure session is opened
 // (we could have added other commands)
@@ -1500,7 +1508,8 @@ smartCardService.unregisterPlugin(plugin.getName());
 System.exit(0);
 }
 }
-&lt;/code>&lt;/pre></description></item><item><title>Build your first Android application</title><link>https://keyple.org/docs/build-your-first-app/android-app/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/docs/build-your-first-app/android-app/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;/code>&lt;/pre></description></item><item><title>Build your first Android application</title><link>https://keyple.org/docs/build-your-first-app/android-app/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/docs/build-your-first-app/android-app/</guid><description>&lt;hr>
+&lt;h2 id="introduction">Introduction&lt;/h2>
 &lt;h3 id="overview">Overview&lt;/h3>
 &lt;p>&lt;strong>Since Keyple is supported by the Android operating system, developers can take advantage of this quick and easy way to implement solution to provide SmartCard communication functionalities in their own mobile application.&lt;/strong>&lt;/p>
 &lt;p>For example, Keyple could be used to facilitate the development of a ticketing application based on the use of conteners on a SIM card and relying on
@@ -1512,7 +1521,7 @@ Keyple could also be used to develop an application reading SmartCard content th
 &lt;img src="./media/android-app/component/Android_App_Overview.png" alt="" >
 &lt;/a>
 &lt;/figure>
-&lt;p>As Keyple request low level reader access, the key features of Keyple SDK relies on components called &amp;lsquo;Plugins&amp;rsquo;. These are the plugins that allow access to the hardware functionality of the terminal by using the native Android SDK or the terminal manufacturer&amp;rsquo;s own custom SDKs.&lt;/p>
+&lt;p>As Keyple request low level reader access, the key features of Keyple SDK relies on components called &lt;strong>Plugins&lt;/strong>. These are the plugins that allow access to the hardware functionality of the terminal by using the native Android SDK or the terminal manufacturer&amp;rsquo;s own custom SDKs.&lt;/p>
 &lt;p>This guide will describe how to start a ticketing application using Keyple SDK and Android NFC plugin to read the content of a Calypso SmartCard. As we want to focus on Keyple integration, the Android application architecture will remain the simplest as possible.&lt;/p>
 &lt;h3 id="what-to-we-need-for-this-guide">What to we need for this guide?&lt;/h3>
 &lt;ul>
@@ -1520,6 +1529,7 @@ Keyple could also be used to develop an application reading SmartCard content th
 &lt;li>Android OS 19+&lt;/li>
 &lt;li>A NFC SmartCard with Calypso PO&lt;/li>
 &lt;/ul>
+&lt;hr>
 &lt;h2 id="integration">Integration&lt;/h2>
 &lt;h3 id="application-setup">Application setup&lt;/h3>
 &lt;p>Like for any other Android NFC Application, we need to declare items in the application manifest.&lt;/p>
@@ -1530,6 +1540,7 @@ Keyple could also be used to develop an application reading SmartCard content th
 ...
 &amp;lt;/manifest&amp;gt;
 &lt;/code>&lt;/pre>
+&lt;p>Also make sure your minSdkVersion is at least 19.&lt;/p>
 &lt;h3 id="sdk-integration">SDK Integration&lt;/h3>
 &lt;h4 id="keyple-core">Keyple Core&lt;/h4>
 &lt;p>This high-level API is convenient for developers implementing smart card processing application for terminal interfaced
@@ -1543,7 +1554,7 @@ Android application.&lt;/p>
 &lt;p>There are many Keyple plugins available, the one to use depends on the device and ticketing tools you are aiming to
 use.&lt;/p>
 &lt;p>To use the NFC plugin simply import it within the gradle dependencies of your Android application.&lt;/p>
-&lt;pre>&lt;code class="language-gradle">implementation &amp;quot;org.eclipse.keyple:keyple-android-nfc:$keyple_version&amp;quot;
+&lt;pre>&lt;code class="language-gradle">implementation &amp;quot;org.eclipse.keyple:keyple-android-plugin-nfc:$keyple_version&amp;quot;
 &lt;/code>&lt;/pre>
 &lt;h4 id="keyple-calypso">Keyple Calypso&lt;/h4>
 &lt;p>The Keyple Calypso User API is an extension of the Keyple Core User API to manage Calypso Portable Objects.&lt;/p>
@@ -1551,6 +1562,7 @@ use.&lt;/p>
 &lt;p>To use Keyple Calypso User API simply import the jar within the gradle dependencies of your Android application.&lt;/p>
 &lt;pre>&lt;code class="language-gradle">implementation &amp;quot;org.eclipse.keyple:keyple-java-calypso:$keyple_version&amp;quot;
 &lt;/code>&lt;/pre>
+&lt;hr>
 &lt;h2 id="lets-code">Let&amp;rsquo;s code&lt;/h2>
 &lt;h3 id="initializing-the-sdk">Initializing the SDK&lt;/h3>
 &lt;h4 id="register-a-plugin">Register a plugin&lt;/h4>
@@ -1665,10 +1677,10 @@ reader?.let {
 //check if card is in the NFC field
 if(it.isCardPresent){
 //Instanciate class handling card selection service
-val cardSelectionService = CardSelectionsService()
+val cardSelectionsService = CardSelectionsService()
 //We only want to select the PO so we choose to close communication channel once
 //selection is done
-cardSelectionService.prepareReleaseChannel()
+cardSelectionsService.prepareReleaseChannel()
 //We build a selection request managing specific characteristics of Calypso POs
 val poSelection = PoSelection(
 PoSelector
@@ -1686,9 +1698,9 @@ CardSelector.AidSelector.builder()
 CardSelector.AidSelector.FileControlInformation.FCI)
 .build()
 ).build())
-cardSelectionService.prepareSelection(poSelection)
+cardSelectionsService.prepareSelection(poSelection)
 //Proceed to selection using the reader
-val selectionResult = cardSelectionService.processExplicitSelections(it)
+val selectionResult = cardSelectionsService.processExplicitSelections(it)
 runOnUiThread {
 //We check the selection result and read the FCI
 if(selectionResult.hasActiveSelection()){
@@ -1815,8 +1827,8 @@ handlePo()
 private fun handlePo(){
 reader?.let {
 if(it.isCardPresent){
-val cardSelectionService = CardSelectionService()
-cardSelectionService.prepareReleaseChannel()
+val cardSelectionsService = CardSelectionsService()
+cardSelectionsService.prepareReleaseChannel()
 val poSelection = PoSelection(
 PoSelector
 .builder()
@@ -1830,13 +1842,13 @@ CardSelector.AidSelector.FileOccurrence.FIRST)
 CardSelector.AidSelector.FileControlInformation.FCI)
 .build()
 ).build())
-cardSelectionService.prepareSelection(poSelection)
+cardSelectionsService.prepareSelection(poSelection)
 //Prepare the reading order. We'll read the first record of the EF
 //specified by his SFI. This reading will be done with selection.
 poSelection.prepareReadRecordFile(sfiHoplinkEFEnvironment, 1)
 poSelection.prepareReadRecordFile(sfiHoplinkEFUsage, 1)
 //Selection and file reading will be done here
-val selectionResult = cardSelectionService.processExplicitSelections(it)
+val selectionResult = cardSelectionsService.processExplicitSelections(it)
 runOnUiThread {
 if(selectionResult.hasActiveSelection()){
 val matchedSmartCard = selectionResult.activeSmartCard
@@ -1861,6 +1873,7 @@ Toast.makeText(this, String.format(&amp;quot;Not selected&amp;quot;), Toast.LENG
 }
 }
 &lt;/code>&lt;/pre>
+&lt;hr>
 &lt;h2 id="faq">FAQ&lt;/h2>
 &lt;p>&lt;strong>How to fix &amp;ldquo;More than one file was found with OS independent path &amp;lsquo;META-INF/NOTICE.md&amp;rsquo;.&amp;quot;&lt;/strong>&lt;/p>
 &lt;p>Add lines below to your :app build.gradle file&lt;/p>
@@ -1872,13 +1885,781 @@ exclude 'META-INF/NOTICE.md'
 &lt;/code>&lt;/pre>
 &lt;p>&lt;strong>Where can I see more examples&lt;/strong>&lt;/p>
 &lt;p>Android native plugins are provided with example applications. Check it to see more use cases:
-&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/example" target="_blank" rel="noopener">Examples&lt;/a>&lt;/p></description></item><item><title>Build your first C++ application</title><link>https://keyple.org/docs/build-your-first-app/cpp-app/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/docs/build-your-first-app/cpp-app/</guid><description>&lt;div class="alert alert-note">
+&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/example" target="_blank" rel="noopener">Examples&lt;/a>&lt;/p></description></item><item><title>Build your first C++ application</title><link>https://keyple.org/docs/build-your-first-app/cpp-app/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/docs/build-your-first-app/cpp-app/</guid><description>&lt;hr>
+&lt;p>This quick start describes how to create a ready-to-execute C++
+command-line application that runs a simple transaction based on
+a Calypso portable object (PO) involving two smart card readers.&lt;/p>
+&lt;div class="alert alert-note">
 &lt;div>
-Coming soon
+The demonstration application created for this quick start requires a
+Calypo PO (contactless smart card, mobile phone with contactless
+communication) and a Calypo Secure Access Module (SAM).
 &lt;/div>
-&lt;/div></description></item><item><title>Common concepts</title><link>https://keyple.org/docs/developer-guide/common-concepts/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/docs/developer-guide/common-concepts/</guid><description>&lt;p>This page describes the core elements of &lt;strong>Keyple&lt;/strong>, i.e. the concepts and APIs of &lt;strong>Keyple Core&lt;/strong> that are used to build any application implementing &lt;strong>Keyple&lt;/strong>.&lt;/p>
+&lt;/div>
+&lt;p>We will use three main components of Keyple:&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;a href="https://keyple.org/components-cpp/core/">Keyple Core&lt;/a>
+which is the base component to which all the others refer,&lt;/li>
+&lt;li>
+&lt;a href="https://keyple.org/components-cpp/plugins/pcsc/">Keyple PC/SC plugin&lt;/a>
+to provide the ability to manage PC/SC readers,&lt;/li>
+&lt;li>
+&lt;a href="https://keyple.org/components-cpp/extensions/calypso/">Keyple Calypso extension&lt;/a>
+to handle the commands sent to the Calypso PO and the Calypso SAM.&lt;/li>
+&lt;/ul>
+&lt;p>In this guide CMake is used as build automation tool.&lt;/p>
+&lt;p>The example can run on any machine: Linux, Windows and macOS. If not installed in your machine, you
+will need to download :&lt;/p>
+&lt;ul>
+&lt;li>CMake 2.8 or newer
+&lt;a href="https://cmake.org/install/" target="_blank" rel="noopener">(download)&lt;/a>&lt;/li>
+&lt;li>GCC / CLang / MSVC compiler&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h2 id="lets-code">Let&amp;rsquo;s code&lt;/h2>
+&lt;p>Now let&amp;rsquo;s see step by step how to create in one single class the
+elements that allow a certified reading of data through a Calypso secure
+session.&lt;/p>
+&lt;p>In a real ticketing application, the organization of the code would
+probably be different, but the point here is to show how Keyple makes it
+possible to perform very simply operations that normally require a
+quantity of code and knowledge that far exceeds what is implemented
+here.&lt;/p>
+&lt;p>You can either progressively copy each of the small portions of code
+that follow or copy the whole class at the bottom of this page.&lt;/p>
+&lt;h3 id="create-the-class-skeleton">Create the class skeleton&lt;/h3>
+&lt;p>Copy the source code below in a new C++ Class named
+DemoPoAuthentication.&lt;/p>
+&lt;pre>&lt;code class="language-cpp">/* Common */
+#include &amp;quot;IllegalStateException.h&amp;quot;
+#include &amp;quot;LoggerFactory.h&amp;quot;
+/* Core */
+#include &amp;quot;ByteArrayUtil.h&amp;quot;
+#include &amp;quot;SeCommonProtocols.h&amp;quot;
+#include &amp;quot;SeSelector.h&amp;quot;
+#include &amp;quot;SeSelection.h&amp;quot;
+#include &amp;quot;SeProxyService.h&amp;quot;
+/* PCSC */
+#include &amp;quot;PcscPluginFactory.h&amp;quot;
+#include &amp;quot;PcscProtocolSetting.h&amp;quot;
+#include &amp;quot;PcscReader.h&amp;quot;
+/* Calypso */
+#include &amp;quot;CalypsoPo.h&amp;quot;
+#include &amp;quot;CalypsoSam.h&amp;quot;
+#include &amp;quot;ElementaryFile.h&amp;quot;
+#include &amp;quot;PoSecuritySettings.h&amp;quot;
+#include &amp;quot;PoSelectionRequest.h&amp;quot;
+#include &amp;quot;PoSelector.h&amp;quot;
+#include &amp;quot;PoTransaction.h&amp;quot;
+#include &amp;quot;SamRevision.h&amp;quot;
+#include &amp;quot;SamSelector.h&amp;quot;
+#include &amp;quot;SamSelectionRequest.h&amp;quot;
+using namespace keyple::calypso::command::po;
+using namespace keyple::calypso::command::po::builder;
+using namespace keyple::calypso::command::po::parser;
+using namespace keyple::calypso::command::sam;
+using namespace keyple::calypso::transaction;
+using namespace keyple::common;
+using namespace keyple::common::exception;
+using namespace keyple::core::command::exception;
+using namespace keyple::core::selection;
+using namespace keyple::core::seproxy;
+using namespace keyple::core::seproxy::event;
+using namespace keyple::core::seproxy::exception;
+using namespace keyple::core::seproxy::message;
+using namespace keyple::core::seproxy::protocol;
+using namespace keyple::core::util;
+using namespace keyple::plugin::pcsc;
+int main(int argv, char **args)
+{
+// ...
+return 0;
+}
+&lt;/code>&lt;/pre>
+&lt;h3 id="configure-the-pcsc-plugin-and-the-readers">Configure the PC/SC plugin and the readers&lt;/h3>
+&lt;p>The first step to use Keyple is to initialize the plugin and smart card readers.&lt;/p>
+&lt;p>In this snippet the PC/SC plugin is registered to the SmartCardService.&lt;/p>
+&lt;p>Two readers needs to be connected to the local machine. Replace
+&amp;ldquo;PO_READER_NAME&amp;rdquo; and &amp;ldquo;SAM_READER_NAME&amp;rdquo; with the name of the USB readers.&lt;/p>
+&lt;p>If you don&amp;rsquo;t know the names of the readers, read how to find them in the
+&lt;a href="#faq">FAQ&lt;/a>.&lt;/p>
+&lt;pre>&lt;code class="language-cpp">/* ... */
+/* PO Reader name */
+const std::string PO_READER_NAME = &amp;quot;XXX&amp;quot;;
+/* SAM Reader name */
+const std::string SAM_READER_NAME = &amp;quot;XXX&amp;quot;;
+/* Get the instance of the SeProxyService (Singleton pattern) */
+SeProxyService&amp;amp; seProxyService = SeProxyService::getInstance();
+/* Register the PcscPlugin with SeProxyService, get the corresponding generic ReaderPlugin */
+auto pluginFactory = std::make_shared&amp;lt;PcscPluginFactory&amp;gt;();
+std::shared_ptr&amp;lt;ReaderPlugin&amp;gt; readerPlugin = seProxyService.registerPlugin(pluginFactory);
+/* Get the PO reader */
+std::shared_ptr&amp;lt;SeReader&amp;gt; poReader = readerPlugin-&amp;gt;getReader(PO_READER_NAME);
+/* Configure the PO reader parameters */
+poReader-&amp;gt;setParameter(PcscReader::SETTING_KEY_PROTOCOL, PcscReader::SETTING_PROTOCOL_T1);
+/* Get a SAM reader */
+std::shared_ptr&amp;lt;SeReader&amp;gt; samReader = readerPlugin-&amp;gt;getReader(SAM_READER_NAME);
+/* Configure the SAM reader parameters */
+samReader-&amp;gt;setParameter(PcscReader::SETTING_KEY_PROTOCOL, PcscReader::SETTING_PROTOCOL_T0);
+/*
+* PC/SC card access mode:
+*
+* The SAM is left in the SHARED mode (by default) to avoid automatic resets due to the limited
+* time between two consecutive exchanges granted by Windows.
+*
+* This point will be addressed in a coming release of the Keyple PcSc reader plugin.
+*
+* The PO reader is set to EXCLUSIVE mode to avoid side effects (on OS Windows 8+) during the
+* selection step that may result in session failures.
+*
+* See KEYPLE-CORE.PC.md file to learn more about this point.
+*
+*/
+samReader-&amp;gt;setParameter(PcscReader::SETTING_KEY_MODE, PcscReader::SETTING_MODE_SHARED);
+poReader-&amp;gt;setParameter(PcscReader::SETTING_KEY_MODE, PcscReader::SETTING_MODE_SHARED);
+/* Set the PO reader protocol flag */
+poReader-&amp;gt;addSeProtocolSetting(
+SeCommonProtocols::PROTOCOL_ISO14443_4,
+PcscProtocolSetting::PCSC_PROTOCOL_SETTING[SeCommonProtocols::PROTOCOL_ISO14443_4]);
+poReader-&amp;gt;addSeProtocolSetting(
+SeCommonProtocols::PROTOCOL_B_PRIME,
+PcscProtocolSetting::PCSC_PROTOCOL_SETTING[SeCommonProtocols::PROTOCOL_B_PRIME]);
+samReader-&amp;gt;addSeProtocolSetting(
+SeCommonProtocols::PROTOCOL_ISO7816_3,
+PcscProtocolSetting::PCSC_PROTOCOL_SETTING[SeCommonProtocols::PROTOCOL_ISO7816_3]);
+/* ... */
+&lt;/code>&lt;/pre>
+&lt;h3 id="select-the-calypso-sam">Select the Calypso SAM&lt;/h3>
+&lt;p>Before executing a transaction each smart card should be selected. The
+next step is the selection of the Calypso SAM resulting in a
+CalypsoSam object.&lt;/p>
+&lt;p>It is then combined with the SAM reader to form the SAM resource needed
+later within the transaction service.&lt;/p>
+&lt;pre>&lt;code class="language-cpp">/* ... */
+/* Prepare the selector to ensure the correct SAM is used */
+auto selector = SamSelector::builder()-&amp;gt;samRevision(SamRevision::AUTO).build();
+auto samSelector = std::dynamic_pointer_cast&amp;lt;SamSelector&amp;gt;(selector);
+/* Make the SAM selection */
+SeSelection samSelection;
+auto samSelectionRequest = std::make_shared&amp;lt;SamSelectionRequest&amp;gt;(samSelector);
+auto abstractSamSelectionRequest =
+std::reinterpret_pointer_cast&amp;lt;AbstractSeSelectionRequest&amp;lt;AbstractApduCommandBuilder&amp;gt;&amp;gt;(samSelectionRequest);
+samSelection.prepareSelection(abstractSamSelectionRequest);
+std::shared_ptr&amp;lt;CalypsoSam&amp;gt; calypsoSam;
+if (samReader-&amp;gt;isSePresent()) {
+std::shared_ptr&amp;lt;SelectionsResult&amp;gt; selectionsResult = samSelection.processExplicitSelection(samReader);
+if (selectionsResult-&amp;gt;hasActiveSelection()) {
+calypsoSam = std::dynamic_pointer_cast&amp;lt;CalypsoSam&amp;gt;(selectionsResult-&amp;gt;getActiveMatchingSe());
+} else {
+throw IllegalStateException(&amp;quot;SAM matching failed!&amp;quot;);
+}
+} else {
+throw IllegalStateException(&amp;quot;No SAM is present in the reader &amp;quot; + samReader-&amp;gt;getName());
+}
+/* Associate the calypsoSam and the samReader to create the samResource */
+auto samResource = std::make_shared&amp;lt;SeResource&amp;lt;CalypsoSam&amp;gt;&amp;gt;(samReader, calypsoSam);
+/* ... */
+&lt;/code>&lt;/pre>
+&lt;h3 id="select-the-calypso-po">Select the Calypso PO&lt;/h3>
+&lt;p>1st PO exchange:&lt;/p>
+&lt;p>The Calypso PO selection is made using the portable object application&amp;rsquo;s AID
+and results in a CalypsoPo object that will contain all the information extracted
+from the Calypso PO all along the transaction.&lt;/p>
+&lt;pre>&lt;code class="language-cpp">/* Prepare a Calypso PO selection */
+SeSelection seSelection;
+/* Keyple test kit profile 1, Application 2 */
+const std::string AID = &amp;quot;315449432E49434131&amp;quot;;
+/*
+* Setting of an AID based selection of a Calypso Revision 3.1 PO
+*
+* Select the first application matching the selection AID whatever the card communication
+* protocol
+* Keep the logical channel open after the selection
+*
+* Calypso selection: configures a PoSelectionRequest with all the desired attributes to
+* make the selection and read additional information afterwards
+*/
+auto aidSelector = SeSelector::AidSelector::builder()-&amp;gt;aidToSelect(AID).build();
+auto seSelector = PoSelector::builder()-&amp;gt;aidSelector(aidSelector) /* The application identifier
+to indicate if an invalidated PO should be accepted
+or not */
+.invalidatedPo(PoSelector::InvalidatedPo::REJECT)
+.build();
+auto poSelector = std::dynamic_pointer_cast&amp;lt;PoSelector&amp;gt;(seSelector);
+auto poSelectionRequest = std::make_shared&amp;lt;PoSelectionRequest&amp;gt;(poSelector);
+/* Add the selection case to the current selection (we could have added other cases) */
+auto abstractPoSelectionRequest =
+std::reinterpret_pointer_cast&amp;lt;AbstractSeSelectionRequest&amp;lt;AbstractApduCommandBuilder&amp;gt;&amp;gt;(poSelectionRequest);
+seSelection.prepareSelection(abstractPoSelectionRequest);
+if (poReader-&amp;gt;isSePresent()) {
+try {
+// Actual PO communication: operate through a single request the Calypso PO selection
+std::shared_ptr&amp;lt;CalypsoPo&amp;gt; calypsoPo =
+std::dynamic_pointer_cast&amp;lt;CalypsoPo&amp;gt;(
+seSelection.processExplicitSelection(poReader)-&amp;gt;getActiveMatchingSe());
+/* ... */
+} catch (const Exception&amp;amp; e) {
+}
+/* ... */
+&lt;/code>&lt;/pre>
+&lt;h3 id="open-the-calypso-secure-session">Open the Calypso secure session&lt;/h3>
+&lt;p>2nd PO exchange :&lt;/p>
+&lt;p>The secure session opening operated by the PoTransaction service is
+combined with the reading of the environment file (SFI=07h).&lt;/p>
+&lt;p>The mutual authentication process between Calypso PO and Calypso SAM is initiated transparently.&lt;/p>
+&lt;pre>&lt;code class="language-cpp">/* Prepare the security settings used during the Calypso transaction */
+auto poSecuritySettings = std::make_shared&amp;lt;PoSecuritySettings::PoSecuritySettingsBuilder&amp;gt;(samResource)-&amp;gt;build();
+/* Create a PoTransaction object to manage the Calypso transaction */
+auto poTransaction = std::make_shared&amp;lt;PoTransaction&amp;gt;(
+std::make_shared&amp;lt;SeResource&amp;lt;CalypsoPo&amp;gt;&amp;gt;(poReader, calypsoPo),
+poSecuritySettings);
+const uint8_t RECORD_NUMBER_1 = 1;
+const uint8_t SFI_Environment = 0x07;
+/* Read the Environment file at the Session Opening (we could have added other commands) */
+poTransaction-&amp;gt;prepareReadRecordFile(
+SFI_Environment, /* The sfi to select */
+RECORD_NUMBER_1);
+/* Open Session with the debit key */
+poTransaction-&amp;gt;processOpening(PoTransaction::SessionSetting::AccessLevel::SESSION_LVL_DEBIT);
+/* Get the Environment data */
+std::shared_ptr&amp;lt;ElementaryFile&amp;gt; efEnvironment = calypsoPo-&amp;gt;getFileBySfi(SFI_Environment);
+const std::string environmentLog = ByteArrayUtil::toHex(efEnvironment-&amp;gt;getData()-&amp;gt;getContent());
+/* ... */
+&lt;/code>&lt;/pre>
+&lt;h3 id="close-the-calypso-secure-session">Close the Calypso secure session&lt;/h3>
+&lt;p>3rd PO exchange:&lt;/p>
+&lt;p>Simply close the Calypso secure session&lt;/p>
+&lt;p>The mutual authentication is finalized, it includes the authentication
+of the data in the read file.&lt;/p>
+&lt;p>Note: any technical, crytographic or content-related incident in the Calypso PO
+would be signalled by an exception and would interrupt the thread of
+execution.&lt;/p>
+&lt;pre>&lt;code class="language-cpp">/* Schedule the closure of the channel with the PO after the closing of the secure session */
+poTransaction-&amp;gt;prepareReleasePoChannel();
+/* Perform the closing of the Calypso Secure Session */
+poTransaction-&amp;gt;processClosing();
+/* ... */
+&lt;/code>&lt;/pre>
+&lt;p>Find the complete code source
+&lt;a href="#full-code">below&lt;/a>.&lt;/p>
+&lt;hr>
+&lt;h2 id="cmake-build">CMake build&lt;/h2>
+&lt;p>Create a CMakeLists.txt file as follows:&lt;/p>
+&lt;pre>&lt;code class="language-cpp">#
+# Copyright (c) 2020 Calypso Networks Association https://www.calypsonet-asso.org/
+#
+# All rights reserved. This program and the accompanying materials are made available under the
+# terms of the Eclipse Public License version 2.0 which accompanies this distribution, and is
+# available at https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.html
+#
+CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
+SET(CMAKE_LEGACY_CYGWIN_WIN32 0)
+SET(CMAKE_MACOSX_RPATH 1)
+SET(CMAKE_CXX_STANDARD 11)
+SET(CMAKE_C_COMPILER_WORKS 1)
+SET(CMAKE_CXX_COMPILER_WORKS 1)
+PROJECT(KeypleDemo)
+SET(KEYPLE_SOURCE_DIR &amp;quot;&amp;lt;path_to_keyple_repos&amp;gt;&amp;quot;)
+INCLUDE_DIRECTORIES(
+${CMAKE_CURRENT_SOURCE_DIR}
+# Core
+${KEYPLE_SOURCE_DIR}/component/keyple-core/src/main/command
+${KEYPLE_SOURCE_DIR}/component/keyple-core/src/main/command/exception
+${KEYPLE_SOURCE_DIR}/component/keyple-core/src/main/selection
+${KEYPLE_SOURCE_DIR}/component/keyple-core/src/main/seproxy
+${KEYPLE_SOURCE_DIR}/component/keyple-core/src/main/seproxy/event
+${KEYPLE_SOURCE_DIR}/component/keyple-core/src/main/seproxy/exception
+${KEYPLE_SOURCE_DIR}/component/keyple-core/src/main/seproxy/message
+${KEYPLE_SOURCE_DIR}/component/keyple-core/src/main/seproxy/protocol
+${KEYPLE_SOURCE_DIR}/component/keyple-core/src/main/util
+${KEYPLE_SOURCE_DIR}/component/keyple-core/src/main/util/bertlv
+# Plugin
+${KEYPLE_SOURCE_DIR}/component/keyple-plugin/pcsc/src/main
+# Common
+${KEYPLE_SOURCE_DIR}/component/keyple-common/src/main
+${KEYPLE_SOURCE_DIR}/component/keyple-common/src/main/exception
+# Calypso
+${KEYPLE_SOURCE_DIR}/component/keyple-calypso/src/main
+${KEYPLE_SOURCE_DIR}/component/keyple-calypso/src/main/command
+${KEYPLE_SOURCE_DIR}/component/keyple-calypso/src/main/command/po
+${KEYPLE_SOURCE_DIR}/component/keyple-calypso/src/main/command/po/builder
+${KEYPLE_SOURCE_DIR}/component/keyple-calypso/src/main/command/po/parser
+${KEYPLE_SOURCE_DIR}/component/keyple-calypso/src/main/command/sam
+${KEYPLE_SOURCE_DIR}/component/keyple-calypso/src/main/transaction
+# pcsc (Linux / macOS)
+/usr/include/PCSC
+)
+IF(WIN32)
+SET(CMAKE_FIND_LIBRARY_PREFIXES &amp;quot;&amp;quot;)
+SET(CMAKE_FIND_LIBRARY_SUFFIXES &amp;quot;.dll&amp;quot;)
+SET(CMAKE_BUILD_DIRECTORY &amp;quot;${CMAKE_CURRENT_BINARY_DIR}&amp;quot;)
+SET(WINSCARD winscard.lib)
+ENDIF(WIN32)
+IF(APPLE)
+SET(CMAKE_FIND_LIBRARY_PREFIXES &amp;quot;lib&amp;quot;)
+SET(CMAKE_FIND_LIBRARY_SUFFIXES &amp;quot;.dylib&amp;quot;)
+SET(CMAKE_BUILD_DIRECTORY &amp;quot;${CMAKE_CURRENT_BINARY_DIR}&amp;quot;)
+SET(WINSCARD &amp;quot;-framework PCSC&amp;quot;)
+ENDIF(APPLE)
+IF(UNIX)
+SET(SPEC_LIBS pthread pcsclite rt)
+ENDIF(UNIX)
+IF(APPLE)
+SET(SPEC_LIBS pthread)
+ENDIF(APPLE)
+ADD_EXECUTABLE(
+demo_po_authentication
+${CMAKE_CURRENT_SOURCE_DIR}/main.cpp
+)
+TARGET_LINK_DIRECTORIES(demo_po_authentication PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/build)
+TARGET_LINK_LIBRARIES(demo_po_authentication keyplecommon keyplepluginpcsc keyplecore keyplecalypso ${SPEC_LIBS})
+&lt;/code>&lt;/pre>
+&lt;p>Now build the demo code:&lt;/p>
+&lt;pre>&lt;code class="language-bash">mkdir build
+cd build
+cmake ..
+make
+&lt;/code>&lt;/pre>
+&lt;hr>
+&lt;h2 id="run">Run&lt;/h2>
+&lt;ol>
+&lt;li>Connect two USB PC/SC Readers.&lt;/li>
+&lt;li>Insert the Calypso SAM in the SAM reader.&lt;/li>
+&lt;li>Insert the Calypso PO in the PO reader.&lt;/li>
+&lt;li>Run the application.&lt;/li>
+&lt;/ol>
+&lt;hr>
+&lt;h2 id="faq">FAQ&lt;/h2>
+&lt;p>&lt;strong>How do I find out the names of the readers?&lt;/strong>&lt;/p>
+&lt;p>If you don’t know the reader name, several options:&lt;/p>
+&lt;ul>
+&lt;li>run the application in debug mode and get the reader name in plugin variable&lt;/li>
+&lt;li>run &amp;lsquo;pcsctest&amp;rsquo; (macOS)&lt;/li>
+&lt;li>run &amp;lsquo;pcsc_scan&amp;rsquo; (Linux)&lt;/li>
+&lt;/ul>
+&lt;p>Identify which reader will be the PO (contactless) reader and the SAM
+(contact) reader and replace &lt;code>PO_READER_NAME&lt;/code> and
+&lt;code>SAM_READER_NAME&lt;/code> with their values.&lt;/p>
+&lt;p>&lt;strong>How to activate the Keyple&amp;rsquo;s logs?&lt;/strong>&lt;/p>
+&lt;p>Logs are automatically activated but log level can be dynamically changed by a simple call to the
+Logger::setLevel() function. Default value is Logger::Level::logDebug.&lt;/p>
+&lt;pre>&lt;code class="language-cpp">class DemoPoAuthentication final {};
+const std::shared_ptr&amp;lt;Logger&amp;gt; logger = LoggerFactory::getLogger(typeid(DemoPoAuthentication));
+logger-&amp;gt;setLoggerLevel(Logger::Level::logError);
+&lt;/code>&lt;/pre>
+&lt;h4 id="full-code">Full code&lt;/h4>
+&lt;p>Here is the complete code of this quick start in one single block.&lt;/p>
+&lt;pre>&lt;code class="language-cpp">/**************************************************************************************************
+* Copyright (c) 2020 Calypso Networks Association *
+* https://www.calypsonet-asso.org/ *
+* *
+* See the NOTICE file(s) distributed with this work for additional information regarding *
+* copyright ownership. *
+* *
+* This program and the accompanying materials are made available under the terms of the Eclipse *
+* Public License 2.0 which is available at http://www.eclipse.org/legal/epl-2.0 *
+* *
+* SPDX-License-Identifier: EPL-2.0 *
+**************************************************************************************************/
+/* Common */
+#include &amp;quot;IllegalStateException.h&amp;quot;
+#include &amp;quot;LoggerFactory.h&amp;quot;
+/* Core */
+#include &amp;quot;ByteArrayUtil.h&amp;quot;
+#include &amp;quot;SeCommonProtocols.h&amp;quot;
+#include &amp;quot;SeSelector.h&amp;quot;
+#include &amp;quot;SeSelection.h&amp;quot;
+#include &amp;quot;SeProxyService.h&amp;quot;
+/* PCSC */
+#include &amp;quot;PcscPluginFactory.h&amp;quot;
+#include &amp;quot;PcscProtocolSetting.h&amp;quot;
+#include &amp;quot;PcscReader.h&amp;quot;
+/* Calypso */
+#include &amp;quot;CalypsoPo.h&amp;quot;
+#include &amp;quot;CalypsoSam.h&amp;quot;
+#include &amp;quot;ElementaryFile.h&amp;quot;
+#include &amp;quot;PoSecuritySettings.h&amp;quot;
+#include &amp;quot;PoSelectionRequest.h&amp;quot;
+#include &amp;quot;PoSelector.h&amp;quot;
+#include &amp;quot;PoTransaction.h&amp;quot;
+#include &amp;quot;SamRevision.h&amp;quot;
+#include &amp;quot;SamSelector.h&amp;quot;
+#include &amp;quot;SamSelectionRequest.h&amp;quot;
+using namespace keyple::calypso::command::po;
+using namespace keyple::calypso::command::po::builder;
+using namespace keyple::calypso::command::po::parser;
+using namespace keyple::calypso::command::sam;
+using namespace keyple::calypso::transaction;
+using namespace keyple::common;
+using namespace keyple::common::exception;
+using namespace keyple::core::command::exception;
+using namespace keyple::core::selection;
+using namespace keyple::core::seproxy;
+using namespace keyple::core::seproxy::event;
+using namespace keyple::core::seproxy::exception;
+using namespace keyple::core::seproxy::message;
+using namespace keyple::core::seproxy::protocol;
+using namespace keyple::core::util;
+using namespace keyple::plugin::pcsc;
+class DemoPoAuthentication final {};
+const std::shared_ptr&amp;lt;Logger&amp;gt; logger = LoggerFactory::getLogger(typeid(DemoPoAuthentication));
+// PO Reader name
+const std::string PO_READER_NAME = &amp;quot;XXX&amp;quot;;
+// SAM Reader name
+const std::string SAM_READER_NAME = &amp;quot;XXX&amp;quot;;
+// Keyple test kit profile 1, Application 2
+const std::string AID = &amp;quot;315449432E49434131&amp;quot;;
+const uint8_t RECORD_NUMBER_1 = 1;
+const uint8_t SFI_Environment = 0x07;
+int main(int argv, char **args)
+{
+// Get the instance of the SeProxyService (Singleton pattern)
+SeProxyService&amp;amp; seProxyService = SeProxyService::getInstance();
+logger-&amp;gt;info(&amp;quot;============================================================================\n&amp;quot;);
+logger-&amp;gt;info(&amp;quot;= Get and Configure the PO &amp;amp; SAM Readers =\n&amp;quot;);
+logger-&amp;gt;info(&amp;quot;============================================================================\n&amp;quot;);
+// Register the PcscPlugin with SeProxyService, get the corresponding generic ReaderPlugin
+auto pluginFactory = std::make_shared&amp;lt;PcscPluginFactory&amp;gt;();
+std::shared_ptr&amp;lt;ReaderPlugin&amp;gt; readerPlugin = seProxyService.registerPlugin(pluginFactory);
+// Get the PO reader
+std::shared_ptr&amp;lt;SeReader&amp;gt; poReader = readerPlugin-&amp;gt;getReader(PO_READER_NAME);
+// Get a SAM reader
+std::shared_ptr&amp;lt;SeReader&amp;gt; samReader = readerPlugin-&amp;gt;getReader(SAM_READER_NAME);
+// Eventually, configure the SAM reader parameters
+// ...
+/* Set Pcsc settings per reader */
+poReader-&amp;gt;setParameter(PcscReader::SETTING_KEY_PROTOCOL, PcscReader::SETTING_PROTOCOL_T1);
+samReader-&amp;gt;setParameter(PcscReader::SETTING_KEY_PROTOCOL, PcscReader::SETTING_PROTOCOL_T0);
+/*
+* PC/SC card access mode:
+*
+* The SAM is left in the SHARED mode (by default) to avoid automatic resets due to the limited
+* time between two consecutive exchanges granted by Windows.
+*
+* This point will be addressed in a coming release of the Keyple PcSc reader plugin.
+*
+* The PO reader is set to EXCLUSIVE mode to avoid side effects (on OS Windows 8+) during the
+* selection step that may result in session failures.
+*
+* See KEYPLE-CORE.PC.md file to learn more about this point.
+*
+*/
+samReader-&amp;gt;setParameter(PcscReader::SETTING_KEY_MODE, PcscReader::SETTING_MODE_SHARED);
+poReader-&amp;gt;setParameter(PcscReader::SETTING_KEY_MODE, PcscReader::SETTING_MODE_SHARED);
+/* Set the PO reader protocol flag */
+poReader-&amp;gt;addSeProtocolSetting(
+SeCommonProtocols::PROTOCOL_ISO14443_4,
+PcscProtocolSetting::PCSC_PROTOCOL_SETTING[SeCommonProtocols::PROTOCOL_ISO14443_4]);
+poReader-&amp;gt;addSeProtocolSetting(
+SeCommonProtocols::PROTOCOL_B_PRIME,
+PcscProtocolSetting::PCSC_PROTOCOL_SETTING[SeCommonProtocols::PROTOCOL_B_PRIME]);
+samReader-&amp;gt;addSeProtocolSetting(
+SeCommonProtocols::PROTOCOL_ISO7816_3,
+PcscProtocolSetting::PCSC_PROTOCOL_SETTING[SeCommonProtocols::PROTOCOL_ISO7816_3]);
+logger-&amp;gt;info(&amp;quot;============================================================================\n&amp;quot;);
+logger-&amp;gt;info(&amp;quot;= Create a SAM resource after selecting the SAM =\n&amp;quot;);
+logger-&amp;gt;info(&amp;quot;============================================================================\n&amp;quot;);
+// Prepare the selector to ensure the correct SAM is used
+auto selector = SamSelector::builder()-&amp;gt;samRevision(SamRevision::AUTO).build();
+auto samSelector = std::dynamic_pointer_cast&amp;lt;SamSelector&amp;gt;(selector);
+// Make the SAM selection
+SeSelection samSelection;
+auto samSelectionRequest = std::make_shared&amp;lt;SamSelectionRequest&amp;gt;(samSelector);
+auto abstractSamSelectionRequest =
+std::reinterpret_pointer_cast&amp;lt;AbstractSeSelectionRequest&amp;lt;AbstractApduCommandBuilder&amp;gt;&amp;gt;(
+samSelectionRequest);
+samSelection.prepareSelection(abstractSamSelectionRequest);
+std::shared_ptr&amp;lt;CalypsoSam&amp;gt; calypsoSam;
+if (samReader-&amp;gt;isSePresent()) {
+std::shared_ptr&amp;lt;SelectionsResult&amp;gt; selectionsResult =
+samSelection.processExplicitSelection(samReader);
+if (selectionsResult-&amp;gt;hasActiveSelection()) {
+calypsoSam = std::dynamic_pointer_cast&amp;lt;CalypsoSam&amp;gt;(
+selectionsResult-&amp;gt;getActiveMatchingSe());
+} else {
+throw IllegalStateException(&amp;quot;SAM matching failed!&amp;quot;);
+}
+} else {
+throw IllegalStateException(&amp;quot;No SAM is present in the reader &amp;quot; + samReader-&amp;gt;getName());
+}
+// Associate the calypsoSam and the samReader to create the samResource
+auto samResource = std::make_shared&amp;lt;SeResource&amp;lt;CalypsoSam&amp;gt;&amp;gt;(samReader, calypsoSam);
+// Prepare the security settings used during the Calypso transaction
+auto poSecuritySettings =
+std::make_shared&amp;lt;PoSecuritySettings::PoSecuritySettingsBuilder&amp;gt;(samResource)-&amp;gt;build();
+logger-&amp;gt;info(&amp;quot;============================================================================\n&amp;quot;);
+logger-&amp;gt;info(&amp;quot;= Display basic information about the readers and SAM =\n&amp;quot;);
+logger-&amp;gt;info(&amp;quot;============================================================================\n&amp;quot;);
+logger-&amp;gt;info(&amp;quot;= PO Reader Name = %\n&amp;quot;, poReader-&amp;gt;getName());
+const std::string samSerialNumber =
+ByteArrayUtil::toHex(samResource-&amp;gt;getMatchingSe()-&amp;gt;getSerialNumber());
+logger-&amp;gt;info(&amp;quot;= SAM Reader Name = %, Serial Number = %\n&amp;quot;,
+samResource-&amp;gt;getSeReader()-&amp;gt;getName(),
+samSerialNumber);
+logger-&amp;gt;info(&amp;quot;============================================================================\n&amp;quot;);
+logger-&amp;gt;info(&amp;quot;= Prepare the Calypso PO selection =\n&amp;quot;);
+logger-&amp;gt;info(&amp;quot;============================================================================\n&amp;quot;);
+// Prepare a Calypso PO selection
+SeSelection seSelection;
+// Setting of an AID based selection of a Calypso Revision 3.1 PO
+//
+// Select the first application matching the selection AID whatever the card communication
+// protocol
+// Keep the logical channel open after the selection
+//
+// Calypso selection: configures a PoSelectionRequest with all the desired attributes to
+// make the selection and read additional information afterwards
+auto aidSelector = SeSelector::AidSelector::builder()-&amp;gt;aidToSelect(AID).build();
+auto seSelector = PoSelector::builder()-&amp;gt;aidSelector(aidSelector) // the application identifier
+// to indicate if an invalidated PO should be accepted
+// or not
+.invalidatedPo(PoSelector::InvalidatedPo::REJECT)
+.build();
+auto poSelector = std::dynamic_pointer_cast&amp;lt;PoSelector&amp;gt;(seSelector);
+auto poSelectionRequest = std::make_shared&amp;lt;PoSelectionRequest&amp;gt;(poSelector);
+// Add the selection case to the current selection
+// (we could have added other cases)
+auto abstractPoSelectionRequest =
+std::reinterpret_pointer_cast&amp;lt;AbstractSeSelectionRequest&amp;lt;AbstractApduCommandBuilder&amp;gt;&amp;gt;(
+poSelectionRequest);
+seSelection.prepareSelection(abstractPoSelectionRequest);
+logger-&amp;gt;info(&amp;quot;============================================================================\n&amp;quot;);
+logger-&amp;gt;info(&amp;quot;= Check if a PO is present in the reader =\n&amp;quot;);
+logger-&amp;gt;info(&amp;quot;============================================================================\n&amp;quot;);
+if (poReader-&amp;gt;isSePresent()) {
+logger-&amp;gt;info(&amp;quot;============================================================================\n&amp;quot;);
+logger-&amp;gt;info(&amp;quot;= Start of the Calypso PO processing =\n&amp;quot;);
+logger-&amp;gt;info(&amp;quot;============================================================================\n&amp;quot;);
+logger-&amp;gt;info(&amp;quot;= 1st PO exchange =\n&amp;quot;);
+logger-&amp;gt;info(&amp;quot;= AID based selection =\n&amp;quot;);
+logger-&amp;gt;info(&amp;quot;============================================================================\n&amp;quot;);
+try {
+// Actual PO communication: operate through a single request the Calypso PO selection
+std::shared_ptr&amp;lt;CalypsoPo&amp;gt; calypsoPo =
+std::dynamic_pointer_cast&amp;lt;CalypsoPo&amp;gt;(
+seSelection.processExplicitSelection(poReader)-&amp;gt;getActiveMatchingSe());
+logger-&amp;gt;info(&amp;quot;The selection of the PO has succeeded\n&amp;quot;);
+logger-&amp;gt;info(&amp;quot;============================================================================\n&amp;quot;);
+logger-&amp;gt;info(&amp;quot;= 2nd PO exchange =\n&amp;quot;);
+logger-&amp;gt;info(&amp;quot;= Open a Calypso secure session =\n&amp;quot;);
+logger-&amp;gt;info(&amp;quot;= Reading of Environment file (SFI=07h) =\n&amp;quot;);
+logger-&amp;gt;info(&amp;quot;============================================================================\n&amp;quot;);
+// Create a PoTransaction object to manage the Calypso transaction
+auto poTransaction = std::make_shared&amp;lt;PoTransaction&amp;gt;(
+std::make_shared&amp;lt;SeResource&amp;lt;CalypsoPo&amp;gt;&amp;gt;(poReader, calypsoPo),
+poSecuritySettings);
+// Read the Environment file at the Session Opening
+// (we could have added other commands)
+poTransaction-&amp;gt;prepareReadRecordFile(
+SFI_Environment, // the sfi to select
+RECORD_NUMBER_1);
+// Open Session with the debit key
+poTransaction-&amp;gt;processOpening(
+PoTransaction::SessionSetting::AccessLevel::SESSION_LVL_DEBIT);
+// Get the Environment data
+std::shared_ptr&amp;lt;ElementaryFile&amp;gt; efEnvironment =
+calypsoPo-&amp;gt;getFileBySfi(SFI_Environment);
+const std::string environmentLog =
+ByteArrayUtil::toHex(efEnvironment-&amp;gt;getData()-&amp;gt;getContent());
+logger-&amp;gt;info(&amp;quot;File Environment log: %\n&amp;quot;, environmentLog);
+if (!calypsoPo-&amp;gt;isDfRatified()) {
+logger-&amp;gt;info(&amp;quot;============= Previous Calypso Secure Session was not ratified =============\n&amp;quot;);
+}
+logger-&amp;gt;info(&amp;quot;============================================================================\n&amp;quot;);
+logger-&amp;gt;info(&amp;quot;= 3th PO exchange =\n&amp;quot;);
+logger-&amp;gt;info(&amp;quot;= Close the Calypso secure session =\n&amp;quot;);
+logger-&amp;gt;info(&amp;quot;============================================================================\n&amp;quot;);
+// To close the channel with the PO after the closing
+poTransaction-&amp;gt;prepareReleasePoChannel();
+// Close the Calypso Secure Session
+// A ratification command will be sent (CONTACTLESS_MODE)
+poTransaction-&amp;gt;processClosing();
+logger-&amp;gt;info(&amp;quot;============================================================================\n&amp;quot;);
+logger-&amp;gt;info(&amp;quot;= The Calypso secure session ended successfully =\n&amp;quot;);
+logger-&amp;gt;info(&amp;quot;= (Successful mutual authentication) =\n&amp;quot;);
+logger-&amp;gt;info(&amp;quot;= End of the Calypso PO processing =\n&amp;quot;);
+logger-&amp;gt;info(&amp;quot;============================================================================\n&amp;quot;);
+} catch (const Exception&amp;amp; e) {
+logger-&amp;gt;error(&amp;quot;Exception: %\n&amp;quot;, e.getMessage());
+}
+} else {
+logger-&amp;gt;error(&amp;quot;The selection of the PO has failed\n&amp;quot;);
+}
+return 0;
+}
+&lt;/code>&lt;/pre>
+&lt;h4 id="sample-trace">Sample trace&lt;/h4>
+&lt;pre>&lt;code class="language-bash">============================================================================
+= Get and Configure the PO &amp;amp; SAM Readers =
+============================================================================
+initNativeReaders - getting card terminals
+run - starting executor monitoring thread
+[PcscReaderImpl] constructor =&amp;gt; using terminal OMNIKEY CardMan (076B:5421) 5421(1)
+[OMNIKEY CardMan (076B:5421) 5421(1)] setParameter =&amp;gt; PCSC: Set a parameter. NAME =transmission_mode, VALUE =
+[OMNIKEY CardMan (076B:5421) 5421(1)] setParameter =&amp;gt; PCSC: Set a parameter. NAME = protocol, VALUE =
+[OMNIKEY CardMan (076B:5421) 5421(1)] setParameter =&amp;gt; PCSC: Set a parameter. NAME = mode, VALUE =
+[OMNIKEY CardMan (076B:5421) 5421(1)] setParameter =&amp;gt; PCSC: Set a parameter. NAME = disconnect, VALUE =
+run - starting executor monitoring thread
+constructor =&amp;gt; using terminal OMNIKEY CardMan (076B:5421) 5421(2)
+[OMNIKEY CardMan (076B:5421) 5421(2)] setParameter =&amp;gt; PCSC: Set a parameter. NAME = transmission_mode, VALUE =
+[OMNIKEY CardMan (076B:5421) 5421(2)] setParameter =&amp;gt; PCSC: Set a parameter. NAME = protocol, VALUE =
+[OMNIKEY CardMan (076B:5421) 5421(2)] setParameter =&amp;gt; PCSC: Set a parameter. NAME = mode, VALUE =
+[OMNIKEY CardMan (076B:5421) 5421(2)] setParameter =&amp;gt; PCSC: Set a parameter. NAME = disconnect, VALUE =
+Registering a new Plugin to the platform : PcscPlugin
+[OMNIKEY CardMan (076B:5421) 5421(2)] setParameter =&amp;gt; PCSC: Set a parameter. NAME = protocol, VALUE = T1
+[OMNIKEY CardMan (076B:5421) 5421(1)] setParameter =&amp;gt; PCSC: Set a parameter. NAME = protocol, VALUE = T0
+[OMNIKEY CardMan (076B:5421) 5421(1)] setParameter =&amp;gt; PCSC: Set a parameter. NAME = mode, VALUE = shared
+[OMNIKEY CardMan (076B:5421) 5421(2)] setParameter =&amp;gt; PCSC: Set a parameter. NAME = mode, VALUE = shared
+============================================================================
+= Create a SAM resource after selecting the SAM =
+============================================================================
+protocolFlagMatches - physical channel not open, opening it
+[OMNIKEY CardMan (076B:5421) 5421(1)] openAndConnect - protocol: T=0
+openAndConnect - connecting tp OMNIKEY CardMan (076B:5421) 5421(1) with protocol: T=0, connectProtocol: 1
+and sharingMode: 2
+openAndConnect - card state: 84
+[OMNIKEY CardMan (076B:5421) 5421(1)] Opening of a physical SE channel in shared mode
+[OMNIKEY CardMan (076B:5421) 5421(1)] protocolFlagMatches =&amp;gt; matching SE. PROTOCOLFLAG = SEPROTOCOL:
+{NAME = ISO 7816-3, TRANMISSIONMODE = CONTACTS}
+processSeRequestSet - processing requests set
+[OMNIKEY CardMan (076B:5421) 5421(1)] processSeRequests =&amp;gt; transmit SEREQUEST: {REQUESTS = ApduRequests: {},
+SELECTOR = SESELECTOR: {SEPROTOCOL: {NAME = ISO 7816-3, TRANMISSIONMODE = CONTACTS}AIDSELECTOR = null,
+ATRFILTER: {REGEX = .*}}}
+[OMNIKEY CardMan (076B:5421) 5421(1)] processSeRequest =&amp;gt; Logical channel open = 0
+[OMNIKEY CardMan (076B:5421) 5421(1)] processSeRequests =&amp;gt; receive SERESPONSE: {RESPONSES = APDURESPONSES: {},
+SELECTIONSTATUS = SELECTIONSTATUS: {ATR = ATR = 3b3f9600805a4880c1205017aec11a36829000, FCI = R-APDU:
+{STATUS = FAILURE, BYTES (0) = }, HASMATCHED = 1}, CHANNELWASOPEN = 0}
+============================================================================
+= Display basic information about the readers and SAM =
+============================================================================
+= PO Reader Name = OMNIKEY CardMan (076B:5421) 5421(2)
+= SAM Reader Name = OMNIKEY CardMan (076B:5421) 5421(1), Serial Number = AEC11A36
+============================================================================
+= Prepare the Calypso PO selection =
+============================================================================
+============================================================================
+= Check if a PO is present in the reader =
+============================================================================
+============================================================================
+= Start of the Calypso PO processing =
+============================================================================
+= 1st PO exchange =
+= AID based selection =
+============================================================================
+protocolFlagMatches - physical channel not open, opening it
+[OMNIKEY CardMan (076B:5421) 5421(2)] openAndConnect - protocol: T=1
+openAndConnect - connecting tp OMNIKEY CardMan (076B:5421) 5421(2) with protocol: T=1, connectProtocol: 2
+and sharingMode: 2
+openAndConnect - card state: 84
+[OMNIKEY CardMan (076B:5421) 5421(2)] Opening of a physical SE channel in shared mode
+[OMNIKEY CardMan (076B:5421) 5421(2)] protocolFlagMatches =&amp;gt; matching SE. PROTOCOLFLAG = SEPROTOCOL:
+{NAME = ISO 14443-4, TRANMISSIONMODE = CONTACTLESS}
+processSeRequestSet - processing requests set
+[OMNIKEY CardMan (076B:5421) 5421(2)] processSeRequests =&amp;gt; transmit SEREQUEST: {REQUESTS = ApduRequests:
+{}, SELECTOR = SESELECTOR: {SEPROTOCOL: {NAME = ISO 14443-4, TRANMISSIONMODE = CONTACTLESS}AIDSELECTOR:
+{AIDTOSELECT = 315449432e49434131FILEOCCURRENCE: {ISOBITMASK = 0(0x00)}FILECONTROLINFORMATION:
+{ISOBITMASK = 0(0x00)}0x0}, ATRFILTER = null}}
+[OMNIKEY CardMan (076B:5421) 5421(2)] processSeRequest =&amp;gt; Logical channel open = 0
+[OMNIKEY CardMan (076B:5421) 5421(2)] openLogicalChannel =&amp;gt; Select Application with AID = 315449432e49434131
+[OMNIKEY CardMan (076B:5421) 5421(2)] processApduRequest =&amp;gt; APDUREQUEST: {NAME = Internal Select Application,
+RAWDATA = 00a4040009315449432e4943413100, CASE4 = 1}, elapsed 13c ms
+[OMNIKEY CardMan (076B:5421) 5421(2)] transmitApdu - c-apdu &amp;gt;&amp;gt; 00a4040009315449432e4943413100
+[OMNIKEY CardMan (076B:5421) 5421(2)] transmitApdu - r-apdu &amp;lt;&amp;lt;
+6f238409315449432e49434131a516bf0c13c70800000000c17be1f653070a3c23051410019000
+[OMNIKEY CardMan (076B:5421) 5421(2)] processApduRequest =&amp;gt; R-APDU: {STATUS = SUCCESS, BYTES (39) = 6f238409315449432e49434131a516bf0c13c70800000000c17be1f653070a3c23051410019000}, elapsed c ms
+[OMNIKEY CardMan (076B:5421) 5421(2)] processSeRequests =&amp;gt; receive SERESPONSE: {RESPONSES = APDURESPONSES: {},
+SELECTIONSTATUS = SELECTIONSTATUS: {ATR = ATR = 3b888001000000009171710098, FCI = R-APDU: {STATUS = SUCCESS,
+BYTES (27) = 6f238409315449432e49434131a516bf0c13c70800000000c17be1f653070a3c23051410019000}, HASMATCHED = 1},
+CHANNELWASOPEN = 0}
+Application Serial Number = 00000000C17BE1F6
+Discretionary Data = 0a3c2305141001
+The selection of the PO has succeeded
+============================================================================
+= 2nd PO exchange =
+= Open a Calypso secure session =
+= Reading of Environment file (SFI=07h) =
+============================================================================
+[OMNIKEY CardMan (076B:5421) 5421(1)] processSeRequest =&amp;gt; Logical channel open = 1
+[OMNIKEY CardMan (076B:5421) 5421(1)] processApduRequest =&amp;gt; APDUREQUEST: {NAME = Select Diversifier,
+RAWDATA = 801400000800000000c17be1f6, CASE4 = 0}, elapsed 208 ms
+[OMNIKEY CardMan (076B:5421) 5421(1)] transmitApdu - c-apdu &amp;gt;&amp;gt; 801400000800000000c17be1f6
+[OMNIKEY CardMan (076B:5421) 5421(1)] transmitApdu - r-apdu &amp;lt;&amp;lt; 9000
+[OMNIKEY CardMan (076B:5421) 5421(1)] processApduRequest =&amp;gt; R-APDU: {STATUS = SUCCESS, BYTES (2) =
+9000}, elapsed 37 ms
+[OMNIKEY CardMan (076B:5421) 5421(1)] processApduRequest =&amp;gt; APDUREQUEST: {NAME = Get Challenge,
+RAWDATA = 8084000004, CASE4 = 0}, elapsed 0 ms
+[OMNIKEY CardMan (076B:5421) 5421(1)] transmitApdu - c-apdu &amp;gt;&amp;gt; 8084000004
+[OMNIKEY CardMan (076B:5421) 5421(1)] transmitApdu - r-apdu &amp;lt;&amp;lt; ef48651d9000
+[OMNIKEY CardMan (076B:5421) 5421(1)] processApduRequest =&amp;gt; R-APDU: {STATUS = SUCCESS, BYTES (6) =
+ef48651d9000}, elapsed 3 ms
+identification: TERMINALCHALLENGE = ef48651d
+[OMNIKEY CardMan (076B:5421) 5421(2)] processSeRequest =&amp;gt; Logical channel open = 1
+[OMNIKEY CardMan (076B:5421) 5421(2)] processApduRequest =&amp;gt; APDUREQUEST: {NAME = Open Secure Session
+V3.1 - KEYINDEX=3, SFI=07, REC=1, RAWDATA = 008a0b3904ef48651d00, CASE4 = 1}, elapsed c7 ms
+[OMNIKEY CardMan (076B:5421) 5421(2)] transmitApdu - c-apdu &amp;gt;&amp;gt; 008a0b3904ef48651d00
+[OMNIKEY CardMan (076B:5421) 5421(2)] transmitApdu - r-apdu &amp;lt;&amp;lt;
+030ab2cf0030791d00000000000000000000000000000000000000000000000000000000009000
+[OMNIKEY CardMan (076B:5421) 5421(2)] processApduRequest =&amp;gt; R-APDU: {STATUS = SUCCESS, BYTES (39) = 030ab2cf0030791d00000000000000000000000000000000000000000000000000000000009000}, elapsed e ms
+processAtomicOpening =&amp;gt; opening: CARDCHALLENGE = CF, POKIF = 30, POKVC = 79
+initialize: POREVISION = REV3_1, SAMREVISION = C1, SESSIONENCRYPTION = 0, VERIFICATIONMODE = 0
+initialize: VERIFICATIONMODE = 0, REV32MODE = 0, KEYRECNUMBER = 0(0x00)
+initialize: KIF = 48(0x30), KVC = 79(0x79), DIGESTDATA =
+030ab2cf0030791d0000000000000000000000000000000000000000000000000000000000
+File Environment log: 0000000000000000000000000000000000000000000000000000000000
+============================================================================
+= 3th PO exchange =
+= Close the Calypso secure session =
+============================================================================
+[OMNIKEY CardMan (076B:5421) 5421(1)] processSeRequest =&amp;gt; Logical channel open = 1
+[OMNIKEY CardMan (076B:5421) 5421(1)] processApduRequest =&amp;gt; APDUREQUEST: {NAME = Digest Init, RAWDATA = 808a00ff273079030ab2cf0030791d0000000000000000000000000000000000000000000000000000000000, CASE4 = 0},
+elapsed 2f ms
+[OMNIKEY CardMan (076B:5421) 5421(1)] transmitApdu - c-apdu &amp;gt;&amp;gt;
+808a00ff273079030ab2cf0030791d0000000000000000000000000000000000000000000000000000000000
+[OMNIKEY CardMan (076B:5421) 5421(1)] transmitApdu - r-apdu &amp;lt;&amp;lt; 9000
+[OMNIKEY CardMan (076B:5421) 5421(1)] processApduRequest =&amp;gt; R-APDU: {STATUS = SUCCESS, BYTES (2) = 9000},
+elapsed 6 ms
+[OMNIKEY CardMan (076B:5421) 5421(1)] processApduRequest =&amp;gt; APDUREQUEST: {NAME = Digest Close,
+RAWDATA = 808e000004, CASE4 = 0}, elapsed 0 ms
+[OMNIKEY CardMan (076B:5421) 5421(1)] transmitApdu - c-apdu &amp;gt;&amp;gt; 808e000004
+[OMNIKEY CardMan (076B:5421) 5421(1)] transmitApdu - r-apdu &amp;lt;&amp;lt; 819e515d9000
+[OMNIKEY CardMan (076B:5421) 5421(1)] processApduRequest =&amp;gt; R-APDU: {STATUS = SUCCESS, BYTES (6) =
+819e515d9000}, elapsed 9 ms
+SIGNATURE = 819e515d
+[OMNIKEY CardMan (076B:5421) 5421(2)] processSeRequest =&amp;gt; Logical channel open = 1
+[OMNIKEY CardMan (076B:5421) 5421(2)] processApduRequest =&amp;gt; APDUREQUEST: {NAME = Close Secure Session,
+RAWDATA = 008e800004819e515d00, CASE4 = 1}, elapsed 31 ms
+[OMNIKEY CardMan (076B:5421) 5421(2)] transmitApdu - c-apdu &amp;gt;&amp;gt; 008e800004819e515d00
+[OMNIKEY CardMan (076B:5421) 5421(2)] transmitApdu - r-apdu &amp;lt;&amp;lt; 08d222e99000
+[OMNIKEY CardMan (076B:5421) 5421(2)] processApduRequest =&amp;gt; R-APDU: {STATUS = SUCCESS, BYTES (6) =
+08d222e99000}, elapsed 34 ms
+[OMNIKEY CardMan (076B:5421) 5421(2)] processApduRequest =&amp;gt; APDUREQUEST: {NAME = , RAWDATA = 00b2000000,
+CASE4 = 0}, elapsed 0 ms
+[OMNIKEY CardMan (076B:5421) 5421(2)] transmitApdu - c-apdu &amp;gt;&amp;gt; 00b2000000
+[OMNIKEY CardMan (076B:5421) 5421(2)] transmitApdu - r-apdu &amp;lt;&amp;lt; 6b00
+[OMNIKEY CardMan (076B:5421) 5421(2)] processApduRequest =&amp;gt; R-APDU: {STATUS = FAILURE, BYTES (2) = 6b00},
+elapsed 2a ms
+[OMNIKEY CardMan (076B:5421) 5421(2)] closePhysicalChannel
+[OMNIKEY CardMan (076B:5421) 5421(2)] closeAndDisconnect - reset: y
+[OMNIKEY CardMan (076B:5421) 5421(2)] Ignore =&amp;gt; Event SE_PROCESSED received in currentState
+WAIT_FOR_START_DETECTION
+[OMNIKEY CardMan (076B:5421) 5421(1)] processSeRequest =&amp;gt; Logical channel open = 1
+[OMNIKEY CardMan (076B:5421) 5421(1)] processApduRequest =&amp;gt; APDUREQUEST: {NAME = Digest Authenticate,
+RAWDATA = 808200000408d222e9, CASE4 = 0}, elapsed 61 ms
+[OMNIKEY CardMan (076B:5421) 5421(1)] transmitApdu - c-apdu &amp;gt;&amp;gt; 808200000408d222e9
+[OMNIKEY CardMan (076B:5421) 5421(1)] transmitApdu - r-apdu &amp;lt;&amp;lt; 9000
+[OMNIKEY CardMan (076B:5421) 5421(1)] processApduRequest =&amp;gt; R-APDU: {STATUS = SUCCESS, BYTES (2) = 9000},
+elapsed 5e ms
+============================================================================
+= The Calypso secure session ended successfully =
+= (Successful mutual authentication) =
+= End of the Calypso PO processing =
+============================================================================
+&lt;/code>&lt;/pre></description></item><item><title>Common concepts</title><link>https://keyple.org/docs/developer-guide/common-concepts/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/docs/developer-guide/common-concepts/</guid><description>&lt;hr>
+&lt;p>This page describes the core elements of &lt;strong>Keyple&lt;/strong>, i.e. the concepts and APIs of &lt;strong>Keyple Core&lt;/strong> that are used to build any application implementing &lt;strong>Keyple&lt;/strong>.&lt;/p>
 &lt;p>It is essential for the future user of &lt;strong>Keyple&lt;/strong> to be familiar with what is said in this chapter because the other modules made available by the project are all dependent on &lt;strong>Keyple Core&lt;/strong>.&lt;/p>
-&lt;h3 id="reader">Reader&lt;/h3>
+&lt;hr>
+&lt;h2 id="reader">Reader&lt;/h2>
 &lt;p>Keyple&amp;rsquo;s primary goal being to interact with smart cards (or smartphones) worn by individuals, it is logical to put the Reader at the top of &lt;strong>Keyple Core&lt;/strong>&amp;rsquo;s concepts.&lt;/p>
 &lt;p>Indeed, it is through the reader interfaces that all interactions with the smart cards will take place, either directly via &lt;strong>Keyple Core&lt;/strong> or using an extension (such as &lt;strong>Keyple Calypso&lt;/strong>).&lt;/p>
 &lt;p>These interfaces provide the means to&lt;/p>
@@ -1888,31 +2669,48 @@ Coming soon
 &lt;li>detect the presence and communicate with smart cards.&lt;/li>
 &lt;/ul>
 &lt;p>The reader concept also applies to the hardware interfaces used to communicate with security elements such as SAMs (Secure Access Modules), which are sometimes integrated into devices and the virtual interfaces represented by the remote implementations.&lt;/p>
-&lt;p>[link to the detailed description of the reader related classes]&lt;/p>
-&lt;h3 id="plugin">Plugin&lt;/h3>
-&lt;p>In Keyple language a plugin is a service that allows the management of readers of a certain type. The plugin is responsible for informing the application about the availability of readers. The readers of the same plugin are usually hardware linked to the same physical interface.&lt;/p>
+&lt;p>
+&lt;a href="./docs/architecture/keyple-core/#reader-access">More information&lt;/a>&lt;/p>
+&lt;hr>
+&lt;h2 id="plugin">Plugin&lt;/h2>
+&lt;p>In Keyple language a plugin is a service that allows the management of readers of a certain type.
+The plugin is responsible for informing the application about the availability of readers.
+The readers of the same plugin are usually hardware linked to the same physical interface.&lt;/p>
 &lt;p>Depending on its profile, an application may use different types of plugins to communicate with the different elements it needs (card, SAM).&lt;/p>
 &lt;p>The Plugin interface essentially allows to list and retrieve the available readers.&lt;/p>
-&lt;p>[link to the detailed description of the plugin related classes]&lt;/p>
-&lt;h3 id="smart-card-service">Smart card service&lt;/h3>
+&lt;p>
+&lt;a href="./docs/architecture/keyple-core/#reader-access">More information&lt;/a>&lt;/p>
+&lt;hr>
+&lt;h2 id="smart-card-service">Smart card service&lt;/h2>
 &lt;p>This is the &lt;strong>Keyple Core&lt;/strong> service that concentrates the knowledge of active plugins and readers.&lt;/p>
 &lt;p>At startup, a Keyple application must register the plugins it uses. Conversely, it can also unregister them.&lt;/p>
 &lt;p>The &lt;strong>SmartCardService&lt;/strong> will then make sure that the resources used are properly released.&lt;/p>
-&lt;p>[link to the detailed description of the reader related classes]&lt;/p>
-&lt;h3 id="observation">Observation&lt;/h3>
+&lt;p>
+&lt;a href="./docs/architecture/keyple-core/#reader-access">More information&lt;/a>&lt;/p>
+&lt;hr>
+&lt;h2 id="observation">Observation&lt;/h2>
 &lt;p>The observation concept applies to readers as well as to plugins; optional, it is used depending on the needs.&lt;/p>
 &lt;p>It consists in monitoring changes such as reader connection/disconnection or card insertion/removal and informing the observing application through a dedicated interface.&lt;/p>
 &lt;p>Not all plugins and readers are observable.&lt;/p>
-&lt;h3 id="selection">Selection&lt;/h3>
+&lt;p>
+&lt;a href="./docs/architecture/keyple-core/#reader-notifications">More information&lt;/a>&lt;/p>
+&lt;hr>
+&lt;h2 id="selection">Selection&lt;/h2>
 &lt;p>In Keyple the concept of selection is derived from the application selection defined by the ISO7816-4 standard.&lt;/p>
 &lt;p>It supplements it by managing cards that do not have the standard command using identification mechanisms based on Answer To Reset and the communication protocol, and also by allowing the execution of commands immediately following application selection or detection.&lt;/p>
 &lt;p>This principle optimizes the processing by allowing the application to elaborate advanced card discovery requests.&lt;/p>
 &lt;p>Several targets can be defined by the application according to the different customer cards expected.&lt;/p>
 &lt;p>The &lt;strong>default selection&lt;/strong> principle consists in providing an observable reader with a set of selection cases corresponding to the expected cards and receiving notifications containing not only the card identification but also the result of all additional commands that the application will have attached.&lt;/p>
-&lt;h3 id="abstract-smart-card">Abstract smart card&lt;/h3>
-&lt;p>The &lt;strong>abstract smart card&lt;/strong> concept is used by specific extensions (e.g. &lt;strong>Keyple Calypso&lt;/strong>) and by the &lt;strong>Keyple Core&lt;/strong> selection mechanism. It corresponds to an abstract container model implemented by the extension specific to a card type and returned by the selection process.&lt;/p>
+&lt;p>
+&lt;a href="./docs/architecture/keyple-core/#card-selection">More information&lt;/a>&lt;/p>
+&lt;hr>
+&lt;h2 id="abstract-smart-card">Abstract smart card&lt;/h2>
+&lt;p>The &lt;strong>abstract smart card&lt;/strong> concept is used by specific extensions (e.g. &lt;strong>Keyple Calypso&lt;/strong>) and by the &lt;strong>Keyple Core&lt;/strong> selection mechanism.
+It corresponds to an abstract container model implemented by the extension specific to a card type and returned by the selection process.&lt;/p>
 &lt;p>This container will be able to carry all the useful information known about the card.&lt;/p>
-&lt;p>Note: this concept, mentioned here for understanding, should not appear to the application developer if he uses a card extension.&lt;/p></description></item><item><title>Standalone application</title><link>https://keyple.org/docs/developer-guide/standalone-application/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/docs/developer-guide/standalone-application/</guid><description>&lt;hr>
+&lt;p>Note: this concept, mentioned here for understanding, should not appear to the application developer if he uses a card extension.&lt;/p>
+&lt;p>
+&lt;a href="./docs/architecture/keyple-core/#card-selection">More information&lt;/a>&lt;/p></description></item><item><title>Standalone application</title><link>https://keyple.org/docs/developer-guide/standalone-application/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/docs/developer-guide/standalone-application/</guid><description>&lt;hr>
 &lt;h2 id="overview">Overview&lt;/h2>
 &lt;p>A standalone application is an application that runs in a device in contact
 with the end user.&lt;/p>
@@ -1923,11 +2721,12 @@ validator, a vending machine or a control terminal.&lt;/p>
 &lt;p>The diagram below illustrates the organization of the local standalone
 components:
 &lt;figure >
-&lt;a data-fancybox="" href="./media/local-app/component/Local_Application_Components_Overview.svg" >
-&lt;img src="./media/local-app/component/Local_Application_Components_Overview.svg" alt="" >
+&lt;a data-fancybox="" href="./media/standalone-application/component/Local_Application_Components_Overview.svg" >
+&lt;img src="./media/standalone-application/component/Local_Application_Components_Overview.svg" alt="" >
 &lt;/a>
 &lt;/figure>
 &lt;/p>
+&lt;hr>
 &lt;h2 id="before-you-start">Before you start&lt;/h2>
 &lt;ol>
 &lt;li>In pre-requisite, read the
@@ -1951,6 +2750,7 @@ environment.&lt;/li>
 &lt;li>Don&amp;rsquo;t forget to explore the potential of Keyple card-specific
 extensions such as &lt;strong>Keyple Calypso&lt;/strong>.&lt;/li>
 &lt;/ol>
+&lt;hr>
 &lt;h2 id="workflow">Workflow&lt;/h2>
 &lt;p>&lt;strong>Keyple Core&lt;/strong> is built around the concepts described
 &lt;a href="./docs/developer-guide/common-concepts/">here&lt;/a> and sometimes proposes several ways to perform
@@ -2353,6 +3153,7 @@ resources and in particular the shutdown of the observation threads.&lt;/p>
 &lt;p>This is done by unregistering the plugins in the following way:&lt;/p>
 &lt;pre>&lt;code class="language-java">smartCardService.unregisterPlugin(plugin.getName());
 &lt;/code>&lt;/pre>
+&lt;hr>
 &lt;h2 id="keyple-core-api">Keyple Core API&lt;/h2>
 &lt;p>To learn all the details of the &lt;strong>Keyple Core&lt;/strong> API, please consult the
 &lt;a href="./docs/api-reference/">Javadoc documentation&lt;/a>.&lt;/p>
@@ -2362,8 +3163,8 @@ resources and in particular the shutdown of the observation threads.&lt;/p>
 &lt;p>The diagram below represents the main classes implemented around the
 &lt;strong>Smart Card Service&lt;/strong> with in particular the observation mechanisms.
 &lt;figure >
-&lt;a data-fancybox="" href="./media/local-app/component/KeypleCore_Reader_ClassDiag_PluginSettingAndReaderAccess_1_0_0.svg" >
-&lt;img src="./media/local-app/component/KeypleCore_Reader_ClassDiag_PluginSettingAndReaderAccess_1_0_0.svg" alt="" >
+&lt;a data-fancybox="" href="./media/architecture/KeypleCore_Reader_ClassDiag_PluginSettingAndReaderAccess_1_0_0.svg" >
+&lt;img src="./media/architecture/KeypleCore_Reader_ClassDiag_PluginSettingAndReaderAccess_1_0_0.svg" alt="" >
 &lt;/a>
 &lt;/figure>
 &lt;/p>
@@ -2372,56 +3173,57 @@ resources and in particular the shutdown of the observation threads.&lt;/p>
 &lt;p>The diagram below represents the main classes used for selection
 operations.
 &lt;figure >
-&lt;a data-fancybox="" href="./media/local-app/component/KeypleCore_CardSelection_ClassDiag_SelectorAndSelection_1_0_0.svg" >
-&lt;img src="./media/local-app/component/KeypleCore_CardSelection_ClassDiag_SelectorAndSelection_1_0_0.svg" alt="" >
+&lt;a data-fancybox="" href="./media/architecture/KeypleCore_CardSelection_ClassDiag_SelectorAndSelection_1_0_0.svg" >
+&lt;img src="./media/architecture/KeypleCore_CardSelection_ClassDiag_SelectorAndSelection_1_0_0.svg" alt="" >
 &lt;/a>
 &lt;/figure>
 &lt;/p>
 &lt;/li>
 &lt;/ul>
+&lt;hr>
 &lt;h2 id="examples">Examples&lt;/h2>
 &lt;p>To help in the implementation of the different facilities offered by
 Keyple to process smart cards, a set of examples is present in the
 project repository
-&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/example/generic/pc" target="_blank" rel="noopener">
+&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/example/generic/standalone" target="_blank" rel="noopener">
 &lt;i class="fab fa-github pr-1 fa-fw">&lt;/i> examples&lt;/a>&lt;/p>
 &lt;p>Nevertheless, you will find below a brief description of them:&lt;/p>
 &lt;h3 id="explicit-selection">Explicit Selection&lt;/h3>
 &lt;p>Shows the use of Keyple to make a card selection without observing the
 reader, based on testing the presence of the card by the application.&lt;/p>
 &lt;p>
-&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/example/generic/pc/UseCase1_ExplicitSelectionAid" target="_blank" rel="noopener">see the code&lt;/a>&lt;/p>
+&lt;a href="https://github.com/eclipse/keyple-java/blob/master/java/example/generic/standalone/src/main/java/org/eclipse/keyple/example/generic/centralized/UseCase1_ExplicitSelectionAid" target="_blank" rel="noopener">see the code&lt;/a>&lt;/p>
 &lt;h3 id="default-selection">Default Selection&lt;/h3>
 &lt;p>Shows the use of Keyple to make a card selection with observation of the
 reader. A default selection is prepared, the presentation of a card
 triggers the notification of a reader event to the application.&lt;/p>
 &lt;p>
-&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/example/generic/pc/UseCase2_DefaultSelectionNotification" target="_blank" rel="noopener">see the code&lt;/a>&lt;/p>
+&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/example/generic/standalone/src/main/java/org/eclipse/keyple/example/generic/centralized/UseCase2_DefaultSelectionNotification" target="_blank" rel="noopener">see the code&lt;/a>&lt;/p>
 &lt;h3 id="sequential-multiple-selection">Sequential Multiple Selection&lt;/h3>
 &lt;p>Executes successively several independent selection operations with the
 use of the ISO &amp;lsquo;NEXT&amp;rsquo; navigation flag.&lt;/p>
 &lt;p>
-&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/example/generic/pc/UseCase3_SequentialMultiSelection" target="_blank" rel="noopener">see the code&lt;/a>&lt;/p>
-&lt;p>Illustrates the case of a card exploration avec maintient du canal
-physique ouvert.&lt;/p>
+&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/example/generic/standalone/src/main/java/org/eclipse/keyple/example/generic/centralized/UseCase3_SequentialMultiSelection" target="_blank" rel="noopener">see the code&lt;/a>&lt;/p>
+&lt;p>Illustrates the case of a card exploration with maintenance of the physical channel open.&lt;/p>
 &lt;h3 id="grouped-multiple-selection">Grouped Multiple Selection&lt;/h3>
 &lt;p>Executes a multiple selection with logical channel closure between each
 selection.&lt;/p>
 &lt;p>Allows the exploration of the applications of a card in a single
 operation but without selection at the end.&lt;/p>
 &lt;p>
-&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/example/generic/pc/UseCase4_GroupedMultiSelection" target="_blank" rel="noopener">see the code&lt;/a>&lt;/p>
+&lt;a href="https://github.com/eclipse/keyple-java/blob/master/java/example/generic/standalone/src/main/java/org/eclipse/keyple/example/generic/centralized/UseCase4_GroupedMultiSelection" target="_blank" rel="noopener">see the code&lt;/a>&lt;/p>
 &lt;h3 id="demo-card-protocol-detection">Demo Card Protocol Detection&lt;/h3>
 &lt;p>Demonstrates the use of Keyple in a context where several card
 technologies are likely to be processed by the application.&lt;/p>
 &lt;p>
-&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/example/generic/pc/Demo_CardProtocolDetection" target="_blank" rel="noopener">see the code&lt;/a>&lt;/p>
+&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/example/generic/standalone/src/main/java/org/eclipse/keyple/example/generic/centralized/Demo_CardProtocolDetection" target="_blank" rel="noopener">see the code&lt;/a>&lt;/p>
 &lt;h3 id="demo-observable-reader-notification">Demo Observable Reader Notification&lt;/h3>
 &lt;p>Demonstrates the use of Keyple to implement the observation of a plugin
 and its readers. Readers are dynamically created and an observer is
 assigned to them.&lt;/p>
 &lt;p>
-&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/example/generic/pc/Demo_ObservableReaderNotification" target="_blank" rel="noopener">see the code&lt;/a>&lt;/p>
+&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/example/generic/standalone/src/main/java/org/eclipse/keyple/example/generic/centralized/Demo_ObservableReaderNotification" target="_blank" rel="noopener">see the code&lt;/a>&lt;/p>
+&lt;hr>
 &lt;h2 id="download">Download&lt;/h2>
 &lt;p>The artifact &lt;strong>Keyple Core&lt;/strong> and how to integrate it into your
 application is available here:&lt;/p>
@@ -2430,7 +3232,8 @@ application is available here:&lt;/p>
 &lt;a href="https://keyple.org/components-java/core/">Keyple Core Java component&lt;/a>&lt;/li>
 &lt;li>
 &lt;a href="https://keyple.org/components-cpp/core/">Keyple Core C++ component&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Distributed application</title><link>https://keyple.org/docs/developer-guide/distributed-application/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/docs/developer-guide/distributed-application/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;/ul></description></item><item><title>Distributed application</title><link>https://keyple.org/docs/developer-guide/distributed-application/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/docs/developer-guide/distributed-application/</guid><description>&lt;hr>
+&lt;h2 id="overview">Overview&lt;/h2>
 &lt;p>&lt;strong>Keyple provides the &amp;ldquo;Keyple Distributed&amp;rdquo; solution which allows a terminal to communicate with a smart card reader available in another terminal&lt;/strong>.&lt;/p>
 &lt;p>In this way, you can manage transactions within a distributed architecture.&lt;/p>
 &lt;p>The diagram below shows the role of the &lt;strong>Keyple Distributed&lt;/strong> components in the software layers used in a distributed architecture :&lt;/p>
@@ -2439,6 +3242,7 @@ application is available here:&lt;/p>
 &lt;img src="./media/distributed-application/component/Distributed_Component_Overview.svg" alt="" >
 &lt;/a>
 &lt;/figure>
+&lt;hr>
 &lt;h2 id="how-to-use-it-">How to use it ?&lt;/h2>
 &lt;ol>
 &lt;li>In pre-requisite, read page
@@ -2455,6 +3259,7 @@ application is available here:&lt;/p>
 &lt;a href="#network-configuration">Network configuration&lt;/a>, implement the transport layer adapted to your network configuration.&lt;/li>
 &lt;li>Implement your ticketing services as specified in the associated use case.&lt;/li>
 &lt;/ol>
+&lt;hr>
 &lt;h2 id="concepts">Concepts&lt;/h2>
 &lt;p>Here are the main concepts to keep in mind before continuing to read this developer guide :&lt;/p>
 &lt;div id="concepts-table-1">
@@ -2521,7 +3326,7 @@ width: 130px;
 &lt;/a>
 &lt;/figure>
 &lt;p>The second diagram below illustrates an arbitrary more complex possible use case with several hardware readers connected to different terminals.&lt;/p>
-&lt;p>These could be for example a ticketing reloading service, where the intelligence would be on the terminal with remote readers, with thin clients on A &amp;amp; B terminals communicating locally with the cards.&lt;/p>
+&lt;p>These could be for example a ticketing reloading service, where the business logic would be on the terminal with remote readers, with thin clients on A &amp;amp; B terminals communicating locally with the cards.&lt;/p>
 &lt;p>In this use case, the &lt;strong>Keyple Distributed&lt;/strong> solution is use for card communication.&lt;/p>
 &lt;figure >
 &lt;a data-fancybox="" href="./media/distributed-application/component/Distributed_Component_Concepts_2.svg" >
@@ -2536,6 +3341,7 @@ width: 130px;
 &lt;img src="./media/distributed-application/component/Distributed_Component_Concepts_3.svg" alt="" >
 &lt;/a>
 &lt;/figure>
+&lt;hr>
 &lt;h2 id="configuration-modes">Configuration modes&lt;/h2>
 &lt;p>The &lt;strong>Keyple Distributed&lt;/strong> solution provides &lt;strong>3&lt;/strong> different configuration modes, each one having a specific
 &lt;a href="#apis">API&lt;/a> designed on a &lt;strong>Client-Server&lt;/strong> model :&lt;/p>
@@ -2648,6 +3454,11 @@ width: 190px;
 &lt;/a>
 &lt;/figure>
 &lt;h3 id="reader-server-side">Reader Server Side&lt;/h3>
+&lt;div class="alert alert-warning">
+&lt;div>
+This configuration mode will only be available from version &lt;strong>1.1&lt;/strong> onwards.
+&lt;/div>
+&lt;/div>
 &lt;p>This configuration mode allows a &lt;strong>client&lt;/strong> application to control a smart card reader available on a &lt;strong>server&lt;/strong> (e.g. SAM reader).&lt;/p>
 &lt;p>It also allows to observe the plugin events (such as reader connection, etc&amp;hellip;) if desired.&lt;/p>
 &lt;table>
@@ -2693,23 +3504,7 @@ width: 190px;
 &lt;ol>
 &lt;li>configure the factory by providing the network implementation,&lt;/li>
 &lt;li>register the &lt;strong>Remote Plugin&lt;/strong> to the smart card service using the factory,&lt;/li>
-&lt;li>use the &lt;strong>Remote Plugin&lt;/strong> and its remote readers as a local plugin with local readers.&lt;/li>
-&lt;/ol>
-&lt;/li>
-&lt;/ul>
-&lt;h4 id="operating-mode-2">OPERATING MODE&lt;/h4>
-&lt;ul>
-&lt;li>Server side :
-&lt;ol>
-&lt;li>configure the factory and start the &lt;strong>Local Service&lt;/strong> by providing the network implementation,&lt;/li>
-&lt;li>register at least a local plugin to the smart card service.&lt;/li>
-&lt;/ol>
-&lt;/li>
-&lt;li>Client side :
-&lt;ol>
-&lt;li>configure the factory by providing the network implementation,&lt;/li>
-&lt;li>register the &lt;strong>Remote Plugin&lt;/strong> to the smart card service using the factory,&lt;/li>
-&lt;li>use the &lt;strong>Remote Plugin&lt;/strong> and its remote readers as a local observable plugin with local readers.&lt;/li>
+&lt;li>use the &lt;strong>Remote Plugin&lt;/strong> and its remote readers as a local plugin (or observable plugin) with local readers.&lt;/li>
 &lt;/ol>
 &lt;/li>
 &lt;/ul>
@@ -2746,7 +3541,7 @@ width: 190px;
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;h4 id="operating-mode-3">OPERATING MODE&lt;/h4>
+&lt;h4 id="operating-mode-2">OPERATING MODE&lt;/h4>
 &lt;ul>
 &lt;li>Server
 &lt;ol>
@@ -2762,6 +3557,7 @@ width: 190px;
 &lt;/ol>
 &lt;/li>
 &lt;/ul>
+&lt;hr>
 &lt;h2 id="use-cases">Use cases&lt;/h2>
 &lt;p>Here is a summary table of all proposed use cases. Search for the one that corresponds to your need and then look at the associated description :&lt;/p>
 &lt;div id="use-cases-table-2">
@@ -3037,6 +3833,7 @@ width: 240px;
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
+&lt;hr>
 &lt;h2 id="network-configuration">Network configuration&lt;/h2>
 &lt;p>The &lt;strong>Keyple Distributed&lt;/strong> solution &lt;strong>does not provide&lt;/strong> the network layer implementation, but it provides a set of SPIs (Service Provider Interfaces) to be implemented by the user in order to enable it to exchange data between &lt;strong>Remote Plugin&lt;/strong> and &lt;strong>Local Service&lt;/strong> components.&lt;/p>
 &lt;h3 id="synchronous">Synchronous&lt;/h3>
@@ -3121,6 +3918,7 @@ width: 240px;
 &lt;h3 id="exchanged-data">Exchanged data&lt;/h3>
 &lt;p>The data exchanged between &lt;strong>Remote Plugin&lt;/strong> and &lt;strong>Local Service&lt;/strong> components are contained in the DTO (Data Transfer Object) &lt;code>MessageDto&lt;/code>. It is built and processed by the plugin and &lt;strong>you don&amp;rsquo;t need to modify it&lt;/strong>.&lt;/p>
 &lt;p>However, it is necessary in some contexts to access certain information such as the &lt;code>sessionId&lt;/code> in the case of asynchronous communication or the &lt;code>serverNodeId&lt;/code> in the case of synchronous communication with several server instances.&lt;/p>
+&lt;hr>
 &lt;h2 id="apis">APIs&lt;/h2>
 &lt;p>The class diagrams below shows the different APIs exposed and SPIs required by the &lt;strong>Keyple Distributed&lt;/strong> solution.&lt;/p>
 &lt;p>An &lt;strong>SPI&lt;/strong> (Service Provider Interface) is an interface that must be implemented by the user.&lt;/p>
@@ -3177,11 +3975,13 @@ width: 240px;
 &lt;img src="./media/distributed-application/class/Distributed_Class_Local_API.svg" alt="" >
 &lt;/a>
 &lt;/figure>
+&lt;hr>
 &lt;h2 id="examples">Examples&lt;/h2>
 &lt;ul>
 &lt;li>
 &lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/example/generic/distributed" target="_blank" rel="noopener">Java examples&lt;/a>&lt;/li>
 &lt;/ul>
+&lt;hr>
 &lt;h2 id="download">Download&lt;/h2>
 &lt;ul>
 &lt;li>
@@ -3189,8 +3989,8 @@ width: 240px;
 &lt;/ul></description></item><item><title>Calypso application</title><link>https://keyple.org/docs/developer-guide/calypso-application/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/docs/developer-guide/calypso-application/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
 &lt;p>Keyple API was designed to support an extension system. On top of &lt;strong>Keyple Core&lt;/strong>, APIs can be developed to extend
 Keyple features. For example, Calypso Network Association provides &lt;strong>Keyple Calypso Extension&lt;/strong>.&lt;/p>
-&lt;p>The use of &lt;strong>Keyple Calypso Extension&lt;/strong> open the ability to operate commands with a calypso Portable Object and to manage a
-secure calypso transaction.&lt;/p>
+&lt;p>The use of &lt;strong>Keyple Calypso Extension&lt;/strong> open the ability to operate commands with a Calypso Portable Object and to manage a
+secure Calypso transaction seamlessly. It completely hides the details of the APDU commands that are sent to POs and SAMs, which are usually tedious operations.&lt;/p>
 &lt;p>The diagram below shows the role of the &lt;strong>Keyple Calypso Extension&lt;/strong> components in the software layers for a standalone application :&lt;/p>
 &lt;figure >
 &lt;a data-fancybox="" href="./media/calypso-app-development/component/Local_Component_Overview.svg" >
@@ -3223,15 +4023,15 @@ secure calypso transaction.&lt;/p>
 &lt;h2 id="concepts">Concepts&lt;/h2>
 &lt;p>Here are the main concepts to keep in mind before continuing to read this developer guide :&lt;/p>
 &lt;h3 id="calypso-po">Calypso PO&lt;/h3>
-&lt;p>Concentrate all known informations about the Personal Object being processed. Accessible informations are&lt;/p>
+&lt;p>Concentrates all known information about the Personal Object being processed. Accessible information are&lt;/p>
 &lt;ul>
 &lt;li>The application identification fields (revision/version, class, DF name, serial number, ATR, issuer)&lt;/li>
 &lt;li>The indication of the presence of optional features (Stored Value, PIN, Rev3.2 mode, ratification management)&lt;/li>
-&lt;li>The management information of the modification buffer&lt;/li>
+&lt;li>The management information of the session modifications buffer&lt;/li>
 &lt;li>The invalidation status&lt;/li>
 &lt;li>The files, counters, SV data read or modified during the execution of the processes defined by PoTransaction&lt;/li>
 &lt;/ul>
-&lt;p>Calypso PO fields are populated from a CardSelectionResponse obtained through the process of a PO selection.&lt;/p>
+&lt;p>The Calypso PO fields are first populated from the CardSelectionResponse obtained through the PO selection process then each time a PoTransaction &amp;ldquo;process&amp;rdquo; method is invoked.&lt;/p>
 &lt;pre>&lt;code class="language-java"> ...
 //Retrieve PO's informations
 String atr = calypsoPo.getAtr()
@@ -3262,7 +4062,7 @@ String eventLog = ByteArrayUtil.toHex(efEventLog.getData().getContent());
 &lt;li>The Software Version number&lt;/li>
 &lt;li>The Software Revision number&lt;/li>
 &lt;/ul>
-&lt;p>Calypso SAM fields are populated by analysis of the ATR within a CardSelectionResponse obtained through the process of a SAM selection.&lt;/p>
+&lt;p>Calypso SAM fields are populated by analysis of the ATR within a CardSelectionResponse obtained through the SAM selection process.&lt;/p>
 &lt;pre>&lt;code class="language-java"> ...
 byte[] serialNumber = calypsoSam.getSerialNumber()
 ...
@@ -3270,7 +4070,7 @@ byte[] serialNumber = calypsoSam.getSerialNumber()
 &lt;h3 id="posecuritysettings">PoSecuritySettings&lt;/h3>
 &lt;p>Concentrate the security settings involved in Calypso Secure Sessions:&lt;/p>
 &lt;ul>
-&lt;li>A reference to the Sam resource&lt;/li>
+&lt;li>A reference to the SAM resource&lt;/li>
 &lt;li>The default KIF&lt;/li>
 &lt;li>The default KVC&lt;/li>
 &lt;li>The default Key Record Number&lt;/li>
@@ -3278,8 +4078,8 @@ byte[] serialNumber = calypsoSam.getSerialNumber()
 &lt;li>The ratification mode&lt;/li>
 &lt;li>The pin transmission mode&lt;/li>
 &lt;li>The default Pin Ciphering Key&lt;/li>
-&lt;li>The SV Get Log Reade mode&lt;/li>
-&lt;li>the SV Negative balance&lt;/li>
+&lt;li>The SV Get Log Read mode&lt;/li>
+&lt;li>The SV Negative balance mode&lt;/li>
 &lt;/ul>
 &lt;p>The fields are populated with default values when the object is instantiated but can be customized to adjust the settings
 to the application needs.&lt;/p>
@@ -3289,7 +4089,7 @@ poSecuritySettings.getSessionModificationMode()
 &lt;/code>&lt;/pre>
 &lt;p>Secure session settings can be finely tuned with PoSecuritySettings and a set of enums provided by Keyple:&lt;/p>
 &lt;h4 id="modification-mode">Modification mode&lt;/h4>
-&lt;p>Indicates whether the secure session can be closed and reopened to manage the limitation of the PO buffer memory.&lt;/p>
+&lt;p>Indicates whether the secure session can be closed and reopened to manage the limitation of the PO buffer memory (session modifications buffer).&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
@@ -3304,7 +4104,7 @@ poSecuritySettings.getSessionModificationMode()
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>&lt;code>MULTIPLE&lt;/code>&lt;/strong>&lt;/td>
-&lt;td>Several secure sessions can be chained (to manage the writing of large amounts of data).&lt;/td>
+&lt;td>Several secure sessions will be chained (to manage the writing of large amounts of data).&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -3359,12 +4159,47 @@ new PoSecuritySettings.PoSecuritySettingsBuilder(samResource)
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
+&lt;h4 id="sv-log-read-mode">SV Log Read mode&lt;/h4>
+&lt;p>Specifies whether only one or both SV logs (debit and load) should be read.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>LogRead&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;strong>&lt;code>SINGLE&lt;/code>&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>&lt;code>ALL&lt;/code>&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h4 id="sv-negative-balance-mode">SV Negative balance mode&lt;/h4>
+&lt;p>Specifies whether POs with a negative SV balance should be accepted.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>NegativeBalance&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;strong>&lt;code>FORBIDDEN&lt;/code>&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>&lt;code>AUTHORIZED&lt;/code>&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
 &lt;h2 id="basic-operations">Basic Operations&lt;/h2>
 &lt;h3 id="poselection">PoSelection&lt;/h3>
-&lt;p>Service extending Keyple Core Abstract Card Selection to manage specific features of Calypso POs during the selection:&lt;/p>
+&lt;p>This service provides the means to define a selection case targeting a particular PO (in the ISO 7816-4 sense) with the possibility to collect additional information about the PO before a transaction.&lt;/p>
+&lt;p>It integrates with the &lt;strong>Keyple Core Card Selection&lt;/strong> service to manage the specific features of Calypso POs:&lt;/p>
 &lt;ul>
-&lt;li>Send APDU Commands to the POs right after the card selection.&lt;/li>
-&lt;li>Produce a Calypso PO from the CardSelectionResponse. The object is filled with the PO identification data from the FCI and the
+&lt;li>Sends optional &lt;em>read&lt;/em> and/or &lt;em>select&lt;/em> commands to the POs right after the initial card selection.&lt;/li>
+&lt;li>Produces a CalypsoPO object from the CardSelectionResponse. The object is filled with the PO identification data from the FCI and the
 possible responses to additional APDU commands executed after the selection.&lt;/li>
 &lt;/ul>
 &lt;pre>&lt;code class="language-java"> ...
@@ -3393,8 +4228,12 @@ CalypsoPo calypsoPo = (CalypsoPo) cardSelectionsService.processExplicitSelection
 ...
 &lt;/code>&lt;/pre>
 &lt;h2 id="samselection">SamSelection&lt;/h2>
-&lt;p>Service extending Keyple Core Abstract Card Selection specialized to manage the specific characteristics of Calypso SAMs.
-The service provides an instance of Calypso SAM and may execute the unlock command during the selection process.&lt;/p>
+&lt;p>This service provides the means to define a selection case targeting a Calypso SAM.&lt;/p>
+&lt;p>It integrates with the &lt;strong>Keyple Core Card Selection&lt;/strong> service to manage the specific features of Calypso SAMs:&lt;/p>
+&lt;ul>
+&lt;li>optionally executes an unlock command during the selection process.&lt;/li>
+&lt;li>provides an instance of Calypso SAM.&lt;/li>
+&lt;/ul>
 &lt;pre>&lt;code class="language-java"> ...
 CardSelectionsService samSelection = new CardSelectionsService();
 //Sam selection parameters
@@ -3410,12 +4249,17 @@ CalypsoSam calypsoSam = (CalypsoSam) cardSelectionsResult.getActiveSmartCard();
 ...
 &lt;/code>&lt;/pre>
 &lt;h3 id="potransaction">PoTransaction&lt;/h3>
-&lt;p>Service providing high-level API to manage transactions with a Calypso PO. The tied Calypso PO Object is kept and updated at
+&lt;p>Service providing high-level API to manage transactions with a Calypso PO. The tied CalypsoPO Object is kept and updated at
 each step of using this service.&lt;/p>
 &lt;p>This service workflow is composed of two steps:&lt;/p>
 &lt;ul>
-&lt;li>Prepare the commands to be executed to the PO&lt;/li>
-&lt;li>Process the prepared commands. Regarding of commands, the presence of SAM could be mandatory.&lt;/li>
+&lt;li>Prepares the commands to be sent to the PO; several command preparations can be stacked (no communication neither with the PO nor with the SAM).&lt;/li>
+&lt;li>Process the prepared commands. Performs all necessary communications with the PO and/or the SAM to carry out the previously prepared operations. CalypsoPo is updated accordingly.&lt;/li>
+&lt;/ul>
+&lt;p>Note:&lt;/p>
+&lt;ul>
+&lt;li>Regarding of commands, the presence of SAM is mandatory or not (mandatory when a &lt;em>Calypso Secure Session&lt;/em> is open).&lt;/li>
+&lt;li>Pay attention to the number of commands affecting the session modifications buffer, see the &lt;em>ModificationMode&lt;/em> setting.&lt;/li>
 &lt;/ul>
 &lt;pre>&lt;code class="language-java"> ...
 // CardResource allow management of specific card.
@@ -3473,935 +4317,192 @@ int svLastTNum = calypsoPo.getSvLastTNum()
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
+&lt;h4 id="transaction-flow-and-calypso-secure-session-management">Transaction flow and Calypso Secure Session management&lt;/h4>
+&lt;p>PoTransaction allows you to process a Calypso Secure session in different ways. These are difficult to describe
+all in detail but here is an example from which other variants can be obtained.&lt;/p>
+&lt;p>A typical Calypso PO transaction flow, for example for ticket validation, could be :&lt;/p>
+&lt;ul>
+&lt;li>Execute the selection of a Calypso PO and retrieves the contents of the environment file at the same time.&lt;/li>
+&lt;li>Open a secure session and get the contract list&lt;/li>
+&lt;li>Get the contract and associated counter&lt;/li>
+&lt;li>Decrease the counter, append a new event log&lt;/li>
+&lt;li>Close the secure session&lt;/li>
+&lt;/ul>
+&lt;p>Translated into Keyple Calypso operations, the entire transaction would include the following steps (simplified syntax):&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>poSelection = new PoSelection(CARD_IAD)&lt;/code>&lt;/li>
+&lt;li>&lt;code>poSelection.prepareReadRecordFile(ENVIRONMENT_SFI)&lt;/code>&lt;/li>
+&lt;li>process the poSelection (either explicitly or by default, see the
+&lt;a href="./docs/developer-guide/standalone-application/">standalone application&lt;/a>) guide&lt;/li>
+&lt;li>retrieve CalypsoPo, check its content (environment data)&lt;/li>
+&lt;li>&lt;code>poTransaction = new PoTransaction(calypsoPo)&lt;/code>&lt;/li>
+&lt;li>&lt;code>poTransaction.prepareReadRecordFile(CONTRACT_LIST_SFI)&lt;/code>&lt;/li>
+&lt;li>&lt;code>poTransaction.processOpening(DEBIT)&lt;/code>&lt;/li>
+&lt;li>check CalypsoPo content (contract list), decide which contract/counter to read&lt;/li>
+&lt;li>&lt;code>poTransaction.prepareReadRecordFile(CONTRACT_n)&lt;/code>&lt;/li>
+&lt;li>&lt;code>poTransaction.prepareReadRecordFile(COUNTER_n)&lt;/code>&lt;/li>
+&lt;li>&lt;code>poTransaction.processPoCommands()&lt;/code>&lt;/li>
+&lt;li>check CalypsoPo content (contract/counter), decide action (decrease counter, append event log)&lt;/li>
+&lt;li>&lt;code>poTransaction.prepareDecrease(COUNTER_n, X)&lt;/code>&lt;/li>
+&lt;li>&lt;code>poTransaction.prepareAppendRecord(EVENT, event_data&lt;/code>&lt;/li>
+&lt;li>&lt;code>poTransaction.prepareReleaseChannel()&lt;/code>&lt;/li>
+&lt;li>&lt;code>poTransaction.processClosing()&lt;/code>&lt;/li>
+&lt;/ul>
 &lt;h2 id="examples">Examples&lt;/h2>
 &lt;p>Detailed use case examples can be seen here:&lt;/p>
 &lt;ul>
 &lt;li>
-&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/example/calypso/pc" target="_blank" rel="noopener">PC&lt;/a>&lt;/li>
+&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/example/calypso/src/main/java/org/eclipse/keyple/example/calypso" target="_blank" rel="noopener">PC&lt;/a>&lt;/li>
 &lt;li>
-&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/example/calypso/android" target="_blank" rel="noopener">Android&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Create a plugin</title><link>https://keyple.org/docs/developer-guide/create-plugin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/docs/developer-guide/create-plugin/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
-&lt;p>In order to provide an easy way to port a Keyple application from a device with a specific card reader to another, a plugin system
-as been developed. When a developer wants to include Keyple features within his project, he has to initialize the SmartCardService by providing a
-plugin Factory available with in the plugin library. The plugin to use depends on the targeted device and running environment.&lt;/p>
-&lt;p>For example, for an android device with native NFC we&amp;rsquo;ll use KeypleAndroidNfcPlugin.&lt;/p>
-&lt;pre>&lt;code class="language-gradle">implementation 'org.eclipse.keyple:keyple-android-plugin-nfc:$keyple_version'
-&lt;/code>&lt;/pre>
-&lt;pre>&lt;code class="language-kotlin">[kotlin]
-SmartCardService.getInstance().registerPlugin(AndroidNfcPluginFactory())
-&lt;/code>&lt;/pre>
-&lt;p>Keyple is already provided with various plug-ins ready to use. For example Android NFC or PC/SC reader plugins.&lt;/p>
-&lt;p>But users of the Keyple API may need to use it on new hardware not covered with existing plugins. In this case, a new
-one must be developed.&lt;/p>
-&lt;p>The purpose of this guide is to support developers in this process.&lt;/p>
-&lt;h2 id="existing-plugins">Existing plugins&lt;/h2>
-&lt;p>The list of reader plugins is maintained on this pages:&lt;/p>
-&lt;p>
-&lt;a href="https://keyple.org/components-java/plugins/">Java Reader Plugins&lt;/a>&lt;/p>
-&lt;p>
-&lt;a href="https://keyple.org/components-cpp/plugins/">C++ Reader Plugins&lt;/a>&lt;/p>
-&lt;h2 id="steps">Steps&lt;/h2>
-&lt;p>Plugin&amp;rsquo;s development relies on 3 main steps, each one consists in implementing a few set of abstract classes and interfaces of
-plugin package from Keyple Core API:&lt;/p>
-&lt;ol>
-&lt;li>Import Keyple dependency&lt;/li>
-&lt;li>Implement a Keyple Plugin Factory.&lt;/li>
-&lt;li>Implement a Keyple Plugin&lt;/li>
-&lt;li>Implement a Keyple Reader&lt;/li>
-&lt;/ol>
-&lt;h2 id="imports">Imports&lt;/h2>
-&lt;p>Your plugin will use be based upon Keyple Core library.&lt;/p>
-&lt;p>Using the
-&lt;a href="https://keyple.org/components-java/core/">Java components&lt;/a> or
-&lt;a href="https://keyple.org/components-cpp/core/">C++ components&lt;/a>
-pages, import &lt;strong>Keyple Core&lt;/strong> into your project.&lt;/p>
-&lt;h2 id="implement-keyple-plugin-factory">Implement Keyple Plugin Factory&lt;/h2>
-&lt;p>The entry point of Keyple&amp;rsquo;s card Proxy Service is the singleton SmartCardService. Its instance has to be called by a ticketing
-application in order to establish a link with a card’s application.
-This singleton will allow to register/unregister plugin, maintain and provide a list of registered plugins. Registeration of
-a plugin is done by using a Plugin Factory implementation.
-This implementation is the first step of our guide.&lt;/p>
-&lt;h3 id="implementation-of-abstractpluginfactorys-abstract-classes">Implementation of AbstractPluginFactory&amp;rsquo;s abstract classes&lt;/h3>
-&lt;p>Following methods has to be implemented&lt;/p>
-&lt;div id="plugins-table-5">
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>Method to implement&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>&lt;strong>&lt;code>String getPluginName()&lt;/code>&lt;/strong>&lt;/td>
-&lt;td>Retrieve the name of the plugin that will be instantiated by this factory (can be static or dynamic)&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;strong>&lt;code>Plugin getPlugin()&lt;/code>&lt;/strong>&lt;/td>
-&lt;td>Retrieve an instance of a plugin (can be a singleton)&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;/div>
-&lt;style>
-#plugins-table-5 table th:first-of-type {
-width: 220px;
-}
-&lt;/style>
-&lt;p>Example of implementations are provided
-&lt;a href="#abstractthreadedobservableplugin">here&lt;/a>.&lt;/p>
-&lt;h2 id="implement-keyple-plugin">Implement Keyple Plugin&lt;/h2>
-&lt;p>SmartCardService will provide instances of Keyple plugins to be used within the API. A Keyple Plugin is a component giving access to the
-readers and handling their lifecycle.
-The next step of Keyple plugin development is the implementation of Keyple Plugin Interface (org.eclipse.keyple.core.service.Plugin).&lt;/p>
-&lt;p>As well as Reader&amp;rsquo;s implementation, abstract classes to extend and interfaces to implement will depend on native abilities of the device.&lt;/p>
-&lt;p>This implementation of a plugin must be done through the extension of one of three abstract classes provided within the Keyple API.
-The choice depends on expected behaviour of the device readers:&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>&lt;code>AbstractPlugin&lt;/code>&lt;/strong>: Base class for plugin implementation. Should be use when device&amp;rsquo;s readers configuration is static (readers cannot be removed) like Android NFC or OMAPI.&lt;/li>
-&lt;li>&lt;strong>&lt;code>AbstractThreadedObservablePlugin&lt;/code>&lt;/strong>: Should be used when device&amp;rsquo;s readers configuration allows observation of hot insertion/removal of readers. For example an USB PC/SC reader.&lt;/li>
-&lt;/ul>
-&lt;figure >
-&lt;a data-fancybox="" href="./media/plugin-development/class/AbstractPlugins_Class.svg" >
-&lt;img src="./media/plugin-development/class/AbstractPlugins_Class.svg" alt="" >
-&lt;/a>
-&lt;/figure>
-&lt;h3 id="implementation-of-abstractplugins-abstract-classes">Implementation of AbstractPlugin&amp;rsquo;s abstract classes&lt;/h3>
-&lt;h4 id="initnativereaders">initNativeReaders()&lt;/h4>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>Method to implement&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>&lt;strong>&lt;code>ConcurrentMap&amp;lt;String, Reader&amp;gt; initNativeReaders()&lt;/code>&lt;/strong>&lt;/td>
-&lt;td>This method is invoked when registering a plugin. It should be implemented to init readers map.&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;p>Example of implementations are provided
-&lt;a href="#initnativereaders-1">here&lt;/a>.&lt;/p>
-&lt;h3 id="implementation-of-abstractthreadedobservableplugins-abstract-classes">Implementation of AbstractThreadedObservablePlugin&amp;rsquo;s abstract classes&lt;/h3>
-&lt;p>In addition of AbstractPlugin&amp;rsquo;s methods and ObservableReaderNotifiers implementation, specific methods invocations must be done:&lt;/p>
-&lt;div id="plugins-table-4">
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>Method to implement&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>&lt;strong>&lt;code>SortedSet&amp;lt;String&amp;gt; fetchNativeReadersNames()&lt;/code>&lt;/strong>&lt;/td>
-&lt;td>This method Fetch the list of connected native reader (usually from third party library) and returns their names (or id)&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;strong>&lt;code>Reader fetchNativeReader(String name)&lt;/code>&lt;/strong>&lt;/td>
-&lt;td>Fetch connected native reader (from third party library) by its name returns the current Reader if it is already listed. Creates and returns a new Reader if not.&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;strong>&lt;code>PluginObservationExceptionHandler getObservationExceptionHandler()&lt;/code>&lt;/strong>&lt;/td>
-&lt;td>Allows to call the defined handler when an exception condition needs to be transmitted to the application level.&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;/div>
-&lt;style>
-#plugins-table-4 table th:first-of-type {
-width: 300px;
-}
-&lt;/style>
-&lt;p>Example of implementations are provided
-&lt;a href="#abstractthreadedobservableplugin">here&lt;/a>.&lt;/p>
-&lt;h2 id="implement-keyple-reader">Implement Keyple Reader&lt;/h2>
-&lt;p>The last step of a Keyple plugin development purpose, is to provide Keyple a mapping of hardware specific API. This mapping will allow Keyple
-communicate with the card&amp;rsquo;s application.&lt;/p>
-&lt;p>This implementation of a local reader must be done through the extension of one of three abstract classes provided within the Keyple API. The choice depends
-on expected behaviour of the reader:&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>&lt;code>AbstractLocalReader&lt;/code>&lt;/strong>: Basic abstract class to use for local reader implementation. Should be used if reader does not have hot card insertion/removal ability.&lt;/li>
-&lt;li>&lt;strong>&lt;code>AbstractObservableLocalReader&lt;/code>&lt;/strong>: extends AbstractLocalReader and is used to manage the matter of observing card events in the case of a local reader
-(ie: card insertion, card removal..).&lt;/li>
-&lt;li>&lt;strong>&lt;code>AbstractObservableLocalAutonomousReader&lt;/code>&lt;/strong>: extends AbstractObservableLocalReader and is used to allow the reader implementation to
-call back the core when card insertion and removal events occurs.&lt;/li>
-&lt;/ul>
-&lt;figure >
-&lt;a data-fancybox="" href="./media/plugin-development/class/AbstractReaders_Class.svg" >
-&lt;img src="./media/plugin-development/class/AbstractReaders_Class.svg" alt="" >
-&lt;/a>
-&lt;/figure>
-&lt;p>Once chosen, the Abstract class must be extended by the new reader class and abstract methods must be implemented. Please refer to your native reader
-documentation to implement this elements.&lt;/p>
-&lt;h3 id="implementation-of-abstractlocalreaders-abstract-classes">Implementation of AbstractLocalReader&amp;rsquo;s abstract classes&lt;/h3>
-&lt;p>Relying on the native smartcard reader of the device, implementations to be done are:&lt;/p>
-&lt;div id="plugins-table-1">
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>Method to implement&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>&lt;strong>&lt;code>boolean checkCardPresence()&lt;/code>&lt;/strong>&lt;/td>
-&lt;td>Verify the presence of the card&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;strong>&lt;code>byte[] getATR()&lt;/code>&lt;/strong>&lt;/td>
-&lt;td>provides the information retrieved when powering up the card&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;strong>&lt;code>openPhysicalChannel()&lt;/code>&lt;/strong>&lt;/td>
-&lt;td>Attempts to open the physical channel&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;strong>&lt;code>closePhysicalChannel()&lt;/code>&lt;/strong>&lt;/td>
-&lt;td>Attempts to close the current physical channel&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;strong>&lt;code>boolean isPhysicalChannelOpen()&lt;/code>&lt;/strong>&lt;/td>
-&lt;td>Tells if the physical channel is open or not&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;strong>&lt;code>boolean isCurrentProtocol(String readerProtocolName)&lt;/code>&lt;/strong>&lt;/td>
-&lt;td>Tells if the current card communicates with the protocol provided as an argument&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;strong>&lt;code>byte[] transmitApdu(byte[] apduIn)&lt;/code>&lt;/strong>&lt;/td>
-&lt;td>Transmits a single APDU and receives its response. Both are in the form of an array of bytes.&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;strong>&lt;code>activateReaderProtocol(String readerProtocolName)&lt;/code>&lt;/strong>&lt;/td>
-&lt;td>Activates the protocol provided from the reader&amp;rsquo;s implementation point of view.&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;strong>&lt;code>deactivateReaderProtocol(String readerProtocolName)&lt;/code>&lt;/strong>&lt;/td>
-&lt;td>Deactivates the protocol provided from the reader&amp;rsquo;s implementation point of view.&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;strong>&lt;code>isContactless()&lt;/code>&lt;/strong>&lt;/td>
-&lt;td>Tells if the current card communication is contactless.&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;/div>
-&lt;style>
-#plugins-table-1 table th:first-of-type {
-width: 450px;
-}
-&lt;/style>
-&lt;p>Example of implementations are provided
-&lt;a href="#abstractlocalreader">here&lt;/a>.&lt;/p>
-&lt;h3 id="implementation-of-abstractobservablelocalreaders-abstract-classes">Implementation of AbstractObservableLocalReader&amp;rsquo;s abstract classes&lt;/h3>
-&lt;p>In addition of AbstractLocalReader&amp;rsquo;s methods, specific implementations to be done are:&lt;/p>
-&lt;h4 id="methods">Methods&lt;/h4>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>Method to implement&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>&lt;strong>&lt;code>void onStartDetection()&lt;/code>&lt;/strong>&lt;/td>
-&lt;td>Invoked when the card detection is started by the Keyple Plugin&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;strong>&lt;code>void onStopDetection()&lt;/code>&lt;/strong>&lt;/td>
-&lt;td>Invoked when the card detection is stopped by the Keyple Plugin&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;strong>&lt;code>ReaderObservationExceptionHandler getObservationExceptionHandler()&lt;/code>&lt;/strong>&lt;/td>
-&lt;td>Allows to invoke the defined handler when an exception condition needs to be transmitted to the application level&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;p>Beside the implementation of this methods, this observable reader&amp;rsquo;s notification behaviour must be set.&lt;/p>
-&lt;h4 id="observable-readers-notification">Observable reader&amp;rsquo;s notification&lt;/h4>
-&lt;p>Observable reader&amp;rsquo;s notification behaviour is set up by implementing interfaces inheriting from ObservableReaderNotifiers.
-Developer has to choose how the reader should behave regarding its native abilities. It may involve a few more methods to implement.&lt;/p>
-&lt;figure >
-&lt;a data-fancybox="" href="./media/plugin-development/class/ObservableReaderNotifiers_Interfaces.svg" >
-&lt;img src="./media/plugin-development/class/ObservableReaderNotifiers_Interfaces.svg" alt="" >
-&lt;/a>
-&lt;/figure>
-&lt;p>It is &lt;strong>mandatory&lt;/strong> to implement one, and only one, interface of each use case presented in the related columns in the below
-table.&lt;/p>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th style="text-align:center">Card Insertion&lt;/th>
-&lt;th style="text-align:center">Card Removal&lt;/th>
-&lt;th style="text-align:center">Card Processing&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td style="text-align:center">&lt;code>WaitForCardInsertionAutonomous&lt;/code>&lt;/td>
-&lt;td style="text-align:center">&lt;code>WaitForCardRemovalAutonomous&lt;/code>&lt;/td>
-&lt;td style="text-align:center">&lt;code>WaitForCardRemovalDuringProcessing&lt;/code>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align:center">&lt;code>WaitForCardInsertionBlocking&lt;/code>&lt;/td>
-&lt;td style="text-align:center">&lt;code>WaitForCardRemovalBlocking&lt;/code>&lt;/td>
-&lt;td style="text-align:center">&lt;code>DontWaitForCardRemovalDuringProcessing&lt;/code>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align:center">&lt;code>WaitForCardInsertionNonBlocking&lt;/code>&lt;/td>
-&lt;td style="text-align:center">&lt;code>WaitForCardRemovalNonBlocking&lt;/code>&lt;/td>
-&lt;td style="text-align:center">&amp;mdash;&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;p>Description of the Insertion/Removal behaviours:&lt;/p>
-&lt;div id="plugins-table-2">
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>Type&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>&lt;strong>&lt;code>[*]Autonomous&lt;/code>&lt;/strong>&lt;/td>
-&lt;td>Interface to be implemented by readers that have a fully integrated management of card communications for card insertion/removal detection&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;strong>&lt;code>[*]Blocking&lt;/code>&lt;/strong>&lt;/td>
-&lt;td>Interface to be implemented by readers that are autonomous in the management of waiting for the insertion/removal of a card and that provide a method to wait for it indefinitely.&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;strong>&lt;code>[*]Non Blocking&lt;/code>&lt;/strong>&lt;/td>
-&lt;td>Interface to be implemented by readers that require an active process to detect the card insertion /removal.&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;/div>
-&lt;style>
-#plugins-table-2 table th:first-of-type {
-width: 180px;
-}
-&lt;/style>
-&lt;p>Description of the processing behaviours:&lt;/p>
-&lt;div id="plugins-table-3">
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>Type&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>&lt;strong>&lt;code>WaitForCardRemovalDuringProcessing&lt;/code>&lt;/strong>&lt;/td>
-&lt;td>Interface to be implemented by readers &lt;strong>able&lt;/strong> to detect a card &lt;strong>removal&lt;/strong> during processing, between two APDU commands.&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;strong>&lt;code>DontWaitForCardRemovalDuringProcessing&lt;/code>&lt;/strong>&lt;/td>
-&lt;td>Interface to be implemented by readers &lt;strong>not able&lt;/strong> to detect a card &lt;strong>removal&lt;/strong> during processing, between two APDU commands.&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;/div>
-&lt;style>
-#plugins-table-3 table th:first-of-type {
-width: 350px;
-}
-&lt;/style>
-&lt;p>Example of implementations are provided
-&lt;a href="#abstractobservablelocalreader">here&lt;/a>.&lt;/p>
-&lt;h3 id="implementation-of-abstractobservablelocalautonomousreaders-abstract-classes">Implementation of AbstractObservableLocalAutonomousReader&amp;rsquo;s abstract classes&lt;/h3>
-&lt;p>In addition of AbstractObservableLocalReader&amp;rsquo;s methods and ObservableReaderNotifiers implementation, specific methods invocation must be done:&lt;/p>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>Method to invoke&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>&lt;strong>&lt;code>void onCardInserted()&lt;/code>&lt;/strong>&lt;/td>
-&lt;td>This method must be invoked when a card is inserted to.&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;strong>&lt;code>void onCardRemoved()&lt;/code>&lt;/strong>&lt;/td>
-&lt;td>This method must be invoked when a card is removed.&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;p>Example of implementations are provided
-&lt;a href="#abstractobservablelocalautonomousreader">here&lt;/a>.&lt;/p>
-&lt;h2 id="examples-of-implementation">Examples of implementation&lt;/h2>
-&lt;h3 id="abstractlocalreader">AbstractLocalReader&lt;/h3>
-&lt;h4 id="checkcardpresence">checkCardPresence()&lt;/h4>
-&lt;p>Allow Keyple to check if the smartcard is present within the reader (inserted, in NFC field&amp;hellip;)&lt;/p>
-&lt;p>OMAPI Example&lt;/p>
-&lt;pre>&lt;code class="language-kotlin">[kotlin]
-//nativeReader is an instance of android.se.omapi.Reader. It natively provides a method to check Card presence.
-override fun checkCardPresence(): Boolean {
-return nativeReader.isSecureElementPresent
-}
-&lt;/code>&lt;/pre>
-&lt;p>Android NFC Example&lt;/p>
-&lt;pre>&lt;code class="language-kotlin">[kotlin]
-//When a SE is presented in the NFC field, we can get a tagproxy object. When the SE is removed,
-//this value is reinited. So when it is not null, we can assume the SE is currently in the field.
-//The presence information is not directly available be we can find a way to implement checkCardPresence()
-public override fun checkCardPresence(): Boolean {
-return tagProxy != null
-}
-&lt;/code>&lt;/pre>
-&lt;p>PC/SC Example&lt;/p>
-&lt;pre>&lt;code class="language-java">[java]
-public override fun checkCardPresence(): Boolean {
-//Terminal is an instance of CardTerminal provided by javax.smartcardio
-return terminal.isCardPresent();
-}
-&lt;/code>&lt;/pre>
-&lt;h4 id="getatr">getAtr()&lt;/h4>
-&lt;p>OMAPI Exemple&lt;/p>
-&lt;pre>&lt;code class="language-kotlin">[kotlin]
-override fun getATR(): ByteArray? {
-//Session is a native object of android.se.omapi package
-return session?.let {
-it.atr
-}
-}
-&lt;/code>&lt;/pre>
-&lt;p>Android NFC Example&lt;/p>
-&lt;pre>&lt;code class="language-kotlin">[kotlin]
-public override fun getATR(): ByteArray? {
-//TagProxy is an object mapping android.nfc.tech.TagTechnology. Atr is obtained from data of this object (depending of protocol)
-val atr = tagProxy?.atr
-return if (atr?.isNotEmpty() == true) atr else null
-}
-&lt;/code>&lt;/pre>
-&lt;p>PC/SC Example&lt;/p>
-&lt;pre>&lt;code class="language-java">[java]
-public override fun checkCardPresence(): Boolean {
-//Card is an instance of card provided by javax.smartcardio
-return return card.getATR().getBytes();;
-}
-&lt;/code>&lt;/pre>
-&lt;h4 id="openphysicalchannel">openPhysicalChannel()&lt;/h4>
-&lt;p>OMAPI Exemple&lt;/p>
-&lt;pre>&lt;code class="language-kotlin">[kotlin]
-@Throws(KeypleReaderIOException::class)
-override fun openPhysicalChannel() {
-try {
-//nativeReader is an instance of import android.se.omapi.Reader
-session = nativeReader.openSession()
-} catch (e: IOException) {
-throw KeypleReaderIOException(&amp;quot;IOException while opening physical channel.&amp;quot;, e)
-}
-}
-&lt;/code>&lt;/pre>
-&lt;p>Android NFC Example&lt;/p>
-&lt;pre>&lt;code class="language-kotlin">[kotlin]
-@Throws(KeypleReaderIOException::class)
-public override fun openPhysicalChannel() {
-//TagProxy is a wrapper we created in the plugin
-//To handle android.nfc.Tag
-if (tagProxy?.isConnected != true) {
-try {
-tagProxy?.connect()
-} catch (e: IOException) {
-throw KeypleReaderIOException(&amp;quot;Error while opening physical channel&amp;quot;, e)
-}
-}
-}
-&lt;/code>&lt;/pre>
-&lt;p>PC/SC Example&lt;/p>
-&lt;pre>&lt;code class="language-java">[java]
-public void openPhysicalChannel() {
-//card is an instance of Card provided by javax.smartcardio
-if (card == null) {
-this.card = this.terminal.connect(parameterCardProtocol);
-} else {
-logger.debug(&amp;quot;[{}] Opening of a card physical channel in shared mode.&amp;quot;, this.getName());
-}
-}
-//CardChannel is an instance of card provided by javax.smartcardio
-this.channel = card.getBasicChannel();
-}
-&lt;/code>&lt;/pre>
-&lt;h4 id="closephysicalchannel">closePhysicalChannel()&lt;/h4>
-&lt;p>OMAPI Exemple&lt;/p>
-&lt;pre>&lt;code class="language-kotlin">[kotlin]
-override fun closePhysicalChannel() {
-//openChannel is an instance of android.se.omapi.Channel
-openChannel?.let {
-it.session.close()
-openChannel = null
-}
-}
-&lt;/code>&lt;/pre>
-&lt;p>Android NFC Example&lt;/p>
-&lt;pre>&lt;code class="language-kotlin">[kotlin]
-@Throws(KeypleReaderIOException::class)
-public override fun closePhysicalChannel() {
-try {
-//TagProxy is a wrapper we created in the plugin
-//To handle android.nfc.Tag
-tagProxy?.close()
-} catch (e: IOException) {
-throw KeypleReaderIOException(&amp;quot;Error while closing physical channel&amp;quot;, e)
-} finally {
-tagProxy = null
-}
-}
-&lt;/code>&lt;/pre>
-&lt;p>PC/SC Example&lt;/p>
-&lt;pre>&lt;code class="language-java">[java]
-protected void closePhysicalChannel() {
-try {
-//card is an instance of Card provided by javax.smartcardio
-if (card != null) {
-channel = null;
-card.disconnect(true);
-card = null;
-}
-} catch (CardException e) {
-throw new KeypleReaderIOException(&amp;quot;Error while closing physical channel&amp;quot;, e);
-}
-}
-&lt;/code>&lt;/pre>
-&lt;h4 id="isphysicalchannelopen">isPhysicalChannelOpen()&lt;/h4>
-&lt;p>OMAPI Exemple&lt;/p>
-&lt;pre>&lt;code class="language-kotlin">[kotlin]
-override fun isPhysicalChannelOpen(): Boolean {
-//Session is an instance of android.se.omapi.Session
-return session?.isClosed == false
-}
-&lt;/code>&lt;/pre>
-&lt;p>Android NFC Example&lt;/p>
-&lt;pre>&lt;code class="language-kotlin">[kotlin]
-public override fun isPhysicalChannelOpen(): Boolean {
-//TagProxy is a wrapper we created in the plugin
-//To handle android.nfc.Tag
-return tagProxy?.isConnected == true
-}
-&lt;/code>&lt;/pre>
-&lt;p>PC/SC Example&lt;/p>
-&lt;pre>&lt;code class="language-java">[java]
-protected boolean isPhysicalChannelOpen() {
-return card != null;
-}
-&lt;/code>&lt;/pre>
-&lt;h4 id="transmitapdubyte-apduin">transmitApdu(byte[] apduIn)&lt;/h4>
-&lt;p>OMAPI Exemple&lt;/p>
-&lt;pre>&lt;code class="language-kotlin">[kotlin]
-override fun transmitApdu(apduIn: ByteArray): ByteArray {
-// Initialization
-Timber.d(&amp;quot;Data Length to be sent to tag : &amp;quot; + apduIn.size)
-Timber.d(&amp;quot;Data in : &amp;quot; + ByteArrayUtil.toHex(apduIn))
-var dataOut = byteArrayOf(0)
-try {
-openChannel.let {
-dataOut = it?.transmit(apduIn) ?: throw IOException(&amp;quot;Channel is not open&amp;quot;)
-}
-} catch (e: IOException) {
-throw KeypleReaderIOException(&amp;quot;Error while transmitting APDU&amp;quot;, e)
-}
-Timber.d(&amp;quot;Data out : &amp;quot; + ByteArrayUtil.toHex(dataOut))
-return dataOut
-}
-&lt;/code>&lt;/pre>
-&lt;p>Android NFC Example&lt;/p>
-&lt;pre>&lt;code class="language-kotlin">[kotlin]
-public override fun transmitApdu(apduIn: ByteArray): ByteArray {
-Timber.d(&amp;quot;Send data to card : ${apduIn.size} bytes&amp;quot;)
-return with(tagProxy) {
-if (this == null) {
-throw KeypleReaderIOException(
-&amp;quot;Error while transmitting APDU, invalid out data buffer&amp;quot;)
-} else {
-try {
-val bytes = transceive(apduIn)
-if (bytes.size &amp;lt;2) {
-throw KeypleReaderIOException(
-&amp;quot;Error while transmitting APDU, invalid out data buffer&amp;quot;)
-} else {
-Timber.d(&amp;quot;Receive data from card : ${ByteArrayUtil.toHex(bytes)}&amp;quot;)
-bytes
-}
-} catch (e: IOException) {
-throw KeypleReaderIOException(
-&amp;quot;Error while transmitting APDU, invalid out data buffer&amp;quot;, e)
-} catch (e: NoSuchElementException) {
-throw KeypleReaderIOException(&amp;quot;Error while transmitting APDU, no such Element&amp;quot;, e)
-}
-}
-}
-}
-&lt;/code>&lt;/pre>
-&lt;p>PC/SC Example&lt;/p>
-&lt;pre>&lt;code class="language-java">[java]
-protected byte[] transmitApdu(byte[] apduIn) {
-ResponseAPDU apduResponseData;
-if (channel != null) {
-try {
-apduResponseData = channel.transmit(new CommandAPDU(apduIn));
-} catch (CardException e) {
-throw new KeypleReaderIOException(this.getName() + &amp;quot;:&amp;quot; + e.getMessage());
-} catch (IllegalArgumentException e) {
-// card could have been removed prematurely
-throw new KeypleReaderIOException(this.getName() + &amp;quot;:&amp;quot; + e.getMessage());
-}
-} else {
-// could occur if the card was removed
-throw new KeypleReaderIOException(this.getName() + &amp;quot;: null channel.&amp;quot;);
-}
-return apduResponseData.getBytes();
-}
-&lt;/code>&lt;/pre>
-&lt;h4 id="activatereaderprotocolstring-readerprotocolname">activateReaderProtocol(String readerProtocolName)&lt;/h4>
-&lt;p>OMAPI Exemple&lt;/p>
-&lt;pre>&lt;code class="language-kotlin">[kotlin]
-override fun activateReaderProtocol(readerProtocolName: String?) {
-// do nothing as protocol ils not relevant for contact PO
-}
-&lt;/code>&lt;/pre>
-&lt;p>Android NFC Example&lt;/p>
-&lt;pre>&lt;code class="language-kotlin">[kotlin]
-override fun activateReaderProtocol(readerProtocolName: String?) {
-if (!protocolsMap.containsKey(readerProtocolName)) {
-//we map the requested protocol to a custom android protocol
-protocolsMap.put(readerProtocolName!!, AndroidNfcProtocolSettings.getSetting(readerProtocolName!!)!!)
-}
-}
-&lt;/code>&lt;/pre>
-&lt;p>PC/SC Example&lt;/p>
-&lt;pre>&lt;code class="language-java">[java]
-protected void activateReaderProtocol(String readerProtocolName) {
-if (!PcscProtocolSetting.getSettings().containsKey(readerProtocolName)) {
-throw new KeypleReaderProtocolNotSupportedException(readerProtocolName);
-}
-}
-&lt;/code>&lt;/pre>
-&lt;h4 id="deactivatereaderprotocolstring-readerprotocolname">deactivateReaderProtocol(String readerProtocolName)&lt;/h4>
-&lt;p>OMAPI Exemple&lt;/p>
-&lt;pre>&lt;code class="language-kotlin">[kotlin]
-override fun deactivateReaderProtocol(readerProtocolName: String?) {
-// do nothing
-}
-&lt;/code>&lt;/pre>
-&lt;p>Android NFC Example&lt;/p>
-&lt;pre>&lt;code class="language-kotlin">[kotlin]
-override fun deactivateReaderProtocol(readerProtocolName: String?) {
-if (protocolsMap.containsKey(readerProtocolName)) {
-protocolsMap.remove(readerProtocolName)
-}
-Timber.d(&amp;quot;${getName()}: Deactivate protocol $readerProtocolName.&amp;quot;)
-}
-&lt;/code>&lt;/pre>
-&lt;p>PC/SC Example&lt;/p>
-&lt;pre>&lt;code class="language-java">[java]
-protected void deactivateReaderProtocol(String readerProtocolName) {
-if (!PcscProtocolSetting.getSettings().containsKey(readerProtocolName)) {
-throw new KeypleReaderProtocolNotSupportedException(readerProtocolName);
-}
-if (logger.isDebugEnabled()) {
-logger.debug(&amp;quot;{}: Deactivate protocol {}.&amp;quot;, getName(), readerProtocolName);
-}
-}
-&lt;/code>&lt;/pre>
-&lt;h4 id="iscurrentprotocolstring-readerprotocolname">isCurrentProtocol(String readerProtocolName)&lt;/h4>
-&lt;p>OMAPI Exemple&lt;/p>
-&lt;pre>&lt;code class="language-kotlin">[kotlin]
-override fun isCurrentProtocol(readerProtocolName: String?): Boolean {
-return AndroidOmapiSupportedProtocols.ISO_7816_3.name == readerProtocolName
-}
-&lt;/code>&lt;/pre>
-&lt;p>Android NFC Example&lt;/p>
-&lt;pre>&lt;code class="language-kotlin">[kotlin]
-override fun isCurrentProtocol(readerProtocolName: String?): Boolean {
-return readerProtocolName == null || protocolsMap.containsKey(readerProtocolName) &amp;amp;&amp;amp; protocolsMap[readerProtocolName] == tagProxy?.tech
-}
-&lt;/code>&lt;/pre>
-&lt;p>PC/SC Example&lt;/p>
-&lt;pre>&lt;code class="language-java">[java]
-protected boolean isCurrentProtocol(String readerProtocolName) {
-String protocolRule = PcscProtocolSetting.getSettings().get(readerProtocolName);
-String atr = ByteArrayUtil.toHex(card.getATR().getBytes());
-return Pattern.compile(protocolRule).matcher(atr).matches();
-}
-&lt;/code>&lt;/pre>
-&lt;h4 id="iscontactless">isContactless()&lt;/h4>
-&lt;p>OMAPI Exemple&lt;/p>
-&lt;pre>&lt;code class="language-kotlin">[kotlin]
-override fun isContactless(): Boolean {
-//OMAPI is a contact Reader
-return false
-}
-&lt;/code>&lt;/pre>
-&lt;p>Android NFC Example&lt;/p>
-&lt;pre>&lt;code class="language-kotlin">[kotlin]
-override fun isContactless(): Boolean {
-//NFC is a contactless Reader
-return true
-}
-&lt;/code>&lt;/pre>
-&lt;p>PC/SC Example&lt;/p>
-&lt;pre>&lt;code class="language-java">[java]
-public boolean isContactless() {
-//isContactless is a custom variable that can be set by the plugin
-//as PC/SC can be a contactless or contact reade.
-if (isContactless == null) {
-/* First time initialisation, the transmission mode has not yet been determined or fixed explicitly, let's ask the plugin to determine it (only once) */
-isContactless =
-((AbstractPcscPlugin) SmartCardService.getInstance().getPlugin(getPluginName()))
-.isContactless(getName());
-}
-return isContactless;
-}
-&lt;/code>&lt;/pre>
-&lt;h3 id="abstractobservablelocalreader">AbstractObservableLocalReader&lt;/h3>
-&lt;h4 id="onstartdetection">onStartDetection()&lt;/h4>
-&lt;p>Android NFC Example&lt;/p>
-&lt;pre>&lt;code class="language-kotlin">[kotlin]
-override fun onStartDetection() {
-// When Keyple Core starts detection, we have to use native Android NFC adapter to start nfc scanning
-if (contextWeakRef.get() == null) {
-throw IllegalStateException(&amp;quot;onStartDetection() failed : no context available&amp;quot;)
-}
-if (nfcAdapter == null) {
-nfcAdapter = NfcAdapter.getDefaultAdapter(contextWeakRef.get()!!)
-}
-val flags = flags
-val options = options
-nfcAdapter?.enableReaderMode(contextWeakRef.get(), this, flags, options)
-}
-&lt;/code>&lt;/pre>
-&lt;p>PC/SC Example&lt;/p>
-&lt;pre>&lt;code class="language-java">[java]
-protected void onStartDetection() {
-//TODO: completion
-}
-&lt;/code>&lt;/pre>
-&lt;h4 id="onstopdetection">onStopDetection()&lt;/h4>
-&lt;p>Android NFC Example&lt;/p>
-&lt;pre>&lt;code class="language-kotlin">[kotlin]
-override fun onStopDetection() {
-//When keyple core stop detection, we invoke native adapter stop NFC scanning
-nfcAdapter?.let {
-if (contextWeakRef.get() != null) {
-it.disableReaderMode(contextWeakRef.get())
-} else {
-throw IllegalStateException(&amp;quot;onStopDetection failed : no context available&amp;quot;)
-}
-}
-}
-&lt;/code>&lt;/pre>
-&lt;p>PC/SC Example&lt;/p>
-&lt;pre>&lt;code class="language-java">[java]
-protected void onStopDetection() {
-//TODO: completion
-}
-&lt;/code>&lt;/pre>
-&lt;h3 id="observablereadernotifiers">ObservableReaderNotifiers&lt;/h3>
-&lt;p>Android NFC Example&lt;/p>
-&lt;pre>&lt;code class="language-kotlin">[kotlin]
-//Note simplified view of Android NFc implementation
-class AndroidNfcReader(activity: Activity) :
-//In android NFC, we want an easy way to callback Keyple Core when a card is inserted
-//because this event occurs through the native layer.
-AbstractObservableLocalAutonomousReader(
-AndroidNfcReader.PLUGIN_NAME,
-AndroidNfcReader.READER_NAME
-),
-//Our reader have an integrated management of card insertion detection
-WaitForCardInsertionAutonomous,
-//Our reader do not have an integrated management of card removal detection
-//but we can use it when the card is no longer in the field and trigger a removal event
-WaitForCardRemovalBlocking,
-//We do not want to catch card removal between exchanges with it
-DontWaitForCardRemovalDuringProcessing{}
-&lt;/code>&lt;/pre>
-&lt;p>PC/SC Example&lt;/p>
-&lt;pre>&lt;code class="language-java">[java]
-//We want to observe card events like insertion, removal...
-class AbstractPcscReader extends bstractObservableLocalReader implements PcscReader,
-//Our native reader do not have an integrated management of card insertion detection
-//but we can use it when the card is in the field and trigger an insertion event
-WaitForCardInsertionBlocking,
-//We want to detect when card is removed while exchanging data with our reader
-WaitForCardRemovalDuringProcessing,
-//Our native reader do not have an integrated management of card removal detection
-//but we can use it when the card is no longer in the field and trigger a removal event
-WaitForCardRemovalBlocking {}
-&lt;/code>&lt;/pre>
-&lt;h3 id="abstractobservablelocalautonomousreader">AbstractObservableLocalAutonomousReader&lt;/h3>
-&lt;h4 id="oncardinserted">onCardInserted()&lt;/h4>
-&lt;p>Android NFC Example&lt;/p>
-&lt;pre>&lt;code class="language-kotlin">[kotlin]
-//Note simplified view of Android NFc implementation
-override fun onTagDiscovered(tag: Tag?) {
-tag?.let {
-try {
-tagProxy = TagProxy.getTagProxy(tag)
-//onTagDiscovered is triggered natively
-//we use below code to forward the information to Keyple core
-onCardInserted()
-} catch (e: KeypleReaderException) {
-Timber.e(e)
-}
-}
-}
-&lt;/code>&lt;/pre>
-&lt;h4 id="oncardremoved">onCardRemoved()&lt;/h4>
-&lt;h3 id="abstractplugin">AbstractPlugin&lt;/h3>
-&lt;h4 id="initnativereaders-1">initNativeReaders()&lt;/h4>
-&lt;p>OMAPI Exemple&lt;/p>
-&lt;pre>&lt;code class="language-kotlin">[kotlin]
-override fun initNativeReaders(): ConcurrentSkipListMap&amp;lt;String, Reader&amp;gt; {
-val readers = ConcurrentSkipListMap&amp;lt;String, Reader&amp;gt;()
-//seService is an instance of android.se.omapi.SEService
-seService?.readers.forEach { nativeReader -&amp;gt;
-//mapToReader creates an instance of our Keyple reader from a native reader
-val reader = mapToReader(nativeReader)
-readers[reader.name] = reader
-}
-return readers
-}
-&lt;/code>&lt;/pre>
-&lt;p>Android NFC Example&lt;/p>
-&lt;pre>&lt;code class="language-kotlin">[kotlin]
-override fun initNativeReaders(): ConcurrentMap&amp;lt;String, Reader&amp;gt;? {
-val readers = ConcurrentHashMap&amp;lt;String, Reader&amp;gt;()
-//AndroidNfcReaderImpl is our implementation of Keyple reader
-readers[AndroidNfcReader.READER_NAME] = AndroidNfcReaderImpl(activity, readerObservationExceptionHandler)
-return readers
-}
-&lt;/code>&lt;/pre>
-&lt;p>PC/SC Example&lt;/p>
-&lt;pre>&lt;code class="language-java">[java]
-protected Map&amp;lt;String, Reader&amp;gt; initNativeReaders() {
-ConcurrentMap&amp;lt;String, Reader&amp;gt; nativeReaders = new ConcurrentHashMap&amp;lt;String, Reader&amp;gt;();
-//CardTerminal is a a class from javax.smartcardio
-CardTerminals terminals = getCardTerminals();
-try {
-for (CardTerminal terminal : terminals.list()) {
-final PcscReader pcscReader = createReader(this.getName(), terminal);
-nativeReaders.put(pcscReader.getName(), pcscReader);
-}
-} catch (CardException e) {
-}
-return nativeReaders;
-}
-&lt;/code>&lt;/pre>
-&lt;h3 id="abstractthreadedobservableplugin">AbstractThreadedObservablePlugin&lt;/h3>
-&lt;h4 id="fetchnativereadersnames">fetchNativeReadersNames()&lt;/h4>
-&lt;p>PC/SC Example&lt;/p>
-&lt;pre>&lt;code class="language-kotlin">[kotlin]
-public SortedSet&amp;lt;String&amp;gt; fetchNativeReadersNames() {
-SortedSet&amp;lt;String&amp;gt; nativeReadersNames = new ConcurrentSkipListSet&amp;lt;String&amp;gt;();
-CardTerminals terminals = getCardTerminals();
-try {
-for (CardTerminal terminal : terminals.list()) {
-nativeReadersNames.add(terminal.getName());
-}
-} catch (CardException e) {
-}
-return nativeReadersNames;
-}
-&lt;/code>&lt;/pre>
-&lt;h4 id="fetchnativereader">fetchNativeReader()&lt;/h4>
-&lt;p>PC/SC Example&lt;/p>
-&lt;pre>&lt;code class="language-java">[java]
-protected Reader fetchNativeReader(String name) {
-// return the current reader if it is already listed
-Reader reader = readers.get(name);
-if (reader != null) {
-return reader;
-}
-/* parse the current PC/SC readers list to create the ProxyReader(s) associated with new reader(s) */
-CardTerminals terminals = getCardTerminals();
-try {
-for (CardTerminal terminal : terminals.list()) {
-if (terminal.getName().equals(name)) {
-reader = createReader(this.getName(), terminal);
-}
-}
-} catch (CardException e) {
-throw new KeypleReaderIOException(&amp;quot;Could not access terminals list&amp;quot;, e);
-}
-if (reader == null) {
-throw new KeypleReaderNotFoundException(&amp;quot;Reader &amp;quot; + name + &amp;quot; not found!&amp;quot;);
-}
-return reader;
-}
-&lt;/code>&lt;/pre>
-&lt;h3 id="pluginfactory">PluginFactory&lt;/h3>
-&lt;h4 id="getpluginname">getPluginName()&lt;/h4>
-&lt;p>Android NFC Example&lt;/p>
-&lt;pre>&lt;code class="language-kotlin">[kotlin]
-override fun getPluginName(): String {
-return AndroidNfcPlugin.PLUGIN_NAME
-}
-&lt;/code>&lt;/pre>
-&lt;p>PC/SC Example&lt;/p>
-&lt;pre>&lt;code class="language-java">[java]
-public String getPluginName() {
-return PLUGIN_NAME;
-}
-&lt;/code>&lt;/pre>
-&lt;h4 id="getplugin">getPlugin()&lt;/h4>
-&lt;p>Android NFC Example&lt;/p>
-&lt;pre>&lt;code class="language-kotlin">[kotlin]
-override fun getPlugin(): Plugin {
-return AndroidNfcPluginImpl(activity, readerObservationExceptionHandler)
-}
-&lt;/code>&lt;/pre>
-&lt;p>PC/SC Example&lt;/p>
-&lt;pre>&lt;code class="language-java">[java]
-public PcscPlugin getPlugin() {
-try {
-if (isOsWin) {
-return PcscPluginWinImpl.getInstance();
-} else {
-return PcscPluginImpl.getInstance();
-}
-} catch (Exception e) {
-throw new KeyplePluginInstantiationException(&amp;quot;Can not access smartcard.io readers&amp;quot;, e);
-}
-}
-&lt;/code>&lt;/pre>
-&lt;h2 id="sources">Sources&lt;/h2>
-&lt;h3 id="keyple-android-nfc">Keyple Android NFC&lt;/h3>
-&lt;ul>
-&lt;li>
-&lt;a href="https://github.com/eclipse/keyple-java/tree/master/android/keyple-plugin/android-nfc" target="_blank" rel="noopener">Plugin&lt;/a>&lt;/li>
-&lt;li>
-&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/example/calypso/android/nfc" target="_blank" rel="noopener">Example App&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;h4 id="keyple-android-omapi">Keyple Android OMAPI&lt;/h4>
-&lt;ul>
-&lt;li>
-&lt;a href="https://github.com/eclipse/keyple-java/tree/master/android/keyple-plugin/android-omapi" target="_blank" rel="noopener">Plugin&lt;/a>&lt;/li>
-&lt;li>
-&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/example/calypso/android/omapi" target="_blank" rel="noopener">Example App&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;h4 id="pcsc">PC/SC&lt;/h4>
-&lt;ul>
-&lt;li>
-&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/component/keyple-plugin/pcsc" target="_blank" rel="noopener">Plugin&lt;/a>&lt;/li>
-&lt;li>
-&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/example/calypso/pc" target="_blank" rel="noopener">Example Apps&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Create an extension</title><link>https://keyple.org/docs/developer-guide/create-extension/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/docs/developer-guide/create-extension/</guid><description>&lt;div class="alert alert-note">
+&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/example/generic/android" target="_blank" rel="noopener">Android&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>Create a plugin</title><link>https://keyple.org/docs/developer-guide/create-plugin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/docs/developer-guide/create-plugin/</guid><description>&lt;hr>
+&lt;div class="alert alert-note">
 &lt;div>
 Coming soon
 &lt;/div>
-&lt;/div></description></item><item><title>Migration Guide - Keyple Java 0.8.1 to 0.9.0</title><link>https://keyple.org/docs/developer-guide/migration-0.8.1-to-0.9.0/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/docs/developer-guide/migration-0.8.1-to-0.9.0/</guid><description>&lt;p>This guide is intended to help a user of version 0.8.1 of Keyple Java to upgrade his application to the 0.9.0 version of the library.&lt;/p>
-&lt;p>From a user API point of view, the changes relate to the following topics:&lt;/p>
+&lt;/div></description></item><item><title>Create an extension</title><link>https://keyple.org/docs/developer-guide/create-extension/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/docs/developer-guide/create-extension/</guid><description>&lt;hr>
+&lt;div class="alert alert-note">
+&lt;div>
+Coming soon
+&lt;/div>
+&lt;/div></description></item><item><title>Upgrade from an earlier version of Keyple</title><link>https://keyple.org/docs/developer-guide/upgrade/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/docs/developer-guide/upgrade/</guid><description>&lt;hr>
+&lt;p>This guide is intended to help a user of a previous version of Keyple Java to upgrade his application to a new version of the library.&lt;/p>
+&lt;p>Upgrade from:&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;a href="#upgrade-from-090-to-100">0.9.0 to 1.0.0&lt;/a>&lt;/li>
+&lt;li>
+&lt;a href="#upgrade-from-081-to-090">0.8.1 to 0.9.0&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>Note: here we describe the evolutions in broad outline, for the details of the APIs, the reader is invited to consult
+the
+&lt;a href="https://keyple.org/docs/api-reference/">API reference&lt;/a> section.&lt;/p>
+&lt;hr>
+&lt;h2 id="upgrade-from-090-to-100">Upgrade from 0.9.0 to 1.0.0&lt;/h2>
+&lt;h3 id="whats-changed">What&amp;rsquo;s changed?&lt;/h3>
+&lt;p>Compared to version 0.9, the goal of Keyple 1.0 is mainly to fix bugs,
+add features to make Keyple more robust and rename/reorganize classes to make it easier to learn.&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;a href="#class-renaming">Renamings&lt;/a>&lt;/li>
+&lt;li>
+&lt;a href="#internal-exception-handling">Internal exception handling&lt;/a>&lt;/li>
+&lt;li>
+&lt;a href="#pcsc-plugin">PC/SC plugin&lt;/a>&lt;/li>
+&lt;li>
+&lt;a href="#keyple-distributed">Keyple Distributed&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h4 id="class-renaming">Class renaming&lt;/h4>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Module&lt;/th>
+&lt;th>Old name (0.9.0)&lt;/th>
+&lt;th>New name (1.0.0)&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Keyple Core&lt;/td>
+&lt;td>SeProxyService&lt;/td>
+&lt;td>SmartCardService&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Keyple Core&lt;/td>
+&lt;td>ReaderPlugin&lt;/td>
+&lt;td>Plugin&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Keyple Core&lt;/td>
+&lt;td>SeReader&lt;/td>
+&lt;td>Reader&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Keyple Core&lt;/td>
+&lt;td>ReaderPoolPlugin&lt;/td>
+&lt;td>PoolPlugin&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Keyple Core&lt;/td>
+&lt;td>SeSelection&lt;/td>
+&lt;td>CardSelectionService&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Keyple Core&lt;/td>
+&lt;td>SeSelector&lt;/td>
+&lt;td>CardSelector&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Keyple Core&lt;/td>
+&lt;td>AbstractMatchingSe&lt;/td>
+&lt;td>AbstractSmartCard&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Keyple Calypso&lt;/td>
+&lt;td>PoSelectionRequest&lt;/td>
+&lt;td>PoSelection&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Keyple Calypso&lt;/td>
+&lt;td>SamSelectionRequest&lt;/td>
+&lt;td>SamSelection&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h4 id="internal-exception-handling">Internal exception handling&lt;/h4>
+&lt;p>New possibilities have been added in the management of observable objects (&lt;em>Plugin&lt;/em> and &lt;em>Reader&lt;/em>).&lt;/p>
+&lt;p>If the Plugin or Reader is observable, it is now necessary to define exception handlers that will be called by the internal layers of Keyple in the case of an exception raised by an observation process.&lt;/p>
+&lt;p>Two new interfaces have been added to the &lt;em>event&lt;/em> package to allow applications via the factories of the concerned plugins to define the method that will be called when needed:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>PluginObservationExceptionHandler&lt;/code>&lt;/li>
+&lt;li>&lt;code>ReaderObservationExceptionHandler&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>These handlers are usually provided by the application via the constructor of the plugin&amp;rsquo;s factory.&lt;/p>
+&lt;h4 id="pcsc-plugin">PC/SC plugin&lt;/h4>
+&lt;p>The generic parameterization interface for plugins and readers has been removed in favor of methods specific to each plugin.&lt;/p>
+&lt;p>In the case of the PC/SC plugin, the following methods have appeared:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;/th>
+&lt;th>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>PcscPlugin&lt;/td>
+&lt;td>&lt;code>setReaderNameFilter&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>PcscPlugin&lt;/td>
+&lt;td>&lt;code>setProtocolIdentificationRule&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>PcscReader&lt;/td>
+&lt;td>&lt;code>setSharingMode&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>PcscReader&lt;/td>
+&lt;td>&lt;code>setContactless&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>PcscReader&lt;/td>
+&lt;td>&lt;code>setIsoProtocol&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>PcscReader&lt;/td>
+&lt;td>&lt;code>setDisconnectionMode&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h4 id="keyple-distributed">Keyple Distributed&lt;/h4>
+&lt;p>The use of Keyple in a remote context has been extensively reviewed and its description is beyond the scope of this guide. Please refer to the
+&lt;a href="./docs/developer-guide/distributed-application/">distributed application&lt;/a> section.&lt;/p>
+&lt;hr>
+&lt;h2 id="upgrade-from-081-to-090">Upgrade from 0.8.1 to 0.9.0&lt;/h2>
+&lt;h3 id="whats-changed-1">What&amp;rsquo;s changed?&lt;/h3>
+&lt;p>From a user API point of view, the changes relate to the following topics:
+From a user API point of view, the changes relate to the following topics:&lt;/p>
 &lt;ul>
 &lt;li>
 &lt;a href="#plugin-registration-in-the-seproxyservice">plugin registration in the SeProxyService&lt;/a>&lt;/li>
@@ -4422,7 +4523,7 @@ Coming soon
 &lt;li>
 &lt;a href="#error-handling">error handling&lt;/a>&lt;/li>
 &lt;/ul>
-&lt;h2 id="plugin-registration-in-the-seproxyservice">Plugin registration in the SeProxyService&lt;/h2>
+&lt;h3 id="plugin-registration-in-the-seproxyservice">Plugin registration in the SeProxyService&lt;/h3>
 &lt;p>The &lt;code>registerPlugin&lt;/code> method of the &lt;code>SeProxyService&lt;/code> class now returns the reference of the registered plugin.&lt;/p>
 &lt;p>This makes it possible, for example, to perform a reader setup in an application such as this one:&lt;/p>
 &lt;pre>&lt;code class="language-java"> // Create a PcscPlugin and register it into the SeProxyService
@@ -4430,7 +4531,7 @@ ReaderPlugin pcscPlugin = seProxyService.registerPlugin(new PcscPluginFactory())
 // Get the PO reader from the plugin
 SeReader poReader = pcscPlugin.getReader(&amp;quot;ASK LoGO 0&amp;quot;);
 &lt;/code>&lt;/pre>
-&lt;h2 id="preparation-of-selection-cases">Preparation of selection cases&lt;/h2>
+&lt;h3 id="preparation-of-selection-cases">Preparation of selection cases&lt;/h3>
 &lt;p>The &lt;code>AidSelector&lt;/code>, &lt;code>Selector&lt;/code> and &lt;code>PoSelector&lt;/code> classes now follow the Fluent Builder pattern for better handling of optional parameters.&lt;/p>
 &lt;p>The construction of an &lt;code>AidSelector&lt;/code> is as follows:&lt;/p>
 &lt;pre>&lt;code class="language-java">AidSelector appAidSelector = AidSelector.builder()
@@ -4468,7 +4569,7 @@ SeReader poReader = pcscPlugin.getReader(&amp;quot;ASK LoGO 0&amp;quot;);
 public void prepareSelectFile(short lid)
 &lt;/code>&lt;/pre>
 &lt;p>Note that from now the &amp;ldquo;prepare&amp;rdquo; methods no longer return indexes, the data will be placed in the CalypsoPo object.&lt;/p>
-&lt;h2 id="retrieving-selection-results">Retrieving selection results&lt;/h2>
+&lt;h3 id="retrieving-selection-results">Retrieving selection results&lt;/h3>
 &lt;p>The &lt;code>MatchingSelection&lt;/code> class no longer exists.
 In the class &lt;code>SelectionsResult&lt;/code> (see &lt;code>processDefaultSelection/processExplicitSelection&lt;/code>):&lt;/p>
 &lt;ul>
@@ -4488,7 +4589,7 @@ In the class &lt;code>SelectionsResult&lt;/code> (see &lt;code>processDefaultSel
 &lt;p>a new &lt;code>getActiveSelectionIndex&lt;/code> method returns the index of the active selection (the still existing &lt;code>hasActiveSelection&lt;/code> method must be used before)&lt;/p>
 &lt;/li>
 &lt;/ul>
-&lt;h2 id="definition-of-the-security-settings-of-the-transaction">Definition of the security settings of the transaction&lt;/h2>
+&lt;h3 id="definition-of-the-security-settings-of-the-transaction">Definition of the security settings of the transaction&lt;/h3>
 &lt;p>These parameters are defined via the &lt;code>PoSecuritySettings&lt;/code> class, whose construction now follows the Fluent Builder pattern.&lt;/p>
 &lt;p>All parameters are optional except the &lt;code>SamResource&lt;/code>.&lt;/p>
 &lt;p>Here is an example of a complete &lt;code>PoSecuritySettings&lt;/code> build:&lt;/p>
@@ -4504,12 +4605,12 @@ In the class &lt;code>SelectionsResult&lt;/code> (see &lt;code>processDefaultSel
 .sessionAuthorizedKvcList(authKvcs)
 .build();
 &lt;/code>&lt;/pre>
-&lt;h2 id="creation-of-the-potransaction-object">Creation of the PoTransaction object&lt;/h2>
+&lt;h3 id="creation-of-the-potransaction-object">Creation of the PoTransaction object&lt;/h3>
 &lt;p>Since PoSecuritySettings now integrates SamResource, the construction of PoTransaction has evolved slightly.&lt;/p>
 &lt;p>Here is an example:&lt;/p>
 &lt;pre>&lt;code class="language-java">PoTransaction poTransaction = new PoTransaction(new PoResource(poReader, calypsoPo), poSecuritySettings);
 &lt;/code>&lt;/pre>
-&lt;h2 id="transaction-commands-preparation">Transaction commands preparation&lt;/h2>
+&lt;h3 id="transaction-commands-preparation">Transaction commands preparation&lt;/h3>
 &lt;p>Just as with the &amp;ldquo;prepare&amp;rdquo; commands used for selection, the &amp;ldquo;prepare&amp;rdquo; commands used for transactions no longer return indexes.&lt;/p>
 &lt;p>The available commands in version 0.9 are:&lt;/p>
 &lt;pre>&lt;code class="language-java">public final void prepareSelectFile(SelectFileControl control)
@@ -4524,7 +4625,7 @@ public final void prepareAppendRecord(byte sfi, byte[] recordData)
 public final void prepareIncreaseCounter(byte sfi, int counterNumber, int incValue)
 public final void prepareDecreaseCounter(byte sfi, int counterNumber, int decValue)
 &lt;/code>&lt;/pre>
-&lt;h2 id="transaction-commands-processing">Transaction commands processing&lt;/h2>
+&lt;h3 id="transaction-commands-processing">Transaction commands processing&lt;/h3>
 &lt;p>The &amp;ldquo;process&amp;rdquo; commands have also been revised and simplified.&lt;/p>
 &lt;p>They all return &lt;code>void&lt;/code>.&lt;/p>
 &lt;p>In case of failure a exception is raised (see below).&lt;/p>
@@ -4538,7 +4639,7 @@ public final void processPoCommandsInSession()
 public final void processCancel(ChannelControl channelControl)
 public final void processClosing(ChannelControl channelControl)
 &lt;/code>&lt;/pre>
-&lt;h2 id="retrieving-data-read-from-pos">Retrieving data read from POs&lt;/h2>
+&lt;h3 id="retrieving-data-read-from-pos">Retrieving data read from POs&lt;/h3>
 &lt;p>This is a major evolution of the Keyple API. Previously, data read from Calyspo POs were retrieved by applications using &amp;ldquo;parser&amp;rdquo; methods.&lt;/p>
 &lt;p>With Keyple API 0.9, Calypso PO data is made available in the CalypsoPo object obtained during selection and enriched all along the operations performed with PoTransaction.&lt;/p>
 &lt;p>The public getter methods of CalypsoPo are:&lt;/p>
@@ -4629,7 +4730,8 @@ ByteArrayUtil.toHex(entry.getValue()));
 &lt;p>Catching exceptions is therefore now optional.&lt;/p>
 &lt;p>However, it is possible to selectively catch certain exceptions in order to deal with particular cases.&lt;/p>
 &lt;p>The new hierarchy of Keyple exceptions is shown
-&lt;a href="https://keyple.atlassian.net/projects/KEYP/issues/KEYP-154?filter=allissues&amp;amp;orderby=priority%20DESC&amp;amp;keyword=exceptions" target="_blank" rel="noopener">here&lt;/a>&lt;/p></description></item><item><title>JavaDoc</title><link>https://keyple.org/docs/api-reference/java-api/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/docs/api-reference/java-api/</guid><description>&lt;p>The JavaDoc for the Keyple project is available online. The documentation is split into the following parts:&lt;/p>
+&lt;a href="https://keyple.atlassian.net/projects/KEYP/issues/KEYP-154?filter=allissues&amp;amp;orderby=priority%20DESC&amp;amp;keyword=exceptions" target="_blank" rel="noopener">here&lt;/a>&lt;/p></description></item><item><title>Java API reference</title><link>https://keyple.org/docs/api-reference/java-api/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/docs/api-reference/java-api/</guid><description>&lt;hr>
+&lt;p>The JavaDoc for the Keyple project is available online. The documentation is split into the following parts:&lt;/p>
 &lt;div>
 &lt;select id="version_selection" style="float: right;" onchange="selectVersion()">
 &lt;option>1.0.0&lt;/option>
@@ -4639,11 +4741,34 @@ ByteArrayUtil.toHex(entry.getValue()));
 &lt;h3>Modules&lt;/h3>
 &lt;/div>
 &lt;ul id="module_list">&lt;/ul>
-&lt;script src="select-api-version.js">&lt;/script></description></item><item><title>C++ Documentation</title><link>https://keyple.org/docs/api-reference/cpp-api/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/docs/api-reference/cpp-api/</guid><description>&lt;div class="alert alert-note">
+&lt;script src="select-api-version.js">&lt;/script></description></item><item><title>C++ API reference</title><link>https://keyple.org/docs/api-reference/cpp-api/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/docs/api-reference/cpp-api/</guid><description>&lt;hr>
+&lt;p>The Doxygen document for the Keyple project is available online. The documentation is split into the following parts:&lt;/p>
 &lt;div>
-Coming soon
+&lt;select id="version_selection" style="float: right;" onchange="selectVersion()">
+&lt;option>0.9.0&lt;/option>
+&lt;/select>
+&lt;h3>Modules&lt;/h3>
 &lt;/div>
-&lt;/div></description></item><item><title>Release 1.0.0 of Eclipse Keyple Java</title><link>https://keyple.org/post/release-1-0-0-java/</link><pubDate>Thu, 17 Dec 2020 17:24:41 +0100</pubDate><guid>https://keyple.org/post/release-1-0-0-java/</guid><description>&lt;p>The
+&lt;ul id="module_list">&lt;/ul>
+&lt;script src="select-api-version.js">&lt;/script></description></item><item><title>Release 0.9.0 C++ on the field</title><link>https://keyple.org/post/release-0-9-0-cpp/</link><pubDate>Tue, 26 Jan 2021 14:57:56 +0200</pubDate><guid>https://keyple.org/post/release-0-9-0-cpp/</guid><description>&lt;p>We are pleased to announce that the version 0.9.0 of the C++ implementation of Eclipse Keyple™ was released January 26th, 2021.&lt;/p>
+&lt;p>This 0.9.0 C++ Keyple implementation follows the API design for the 0.9.0 Java Keyple implementation.&lt;/p>
+&lt;ul>
+&lt;li>New simplifications are introduced on the Calypso API. Keyple 0.8 had a high-level API for building map commands, but the map response data needed to be parsed with a low-level API. The Calypso 0.9.0 API provided a high-level API for retrieving map response data from a map image for which the file structure could be browsed.&lt;/li>
+&lt;li>The Core 0.9.0 has also made the reader observation function more reliable in order to be notified in case of card withdrawal.&lt;/li>
+&lt;/ul>
+&lt;p>C++ API reference
+&lt;a href="https://keyple.org/docs/api-reference/cpp-api/">https://keyple.org/docs/api-reference/cpp-api/&lt;/a>&lt;/p>
+&lt;p>Build your first C++ application
+&lt;a href="https://keyple.org/docs/build-your-first-app/cpp-app/">https://keyple.org/docs/build-your-first-app/cpp-app/&lt;/a>&lt;/p>
+&lt;p>The source of Keyple C++ is available on
+&lt;a href="https://github.com/eclipse/keyple-cpp" target="_blank" rel="noopener">https://github.com/eclipse/keyple-cpp&lt;/a>.
+Some dedicated support is provided on keyple.org:&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;a href="https://keyple.org/docs/api-reference/cpp-api/" target="_blank" rel="noopener">the documentation of the C++ API&lt;/a>&lt;/li>
+&lt;li>
+&lt;a href="https://keyple.org/docs/build-your-first-app/cpp-app/" target="_blank" rel="noopener">a guide to Build a first C++ application&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>Release 1.0.0 of Eclipse Keyple Java</title><link>https://keyple.org/post/release-1-0-0-java/</link><pubDate>Thu, 17 Dec 2020 17:24:41 +0100</pubDate><guid>https://keyple.org/post/release-1-0-0-java/</guid><description>&lt;p>The
 &lt;a href="https://github.com/eclipse/keyple-java/releases/tag/1.0.0" target="_blank" rel="noopener">release 1.0.0 of Eclipse Keyple Java&lt;/a> is available.&lt;/p>
 &lt;p>Most of the improvements concerns the Keyple Core:&lt;/p>
 &lt;ul>
