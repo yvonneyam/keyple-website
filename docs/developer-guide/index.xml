@@ -84,7 +84,7 @@ possibilities offered by &lt;strong>Keyple Core&lt;/strong>.&lt;/li>
 &lt;li>Take inspiration from the
 &lt;a href="#examples">examples&lt;/a>.&lt;/li>
 &lt;li>Follow the explanations given in the
-&lt;a href="../../docs/build-your-first-app/">Build your first app&lt;/a> section to configure your
+&lt;a href="https://keyple.org/docs/build-your-first-app/">Build your first app&lt;/a> section to configure your
 environment.&lt;/li>
 &lt;li>Using the
 &lt;a href="https://keyple.org/components-java/">Java components&lt;/a> or
@@ -499,7 +499,7 @@ resources and in particular the shutdown of the observation threads.&lt;/p>
 &lt;hr>
 &lt;h2 id="keyple-core-api">Keyple Core API&lt;/h2>
 &lt;p>To learn all the details of the &lt;strong>Keyple Core&lt;/strong> API, please consult the
-&lt;a href="../../docs/api-reference/">Javadoc documentation&lt;/a>.&lt;/p>
+&lt;a href="https://keyple.org/docs/api-reference/">Javadoc documentation&lt;/a>.&lt;/p>
 &lt;p>However, here are two diagrams showing the main features of Keyple Core:&lt;/p>
 &lt;ul>
 &lt;li>
@@ -1296,7 +1296,7 @@ width: 240px;
 &lt;/tbody>
 &lt;/table>
 &lt;p>The associated &lt;strong>API&lt;/strong> documentations are accessible from the page
-&lt;a href="../../docs/api-reference/">API Reference&lt;/a>.&lt;/p>
+&lt;a href="https://keyple.org/docs/api-reference/">API Reference&lt;/a>.&lt;/p>
 &lt;h3 id="network-api">Network API&lt;/h3>
 &lt;p>The associated &lt;strong>API&lt;/strong> documentation is available &lt;a href="../../api-reference/java-api/keyple-java-distributed-network/1.0.0/index.html">here&lt;/a>.&lt;/p>
 &lt;figure >
@@ -1354,7 +1354,7 @@ secure Calypso transaction seamlessly. It completely hides the details of the AP
 &lt;li>Take inspiration from the
 &lt;a href="#examples">examples&lt;/a>.&lt;/li>
 &lt;li>Follow the explanations given in the
-&lt;a href="../../docs/build-your-first-app/">Build your first app&lt;/a> section to configure your environment.&lt;/li>
+&lt;a href="https://keyple.org/docs/build-your-first-app/">Build your first app&lt;/a> section to configure your environment.&lt;/li>
 &lt;li>Using the
 &lt;a href="https://keyple.org/components-java/core/">Java components&lt;/a> or
 &lt;a href="https://keyple.org/components-cpp/core/">C++ components&lt;/a> pages, import &lt;strong>Keyple Core&lt;/strong> into your project.&lt;/li>
