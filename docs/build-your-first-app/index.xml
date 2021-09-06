@@ -15,10 +15,10 @@ communication) and a Calypo Secure Access Module (SAM).
 &lt;a href="https://keyple.org/components-java/core/">Keyple Core&lt;/a>
 which is the base component to which all the others refer,&lt;/li>
 &lt;li>
-&lt;a href="https://keyple.org/components-java/plugins/pcsc/">Keyple PC/SC plugin&lt;/a>
+&lt;a href="https://keyple.org/components-java/plugins/keyple-plugin-pcsc-java-lib/">Keyple PC/SC plugin&lt;/a>
 to provide the ability to manage PC/SC readers,&lt;/li>
 &lt;li>
-&lt;a href="https://keyple.org/components-java/extensions/calypso/">Keyple Calypso extension&lt;/a>
+&lt;a href="https://keyple.org/components-java/cards/keyple-card-calypso-java-lib/">Keyple Calypso extension&lt;/a>
 to handle the commands sent to the Calypso PO and the Calypso SAM.&lt;/li>
 &lt;/ul>
 &lt;p>In this guide

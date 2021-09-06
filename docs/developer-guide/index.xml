@@ -1328,7 +1328,7 @@ width: 240px;
 &lt;h2 id="download">Download&lt;/h2>
 &lt;ul>
 &lt;li>
-&lt;a href="../../components-java/distributed-systems/">Java components&lt;/a>&lt;/li>
+&lt;a href="../../components-java/distributed/">Java components&lt;/a>&lt;/li>
 &lt;/ul></description></item><item><title>Calypso application</title><link>https://keyple.org/docs/developer-guide/calypso-application/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/docs/developer-guide/calypso-application/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
 &lt;p>Keyple API was designed to support an extension system. On top of &lt;strong>Keyple Core&lt;/strong>, APIs can be developed to extend
 Keyple features. For example, Calypso Network Association provides &lt;strong>Keyple Calypso Extension&lt;/strong>.&lt;/p>
@@ -1359,7 +1359,7 @@ secure Calypso transaction seamlessly. It completely hides the details of the AP
 &lt;a href="https://keyple.org/components-java/core/">Java components&lt;/a> or
 &lt;a href="https://keyple.org/components-cpp/core/">C++ components&lt;/a> pages, import &lt;strong>Keyple Core&lt;/strong> into your project.&lt;/li>
 &lt;li>Using the
-&lt;a href="https://keyple.org/components-java/extensions/calypso/">Java components&lt;/a> or
+&lt;a href="https://keyple.org/components-java/cards/keyple-card-calypso-java-lib/">Java components&lt;/a> or
 &lt;a href="https://keyple.org/components-cpp/extensions/calypso/">C++ components&lt;/a> pages, import &lt;strong>Keyple Calypso Extension&lt;/strong> into your project.&lt;/li>
 &lt;li>Start playing with &lt;strong>Keyple&lt;/strong>.&lt;/li>
 &lt;/ol>

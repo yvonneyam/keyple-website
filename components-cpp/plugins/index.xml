@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Reader plugins | Eclipse Keyple</title><link>https://keyple.org/components-cpp/plugins/</link><atom:link href="https://keyple.org/components-cpp/plugins/index.xml" rel="self" type="application/rss+xml"/><description>Reader plugins</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Copyright © Eclipse Foundation, Inc. All Rights Reserved.</copyright><image><url>https://keyple.org/images/logo_hu673a59176cd62c570f44ed2728665b48_42188_300x300_fit_lanczos_3.png</url><title>Reader plugins</title><link>https://keyple.org/components-cpp/plugins/</link></image><item><title>Keyple Plugin PC/SC</title><link>https://keyple.org/components-cpp/plugins/pcsc/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/components-cpp/plugins/pcsc/</guid><description>&lt;div class="alert alert-note">
 &lt;div>
 &lt;strong>&lt;code>0.9.0&lt;/code>&lt;/strong>
-     
-&lt;i class="fas fa-users-cog pr-1 fa-fw">&lt;/i>
-Keyple project
-     
-&lt;i class="fas fa-download pr-1 fa-fw">&lt;/i>
-&lt;a href="#download">Download&lt;/a>
-     
-&lt;i class="fab fa-github pr-1 fa-fw">&lt;/i>
-&lt;a href="https://github.com/eclipse/keyple-cpp/tree/master/component/keyple-plugin/pcsc">GitHub&lt;/a>
-     
-&lt;i class="fas fa-exchange-alt pr-1 fa-fw">&lt;/i>
-&lt;a href="https://github.com/eclipse/keyple-cpp/releases/">Changelogs&lt;/a>
+&lt;span class="component-metadata">
+&lt;i class="fas fa-users-cog pr-1 fa-fw">&lt;/i> Keyple project&lt;/span>
+&lt;span class="component-metadata">
+&lt;i class="fas fa-download pr-1 fa-fw">&lt;/i> &lt;a href="#download">Download&lt;/a>&lt;/span>
+&lt;span class="component-metadata">
+&lt;i class="fab fa-github pr-1 fa-fw">&lt;/i> &lt;a href="https://github.com/eclipse/keyple-cpp/tree/master/component/keyple-plugin/pcsc">GitHub&lt;/a>&lt;/span>
+&lt;span class="component-metadata">
+&lt;i class="fas fa-exchange-alt pr-1 fa-fw">&lt;/i> &lt;a href="https://github.com/eclipse/keyple-cpp/releases/">Changelogs&lt;/a>&lt;/span>
 &lt;/div>
 &lt;/div>
 &lt;h2 id="overview">Overview&lt;/h2>
@@ -28,18 +24,14 @@ Keyple project
 &lt;a href="https://github.com/eclipse/keyple-cpp/" target="_blank" rel="noopener">GitHub&lt;/a>.&lt;/p></description></item><item><title>Keyple Plugin Stub</title><link>https://keyple.org/components-cpp/plugins/stub/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/components-cpp/plugins/stub/</guid><description>&lt;div class="alert alert-note">
 &lt;div>
 &lt;strong>&lt;code>0.9.0&lt;/code>&lt;/strong>
-     
-&lt;i class="fas fa-users-cog pr-1 fa-fw">&lt;/i>
-Keyple project
-     
-&lt;i class="fas fa-download pr-1 fa-fw">&lt;/i>
-&lt;a href="#download">Download&lt;/a>
-     
-&lt;i class="fab fa-github pr-1 fa-fw">&lt;/i>
-&lt;a href="https://github.com/eclipse/keyple-cpp/tree/master/component/keyple-plugin/stub">GitHub&lt;/a>
-     
-&lt;i class="fas fa-exchange-alt pr-1 fa-fw">&lt;/i>
-&lt;a href="https://github.com/eclipse/keyple-cpp/releases/">Changelogs&lt;/a>
+&lt;span class="component-metadata">
+&lt;i class="fas fa-users-cog pr-1 fa-fw">&lt;/i> Keyple project&lt;/span>
+&lt;span class="component-metadata">
+&lt;i class="fas fa-download pr-1 fa-fw">&lt;/i> &lt;a href="#download">Download&lt;/a>&lt;/span>
+&lt;span class="component-metadata">
+&lt;i class="fab fa-github pr-1 fa-fw">&lt;/i> &lt;a href="https://github.com/eclipse/keyple-cpp/tree/master/component/keyple-plugin/stub">GitHub&lt;/a>&lt;/span>
+&lt;span class="component-metadata">
+&lt;i class="fas fa-exchange-alt pr-1 fa-fw">&lt;/i> &lt;a href="https://github.com/eclipse/keyple-cpp/releases/">Changelogs&lt;/a>&lt;/span>
 &lt;/div>
 &lt;/div>
 &lt;h2 id="overview">Overview&lt;/h2>

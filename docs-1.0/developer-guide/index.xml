@@ -1340,7 +1340,7 @@ width: 240px;
 &lt;h2 id="download">Download&lt;/h2>
 &lt;ul>
 &lt;li>
-&lt;a href="../../components-java/distributed-systems/">Java components&lt;/a>&lt;/li>
+&lt;a href="../../components-java/distributed/">Java components&lt;/a>&lt;/li>
 &lt;/ul></description></item><item><title>Calypso application</title><link>https://keyple.org/docs-1.0/developer-guide/calypso-application/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/docs-1.0/developer-guide/calypso-application/</guid><description>&lt;div class="alert alert-warning">
 &lt;div>
 Version 1.0 of the documentation is no longer actively maintained. The site that you are currently viewing is an archived snapshot. For up-to-date documentation, see the latest version.
@@ -1373,11 +1373,11 @@ secure Calypso transaction seamlessly. It completely hides the details of the AP
 &lt;li>Follow the explanations given in the
 &lt;a href="https://keyple.org/docs-1.0/build-your-first-app/">Build your first app&lt;/a> section to configure your environment.&lt;/li>
 &lt;li>Using the
-&lt;a href="https://keyple.org/components-java/core/">Java components&lt;/a> or
-&lt;a href="https://keyple.org/components-cpp/core/">C++ components&lt;/a> pages, import &lt;strong>Keyple Core&lt;/strong> into your project.&lt;/li>
+&lt;a href="https://keyple.org/components-java-1.0/core/">Java components&lt;/a> or
+&lt;a href="https://keyple.org/components-cpp-0.9/core/">C++ components&lt;/a> pages, import &lt;strong>Keyple Core&lt;/strong> into your project.&lt;/li>
 &lt;li>Using the
-&lt;a href="https://keyple.org/components-java/extensions/calypso/">Java components&lt;/a> or
-&lt;a href="https://keyple.org/components-cpp/extensions/calypso/">C++ components&lt;/a> pages, import &lt;strong>Keyple Calypso Extension&lt;/strong> into your project.&lt;/li>
+&lt;a href="https://keyple.org/components-java-1.0/extensions/calypso/">Java components&lt;/a> or
+&lt;a href="https://keyple.org/components-cpp-0.9/extensions/calypso/">C++ components&lt;/a> pages, import &lt;strong>Keyple Calypso Extension&lt;/strong> into your project.&lt;/li>
 &lt;li>Start playing with &lt;strong>Keyple&lt;/strong>.&lt;/li>
 &lt;/ol>
 &lt;h2 id="concepts">Concepts&lt;/h2>

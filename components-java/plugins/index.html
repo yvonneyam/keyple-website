@@ -24,13 +24,13 @@
 <meta property="twitter:card" content="summary">
 <meta property="og:site_name" content="Eclipse Keyple">
 <meta property="og:url" content="https://keyple.org/components-java/plugins/">
-<meta property="og:title" content="Java - Plugins | Eclipse Keyple">
+<meta property="og:title" content="Java - Reader plugins components | Eclipse Keyple">
 <meta property="og:description" content="Keyple™ accelerates the integration and development of ticketing and access control applications by enabling all to implement systems based on a common, open and modular platform, while benefiting from Calypso®'s key features of reliability, security and interoperability."><meta property="og:image" content="https://keyple.org/images/logo_hu673a59176cd62c570f44ed2728665b48_42188_300x300_fit_lanczos_3.png">
 <meta property="twitter:image" content="https://keyple.org/images/logo_hu673a59176cd62c570f44ed2728665b48_42188_300x300_fit_lanczos_3.png"><meta property="og:locale" content="en-us">
 <script src=https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js integrity="sha256-5VhCqFam2Cn+yjw61zbBNrbHVJ6SRydPeKopYlngbiQ=" crossorigin=anonymous></script>
 <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css integrity="sha256-zQ0LblD/Af8vOppw18+2anxsuaz3pWYyVWi+bTvTH8Q=" crossorigin=anonymous>
 <script>window.addEventListener("load",function(){window.cookieconsent.initialise({palette:{popup:{background:"#1D87BB",text:"#FFFFFF"},button:{background:"#FFFFFF",text:"#1D87BB"}},theme:"classic",type:"opt-in",content:{header:'Cookiessss used on the website!',message:"Some Eclipse Foundation pages use cookies to better serve you when you return to the site. You can set your browser to notify you before you receive a cookie or turn off cookies. If you do so, however, some areas of some sites may not function properly. To read Eclipse Foundation Privacy Policy ",allow:"Allow cookies",deny:"Decline",dismiss:"Got it!",link:"click here",href:'https://www.eclipse.org/legal/privacy.php'}})})</script>
-<title>Java - Plugins | Eclipse Keyple</title>
+<title>Java - Reader plugins components | Eclipse Keyple</title>
 </head>
 <body id=top data-spy=scroll data-offset=70 data-target=#TableOfContents>
 <script>const isSiteThemeDark=!1</script>
@@ -90,8 +90,11 @@
 <a href=# class="nav-link dropdown-toggle" data-toggle=dropdown aria-haspopup=true><span>Components</span><span class=caret></span>
 </a>
 <div class=dropdown-menu>
-<a class=dropdown-item href=../../components-java/overview/><span>Java Language</span></a>
-<a class=dropdown-item href=../../components-cpp/overview/><span>C++ Language</span></a>
+<a class=dropdown-item href=../../components-java/overview/><span>Java implementation v2+</span></a>
+<a class=dropdown-item href=../../components-cpp/overview/><span>C++ implementation v2+</span></a>
+<a class=dropdown-item href=../../><span> </span></a>
+<a class=dropdown-item href=../../components-java-1.0/><span>Java implementation v1.0 (deprecated)</span></a>
+<a class=dropdown-item href=../../components-cpp-0.9/><span>C++ implementation v0.9 (deprecated)</span></a>
 </div>
 </li>
 <li class="nav-item dropdown">
@@ -127,29 +130,45 @@
 <a class=docs-toc-link href=../../components-java/overview/>Overview</a>
 </div>
 <div class=docs-toc-item>
-<a class=docs-toc-link href=../../components-java/core/>Core Libraries</a>
-</div>
-<div class=docs-toc-item>
-<a class=docs-toc-link href=../../components-java/distributed-systems/>Distributed systems</a>
+<a class=docs-toc-link href=../../components-java/standards-compliance/>Standards compliance</a>
 <ul class="nav docs-sidenav">
-<li><a href=../../components-java/distributed-systems/local/>Local</a></li>
-<li><a href=../../components-java/distributed-systems/network/>Network</a></li>
-<li><a href=../../components-java/distributed-systems/remote/>Remote</a></li>
+<li><a href=../../components-java/standards-compliance/calypsonet-apis/>Calypsonet Terminal APIs</a></li>
 </ul>
 </div>
 <div class=docs-toc-item>
-<a class=docs-toc-link href=../../components-java/extensions/>Cards</a>
+<a class=docs-toc-link href=../../components-java/core/>Core</a>
 <ul class="nav docs-sidenav">
-<li><a href=../../components-java/extensions/calypso/>Calypso</a></li>
+<li><a href=../../components-java/core/keyple-common-java-api/>Common API</a></li>
+<li><a href=../../components-java/core/keyple-distributed-local-java-api/>Distributed Local API</a></li>
+<li><a href=../../components-java/core/keyple-distributed-remote-java-api/>Distributed Remote API</a></li>
+<li><a href=../../components-java/core/keyple-plugin-java-api/>Plugin API</a></li>
+<li><a href=../../components-java/core/keyple-service-java-lib/>Service</a></li>
+<li><a href=../../components-java/core/keyple-service-resource-java-lib/>Service Resource</a></li>
+<li><a href=../../components-java/core/keyple-util-java-lib/>Util</a></li>
 </ul>
 </div>
 <div class=docs-toc-item>
-<a class="docs-toc-link active" href=../../components-java/plugins/>Plugins</a>
+<a class=docs-toc-link href=../../components-java/distributed/>Distributed systems</a>
 <ul class="nav docs-sidenav">
-<li><a href=../../components-java/plugins/nfc/>NFC</a></li>
-<li><a href=../../components-java/plugins/omapi/>OMAPI</a></li>
-<li><a href=../../components-java/plugins/pcsc/>PC/SC</a></li>
-<li><a href=../../components-java/plugins/stub/>Stub</a></li>
+<li><a href=../../components-java/distributed/keyple-distributed-local-java-lib/>Local</a></li>
+<li><a href=../../components-java/distributed/keyple-distributed-network-java-lib/>Network</a></li>
+<li><a href=../../components-java/distributed/keyple-distributed-remote-java-lib/>Remote</a></li>
+</ul>
+</div>
+<div class=docs-toc-item>
+<a class=docs-toc-link href=../../components-java/cards/>Cards</a>
+<ul class="nav docs-sidenav">
+<li><a href=../../components-java/cards/keyple-card-calypso-java-lib/>Calypso</a></li>
+<li><a href=../../components-java/cards/keyple-card-generic-java-lib/>Generic</a></li>
+</ul>
+</div>
+<div class=docs-toc-item>
+<a class="docs-toc-link active" href=../../components-java/plugins/>Reader plugins</a>
+<ul class="nav docs-sidenav">
+<li><a href=../../components-java/plugins/keyple-plugin-android-nfc-java-lib/>Android NFC</a></li>
+<li><a href=../../components-java/plugins/keyple-plugin-android-omapi-java-lib/>Android OMAPI</a></li>
+<li><a href=../../components-java/plugins/keyple-plugin-pcsc-java-lib/>PC/SC</a></li>
+<li><a href=../../components-java/plugins/keyple-plugin-stub-java-lib/>Stub</a></li>
 </ul>
 </div>
 </ul>
@@ -158,18 +177,13 @@
 <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role=main>
 <article class=article>
 <div class=docs-article-container>
-<h1>Java - Plugins</h1>
+<h1>Java - Reader plugins components</h1>
 <div class=article-style>
-<div class="alert alert-note">
-<div>
-To add a plugin made a <a href=https://github.com/eclipse/keyple-website/pulls>Pull request</a> contributions on GitHub.
-</div>
-</div>
 <ul class=list-unstyled>
-<li><h5><a href=../../components-java/plugins/nfc/>NFC</a></h5> <p>Keyple Java plugin for Android devices having NFC capabilities.</p></li>
-<li><h5><a href=../../components-java/plugins/omapi/>OMAPI</a></h5> <p>Keyple Java plugin for Android devices using OMAPI technology.</p></li>
-<li><h5><a href=../../components-java/plugins/pcsc/>PC/SC</a></h5> <p>Keyple Java plugin for PC/SC smart card readers.</p></li>
-<li><h5><a href=../../components-java/plugins/stub/>Stub</a></h5> <p>Keyple Java plugin used to stub smart card readers.</p></li>
+<li><h5><a href=../../components-java/plugins/keyple-plugin-android-nfc-java-lib/>Android NFC</a></h5> <p>Addon to manage Android NFC readers.</p></li>
+<li><h5><a href=../../components-java/plugins/keyple-plugin-android-omapi-java-lib/>Android OMAPI</a></h5> <p>Addon to manage Android OMAPI readers.</p></li>
+<li><h5><a href=../../components-java/plugins/keyple-plugin-pcsc-java-lib/>PC/SC</a></h5> <p>Addon to manage PC/SC readers.</p></li>
+<li><h5><a href=../../components-java/plugins/keyple-plugin-stub-java-lib/>Stub</a></h5> <p>Addon to manage virtual readers and cards.</p></li>
 </ul>
 </div>
 <div class=article-widget>
@@ -178,7 +192,7 @@ To add a plugin made a <a href=https://github.com/eclipse/keyple-website/pulls>P
 </div>
 </div>
 <div class=body-footer>
-<p>Last updated on Tue, Aug 31, 2021</p>
+<p>Last updated on Fri, Sep 3, 2021</p>
 </div>
 </article>
 <footer class=site-footer>
