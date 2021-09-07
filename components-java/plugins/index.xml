@@ -2,8 +2,6 @@
 &lt;div>
 &lt;strong>&lt;code>2.0.0&lt;/code>&lt;/strong>
 &lt;span class="component-metadata">
-&lt;i class="fas fa-users-cog pr-1 fa-fw">&lt;/i> Keyple project&lt;/span>
-&lt;span class="component-metadata">
 &lt;i class="fas fa-download pr-1 fa-fw">&lt;/i> &lt;a href="#download">Download&lt;/a>&lt;/span>
 &lt;span class="component-metadata">
 &lt;i class="fab fa-github pr-1 fa-fw">&lt;/i> &lt;a href="https://github.com/eclipse/keyple-plugin-android-nfc-java-lib/">GitHub&lt;/a>&lt;/span>
@@ -61,8 +59,6 @@ id="tabs-1-2" role="tabpanel" aria-labelled-by="tabs-1-2-tab">
 &lt;/div></description></item><item><title>Keyple Plugin Android OMAPI Java Library</title><link>https://keyple.org/components-java/plugins/keyple-plugin-android-omapi-java-lib/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/components-java/plugins/keyple-plugin-android-omapi-java-lib/</guid><description>&lt;div class="alert alert-note">
 &lt;div>
 &lt;strong>&lt;code>2.0.0&lt;/code>&lt;/strong>
-&lt;span class="component-metadata">
-&lt;i class="fas fa-users-cog pr-1 fa-fw">&lt;/i> Keyple project&lt;/span>
 &lt;span class="component-metadata">
 &lt;i class="fas fa-download pr-1 fa-fw">&lt;/i> &lt;a href="#download">Download&lt;/a>&lt;/span>
 &lt;span class="component-metadata">
@@ -124,8 +120,6 @@ id="tabs-1-2" role="tabpanel" aria-labelled-by="tabs-1-2-tab">
 &lt;div>
 &lt;strong>&lt;code>2.0.0&lt;/code>&lt;/strong>
 &lt;span class="component-metadata">
-&lt;i class="fas fa-users-cog pr-1 fa-fw">&lt;/i> Keyple project&lt;/span>
-&lt;span class="component-metadata">
 &lt;i class="fas fa-download pr-1 fa-fw">&lt;/i> &lt;a href="#download">Download&lt;/a>&lt;/span>
 &lt;span class="component-metadata">
 &lt;i class="fab fa-github pr-1 fa-fw">&lt;/i> &lt;a href="https://github.com/eclipse/keyple-plugin-pcsc-java-lib/">GitHub&lt;/a>&lt;/span>
@@ -183,8 +177,6 @@ id="tabs-1-2" role="tabpanel" aria-labelled-by="tabs-1-2-tab">
 &lt;/div></description></item><item><title>Keyple Plugin Stub Java Library</title><link>https://keyple.org/components-java/plugins/keyple-plugin-stub-java-lib/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/components-java/plugins/keyple-plugin-stub-java-lib/</guid><description>&lt;div class="alert alert-note">
 &lt;div>
 &lt;strong>&lt;code>2.0.0&lt;/code>&lt;/strong>
-&lt;span class="component-metadata">
-&lt;i class="fas fa-users-cog pr-1 fa-fw">&lt;/i> Keyple project&lt;/span>
 &lt;span class="component-metadata">
 &lt;i class="fas fa-download pr-1 fa-fw">&lt;/i> &lt;a href="#download">Download&lt;/a>&lt;/span>
 &lt;span class="component-metadata">

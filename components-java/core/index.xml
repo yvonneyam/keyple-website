@@ -2,8 +2,6 @@
 &lt;div>
 &lt;strong>&lt;code>2.0.0&lt;/code>&lt;/strong>
 &lt;span class="component-metadata">
-&lt;i class="fas fa-users-cog pr-1 fa-fw">&lt;/i> Keyple project&lt;/span>
-&lt;span class="component-metadata">
 &lt;i class="fas fa-download pr-1 fa-fw">&lt;/i> &lt;a href="#download">Download&lt;/a>&lt;/span>
 &lt;span class="component-metadata">
 &lt;i class="fab fa-github pr-1 fa-fw">&lt;/i> &lt;a href="https://github.com/eclipse/keyple-common-java-api/">GitHub&lt;/a>&lt;/span>
@@ -66,8 +64,6 @@ Therefore, it is recommended to always perform a &lt;strong>dynamic import&lt;/s
 &lt;/div></description></item><item><title>Keyple Distributed Local Java API</title><link>https://keyple.org/components-java/core/keyple-distributed-local-java-api/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/components-java/core/keyple-distributed-local-java-api/</guid><description>&lt;div class="alert alert-note">
 &lt;div>
 &lt;strong>&lt;code>2.0.0&lt;/code>&lt;/strong>
-&lt;span class="component-metadata">
-&lt;i class="fas fa-users-cog pr-1 fa-fw">&lt;/i> Keyple project&lt;/span>
 &lt;span class="component-metadata">
 &lt;i class="fas fa-download pr-1 fa-fw">&lt;/i> &lt;a href="#download">Download&lt;/a>&lt;/span>
 &lt;span class="component-metadata">
@@ -132,8 +128,6 @@ Therefore, it is recommended to always perform a &lt;strong>dynamic import&lt;/s
 &lt;div>
 &lt;strong>&lt;code>2.0.0&lt;/code>&lt;/strong>
 &lt;span class="component-metadata">
-&lt;i class="fas fa-users-cog pr-1 fa-fw">&lt;/i> Keyple project&lt;/span>
-&lt;span class="component-metadata">
 &lt;i class="fas fa-download pr-1 fa-fw">&lt;/i> &lt;a href="#download">Download&lt;/a>&lt;/span>
 &lt;span class="component-metadata">
 &lt;i class="fab fa-github pr-1 fa-fw">&lt;/i> &lt;a href="https://github.com/eclipse/keyple-distributed-remote-java-api/">GitHub&lt;/a>&lt;/span>
@@ -196,8 +190,6 @@ Therefore, it is recommended to always perform a &lt;strong>dynamic import&lt;/s
 &lt;/div></description></item><item><title>Keyple Plugin Java API</title><link>https://keyple.org/components-java/core/keyple-plugin-java-api/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/components-java/core/keyple-plugin-java-api/</guid><description>&lt;div class="alert alert-note">
 &lt;div>
 &lt;strong>&lt;code>2.0.0&lt;/code>&lt;/strong>
-&lt;span class="component-metadata">
-&lt;i class="fas fa-users-cog pr-1 fa-fw">&lt;/i> Keyple project&lt;/span>
 &lt;span class="component-metadata">
 &lt;i class="fas fa-download pr-1 fa-fw">&lt;/i> &lt;a href="#download">Download&lt;/a>&lt;/span>
 &lt;span class="component-metadata">
@@ -262,8 +254,6 @@ Therefore, it is recommended to always perform a &lt;strong>dynamic import&lt;/s
 &lt;div>
 &lt;strong>&lt;code>2.0.0&lt;/code>&lt;/strong>
 &lt;span class="component-metadata">
-&lt;i class="fas fa-users-cog pr-1 fa-fw">&lt;/i> Keyple project&lt;/span>
-&lt;span class="component-metadata">
 &lt;i class="fas fa-download pr-1 fa-fw">&lt;/i> &lt;a href="#download">Download&lt;/a>&lt;/span>
 &lt;span class="component-metadata">
 &lt;i class="fab fa-github pr-1 fa-fw">&lt;/i> &lt;a href="https://github.com/eclipse/keyple-service-java-lib/">GitHub&lt;/a>&lt;/span>
@@ -321,8 +311,6 @@ id="tabs-1-2" role="tabpanel" aria-labelled-by="tabs-1-2-tab">
 &lt;div>
 &lt;strong>&lt;code>2.0.0&lt;/code>&lt;/strong>
 &lt;span class="component-metadata">
-&lt;i class="fas fa-users-cog pr-1 fa-fw">&lt;/i> Keyple project&lt;/span>
-&lt;span class="component-metadata">
 &lt;i class="fas fa-download pr-1 fa-fw">&lt;/i> &lt;a href="#download">Download&lt;/a>&lt;/span>
 &lt;span class="component-metadata">
 &lt;i class="fab fa-github pr-1 fa-fw">&lt;/i> &lt;a href="https://github.com/eclipse/keyple-service-resource-java-lib/">GitHub&lt;/a>&lt;/span>
@@ -379,8 +367,6 @@ id="tabs-1-2" role="tabpanel" aria-labelled-by="tabs-1-2-tab">
 &lt;/div></description></item><item><title>Keyple Util Java Library</title><link>https://keyple.org/components-java/core/keyple-util-java-lib/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/components-java/core/keyple-util-java-lib/</guid><description>&lt;div class="alert alert-note">
 &lt;div>
 &lt;strong>&lt;code>2.0.0&lt;/code>&lt;/strong>
-&lt;span class="component-metadata">
-&lt;i class="fas fa-users-cog pr-1 fa-fw">&lt;/i> Keyple project&lt;/span>
 &lt;span class="component-metadata">
 &lt;i class="fas fa-download pr-1 fa-fw">&lt;/i> &lt;a href="#download">Download&lt;/a>&lt;/span>
 &lt;span class="component-metadata">
