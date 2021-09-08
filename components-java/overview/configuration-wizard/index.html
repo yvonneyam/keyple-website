@@ -26,7 +26,7 @@
 <meta property="og:title" content="Java - Configuration wizard | Eclipse Keyple">
 <meta property="og:description" content="Online tool to generate the dependencies section of Gradle or Maven configuration files."><meta property="og:image" content="https://keyple.org/images/logo_hu673a59176cd62c570f44ed2728665b48_42188_300x300_fit_lanczos_3.png">
 <meta property="twitter:image" content="https://keyple.org/images/logo_hu673a59176cd62c570f44ed2728665b48_42188_300x300_fit_lanczos_3.png"><meta property="og:locale" content="en-us">
-<meta property="article:modified_time" content="2021-09-07T15:35:08+02:00">
+<meta property="article:modified_time" content="2021-09-08T14:41:58+02:00">
 <script src=https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js integrity="sha256-5VhCqFam2Cn+yjw61zbBNrbHVJ6SRydPeKopYlngbiQ=" crossorigin=anonymous></script>
 <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css integrity="sha256-zQ0LblD/Af8vOppw18+2anxsuaz3pWYyVWi+bTvTH8Q=" crossorigin=anonymous>
 <script>window.addEventListener("load",function(){window.cookieconsent.initialise({palette:{popup:{background:"#1D87BB",text:"#FFFFFF"},button:{background:"#FFFFFF",text:"#1D87BB"}},theme:"classic",type:"opt-in",content:{header:'Cookiessss used on the website!',message:"Some Eclipse Foundation pages use cookies to better serve you when you return to the site. You can set your browser to notify you before you receive a cookie or turn off cookies. If you do so, however, some areas of some sites may not function properly. To read Eclipse Foundation Privacy Policy ",allow:"Allow cookies",deny:"Decline",dismiss:"Got it!",link:"click here",href:'https://www.eclipse.org/legal/privacy.php'}})})</script>
@@ -199,62 +199,70 @@ Client application
 <hr>
 <p><strong>Which card extension do you want to use?</strong></p>
 <div>
-<input type=checkbox id=cardGeneric onclick=updateDependencies(this)>
+<input type=checkbox id=cardGeneric onclick=updateAppDependencies(1,this)>
 <label for=cardGeneric>Generic (with low level API)</label>
 </div>
 <div>
-<input type=checkbox id=cardCalypso onclick=updateDependencies(this)>
+<input type=checkbox id=cardCalypso onclick=updateAppDependencies(1,this)>
 <label for=cardCalypso>Calypso</label>
 </div>
 <hr>
 <p><strong>Which reader plugin do you want to use?</strong></p>
 <div>
-<input type=checkbox id=pluginAndroidNfc onclick=updateDependencies(this)>
+<input type=checkbox id=pluginAndroidNfc onclick=updateAppDependencies(1,this)>
 <label for=pluginAndroidNfc>Android NFC</label>
 </div>
 <div>
-<input type=checkbox id=pluginAndroidOmapi onclick=updateDependencies(this)>
+<input type=checkbox id=pluginAndroidOmapi onclick=updateAppDependencies(1,this)>
 <label for=pluginAndroidOmapi>Android OMAPI</label>
 </div>
 <div>
-<input type=checkbox id=pluginPcsc onclick=updateDependencies(this)>
+<input type=checkbox id=pluginPcsc onclick=updateAppDependencies(1,this)>
 <label for=pluginPcsc>PC/SC</label>
 </div>
 <div>
-<input type=checkbox id=pluginStub onclick=updateDependencies(this)>
+<input type=checkbox id=pluginStub onclick=updateAppDependencies(1,this)>
 <label for=pluginStub>Stub (simulated reader)</label>
 </div>
 <hr>
 <p><strong>In case of a distributed system, on which side is your application located?</strong></p>
 <div>
-<input type=checkbox id=distributedLocal onclick=updateDependencies(this)>
+<input type=checkbox id=distributedLocal onclick=updateAppDependencies(1,this)>
 <label for=distributedLocal>On the device <strong>having</strong> local access to the smart card reader</label>
 </div>
 <div>
-<input type=checkbox id=distributedRemote onclick=updateDependencies(this)>
+<input type=checkbox id=distributedRemote onclick=updateAppDependencies(1,this)>
 <label for=distributedRemote>On the device <strong>not having</strong> local access to the smart card reader</label>
 </div>
 <hr>
 <p><strong>Do you need additional services?</strong></p>
 <div>
-<input type=checkbox id=serviceResource onclick=updateDependencies(this)>
-<label for=serviceResource>Service resource component for dynamic reader allocation</label>
+<input type=checkbox id=serviceResource onclick=updateAppDependencies(1,this)>
+<label for=serviceResource>Service for dynamic card resource allocation (e.g. for HSM or pool of readers)</label>
 </div>
 <hr>
-<ul class="nav nav-tabs" id=tabs-1 role=tablist>
-<li class=nav-item><a class="nav-link tab-Gradle-Groovy active" id=tabs-1-0-tab data-toggle=tab href=#tabs-1-0 role=tab onclick='handleClick("Gradle-Groovy")' aria-controls=tabs-1-0 aria-selected=true>Gradle Groovy</a></li>
-<li class=nav-item><a class="nav-link tab-Gradle-Kotlin" id=tabs-1-1-tab data-toggle=tab href=#tabs-1-1 role=tab onclick='handleClick("Gradle-Kotlin")' aria-controls=tabs-1-1 aria-selected=false>Gradle Kotlin</a></li>
-<li class=nav-item><a class="nav-link tab-Maven" id=tabs-1-2-tab data-toggle=tab href=#tabs-1-2 role=tab onclick='handleClick("Maven")' aria-controls=tabs-1-2 aria-selected=false>Maven</a></li>
-</ul>
-<div class=tab-content id=tabs-1-content>
-<div class="tab-pane fade show active" id=tabs-1-0 role=tabpanel aria-labelled-by=tabs-1-0-tab>
-<pre><code id=groovy-dependencies class="language-gradle hljs"></code></pre>
+<ul class="nav nav-tabs" id=tabs-1 role=tablist><li class=nav-item>
+<a class="nav-link active tab-Gradle-Groovy" id=tabs-1-0-tab data-toggle=tab href=#tabs-1-0 role=tab onclick='handleClick("Gradle-Groovy")' aria-controls=tabs-1-0 aria-selected=true>
+Gradle Groovy
+</a>
+</li><li class=nav-item>
+<a class="nav-link tab-Gradle-Kotlin" id=tabs-1-1-tab data-toggle=tab href=#tabs-1-1 role=tab onclick='handleClick("Gradle-Kotlin")' aria-controls=tabs-1-1 aria-selected=false>
+Gradle Kotlin
+</a>
+</li><li class=nav-item>
+<a class="nav-link tab-Maven" id=tabs-1-2-tab data-toggle=tab href=#tabs-1-2 role=tab onclick='handleClick("Maven")' aria-controls=tabs-1-2 aria-selected=false>
+Maven
+</a>
+</li></ul>
+<div class=bd-clipboard><button type=button class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onclick="copyTabContentToClipboard('tabs-1',this)">Copy</button></div>
+<div class=tab-content id=tabs-1-content><div class="tab-pane fade show active" id=tabs-1-0 role=tabpanel aria-labelled-by=tabs-1-0-tab>
+<pre><code class=language-gradle></code></pre>
 </div>
 <div class="tab-pane fade" id=tabs-1-1 role=tabpanel aria-labelled-by=tabs-1-1-tab>
-<pre><code id=kotlin-dependencies class="language-kotlin hljs"></code></pre>
+<pre><code class=language-kotlin></code></pre>
 </div>
 <div class="tab-pane fade" id=tabs-1-2 role=tabpanel aria-labelled-by=tabs-1-2-tab>
-<pre><code id=maven-dependencies class="language-xml hljs"></code></pre>
+<pre><code class=language-xml></code></pre>
 </div>
 </div>
 </div>
@@ -268,7 +276,38 @@ Custom Keyple card extension
 </p>
 <div class="collapse card" id=spoiler-1>
 <div class=card-body>
-Please find below the configuration to use when developing a specific Keyple card extension not already available:
+<p>Please find below the configuration to use when developing a specific Keyple card extension not already available:</p>
+<hr>
+<p><strong>Do you need additional services?</strong></p>
+<div>
+<input type=checkbox id=cardServiceResource onclick=updateCardDependencies(2,this)>
+<label for=cardServiceResource>Service for dynamic card resource allocation (e.g. HSM or pool of readers)</label>
+</div>
+<hr>
+<ul class="nav nav-tabs" id=tabs-2 role=tablist><li class=nav-item>
+<a class="nav-link active tab-Gradle-Groovy" id=tabs-2-0-tab data-toggle=tab href=#tabs-2-0 role=tab onclick='handleClick("Gradle-Groovy")' aria-controls=tabs-2-0 aria-selected=true>
+Gradle Groovy
+</a>
+</li><li class=nav-item>
+<a class="nav-link tab-Gradle-Kotlin" id=tabs-2-1-tab data-toggle=tab href=#tabs-2-1 role=tab onclick='handleClick("Gradle-Kotlin")' aria-controls=tabs-2-1 aria-selected=false>
+Gradle Kotlin
+</a>
+</li><li class=nav-item>
+<a class="nav-link tab-Maven" id=tabs-2-2-tab data-toggle=tab href=#tabs-2-2 role=tab onclick='handleClick("Maven")' aria-controls=tabs-2-2 aria-selected=false>
+Maven
+</a>
+</li></ul>
+<div class=bd-clipboard><button type=button class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onclick="copyTabContentToClipboard('tabs-2',this)">Copy</button></div>
+<div class=tab-content id=tabs-2-content><div class="tab-pane fade show active" id=tabs-2-0 role=tabpanel aria-labelled-by=tabs-2-0-tab>
+<pre><code class=language-gradle></code></pre>
+</div>
+<div class="tab-pane fade" id=tabs-2-1 role=tabpanel aria-labelled-by=tabs-2-1-tab>
+<pre><code class=language-kotlin></code></pre>
+</div>
+<div class="tab-pane fade" id=tabs-2-2 role=tabpanel aria-labelled-by=tabs-2-2-tab>
+<pre><code class=language-xml></code></pre>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -294,23 +333,19 @@ Gradle Kotlin
 Maven
 </a>
 </li></ul>
+<div class=bd-clipboard><button type=button class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onclick="copyTabContentToClipboard('tabs-3',this)">Copy</button></div>
 <div class=tab-content id=tabs-3-content><div class="tab-pane fade show active" id=tabs-3-0 role=tabpanel aria-labelled-by=tabs-3-0-tab>
-<pre><code class=language-gradle>implementation &#39;org.eclipse.keyple:keyple-util-java-lib:2.&#43;&#39;
-implementation &#39;org.eclipse.keyple:keyple-common-java-api:2.0.&#43;&#39;
-implementation &#39;org.eclipse.keyple:keyple-plugin-java-api:2.0.&#43;&#39;</code></pre>
+<pre><code class=language-gradle>implementation &#39;org.eclipse.keyple:keyple-common-java-api:2.0.&#43;&#39;
+implementation &#39;org.eclipse.keyple:keyple-plugin-java-api:2.0.&#43;&#39;
+implementation &#39;org.eclipse.keyple:keyple-util-java-lib:2.&#43;&#39;</code></pre>
 </div>
 <div class="tab-pane fade" id=tabs-3-1 role=tabpanel aria-labelled-by=tabs-3-1-tab>
-<pre><code class=language-kotlin>implementation(&#34;org.eclipse.keyple:keyple-util-java-lib:2.&#43;&#34;)
-implementation(&#34;org.eclipse.keyple:keyple-common-java-api:2.0.&#43;&#34;)
-implementation(&#34;org.eclipse.keyple:keyple-plugin-java-api:2.0.&#43;&#34;)</code></pre>
+<pre><code class=language-kotlin>implementation(&#34;org.eclipse.keyple:keyple-common-java-api:2.0.&#43;&#34;)
+implementation(&#34;org.eclipse.keyple:keyple-plugin-java-api:2.0.&#43;&#34;)
+implementation(&#34;org.eclipse.keyple:keyple-util-java-lib:2.&#43;&#34;)</code></pre>
 </div>
 <div class="tab-pane fade" id=tabs-3-2 role=tabpanel aria-labelled-by=tabs-3-2-tab>
 <pre><code class=language-xml>&lt;dependency&gt;
-  &lt;groupId&gt;org.eclipse.keyple&lt;/groupId&gt;
-  &lt;artifactId&gt;keyple-util-java-lib&lt;/artifactId&gt;
-  &lt;version&gt;[2.0.0,3.0.0)&lt;/version&gt;
-&lt;/dependency&gt;
-&lt;dependency&gt;
   &lt;groupId&gt;org.eclipse.keyple&lt;/groupId&gt;
   &lt;artifactId&gt;keyple-common-java-api&lt;/artifactId&gt;
   &lt;version&gt;[2.0.0,2.1.0)&lt;/version&gt;
@@ -319,6 +354,11 @@ implementation(&#34;org.eclipse.keyple:keyple-plugin-java-api:2.0.&#43;&#34;)</c
   &lt;groupId&gt;org.eclipse.keyple&lt;/groupId&gt;
   &lt;artifactId&gt;keyple-plugin-java-api&lt;/artifactId&gt;
   &lt;version&gt;[2.0.0,2.1.0)&lt;/version&gt;
+&lt;/dependency&gt;
+&lt;dependency&gt;
+  &lt;groupId&gt;org.eclipse.keyple&lt;/groupId&gt;
+  &lt;artifactId&gt;keyple-util-java-lib&lt;/artifactId&gt;
+  &lt;version&gt;[2.0.0,3.0.0)&lt;/version&gt;
 &lt;/dependency&gt;</code></pre>
 </div>
 </div>
@@ -334,38 +374,34 @@ Custom Keyple distributed solution
 <div class="collapse card" id=spoiler-3>
 <div class=card-body>
 <p>Please find below the configuration to use when developing an alternate Keyple distributed solution:</p>
-<ul class="nav nav-tabs" id=tabs-2 role=tablist><li class=nav-item>
-<a class="nav-link active tab-Gradle-Groovy" id=tabs-2-0-tab data-toggle=tab href=#tabs-2-0 role=tab onclick='handleClick("Gradle-Groovy")' aria-controls=tabs-2-0 aria-selected=true>
+<hr>
+<p>For the <strong>Local Service</strong> component:</p>
+<ul class="nav nav-tabs" id=tabs-4 role=tablist><li class=nav-item>
+<a class="nav-link active tab-Gradle-Groovy" id=tabs-4-0-tab data-toggle=tab href=#tabs-4-0 role=tab onclick='handleClick("Gradle-Groovy")' aria-controls=tabs-4-0 aria-selected=true>
 Gradle Groovy
 </a>
 </li><li class=nav-item>
-<a class="nav-link tab-Gradle-Kotlin" id=tabs-2-1-tab data-toggle=tab href=#tabs-2-1 role=tab onclick='handleClick("Gradle-Kotlin")' aria-controls=tabs-2-1 aria-selected=false>
+<a class="nav-link tab-Gradle-Kotlin" id=tabs-4-1-tab data-toggle=tab href=#tabs-4-1 role=tab onclick='handleClick("Gradle-Kotlin")' aria-controls=tabs-4-1 aria-selected=false>
 Gradle Kotlin
 </a>
 </li><li class=nav-item>
-<a class="nav-link tab-Maven" id=tabs-2-2-tab data-toggle=tab href=#tabs-2-2 role=tab onclick='handleClick("Maven")' aria-controls=tabs-2-2 aria-selected=false>
+<a class="nav-link tab-Maven" id=tabs-4-2-tab data-toggle=tab href=#tabs-4-2 role=tab onclick='handleClick("Maven")' aria-controls=tabs-4-2 aria-selected=false>
 Maven
 </a>
 </li></ul>
-<div class=tab-content id=tabs-2-content><div class="tab-pane fade show active" id=tabs-2-0 role=tabpanel aria-labelled-by=tabs-2-0-tab>
-<pre><code class=language-gradle>implementation &#39;org.eclipse.keyple:keyple-util-java-lib:2.&#43;&#39;
-implementation &#39;org.eclipse.keyple:keyple-common-java-api:2.0.&#43;&#39;
+<div class=bd-clipboard><button type=button class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onclick="copyTabContentToClipboard('tabs-4',this)">Copy</button></div>
+<div class=tab-content id=tabs-4-content><div class="tab-pane fade show active" id=tabs-4-0 role=tabpanel aria-labelled-by=tabs-4-0-tab>
+<pre><code class=language-gradle>implementation &#39;org.eclipse.keyple:keyple-common-java-api:2.0.&#43;&#39;
 implementation &#39;org.eclipse.keyple:keyple-distributed-local-java-api:2.0.&#43;&#39;
-implementation &#39;org.eclipse.keyple:keyple-distributed-remote-java-api:2.0.&#43;&#39;</code></pre>
+implementation &#39;org.eclipse.keyple:keyple-util-java-lib:2.&#43;&#39;</code></pre>
 </div>
-<div class="tab-pane fade" id=tabs-2-1 role=tabpanel aria-labelled-by=tabs-2-1-tab>
-<pre><code class=language-kotlin>implementation(&#34;org.eclipse.keyple:keyple-util-java-lib:2.&#43;&#34;)
-implementation(&#34;org.eclipse.keyple:keyple-common-java-api:2.0.&#43;&#34;)
+<div class="tab-pane fade" id=tabs-4-1 role=tabpanel aria-labelled-by=tabs-4-1-tab>
+<pre><code class=language-kotlin>implementation(&#34;org.eclipse.keyple:keyple-common-java-api:2.0.&#43;&#34;)
 implementation(&#34;org.eclipse.keyple:keyple-distributed-local-java-api:2.0.&#43;&#34;)
-implementation(&#34;org.eclipse.keyple:keyple-distributed-remote-java-api:2.0.&#43;&#34;)</code></pre>
+implementation(&#34;org.eclipse.keyple:keyple-util-java-lib:2.&#43;&#34;)</code></pre>
 </div>
-<div class="tab-pane fade" id=tabs-2-2 role=tabpanel aria-labelled-by=tabs-2-2-tab>
+<div class="tab-pane fade" id=tabs-4-2 role=tabpanel aria-labelled-by=tabs-4-2-tab>
 <pre><code class=language-xml>&lt;dependency&gt;
-  &lt;groupId&gt;org.eclipse.keyple&lt;/groupId&gt;
-  &lt;artifactId&gt;keyple-util-java-lib&lt;/artifactId&gt;
-  &lt;version&gt;[2.0.0,3.0.0)&lt;/version&gt;
-&lt;/dependency&gt;
-&lt;dependency&gt;
   &lt;groupId&gt;org.eclipse.keyple&lt;/groupId&gt;
   &lt;artifactId&gt;keyple-common-java-api&lt;/artifactId&gt;
   &lt;version&gt;[2.0.0,2.1.0)&lt;/version&gt;
@@ -377,8 +413,52 @@ implementation(&#34;org.eclipse.keyple:keyple-distributed-remote-java-api:2.0.&#
 &lt;/dependency&gt;
 &lt;dependency&gt;
   &lt;groupId&gt;org.eclipse.keyple&lt;/groupId&gt;
+  &lt;artifactId&gt;keyple-util-java-lib&lt;/artifactId&gt;
+  &lt;version&gt;[2.0.0,3.0.0)&lt;/version&gt;
+&lt;/dependency&gt;</code></pre>
+</div>
+</div>
+<hr>
+<p>For the <strong>Remote Plugin</strong> component:</p>
+<ul class="nav nav-tabs" id=tabs-5 role=tablist><li class=nav-item>
+<a class="nav-link active tab-Gradle-Groovy" id=tabs-5-0-tab data-toggle=tab href=#tabs-5-0 role=tab onclick='handleClick("Gradle-Groovy")' aria-controls=tabs-5-0 aria-selected=true>
+Gradle Groovy
+</a>
+</li><li class=nav-item>
+<a class="nav-link tab-Gradle-Kotlin" id=tabs-5-1-tab data-toggle=tab href=#tabs-5-1 role=tab onclick='handleClick("Gradle-Kotlin")' aria-controls=tabs-5-1 aria-selected=false>
+Gradle Kotlin
+</a>
+</li><li class=nav-item>
+<a class="nav-link tab-Maven" id=tabs-5-2-tab data-toggle=tab href=#tabs-5-2 role=tab onclick='handleClick("Maven")' aria-controls=tabs-5-2 aria-selected=false>
+Maven
+</a>
+</li></ul>
+<div class=bd-clipboard><button type=button class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onclick="copyTabContentToClipboard('tabs-5',this)">Copy</button></div>
+<div class=tab-content id=tabs-5-content><div class="tab-pane fade show active" id=tabs-5-0 role=tabpanel aria-labelled-by=tabs-5-0-tab>
+<pre><code class=language-gradle>implementation &#39;org.eclipse.keyple:keyple-common-java-api:2.0.&#43;&#39;
+implementation &#39;org.eclipse.keyple:keyple-distributed-remote-java-api:2.0.&#43;&#39;
+implementation &#39;org.eclipse.keyple:keyple-util-java-lib:2.&#43;&#39;</code></pre>
+</div>
+<div class="tab-pane fade" id=tabs-5-1 role=tabpanel aria-labelled-by=tabs-5-1-tab>
+<pre><code class=language-kotlin>implementation(&#34;org.eclipse.keyple:keyple-common-java-api:2.0.&#43;&#34;)
+implementation(&#34;org.eclipse.keyple:keyple-distributed-remote-java-api:2.0.&#43;&#34;)
+implementation(&#34;org.eclipse.keyple:keyple-util-java-lib:2.&#43;&#34;)</code></pre>
+</div>
+<div class="tab-pane fade" id=tabs-5-2 role=tabpanel aria-labelled-by=tabs-5-2-tab>
+<pre><code class=language-xml>&lt;dependency&gt;
+  &lt;groupId&gt;org.eclipse.keyple&lt;/groupId&gt;
+  &lt;artifactId&gt;keyple-common-java-api&lt;/artifactId&gt;
+  &lt;version&gt;[2.0.0,2.1.0)&lt;/version&gt;
+&lt;/dependency&gt;
+&lt;dependency&gt;
+  &lt;groupId&gt;org.eclipse.keyple&lt;/groupId&gt;
   &lt;artifactId&gt;keyple-distributed-remote-java-api&lt;/artifactId&gt;
   &lt;version&gt;[2.0.0,2.1.0)&lt;/version&gt;
+&lt;/dependency&gt;
+&lt;dependency&gt;
+  &lt;groupId&gt;org.eclipse.keyple&lt;/groupId&gt;
+  &lt;artifactId&gt;keyple-util-java-lib&lt;/artifactId&gt;
+  &lt;version&gt;[2.0.0,3.0.0)&lt;/version&gt;
 &lt;/dependency&gt;</code></pre>
 </div>
 </div>
@@ -524,6 +604,7 @@ implementation(&#34;org.eclipse.keyple:keyple-distributed-remote-java-api:2.0.&#
 <span class=hljs-tag>&lt;<span class=hljs-name>version</span>></span>[1.0.0,1.1.0)<span class=hljs-tag>&lt;/<span class=hljs-name>version</span>></span>
 <span class=hljs-tag>&lt;/<span class=hljs-name>dependency</span>></span></span>
 </code>
+<script type=text/javascript>document.body.onload=function(){updateAppDependencies(1,null),updateCardDependencies(2,null)}</script>
 </div>
 <div class=article-widget>
 <div class=post-nav>
@@ -539,7 +620,7 @@ implementation(&#34;org.eclipse.keyple:keyple-distributed-remote-java-api:2.0.&#
 </div>
 </div>
 <div class=body-footer>
-<p>Last updated on Tue, Sep 7, 2021</p>
+<p>Last updated on Wed, Sep 8, 2021</p>
 </div>
 </article>
 <footer class=site-footer>
@@ -628,7 +709,7 @@ for
     </script>
 <script src=https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin=anonymous></script>
 <script src=https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin=anonymous></script>
-<script src=../../../js/academic.min.953e841b4d2dd60bf573798394d2857d.js></script>
+<script src=../../../js/academic.min.e6ea2bd54d61f696d8eaa4eaec6dcb32.js></script>
 <link rel=stylesheet href=https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css>
 <script src=https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js></script>
 <script src=https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js></script>
