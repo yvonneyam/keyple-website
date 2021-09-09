@@ -1,59 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Developer guides | Eclipse Keyple</title><link>https://keyple.org/docs/developer-guide/</link><atom:link href="https://keyple.org/docs/developer-guide/index.xml" rel="self" type="application/rss+xml"/><description>Developer guides</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Copyright © Eclipse Foundation, Inc. All Rights Reserved.</copyright><image><url>https://keyple.org/images/logo_hu673a59176cd62c570f44ed2728665b48_42188_300x300_fit_lanczos_3.png</url><title>Developer guides</title><link>https://keyple.org/docs/developer-guide/</link></image><item><title>Common concepts</title><link>https://keyple.org/docs/developer-guide/common-concepts/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/docs/developer-guide/common-concepts/</guid><description>&lt;hr>
-&lt;p>This page describes the core elements of &lt;strong>Keyple&lt;/strong>, i.e. the concepts and APIs of &lt;strong>Keyple Core&lt;/strong> that are used to build any application implementing &lt;strong>Keyple&lt;/strong>.&lt;/p>
-&lt;p>It is essential for the future user of &lt;strong>Keyple&lt;/strong> to be familiar with what is said in this chapter because the other modules made available by the project are all dependent on &lt;strong>Keyple Core&lt;/strong>.&lt;/p>
-&lt;hr>
-&lt;h2 id="reader">Reader&lt;/h2>
-&lt;p>Keyple&amp;rsquo;s primary goal being to interact with smart cards (or smartphones) worn by individuals, it is logical to put the Reader at the top of &lt;strong>Keyple Core&lt;/strong>&amp;rsquo;s concepts.&lt;/p>
-&lt;p>Indeed, it is through the reader interfaces that all interactions with the smart cards will take place, either directly via &lt;strong>Keyple Core&lt;/strong> or using an extension (such as &lt;strong>Keyple Calypso&lt;/strong>).&lt;/p>
-&lt;p>These interfaces provide the means to&lt;/p>
-&lt;ul>
-&lt;li>identify the underlying physical reader,&lt;/li>
-&lt;li>manage communication protocols,&lt;/li>
-&lt;li>detect the presence and communicate with smart cards.&lt;/li>
-&lt;/ul>
-&lt;p>The reader concept also applies to the hardware interfaces used to communicate with security elements such as SAMs (Secure Access Modules), which are sometimes integrated into devices and the virtual interfaces represented by the remote implementations.&lt;/p>
-&lt;p>
-&lt;a href="../../docs/architecture/keyple-core/#reader-access">More information&lt;/a>&lt;/p>
-&lt;hr>
-&lt;h2 id="plugin">Plugin&lt;/h2>
-&lt;p>In Keyple language a plugin is a service that allows the management of readers of a certain type.
-The plugin is responsible for informing the application about the availability of readers.
-The readers of the same plugin are usually hardware linked to the same physical interface.&lt;/p>
-&lt;p>Depending on its profile, an application may use different types of plugins to communicate with the different elements it needs (card, SAM).&lt;/p>
-&lt;p>The Plugin interface essentially allows to list and retrieve the available readers.&lt;/p>
-&lt;p>
-&lt;a href="../../docs/architecture/keyple-core/#reader-access">More information&lt;/a>&lt;/p>
-&lt;hr>
-&lt;h2 id="smart-card-service">Smart card service&lt;/h2>
-&lt;p>This is the &lt;strong>Keyple Core&lt;/strong> service that concentrates the knowledge of active plugins and readers.&lt;/p>
-&lt;p>At startup, a Keyple application must register the plugins it uses. Conversely, it can also unregister them.&lt;/p>
-&lt;p>The &lt;strong>SmartCardService&lt;/strong> will then make sure that the resources used are properly released.&lt;/p>
-&lt;p>
-&lt;a href="../../docs/architecture/keyple-core/#reader-access">More information&lt;/a>&lt;/p>
-&lt;hr>
-&lt;h2 id="observation">Observation&lt;/h2>
-&lt;p>The observation concept applies to readers as well as to plugins; optional, it is used depending on the needs.&lt;/p>
-&lt;p>It consists in monitoring changes such as reader connection/disconnection or card insertion/removal and informing the observing application through a dedicated interface.&lt;/p>
-&lt;p>Not all plugins and readers are observable.&lt;/p>
-&lt;p>
-&lt;a href="../../docs/architecture/keyple-core/#reader-notifications">More information&lt;/a>&lt;/p>
-&lt;hr>
-&lt;h2 id="selection">Selection&lt;/h2>
-&lt;p>In Keyple the concept of selection is derived from the application selection defined by the ISO7816-4 standard.&lt;/p>
-&lt;p>It supplements it by managing cards that do not have the standard command using identification mechanisms based on Answer To Reset and the communication protocol, and also by allowing the execution of commands immediately following application selection or detection.&lt;/p>
-&lt;p>This principle optimizes the processing by allowing the application to elaborate advanced card discovery requests.&lt;/p>
-&lt;p>Several targets can be defined by the application according to the different customer cards expected.&lt;/p>
-&lt;p>The &lt;strong>default selection&lt;/strong> principle consists in providing an observable reader with a set of selection cases corresponding to the expected cards and receiving notifications containing not only the card identification but also the result of all additional commands that the application will have attached.&lt;/p>
-&lt;p>
-&lt;a href="../../docs/architecture/keyple-core/#card-selection">More information&lt;/a>&lt;/p>
-&lt;hr>
-&lt;h2 id="abstract-smart-card">Abstract smart card&lt;/h2>
-&lt;p>The &lt;strong>abstract smart card&lt;/strong> concept is used by specific extensions (e.g. &lt;strong>Keyple Calypso&lt;/strong>) and by the &lt;strong>Keyple Core&lt;/strong> selection mechanism.
-It corresponds to an abstract container model implemented by the extension specific to a card type and returned by the selection process.&lt;/p>
-&lt;p>This container will be able to carry all the useful information known about the card.&lt;/p>
-&lt;p>Note: this concept, mentioned here for understanding, should not appear to the application developer if he uses a card extension.&lt;/p>
-&lt;p>
-&lt;a href="../../docs/architecture/keyple-core/#card-selection">More information&lt;/a>&lt;/p></description></item><item><title>Standalone application</title><link>https://keyple.org/docs/developer-guide/standalone-application/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/docs/developer-guide/standalone-application/</guid><description>&lt;hr>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Developer guides | Eclipse Keyple</title><link>https://keyple.org/docs/developer-guide/</link><atom:link href="https://keyple.org/docs/developer-guide/index.xml" rel="self" type="application/rss+xml"/><description>Developer guides</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Copyright © Eclipse Foundation, Inc. All Rights Reserved.</copyright><image><url>https://keyple.org/images/logo_hu673a59176cd62c570f44ed2728665b48_42188_300x300_fit_lanczos_3.png</url><title>Developer guides</title><link>https://keyple.org/docs/developer-guide/</link></image><item><title>Standalone application</title><link>https://keyple.org/docs/developer-guide/standalone-application/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/docs/developer-guide/standalone-application/</guid><description>&lt;hr>
 &lt;h2 id="overview">Overview&lt;/h2>
 &lt;p>A standalone application is an application that runs in a device in contact
 with the end user.&lt;/p>
@@ -73,7 +18,7 @@ components:
 &lt;h2 id="before-you-start">Before you start&lt;/h2>
 &lt;ol>
 &lt;li>In pre-requisite, read the
-&lt;a href="../../docs/developer-guide/common-concepts/">common concepts&lt;/a> page and become familiar with the basic
+&lt;a href="../../docs-1.0/developer-guide/common-concepts/">common concepts&lt;/a> page and become familiar with the basic
 concepts on which &lt;strong>Keyple&lt;/strong> is based.&lt;/li>
 &lt;li>Any implementation of a Keyple application starts with the
 implementation of &lt;strong>Keyple Core&lt;/strong>, please study the
@@ -96,7 +41,7 @@ extensions such as &lt;strong>Keyple Calypso&lt;/strong>.&lt;/li>
 &lt;hr>
 &lt;h2 id="workflow">Workflow&lt;/h2>
 &lt;p>&lt;strong>Keyple Core&lt;/strong> is built around the concepts described
-&lt;a href="../../docs/developer-guide/common-concepts/">here&lt;/a> and sometimes proposes several ways to perform
+&lt;a href="../../docs-1.0/developer-guide/common-concepts/">here&lt;/a> and sometimes proposes several ways to perform
 an action or to achieve a result depending on the needs of the
 application.&lt;/p>
 &lt;p>The purpose of this section is to guide you in its use.&lt;/p>
@@ -1341,7 +1286,7 @@ secure Calypso transaction seamlessly. It completely hides the details of the AP
 &lt;ol>
 &lt;li>In pre-requisite, have knowledge of the standard Calypso.&lt;/li>
 &lt;li>Read the
-&lt;a href="../../docs/developer-guide/common-concepts/">common concepts&lt;/a> page and become familiar with the basic concepts on which &lt;strong>Keyple&lt;/strong> is based.&lt;/li>
+&lt;a href="../../docs-1.0/developer-guide/common-concepts/">common concepts&lt;/a> page and become familiar with the basic concepts on which &lt;strong>Keyple&lt;/strong> is based.&lt;/li>
 &lt;li>Any implementation of a Keyple application starts with the implementation of &lt;strong>Keyple Core&lt;/strong>, please study the
 &lt;a href="../../docs/developer-guide/standalone-application/">workflow&lt;/a> proposed in Standalone application guide.&lt;/li>
 &lt;li>Read chapter

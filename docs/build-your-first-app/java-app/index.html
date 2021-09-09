@@ -26,7 +26,7 @@
 <meta property="og:title" content="Build your first Java application | Eclipse Keyple">
 <meta property="og:description" content="This quick start describes how to create a ready-to-execute Java command-line application that runs a simple transaction based on a Calypso portable object involving two smart card readers."><meta property="og:image" content="https://keyple.org/images/logo_hu673a59176cd62c570f44ed2728665b48_42188_300x300_fit_lanczos_3.png">
 <meta property="twitter:image" content="https://keyple.org/images/logo_hu673a59176cd62c570f44ed2728665b48_42188_300x300_fit_lanczos_3.png"><meta property="og:locale" content="en-us">
-<meta property="article:modified_time" content="2021-09-07T15:35:08+02:00">
+<meta property="article:modified_time" content="2021-09-09T17:01:09+02:00">
 <script src=https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js integrity="sha256-5VhCqFam2Cn+yjw61zbBNrbHVJ6SRydPeKopYlngbiQ=" crossorigin=anonymous></script>
 <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css integrity="sha256-zQ0LblD/Af8vOppw18+2anxsuaz3pWYyVWi+bTvTH8Q=" crossorigin=anonymous>
 <script>window.addEventListener("load",function(){window.cookieconsent.initialise({palette:{popup:{background:"#1D87BB",text:"#FFFFFF"},button:{background:"#FFFFFF",text:"#1D87BB"}},theme:"classic",type:"opt-in",content:{header:'Cookiessss used on the website!',message:"Some Eclipse Foundation pages use cookies to better serve you when you return to the site. You can set your browser to notify you before you receive a cookie or turn off cookies. If you do so, however, some areas of some sites may not function properly. To read Eclipse Foundation Privacy Policy ",allow:"Allow cookies",deny:"Decline",dismiss:"Got it!",link:"click here",href:'https://www.eclipse.org/legal/privacy.php'}})})</script>
@@ -78,10 +78,11 @@
 <a class=dropdown-item href=../../../what-is-keyple/who-is-it-for/><span>Who is it for?</span></a>
 <a class=dropdown-item href=../../../what-is-keyple/what-is-calypso/><span>What is Calypso®?</span></a>
 <a class=dropdown-item href=../../../what-is-keyple/main-features/><span>Keyple's main features</span></a>
+<a class=dropdown-item href=../../../#news><span>News</span></a>
 </div>
 </li>
 <li class=nav-item>
-<a class=nav-link href=../../../#news><span>News</span></a>
+<a class=nav-link href=../../../roadmap/><span>Roadmap</span></a>
 </li>
 <li class=nav-item>
 <a class=nav-link href=../../../docs/overview><span>Learn</span></a>
@@ -97,13 +98,8 @@
 <a class=dropdown-item href=../../../components-cpp-0.9/><span>C++ implementation v0.9 (deprecated)</span></a>
 </div>
 </li>
-<li class="nav-item dropdown">
-<a href=# class="nav-link dropdown-toggle" data-toggle=dropdown aria-haspopup=true><span>Support & Trainings</span><span class=caret></span>
-</a>
-<div class=dropdown-menu>
-<a class=dropdown-item href=../../../support-trainings/add-support-trainings/><span>Add your support & trainings</span></a>
-<a class=dropdown-item href=../../../support-trainings/cna/><span>Calypso Networks Association</span></a>
-</div>
+<li class=nav-item>
+<a class=nav-link href=../../../external-extensions-and-support/><span>External extensions & support</span></a>
 </li>
 </ul>
 </div>
@@ -128,6 +124,10 @@
 <li><a href=../../../docs/></a></li>
 <div class=docs-toc-item>
 <a class=docs-toc-link href=../../../docs/overview/>Overview</a>
+<ul class="nav docs-sidenav">
+<li><a href=../../../docs/overview/key-concepts/>Key concepts</a></li>
+<li><a href=../../../docs/overview/architecture/>Architecture</a></li>
+</ul>
 </div>
 <div class=docs-toc-item>
 <a class=docs-toc-link href=../../../docs/build-your-first-app/>Build your first app</a>
@@ -140,7 +140,6 @@
 <div class=docs-toc-item>
 <a class=docs-toc-link href=../../../docs/developer-guide/>Developer guides</a>
 <ul class="nav docs-sidenav">
-<li><a href=../../../docs/developer-guide/common-concepts/>Common concepts</a></li>
 <li><a href=../../../docs/developer-guide/standalone-application/>Standalone application</a></li>
 <li><a href=../../../docs/developer-guide/distributed-application/>Distributed application</a></li>
 <li><a href=../../../docs/developer-guide/calypso-application/>Calypso application</a></li>
@@ -149,12 +148,15 @@
 </ul>
 </div>
 <div class=docs-toc-item>
-<a class=docs-toc-link href=../../../docs/architecture/>Architecture</a>
+<a class=docs-toc-link href=../../../docs/keyple-in-depth/>Keyple in depth</a>
 <ul class="nav docs-sidenav">
-<li><a href=../../../docs/architecture/keyple-global/>Global Solution</a></li>
-<li><a href=../../../docs/architecture/keyple-core/>Keyple Core</a></li>
-<li><a href=../../../docs/architecture/keyple-calypso/>Keyple Calypso</a></li>
+<li><a href=../../../docs/keyple-in-depth/core-services/>Core services</a></li>
+<li><a href=../../../docs/keyple-in-depth/calypso-card/>Calypso card extension</a></li>
+<li><a href=../../../docs/keyple-in-depth/build-ci-process/>Build & CI</a></li>
 </ul>
+</div>
+<div class=docs-toc-item>
+<a class=docs-toc-link href=../../../docs/contribute/>Contribute to Keyple</a>
 </div>
 </ul>
 </nav>
@@ -194,25 +196,24 @@
 <hr>
 <p>This quick start describes how to create a ready-to-execute Java
 command-line application that runs a simple transaction based on
-a Calypso portable object (PO) involving two smart card readers.</p>
+a Calypso Card involving two smart card readers.</p>
 <div class="alert alert-note">
 <div>
 The demonstration application created for this quick start requires a
-Calypo PO (contactless smart card, mobile phone with contactless
-communication) and a Calypo Secure Access Module (SAM).
+Calypo Card (contactless smart card, NFC mobile phone with a Calypso applet or application) and a Calypo Secure Access Module (SAM).
 </div>
 </div>
 <p>We will use three main components of Keyple:</p>
 <ul>
 <li>
-<a href=https://keyple.org/components-java/core/>Keyple Core</a>
+<a href=https://keyple.org/components-java/core/>Keyple Service Java Library</a>
 which is the base component to which all the others refer,</li>
 <li>
-<a href=https://keyple.org/components-java/plugins/keyple-plugin-pcsc-java-lib/>Keyple PC/SC plugin</a>
-to provide the ability to manage PC/SC readers,</li>
+<a href=https://keyple.org/components-java/standard-reader-plugins/keyple-plugin-pcsc-java-lib/>Keyple Plugin PC/SC</a>
+add-on to provide the ability to manage PC/SC readers,</li>
 <li>
-<a href=https://keyple.org/components-java/card-extensions/keyple-card-calypso-java-lib/>Keyple Calypso extension</a>
-to handle the commands sent to the Calypso PO and the Calypso SAM.</li>
+<a href=https://keyple.org/components-java/card-extensions/keyple-card-calypso-java-lib/>Keyple Card Calypso</a>
+add-on to handle the commands sent to the Calypso PO and the Calypso SAM.</li>
 </ul>
 <p>In this guide
 <a href=https://gradle.org/ target=_blank rel=noopener>Gradle</a> is used as build automation
@@ -223,7 +224,7 @@ installed in your machine, you will need to download :</p>
 <ul>
 <li>Java 1.6 or newer</li>
 <li>
-<a href=https://gradle.org/install/ target=_blank rel=noopener>Gradle (any version)</a></li>
+<a href=https://gradle.org/install/ target=_blank rel=noopener>Gradle (6.8.+)</a></li>
 </ul>
 <p>We recommend that you use a Java IDE like
 <a href=https://www.eclipse.org/ide/ target=_blank rel=noopener>Eclipse</a> or
@@ -234,7 +235,27 @@ Gradle project.</p>
 <p>Create a new Java project and add the following statements to your
 <code>build.gradle</code> file to import the Keyple components into your
 project:</p>
-<pre><code class=language-gradle>apply plugin: 'java'
+<ul class="nav nav-tabs" id=tabs-4 role=tablist><li class=nav-item>
+<a class="nav-link active tab-Gradle-Groovy" id=tabs-4-0-tab data-toggle=tab href=#tabs-4-0 role=tab onclick='handleClick("Gradle-Groovy")' aria-controls=tabs-4-0 aria-selected=true>
+Gradle Groovy
+</a>
+</li><li class=nav-item>
+<a class="nav-link tab-Gradle-Kotlin" id=tabs-4-1-tab data-toggle=tab href=#tabs-4-1 role=tab onclick='handleClick("Gradle-Kotlin")' aria-controls=tabs-4-1 aria-selected=false>
+Gradle Kotlin
+</a>
+</li><li class=nav-item>
+<a class="nav-link tab-Maven" id=tabs-4-2-tab data-toggle=tab href=#tabs-4-2 role=tab onclick='handleClick("Maven")' aria-controls=tabs-4-2 aria-selected=false>
+Maven
+</a>
+</li><li class=nav-item>
+<a class="nav-link tab-Java" id=tabs-4-3-tab data-toggle=tab href=#tabs-4-3 role=tab onclick='handleClick("Java")' aria-controls=tabs-4-3 aria-selected=false>
+Java
+</a>
+</li></ul>
+<div class=bd-clipboard><button type=button class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onclick="copyTabContentToClipboard('tabs-4',this)">Copy</button></div>
+<div class=tab-content id=tabs-4-content><div class="tab-pane fade show active" id=tabs-4-0 role=tabpanel aria-labelled-by=tabs-4-0-tab>
+<pre><code class=language-gradle>gradle
+apply plugin: &#39;java&#39;
 
 repositories {
     mavenCentral()
@@ -242,19 +263,75 @@ repositories {
 
 dependencies {
     //Keyple core is a mandatory library for using Keyple, in this case import the last version of keyple-java-core
-    implementation 'org.eclipse.keyple:keyple-java-core:1.0.0'
+    implementation &#39;org.eclipse.keyple:keyple-java-core:1.0.0&#39;
 
     //Import Calypso library to support Calypso Portable Object, in this case import the last version of keyple-java-calypso
-    implementation 'org.eclipse.keyple:keyple-java-calypso:1.0.0'
+    implementation &#39;org.eclipse.keyple:keyple-java-calypso:1.0.0&#39;
 
     //Import PC/SC library to use a Pcsc reader, in this case import the last version of keyple-java-plugin-pcsc
-    implementation 'org.eclipse.keyple:keyple-java-plugin-pcsc:1.0.0'
+    implementation &#39;org.eclipse.keyple:keyple-java-plugin-pcsc:1.0.0&#39;
 
     //Import logger lib
-    implementation 'org.slf4j:slf4j-api:1.7.25'
-    implementation &quot;org.slf4j:slf4j-simple:1.7.25&quot;
+    implementation &#39;org.slf4j:slf4j-api:1.7.25&#39;
+    implementation &#34;org.slf4j:slf4j-simple:1.7.25&#34;
+}</code></pre>
+</div>
+<div class="tab-pane fade" id=tabs-4-1 role=tabpanel aria-labelled-by=tabs-4-1-tab>
+<pre><code class=language-gradle>gradle
+apply plugin: &#39;java&#39;
+
+repositories {
+mavenCentral()
 }
-</code></pre>
+
+dependencies {
+//Keyple core is a mandatory library for using Keyple, in this case import the last version of keyple-java-core
+implementation &#39;org.eclipse.keyple:keyple-java-core:1.0.0&#39;
+
+    //Import Calypso library to support Calypso Portable Object, in this case import the last version of keyple-java-calypso
+    implementation &#39;org.eclipse.keyple:keyple-java-calypso:1.0.0&#39;
+
+    //Import PC/SC library to use a Pcsc reader, in this case import the last version of keyple-java-plugin-pcsc
+    implementation &#39;org.eclipse.keyple:keyple-java-plugin-pcsc:1.0.0&#39;
+
+    //Import logger lib
+    implementation &#39;org.slf4j:slf4j-api:1.7.25&#39;
+    implementation &#34;org.slf4j:slf4j-simple:1.7.25&#34;
+}</code></pre>
+</div>
+<div class="tab-pane fade" id=tabs-4-2 role=tabpanel aria-labelled-by=tabs-4-2-tab>
+<pre><code class=language-xml>ADD
+CCCC
+BGB</code></pre>
+</div>
+<div class="tab-pane fade" id=tabs-4-3 role=tabpanel aria-labelled-by=tabs-4-3-tab>
+<pre><code class=language-java>//...
+
+// Prepare a SamSelector that identifies the Calypso SAM
+SamSelector samSelector = SamSelector.builder().samRevision(SamRevision.AUTO).build();
+
+// Perform the SAM selection
+CardSelectionService samSelection = new CardSelectionService();
+samSelection.prepareSelection(new SamSelection(samSelector));
+
+if (!samReader.isCardPresent()) {
+throw new IllegalStateException(&#34;No SAM is present in the reader &#34; &#43; samReader.getName());
+}
+
+CardSelectionsResult cardSelectionsResult = samSelection.processExplicitSelections(samReader);
+
+if (!cardSelectionsResult.hasActiveSelection()) {
+throw new IllegalStateException(&#34;SAM matching failed!&#34;);
+}
+
+CalypsoSam calypsoSam = (CalypsoSam) cardSelectionsResult.getActiveSmartCard();
+
+// Associate the calypsoSam and the samReader to create a samResource
+CardResource&lt;CalypsoSam&gt; samResource = new CardResource&lt;CalypsoSam&gt;(samReader, calypsoSam);
+
+//...</code></pre>
+</div>
+</div>
 <p>If necessary, also create the usual tree in which the Java code of this
 guide will be placed, namely the folders: <code>\src\main\java</code></p>
 <hr>
@@ -660,7 +737,7 @@ public class DemoPoAuthentication  {
 </div>
 </div>
 <div class=body-footer>
-<p>Last updated on Tue, Sep 7, 2021</p>
+<p>Last updated on Thu, Sep 9, 2021</p>
 </div>
 </article>
 <footer class=site-footer>

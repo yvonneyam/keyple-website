@@ -78,10 +78,11 @@
 <a class=dropdown-item href=../../what-is-keyple/who-is-it-for/><span>Who is it for?</span></a>
 <a class=dropdown-item href=../../what-is-keyple/what-is-calypso/><span>What is Calypso®?</span></a>
 <a class=dropdown-item href=../../what-is-keyple/main-features/><span>Keyple's main features</span></a>
+<a class=dropdown-item href=../../#news><span>News</span></a>
 </div>
 </li>
 <li class=nav-item>
-<a class=nav-link href=../../#news><span>News</span></a>
+<a class=nav-link href=../../roadmap/><span>Roadmap</span></a>
 </li>
 <li class=nav-item>
 <a class="nav-link active" href=../../docs/overview><span>Learn</span></a>
@@ -97,13 +98,8 @@
 <a class=dropdown-item href=../../components-cpp-0.9/><span>C++ implementation v0.9 (deprecated)</span></a>
 </div>
 </li>
-<li class="nav-item dropdown">
-<a href=# class="nav-link dropdown-toggle" data-toggle=dropdown aria-haspopup=true><span>Support & Trainings</span><span class=caret></span>
-</a>
-<div class=dropdown-menu>
-<a class=dropdown-item href=../../support-trainings/add-support-trainings/><span>Add your support & trainings</span></a>
-<a class=dropdown-item href=../../support-trainings/cna/><span>Calypso Networks Association</span></a>
-</div>
+<li class=nav-item>
+<a class=nav-link href=../../external-extensions-and-support/><span>External extensions & support</span></a>
 </li>
 </ul>
 </div>
@@ -128,6 +124,10 @@
 <li><a href=../../docs/></a></li>
 <div class=docs-toc-item>
 <a class="docs-toc-link active" href=../../docs/overview/>Overview</a>
+<ul class="nav docs-sidenav">
+<li><a href=../../docs/overview/key-concepts/>Key concepts</a></li>
+<li><a href=../../docs/overview/architecture/>Architecture</a></li>
+</ul>
 </div>
 <div class=docs-toc-item>
 <a class=docs-toc-link href=../../docs/build-your-first-app/>Build your first app</a>
@@ -140,7 +140,6 @@
 <div class=docs-toc-item>
 <a class=docs-toc-link href=../../docs/developer-guide/>Developer guides</a>
 <ul class="nav docs-sidenav">
-<li><a href=../../docs/developer-guide/common-concepts/>Common concepts</a></li>
 <li><a href=../../docs/developer-guide/standalone-application/>Standalone application</a></li>
 <li><a href=../../docs/developer-guide/distributed-application/>Distributed application</a></li>
 <li><a href=../../docs/developer-guide/calypso-application/>Calypso application</a></li>
@@ -149,12 +148,15 @@
 </ul>
 </div>
 <div class=docs-toc-item>
-<a class=docs-toc-link href=../../docs/architecture/>Architecture</a>
+<a class=docs-toc-link href=../../docs/keyple-in-depth/>Keyple in depth</a>
 <ul class="nav docs-sidenav">
-<li><a href=../../docs/architecture/keyple-global/>Global Solution</a></li>
-<li><a href=../../docs/architecture/keyple-core/>Keyple Core</a></li>
-<li><a href=../../docs/architecture/keyple-calypso/>Keyple Calypso</a></li>
+<li><a href=../../docs/keyple-in-depth/core-services/>Core services</a></li>
+<li><a href=../../docs/keyple-in-depth/calypso-card/>Calypso card extension</a></li>
+<li><a href=../../docs/keyple-in-depth/build-ci-process/>Build & CI</a></li>
 </ul>
+</div>
+<div class=docs-toc-item>
+<a class=docs-toc-link href=../../docs/contribute/>Contribute to Keyple</a>
 </div>
 </ul>
 </nav>
@@ -164,30 +166,20 @@
 <div class=docs-article-container>
 <h1>Overview</h1>
 <div class=article-style>
+<div class="alert alert-note">
+<div>
+The documentation of the version <strong>1.0</strong> of Keyple (deprecated) is accessible <a href=https://keyple.org/docs-1.0/>here</a>.
+</div>
+</div>
 <h2 id=about-this-documentation>About this documentation</h2>
 <p>This documentation is constantly evolving according to the feedback from its readers. Do not hesitate to
 <a href=https://github.com/eclipse/keyple-website/issues target=_blank rel=noopener>open a ticket</a> or to join our
 <a href=https://accounts.eclipse.org/mailing-list/keyple-dev target=_blank rel=noopener>mailing list</a> with questions and/or any topic you think deserves clarification or seems confusing.</p>
-<div class="alert alert-note">
-<div>
-The documentation of the deprecated version <strong>1.0</strong> of Keyple is accessible <a href=https://keyple.org/docs-1.0/>here</a>.
-</div>
-</div>
-<h2 id=global-architecture>Global Architecture</h2>
-<figure id=figure-global-architecture-of-eclipse-keyple>
-<a data-fancybox href=../../media/docs-overview/Keyple-components.svg data-caption="Global Architecture of Eclipse Keyple™">
-<img src=../../media/docs-overview/Keyple-components.svg alt>
-</a>
-<figcaption>
-Global Architecture of Eclipse Keyple™
-</figcaption>
-</figure>
-<p>Eclipse Keyple™ is currently divided in two major layers:</p>
-<ul>
-<li>The ‘Keyple Core' : a smart card API which allows managing smart card readers in a generic way, whaterver the reader driver or environment, and for standalone or distributed solution.</li>
-<li>A ‘Calypso Keyple extension' : a high level Calypso Processing API allowing to operate commands with a Calypso Portable Object, and to manage a secure Calypso transaction.</li>
+<hr>
+<ul class=list-unstyled>
+<li><h5><a href=../../docs/overview/key-concepts/>Key concepts</a></h5> <p>A glossary of key terms encountered in the context of the Keyple solution.</p></li>
+<li><h5><a href=../../docs/overview/architecture/>Architecture</a></h5> <p>Overall presentation of the Keyple architecture.</p></li>
 </ul>
-<p>Dedicated reader’s plugins have to be implemented in order to interface the Plugin API with the specific reader’s drivers.</p>
 </div>
 <div class=article-widget>
 <div class=post-nav>
@@ -195,7 +187,7 @@ Global Architecture of Eclipse Keyple™
 </div>
 </div>
 <div class=body-footer>
-<p>Last updated on Mon, Aug 30, 2021</p>
+<p>Last updated on Thu, Sep 9, 2021</p>
 </div>
 </article>
 <footer class=site-footer>

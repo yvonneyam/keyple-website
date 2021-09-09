@@ -324,7 +324,7 @@ id="tabs-1-2" role="tabpanel" aria-labelled-by="tabs-1-2-tab">
 &lt;/div>
 &lt;/div>
 &lt;h2 id="overview">Overview&lt;/h2>
-&lt;p>The &lt;strong>Keyple Service Resource Java Library&lt;/strong> is an &lt;strong>addon&lt;/strong> providing profile-based card resource allocation mechanism.&lt;/p>
+&lt;p>The &lt;strong>Keyple Service Resource Java Library&lt;/strong> is an &lt;strong>add-on&lt;/strong> providing profile-based card resource allocation mechanism.&lt;/p>
 &lt;p>Therefore, it can be used by developers of applications or card extensions.&lt;/p>
 &lt;h2 id="documentation">Documentation&lt;/h2>
 &lt;ul>
