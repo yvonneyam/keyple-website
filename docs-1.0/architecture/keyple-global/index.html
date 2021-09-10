@@ -26,7 +26,7 @@
 <meta property="og:title" content="Global Solution | Eclipse Keyple">
 <meta property="og:description" content="Version 1.0 of the documentation is no longer actively maintained. The site that you are currently viewing is an archived snapshot. For up-to-date documentation, see the latest version.   Overview The Eclipse Keyple™ solution provides currently 2 modules:"><meta property="og:image" content="https://keyple.org/images/logo_hu673a59176cd62c570f44ed2728665b48_42188_300x300_fit_lanczos_3.png">
 <meta property="twitter:image" content="https://keyple.org/images/logo_hu673a59176cd62c570f44ed2728665b48_42188_300x300_fit_lanczos_3.png"><meta property="og:locale" content="en-us">
-<meta property="article:modified_time" content="2021-09-09T17:01:09+02:00">
+<meta property="article:modified_time" content="2021-09-10T15:57:00+02:00">
 <script src=https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js integrity="sha256-5VhCqFam2Cn+yjw61zbBNrbHVJ6SRydPeKopYlngbiQ=" crossorigin=anonymous></script>
 <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css integrity="sha256-zQ0LblD/Af8vOppw18+2anxsuaz3pWYyVWi+bTvTH8Q=" crossorigin=anonymous>
 <script>window.addEventListener("load",function(){window.cookieconsent.initialise({palette:{popup:{background:"#1D87BB",text:"#FFFFFF"},button:{background:"#FFFFFF",text:"#1D87BB"}},theme:"classic",type:"opt-in",content:{header:'Cookiessss used on the website!',message:"Some Eclipse Foundation pages use cookies to better serve you when you return to the site. You can set your browser to notify you before you receive a cookie or turn off cookies. If you do so, however, some areas of some sites may not function properly. To read Eclipse Foundation Privacy Policy ",allow:"Allow cookies",deny:"Decline",dismiss:"Got it!",link:"click here",href:'https://www.eclipse.org/legal/privacy.php'}})})</script>
@@ -207,8 +207,8 @@ Version 1.0 of the documentation is no longer actively maintained. The site that
 <li>the <strong>Keyple Calypso</strong>, a first smart card solution extension built on the Keyple Core, dedicated to manage Calypso processing, Calypso card identification, card command generation, card data recovery, authentication with the secure session.</li>
 </ul>
 <figure id=figure-keyple-architecture-global>
-<a data-fancybox href=../../../media/architecture/Keyple_Architecture_Global.svg data-caption="Keyple Architecture Global">
-<img src=../../../media/architecture/Keyple_Architecture_Global.svg alt>
+<a data-fancybox href=../../../media/archive-1.0/architecture/Keyple_Architecture_Global.svg data-caption="Keyple Architecture Global">
+<img src=../../../media/archive-1.0/architecture/Keyple_Architecture_Global.svg alt>
 </a>
 <figcaption>
 Keyple Architecture Global
@@ -226,8 +226,8 @@ Keyple Architecture Global
 <p>The Card API is a low-level interface to manage the transmission of APDU commands with a smart card.
 A terminal application operating processing with a specific smart card solution could be implemented directly on top the Card API.</p>
 <figure id=figure-keyple-architecture-application-integration>
-<a data-fancybox href=../../../media/architecture/Keyple_Architecture_Application_Integration.svg data-caption="Keyple Architecture Application Integration">
-<img src=../../../media/architecture/Keyple_Architecture_Application_Integration.svg alt>
+<a data-fancybox href=../../../media/archive-1.0/architecture/Keyple_Architecture_Application_Integration.svg data-caption="Keyple Architecture Application Integration">
+<img src=../../../media/archive-1.0/architecture/Keyple_Architecture_Application_Integration.svg alt>
 </a>
 <figcaption>
 Keyple Architecture Application Integration
@@ -240,8 +240,8 @@ This is how the Keyple Calypso extension has be defined, the Calypso API is a hi
 <h3 id=native-integration>native integration</h3>
 <p>The smart card readers could be directly integrated with the Keyple Core. By interfacing through the Plugin API, a specific plugin dedicated to a smart card reader solution, the Keyple Core could have the capability to fully manage the smart card readers corresponding to this native plugin.</p>
 <figure id=figure-keyple-architecture-reader-integration-native>
-<a data-fancybox href=../../../media/architecture/Keyple_Architecture_Reader_Integration_native.svg data-caption="Keyple Architecture Reader Integration Native">
-<img src=../../../media/architecture/Keyple_Architecture_Reader_Integration_native.svg alt>
+<a data-fancybox href=../../../media/archive-1.0/architecture/Keyple_Architecture_Reader_Integration_native.svg data-caption="Keyple Architecture Reader Integration Native">
+<img src=../../../media/archive-1.0/architecture/Keyple_Architecture_Reader_Integration_native.svg alt>
 </a>
 <figcaption>
 Keyple Architecture Reader Integration Native
@@ -249,8 +249,8 @@ Keyple Architecture Reader Integration Native
 </figure>
 <p>The Eclipse Keyple™ project provides the plugin for the main standard smart card reader solutions.</p>
 <figure id=figure-keyple-architecture-native-plugins>
-<a data-fancybox href=../../../media/architecture/Keyple_Architecture_Native_Plugins.svg data-caption="Keyple Architecture Native Plugins">
-<img src=../../../media/architecture/Keyple_Architecture_Native_Plugins.svg alt>
+<a data-fancybox href=../../../media/archive-1.0/architecture/Keyple_Architecture_Native_Plugins.svg data-caption="Keyple Architecture Native Plugins">
+<img src=../../../media/archive-1.0/architecture/Keyple_Architecture_Native_Plugins.svg alt>
 </a>
 <figcaption>
 Keyple Architecture Native Plugins
@@ -264,8 +264,8 @@ Keyple Architecture Native Plugins
 <h3 id=hybrid-integration>hybrid integration</h3>
 <p>It&rsquo;s also possible to integrate Keyple in a terminal solution already embedding not Keyple based terminal applications operating smart card solutions. In those kinds of terminal, a Reader Manager has already the direct control on a smart card reader and manage the smart card detection: depending on the type of smart card identified on the reader, a specific terminal application is requested to operated the processing of the smart card.</p>
 <figure id=figure-keyple-architecture-hybrid-plugins>
-<a data-fancybox href=../../../media/architecture/Keyple_Architecture_Reader_Integration_hybrid.svg data-caption="Keyple Architecture Hybrid Plugins">
-<img src=../../../media/architecture/Keyple_Architecture_Reader_Integration_hybrid.svg alt>
+<a data-fancybox href=../../../media/archive-1.0/architecture/Keyple_Architecture_Reader_Integration_hybrid.svg data-caption="Keyple Architecture Hybrid Plugins">
+<img src=../../../media/archive-1.0/architecture/Keyple_Architecture_Reader_Integration_hybrid.svg alt>
 </a>
 <figcaption>
 Keyple Architecture Hybrid Plugins
@@ -278,8 +278,8 @@ Keyple Architecture Hybrid Plugins
 <h3 id=stand-alone>stand-alone</h3>
 <p>By default, a terminal application manages the processing of a specific smart card in stand-alone with its local readers.</p>
 <figure id=figure-keyple-architecture-local-plugin>
-<a data-fancybox href=../../../media/architecture/Keyple_Architecture_Local_Plugin.svg data-caption="Keyple Architecture Local Plugin">
-<img src=../../../media/architecture/Keyple_Architecture_Local_Plugin.svg alt>
+<a data-fancybox href=../../../media/archive-1.0/architecture/Keyple_Architecture_Local_Plugin.svg data-caption="Keyple Architecture Local Plugin">
+<img src=../../../media/archive-1.0/architecture/Keyple_Architecture_Local_Plugin.svg alt>
 </a>
 <figcaption>
 Keyple Architecture Local Plugin
@@ -288,8 +288,8 @@ Keyple Architecture Local Plugin
 <h3 id=distributed>distributed</h3>
 <p>The <strong>Distributed</strong> extension of the Keyple Core provides a solution allowing a master terminal application to manage the processing of a smart card localized in a remote driven terminal.
 <figure id=figure-keyple-architecture-remote-plugin>
-<a data-fancybox href=../../../media/architecture/Keyple_Architecture_Remote_Plugin.svg data-caption="Keyple Architecture Remote Plugin">
-<img src=../../../media/architecture/Keyple_Architecture_Remote_Plugin.svg alt>
+<a data-fancybox href=../../../media/archive-1.0/architecture/Keyple_Architecture_Remote_Plugin.svg data-caption="Keyple Architecture Remote Plugin">
+<img src=../../../media/archive-1.0/architecture/Keyple_Architecture_Remote_Plugin.svg alt>
 </a>
 <figcaption>
 Keyple Architecture Remote Plugin
@@ -311,8 +311,8 @@ Keyple Architecture Remote Plugin
 <li>finally, a transaction is processed with the card application.</li>
 </ul>
 <figure id=figure-keyple-transaction-explicit-selection>
-<a data-fancybox href=../../../media/architecture/Keyple_CardTransaction_ActivityDiag_ExplicitSelection.svg data-caption="[Keyple Transaction Explicit Selection">
-<img src=../../../media/architecture/Keyple_CardTransaction_ActivityDiag_ExplicitSelection.svg alt>
+<a data-fancybox href=../../../media/archive-1.0/architecture/Keyple_CardTransaction_ActivityDiag_ExplicitSelection.svg data-caption="[Keyple Transaction Explicit Selection">
+<img src=../../../media/archive-1.0/architecture/Keyple_CardTransaction_ActivityDiag_ExplicitSelection.svg alt>
 </a>
 <figcaption>
 [Keyple Transaction Explicit Selection
@@ -324,8 +324,8 @@ Keyple Architecture Remote Plugin
 <li>Keyple Core allows to define a default selection on Observable Reader, and in return to be notified of successful selections.</li>
 </ul>
 <figure id=figure-keyple-transaction-default-selection>
-<a data-fancybox href=../../../media/architecture/Keyple_CardTransaction_ActivityDiag_DefaultSelection.svg data-caption="[Keyple Transaction Default Selection">
-<img src=../../../media/architecture/Keyple_CardTransaction_ActivityDiag_DefaultSelection.svg alt>
+<a data-fancybox href=../../../media/archive-1.0/architecture/Keyple_CardTransaction_ActivityDiag_DefaultSelection.svg data-caption="[Keyple Transaction Default Selection">
+<img src=../../../media/archive-1.0/architecture/Keyple_CardTransaction_ActivityDiag_DefaultSelection.svg alt>
 </a>
 <figcaption>
 [Keyple Transaction Default Selection
@@ -342,7 +342,7 @@ Keyple Architecture Remote Plugin
 </div>
 </div>
 <div class=body-footer>
-<p>Last updated on Thu, Sep 9, 2021</p>
+<p>Last updated on Fri, Sep 10, 2021</p>
 </div>
 </article>
 <footer class=site-footer>
@@ -432,7 +432,7 @@ for
     </script>
 <script src=https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin=anonymous></script>
 <script src=https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin=anonymous></script>
-<script src=../../../js/academic.min.d12bc0efcbebc9e8a9afafe4b4fed552.js></script>
+<script src=../../../js/academic.min.d3237d4df23be58b29c139f2ab2cb982.js></script>
 <link rel=stylesheet href=https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css>
 <script src=https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js></script>
 <script src=https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js></script>

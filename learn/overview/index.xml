@@ -68,8 +68,8 @@ The core provides the basic services for registering add-ons and also provides g
 &lt;/ul>
 &lt;p>&lt;strong>The figure below illustrates the scope of the technical possibilities of the Keyple ecosystem.&lt;/strong>&lt;/p>
 &lt;figure id="figure-global-architecture-of-keyple">
-&lt;a data-fancybox="" href="../../media/docs-overview/Keyple-components.svg" data-caption="Global Architecture of Keyple">
-&lt;img src="../../media/docs-overview/Keyple-components.svg" alt="" >
+&lt;a data-fancybox="" href="../../media/archive-1.0/docs-overview/Keyple-components.svg" data-caption="Global Architecture of Keyple">
+&lt;img src="../../media/archive-1.0/docs-overview/Keyple-components.svg" alt="" >
 &lt;/a>
 &lt;figcaption>
 Global Architecture of Keyple
@@ -83,8 +83,8 @@ Global Architecture of Keyple
 &lt;li>the &lt;strong>Keyple Calypso&lt;/strong>, a first smart card solution extension built on the Keyple Core, dedicated to manage Calypso processing, Calypso card identification, card command generation, card data recovery, authentication with the secure session.&lt;/li>
 &lt;/ul>
 &lt;figure id="figure-keyple-architecture-global">
-&lt;a data-fancybox="" href="../../media/architecture/Keyple_Architecture_Global.svg" data-caption="Keyple Architecture Global">
-&lt;img src="../../media/architecture/Keyple_Architecture_Global.svg" alt="" >
+&lt;a data-fancybox="" href="../../media/archive-1.0/architecture/Keyple_Architecture_Global.svg" data-caption="Keyple Architecture Global">
+&lt;img src="../../media/archive-1.0/architecture/Keyple_Architecture_Global.svg" alt="" >
 &lt;/a>
 &lt;figcaption>
 Keyple Architecture Global
@@ -102,8 +102,8 @@ Keyple Architecture Global
 &lt;p>The Card API is a low-level interface to manage the transmission of APDU commands with a smart card.
 A terminal application operating processing with a specific smart card solution could be implemented directly on top the Card API.&lt;/p>
 &lt;figure id="figure-keyple-architecture-application-integration">
-&lt;a data-fancybox="" href="../../media/architecture/Keyple_Architecture_Application_Integration.svg" data-caption="Keyple Architecture Application Integration">
-&lt;img src="../../media/architecture/Keyple_Architecture_Application_Integration.svg" alt="" >
+&lt;a data-fancybox="" href="../../media/archive-1.0/architecture/Keyple_Architecture_Application_Integration.svg" data-caption="Keyple Architecture Application Integration">
+&lt;img src="../../media/archive-1.0/architecture/Keyple_Architecture_Application_Integration.svg" alt="" >
 &lt;/a>
 &lt;figcaption>
 Keyple Architecture Application Integration
@@ -116,8 +116,8 @@ This is how the Keyple Calypso extension has be defined, the Calypso API is a hi
 &lt;h3 id="native-integration">native integration&lt;/h3>
 &lt;p>The smart card readers could be directly integrated with the Keyple Core. By interfacing through the Plugin API, a specific plugin dedicated to a smart card reader solution, the Keyple Core could have the capability to fully manage the smart card readers corresponding to this native plugin.&lt;/p>
 &lt;figure id="figure-keyple-architecture-reader-integration-native">
-&lt;a data-fancybox="" href="../../media/architecture/Keyple_Architecture_Reader_Integration_native.svg" data-caption="Keyple Architecture Reader Integration Native">
-&lt;img src="../../media/architecture/Keyple_Architecture_Reader_Integration_native.svg" alt="" >
+&lt;a data-fancybox="" href="../../media/archive-1.0/architecture/Keyple_Architecture_Reader_Integration_native.svg" data-caption="Keyple Architecture Reader Integration Native">
+&lt;img src="../../media/archive-1.0/architecture/Keyple_Architecture_Reader_Integration_native.svg" alt="" >
 &lt;/a>
 &lt;figcaption>
 Keyple Architecture Reader Integration Native
@@ -125,8 +125,8 @@ Keyple Architecture Reader Integration Native
 &lt;/figure>
 &lt;p>The Eclipse Keyple project provides the plugin for the main standard smart card reader solutions.&lt;/p>
 &lt;figure id="figure-keyple-architecture-native-plugins">
-&lt;a data-fancybox="" href="../../media/architecture/Keyple_Architecture_Native_Plugins.svg" data-caption="Keyple Architecture Native Plugins">
-&lt;img src="../../media/architecture/Keyple_Architecture_Native_Plugins.svg" alt="" >
+&lt;a data-fancybox="" href="../../media/archive-1.0/architecture/Keyple_Architecture_Native_Plugins.svg" data-caption="Keyple Architecture Native Plugins">
+&lt;img src="../../media/archive-1.0/architecture/Keyple_Architecture_Native_Plugins.svg" alt="" >
 &lt;/a>
 &lt;figcaption>
 Keyple Architecture Native Plugins
@@ -140,8 +140,8 @@ Keyple Architecture Native Plugins
 &lt;h3 id="hybrid-integration">hybrid integration&lt;/h3>
 &lt;p>It&amp;rsquo;s also possible to integrate Keyple in a terminal solution already embedding not Keyple based terminal applications operating smart card solutions. In those kinds of terminal, a Reader Manager has already the direct control on a smart card reader and manage the smart card detection: depending on the type of smart card identified on the reader, a specific terminal application is requested to operated the processing of the smart card.&lt;/p>
 &lt;figure id="figure-keyple-architecture-hybrid-plugins">
-&lt;a data-fancybox="" href="../../media/architecture/Keyple_Architecture_Reader_Integration_hybrid.svg" data-caption="Keyple Architecture Hybrid Plugins">
-&lt;img src="../../media/architecture/Keyple_Architecture_Reader_Integration_hybrid.svg" alt="" >
+&lt;a data-fancybox="" href="../../media/archive-1.0/architecture/Keyple_Architecture_Reader_Integration_hybrid.svg" data-caption="Keyple Architecture Hybrid Plugins">
+&lt;img src="../../media/archive-1.0/architecture/Keyple_Architecture_Reader_Integration_hybrid.svg" alt="" >
 &lt;/a>
 &lt;figcaption>
 Keyple Architecture Hybrid Plugins
@@ -154,8 +154,8 @@ Keyple Architecture Hybrid Plugins
 &lt;h3 id="stand-alone">stand-alone&lt;/h3>
 &lt;p>By default, a terminal application manages the processing of a specific smart card in stand-alone with its local readers.&lt;/p>
 &lt;figure id="figure-keyple-architecture-local-plugin">
-&lt;a data-fancybox="" href="../../media/architecture/Keyple_Architecture_Local_Plugin.svg" data-caption="Keyple Architecture Local Plugin">
-&lt;img src="../../media/architecture/Keyple_Architecture_Local_Plugin.svg" alt="" >
+&lt;a data-fancybox="" href="../../media/archive-1.0/architecture/Keyple_Architecture_Local_Plugin.svg" data-caption="Keyple Architecture Local Plugin">
+&lt;img src="../../media/archive-1.0/architecture/Keyple_Architecture_Local_Plugin.svg" alt="" >
 &lt;/a>
 &lt;figcaption>
 Keyple Architecture Local Plugin
@@ -164,8 +164,8 @@ Keyple Architecture Local Plugin
 &lt;h3 id="distributed">distributed&lt;/h3>
 &lt;p>The &lt;strong>Distributed&lt;/strong> extension of the Keyple Core provides a solution allowing a master terminal application to manage the processing of a smart card localized in a remote driven terminal.
 &lt;figure id="figure-keyple-architecture-remote-plugin">
-&lt;a data-fancybox="" href="../../media/architecture/Keyple_Architecture_Remote_Plugin.svg" data-caption="Keyple Architecture Remote Plugin">
-&lt;img src="../../media/architecture/Keyple_Architecture_Remote_Plugin.svg" alt="" >
+&lt;a data-fancybox="" href="../../media/archive-1.0/architecture/Keyple_Architecture_Remote_Plugin.svg" data-caption="Keyple Architecture Remote Plugin">
+&lt;img src="../../media/archive-1.0/architecture/Keyple_Architecture_Remote_Plugin.svg" alt="" >
 &lt;/a>
 &lt;figcaption>
 Keyple Architecture Remote Plugin
@@ -187,8 +187,8 @@ Keyple Architecture Remote Plugin
 &lt;li>finally, a transaction is processed with the card application.&lt;/li>
 &lt;/ul>
 &lt;figure id="figure-keyple-transaction-explicit-selection">
-&lt;a data-fancybox="" href="../../media/architecture/Keyple_CardTransaction_ActivityDiag_ExplicitSelection.svg" data-caption="[Keyple Transaction Explicit Selection">
-&lt;img src="../../media/architecture/Keyple_CardTransaction_ActivityDiag_ExplicitSelection.svg" alt="" >
+&lt;a data-fancybox="" href="../../media/archive-1.0/architecture/Keyple_CardTransaction_ActivityDiag_ExplicitSelection.svg" data-caption="[Keyple Transaction Explicit Selection">
+&lt;img src="../../media/archive-1.0/architecture/Keyple_CardTransaction_ActivityDiag_ExplicitSelection.svg" alt="" >
 &lt;/a>
 &lt;figcaption>
 [Keyple Transaction Explicit Selection
@@ -200,8 +200,8 @@ Keyple Architecture Remote Plugin
 &lt;li>Keyple Core allows to define a default selection on Observable Reader, and in return to be notified of successful selections.&lt;/li>
 &lt;/ul>
 &lt;figure id="figure-keyple-transaction-default-selection">
-&lt;a data-fancybox="" href="../../media/architecture/Keyple_CardTransaction_ActivityDiag_DefaultSelection.svg" data-caption="[Keyple Transaction Default Selection">
-&lt;img src="../../media/architecture/Keyple_CardTransaction_ActivityDiag_DefaultSelection.svg" alt="" >
+&lt;a data-fancybox="" href="../../media/archive-1.0/architecture/Keyple_CardTransaction_ActivityDiag_DefaultSelection.svg" data-caption="[Keyple Transaction Default Selection">
+&lt;img src="../../media/archive-1.0/architecture/Keyple_CardTransaction_ActivityDiag_DefaultSelection.svg" alt="" >
 &lt;/a>
 &lt;figcaption>
 [Keyple Transaction Default Selection

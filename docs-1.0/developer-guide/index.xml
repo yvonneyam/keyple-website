@@ -72,8 +72,8 @@ validator, a vending machine or a control terminal.&lt;/p>
 &lt;p>The diagram below illustrates the organization of the local standalone
 components:
 &lt;figure >
-&lt;a data-fancybox="" href="../../media/standalone-application/component/Local_Application_Components_Overview.svg" >
-&lt;img src="../../media/standalone-application/component/Local_Application_Components_Overview.svg" alt="" >
+&lt;a data-fancybox="" href="../../media/archive-1.0/standalone-application/component/Local_Application_Components_Overview.svg" >
+&lt;img src="../../media/archive-1.0/standalone-application/component/Local_Application_Components_Overview.svg" alt="" >
 &lt;/a>
 &lt;/figure>
 &lt;/p>
@@ -95,8 +95,8 @@ possibilities offered by &lt;strong>Keyple Core&lt;/strong>.&lt;/li>
 &lt;a href="https://keyple.org/docs-1.0/build-your-first-app/">Build your first app&lt;/a> section to configure your
 environment.&lt;/li>
 &lt;li>Using the
-&lt;a href="https://keyple.org/components-java/">Java components&lt;/a> or
-&lt;a href="https://keyple.org/components-cpp/">C++ components&lt;/a> pages, import
+&lt;a href="https://keyple.org/components-java-1.0/">Java components&lt;/a> or
+&lt;a href="https://keyple.org/components-cpp-0.9/">C++ components&lt;/a> pages, import
 &lt;strong>Keyple Core&lt;/strong> into your project and start playing with &lt;strong>Keyple&lt;/strong>.&lt;/li>
 &lt;li>Don&amp;rsquo;t forget to explore the potential of Keyple card-specific
 extensions such as &lt;strong>Keyple Calypso&lt;/strong>.&lt;/li>
@@ -127,8 +127,8 @@ without obligation, go for the PC/SC plugin.&lt;/p>
 Android NFC plugin or one of the plugins available from the industrial
 partners of the project. For a complete list of available plugins,
 please see the
-&lt;a href="https://keyple.org/components-java/">Java&lt;/a> or
-&lt;a href="https://keyple.org/components-cpp/">C++&lt;/a> pages.&lt;/p>
+&lt;a href="https://keyple.org/components-java-1.0/">Java&lt;/a> or
+&lt;a href="https://keyple.org/components-cpp-0.9/">C++&lt;/a> pages.&lt;/p>
 &lt;div class="alert alert-note">
 &lt;div>
 A new plugin can also be &lt;a href="../../docs-1.0/developer-guide/create-plugin/">created&lt;/a> if the envisaged hardware does not yet have its
@@ -514,8 +514,8 @@ resources and in particular the shutdown of the observation threads.&lt;/p>
 &lt;p>The diagram below represents the main classes implemented around the
 &lt;strong>Smart Card Service&lt;/strong> with in particular the observation mechanisms.
 &lt;figure >
-&lt;a data-fancybox="" href="../../media/architecture/KeypleCore_Reader_ClassDiag_PluginSettingAndReaderAccess_1_0_0.svg" >
-&lt;img src="../../media/architecture/KeypleCore_Reader_ClassDiag_PluginSettingAndReaderAccess_1_0_0.svg" alt="" >
+&lt;a data-fancybox="" href="../../media/archive-1.0/architecture/KeypleCore_Reader_ClassDiag_PluginSettingAndReaderAccess_1_0_0.svg" >
+&lt;img src="../../media/archive-1.0/architecture/KeypleCore_Reader_ClassDiag_PluginSettingAndReaderAccess_1_0_0.svg" alt="" >
 &lt;/a>
 &lt;/figure>
 &lt;/p>
@@ -524,8 +524,8 @@ resources and in particular the shutdown of the observation threads.&lt;/p>
 &lt;p>The diagram below represents the main classes used for selection
 operations.
 &lt;figure >
-&lt;a data-fancybox="" href="../../media/architecture/KeypleCore_CardSelection_ClassDiag_SelectorAndSelection_1_0_0.svg" >
-&lt;img src="../../media/architecture/KeypleCore_CardSelection_ClassDiag_SelectorAndSelection_1_0_0.svg" alt="" >
+&lt;a data-fancybox="" href="../../media/archive-1.0/architecture/KeypleCore_CardSelection_ClassDiag_SelectorAndSelection_1_0_0.svg" >
+&lt;img src="../../media/archive-1.0/architecture/KeypleCore_CardSelection_ClassDiag_SelectorAndSelection_1_0_0.svg" alt="" >
 &lt;/a>
 &lt;/figure>
 &lt;/p>
@@ -580,9 +580,9 @@ assigned to them.&lt;/p>
 application is available here:&lt;/p>
 &lt;ul>
 &lt;li>
-&lt;a href="https://keyple.org/components-java/core/">Keyple Core Java component&lt;/a>&lt;/li>
+&lt;a href="https://keyple.org/components-java-1.0/core/">Keyple Core Java component&lt;/a>&lt;/li>
 &lt;li>
-&lt;a href="https://keyple.org/components-cpp/core/">Keyple Core C++ component&lt;/a>&lt;/li>
+&lt;a href="https://keyple.org/components-cpp-0.9/core/">Keyple Core C++ component&lt;/a>&lt;/li>
 &lt;/ul></description></item><item><title>Distributed application</title><link>https://keyple.org/docs-1.0/developer-guide/distributed-application/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/docs-1.0/developer-guide/distributed-application/</guid><description>&lt;div class="alert alert-warning">
 &lt;div>
 Version 1.0 of the documentation is no longer actively maintained. The site that you are currently viewing is an archived snapshot. For up-to-date documentation, see the latest version.
@@ -593,8 +593,8 @@ Version 1.0 of the documentation is no longer actively maintained. The site that
 &lt;p>In this way, you can manage transactions within a distributed architecture.&lt;/p>
 &lt;p>The diagram below shows the role of the &lt;strong>Keyple Distributed&lt;/strong> components in the software layers used in a distributed architecture :&lt;/p>
 &lt;figure >
-&lt;a data-fancybox="" href="../../media/distributed-application/component/Distributed_Component_Overview.svg" >
-&lt;img src="../../media/distributed-application/component/Distributed_Component_Overview.svg" alt="" >
+&lt;a data-fancybox="" href="../../media/archive-1.0/distributed-application/component/Distributed_Component_Overview.svg" >
+&lt;img src="../../media/archive-1.0/distributed-application/component/Distributed_Component_Overview.svg" alt="" >
 &lt;/a>
 &lt;/figure>
 &lt;hr>
@@ -676,24 +676,24 @@ width: 130px;
 &lt;/style>
 &lt;p>The diagram below illustrates the main functional concepts through a standard use case :&lt;/p>
 &lt;figure >
-&lt;a data-fancybox="" href="../../media/distributed-application/component/Distributed_Component_Concepts_1.svg" >
-&lt;img src="../../media/distributed-application/component/Distributed_Component_Concepts_1.svg" alt="" >
+&lt;a data-fancybox="" href="../../media/archive-1.0/distributed-application/component/Distributed_Component_Concepts_1.svg" >
+&lt;img src="../../media/archive-1.0/distributed-application/component/Distributed_Component_Concepts_1.svg" alt="" >
 &lt;/a>
 &lt;/figure>
 &lt;p>The second diagram below illustrates an arbitrary more complex possible use case with several hardware readers connected to different terminals.&lt;/p>
 &lt;p>These could be for example a ticketing reloading service, where the business logic would be on the terminal with remote readers, with thin clients on A &amp;amp; B terminals communicating locally with the cards.&lt;/p>
 &lt;p>In this use case, the &lt;strong>Keyple Distributed&lt;/strong> solution is use for card communication.&lt;/p>
 &lt;figure >
-&lt;a data-fancybox="" href="../../media/distributed-application/component/Distributed_Component_Concepts_2.svg" >
-&lt;img src="../../media/distributed-application/component/Distributed_Component_Concepts_2.svg" alt="" >
+&lt;a data-fancybox="" href="../../media/archive-1.0/distributed-application/component/Distributed_Component_Concepts_2.svg" >
+&lt;img src="../../media/archive-1.0/distributed-application/component/Distributed_Component_Concepts_2.svg" alt="" >
 &lt;/a>
 &lt;/figure>
 &lt;p>Here is another example, but this time it illustrates several &lt;strong>Remote Plugin&lt;/strong> components connected to the same &lt;strong>Local Service&lt;/strong>.&lt;/p>
 &lt;p>These could be for example ticketing terminals with transaction logic, which communicate locally with cards, but which do not have SAM, and which use a SAM server with hardware reader.&lt;/p>
 &lt;p>In this use case, the &lt;strong>Keyple Distributed&lt;/strong> solution is use for SAM communication.&lt;/p>
 &lt;figure >
-&lt;a data-fancybox="" href="../../media/distributed-application/component/Distributed_Component_Concepts_3.svg" >
-&lt;img src="../../media/distributed-application/component/Distributed_Component_Concepts_3.svg" alt="" >
+&lt;a data-fancybox="" href="../../media/archive-1.0/distributed-application/component/Distributed_Component_Concepts_3.svg" >
+&lt;img src="../../media/archive-1.0/distributed-application/component/Distributed_Component_Concepts_3.svg" alt="" >
 &lt;/a>
 &lt;/figure>
 &lt;hr>
@@ -804,8 +804,8 @@ width: 190px;
 &lt;p>Note that the network layer is deliberately hide in this diagram. Its implementation is described in the
 &lt;a href="#network-configuration">Network configuration&lt;/a> chapter.&lt;/p>
 &lt;figure >
-&lt;a data-fancybox="" href="../../media/distributed-application/sequence/Distributed_Sequence_ReaderClientSide_API.svg" >
-&lt;img src="../../media/distributed-application/sequence/Distributed_Sequence_ReaderClientSide_API.svg" alt="" >
+&lt;a data-fancybox="" href="../../media/archive-1.0/distributed-application/sequence/Distributed_Sequence_ReaderClientSide_API.svg" >
+&lt;img src="../../media/archive-1.0/distributed-application/sequence/Distributed_Sequence_ReaderClientSide_API.svg" alt="" >
 &lt;/a>
 &lt;/figure>
 &lt;h3 id="reader-server-side">Reader Server Side&lt;/h3>
@@ -1226,8 +1226,8 @@ width: 240px;
 &lt;/table>
 &lt;p>Here is the minimal algorithm to implement in a context with a &lt;strong>single server instance&lt;/strong> :&lt;/p>
 &lt;figure >
-&lt;a data-fancybox="" href="../../media/distributed-application/sequence/Distributed_Sequence_SyncNode_API.svg" >
-&lt;img src="../../media/distributed-application/sequence/Distributed_Sequence_SyncNode_API.svg" alt="" >
+&lt;a data-fancybox="" href="../../media/archive-1.0/distributed-application/sequence/Distributed_Sequence_SyncNode_API.svg" >
+&lt;img src="../../media/archive-1.0/distributed-application/sequence/Distributed_Sequence_SyncNode_API.svg" alt="" >
 &lt;/a>
 &lt;/figure>
 &lt;p>In a context with several server instances, a mechanism must be implemented to ensure that all messages containing information about a &lt;code>serverNodeId&lt;/code> are routed to the server associated with a &lt;code>SyncNodeServer&lt;/code> node having the &lt;code>serverNodeId&lt;/code>.&lt;/p>
@@ -1266,8 +1266,8 @@ width: 240px;
 &lt;/table>
 &lt;p>Here is the minimal algorithm to implement :&lt;/p>
 &lt;figure >
-&lt;a data-fancybox="" href="../../media/distributed-application/sequence/Distributed_Sequence_AsyncNode_API.svg" >
-&lt;img src="../../media/distributed-application/sequence/Distributed_Sequence_AsyncNode_API.svg" alt="" >
+&lt;a data-fancybox="" href="../../media/archive-1.0/distributed-application/sequence/Distributed_Sequence_AsyncNode_API.svg" >
+&lt;img src="../../media/archive-1.0/distributed-application/sequence/Distributed_Sequence_AsyncNode_API.svg" alt="" >
 &lt;/a>
 &lt;/figure>
 &lt;h3 id="exchanged-data">Exchanged data&lt;/h3>
@@ -1312,22 +1312,22 @@ width: 240px;
 &lt;h3 id="network-api">Network API&lt;/h3>
 &lt;p>The associated &lt;strong>API&lt;/strong> documentation is available &lt;a href="../../api-reference/java-api/keyple-java-distributed-network/1.0.0/index.html">here&lt;/a>.&lt;/p>
 &lt;figure >
-&lt;a data-fancybox="" href="../../media/distributed-application/class/Distributed_Class_Network_API.svg" >
-&lt;img src="../../media/distributed-application/class/Distributed_Class_Network_API.svg" alt="" >
+&lt;a data-fancybox="" href="../../media/archive-1.0/distributed-application/class/Distributed_Class_Network_API.svg" >
+&lt;img src="../../media/archive-1.0/distributed-application/class/Distributed_Class_Network_API.svg" alt="" >
 &lt;/a>
 &lt;/figure>
 &lt;h3 id="remote-api">Remote API&lt;/h3>
 &lt;p>The associated &lt;strong>API&lt;/strong> documentation is available &lt;a href="../../api-reference/java-api/keyple-java-distributed-remote/1.0.0/index.html">here&lt;/a>.&lt;/p>
 &lt;figure >
-&lt;a data-fancybox="" href="../../media/distributed-application/class/Distributed_Class_Remote_API.svg" >
-&lt;img src="../../media/distributed-application/class/Distributed_Class_Remote_API.svg" alt="" >
+&lt;a data-fancybox="" href="../../media/archive-1.0/distributed-application/class/Distributed_Class_Remote_API.svg" >
+&lt;img src="../../media/archive-1.0/distributed-application/class/Distributed_Class_Remote_API.svg" alt="" >
 &lt;/a>
 &lt;/figure>
 &lt;h3 id="local-api">Local API&lt;/h3>
 &lt;p>The associated &lt;strong>API&lt;/strong> documentation is available &lt;a href="../../api-reference/java-api/keyple-java-distributed-local/1.0.0/index.html">here&lt;/a>.&lt;/p>
 &lt;figure >
-&lt;a data-fancybox="" href="../../media/distributed-application/class/Distributed_Class_Local_API.svg" >
-&lt;img src="../../media/distributed-application/class/Distributed_Class_Local_API.svg" alt="" >
+&lt;a data-fancybox="" href="../../media/archive-1.0/distributed-application/class/Distributed_Class_Local_API.svg" >
+&lt;img src="../../media/archive-1.0/distributed-application/class/Distributed_Class_Local_API.svg" alt="" >
 &lt;/a>
 &lt;/figure>
 &lt;hr>
@@ -1340,7 +1340,7 @@ width: 240px;
 &lt;h2 id="download">Download&lt;/h2>
 &lt;ul>
 &lt;li>
-&lt;a href="../../components-java/distributed/">Java components&lt;/a>&lt;/li>
+&lt;a href="https://keyple.org/components-java-1.0/distributed-systems/">Java components&lt;/a>&lt;/li>
 &lt;/ul></description></item><item><title>Calypso application</title><link>https://keyple.org/docs-1.0/developer-guide/calypso-application/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/docs-1.0/developer-guide/calypso-application/</guid><description>&lt;div class="alert alert-warning">
 &lt;div>
 Version 1.0 of the documentation is no longer actively maintained. The site that you are currently viewing is an archived snapshot. For up-to-date documentation, see the latest version.
@@ -1353,8 +1353,8 @@ Keyple features. For example, Calypso Network Association provides &lt;strong>Ke
 secure Calypso transaction seamlessly. It completely hides the details of the APDU commands that are sent to POs and SAMs, which are usually tedious operations.&lt;/p>
 &lt;p>The diagram below shows the role of the &lt;strong>Keyple Calypso Extension&lt;/strong> components in the software layers for a standalone application :&lt;/p>
 &lt;figure >
-&lt;a data-fancybox="" href="../../media/calypso-app-development/component/Local_Component_Overview.svg" >
-&lt;img src="../../media/calypso-app-development/component/Local_Component_Overview.svg" alt="" >
+&lt;a data-fancybox="" href="../../media/archive-1.0/calypso-app-development/component/Local_Component_Overview.svg" >
+&lt;img src="../../media/archive-1.0/calypso-app-development/component/Local_Component_Overview.svg" alt="" >
 &lt;/a>
 &lt;/figure>
 &lt;h2 id="before-you-start">Before you start&lt;/h2>

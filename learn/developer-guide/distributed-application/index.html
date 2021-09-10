@@ -26,7 +26,7 @@
 <meta property="og:title" content="Distributed application | Eclipse Keyple">
 <meta property="og:description" content="How to develop an end-user application using network communications."><meta property="og:image" content="https://keyple.org/images/logo_hu673a59176cd62c570f44ed2728665b48_42188_300x300_fit_lanczos_3.png">
 <meta property="twitter:image" content="https://keyple.org/images/logo_hu673a59176cd62c570f44ed2728665b48_42188_300x300_fit_lanczos_3.png"><meta property="og:locale" content="en-us">
-<meta property="article:modified_time" content="2021-09-09T17:49:22+02:00">
+<meta property="article:modified_time" content="2021-09-10T15:57:00+02:00">
 <script src=https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js integrity="sha256-5VhCqFam2Cn+yjw61zbBNrbHVJ6SRydPeKopYlngbiQ=" crossorigin=anonymous></script>
 <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css integrity="sha256-zQ0LblD/Af8vOppw18+2anxsuaz3pWYyVWi+bTvTH8Q=" crossorigin=anonymous>
 <script>window.addEventListener("load",function(){window.cookieconsent.initialise({palette:{popup:{background:"#1D87BB",text:"#FFFFFF"},button:{background:"#FFFFFF",text:"#1D87BB"}},theme:"classic",type:"opt-in",content:{header:'Cookiessss used on the website!',message:"Some Eclipse Foundation pages use cookies to better serve you when you return to the site. You can set your browser to notify you before you receive a cookie or turn off cookies. If you do so, however, some areas of some sites may not function properly. To read Eclipse Foundation Privacy Policy ",allow:"Allow cookies",deny:"Decline",dismiss:"Got it!",link:"click here",href:'https://www.eclipse.org/legal/privacy.php'}})})</script>
@@ -213,8 +213,8 @@
 <p>In this way, you can manage transactions within a distributed architecture.</p>
 <p>The diagram below shows the role of the <strong>Keyple Distributed</strong> components in the software layers used in a distributed architecture :</p>
 <figure>
-<a data-fancybox href=../../../media/distributed-application/component/Distributed_Component_Overview.svg>
-<img src=../../../media/distributed-application/component/Distributed_Component_Overview.svg alt>
+<a data-fancybox href=../../../media/archive-1.0/distributed-application/component/Distributed_Component_Overview.svg>
+<img src=../../../media/archive-1.0/distributed-application/component/Distributed_Component_Overview.svg alt>
 </a>
 </figure>
 <hr>
@@ -292,24 +292,24 @@
 <style>#concepts-table-1 table th:first-of-type{width:130px}</style>
 <p>The diagram below illustrates the main functional concepts through a standard use case :</p>
 <figure>
-<a data-fancybox href=../../../media/distributed-application/component/Distributed_Component_Concepts_1.svg>
-<img src=../../../media/distributed-application/component/Distributed_Component_Concepts_1.svg alt>
+<a data-fancybox href=../../../media/archive-1.0/distributed-application/component/Distributed_Component_Concepts_1.svg>
+<img src=../../../media/archive-1.0/distributed-application/component/Distributed_Component_Concepts_1.svg alt>
 </a>
 </figure>
 <p>The second diagram below illustrates an arbitrary more complex possible use case with several hardware readers connected to different terminals.</p>
 <p>These could be for example a ticketing reloading service, where the business logic would be on the terminal with remote readers, with thin clients on A & B terminals communicating locally with the cards.</p>
 <p>In this use case, the <strong>Keyple Distributed</strong> solution is use for card communication.</p>
 <figure>
-<a data-fancybox href=../../../media/distributed-application/component/Distributed_Component_Concepts_2.svg>
-<img src=../../../media/distributed-application/component/Distributed_Component_Concepts_2.svg alt>
+<a data-fancybox href=../../../media/archive-1.0/distributed-application/component/Distributed_Component_Concepts_2.svg>
+<img src=../../../media/archive-1.0/distributed-application/component/Distributed_Component_Concepts_2.svg alt>
 </a>
 </figure>
 <p>Here is another example, but this time it illustrates several <strong>Remote Plugin</strong> components connected to the same <strong>Local Service</strong>.</p>
 <p>These could be for example ticketing terminals with transaction logic, which communicate locally with cards, but which do not have SAM, and which use a SAM server with hardware reader.</p>
 <p>In this use case, the <strong>Keyple Distributed</strong> solution is use for SAM communication.</p>
 <figure>
-<a data-fancybox href=../../../media/distributed-application/component/Distributed_Component_Concepts_3.svg>
-<img src=../../../media/distributed-application/component/Distributed_Component_Concepts_3.svg alt>
+<a data-fancybox href=../../../media/archive-1.0/distributed-application/component/Distributed_Component_Concepts_3.svg>
+<img src=../../../media/archive-1.0/distributed-application/component/Distributed_Component_Concepts_3.svg alt>
 </a>
 </figure>
 <hr>
@@ -416,8 +416,8 @@
 <p>Note that the network layer is deliberately hide in this diagram. Its implementation is described in the
 <a href=#network-configuration>Network configuration</a> chapter.</p>
 <figure>
-<a data-fancybox href=../../../media/distributed-application/sequence/Distributed_Sequence_ReaderClientSide_API.svg>
-<img src=../../../media/distributed-application/sequence/Distributed_Sequence_ReaderClientSide_API.svg alt>
+<a data-fancybox href=../../../media/archive-1.0/distributed-application/sequence/Distributed_Sequence_ReaderClientSide_API.svg>
+<img src=../../../media/archive-1.0/distributed-application/sequence/Distributed_Sequence_ReaderClientSide_API.svg alt>
 </a>
 </figure>
 <h3 id=reader-server-side>Reader Server Side</h3>
@@ -834,8 +834,8 @@ This configuration mode will only be available from version <strong>1.1</strong>
 </table>
 <p>Here is the minimal algorithm to implement in a context with a <strong>single server instance</strong> :</p>
 <figure>
-<a data-fancybox href=../../../media/distributed-application/sequence/Distributed_Sequence_SyncNode_API.svg>
-<img src=../../../media/distributed-application/sequence/Distributed_Sequence_SyncNode_API.svg alt>
+<a data-fancybox href=../../../media/archive-1.0/distributed-application/sequence/Distributed_Sequence_SyncNode_API.svg>
+<img src=../../../media/archive-1.0/distributed-application/sequence/Distributed_Sequence_SyncNode_API.svg alt>
 </a>
 </figure>
 <p>In a context with several server instances, a mechanism must be implemented to ensure that all messages containing information about a <code>serverNodeId</code> are routed to the server associated with a <code>SyncNodeServer</code> node having the <code>serverNodeId</code>.</p>
@@ -874,8 +874,8 @@ This configuration mode will only be available from version <strong>1.1</strong>
 </table>
 <p>Here is the minimal algorithm to implement :</p>
 <figure>
-<a data-fancybox href=../../../media/distributed-application/sequence/Distributed_Sequence_AsyncNode_API.svg>
-<img src=../../../media/distributed-application/sequence/Distributed_Sequence_AsyncNode_API.svg alt>
+<a data-fancybox href=../../../media/archive-1.0/distributed-application/sequence/Distributed_Sequence_AsyncNode_API.svg>
+<img src=../../../media/archive-1.0/distributed-application/sequence/Distributed_Sequence_AsyncNode_API.svg alt>
 </a>
 </figure>
 <h3 id=exchanged-data>Exchanged data</h3>
@@ -919,22 +919,22 @@ This configuration mode will only be available from version <strong>1.1</strong>
 <h3 id=network-api>Network API</h3>
 <p>The associated <strong>API</strong> documentation is available <a href=../../api-reference/java-api/keyple-java-distributed-network/1.0.0/index.html>here</a>.</p>
 <figure>
-<a data-fancybox href=../../../media/distributed-application/class/Distributed_Class_Network_API.svg>
-<img src=../../../media/distributed-application/class/Distributed_Class_Network_API.svg alt>
+<a data-fancybox href=../../../media/archive-1.0/distributed-application/class/Distributed_Class_Network_API.svg>
+<img src=../../../media/archive-1.0/distributed-application/class/Distributed_Class_Network_API.svg alt>
 </a>
 </figure>
 <h3 id=remote-api>Remote API</h3>
 <p>The associated <strong>API</strong> documentation is available <a href=../../api-reference/java-api/keyple-java-distributed-remote/1.0.0/index.html>here</a>.</p>
 <figure>
-<a data-fancybox href=../../../media/distributed-application/class/Distributed_Class_Remote_API.svg>
-<img src=../../../media/distributed-application/class/Distributed_Class_Remote_API.svg alt>
+<a data-fancybox href=../../../media/archive-1.0/distributed-application/class/Distributed_Class_Remote_API.svg>
+<img src=../../../media/archive-1.0/distributed-application/class/Distributed_Class_Remote_API.svg alt>
 </a>
 </figure>
 <h3 id=local-api>Local API</h3>
 <p>The associated <strong>API</strong> documentation is available <a href=../../api-reference/java-api/keyple-java-distributed-local/1.0.0/index.html>here</a>.</p>
 <figure>
-<a data-fancybox href=../../../media/distributed-application/class/Distributed_Class_Local_API.svg>
-<img src=../../../media/distributed-application/class/Distributed_Class_Local_API.svg alt>
+<a data-fancybox href=../../../media/archive-1.0/distributed-application/class/Distributed_Class_Local_API.svg>
+<img src=../../../media/archive-1.0/distributed-application/class/Distributed_Class_Local_API.svg alt>
 </a>
 </figure>
 <hr>
@@ -964,7 +964,7 @@ This configuration mode will only be available from version <strong>1.1</strong>
 </div>
 </div>
 <div class=body-footer>
-<p>Last updated on Thu, Sep 9, 2021</p>
+<p>Last updated on Fri, Sep 10, 2021</p>
 </div>
 </article>
 <footer class=site-footer>
@@ -1054,7 +1054,7 @@ for
     </script>
 <script src=https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin=anonymous></script>
 <script src=https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin=anonymous></script>
-<script src=../../../js/academic.min.d12bc0efcbebc9e8a9afafe4b4fed552.js></script>
+<script src=../../../js/academic.min.d3237d4df23be58b29c139f2ab2cb982.js></script>
 <link rel=stylesheet href=https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css>
 <script src=https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js></script>
 <script src=https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js></script>

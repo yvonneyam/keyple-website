@@ -397,8 +397,8 @@ Version 1.0 of the documentation is no longer actively maintained. The site that
 Keyple could also be used to develop an application reading SmartCard content through NFC using
 &lt;a href="https://developer.android.com/guide/topics/connectivity/nfc/advanced-nfc" target="_blank" rel="noopener">Android NFC&lt;/a>.&lt;/p>
 &lt;figure >
-&lt;a data-fancybox="" href="../../media/android-app/component/Android_App_Overview.png" >
-&lt;img src="../../media/android-app/component/Android_App_Overview.png" alt="" >
+&lt;a data-fancybox="" href="../../media/archive-1.0/android-app/component/Android_App_Overview.png" >
+&lt;img src="../../media/archive-1.0/android-app/component/Android_App_Overview.png" alt="" >
 &lt;/a>
 &lt;/figure>
 &lt;p>As Keyple request low level reader access, the key features of Keyple SDK relies on components called &lt;strong>Plugins&lt;/strong>. These are the plugins that allow access to the hardware functionality of the terminal by using the native Android SDK or the terminal manufacturer&amp;rsquo;s own custom SDKs.&lt;/p>
@@ -783,13 +783,13 @@ communication) and a Calypo Secure Access Module (SAM).
 &lt;p>We will use three main components of Keyple:&lt;/p>
 &lt;ul>
 &lt;li>
-&lt;a href="https://keyple.org/components-cpp/core/">Keyple Core&lt;/a>
+&lt;a href="https://keyple.org/components-cpp-0.9/core/">Keyple Core&lt;/a>
 which is the base component to which all the others refer,&lt;/li>
 &lt;li>
-&lt;a href="https://keyple.org/components-cpp/plugins/pcsc/">Keyple PC/SC plugin&lt;/a>
+&lt;a href="https://keyple.org/components-cpp-0.9/plugins/pcsc/">Keyple PC/SC plugin&lt;/a>
 to provide the ability to manage PC/SC readers,&lt;/li>
 &lt;li>
-&lt;a href="https://keyple.org/components-cpp/extensions/calypso/">Keyple Calypso extension&lt;/a>
+&lt;a href="https://keyple.org/components-cpp-0.9/extensions/calypso/">Keyple Calypso extension&lt;/a>
 to handle the commands sent to the Calypso PO and the Calypso SAM.&lt;/li>
 &lt;/ul>
 &lt;p>In this guide CMake is used as build automation tool.&lt;/p>

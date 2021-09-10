@@ -26,7 +26,7 @@
 <meta property="og:title" content="Keyple Calypso | Eclipse Keyple">
 <meta property="og:description" content="Version 1.0 of the documentation is no longer actively maintained. The site that you are currently viewing is an archived snapshot. For up-to-date documentation, see the latest version.   Features / packages and corresponding usages The Calypso transaction API provides a high-level of abstraction to define functional commands to manage a secure session with a Calypso Portable Object, to update or authenticate its data."><meta property="og:image" content="https://keyple.org/images/logo_hu673a59176cd62c570f44ed2728665b48_42188_300x300_fit_lanczos_3.png">
 <meta property="twitter:image" content="https://keyple.org/images/logo_hu673a59176cd62c570f44ed2728665b48_42188_300x300_fit_lanczos_3.png"><meta property="og:locale" content="en-us">
-<meta property="article:modified_time" content="2021-09-09T17:49:22+02:00">
+<meta property="article:modified_time" content="2021-09-10T15:57:00+02:00">
 <script src=https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js integrity="sha256-5VhCqFam2Cn+yjw61zbBNrbHVJ6SRydPeKopYlngbiQ=" crossorigin=anonymous></script>
 <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css integrity="sha256-zQ0LblD/Af8vOppw18+2anxsuaz3pWYyVWi+bTvTH8Q=" crossorigin=anonymous>
 <script>window.addEventListener("load",function(){window.cookieconsent.initialise({palette:{popup:{background:"#1D87BB",text:"#FFFFFF"},button:{background:"#FFFFFF",text:"#1D87BB"}},theme:"classic",type:"opt-in",content:{header:'Cookiessss used on the website!',message:"Some Eclipse Foundation pages use cookies to better serve you when you return to the site. You can set your browser to notify you before you receive a cookie or turn off cookies. If you do so, however, some areas of some sites may not function properly. To read Eclipse Foundation Privacy Policy ",allow:"Allow cookies",deny:"Decline",dismiss:"Got it!",link:"click here",href:'https://www.eclipse.org/legal/privacy.php'}})})</script>
@@ -230,8 +230,8 @@ org.eclipse.keyple.calypso.<b>command</b>.sam.parser.session</td>
 </table>
 <p>Ticketing terminal applications must import only the high-level Calypso transaction package.</p>
 <figure id=figure-calypso-packages>
-<a data-fancybox href=../../../media/architecture/KeypleCalypso_Packages.svg data-caption="Calypso packages">
-<img src=../../../media/architecture/KeypleCalypso_Packages.svg alt>
+<a data-fancybox href=../../../media/archive-1.0/architecture/KeypleCalypso_Packages.svg data-caption="Calypso packages">
+<img src=../../../media/archive-1.0/architecture/KeypleCalypso_Packages.svg alt>
 </a>
 <figcaption>
 Calypso packages
@@ -248,8 +248,8 @@ Calypso packages
 </ul>
 <p>The matching SmartCard resulting from a PO Selection Request is a Calypso PO. In case file records have been read during the selection: the corresponding data could be recovered in the Calypso PO card image.</p>
 <figure id=figure-calypso-selection-v100>
-<a data-fancybox href=../../../media/architecture/KeypleCalypso_Transaction_ClassDiag_PO_Selection_1_0_0.svg data-caption="Calypso Selection v1.0.0">
-<img src=../../../media/architecture/KeypleCalypso_Transaction_ClassDiag_PO_Selection_1_0_0.svg alt>
+<a data-fancybox href=../../../media/archive-1.0/architecture/KeypleCalypso_Transaction_ClassDiag_PO_Selection_1_0_0.svg data-caption="Calypso Selection v1.0.0">
+<img src=../../../media/archive-1.0/architecture/KeypleCalypso_Transaction_ClassDiag_PO_Selection_1_0_0.svg alt>
 </a>
 <figcaption>
 Calypso Selection v1.0.0
@@ -275,8 +275,8 @@ Calypso Selection v1.0.0
 <li>The responses of the PO are then recovered through the Calypso PO image.</li>
 </ul>
 <figure id=figure-calypso-api-global-architecture>
-<a data-fancybox href=../../../media/architecture/KeypleCalypso_Transaction_ClassDiag_Overview.svg data-caption="Calypso API Global Architecture">
-<img src=../../../media/architecture/KeypleCalypso_Transaction_ClassDiag_Overview.svg alt>
+<a data-fancybox href=../../../media/archive-1.0/architecture/KeypleCalypso_Transaction_ClassDiag_Overview.svg data-caption="Calypso API Global Architecture">
+<img src=../../../media/archive-1.0/architecture/KeypleCalypso_Transaction_ClassDiag_Overview.svg alt>
 </a>
 <figcaption>
 Calypso API Global Architecture
@@ -285,8 +285,8 @@ Calypso API Global Architecture
 <h3 id=calypso-card-image>Calypso card image</h3>
 <p>When read commands have been exchanged with a Calypso PO, the corresponding data could be recovered by parsing the file structure of the PO card image.</p>
 <figure id=figure-calypso-po-card-image>
-<a data-fancybox href=../../../media/architecture/KeypleCalypso_Transaction_ClassDiag_CalypsoPo_1_0_0.svg data-caption="Calypso PO card image">
-<img src=../../../media/architecture/KeypleCalypso_Transaction_ClassDiag_CalypsoPo_1_0_0.svg alt>
+<a data-fancybox href=../../../media/archive-1.0/architecture/KeypleCalypso_Transaction_ClassDiag_CalypsoPo_1_0_0.svg data-caption="Calypso PO card image">
+<img src=../../../media/archive-1.0/architecture/KeypleCalypso_Transaction_ClassDiag_CalypsoPo_1_0_0.svg alt>
 </a>
 <figcaption>
 Calypso PO card image
@@ -301,8 +301,8 @@ Calypso PO card image
 </ul>
 <p>The prepareReleaseChannel method allows to the logical channel with the Calypso PO at the end of the processing of the next process method.</p>
 <figure id=figure-calypso-transaction>
-<a data-fancybox href=../../../media/architecture/KeypleCalypso_Transaction_ClassDiag_PoTransaction_1_0_0.svg data-caption="Calypso transaction">
-<img src=../../../media/architecture/KeypleCalypso_Transaction_ClassDiag_PoTransaction_1_0_0.svg alt>
+<a data-fancybox href=../../../media/archive-1.0/architecture/KeypleCalypso_Transaction_ClassDiag_PoTransaction_1_0_0.svg data-caption="Calypso transaction">
+<img src=../../../media/archive-1.0/architecture/KeypleCalypso_Transaction_ClassDiag_PoTransaction_1_0_0.svg alt>
 </a>
 <figcaption>
 Calypso transaction
@@ -311,8 +311,8 @@ Calypso transaction
 <hr>
 <h2 id=data-model-extension>Data model extension</h2>
 <figure id=figure-calypso-data-model>
-<a data-fancybox href=../../../media/architecture/KeypleCalypso_Transaction_ClassDiag_SpecificPoTransaction_1_0_0.svg data-caption="Calypso Data Model">
-<img src=../../../media/architecture/KeypleCalypso_Transaction_ClassDiag_SpecificPoTransaction_1_0_0.svg alt>
+<a data-fancybox href=../../../media/archive-1.0/architecture/KeypleCalypso_Transaction_ClassDiag_SpecificPoTransaction_1_0_0.svg data-caption="Calypso Data Model">
+<img src=../../../media/archive-1.0/architecture/KeypleCalypso_Transaction_ClassDiag_SpecificPoTransaction_1_0_0.svg alt>
 </a>
 <figcaption>
 Calypso Data Model
@@ -321,8 +321,8 @@ Calypso Data Model
 <hr>
 <h2 id=secure-session-sequence>Secure session sequence</h2>
 <figure id=figure-calypso-session>
-<a data-fancybox href=../../../media/architecture/KeypleCalypso_Transaction_SequenceDiag_SecureSessionProcessing_1_0_0.svg data-caption="Calypso session">
-<img src=../../../media/architecture/KeypleCalypso_Transaction_SequenceDiag_SecureSessionProcessing_1_0_0.svg alt>
+<a data-fancybox href=../../../media/archive-1.0/architecture/KeypleCalypso_Transaction_SequenceDiag_SecureSessionProcessing_1_0_0.svg data-caption="Calypso session">
+<img src=../../../media/archive-1.0/architecture/KeypleCalypso_Transaction_SequenceDiag_SecureSessionProcessing_1_0_0.svg alt>
 </a>
 <figcaption>
 Calypso session
@@ -339,7 +339,7 @@ Calypso session
 </div>
 </div>
 <div class=body-footer>
-<p>Last updated on Thu, Sep 9, 2021</p>
+<p>Last updated on Fri, Sep 10, 2021</p>
 </div>
 </article>
 <footer class=site-footer>
@@ -429,7 +429,7 @@ for
     </script>
 <script src=https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin=anonymous></script>
 <script src=https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin=anonymous></script>
-<script src=../../../js/academic.min.d12bc0efcbebc9e8a9afafe4b4fed552.js></script>
+<script src=../../../js/academic.min.d3237d4df23be58b29c139f2ab2cb982.js></script>
 <link rel=stylesheet href=https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css>
 <script src=https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js></script>
 <script src=https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js></script>

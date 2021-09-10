@@ -26,7 +26,7 @@
 <meta property="og:title" content="Keyple Core | Eclipse Keyple">
 <meta property="og:description" content="Version 1.0 of the documentation is no longer actively maintained. The site that you are currently viewing is an archived snapshot. For up-to-date documentation, see the latest version.   Features / packages and corresponding usages The Keyple Core is a tool to handle smart card reader and to operate generic processing with smart cards."><meta property="og:image" content="https://keyple.org/images/logo_hu673a59176cd62c570f44ed2728665b48_42188_300x300_fit_lanczos_3.png">
 <meta property="twitter:image" content="https://keyple.org/images/logo_hu673a59176cd62c570f44ed2728665b48_42188_300x300_fit_lanczos_3.png"><meta property="og:locale" content="en-us">
-<meta property="article:modified_time" content="2021-08-30T18:22:17+02:00">
+<meta property="article:modified_time" content="2021-09-10T15:57:00+02:00">
 <script src=https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js integrity="sha256-5VhCqFam2Cn+yjw61zbBNrbHVJ6SRydPeKopYlngbiQ=" crossorigin=anonymous></script>
 <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css integrity="sha256-zQ0LblD/Af8vOppw18+2anxsuaz3pWYyVWi+bTvTH8Q=" crossorigin=anonymous>
 <script>window.addEventListener("load",function(){window.cookieconsent.initialise({palette:{popup:{background:"#1D87BB",text:"#FFFFFF"},button:{background:"#FFFFFF",text:"#1D87BB"}},theme:"classic",type:"opt-in",content:{header:'Cookiessss used on the website!',message:"Some Eclipse Foundation pages use cookies to better serve you when you return to the site. You can set your browser to notify you before you receive a cookie or turn off cookies. If you do so, however, some areas of some sites may not function properly. To read Eclipse Foundation Privacy Policy ",allow:"Allow cookies",deny:"Decline",dismiss:"Got it!",link:"click here",href:'https://www.eclipse.org/legal/privacy.php'}})})</script>
@@ -272,8 +272,8 @@ Version 1.0 of the documentation is no longer actively maintained. The site that
 <li>to implement a plugin: the packages <strong>plugin</strong>, <strong>service</strong>, <strong>event</strong>, and <strong>message</strong>.</li>
 </ul>
 <figure id=figure-core-packages>
-<a data-fancybox href=../../../media/architecture/KeypleCore_Packages.svg data-caption="Core packages">
-<img src=../../../media/architecture/KeypleCore_Packages.svg alt>
+<a data-fancybox href=../../../media/archive-1.0/architecture/KeypleCore_Packages.svg data-caption="Core packages">
+<img src=../../../media/archive-1.0/architecture/KeypleCore_Packages.svg alt>
 </a>
 <figcaption>
 Core packages
@@ -295,8 +295,8 @@ The <strong>SmartCard Service</strong> singleton provides the unique name list o
 <li>The <strong>Reader</strong> is the generic interface to handle a smartcard reader. The presence of card in a Reader could be checked.</li>
 <li>The <strong>Observable Reader</strong> interface extends Readers which have the capability to notify registered Reader Observers about the insertion or remove of a Card in the Reader. Reader Observers could be added or removed to the Observable Reader. Useful for systems automatically starting the processing of a Card at its insertion: like a ticketing validator.
 <figure id=figure-reader-access-v100>
-<a data-fancybox href=../../../media/architecture/KeypleCore_Reader_ClassDiag_PluginSettingAndReaderAccess_1_0_0.svg data-caption="[Reader Access v1.0.0">
-<img src=../../../media/architecture/KeypleCore_Reader_ClassDiag_PluginSettingAndReaderAccess_1_0_0.svg alt>
+<a data-fancybox href=../../../media/archive-1.0/architecture/KeypleCore_Reader_ClassDiag_PluginSettingAndReaderAccess_1_0_0.svg data-caption="[Reader Access v1.0.0">
+<img src=../../../media/archive-1.0/architecture/KeypleCore_Reader_ClassDiag_PluginSettingAndReaderAccess_1_0_0.svg alt>
 </a>
 <figcaption>
 [Reader Access v1.0.0
@@ -308,8 +308,8 @@ The <strong>SmartCard Service</strong> singleton provides the unique name list o
 <h3 id=specific-plugin-integration>Specific Plugin integration</h3>
 <p>The Plugins are registered to the SmartCard Service through related specific Plugin Factory.
 <figure id=figure-specific-plugin-v100>
-<a data-fancybox href=../../../media/architecture/KeypleCore_Reader_ClassDiag_SpecificPluginFactoryAndProtocol_1_0_0.svg data-caption="Specific Plugin v1.0.0">
-<img src=../../../media/architecture/KeypleCore_Reader_ClassDiag_SpecificPluginFactoryAndProtocol_1_0_0.svg alt>
+<a data-fancybox href=../../../media/archive-1.0/architecture/KeypleCore_Reader_ClassDiag_SpecificPluginFactoryAndProtocol_1_0_0.svg data-caption="Specific Plugin v1.0.0">
+<img src=../../../media/archive-1.0/architecture/KeypleCore_Reader_ClassDiag_SpecificPluginFactoryAndProtocol_1_0_0.svg alt>
 </a>
 <figcaption>
 Specific Plugin v1.0.0
@@ -319,8 +319,8 @@ Specific Plugin v1.0.0
 <h3 id=reader-notifications>Reader Notifications</h3>
 <p>To be notified about <strong>Plugin Event</strong> or <strong>Reader Event</strong>, a terminal application must implement the dedicated <strong>Plugin Observer</strong> or <strong>Reader Observer</strong> interfaces.</p>
 <figure id=figure-reader-notifications-v100>
-<a data-fancybox href=../../../media/architecture/KeypleCore_Reader_ClassDiag_ObservablePluginAndReaderEvents_1_0_0.svg data-caption="Reader Notifications v1.0.0">
-<img src=../../../media/architecture/KeypleCore_Reader_ClassDiag_ObservablePluginAndReaderEvents_1_0_0.svg alt>
+<a data-fancybox href=../../../media/archive-1.0/architecture/KeypleCore_Reader_ClassDiag_ObservablePluginAndReaderEvents_1_0_0.svg data-caption="Reader Notifications v1.0.0">
+<img src=../../../media/archive-1.0/architecture/KeypleCore_Reader_ClassDiag_ObservablePluginAndReaderEvents_1_0_0.svg alt>
 </a>
 <figcaption>
 Reader Notifications v1.0.0
@@ -345,8 +345,8 @@ When active, an Observable Reader could switch between three internal states: <s
 <p>In the nominal case, a Reader Observer indicates to the Observable Reader that the processing of the SE is finished by releasing the Card Channel.
 To manage a failure of the Reader Observer process, the Observable Reader interface provides also a method to finalize the Card processing.</p>
 <figure id=figure-observable-reader-states>
-<a data-fancybox href=../../../media/architecture/KeypleCore_Reader_StateDiag_ObservableReaderStates_1_0_0.svg data-caption="Observable Reader States">
-<img src=../../../media/architecture/KeypleCore_Reader_StateDiag_ObservableReaderStates_1_0_0.svg alt>
+<a data-fancybox href=../../../media/archive-1.0/architecture/KeypleCore_Reader_StateDiag_ObservableReaderStates_1_0_0.svg data-caption="Observable Reader States">
+<img src=../../../media/archive-1.0/architecture/KeypleCore_Reader_StateDiag_ObservableReaderStates_1_0_0.svg alt>
 </a>
 <figcaption>
 Observable Reader States
@@ -385,8 +385,8 @@ Some Plugin solutions could have the capability to notify a Card removal also du
 <li>Otherwise, on an Observable Reader, a Default Selection could be defined. In this case the Selection is operated automatically at the insertion of the Card. In this case, the Card Selection is next managed by the Observable Reader, but the Card processing is managed by a Reader Observer.</li>
 </ul>
 <figure id=figure-selection-v100>
-<a data-fancybox href=../../../media/architecture/KeypleCore_CardSelection_ActivityDiag_Scenarii.svg data-caption="Selection v1.0.0">
-<img src=../../../media/architecture/KeypleCore_CardSelection_ActivityDiag_Scenarii.svg alt>
+<a data-fancybox href=../../../media/archive-1.0/architecture/KeypleCore_CardSelection_ActivityDiag_Scenarii.svg data-caption="Selection v1.0.0">
+<img src=../../../media/archive-1.0/architecture/KeypleCore_CardSelection_ActivityDiag_Scenarii.svg alt>
 </a>
 <figcaption>
 Selection v1.0.0
@@ -408,8 +408,8 @@ If a SE Selector is defined without any filter, the selection is always successf
 <li>The <strong>channel control</strong> defines if the logical channel should be kept open or close after the last processed card selection request.</li>
 </ul>
 <figure id=figure-card-selection-v100>
-<a data-fancybox href=../../../media/architecture/KeypleCore_CardSelection_ClassDiag_SelectorAndSelection_1_0_0.svg data-caption="Card Selection v1.0.0">
-<img src=../../../media/architecture/KeypleCore_CardSelection_ClassDiag_SelectorAndSelection_1_0_0.svg alt>
+<a data-fancybox href=../../../media/archive-1.0/architecture/KeypleCore_CardSelection_ClassDiag_SelectorAndSelection_1_0_0.svg data-caption="Card Selection v1.0.0">
+<img src=../../../media/archive-1.0/architecture/KeypleCore_CardSelection_ClassDiag_SelectorAndSelection_1_0_0.svg alt>
 </a>
 <figcaption>
 Card Selection v1.0.0
@@ -422,8 +422,8 @@ Card Selection v1.0.0
 <p>The Keyple Calypso extension uses the card interface to exchange APDU commands with Calypso cards and SAM.</p>
 <h3 id=apdu-transmission>APDU Transmission</h3>
 <figure id=figure-apdu-transmission-v100>
-<a data-fancybox href=../../../media/architecture/KeypleCore_Card_ClassDiag_CardMessage_1_0_0.svg data-caption="APDU Transmission v1.0.0">
-<img src=../../../media/architecture/KeypleCore_Card_ClassDiag_CardMessage_1_0_0.svg alt>
+<a data-fancybox href=../../../media/archive-1.0/architecture/KeypleCore_Card_ClassDiag_CardMessage_1_0_0.svg data-caption="APDU Transmission v1.0.0">
+<img src=../../../media/archive-1.0/architecture/KeypleCore_Card_ClassDiag_CardMessage_1_0_0.svg alt>
 </a>
 <figcaption>
 APDU Transmission v1.0.0
@@ -450,8 +450,8 @@ APDU Transmission v1.0.0
 <li>AbstractObservableLocalAutonomousReader</li>
 </ul>
 <figure id=figure-plugin-factorized-processing-v100>
-<a data-fancybox href=../../../media/architecture/KeypleCore_Plugin_ClassDiag_PluginImplementaion_1_0_0.svg data-caption="Plugin Factorized Processing v1.0.0">
-<img src=../../../media/architecture/KeypleCore_Plugin_ClassDiag_PluginImplementaion_1_0_0.svg alt>
+<a data-fancybox href=../../../media/archive-1.0/architecture/KeypleCore_Plugin_ClassDiag_PluginImplementaion_1_0_0.svg data-caption="Plugin Factorized Processing v1.0.0">
+<img src=../../../media/archive-1.0/architecture/KeypleCore_Plugin_ClassDiag_PluginImplementaion_1_0_0.svg alt>
 </a>
 <figcaption>
 Plugin Factorized Processing v1.0.0
@@ -472,7 +472,7 @@ Plugin Factorized Processing v1.0.0
 </div>
 </div>
 <div class=body-footer>
-<p>Last updated on Mon, Aug 30, 2021</p>
+<p>Last updated on Fri, Sep 10, 2021</p>
 </div>
 </article>
 <footer class=site-footer>
@@ -562,7 +562,7 @@ for
     </script>
 <script src=https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin=anonymous></script>
 <script src=https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin=anonymous></script>
-<script src=../../../js/academic.min.d12bc0efcbebc9e8a9afafe4b4fed552.js></script>
+<script src=../../../js/academic.min.d3237d4df23be58b29c139f2ab2cb982.js></script>
 <link rel=stylesheet href=https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css>
 <script src=https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js></script>
 <script src=https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js></script>
