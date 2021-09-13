@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Java - Components overview | Eclipse Keyple</title><link>https://keyple.org/components-java/overview/</link><atom:link href="https://keyple.org/components-java/overview/index.xml" rel="self" type="application/rss+xml"/><description>Java - Components overview</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Copyright © Eclipse Foundation, Inc. All Rights Reserved.</copyright><image><url>https://keyple.org/images/logo_hu673a59176cd62c570f44ed2728665b48_42188_300x300_fit_lanczos_3.png</url><title>Java - Components overview</title><link>https://keyple.org/components-java/overview/</link></image><item><title>Java - Components map</title><link>https://keyple.org/components-java/overview/components-map/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/components-java/overview/components-map/</guid><description>&lt;hr>
-&lt;p>Les dépendances des composants Keyple sont représentés dans le diagramme ci-dessous:&lt;/p>
-&lt;p>TODO Légende + diagramme&lt;/p></description></item><item><title>Java - Configuration wizard</title><link>https://keyple.org/components-java/overview/configuration-wizard/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/components-java/overview/configuration-wizard/</guid><description>&lt;hr>
+&lt;p>The dependencies between the Keyple components are shown in the diagram below:&lt;/p>
+&lt;figure >
+&lt;a data-fancybox="" href="../../media/uml/component-dependencies/component_dependencies_overview.svg" >
+&lt;img src="../../media/uml/component-dependencies/component_dependencies_overview.svg" alt="" >
+&lt;/a>
+&lt;/figure>
+&lt;p>Here are the most important things to remember:&lt;/p>
+&lt;ul>
+&lt;li>Each component has its &lt;strong>own life cycle&lt;/strong>.&lt;/li>
+&lt;li>There are two types of Keyple components: &lt;strong>APIs&lt;/strong> and &lt;strong>libraries&lt;/strong>.&lt;/li>
+&lt;li>Some APIs are provided by &lt;strong>Calypso Networks Association&lt;/strong>.&lt;/li>
+&lt;li>APIs contain &lt;strong>only interfaces&lt;/strong>.&lt;/li>
+&lt;li>Libraries contain &lt;strong>interfaces and their implementation&lt;/strong>.&lt;/li>
+&lt;li>Some APIs are &lt;strong>public&lt;/strong> while others are &lt;strong>internal&lt;/strong>.&lt;/li>
+&lt;li>All libraries are &lt;strong>public&lt;/strong>.&lt;/li>
+&lt;li>All &lt;strong>libraries&lt;/strong> and &lt;strong>public APIs&lt;/strong> can be used by the developer of the client application.&lt;/li>
+&lt;li>The &lt;strong>internal APIs&lt;/strong> are intended for the developer of Keyple add-ons only (e.g. custom reader plugin, custom card extension or custom distributed solution).&lt;/li>
+&lt;/ul></description></item><item><title>Java - Configuration wizard</title><link>https://keyple.org/components-java/overview/configuration-wizard/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/components-java/overview/configuration-wizard/</guid><description>&lt;hr>
 &lt;p>This online tool generates for you the &lt;code>dependencies&lt;/code> section of Gradle or Maven configuration files.&lt;/p>
 &lt;p>Choose your project profile and copy/paste the generated result into your project dependency manager.&lt;/p>
 &lt;div class="spoiler " >
@@ -475,5 +491,65 @@ updateCardDependencies(2, null);
 };
 &lt;/script></description></item><item><title>Java - Dependency check</title><link>https://keyple.org/components-java/overview/dependency-check/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/components-java/overview/dependency-check/</guid><description>&lt;hr>
 &lt;p>This online tool helps you to check the compatibility of Keyple components according to their internal API versions.&lt;/p>
-&lt;p>Select the targeted versions of the internal API to show the associated compliant libraries versions.&lt;/p>
-&lt;p>TODO tableau excel&lt;/p></description></item></channel></rss>
+&lt;p>Select the targeted versions of the APIs to show the associated compliant libraries versions:&lt;/p>
+&lt;!--
+##########################################################
+/!\ Instructions to maintain the content of this table /!\
+##########################################################
+- Add a row each time an API has been updated (major or minor version) then update all impacted components.
+- If the update does not concern the APIs, but only the libraries, then update only the version range of the concerned libraries
+(ex: if keyple-service-java-api goes from "2.0.0" to "2.0.1", then put "2.0.0-2.0.1" in the table)
+-->
+&lt;table id="datatable-dependency-check" class="display compact" style="width:100%">
+&lt;thead>
+&lt;tr>
+&lt;th class="rotate c-orange">&lt;div class="rotate-180">calypsonet-terminal-reader-java-api&lt;/div>&lt;/th>
+&lt;th class="rotate c-orange">&lt;div class="rotate-180">calypsonet-terminal-card-java-api&lt;/div>&lt;/th>
+&lt;th class="rotate c-orange">&lt;div class="rotate-180">calypsonet-terminal-calypso-java-api&lt;/div>&lt;/th>
+&lt;th class="rotate c-yellow">&lt;div class="rotate-180">keyple-common-java-api&lt;/div>&lt;/th>
+&lt;th class="rotate c-yellow">&lt;div class="rotate-180">keyple-distributed-local-java-api&lt;/div>&lt;/th>
+&lt;th class="rotate c-yellow">&lt;div class="rotate-180">keyple-distributed-remote-java-api&lt;/div>&lt;/th>
+&lt;th class="rotate c-yellow">&lt;div class="rotate-180">keyple-plugin-java-api&lt;/div>&lt;/th>
+&lt;th class="rotate">&lt;div class="rotate-180">keyple-util-java-lib&lt;/div>&lt;/th>
+&lt;th class="rotate">&lt;div class="rotate-180">keyple-service-java-lib&lt;/div>&lt;/th>
+&lt;th class="rotate">&lt;div class="rotate-180">keyple-service-resource-java-lib&lt;/div>&lt;/th>
+&lt;th class="rotate c-purple">&lt;div class="rotate-180">keyple-distributed-local-java-lib&lt;/div>&lt;/th>
+&lt;th class="rotate c-purple">&lt;div class="rotate-180">keyple-distributed-network-java-lib&lt;/div>&lt;/th>
+&lt;th class="rotate c-purple">&lt;div class="rotate-180">keyple-distributed-remote-java-lib&lt;/div>&lt;/th>
+&lt;th class="rotate c-green">&lt;div class="rotate-180">keyple-card-calypso-java-lib&lt;/div>&lt;/th>
+&lt;th class="rotate c-green">&lt;div class="rotate-180">keyple-card-generic-java-lib&lt;/div>&lt;/th>
+&lt;th class="rotate c-red">&lt;div class="rotate-180">keyple-plugin-android-nfc-java-lib&lt;/div>&lt;/th>
+&lt;th class="rotate c-red">&lt;div class="rotate-180">keyple-plugin-android-omapi-java-lib&lt;/div>&lt;/th>
+&lt;th class="rotate c-red">&lt;div class="rotate-180">keyple-plugin-pcsc-java-lib&lt;/div>&lt;/th>
+&lt;th class="rotate c-red">&lt;div class="rotate-180">keyple-plugin-stub-java-lib&lt;/div>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>1.0.+&lt;/td>&lt;!-- calypsonet-terminal-reader-java-api -->
+&lt;td>1.0.+&lt;/td>&lt;!-- calypsonet-terminal-card-java-api -->
+&lt;td>1.0.+&lt;/td>&lt;!-- calypsonet-terminal-calypso-java-api -->
+&lt;td>2.0.+&lt;/td>&lt;!-- keyple-common-java-api -->
+&lt;td>2.0.+&lt;/td>&lt;!-- keyple-distributed-local-java-api -->
+&lt;td>2.0.+&lt;/td>&lt;!-- keyple-distributed-remote-java-api -->
+&lt;td>2.0.+&lt;/td>&lt;!-- keyple-plugin-java-api -->
+&lt;td>2.0.+&lt;/td>&lt;!-- keyple-util-java-lib -->
+&lt;td>2.0.0&lt;/td>&lt;!-- keyple-service-java-lib -->
+&lt;td>2.0.0&lt;/td>&lt;!-- keyple-service-resource-java-lib -->
+&lt;td>2.0.0&lt;/td>&lt;!-- keyple-distributed-local-java-lib -->
+&lt;td>2.0.0&lt;/td>&lt;!-- keyple-distributed-network-java-lib -->
+&lt;td>2.0.0&lt;/td>&lt;!-- keyple-distributed-remote-java-lib -->
+&lt;td>2.0.0&lt;/td>&lt;!-- keyple-card-calypso-java-lib -->
+&lt;td>2.0.0&lt;/td>&lt;!-- keyple-card-generic-java-lib -->
+&lt;td>2.0.0&lt;/td>&lt;!-- keyple-plugin-android-nfc-java-lib -->
+&lt;td>2.0.0&lt;/td>&lt;!-- keyple-plugin-android-omapi-java-lib -->
+&lt;td>2.0.0&lt;/td>&lt;!-- keyple-plugin-pcsc-java-lib -->
+&lt;td>2.0.0&lt;/td>&lt;!-- keyple-plugin-stub-java-lib -->
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;script type="text/javascript">
+document.body.onload = function() {
+initDatatableDependencyCheck();
+};
+&lt;/script></description></item></channel></rss>

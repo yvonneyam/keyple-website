@@ -429,7 +429,7 @@ id="tabs-1-2" role="tabpanel" aria-labelled-by="tabs-1-2-tab">
 &amp;lt;/dependency&amp;gt;&lt;/code>&lt;/pre>
 &lt;/div>
 &lt;/div>
-&lt;div class="alert alert-note">
+&lt;div class="alert alert-warning">
 &lt;div>
 Since this library is used by all Keyple libraries, it is recommended to explicitly perform a &lt;strong>dynamic import&lt;/strong> of the library for a given major version.
 This ensures compatibility with all the used libraries.

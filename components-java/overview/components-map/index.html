@@ -26,7 +26,7 @@
 <meta property="og:title" content="Java - Components map | Eclipse Keyple">
 <meta property="og:description" content="General presentation of the dependencies between the different Keyple components."><meta property="og:image" content="https://keyple.org/images/logo_hu673a59176cd62c570f44ed2728665b48_42188_300x300_fit_lanczos_3.png">
 <meta property="twitter:image" content="https://keyple.org/images/logo_hu673a59176cd62c570f44ed2728665b48_42188_300x300_fit_lanczos_3.png"><meta property="og:locale" content="en-us">
-<meta property="article:modified_time" content="2021-09-07T15:35:08+02:00">
+<meta property="article:modified_time" content="2021-09-13T16:10:28+02:00">
 <script src=https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js integrity="sha256-5VhCqFam2Cn+yjw61zbBNrbHVJ6SRydPeKopYlngbiQ=" crossorigin=anonymous></script>
 <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css integrity="sha256-zQ0LblD/Af8vOppw18+2anxsuaz3pWYyVWi+bTvTH8Q=" crossorigin=anonymous>
 <script>window.addEventListener("load",function(){window.cookieconsent.initialise({palette:{popup:{background:"#1D87BB",text:"#FFFFFF"},button:{background:"#FFFFFF",text:"#1D87BB"}},theme:"classic",type:"opt-in",content:{header:'Cookiessss used on the website!',message:"Some Eclipse Foundation pages use cookies to better serve you when you return to the site. You can set your browser to notify you before you receive a cookie or turn off cookies. If you do so, however, some areas of some sites may not function properly. To read Eclipse Foundation Privacy Policy ",allow:"Allow cookies",deny:"Decline",dismiss:"Got it!",link:"click here",href:'https://www.eclipse.org/legal/privacy.php'}})})</script>
@@ -185,8 +185,24 @@
 <h1>Java - Components map</h1>
 <div class=article-style>
 <hr>
-<p>Les dépendances des composants Keyple sont représentés dans le diagramme ci-dessous:</p>
-<p>TODO Légende + diagramme</p>
+<p>The dependencies between the Keyple components are shown in the diagram below:</p>
+<figure>
+<a data-fancybox href=../../../media/uml/component-dependencies/component_dependencies_overview.svg>
+<img src=../../../media/uml/component-dependencies/component_dependencies_overview.svg alt>
+</a>
+</figure>
+<p>Here are the most important things to remember:</p>
+<ul>
+<li>Each component has its <strong>own life cycle</strong>.</li>
+<li>There are two types of Keyple components: <strong>APIs</strong> and <strong>libraries</strong>.</li>
+<li>Some APIs are provided by <strong>Calypso Networks Association</strong>.</li>
+<li>APIs contain <strong>only interfaces</strong>.</li>
+<li>Libraries contain <strong>interfaces and their implementation</strong>.</li>
+<li>Some APIs are <strong>public</strong> while others are <strong>internal</strong>.</li>
+<li>All libraries are <strong>public</strong>.</li>
+<li>All <strong>libraries</strong> and <strong>public APIs</strong> can be used by the developer of the client application.</li>
+<li>The <strong>internal APIs</strong> are intended for the developer of Keyple add-ons only (e.g. custom reader plugin, custom card extension or custom distributed solution).</li>
+</ul>
 </div>
 <div class=article-widget>
 <div class=post-nav>
@@ -198,7 +214,7 @@
 </div>
 </div>
 <div class=body-footer>
-<p>Last updated on Tue, Sep 7, 2021</p>
+<p>Last updated on Mon, Sep 13, 2021</p>
 </div>
 </article>
 <footer class=site-footer>
@@ -288,7 +304,7 @@ for
     </script>
 <script src=https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin=anonymous></script>
 <script src=https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin=anonymous></script>
-<script src=../../../js/academic.min.d3237d4df23be58b29c139f2ab2cb982.js></script>
+<script src=../../../js/academic.min.b53776f33e8073247831b676ef46c015.js></script>
 <link rel=stylesheet href=https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css>
 <script src=https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js></script>
 <script src=https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js></script>
