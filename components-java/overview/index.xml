@@ -505,7 +505,7 @@ updateCardDependencies(2, null);
 &lt;tr>
 &lt;th colspan="3" class="text-center c-orange">Calypso Networks Association APIs&lt;/th>
 &lt;th colspan="4" class="text-center c-yellow">Core APIs&lt;/th>
-&lt;th colspan="3" class="text-center">Core libraries&lt;/th>
+&lt;th colspan="3" class="text-center c-blue">Core libraries&lt;/th>
 &lt;th colspan="3" class="text-center c-purple">Distributed systems libraries&lt;/th>
 &lt;th colspan="2" class="text-center c-green">Card extensions libraries&lt;/th>
 &lt;th colspan="4" class="text-center c-red">Standard reader plugins libraries&lt;/th>
@@ -518,9 +518,9 @@ updateCardDependencies(2, null);
 &lt;th class="rotate c-yellow">&lt;div class="rotate-190">keyple-distributed-local-java-api&lt;/div>&lt;/th>
 &lt;th class="rotate c-yellow">&lt;div class="rotate-190">keyple-distributed-remote-java-api&lt;/div>&lt;/th>
 &lt;th class="rotate c-yellow">&lt;div class="rotate-190">keyple-plugin-java-api&lt;/div>&lt;/th>
-&lt;th class="rotate">&lt;div class="rotate-190">keyple-util-java-lib&lt;/div>&lt;/th>
-&lt;th class="rotate">&lt;div class="rotate-190">keyple-service-java-lib&lt;/div>&lt;/th>
-&lt;th class="rotate">&lt;div class="rotate-190">keyple-service-resource-java-lib&lt;/div>&lt;/th>
+&lt;th class="rotate c-blue">&lt;div class="rotate-190">keyple-util-java-lib&lt;/div>&lt;/th>
+&lt;th class="rotate c-blue">&lt;div class="rotate-190">keyple-service-java-lib&lt;/div>&lt;/th>
+&lt;th class="rotate c-blue">&lt;div class="rotate-190">keyple-service-resource-java-lib&lt;/div>&lt;/th>
 &lt;th class="rotate c-purple">&lt;div class="rotate-190">keyple-distributed-local-java-lib&lt;/div>&lt;/th>
 &lt;th class="rotate c-purple">&lt;div class="rotate-190">keyple-distributed-network-java-lib&lt;/div>&lt;/th>
 &lt;th class="rotate c-purple">&lt;div class="rotate-190">keyple-distributed-remote-java-lib&lt;/div>&lt;/th>
