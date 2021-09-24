@@ -1,10 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Developer guides | Eclipse Keyple</title><link>https://keyple.org/learn/developer-guide/</link><atom:link href="https://keyple.org/learn/developer-guide/index.xml" rel="self" type="application/rss+xml"/><description>Developer guides</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Copyright © Eclipse Foundation, Inc. All Rights Reserved.</copyright><image><url>https://keyple.org/images/logo_hu673a59176cd62c570f44ed2728665b48_42188_300x300_fit_lanczos_3.png</url><title>Developer guides</title><link>https://keyple.org/learn/developer-guide/</link></image><item><title>Standalone Application Developer's Guide</title><link>https://keyple.org/learn/developer-guide/standalone-application/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/learn/developer-guide/standalone-application/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Developer guides | Eclipse Keyple</title><link>https://keyple.org/learn/developer-guide/</link><atom:link href="https://keyple.org/learn/developer-guide/index.xml" rel="self" type="application/rss+xml"/><description>Developer guides</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Copyright © Eclipse Foundation, Inc. All Rights Reserved.</copyright><image><url>https://keyple.org/images/logo_hu673a59176cd62c570f44ed2728665b48_42188_300x300_fit_lanczos_3.png</url><title>Developer guides</title><link>https://keyple.org/learn/developer-guide/</link></image><item><title>Standalone Application Developer Guide</title><link>https://keyple.org/learn/developer-guide/standalone-application/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/learn/developer-guide/standalone-application/</guid><description>&lt;hr>
+&lt;h2 id="overview">Overview&lt;/h2>
 &lt;p>A standalone application is an application that runs in a device in contact
 with the end user.&lt;/p>
 &lt;p>It has at least one local smart card reader and manages itself the
 interaction with the user.&lt;/p>
-&lt;p>In the ticketing industry, it is typically the software that runs a
-validator, a vending machine, or a control terminal.&lt;/p>
 &lt;p>The diagram below illustrates the organization of a standalone application based on Keyple:
 &lt;figure >
 &lt;a data-fancybox="" href="../../media/uml/standalone-application/component/Local_Application_Components_Overview.svg" >
@@ -41,10 +40,10 @@ extensions such as
 an action or to achieve a result depending on the needs of the
 application.&lt;/p>
 &lt;p>The purpose of this section is to guide you in its use.&lt;/p>
-&lt;h3 id="creation-of-the-smart-card-service">Creation of the Smart Card Service&lt;/h3>
+&lt;h3 id="start-of-the-smart-card-service">Start of the smart card service&lt;/h3>
 &lt;p>This is the very first step in the realization of a Keyple application:&lt;/p>
 &lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('7', this);">Copy&lt;/button>&lt;/div>
-&lt;pre>&lt;code class="language-java" id="code-7"> // Get the instance of the SmartCardService (singleton pattern)
+&lt;pre>&lt;code class="language-java" id="code-7">// Get the instance of the SmartCardService (singleton pattern)
 SmartCardService smartCardService = SmartCardServiceProvider.getService();&lt;/code>&lt;/pre>
 &lt;p>The smart card service is based on the &lt;code>SmartCardService&lt;/code> interface, of which
 a singleton instance is provided by the &lt;code>SmartCardServiceProvider&lt;/code> class.&lt;/p>
@@ -75,7 +74,7 @@ A new plugin can also be &lt;a href="../../learn/developer-guide/create-a-reader
 Card Service.&lt;/p>
 &lt;p>Here is for example the registration of the PC/SC plugin:&lt;/p>
 &lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('12', this);">Copy&lt;/button>&lt;/div>
-&lt;pre>&lt;code class="language-java" id="code-12"> // Register the PcscPlugin to the `SmartCardService` */
+&lt;pre>&lt;code class="language-java" id="code-12">// Register the PcscPlugin to the `SmartCardService` */
 Plugin plugin = smartCardService.registerPlugin(PcscPluginFactoryBuilder.builder().build());&lt;/code>&lt;/pre>
 &lt;div class="alert alert-note">
 &lt;div>
@@ -98,7 +97,7 @@ through a background task managed by &lt;strong>Keyple Service&lt;/strong>.&lt;/
 to allow &lt;strong>Keyple Service&lt;/strong> to notify the application of plugin events and runtime errors (that may occur during the monitoring or notification of events).&lt;/p>
 &lt;p>The plugin observer must implement the &lt;code>PluginObserverSpi&lt;/code> interface, the plugin exception handler must implement the &lt;code>PluginObservationExceptionHandlerSpi&lt;/code> interface.&lt;/p>
 &lt;p>These two interfaces are available in the &lt;em>spi&lt;/em> package of the &lt;strong>Keyple Service&lt;/strong> component.&lt;/p>
-&lt;p>Here is an example of q plugin observer class including an exception handler:&lt;/p>
+&lt;p>Here is an example of a plugin observer class including an exception handler:&lt;/p>
 &lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('15', this);">Copy&lt;/button>&lt;/div>
 &lt;pre>&lt;code class="language-java" id="code-15">class PluginObserver implements PluginObserverSpi, PluginObservationExceptionHandlerSpi {
 @Override
@@ -127,7 +126,7 @@ public void onPluginObservationError(String pluginName, Throwable e) {
 &lt;p>Since adding an observer will cause the &lt;strong>Keyple Service&lt;/strong> to check for the presence of an exception handler,
 the definition of the exception handler must be done first.&lt;/p>
 &lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('16', this);">Copy&lt;/button>&lt;/div>
-&lt;pre>&lt;code class="language-java" id="code-16"> PluginObserver pluginObserver = new PluginObserver();
+&lt;pre>&lt;code class="language-java" id="code-16">PluginObserver pluginObserver = new PluginObserver();
 ((ObservablePlugin) plugin).setPluginObservationExceptionHandler(pluginObserver);
 ((ObservablePlugin) plugin).addObserver(pluginObserver);&lt;/code>&lt;/pre>
 &lt;h3 id="retrieve-the-reader">Retrieve the reader&lt;/h3>
@@ -978,6 +977,11 @@ Keyple Distributed - Asynchronous network implementation
 &lt;li>
 &lt;a href="https://keyple.org/components-java/distributed/">Java components&lt;/a>&lt;/li>
 &lt;/ul></description></item><item><title>Calypso application</title><link>https://keyple.org/learn/developer-guide/calypso-application/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/learn/developer-guide/calypso-application/</guid><description>&lt;hr>
+&lt;div class="alert alert-note">
+&lt;div>
+Coming soon
+&lt;/div>
+&lt;/div></description></item><item><title>Card Resource Service Developer Guide</title><link>https://keyple.org/learn/developer-guide/card-resource-service/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/learn/developer-guide/card-resource-service/</guid><description>&lt;hr>
 &lt;div class="alert alert-note">
 &lt;div>
 Coming soon

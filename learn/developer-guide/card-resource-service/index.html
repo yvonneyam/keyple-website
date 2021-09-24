@@ -4,8 +4,8 @@
 <meta name=viewport content="width=device-width,initial-scale=1">
 <meta http-equiv=x-ua-compatible content="IE=edge">
 <meta name=generator content="Source Themes Academic 4.8.0">
-<meta name=description content="How to develop an add-on to handle a specific hardware device.">
-<link rel=alternate hreflang=en-us href=https://keyple.org/learn/developer-guide/create-a-reader-plugin/>
+<meta name=description content="How to develop an end-user application using the Card Resource Service.">
+<link rel=alternate hreflang=en-us href=https://keyple.org/learn/developer-guide/card-resource-service/>
 <link rel=preconnect href=https://fonts.gstatic.com crossorigin>
 <meta name=theme-color content="#1D87BB">
 <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin=anonymous>
@@ -19,18 +19,18 @@
 <link rel=manifest href=../../../index.webmanifest>
 <link rel=icon type=image/png href=../../../images/icon_hu16db34b3636b127457de39ca2fab620f_9845_32x32_fill_lanczos_center_3.png>
 <link rel=apple-touch-icon type=image/png href=../../../images/icon_hu16db34b3636b127457de39ca2fab620f_9845_192x192_fill_lanczos_center_3.png>
-<link rel=canonical href=https://keyple.org/learn/developer-guide/create-a-reader-plugin/>
+<link rel=canonical href=https://keyple.org/learn/developer-guide/card-resource-service/>
 <meta property="twitter:card" content="summary">
 <meta property="og:site_name" content="Eclipse Keyple">
-<meta property="og:url" content="https://keyple.org/learn/developer-guide/create-a-reader-plugin/">
-<meta property="og:title" content="Create a reader plugin | Eclipse Keyple">
-<meta property="og:description" content="How to develop an add-on to handle a specific hardware device."><meta property="og:image" content="https://keyple.org/images/logo_hu673a59176cd62c570f44ed2728665b48_42188_300x300_fit_lanczos_3.png">
+<meta property="og:url" content="https://keyple.org/learn/developer-guide/card-resource-service/">
+<meta property="og:title" content="Card Resource Service Developer Guide | Eclipse Keyple">
+<meta property="og:description" content="How to develop an end-user application using the Card Resource Service."><meta property="og:image" content="https://keyple.org/images/logo_hu673a59176cd62c570f44ed2728665b48_42188_300x300_fit_lanczos_3.png">
 <meta property="twitter:image" content="https://keyple.org/images/logo_hu673a59176cd62c570f44ed2728665b48_42188_300x300_fit_lanczos_3.png"><meta property="og:locale" content="en-us">
 <meta property="article:modified_time" content="2021-09-24T18:04:44+02:00">
 <script src=https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js integrity="sha256-5VhCqFam2Cn+yjw61zbBNrbHVJ6SRydPeKopYlngbiQ=" crossorigin=anonymous></script>
 <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css integrity="sha256-zQ0LblD/Af8vOppw18+2anxsuaz3pWYyVWi+bTvTH8Q=" crossorigin=anonymous>
 <script>window.addEventListener("load",function(){window.cookieconsent.initialise({palette:{popup:{background:"#1D87BB",text:"#FFFFFF"},button:{background:"#FFFFFF",text:"#1D87BB"}},theme:"classic",type:"opt-in",content:{header:'Cookiessss used on the website!',message:"Some Eclipse Foundation pages use cookies to better serve you when you return to the site. You can set your browser to notify you before you receive a cookie or turn off cookies. If you do so, however, some areas of some sites may not function properly. To read Eclipse Foundation Privacy Policy ",allow:"Allow cookies",deny:"Decline",dismiss:"Got it!",link:"click here",href:'https://www.eclipse.org/legal/privacy.php'}})})</script>
-<title>Create a reader plugin | Eclipse Keyple</title>
+<title>Card Resource Service Developer Guide | Eclipse Keyple</title>
 </head>
 <body id=top data-spy=scroll data-offset=70 data-target=#TableOfContents>
 <script>const isSiteThemeDark=!1</script>
@@ -144,8 +144,8 @@
 <li><a href=../../../learn/developer-guide/standalone-application/>Standalone Application</a></li>
 <li><a href=../../../learn/developer-guide/distributed-application/>Distributed application</a></li>
 <li><a href=../../../learn/developer-guide/calypso-application/>Calypso application</a></li>
-<li><a href=../../../learn/developer-guide/card-resource-service/>Card resource service</a></li>
-<li class=active><a href=../../../learn/developer-guide/create-a-reader-plugin/>Create a reader plugin</a></li>
+<li class=active><a href=../../../learn/developer-guide/card-resource-service/>Card resource service</a></li>
+<li><a href=../../../learn/developer-guide/create-a-reader-plugin/>Create a reader plugin</a></li>
 <li><a href=../../../learn/developer-guide/create-a-card-extension/>Create a card extension</a></li>
 </ul>
 </div>
@@ -172,7 +172,7 @@
 <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role=main>
 <article class=article>
 <div class=docs-article-container>
-<h1>Create a reader plugin</h1>
+<h1>Card Resource Service Developer Guide</h1>
 <div class=article-style>
 <hr>
 <div class="alert alert-note">
@@ -185,11 +185,11 @@ Coming soon
 <div class=post-nav>
 <div class=post-nav-item>
 <div class=meta-nav>Previous</div>
-<a href=../../../learn/developer-guide/card-resource-service/ rel=next>Card Resource Service Developer Guide</a>
+<a href=../../../learn/developer-guide/calypso-application/ rel=next>Calypso application</a>
 </div>
 <div class=post-nav-item>
 <div class=meta-nav>Next</div>
-<a href=../../../learn/developer-guide/create-a-card-extension/ rel=prev>Create a card extension</a>
+<a href=../../../learn/developer-guide/create-a-reader-plugin/ rel=prev>Create a reader plugin</a>
 </div>
 </div>
 </div>

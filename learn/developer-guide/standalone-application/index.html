@@ -23,14 +23,14 @@
 <meta property="twitter:card" content="summary">
 <meta property="og:site_name" content="Eclipse Keyple">
 <meta property="og:url" content="https://keyple.org/learn/developer-guide/standalone-application/">
-<meta property="og:title" content="Standalone Application Developer's Guide | Eclipse Keyple">
+<meta property="og:title" content="Standalone Application Developer Guide | Eclipse Keyple">
 <meta property="og:description" content="How to develop an end-user standalone application."><meta property="og:image" content="https://keyple.org/images/logo_hu673a59176cd62c570f44ed2728665b48_42188_300x300_fit_lanczos_3.png">
 <meta property="twitter:image" content="https://keyple.org/images/logo_hu673a59176cd62c570f44ed2728665b48_42188_300x300_fit_lanczos_3.png"><meta property="og:locale" content="en-us">
-<meta property="article:modified_time" content="2021-09-24T16:51:54+02:00">
+<meta property="article:modified_time" content="2021-09-24T18:04:44+02:00">
 <script src=https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js integrity="sha256-5VhCqFam2Cn+yjw61zbBNrbHVJ6SRydPeKopYlngbiQ=" crossorigin=anonymous></script>
 <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css integrity="sha256-zQ0LblD/Af8vOppw18+2anxsuaz3pWYyVWi+bTvTH8Q=" crossorigin=anonymous>
 <script>window.addEventListener("load",function(){window.cookieconsent.initialise({palette:{popup:{background:"#1D87BB",text:"#FFFFFF"},button:{background:"#FFFFFF",text:"#1D87BB"}},theme:"classic",type:"opt-in",content:{header:'Cookiessss used on the website!',message:"Some Eclipse Foundation pages use cookies to better serve you when you return to the site. You can set your browser to notify you before you receive a cookie or turn off cookies. If you do so, however, some areas of some sites may not function properly. To read Eclipse Foundation Privacy Policy ",allow:"Allow cookies",deny:"Decline",dismiss:"Got it!",link:"click here",href:'https://www.eclipse.org/legal/privacy.php'}})})</script>
-<title>Standalone Application Developer's Guide | Eclipse Keyple</title>
+<title>Standalone Application Developer Guide | Eclipse Keyple</title>
 </head>
 <body id=top data-spy=scroll data-offset=70 data-target=#TableOfContents>
 <script>const isSiteThemeDark=!1</script>
@@ -144,6 +144,7 @@
 <li class=active><a href=../../../learn/developer-guide/standalone-application/>Standalone Application</a></li>
 <li><a href=../../../learn/developer-guide/distributed-application/>Distributed application</a></li>
 <li><a href=../../../learn/developer-guide/calypso-application/>Calypso application</a></li>
+<li><a href=../../../learn/developer-guide/card-resource-service/>Card resource service</a></li>
 <li><a href=../../../learn/developer-guide/create-a-reader-plugin/>Create a reader plugin</a></li>
 <li><a href=../../../learn/developer-guide/create-a-card-extension/>Create a card extension</a></li>
 </ul>
@@ -172,7 +173,7 @@
 <li><a href=#before-you-start>Before you start</a></li>
 <li><a href=#workflow>Workflow</a>
 <ul>
-<li><a href=#creation-of-the-smart-card-service>Creation of the Smart Card Service</a></li>
+<li><a href=#start-of-the-smart-card-service>Start of the smart card service</a></li>
 <li><a href=#reader-plugin-selection>Reader Plugin selection</a></li>
 <li><a href=#register-the-plugin>Register the plugin</a></li>
 <li><a href=#observation-of-the-plugin>Observation of the plugin</a></li>
@@ -202,15 +203,14 @@
 <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role=main>
 <article class=article>
 <div class=docs-article-container>
-<h1>Standalone Application Developer's Guide</h1>
+<h1>Standalone Application Developer Guide</h1>
 <div class=article-style>
+<hr>
 <h2 id=overview>Overview</h2>
 <p>A standalone application is an application that runs in a device in contact
 with the end user.</p>
 <p>It has at least one local smart card reader and manages itself the
 interaction with the user.</p>
-<p>In the ticketing industry, it is typically the software that runs a
-validator, a vending machine, or a control terminal.</p>
 <p>The diagram below illustrates the organization of a standalone application based on Keyple:
 <figure>
 <a data-fancybox href=../../../media/uml/standalone-application/component/Local_Application_Components_Overview.svg>
@@ -247,11 +247,11 @@ extensions such as
 an action or to achieve a result depending on the needs of the
 application.</p>
 <p>The purpose of this section is to guide you in its use.</p>
-<h3 id=creation-of-the-smart-card-service>Creation of the Smart Card Service</h3>
+<h3 id=start-of-the-smart-card-service>Start of the smart card service</h3>
 <p>This is the very first step in the realization of a Keyple application:</p>
 <div class=bd-clipboard><button type=button class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onclick="copyCodeContentToClipboard('7',this)">Copy</button></div>
-<pre><code class=language-java id=code-7>    // Get the instance of the SmartCardService (singleton pattern)
-    SmartCardService smartCardService = SmartCardServiceProvider.getService();</code></pre>
+<pre><code class=language-java id=code-7>// Get the instance of the SmartCardService (singleton pattern)
+SmartCardService smartCardService = SmartCardServiceProvider.getService();</code></pre>
 <p>The smart card service is based on the <code>SmartCardService</code> interface, of which
 a singleton instance is provided by the <code>SmartCardServiceProvider</code> class.</p>
 <p>Its main role is to centralize the Keyple add-on resources and to manage their
@@ -281,8 +281,8 @@ A new plugin can also be <a href=../../../learn/developer-guide/create-a-reader-
 Card Service.</p>
 <p>Here is for example the registration of the PC/SC plugin:</p>
 <div class=bd-clipboard><button type=button class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onclick="copyCodeContentToClipboard('12',this)">Copy</button></div>
-<pre><code class=language-java id=code-12>    // Register the PcscPlugin to the `SmartCardService` */
-    Plugin plugin = smartCardService.registerPlugin(PcscPluginFactoryBuilder.builder().build());</code></pre>
+<pre><code class=language-java id=code-12>// Register the PcscPlugin to the `SmartCardService` */
+Plugin plugin = smartCardService.registerPlugin(PcscPluginFactoryBuilder.builder().build());</code></pre>
 <div class="alert alert-note">
 <div>
 <p>The plugin factories all implement the interface expected by
@@ -304,7 +304,7 @@ through a background task managed by <strong>Keyple Service</strong>.</p>
 to allow <strong>Keyple Service</strong> to notify the application of plugin events and runtime errors (that may occur during the monitoring or notification of events).</p>
 <p>The plugin observer must implement the <code>PluginObserverSpi</code> interface, the plugin exception handler must implement the <code>PluginObservationExceptionHandlerSpi</code> interface.</p>
 <p>These two interfaces are available in the <em>spi</em> package of the <strong>Keyple Service</strong> component.</p>
-<p>Here is an example of q plugin observer class including an exception handler:</p>
+<p>Here is an example of a plugin observer class including an exception handler:</p>
 <div class=bd-clipboard><button type=button class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onclick="copyCodeContentToClipboard('15',this)">Copy</button></div>
 <pre><code class=language-java id=code-15>class PluginObserver implements PluginObserverSpi, PluginObservationExceptionHandlerSpi {
 
@@ -335,9 +335,9 @@ to allow <strong>Keyple Service</strong> to notify the application of plugin eve
 <p>Since adding an observer will cause the <strong>Keyple Service</strong> to check for the presence of an exception handler,
 the definition of the exception handler must be done first.</p>
 <div class=bd-clipboard><button type=button class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onclick="copyCodeContentToClipboard('16',this)">Copy</button></div>
-<pre><code class=language-java id=code-16>    PluginObserver pluginObserver = new PluginObserver();
-    ((ObservablePlugin) plugin).setPluginObservationExceptionHandler(pluginObserver);
-    ((ObservablePlugin) plugin).addObserver(pluginObserver);</code></pre>
+<pre><code class=language-java id=code-16>PluginObserver pluginObserver = new PluginObserver();
+((ObservablePlugin) plugin).setPluginObservationExceptionHandler(pluginObserver);
+((ObservablePlugin) plugin).addObserver(pluginObserver);</code></pre>
 <h3 id=retrieve-the-reader>Retrieve the reader</h3>
 <p>Readers are objects implementing the <code>Reader</code> interface and are
 returned by the plugin&rsquo;s <code>getReader</code> method taking the name of the
