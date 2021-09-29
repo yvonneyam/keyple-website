@@ -7838,11 +7838,62 @@ id="tabs-1-2" role="tabpanel" aria-labelled-by="tabs-1-2-tab">
 &amp;lt;version&amp;gt;2.0.0&amp;lt;/version&amp;gt;
 &amp;lt;/dependency&amp;gt;&lt;/code>&lt;/pre>
 &lt;/div>
-&lt;/div></description></item><item><title>How to get involved in the Eclipse Keyple project</title><link>https://keyple.org/community/contributing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/community/contributing/</guid><description>&lt;div class="alert alert-note">
-&lt;div>
-Coming soon
-&lt;/div>
-&lt;/div></description></item><item><title>Keyple compliant terminals</title><link>https://keyple.org/community/compliant-terminals/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/community/compliant-terminals/</guid><description>&lt;div class="alert alert-note">
+&lt;/div></description></item><item><title>How to contribute to Eclipse Keyple™ project</title><link>https://keyple.org/community/contributing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/community/contributing/</guid><description>&lt;p>Thanks for your interest in the Eclipse Keyple™ project.&lt;/p>
+&lt;hr>
+&lt;h2 id="via-fork-for-external-contributors">Via fork (for external contributors)&lt;/h2>
+&lt;p>Prerequisites:&lt;/p>
+&lt;ul>
+&lt;li>Have a
+&lt;a href="https://github.com/join" target="_blank" rel="noopener">GitHub&lt;/a> account.&lt;/li>
+&lt;/ul>
+&lt;p>Workflow:&lt;/p>
+&lt;ol>
+&lt;li>Check if there is already a GitHub issue for what you want to work on or create one.&lt;/li>
+&lt;li>Announce in the comments section that you want to work on the issue. Also describe the solution you want to implement.
+To improve the chances for your contribution to be accepted, you&amp;rsquo;ll want to wait for the feedback of the committers.&lt;/li>
+&lt;li>Fork the repository.&lt;/li>
+&lt;li>Create a new branch from &lt;code>main&lt;/code> for your changes. Name it after the issue number, e.g. &lt;code>#XXX_[descriptionofchanges]&lt;/code>.&lt;/li>
+&lt;li>Implement your changes.&lt;/li>
+&lt;li>Rebase on &lt;code>main&lt;/code>.&lt;/li>
+&lt;li>Run &lt;code>./gradlew spotlessApply&lt;/code> to format the code and add licence headers to the files.&lt;/li>
+&lt;li>Run &lt;code>./gradlew build&lt;/code> (to check code formatting and run tests)&lt;/li>
+&lt;li>Commit using
+&lt;a href="https://git-scm.com/docs/git-commit#git-commit--s" target="_blank" rel="noopener">sign off&lt;/a> option with the same email address you are using for your GitHub account.
+Use descriptive and meaningful commit messages.
+In particular, start the first line of the commit message with the number of the issue that the commit addresses, e.g. &lt;code>#XXX [descriptionofchanges]&lt;/code>.&lt;/li>
+&lt;li>Push your changes to your forked repository.&lt;/li>
+&lt;li>Create a
+&lt;a href="https://help.github.com/articles/using-pull-requests/" target="_blank" rel="noopener">pull request (PR)&lt;/a> to &lt;code>main&lt;/code>.&lt;/li>
+&lt;li>After submitting, do not use your branch for any other development, otherwise further changes that you make will be visible in the PR.&lt;/li>
+&lt;/ol>
+&lt;hr>
+&lt;h2 id="as-an-eclipse-keyple-project-committer">As an Eclipse Keyple™ project committer&lt;/h2>
+&lt;p>Prerequisites:&lt;/p>
+&lt;ol>
+&lt;li>Have a
+&lt;a href="https://github.com/join" target="_blank" rel="noopener">GitHub&lt;/a> account,&lt;/li>
+&lt;li>Have an
+&lt;a href="https://accounts.eclipse.org/user/register" target="_blank" rel="noopener">Eclipse&lt;/a> account,&lt;/li>
+&lt;li>Have signed the
+&lt;a href="https://accounts.eclipse.org/user/login?destination=user/eca" target="_blank" rel="noopener">Eclipse Contributor Agreement&lt;/a>,&lt;/li>
+&lt;li>Have been elected as a committer by the project&amp;rsquo;s team.&lt;/li>
+&lt;/ol>
+&lt;p>Workflow:&lt;/p>
+&lt;ol>
+&lt;li>Check if there is already a GitHub issue for what you want to work on or create one.&lt;/li>
+&lt;li>Assign the issue to yourself.&lt;/li>
+&lt;li>Create a new branch from &lt;code>main&lt;/code> for your changes. Name it after the issue number, e.g. &lt;code>#XXX_[descriptionofchanges]&lt;/code>.&lt;/li>
+&lt;li>Implement your changes.&lt;/li>
+&lt;li>Rebase on &lt;code>main&lt;/code>.&lt;/li>
+&lt;li>Run &lt;code>./gradlew spotlessApply&lt;/code> to format the code and add licence headers to the files.&lt;/li>
+&lt;li>Run &lt;code>./gradlew build&lt;/code> (to check code formatting and run tests)&lt;/li>
+&lt;li>Commit your changes.
+Use descriptive and meaningful commit messages.
+In particular, start the first line of the commit message with the number of the issue that the commit addresses, e.g. &lt;code>#XXX [descriptionofchanges]&lt;/code>.&lt;/li>
+&lt;li>Push the branch into the repository.&lt;/li>
+&lt;li>Create a pull request and ask somebody who is familiar with the code you modified to review it.&lt;/li>
+&lt;li>If the reviewer approves and all checks are OK, merge using &lt;strong>squash and commit&lt;/strong> method.&lt;/li>
+&lt;/ol></description></item><item><title>Keyple compliant terminals</title><link>https://keyple.org/community/compliant-terminals/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/community/compliant-terminals/</guid><description>&lt;div class="alert alert-note">
 &lt;div>
 &lt;p>To reference your terminal please make a &lt;a href="https://github.com/eclipse/keyple-website/pulls">Pull request&lt;/a> contribution on GitHub.&lt;/p>
 &lt;p>In order for your contribution to be accepted you must comply with one of the conditions below:&lt;/p>

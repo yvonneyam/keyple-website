@@ -23,14 +23,14 @@
 <meta property="twitter:card" content="summary">
 <meta property="og:site_name" content="Eclipse Keyple">
 <meta property="og:url" content="https://keyple.org/community/contributing/">
-<meta property="og:title" content="How to get involved in the Eclipse Keyple project | Eclipse Keyple">
+<meta property="og:title" content="How to contribute to Eclipse Keyple™ project | Eclipse Keyple">
 <meta property="og:description" content="Find out how to contribute to the Keyple project and how it can benefit your organization."><meta property="og:image" content="https://keyple.org/images/logo_hu673a59176cd62c570f44ed2728665b48_42188_300x300_fit_lanczos_3.png">
 <meta property="twitter:image" content="https://keyple.org/images/logo_hu673a59176cd62c570f44ed2728665b48_42188_300x300_fit_lanczos_3.png"><meta property="og:locale" content="en-us">
-<meta property="article:modified_time" content="2021-09-29T10:34:44+02:00">
+<meta property="article:modified_time" content="2021-09-29T12:47:46+02:00">
 <script src=https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js integrity="sha256-5VhCqFam2Cn+yjw61zbBNrbHVJ6SRydPeKopYlngbiQ=" crossorigin=anonymous></script>
 <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css integrity="sha256-zQ0LblD/Af8vOppw18+2anxsuaz3pWYyVWi+bTvTH8Q=" crossorigin=anonymous>
 <script>window.addEventListener("load",function(){window.cookieconsent.initialise({palette:{popup:{background:"#1D87BB",text:"#FFFFFF"},button:{background:"#FFFFFF",text:"#1D87BB"}},theme:"classic",type:"opt-in",content:{header:'Cookiessss used on the website!',message:"Some Eclipse Foundation pages use cookies to better serve you when you return to the site. You can set your browser to notify you before you receive a cookie or turn off cookies. If you do so, however, some areas of some sites may not function properly. To read Eclipse Foundation Privacy Policy ",allow:"Allow cookies",deny:"Decline",dismiss:"Got it!",link:"click here",href:'https://www.eclipse.org/legal/privacy.php'}})})</script>
-<title>How to get involved in the Eclipse Keyple project | Eclipse Keyple</title>
+<title>How to contribute to Eclipse Keyple™ project | Eclipse Keyple</title>
 </head>
 <body id=top data-spy=scroll data-offset=70 data-target=#TableOfContents>
 <script>const isSiteThemeDark=!1</script>
@@ -118,7 +118,7 @@
 </nav>
 <article class=article>
 <div class="article-container pt-3">
-<h1>How to get involved in the Eclipse Keyple project</h1>
+<h1>How to contribute to Eclipse Keyple™ project</h1>
 <div class=article-metadata>
 <span class=article-date>
 Last updated on
@@ -128,41 +128,92 @@ Wed, Sep 29, 2021
 </div>
 <div class=article-container>
 <div class=article-style>
-<div class="alert alert-note">
-<div>
-Coming soon
-</div>
-</div>
+<p>Thanks for your interest in the Eclipse Keyple™ project.</p>
+<hr>
+<h2 id=via-fork-for-external-contributors>Via fork (for external contributors)</h2>
+<p>Prerequisites:</p>
+<ul>
+<li>Have a
+<a href=https://github.com/join target=_blank rel=noopener>GitHub</a> account.</li>
+</ul>
+<p>Workflow:</p>
+<ol>
+<li>Check if there is already a GitHub issue for what you want to work on or create one.</li>
+<li>Announce in the comments section that you want to work on the issue. Also describe the solution you want to implement.
+To improve the chances for your contribution to be accepted, you&rsquo;ll want to wait for the feedback of the committers.</li>
+<li>Fork the repository.</li>
+<li>Create a new branch from <code>main</code> for your changes. Name it after the issue number, e.g. <code>#XXX_[descriptionofchanges]</code>.</li>
+<li>Implement your changes.</li>
+<li>Rebase on <code>main</code>.</li>
+<li>Run <code>./gradlew spotlessApply</code> to format the code and add licence headers to the files.</li>
+<li>Run <code>./gradlew build</code> (to check code formatting and run tests)</li>
+<li>Commit using
+<a href=https://git-scm.com/docs/git-commit#git-commit--s target=_blank rel=noopener>sign off</a> option with the same email address you are using for your GitHub account.
+Use descriptive and meaningful commit messages.
+In particular, start the first line of the commit message with the number of the issue that the commit addresses, e.g. <code>#XXX [descriptionofchanges]</code>.</li>
+<li>Push your changes to your forked repository.</li>
+<li>Create a
+<a href=https://help.github.com/articles/using-pull-requests/ target=_blank rel=noopener>pull request (PR)</a> to <code>main</code>.</li>
+<li>After submitting, do not use your branch for any other development, otherwise further changes that you make will be visible in the PR.</li>
+</ol>
+<hr>
+<h2 id=as-an-eclipse-keyple-project-committer>As an Eclipse Keyple™ project committer</h2>
+<p>Prerequisites:</p>
+<ol>
+<li>Have a
+<a href=https://github.com/join target=_blank rel=noopener>GitHub</a> account,</li>
+<li>Have an
+<a href=https://accounts.eclipse.org/user/register target=_blank rel=noopener>Eclipse</a> account,</li>
+<li>Have signed the
+<a href="https://accounts.eclipse.org/user/login?destination=user/eca" target=_blank rel=noopener>Eclipse Contributor Agreement</a>,</li>
+<li>Have been elected as a committer by the project&rsquo;s team.</li>
+</ol>
+<p>Workflow:</p>
+<ol>
+<li>Check if there is already a GitHub issue for what you want to work on or create one.</li>
+<li>Assign the issue to yourself.</li>
+<li>Create a new branch from <code>main</code> for your changes. Name it after the issue number, e.g. <code>#XXX_[descriptionofchanges]</code>.</li>
+<li>Implement your changes.</li>
+<li>Rebase on <code>main</code>.</li>
+<li>Run <code>./gradlew spotlessApply</code> to format the code and add licence headers to the files.</li>
+<li>Run <code>./gradlew build</code> (to check code formatting and run tests)</li>
+<li>Commit your changes.
+Use descriptive and meaningful commit messages.
+In particular, start the first line of the commit message with the number of the issue that the commit addresses, e.g. <code>#XXX [descriptionofchanges]</code>.</li>
+<li>Push the branch into the repository.</li>
+<li>Create a pull request and ask somebody who is familiar with the code you modified to review it.</li>
+<li>If the reviewer approves and all checks are OK, merge using <strong>squash and commit</strong> method.</li>
+</ol>
 </div>
 <div class=share-box aria-hidden=true>
 <ul class=share>
 <li>
-<a href="https://twitter.com/intent/tweet?url=https://keyple.org/community/contributing/&text=How%20to%20get%20involved%20in%20the%20Eclipse%20Keyple%20project" target=_blank rel=noopener class=share-btn-twitter>
+<a href="https://twitter.com/intent/tweet?url=https://keyple.org/community/contributing/&text=How%20to%20contribute%20to%20Eclipse%20Keyple%e2%84%a2%20project" target=_blank rel=noopener class=share-btn-twitter>
 <i class="fab fa-twitter"></i>
 </a>
 </li>
 <li>
-<a href="https://www.facebook.com/sharer.php?u=https://keyple.org/community/contributing/&t=How%20to%20get%20involved%20in%20the%20Eclipse%20Keyple%20project" target=_blank rel=noopener class=share-btn-facebook>
+<a href="https://www.facebook.com/sharer.php?u=https://keyple.org/community/contributing/&t=How%20to%20contribute%20to%20Eclipse%20Keyple%e2%84%a2%20project" target=_blank rel=noopener class=share-btn-facebook>
 <i class="fab fa-facebook"></i>
 </a>
 </li>
 <li>
-<a href="mailto:?subject=How%20to%20get%20involved%20in%20the%20Eclipse%20Keyple%20project&body=https://keyple.org/community/contributing/" target=_blank rel=noopener class=share-btn-email>
+<a href="mailto:?subject=How%20to%20contribute%20to%20Eclipse%20Keyple%e2%84%a2%20project&body=https://keyple.org/community/contributing/" target=_blank rel=noopener class=share-btn-email>
 <i class="fas fa-envelope"></i>
 </a>
 </li>
 <li>
-<a href="https://www.linkedin.com/shareArticle?url=https://keyple.org/community/contributing/&title=How%20to%20get%20involved%20in%20the%20Eclipse%20Keyple%20project" target=_blank rel=noopener class=share-btn-linkedin>
+<a href="https://www.linkedin.com/shareArticle?url=https://keyple.org/community/contributing/&title=How%20to%20contribute%20to%20Eclipse%20Keyple%e2%84%a2%20project" target=_blank rel=noopener class=share-btn-linkedin>
 <i class="fab fa-linkedin-in"></i>
 </a>
 </li>
 <li>
-<a href="whatsapp://send?text=How%20to%20get%20involved%20in%20the%20Eclipse%20Keyple%20project%20https://keyple.org/community/contributing/" target=_blank rel=noopener class=share-btn-whatsapp>
+<a href="whatsapp://send?text=How%20to%20contribute%20to%20Eclipse%20Keyple%e2%84%a2%20project%20https://keyple.org/community/contributing/" target=_blank rel=noopener class=share-btn-whatsapp>
 <i class="fab fa-whatsapp"></i>
 </a>
 </li>
 <li>
-<a href="https://service.weibo.com/share/share.php?url=https://keyple.org/community/contributing/&title=How%20to%20get%20involved%20in%20the%20Eclipse%20Keyple%20project" target=_blank rel=noopener class=share-btn-weibo>
+<a href="https://service.weibo.com/share/share.php?url=https://keyple.org/community/contributing/&title=How%20to%20contribute%20to%20Eclipse%20Keyple%e2%84%a2%20project" target=_blank rel=noopener class=share-btn-weibo>
 <i class="fab fa-weibo"></i>
 </a>
 </li>
