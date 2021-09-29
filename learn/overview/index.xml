@@ -28,7 +28,7 @@ The readers of the same plugin are usually hardware linked to the same physical 
 &lt;p>The plugin API models the behavior of a smart card reader using a set of objects and methods that allow Keyple to work in the same way with different types of hardware.&lt;/p>
 &lt;p>Plugins covering standard interfaces are proposed directly (PC/SC, Andrdoid NFC/OMAPI) but it is also possible to develop a plugin to address the particularities of a specific hardware (see
 &lt;a href="../../learn/developer-guide/create-a-reader-plugin/">Develop a plugin&lt;/a> and
-&lt;a href="../../external-extensions-and-support/proprietary-add-ons/">Proprietary add-ons&lt;/a>)&lt;/p>
+&lt;a href="../../community/external-add-ons/">External add-ons&lt;/a>)&lt;/p>
 &lt;p>Depending on its profile, an application may use different types of plugins to communicate with the different elements it needs (card, SAM).&lt;/p>
 &lt;p>
 &lt;a href="keyple-core.md#reader-access">More information&lt;/a>&lt;/p>

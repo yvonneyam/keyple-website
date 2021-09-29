@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Community | Eclipse Keyple</title><link>https://keyple.org/community/</link><atom:link href="https://keyple.org/community/index.xml" rel="self" type="application/rss+xml"/><description>Community</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Copyright © Eclipse Foundation, Inc. All Rights Reserved.</copyright><image><url>https://keyple.org/images/logo_hu673a59176cd62c570f44ed2728665b48_42188_300x300_fit_lanczos_3.png</url><title>Community</title><link>https://keyple.org/community/</link></image><item><title>External Keyple add-ons</title><link>https://keyple.org/community/external-add-ons/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/community/external-add-ons/</guid><description>&lt;div class="alert alert-note">
+&lt;div>
+&lt;p>To reference your add-on please make a &lt;a href="https://github.com/eclipse/keyple-website/pulls">Pull request&lt;/a> contribution on GitHub.&lt;/p>
+&lt;p>In order for your contribution to be accepted you must comply with one of the conditions below:&lt;/p>
+&lt;ul>
+&lt;li>Be a commiter of Eclipse Keyple™ project&lt;/li>
+&lt;li>Having contributed to one of the components of Eclipse Keyple™ project&lt;/li>
+&lt;li>Be a &lt;a href="https://iot.eclipse.org/adopters/">adopter/user&lt;/a> of Eclipse Keyple™&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;/div></description></item><item><title>How to get involved in the Eclipse Keyple project</title><link>https://keyple.org/community/contributing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/community/contributing/</guid><description>&lt;div class="alert alert-note">
+&lt;div>
+Coming soon
+&lt;/div>
+&lt;/div></description></item><item><title>Keyple compliant terminals</title><link>https://keyple.org/community/compliant-terminals/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/community/compliant-terminals/</guid><description>&lt;div class="alert alert-note">
+&lt;div>
+&lt;p>To reference your terminal please make a &lt;a href="https://github.com/eclipse/keyple-website/pulls">Pull request&lt;/a> contribution on GitHub.&lt;/p>
+&lt;p>In order for your contribution to be accepted you must comply with one of the conditions below:&lt;/p>
+&lt;ul>
+&lt;li>Be a commiter of Eclipse Keyple™ project&lt;/li>
+&lt;li>Having contributed to one of the components of Eclipse Keyple™ project&lt;/li>
+&lt;li>Be a &lt;a href="https://iot.eclipse.org/adopters/">adopter/user&lt;/a> of Eclipse Keyple™&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;/div></description></item><item><title>Roadmap</title><link>https://keyple.org/community/roadmap/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/community/roadmap/</guid><description>&lt;h1 id="current-work">Current work&lt;/h1>
+&lt;h2 id="dependency-removal">Dependency removal:&lt;/h2>
+&lt;ul>
+&lt;li>Until the version 1.0.0, the source code of all the Keyple Java components was hosted in a single repository:
+&lt;a href="https://github.com/eclipse/keyple-java" target="_blank" rel="noopener">https://github.com/eclipse/keyple-java&lt;/a>. It was the same for Keyple C++ components hosted in
+&lt;a href="https://github.com/eclipse/keyple-cpp" target="_blank" rel="noopener">https://github.com/eclipse/keyple-cpp&lt;/a>. For the version 1.0.0 and below, there were strong dependencies between the Keyple components which had all to be released in the same version number.&lt;/li>
+&lt;li>To facilitate the evolution and the maintenance, the version 2.0.0 proposes a full reorganization of the code. All the components are split in different repositories in order to allow them to evolve independently. The public interfaces are also separated to the specific implementations: the repositories are dedicated to host API or library implementation.
+&lt;ul>
+&lt;li>The Keyple Java components are managed through 16 repositories.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="calypso-terminal-compliance">Calypso terminal compliance:&lt;/h2>
+&lt;ul>
+&lt;li>The &amp;lsquo;Keyple Service&amp;rsquo; component in version 2.0.0 follows the &amp;lsquo;Reader API 1.0&amp;rsquo; and &amp;lsquo;Card API 1.0&amp;rsquo; standardized for the reader layer of Calypso terminals.&lt;/li>
+&lt;li>The &amp;lsquo;Calypso extension&amp;rsquo; component in version 2.0.0 is also compliant with the &amp;lsquo;Calypso API 1.0&amp;rsquo; standardized for the Calypso layer of Calypso terminals.&lt;/li>
+&lt;/ul>
+&lt;h2 id="plugin-support">Plugin support:&lt;/h2>
+&lt;ul>
+&lt;li>Thanks to the code reorganization, internal processing is more hidden. The version 2.0.0 defines a &amp;lsquo;Plugin SPI&amp;rsquo; which is significantly reduced. The plugins could now be implemented without having to know how the Keyple Service works.&lt;/li>
+&lt;/ul>
+&lt;h2 id="availability">Availability&lt;/h2>
+&lt;ul>
+&lt;li>The Keyple Java components will be released in version 2.0.0 beginning of October 2021.&lt;/li>
+&lt;li>The Keyple C++ 2.0.0 implementation is planned for November 2021 for the components: Service, Calypso, PC/SC plugin, the network client part of the distributed module.&lt;/li>
+&lt;/ul>
+&lt;h1 id="future-developments">Future developments&lt;/h1>
+&lt;p>Extension of the Calypso module features:&lt;/p>
+&lt;ul>
+&lt;li>pre-personalization transaction (Change Key)&lt;/li>
+&lt;li>signature of data fields (SAM PSO commands)&lt;/li>
+&lt;li>confidential secure session (REV3.2 AES mode)&lt;/li>
+&lt;li>asymmetric authentication (REV3.3 PKI mode)&lt;/li>
+&lt;li>REV1/REV2 product specific supports&lt;/li>
+&lt;li>Hoplink high-level API&lt;/li>
+&lt;li>SAM Transaction API (for SAM management)&lt;/li>
+&lt;/ul>
+&lt;p>Standard plugins:&lt;/p>
+&lt;ul>
+&lt;li>For Keyple C++, support of the NFC reader on iOS&lt;/li>
+&lt;/ul>
+&lt;h1 id="version-history">Version history&lt;/h1>
+&lt;p>Until the version 2.0.0, all the different Keyple components (Core, Calypso extension, plugins) have to share the same version number. The components were released all together at a specific date for Java or C++.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Release&lt;/th>
+&lt;th>Java&lt;/th>
+&lt;th>C++&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>2.0.0&lt;/td>
+&lt;td>2021/10&lt;br>review in progress&lt;/td>
+&lt;td>planned for 2021/11&lt;/td>
+&lt;td>&lt;ul>&lt;li>Compliance with the Calypso terminal API&lt;/li>&lt;li>Removal of dependencies between components (Core, Calypso extension, and specific plugins): each component is released with its own version and a separate life cycle.&lt;/li>&lt;/ul>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>1.0.0&lt;/td>
+&lt;td>2020/12&lt;/td>
+&lt;td>not planned&lt;/td>
+&lt;td>&lt;ul>&lt;li>Core - simplifications of the low-level Plugin API dedicated for plugin developers.&lt;/li>&lt;li>Remote Plugin - new stable &amp;amp; simpler version&lt;/li>&lt;/ul>Main unsolved issue: the versioning of the different components (Core, Calypso extension, and specific plugins) is still linked: to manage transitive importation the artifact are built with the same version reference.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>0.9.0&lt;/td>
+&lt;td>2020/09&lt;/td>
+&lt;td>2021/01&lt;/td>
+&lt;td>&lt;ul>&lt;li>Android plugins - NFC &amp;amp; OMAPI plugins optimized for all Android versions&lt;/li>&lt;li>Calypso&lt;ul>&lt;li>simplified high level API to parse the Portable Object APDU responses, &amp;amp; recover the data through a card image.&lt;/li>&lt;li>addition of the support of the PO PIN feature, PO Stored Value transaction, &amp;amp; the SAM lock&lt;/li>&lt;/ul>&lt;/li>&lt;/ul>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>0.8.1&lt;/td>
+&lt;td>2020/01&lt;/td>
+&lt;td>2020/05&lt;/td>
+&lt;td>&lt;ul>&lt;li>Core - Observable Reader interface evolution to improve the support of smart card reader solutions.&lt;/li>&lt;li>Calypso - simplified high level API to build the Portable Object APDU commands (PO data still recovered through a lower API managing APDI response parser)&lt;/li>&lt;/ul>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>0.7.0&lt;/td>
+&lt;td>2019/07&lt;/td>
+&lt;td>-&lt;/td>
+&lt;td>initial public java implementation&lt;ul>&lt;li>Calypso - low level API to manage the common Calypso features (secure session for authentication, read and write commands of EF records)&lt;/li>&lt;/ul>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table></description></item><item><title>Support &amp; training companies</title><link>https://keyple.org/community/support-and-training-companies/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/community/support-and-training-companies/</guid><description>&lt;div class="alert alert-note">
+&lt;div>
+&lt;p>To add your company please make a &lt;a href="https://github.com/eclipse/keyple-website/pulls">Pull request&lt;/a> contribution on GitHub.&lt;/p>
+&lt;p>In order for your contribution to be accepted you must comply with one of the conditions below:&lt;/p>
+&lt;ul>
+&lt;li>Be a commiter of Eclipse Keyple™ project&lt;/li>
+&lt;li>Having contributed to one of the components of Eclipse Keyple™ project&lt;/li>
+&lt;li>Be a &lt;a href="https://iot.eclipse.org/adopters/">adopter/user&lt;/a> of Eclipse Keyple™&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;/div>
+&lt;h2 id="calypso-networks-association">Calypso Networks Association&lt;/h2>
+&lt;blockquote>
+&lt;p>
+&lt;i class="fas fa-globe pr-1 fa-fw">&lt;/i>
+&lt;a href="https://calypsonet.org" target="_blank" rel="noopener">Discover more about CNA here&lt;/a>&lt;/p>
+&lt;p>
+&lt;i class="fas fa-envelope pr-1 fa-fw">&lt;/i>
+&lt;a href="https://calypsonet.org/contact-us/" target="_blank" rel="noopener">Get in touch with the CNA team for more information&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;p>Calypso Networks Association (CNA) is a non-profit organization dedicated to improve contactless
+electronic ticketing for transportation and access control standards since 2003.
+For many years, our mission has been to create innovative solutions that are fully interoperable,
+reliable, secure, and open. We collaborate with a dynamic network of city leaders and transport
+authorities that are keen to work with system integrators with Calypso® standard expertise.&lt;/p>
+&lt;p>Discover more about CNA here :
+&lt;a href="http://calypsonet.org" target="_blank" rel="noopener">http://calypsonet.org&lt;/a>&lt;/p>
+&lt;p>Calypso Networks Association offers comprehensive
+&lt;a href="https://calypsonet.org/technical-support-documentation/" target="_blank" rel="noopener">technical support and documentation&lt;/a>
+to ensure all users can get the most out of Calypso® technology and Eclipse Keyple™.&lt;/p>
+&lt;p>Calypso Networks Association provides a Calypso Test Kit. The Calypso Test Kit aims at helping
+ticketing system developers to fully experience Eclipse Keyple™ with a set of Calypso® SAM and
+Calypso® certified portable objects from several manufacturers in various configurations.&lt;/p></description></item></channel></rss>
