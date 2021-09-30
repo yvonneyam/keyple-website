@@ -1,4 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Eclipse Keyple</title><link>https://keyple.org/</link><atom:link href="https://keyple.org/index.xml" rel="self" type="application/rss+xml"/><description>Eclipse Keyple</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Copyright © Eclipse Foundation, Inc. All Rights Reserved.</copyright><lastBuildDate>Tue, 26 Jan 2021 14:57:56 +0200</lastBuildDate><image><url>https://keyple.org/images/logo_hu673a59176cd62c570f44ed2728665b48_42188_300x300_fit_lanczos_3.png</url><title>Eclipse Keyple</title><link>https://keyple.org/</link></image><item><title>The Keyple key concepts</title><link>https://keyple.org/learn/overview/key-concepts/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/learn/overview/key-concepts/</guid><description>&lt;hr>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Eclipse Keyple</title><link>https://keyple.org/</link><atom:link href="https://keyple.org/index.xml" rel="self" type="application/rss+xml"/><description>Eclipse Keyple</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Copyright © Eclipse Foundation, Inc. All Rights Reserved.</copyright><lastBuildDate>Tue, 26 Jan 2021 14:57:56 +0200</lastBuildDate><image><url>https://keyple.org/images/logo_hu673a59176cd62c570f44ed2728665b48_42188_300x300_fit_lanczos_3.png</url><title>Eclipse Keyple</title><link>https://keyple.org/</link></image><item><title>Calypso Networks Association</title><link>https://keyple.org/external-resources/support-and-training-companies/calypso-networks-association/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/external-resources/support-and-training-companies/calypso-networks-association/</guid><description>&lt;blockquote>
+&lt;p>
+&lt;i class="fas fa-globe pr-1 fa-fw">&lt;/i>
+&lt;a href="https://calypsonet.org" target="_blank" rel="noopener">Discover more about CNA here&lt;/a>&lt;/p>
+&lt;p>
+&lt;i class="fas fa-envelope pr-1 fa-fw">&lt;/i>
+&lt;a href="https://calypsonet.org/contact-us/" target="_blank" rel="noopener">Get in touch with the CNA team for more information&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;p>Calypso Networks Association (CNA) is a non-profit organization dedicated to improve contactless
+electronic ticketing for transportation and access control standards since 2003.
+For many years, our mission has been to create innovative solutions that are fully interoperable,
+reliable, secure, and open. We collaborate with a dynamic network of city leaders and transport
+authorities that are keen to work with system integrators with Calypso® standard expertise.&lt;/p>
+&lt;p>Discover more about CNA here :
+&lt;a href="http://calypsonet.org" target="_blank" rel="noopener">http://calypsonet.org&lt;/a>&lt;/p>
+&lt;p>Calypso Networks Association offers comprehensive
+&lt;a href="https://calypsonet.org/technical-support-documentation/" target="_blank" rel="noopener">technical support and documentation&lt;/a>
+to ensure all users can get the most out of Calypso® technology and Eclipse Keyple™.&lt;/p>
+&lt;p>Calypso Networks Association provides a Calypso Test Kit. The Calypso Test Kit aims at helping
+ticketing system developers to fully experience Eclipse Keyple™ with a set of Calypso® SAM and
+Calypso® certified portable objects from several manufacturers in various configurations.&lt;/p></description></item><item><title>The Keyple key concepts</title><link>https://keyple.org/learn/overview/key-concepts/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/learn/overview/key-concepts/</guid><description>&lt;hr>
 &lt;h2 id="overview">Overview&lt;/h2>
 &lt;p>This page describes the core elements of &lt;strong>Keyple&lt;/strong>, i.e. the concepts and APIs of &lt;strong>Keyple Core&lt;/strong> that are used to build any application implementing &lt;strong>Keyple&lt;/strong>.&lt;/p>
 &lt;p>It is essential for the future user of &lt;strong>Keyple&lt;/strong> to be familiar with what is said in this chapter because the other modules made available by the project are all dependent on &lt;strong>Keyple Core&lt;/strong>.&lt;/p>
@@ -28,7 +48,7 @@ The readers of the same plugin are usually hardware linked to the same physical 
 &lt;p>The plugin API models the behavior of a smart card reader using a set of objects and methods that allow Keyple to work in the same way with different types of hardware.&lt;/p>
 &lt;p>Plugins covering standard interfaces are proposed directly (PC/SC, Andrdoid NFC/OMAPI) but it is also possible to develop a plugin to address the particularities of a specific hardware (see
 &lt;a href="./learn/developer-guide/create-a-reader-plugin/">Develop a plugin&lt;/a> and
-&lt;a href="./community/external-add-ons/">External add-ons&lt;/a>)&lt;/p>
+&lt;a href="./external-resources/external-add-ons/">External add-ons&lt;/a>)&lt;/p>
 &lt;p>Depending on its profile, an application may use different types of plugins to communicate with the different elements it needs (card, SAM).&lt;/p>
 &lt;p>
 &lt;a href="keyple-core.md#reader-access">More information&lt;/a>&lt;/p>
@@ -781,10 +801,10 @@ extensions such as
 an action or to achieve a result depending on the needs of the
 application.&lt;/p>
 &lt;p>The purpose of this section is to guide you in its use.&lt;/p>
-&lt;h2 id="access-to-the-smart-card-service">Access to the smart card service&lt;/h2>
-&lt;p>Invoke the &lt;code>SmartCardServiceProvider.getService()&lt;/code> static method to access the service.&lt;/p>
-&lt;p>Its main role is to centralize the Keyple add-on resources and to manage their
+&lt;h2 id="smart-card-service">Smart card service&lt;/h2>
+&lt;p>As part of &lt;strong>Keyple Service&lt;/strong> component, the smart card service is the main service of Keyple. Its role is to centralize the add-on resources and to manage their
 life cycle.&lt;/p>
+&lt;p>The service is accessible by invoking the &lt;code>SmartCardServiceProvider.getService()&lt;/code> static method.&lt;/p>
 &lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('7', this);">Copy&lt;/button>&lt;/div>
 &lt;pre>&lt;code class="language-java" id="code-7">SmartCardService smartCardService = SmartCardServiceProvider.getService();&lt;/code>&lt;/pre>
 &lt;hr>
@@ -801,7 +821,7 @@ the
 the
 &lt;a href="https://keyple.org/components-java/specific-reader-plugins/">specific reader plugins&lt;/a>
 or one of our
-&lt;a href="https://keyple.org/community/external-add-ons/">partners reader plugins&lt;/a>.&lt;/p>
+&lt;a href="https://keyple.org/external-resources/external-add-ons/">partners reader plugins&lt;/a>.&lt;/p>
 &lt;div class="alert alert-note">
 &lt;div>
 A new plugin can also be &lt;a href="./learn/developer-guide/create-a-reader-plugin/">created&lt;/a> if there is no plugin for the intended hardware.
@@ -814,16 +834,21 @@ This factory is provided by the API of the used plugin.&lt;/p>
 &lt;p>Depending on the capabilities of the hardware, the plugin factory may or may not offer specific configuration options.
 Please refer to the API of the plugin component you are considering to see what is appropriate for your application.&lt;/p>
 &lt;p>The registration provides in return an implementation of one of the &lt;code>Plugin&lt;/code>, &lt;code>ObservablePlugin&lt;/code> or &lt;code>PoolPlugin&lt;/code> interfaces depending on the type of target plugin.&lt;/p>
-&lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('12', this);">Copy&lt;/button>&lt;/div>
-&lt;pre>&lt;code class="language-java" id="code-12">// Here is for example the registration of the PC/SC plugin
+&lt;div class="alert alert-note">
+&lt;div>
+A plugin is identified by a unique name in the system so that it can be retrieved at any time from the smart card service.
+&lt;/div>
+&lt;/div>
+&lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('13', this);">Copy&lt;/button>&lt;/div>
+&lt;pre>&lt;code class="language-java" id="code-13">// Here is for example the registration of the PC/SC plugin
 Plugin plugin = smartCardService.registerPlugin(PcscPluginFactoryBuilder.builder().build());&lt;/code>&lt;/pre>
 &lt;h3 id="configure-a-plugin">Configure a plugin&lt;/h3>
 &lt;p>Some plugin types may offer specific options.&lt;/p>
 &lt;p>Static options are usually directly exposed by the plugin factory API while dynamic options are exposed by the plugin extension API.&lt;/p>
-&lt;p>To access the plugin extension it is necessary to invoke the &lt;code>getExtension(...)&lt;/code> method on the registered &lt;code>Plugin&lt;/code> by specifying the expected class of the extension.
+&lt;p>To access the plugin extension it is necessary to invoke the &lt;code>getExtension(...)&lt;/code> method on the registered &lt;code>Plugin&lt;/code> by specifying the expected class of the extension which must extends the &lt;code>KeyplePluginExtension&lt;/code> interface.
 After that, the dedicated methods are available from the resulting object.&lt;/p>
-&lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('13', this);">Copy&lt;/button>&lt;/div>
-&lt;pre>&lt;code class="language-java" id="code-13">// Here is a snippet showing the usage of the extension of the Stub plugin (the procedure would be similar for another plugin/reader)
+&lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('14', this);">Copy&lt;/button>&lt;/div>
+&lt;pre>&lt;code class="language-java" id="code-14">// Here is a snippet showing the usage of the extension of the Stub plugin
 plugin
 .getExtension(StubPlugin.class)
 .unplugReader(&amp;#34;READER_1&amp;#34;);&lt;/code>&lt;/pre>
@@ -843,12 +868,8 @@ through a background task managed by &lt;strong>Keyple Service&lt;/strong>.&lt;/
 &lt;/ul>
 &lt;p>These two interfaces are available in the &lt;code>org.eclipse.keyple.core.service.spi&lt;/code> package of the &lt;strong>Keyple Service&lt;/strong> component.&lt;/p>
 &lt;p>Here is an example of a plugin observer class including an exception handler:&lt;/p>
-&lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('15', this);">Copy&lt;/button>&lt;/div>
-&lt;pre>&lt;code class="language-java" id="code-15">// ...
-import org.eclipse.keyple.core.service.spi.PluginObserverSpi;
-import org.eclipse.keyple.core.service.spi.PluginObservationExceptionHandlerSpi;
-// ...
-class PluginObserver implements PluginObserverSpi, PluginObservationExceptionHandlerSpi {
+&lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('16', this);">Copy&lt;/button>&lt;/div>
+&lt;pre>&lt;code class="language-java" id="code-16">class PluginObserver implements PluginObserverSpi, PluginObservationExceptionHandlerSpi {
 @Override
 public void onPluginEvent(PluginEvent event) {
 switch (event.getEventType()) {
@@ -870,11 +891,11 @@ public void onPluginObservationError(String pluginName, Throwable e) {
 ...
 }
 }&lt;/code>&lt;/pre>
-&lt;p>In order to access the dedicated setters, the plugin has to be casted as an &lt;code>ObservablePlugin&lt;/code>.&lt;/p>
+&lt;p>In order to access the dedicated setters, the plugin has to be cast to &lt;code>ObservablePlugin&lt;/code>.&lt;/p>
 &lt;p>Since adding an observer will cause the &lt;strong>Keyple Service&lt;/strong> to check for the presence of an exception handler,
 the definition of the exception handler must be done first.&lt;/p>
-&lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('16', this);">Copy&lt;/button>&lt;/div>
-&lt;pre>&lt;code class="language-java" id="code-16">PluginObserver pluginObserver = new PluginObserver();
+&lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('17', this);">Copy&lt;/button>&lt;/div>
+&lt;pre>&lt;code class="language-java" id="code-17">PluginObserver pluginObserver = new PluginObserver();
 ((ObservablePlugin) plugin).setPluginObservationExceptionHandler(pluginObserver);
 ((ObservablePlugin) plugin).addObserver(pluginObserver);&lt;/code>&lt;/pre>
 &lt;div class="alert alert-note">
@@ -884,35 +905,15 @@ Note that the monitoring thread only works if there is at least one observer reg
 &lt;/div>
 &lt;hr>
 &lt;h2 id="set-up-a-reader">Set up a reader&lt;/h2>
+&lt;p>The readers are provided by the plugins, that&amp;rsquo;s why you have to
+&lt;a href="#set-up-a-plugin">set up the plugin&lt;/a> first.&lt;/p>
 &lt;h3 id="access-to-a-reader">Access to a reader&lt;/h3>
-&lt;h3 id="configure-a-reader">Configure a reader&lt;/h3>
-&lt;h3 id="monitor-a-reader">Monitor a reader&lt;/h3>
-&lt;hr>
-&lt;h2 id="select-a-card">Select a card&lt;/h2>
-&lt;h3 id="prepare-a-selection-scenario">Prepare a selection scenario&lt;/h3>
-&lt;h3 id="process-a-selection-scenario">Process a selection scenario&lt;/h3>
-&lt;h3 id="schedule-a-selection-scenario">Schedule a selection scenario&lt;/h3>
-&lt;hr>
-&lt;h2 id="perform-a-transaction">Perform a transaction&lt;/h2>
-&lt;hr>
-&lt;h2 id="unregister-a-plugin">Unregister a plugin&lt;/h2>
-&lt;hr>
-&lt;h2 id="api">API&lt;/h2>
-&lt;hr>
-&lt;h2 id="examples">Examples&lt;/h2>
-&lt;hr>
-&lt;h2 id="download">Download&lt;/h2>
-&lt;h2 id="observation-of-the-plugin">Observation of the plugin&lt;/h2>
-&lt;h2 id="readers-retrieval">Readers retrieval&lt;/h2>
-&lt;p>Readers are objects implementing the &lt;code>Reader&lt;/code> interface and are
-returned by the plugin&amp;rsquo;s &lt;code>getReader&lt;/code> method taking the name of the
-reader as argument.&lt;/p>
-&lt;p>The names of the readers available from the plugin are returned as a
-Set of strings by the &lt;code>getReaderNames&lt;/code> method.&lt;/p>
-&lt;p>The &lt;code>getReaders&lt;/code> method also allows you to get all the readers at once as a Set of &lt;code>Reader&lt;/code> objects.&lt;/p>
-&lt;p>Here is an example to get the 1st PC/SC reader:&lt;/p>
-&lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('18', this);">Copy&lt;/button>&lt;/div>
-&lt;pre>&lt;code class="language-java" id="code-18">String readerName = plugin.getReaderNames().get(0);
+&lt;p>The hardware readers already connected are referenced in the system during the registration of the plugin.
+For observable plugins, the references of the connected readers are updated in real time.&lt;/p>
+&lt;p>Readers are accessible directly from the associated &lt;code>Plugin&lt;/code> instance.&lt;/p>
+&lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('19', this);">Copy&lt;/button>&lt;/div>
+&lt;pre>&lt;code class="language-java" id="code-19">// Here is an example to get the 1st available reader
+String readerName = plugin.getReaderNames().get(0);
 Reader reader = plugin.getReader(readerName);&lt;/code>&lt;/pre>
 &lt;div class="alert alert-note">
 &lt;div>
@@ -923,77 +924,51 @@ mechanism in order to assign the right reader to the right place in the
 system (for example by using regular expressions).
 &lt;/div>
 &lt;/div>
-&lt;h2 id="reader-specific-settings">Reader specific settings&lt;/h2>
-&lt;p>Take a close look at the parameters proposed by the plugin and its readers.&lt;/p>
-&lt;p>Depending on the characteristics of the reader, it may be necessary to set some parameters in order to meet the application needs.&lt;/p>
-&lt;p>To access the reader&amp;rsquo;s settings it is necessary to obtain its &lt;strong>specific extension&lt;/strong> (this differs from one type of equipment to another).&lt;/p>
-&lt;p>To do this, we need to invoke the &lt;code>getExtension&lt;/code> method by passing it the specific class in parameter.
-After that, the dedicated methods are available from the resulting object.&lt;/p>
-&lt;p>Here is a snippet showing the procedure for a PC/SC reader (the procedure would be similar for another plugin/reader):
-&lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('20', this);">Copy&lt;/button>&lt;/div>
-&lt;pre>&lt;code class="language-java" id="code-20">Reader reader = plugin.getReader(readerName);
-// Configure the reader with parameters suitable for contactless operations.
-reader
-.getExtension(PcscReader.class)
-.setContactless(true)
-.setIsoProtocol(PcscReader.IsoProtocol.T1);&lt;/code>&lt;/pre>&lt;/p>
-&lt;div class="alert alert-note">
-&lt;div>
-Similarly, the plugin itself may or may not have parameters.&lt;br>
-When they exist, they are usually defined by a builder in its factory.&lt;br>
-Please refer to the documentation of the plugin you are using for more details on this topic.
-&lt;/div>
-&lt;/div>
-&lt;h2 id="protocol-activationdeactivation">Protocol activation/deactivation&lt;/h2>
-&lt;p>The &lt;code>activateProtocol&lt;/code> and &lt;code>deactivateProtocol&lt;/code> methods of the &lt;code>ConfigurableReader&lt;/code> interface meet two needs:&lt;/p>
+&lt;h3 id="configure-a-reader">Configure a reader&lt;/h3>
+&lt;p>There are two types of configuration. Their availability depends on the characteristics of the reader:&lt;/p>
 &lt;ul>
 &lt;li>
-&lt;p>the use or not of a particular protocol at the lowest level of the RF layer of the reader.
-In other words, these methods define which protocols the reader will use to search for cards.&lt;/p>
-&lt;p>This may be significant in terms of detection performance (latency) because when multiple protocols are implemented,
-the readers search for cards for each protocol sequentially, for example by alternating ISO14443-A and ISO14443-B RF requests.&lt;/p>
-&lt;p>Note that some readers do not allow to select the types of protocols used, for example NFC smartphones.
-It is nevertheless possible to invoke these methods for their second purpose described below.&lt;/p>
+&lt;p>The reader is an instance of &lt;code>ConfigurableReader&lt;/code>:&lt;br>
+It is then possible to activate or deactivate the protocols supported by the reader.&lt;/p>
+&lt;div class="alert alert-note">&lt;div>Use of these methods may be optional if the application does not intend to target products by protocol filtering.&lt;/div>&lt;/div>
 &lt;/li>
 &lt;li>
-&lt;p>the naming of a reader protocol for the application.
-The idea is to associate a protocol name that will be referenced by the application independently of the reader type.
-This name can be used as parameter of the selection process in order to target a particular product.&lt;/p>
+&lt;p>The reader&amp;rsquo;s extension API exposes specific options:&lt;br>
+To access the reader extension it is necessary to invoke the &lt;code>getExtension(...)&lt;/code> method on the &lt;code>Reader&lt;/code> instance by specifying the expected class of the extension which must extends the &lt;code>KeypleReaderExtension&lt;/code> interface.
+After that, the dedicated methods, if any, are available from the resulting object.
+&lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('21', this);">Copy&lt;/button>&lt;/div>
+&lt;pre>&lt;code class="language-java" id="code-21">// Here is a snippet showing the usage of the extension of the Stub reader
+reader
+.getExtension(StubReader.class)
+.removeCard();&lt;/code>&lt;/pre>&lt;/p>
 &lt;/li>
 &lt;/ul>
-&lt;p>Please refer to the API of these methods to learn more about them.&lt;/p>
-&lt;div class="alert alert-note">
+&lt;h3 id="monitor-a-reader">Monitor a reader&lt;/h3>
+&lt;div class="alert alert-warning">
 &lt;div>
-Use of these methods may be optional if the reader&amp;rsquo;s protocols are not configurable
-or if the application does not intend to target products by this criterion.
+The reader monitoring only applies to hardware environments in which the smart cards are removable.
+Moreover, only readers of type &lt;code>ObservableReader&lt;/code> can be monitored.
 &lt;/div>
 &lt;/div>
-&lt;h2 id="observation-of-the-reader">Observation of the reader&lt;/h2>
 &lt;div class="alert alert-note">
 &lt;div>
-Observation of the readers is optional in Keyple. It
-facilitates an event-driven programming mode, but an application
-developer can choose not to observe a reader, either because this reader
-is not designed to manage card insertions/withdrawals (for example an
-Android OMAPI reader or a SAM reader), or because the application is
-designed to directly manage the presence of a card (see to &lt;code>isCardPresent&lt;/code> method of the
+Observation of the readers is optional in Keyple. It facilitates an event-driven programming mode, but an application
+developer can choose not to observe a reader, either because this reader is not designed to manage card insertions/withdrawals (for example an
+Android OMAPI reader or a SAM reader), or because the application is designed to directly manage the presence of a card (see to &lt;code>isCardPresent&lt;/code> method of the
 &lt;code>Reader&lt;/code> interface).
 &lt;/div>
 &lt;/div>
-&lt;p>The observation of inserting and removing cards from readers is similar to the observation of plugins.&lt;/p>
-&lt;p>The observation of card insertion and removal is achieved through a background task managed by &lt;strong>Keyple Service&lt;/strong>.&lt;/p>
-&lt;p>The reader observer must implement the &lt;code>CardReaderObserverSpi&lt;/code> interface,
-the reader exception handler must implement the &lt;code>CardReaderObservationExceptionHandlerSpi&lt;/code> interface.&lt;/p>
-&lt;p>These two interfaces are available in the spi package of the
-&lt;a href="./components-java/standards-compliance/calypsonet-apis/">&lt;strong>Calypsonet Terminal Reader Java API&lt;/strong>&lt;/a>
-to which &lt;strong>Keyple Service&lt;/strong> conforms to perform these functions.&lt;/p>
-&lt;p>Here is an example of a reader observer class including an exception handler:
-&lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('25', this);">Copy&lt;/button>&lt;/div>
-&lt;pre>&lt;code class="language-java" id="code-25">// ...
-import org.calypsonet.terminal.reader.spi.CardReaderObserverSpi;
-import org.calypsonet.terminal.reader.spi.CardReaderObservationExceptionHandlerSpi;
-// ...
-class ReaderObserver implements CardReaderObserverSpi, CardReaderObservationExceptionHandlerSpi {
+&lt;p>The observation of card insertions and removals is achieved
+through a background task managed by &lt;strong>Keyple Service&lt;/strong>.&lt;/p>
+&lt;p>To enable these observation mechanisms, it is imperative to provide:&lt;/p>
+&lt;ul>
+&lt;li>a reader observer implementing the &lt;code>CardReaderObserverSpi&lt;/code> interface to be notified of reader events,&lt;/li>
+&lt;li>an exception handler implementing the &lt;code>CardReaderObservationExceptionHandlerSpi&lt;/code> interface to be notified of errors that may occur during the monitoring or events notifications.&lt;/li>
+&lt;/ul>
+&lt;p>These two interfaces are available in the &lt;code>org.calypsonet.terminal.reader.spi&lt;/code> package of the &lt;strong>Calypsonet Terminal Reader API&lt;/strong> component.&lt;/p>
+&lt;p>Here is an example of a reader observer class including an exception handler:&lt;/p>
+&lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('24', this);">Copy&lt;/button>&lt;/div>
+&lt;pre>&lt;code class="language-java" id="code-24">class ReaderObserver implements CardReaderObserverSpi, CardReaderObservationExceptionHandlerSpi {
 @Override
 public void onReaderEvent(CardReaderEvent event) {
 switch (event.getType()) {
@@ -1011,18 +986,30 @@ break;
 }
 @Override
 public void onReaderObservationError(String pluginName, String readerName, Throwable e) {
-//
 // handle here the reader exceptions raised while observing the cards
-//
+...
 }
-}&lt;/code>&lt;/pre>&lt;/p>
-&lt;p>The observation of the events of the reader is done in a similar way to
-that of the plugin, by adding an observer:
-&lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('26', this);">Copy&lt;/button>&lt;/div>
-&lt;pre>&lt;code class="language-java" id="code-26">ReaderObserver readerObserver = new ReaderObserver();
+}&lt;/code>&lt;/pre>
+&lt;p>In order to access the dedicated setters, the reader has to be cast to &lt;code>ObservableReader&lt;/code>.&lt;/p>
+&lt;p>Since adding an observer will cause the &lt;strong>Keyple Service&lt;/strong> to check for the presence of an exception handler,
+the definition of the exception handler must be done first.&lt;/p>
+&lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('25', this);">Copy&lt;/button>&lt;/div>
+&lt;pre>&lt;code class="language-java" id="code-25">ReaderObserver readerObserver = new ReaderObserver();
 ((ObservableReader) reader).setReaderObservationExceptionHandler(readerObserver);
-((ObservableReader) reader).addObserver(readerObserver);&lt;/code>&lt;/pre>&lt;/p>
-&lt;h2 id="card-selection">Card selection&lt;/h2>
+((ObservableReader) reader).addObserver(readerObserver);
+((ObservableReader) reader).startCardDetection(ObservableCardReader.DetectionMode.REPEATING);&lt;/code>&lt;/pre>
+&lt;div class="alert alert-note">
+&lt;div>
+Note that the &lt;code>startCardDetection(...)&lt;/code> and &lt;code>stopCardDetection()&lt;/code> methods start and stop the monitoring thread.
+The API offers different options to manage the needs around card detection.&lt;br>
+Moreover, the notification process is sequential and synchronous.
+&lt;/div>
+&lt;/div>
+&lt;hr>
+&lt;h2 id="select-a-card">Select a card&lt;/h2>
+&lt;p>The starting point of any processing done with a card in the Keyple enrivonment, is to reference this card in the system.
+It is the role of the selection step to obtain this reference.&lt;/p>
+&lt;p>You have first to prepare a selection scenario defining the eligible cards for a transaction, then to execute the scenario when a card is presented.&lt;/p>
 &lt;p>The Keyple card selection process is generic, allowing the management of cards of different types
 or technologies within the same application.&lt;/p>
 &lt;p>It is based on the universal selection interface defined by the
@@ -1052,10 +1039,24 @@ be made available to the application.
 It is thus possible to directly ignore cards that do not correspond to the defined selection criteria.&lt;/p>
 &lt;p>When a card is selected, the &lt;code>CardSelectionManager&lt;/code> will make available the result
 as a &lt;code>SmartCard&lt;/code> object containing all the information known about the card at that stage.&lt;/p>
-&lt;p>Depending on the card extension that is used, this &lt;code>SmartCard&lt;/code> object can be casted into a more
+&lt;p>Depending on the card extension that is used, this &lt;code>SmartCard&lt;/code> object can be cast to a more
 comprehensive object with specific features defined by the extension.&lt;/p>
 &lt;p>In addition to the selection process itself, specific APDU commands may be sent to the card if the selection is successful.
 The output of these commands is available in the instance of the &lt;code>SmartCard&lt;/code> object or its derivative.&lt;/p>
+&lt;h3 id="prepare-a-selection-scenario">Prepare a selection scenario&lt;/h3>
+&lt;h3 id="process-a-selection-scenario">Process a selection scenario&lt;/h3>
+&lt;h3 id="schedule-a-selection-scenario">Schedule a selection scenario&lt;/h3>
+&lt;hr>
+&lt;h2 id="perform-a-transaction">Perform a transaction&lt;/h2>
+&lt;hr>
+&lt;h2 id="unregister-a-plugin">Unregister a plugin&lt;/h2>
+&lt;hr>
+&lt;h2 id="api">API&lt;/h2>
+&lt;hr>
+&lt;h2 id="examples">Examples&lt;/h2>
+&lt;hr>
+&lt;h2 id="download">Download&lt;/h2>
+&lt;h2 id="card-selection">Card selection&lt;/h2>
 &lt;h2 id="card-selection-and-reader-observation">Card selection and reader observation&lt;/h2>
 &lt;p>The &lt;code>CardSelectionManager&lt;/code> performs card selection in two steps:&lt;/p>
 &lt;ul>
@@ -5391,7 +5392,7 @@ plugin = smartCardService.registerPlugin(new PcscPluginFactory(pluginExceptionHa
 &lt;/code>&lt;/pre>
 &lt;p>For the observation of the plugin itself, the application must provide
 an object implementing the &lt;code>PluginObserver&lt;/code> interface to the plugin
-after having casted it in &lt;code>ObservablePlugin&lt;/code>.&lt;/p>
+after having cast it in &lt;code>ObservablePlugin&lt;/code>.&lt;/p>
 &lt;pre>&lt;code class="language-java">((ObservablePlugin) plugin).addObserver(new PluginObserver());
 &lt;/code>&lt;/pre>
 &lt;p>The &lt;code>PluginObserver&lt;/code> interface requires the implementation of the
@@ -7777,16 +7778,6 @@ id="tabs-1-2" role="tabpanel" aria-labelled-by="tabs-1-2-tab">
 The third version number (x.y.&lt;strong>z&lt;/strong>) only concerns updates of the javadoc because this component does not contain any implementation, but only an API.
 Therefore, it is recommended to always perform a &lt;strong>dynamic import&lt;/strong> as described above in order to have the most up-to-date documentation.
 &lt;/div>
-&lt;/div></description></item><item><title>External Keyple add-ons</title><link>https://keyple.org/community/external-add-ons/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/community/external-add-ons/</guid><description>&lt;div class="alert alert-note">
-&lt;div>
-&lt;p>To reference your add-on please make a &lt;a href="https://github.com/eclipse/keyple-website/pulls">Pull request&lt;/a> contribution on GitHub.&lt;/p>
-&lt;p>In order for your contribution to be accepted you must comply with one of the conditions below:&lt;/p>
-&lt;ul>
-&lt;li>Be a commiter of Eclipse Keyple™ project&lt;/li>
-&lt;li>Having contributed to one of the components of Eclipse Keyple™ project&lt;/li>
-&lt;li>Be a &lt;a href="https://iot.eclipse.org/adopters/">adopter/user&lt;/a> of Eclipse Keyple™&lt;/li>
-&lt;/ul>
-&lt;/div>
 &lt;/div></description></item><item><title>Keyple Card Generic Java Library</title><link>https://keyple.org/components-java/card-extensions/keyple-card-generic-java-lib/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/components-java/card-extensions/keyple-card-generic-java-lib/</guid><description>&lt;div class="alert alert-note">
 &lt;div>
 &lt;strong>&lt;code>2.0.0&lt;/code>&lt;/strong>
@@ -7845,71 +7836,6 @@ id="tabs-1-2" role="tabpanel" aria-labelled-by="tabs-1-2-tab">
 &amp;lt;artifactId&amp;gt;keyple-card-generic-java-lib&amp;lt;/artifactId&amp;gt;
 &amp;lt;version&amp;gt;2.0.0&amp;lt;/version&amp;gt;
 &amp;lt;/dependency&amp;gt;&lt;/code>&lt;/pre>
-&lt;/div>
-&lt;/div></description></item><item><title>How to contribute to Eclipse Keyple™ project</title><link>https://keyple.org/community/contributing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/community/contributing/</guid><description>&lt;p>Thanks for your interest in the Eclipse Keyple™ project.&lt;/p>
-&lt;hr>
-&lt;h2 id="via-fork-for-external-contributors">Via fork (for external contributors)&lt;/h2>
-&lt;p>Prerequisites:&lt;/p>
-&lt;ul>
-&lt;li>Have a
-&lt;a href="https://github.com/join" target="_blank" rel="noopener">GitHub&lt;/a> account.&lt;/li>
-&lt;/ul>
-&lt;p>Workflow:&lt;/p>
-&lt;ol>
-&lt;li>Check if there is already a GitHub issue for what you want to work on or create one.&lt;/li>
-&lt;li>Announce in the comments section that you want to work on the issue. Also describe the solution you want to implement.
-To improve the chances for your contribution to be accepted, you&amp;rsquo;ll want to wait for the feedback of the committers.&lt;/li>
-&lt;li>Fork the repository.&lt;/li>
-&lt;li>Create a new branch from &lt;code>main&lt;/code> for your changes. Name it after the issue number, e.g. &lt;code>#XXX_[descriptionofchanges]&lt;/code>.&lt;/li>
-&lt;li>Implement your changes.&lt;/li>
-&lt;li>Rebase on &lt;code>main&lt;/code>.&lt;/li>
-&lt;li>Run &lt;code>./gradlew spotlessApply&lt;/code> to format the code and add licence headers to the files.&lt;/li>
-&lt;li>Run &lt;code>./gradlew build&lt;/code> (to check code formatting and run tests)&lt;/li>
-&lt;li>Commit using
-&lt;a href="https://git-scm.com/docs/git-commit#git-commit--s" target="_blank" rel="noopener">sign off&lt;/a> option with the same email address you are using for your GitHub account.
-Use descriptive and meaningful commit messages.
-In particular, start the first line of the commit message with the number of the issue that the commit addresses, e.g. &lt;code>#XXX [descriptionofchanges]&lt;/code>.&lt;/li>
-&lt;li>Push your changes to your forked repository.&lt;/li>
-&lt;li>Create a
-&lt;a href="https://help.github.com/articles/using-pull-requests/" target="_blank" rel="noopener">pull request (PR)&lt;/a> to &lt;code>main&lt;/code>.&lt;/li>
-&lt;li>After submitting, do not use your branch for any other development, otherwise further changes that you make will be visible in the PR.&lt;/li>
-&lt;/ol>
-&lt;hr>
-&lt;h2 id="as-an-eclipse-keyple-project-committer">As an Eclipse Keyple™ project committer&lt;/h2>
-&lt;p>Prerequisites:&lt;/p>
-&lt;ol>
-&lt;li>Have a
-&lt;a href="https://github.com/join" target="_blank" rel="noopener">GitHub&lt;/a> account,&lt;/li>
-&lt;li>Have an
-&lt;a href="https://accounts.eclipse.org/user/register" target="_blank" rel="noopener">Eclipse&lt;/a> account,&lt;/li>
-&lt;li>Have signed the
-&lt;a href="https://accounts.eclipse.org/user/login?destination=user/eca" target="_blank" rel="noopener">Eclipse Contributor Agreement&lt;/a>,&lt;/li>
-&lt;li>Have been elected as a committer by the project&amp;rsquo;s team.&lt;/li>
-&lt;/ol>
-&lt;p>Workflow:&lt;/p>
-&lt;ol>
-&lt;li>Check if there is already a GitHub issue for what you want to work on or create one.&lt;/li>
-&lt;li>Assign the issue to yourself.&lt;/li>
-&lt;li>Create a new branch from &lt;code>main&lt;/code> for your changes. Name it after the issue number, e.g. &lt;code>#XXX_[descriptionofchanges]&lt;/code>.&lt;/li>
-&lt;li>Implement your changes.&lt;/li>
-&lt;li>Rebase on &lt;code>main&lt;/code>.&lt;/li>
-&lt;li>Run &lt;code>./gradlew spotlessApply&lt;/code> to format the code and add licence headers to the files.&lt;/li>
-&lt;li>Run &lt;code>./gradlew build&lt;/code> (to check code formatting and run tests)&lt;/li>
-&lt;li>Commit your changes.
-Use descriptive and meaningful commit messages.
-In particular, start the first line of the commit message with the number of the issue that the commit addresses, e.g. &lt;code>#XXX [descriptionofchanges]&lt;/code>.&lt;/li>
-&lt;li>Push the branch into the repository.&lt;/li>
-&lt;li>Create a pull request and ask somebody who is familiar with the code you modified to review it.&lt;/li>
-&lt;li>If the reviewer approves and all checks are OK, merge using &lt;strong>squash and commit&lt;/strong> method.&lt;/li>
-&lt;/ol></description></item><item><title>Keyple compliant terminals</title><link>https://keyple.org/community/compliant-terminals/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/community/compliant-terminals/</guid><description>&lt;div class="alert alert-note">
-&lt;div>
-&lt;p>To reference your terminal please make a &lt;a href="https://github.com/eclipse/keyple-website/pulls">Pull request&lt;/a> contribution on GitHub.&lt;/p>
-&lt;p>In order for your contribution to be accepted you must comply with one of the conditions below:&lt;/p>
-&lt;ul>
-&lt;li>Be a commiter of Eclipse Keyple™ project&lt;/li>
-&lt;li>Having contributed to one of the components of Eclipse Keyple™ project&lt;/li>
-&lt;li>Be a &lt;a href="https://iot.eclipse.org/adopters/">adopter/user&lt;/a> of Eclipse Keyple™&lt;/li>
-&lt;/ul>
 &lt;/div>
 &lt;/div></description></item><item><title>Keyple Distributed Local Java Library</title><link>https://keyple.org/components-java/distributed/keyple-distributed-local-java-lib/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/components-java/distributed/keyple-distributed-local-java-lib/</guid><description>&lt;div class="alert alert-note">
 &lt;div>
@@ -8217,91 +8143,7 @@ id="tabs-2-2" role="tabpanel" aria-labelled-by="tabs-2-2-tab">
 &amp;lt;version&amp;gt;2.0.0&amp;lt;/version&amp;gt;
 &amp;lt;/dependency&amp;gt;&lt;/code>&lt;/pre>
 &lt;/div>
-&lt;/div></description></item><item><title>Roadmap</title><link>https://keyple.org/community/roadmap/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/community/roadmap/</guid><description>&lt;h1 id="current-work">Current work&lt;/h1>
-&lt;h2 id="dependency-removal">Dependency removal:&lt;/h2>
-&lt;ul>
-&lt;li>Until the version 1.0.0, the source code of all the Keyple Java components was hosted in a single repository:
-&lt;a href="https://github.com/eclipse/keyple-java" target="_blank" rel="noopener">https://github.com/eclipse/keyple-java&lt;/a>. It was the same for Keyple C++ components hosted in
-&lt;a href="https://github.com/eclipse/keyple-cpp" target="_blank" rel="noopener">https://github.com/eclipse/keyple-cpp&lt;/a>. For the version 1.0.0 and below, there were strong dependencies between the Keyple components which had all to be released in the same version number.&lt;/li>
-&lt;li>To facilitate the evolution and the maintenance, the version 2.0.0 proposes a full reorganization of the code. All the components are split in different repositories in order to allow them to evolve independently. The public interfaces are also separated to the specific implementations: the repositories are dedicated to host API or library implementation.
-&lt;ul>
-&lt;li>The Keyple Java components are managed through 16 repositories.&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h2 id="calypso-terminal-compliance">Calypso terminal compliance:&lt;/h2>
-&lt;ul>
-&lt;li>The &amp;lsquo;Keyple Service&amp;rsquo; component in version 2.0.0 follows the &amp;lsquo;Reader API 1.0&amp;rsquo; and &amp;lsquo;Card API 1.0&amp;rsquo; standardized for the reader layer of Calypso terminals.&lt;/li>
-&lt;li>The &amp;lsquo;Calypso extension&amp;rsquo; component in version 2.0.0 is also compliant with the &amp;lsquo;Calypso API 1.0&amp;rsquo; standardized for the Calypso layer of Calypso terminals.&lt;/li>
-&lt;/ul>
-&lt;h2 id="plugin-support">Plugin support:&lt;/h2>
-&lt;ul>
-&lt;li>Thanks to the code reorganization, internal processing is more hidden. The version 2.0.0 defines a &amp;lsquo;Plugin SPI&amp;rsquo; which is significantly reduced. The plugins could now be implemented without having to know how the Keyple Service works.&lt;/li>
-&lt;/ul>
-&lt;h2 id="availability">Availability&lt;/h2>
-&lt;ul>
-&lt;li>The Keyple Java components will be released in version 2.0.0 beginning of October 2021.&lt;/li>
-&lt;li>The Keyple C++ 2.0.0 implementation is planned for November 2021 for the components: Service, Calypso, PC/SC plugin, the network client part of the distributed module.&lt;/li>
-&lt;/ul>
-&lt;h1 id="future-developments">Future developments&lt;/h1>
-&lt;p>Extension of the Calypso module features:&lt;/p>
-&lt;ul>
-&lt;li>pre-personalization transaction (Change Key)&lt;/li>
-&lt;li>signature of data fields (SAM PSO commands)&lt;/li>
-&lt;li>confidential secure session (REV3.2 AES mode)&lt;/li>
-&lt;li>asymmetric authentication (REV3.3 PKI mode)&lt;/li>
-&lt;li>REV1/REV2 product specific supports&lt;/li>
-&lt;li>Hoplink high-level API&lt;/li>
-&lt;li>SAM Transaction API (for SAM management)&lt;/li>
-&lt;/ul>
-&lt;p>Standard plugins:&lt;/p>
-&lt;ul>
-&lt;li>For Keyple C++, support of the NFC reader on iOS&lt;/li>
-&lt;/ul>
-&lt;h1 id="version-history">Version history&lt;/h1>
-&lt;p>Until the version 2.0.0, all the different Keyple components (Core, Calypso extension, plugins) have to share the same version number. The components were released all together at a specific date for Java or C++.&lt;/p>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>Release&lt;/th>
-&lt;th>Java&lt;/th>
-&lt;th>C++&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>2.0.0&lt;/td>
-&lt;td>2021/10&lt;br>review in progress&lt;/td>
-&lt;td>planned for 2021/11&lt;/td>
-&lt;td>&lt;ul>&lt;li>Compliance with the Calypso terminal API&lt;/li>&lt;li>Removal of dependencies between components (Core, Calypso extension, and specific plugins): each component is released with its own version and a separate life cycle.&lt;/li>&lt;/ul>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>1.0.0&lt;/td>
-&lt;td>2020/12&lt;/td>
-&lt;td>not planned&lt;/td>
-&lt;td>&lt;ul>&lt;li>Core - simplifications of the low-level Plugin API dedicated for plugin developers.&lt;/li>&lt;li>Remote Plugin - new stable &amp;amp; simpler version&lt;/li>&lt;/ul>Main unsolved issue: the versioning of the different components (Core, Calypso extension, and specific plugins) is still linked: to manage transitive importation the artifact are built with the same version reference.&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>0.9.0&lt;/td>
-&lt;td>2020/09&lt;/td>
-&lt;td>2021/01&lt;/td>
-&lt;td>&lt;ul>&lt;li>Android plugins - NFC &amp;amp; OMAPI plugins optimized for all Android versions&lt;/li>&lt;li>Calypso&lt;ul>&lt;li>simplified high level API to parse the Portable Object APDU responses, &amp;amp; recover the data through a card image.&lt;/li>&lt;li>addition of the support of the PO PIN feature, PO Stored Value transaction, &amp;amp; the SAM lock&lt;/li>&lt;/ul>&lt;/li>&lt;/ul>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>0.8.1&lt;/td>
-&lt;td>2020/01&lt;/td>
-&lt;td>2020/05&lt;/td>
-&lt;td>&lt;ul>&lt;li>Core - Observable Reader interface evolution to improve the support of smart card reader solutions.&lt;/li>&lt;li>Calypso - simplified high level API to build the Portable Object APDU commands (PO data still recovered through a lower API managing APDI response parser)&lt;/li>&lt;/ul>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>0.7.0&lt;/td>
-&lt;td>2019/07&lt;/td>
-&lt;td>-&lt;/td>
-&lt;td>initial public java implementation&lt;ul>&lt;li>Calypso - low level API to manage the common Calypso features (secure session for authentication, read and write commands of EF records)&lt;/li>&lt;/ul>&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table></description></item><item><title>Keyple Service Java Library</title><link>https://keyple.org/components-java/core/keyple-service-java-lib/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/components-java/core/keyple-service-java-lib/</guid><description>&lt;div class="alert alert-note">
+&lt;/div></description></item><item><title>Keyple Service Java Library</title><link>https://keyple.org/components-java/core/keyple-service-java-lib/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/components-java/core/keyple-service-java-lib/</guid><description>&lt;div class="alert alert-note">
 &lt;div>
 &lt;strong>&lt;code>2.0.0&lt;/code>&lt;/strong>
 &lt;span class="component-metadata">
@@ -8478,39 +8320,7 @@ id="tabs-1-2" role="tabpanel" aria-labelled-by="tabs-1-2-tab">
 &amp;lt;version&amp;gt;2.0.0&amp;lt;/version&amp;gt;
 &amp;lt;/dependency&amp;gt;&lt;/code>&lt;/pre>
 &lt;/div>
-&lt;/div></description></item><item><title>Support &amp; training companies</title><link>https://keyple.org/community/support-and-training-companies/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/community/support-and-training-companies/</guid><description>&lt;div class="alert alert-note">
-&lt;div>
-&lt;p>To add your company please make a &lt;a href="https://github.com/eclipse/keyple-website/pulls">Pull request&lt;/a> contribution on GitHub.&lt;/p>
-&lt;p>In order for your contribution to be accepted you must comply with one of the conditions below:&lt;/p>
-&lt;ul>
-&lt;li>Be a commiter of Eclipse Keyple™ project&lt;/li>
-&lt;li>Having contributed to one of the components of Eclipse Keyple™ project&lt;/li>
-&lt;li>Be a &lt;a href="https://iot.eclipse.org/adopters/">adopter/user&lt;/a> of Eclipse Keyple™&lt;/li>
-&lt;/ul>
-&lt;/div>
-&lt;/div>
-&lt;h2 id="calypso-networks-association">Calypso Networks Association&lt;/h2>
-&lt;blockquote>
-&lt;p>
-&lt;i class="fas fa-globe pr-1 fa-fw">&lt;/i>
-&lt;a href="https://calypsonet.org" target="_blank" rel="noopener">Discover more about CNA here&lt;/a>&lt;/p>
-&lt;p>
-&lt;i class="fas fa-envelope pr-1 fa-fw">&lt;/i>
-&lt;a href="https://calypsonet.org/contact-us/" target="_blank" rel="noopener">Get in touch with the CNA team for more information&lt;/a>&lt;/p>
-&lt;/blockquote>
-&lt;p>Calypso Networks Association (CNA) is a non-profit organization dedicated to improve contactless
-electronic ticketing for transportation and access control standards since 2003.
-For many years, our mission has been to create innovative solutions that are fully interoperable,
-reliable, secure, and open. We collaborate with a dynamic network of city leaders and transport
-authorities that are keen to work with system integrators with Calypso® standard expertise.&lt;/p>
-&lt;p>Discover more about CNA here :
-&lt;a href="http://calypsonet.org" target="_blank" rel="noopener">http://calypsonet.org&lt;/a>&lt;/p>
-&lt;p>Calypso Networks Association offers comprehensive
-&lt;a href="https://calypsonet.org/technical-support-documentation/" target="_blank" rel="noopener">technical support and documentation&lt;/a>
-to ensure all users can get the most out of Calypso® technology and Eclipse Keyple™.&lt;/p>
-&lt;p>Calypso Networks Association provides a Calypso Test Kit. The Calypso Test Kit aims at helping
-ticketing system developers to fully experience Eclipse Keyple™ with a set of Calypso® SAM and
-Calypso® certified portable objects from several manufacturers in various configurations.&lt;/p></description></item><item><title>Keyple Util Java Library</title><link>https://keyple.org/components-java/core/keyple-util-java-lib/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/components-java/core/keyple-util-java-lib/</guid><description>&lt;div class="alert alert-note">
+&lt;/div></description></item><item><title>Keyple Util Java Library</title><link>https://keyple.org/components-java/core/keyple-util-java-lib/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/components-java/core/keyple-util-java-lib/</guid><description>&lt;div class="alert alert-note">
 &lt;div>
 &lt;strong>&lt;code>2.0.0&lt;/code>&lt;/strong>
 &lt;span class="component-metadata">

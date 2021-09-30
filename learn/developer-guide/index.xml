@@ -40,10 +40,10 @@ extensions such as
 an action or to achieve a result depending on the needs of the
 application.&lt;/p>
 &lt;p>The purpose of this section is to guide you in its use.&lt;/p>
-&lt;h2 id="access-to-the-smart-card-service">Access to the smart card service&lt;/h2>
-&lt;p>Invoke the &lt;code>SmartCardServiceProvider.getService()&lt;/code> static method to access the service.&lt;/p>
-&lt;p>Its main role is to centralize the Keyple add-on resources and to manage their
+&lt;h2 id="smart-card-service">Smart card service&lt;/h2>
+&lt;p>As part of &lt;strong>Keyple Service&lt;/strong> component, the smart card service is the main service of Keyple. Its role is to centralize the add-on resources and to manage their
 life cycle.&lt;/p>
+&lt;p>The service is accessible by invoking the &lt;code>SmartCardServiceProvider.getService()&lt;/code> static method.&lt;/p>
 &lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('7', this);">Copy&lt;/button>&lt;/div>
 &lt;pre>&lt;code class="language-java" id="code-7">SmartCardService smartCardService = SmartCardServiceProvider.getService();&lt;/code>&lt;/pre>
 &lt;hr>
@@ -60,7 +60,7 @@ the
 the
 &lt;a href="https://keyple.org/components-java/specific-reader-plugins/">specific reader plugins&lt;/a>
 or one of our
-&lt;a href="https://keyple.org/community/external-add-ons/">partners reader plugins&lt;/a>.&lt;/p>
+&lt;a href="https://keyple.org/external-resources/external-add-ons/">partners reader plugins&lt;/a>.&lt;/p>
 &lt;div class="alert alert-note">
 &lt;div>
 A new plugin can also be &lt;a href="../../learn/developer-guide/create-a-reader-plugin/">created&lt;/a> if there is no plugin for the intended hardware.
@@ -73,16 +73,21 @@ This factory is provided by the API of the used plugin.&lt;/p>
 &lt;p>Depending on the capabilities of the hardware, the plugin factory may or may not offer specific configuration options.
 Please refer to the API of the plugin component you are considering to see what is appropriate for your application.&lt;/p>
 &lt;p>The registration provides in return an implementation of one of the &lt;code>Plugin&lt;/code>, &lt;code>ObservablePlugin&lt;/code> or &lt;code>PoolPlugin&lt;/code> interfaces depending on the type of target plugin.&lt;/p>
-&lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('12', this);">Copy&lt;/button>&lt;/div>
-&lt;pre>&lt;code class="language-java" id="code-12">// Here is for example the registration of the PC/SC plugin
+&lt;div class="alert alert-note">
+&lt;div>
+A plugin is identified by a unique name in the system so that it can be retrieved at any time from the smart card service.
+&lt;/div>
+&lt;/div>
+&lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('13', this);">Copy&lt;/button>&lt;/div>
+&lt;pre>&lt;code class="language-java" id="code-13">// Here is for example the registration of the PC/SC plugin
 Plugin plugin = smartCardService.registerPlugin(PcscPluginFactoryBuilder.builder().build());&lt;/code>&lt;/pre>
 &lt;h3 id="configure-a-plugin">Configure a plugin&lt;/h3>
 &lt;p>Some plugin types may offer specific options.&lt;/p>
 &lt;p>Static options are usually directly exposed by the plugin factory API while dynamic options are exposed by the plugin extension API.&lt;/p>
-&lt;p>To access the plugin extension it is necessary to invoke the &lt;code>getExtension(...)&lt;/code> method on the registered &lt;code>Plugin&lt;/code> by specifying the expected class of the extension.
+&lt;p>To access the plugin extension it is necessary to invoke the &lt;code>getExtension(...)&lt;/code> method on the registered &lt;code>Plugin&lt;/code> by specifying the expected class of the extension which must extends the &lt;code>KeyplePluginExtension&lt;/code> interface.
 After that, the dedicated methods are available from the resulting object.&lt;/p>
-&lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('13', this);">Copy&lt;/button>&lt;/div>
-&lt;pre>&lt;code class="language-java" id="code-13">// Here is a snippet showing the usage of the extension of the Stub plugin (the procedure would be similar for another plugin/reader)
+&lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('14', this);">Copy&lt;/button>&lt;/div>
+&lt;pre>&lt;code class="language-java" id="code-14">// Here is a snippet showing the usage of the extension of the Stub plugin
 plugin
 .getExtension(StubPlugin.class)
 .unplugReader(&amp;#34;READER_1&amp;#34;);&lt;/code>&lt;/pre>
@@ -102,12 +107,8 @@ through a background task managed by &lt;strong>Keyple Service&lt;/strong>.&lt;/
 &lt;/ul>
 &lt;p>These two interfaces are available in the &lt;code>org.eclipse.keyple.core.service.spi&lt;/code> package of the &lt;strong>Keyple Service&lt;/strong> component.&lt;/p>
 &lt;p>Here is an example of a plugin observer class including an exception handler:&lt;/p>
-&lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('15', this);">Copy&lt;/button>&lt;/div>
-&lt;pre>&lt;code class="language-java" id="code-15">// ...
-import org.eclipse.keyple.core.service.spi.PluginObserverSpi;
-import org.eclipse.keyple.core.service.spi.PluginObservationExceptionHandlerSpi;
-// ...
-class PluginObserver implements PluginObserverSpi, PluginObservationExceptionHandlerSpi {
+&lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('16', this);">Copy&lt;/button>&lt;/div>
+&lt;pre>&lt;code class="language-java" id="code-16">class PluginObserver implements PluginObserverSpi, PluginObservationExceptionHandlerSpi {
 @Override
 public void onPluginEvent(PluginEvent event) {
 switch (event.getEventType()) {
@@ -129,11 +130,11 @@ public void onPluginObservationError(String pluginName, Throwable e) {
 ...
 }
 }&lt;/code>&lt;/pre>
-&lt;p>In order to access the dedicated setters, the plugin has to be casted as an &lt;code>ObservablePlugin&lt;/code>.&lt;/p>
+&lt;p>In order to access the dedicated setters, the plugin has to be cast to &lt;code>ObservablePlugin&lt;/code>.&lt;/p>
 &lt;p>Since adding an observer will cause the &lt;strong>Keyple Service&lt;/strong> to check for the presence of an exception handler,
 the definition of the exception handler must be done first.&lt;/p>
-&lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('16', this);">Copy&lt;/button>&lt;/div>
-&lt;pre>&lt;code class="language-java" id="code-16">PluginObserver pluginObserver = new PluginObserver();
+&lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('17', this);">Copy&lt;/button>&lt;/div>
+&lt;pre>&lt;code class="language-java" id="code-17">PluginObserver pluginObserver = new PluginObserver();
 ((ObservablePlugin) plugin).setPluginObservationExceptionHandler(pluginObserver);
 ((ObservablePlugin) plugin).addObserver(pluginObserver);&lt;/code>&lt;/pre>
 &lt;div class="alert alert-note">
@@ -143,35 +144,15 @@ Note that the monitoring thread only works if there is at least one observer reg
 &lt;/div>
 &lt;hr>
 &lt;h2 id="set-up-a-reader">Set up a reader&lt;/h2>
+&lt;p>The readers are provided by the plugins, that&amp;rsquo;s why you have to
+&lt;a href="#set-up-a-plugin">set up the plugin&lt;/a> first.&lt;/p>
 &lt;h3 id="access-to-a-reader">Access to a reader&lt;/h3>
-&lt;h3 id="configure-a-reader">Configure a reader&lt;/h3>
-&lt;h3 id="monitor-a-reader">Monitor a reader&lt;/h3>
-&lt;hr>
-&lt;h2 id="select-a-card">Select a card&lt;/h2>
-&lt;h3 id="prepare-a-selection-scenario">Prepare a selection scenario&lt;/h3>
-&lt;h3 id="process-a-selection-scenario">Process a selection scenario&lt;/h3>
-&lt;h3 id="schedule-a-selection-scenario">Schedule a selection scenario&lt;/h3>
-&lt;hr>
-&lt;h2 id="perform-a-transaction">Perform a transaction&lt;/h2>
-&lt;hr>
-&lt;h2 id="unregister-a-plugin">Unregister a plugin&lt;/h2>
-&lt;hr>
-&lt;h2 id="api">API&lt;/h2>
-&lt;hr>
-&lt;h2 id="examples">Examples&lt;/h2>
-&lt;hr>
-&lt;h2 id="download">Download&lt;/h2>
-&lt;h2 id="observation-of-the-plugin">Observation of the plugin&lt;/h2>
-&lt;h2 id="readers-retrieval">Readers retrieval&lt;/h2>
-&lt;p>Readers are objects implementing the &lt;code>Reader&lt;/code> interface and are
-returned by the plugin&amp;rsquo;s &lt;code>getReader&lt;/code> method taking the name of the
-reader as argument.&lt;/p>
-&lt;p>The names of the readers available from the plugin are returned as a
-Set of strings by the &lt;code>getReaderNames&lt;/code> method.&lt;/p>
-&lt;p>The &lt;code>getReaders&lt;/code> method also allows you to get all the readers at once as a Set of &lt;code>Reader&lt;/code> objects.&lt;/p>
-&lt;p>Here is an example to get the 1st PC/SC reader:&lt;/p>
-&lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('18', this);">Copy&lt;/button>&lt;/div>
-&lt;pre>&lt;code class="language-java" id="code-18">String readerName = plugin.getReaderNames().get(0);
+&lt;p>The hardware readers already connected are referenced in the system during the registration of the plugin.
+For observable plugins, the references of the connected readers are updated in real time.&lt;/p>
+&lt;p>Readers are accessible directly from the associated &lt;code>Plugin&lt;/code> instance.&lt;/p>
+&lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('19', this);">Copy&lt;/button>&lt;/div>
+&lt;pre>&lt;code class="language-java" id="code-19">// Here is an example to get the 1st available reader
+String readerName = plugin.getReaderNames().get(0);
 Reader reader = plugin.getReader(readerName);&lt;/code>&lt;/pre>
 &lt;div class="alert alert-note">
 &lt;div>
@@ -182,77 +163,51 @@ mechanism in order to assign the right reader to the right place in the
 system (for example by using regular expressions).
 &lt;/div>
 &lt;/div>
-&lt;h2 id="reader-specific-settings">Reader specific settings&lt;/h2>
-&lt;p>Take a close look at the parameters proposed by the plugin and its readers.&lt;/p>
-&lt;p>Depending on the characteristics of the reader, it may be necessary to set some parameters in order to meet the application needs.&lt;/p>
-&lt;p>To access the reader&amp;rsquo;s settings it is necessary to obtain its &lt;strong>specific extension&lt;/strong> (this differs from one type of equipment to another).&lt;/p>
-&lt;p>To do this, we need to invoke the &lt;code>getExtension&lt;/code> method by passing it the specific class in parameter.
-After that, the dedicated methods are available from the resulting object.&lt;/p>
-&lt;p>Here is a snippet showing the procedure for a PC/SC reader (the procedure would be similar for another plugin/reader):
-&lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('20', this);">Copy&lt;/button>&lt;/div>
-&lt;pre>&lt;code class="language-java" id="code-20">Reader reader = plugin.getReader(readerName);
-// Configure the reader with parameters suitable for contactless operations.
-reader
-.getExtension(PcscReader.class)
-.setContactless(true)
-.setIsoProtocol(PcscReader.IsoProtocol.T1);&lt;/code>&lt;/pre>&lt;/p>
-&lt;div class="alert alert-note">
-&lt;div>
-Similarly, the plugin itself may or may not have parameters.&lt;br>
-When they exist, they are usually defined by a builder in its factory.&lt;br>
-Please refer to the documentation of the plugin you are using for more details on this topic.
-&lt;/div>
-&lt;/div>
-&lt;h2 id="protocol-activationdeactivation">Protocol activation/deactivation&lt;/h2>
-&lt;p>The &lt;code>activateProtocol&lt;/code> and &lt;code>deactivateProtocol&lt;/code> methods of the &lt;code>ConfigurableReader&lt;/code> interface meet two needs:&lt;/p>
+&lt;h3 id="configure-a-reader">Configure a reader&lt;/h3>
+&lt;p>There are two types of configuration. Their availability depends on the characteristics of the reader:&lt;/p>
 &lt;ul>
 &lt;li>
-&lt;p>the use or not of a particular protocol at the lowest level of the RF layer of the reader.
-In other words, these methods define which protocols the reader will use to search for cards.&lt;/p>
-&lt;p>This may be significant in terms of detection performance (latency) because when multiple protocols are implemented,
-the readers search for cards for each protocol sequentially, for example by alternating ISO14443-A and ISO14443-B RF requests.&lt;/p>
-&lt;p>Note that some readers do not allow to select the types of protocols used, for example NFC smartphones.
-It is nevertheless possible to invoke these methods for their second purpose described below.&lt;/p>
+&lt;p>The reader is an instance of &lt;code>ConfigurableReader&lt;/code>:&lt;br>
+It is then possible to activate or deactivate the protocols supported by the reader.&lt;/p>
+&lt;div class="alert alert-note">&lt;div>Use of these methods may be optional if the application does not intend to target products by protocol filtering.&lt;/div>&lt;/div>
 &lt;/li>
 &lt;li>
-&lt;p>the naming of a reader protocol for the application.
-The idea is to associate a protocol name that will be referenced by the application independently of the reader type.
-This name can be used as parameter of the selection process in order to target a particular product.&lt;/p>
+&lt;p>The reader&amp;rsquo;s extension API exposes specific options:&lt;br>
+To access the reader extension it is necessary to invoke the &lt;code>getExtension(...)&lt;/code> method on the &lt;code>Reader&lt;/code> instance by specifying the expected class of the extension which must extends the &lt;code>KeypleReaderExtension&lt;/code> interface.
+After that, the dedicated methods, if any, are available from the resulting object.
+&lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('21', this);">Copy&lt;/button>&lt;/div>
+&lt;pre>&lt;code class="language-java" id="code-21">// Here is a snippet showing the usage of the extension of the Stub reader
+reader
+.getExtension(StubReader.class)
+.removeCard();&lt;/code>&lt;/pre>&lt;/p>
 &lt;/li>
 &lt;/ul>
-&lt;p>Please refer to the API of these methods to learn more about them.&lt;/p>
-&lt;div class="alert alert-note">
+&lt;h3 id="monitor-a-reader">Monitor a reader&lt;/h3>
+&lt;div class="alert alert-warning">
 &lt;div>
-Use of these methods may be optional if the reader&amp;rsquo;s protocols are not configurable
-or if the application does not intend to target products by this criterion.
+The reader monitoring only applies to hardware environments in which the smart cards are removable.
+Moreover, only readers of type &lt;code>ObservableReader&lt;/code> can be monitored.
 &lt;/div>
 &lt;/div>
-&lt;h2 id="observation-of-the-reader">Observation of the reader&lt;/h2>
 &lt;div class="alert alert-note">
 &lt;div>
-Observation of the readers is optional in Keyple. It
-facilitates an event-driven programming mode, but an application
-developer can choose not to observe a reader, either because this reader
-is not designed to manage card insertions/withdrawals (for example an
-Android OMAPI reader or a SAM reader), or because the application is
-designed to directly manage the presence of a card (see to &lt;code>isCardPresent&lt;/code> method of the
+Observation of the readers is optional in Keyple. It facilitates an event-driven programming mode, but an application
+developer can choose not to observe a reader, either because this reader is not designed to manage card insertions/withdrawals (for example an
+Android OMAPI reader or a SAM reader), or because the application is designed to directly manage the presence of a card (see to &lt;code>isCardPresent&lt;/code> method of the
 &lt;code>Reader&lt;/code> interface).
 &lt;/div>
 &lt;/div>
-&lt;p>The observation of inserting and removing cards from readers is similar to the observation of plugins.&lt;/p>
-&lt;p>The observation of card insertion and removal is achieved through a background task managed by &lt;strong>Keyple Service&lt;/strong>.&lt;/p>
-&lt;p>The reader observer must implement the &lt;code>CardReaderObserverSpi&lt;/code> interface,
-the reader exception handler must implement the &lt;code>CardReaderObservationExceptionHandlerSpi&lt;/code> interface.&lt;/p>
-&lt;p>These two interfaces are available in the spi package of the
-&lt;a href="../../components-java/standards-compliance/calypsonet-apis/">&lt;strong>Calypsonet Terminal Reader Java API&lt;/strong>&lt;/a>
-to which &lt;strong>Keyple Service&lt;/strong> conforms to perform these functions.&lt;/p>
-&lt;p>Here is an example of a reader observer class including an exception handler:
-&lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('25', this);">Copy&lt;/button>&lt;/div>
-&lt;pre>&lt;code class="language-java" id="code-25">// ...
-import org.calypsonet.terminal.reader.spi.CardReaderObserverSpi;
-import org.calypsonet.terminal.reader.spi.CardReaderObservationExceptionHandlerSpi;
-// ...
-class ReaderObserver implements CardReaderObserverSpi, CardReaderObservationExceptionHandlerSpi {
+&lt;p>The observation of card insertions and removals is achieved
+through a background task managed by &lt;strong>Keyple Service&lt;/strong>.&lt;/p>
+&lt;p>To enable these observation mechanisms, it is imperative to provide:&lt;/p>
+&lt;ul>
+&lt;li>a reader observer implementing the &lt;code>CardReaderObserverSpi&lt;/code> interface to be notified of reader events,&lt;/li>
+&lt;li>an exception handler implementing the &lt;code>CardReaderObservationExceptionHandlerSpi&lt;/code> interface to be notified of errors that may occur during the monitoring or events notifications.&lt;/li>
+&lt;/ul>
+&lt;p>These two interfaces are available in the &lt;code>org.calypsonet.terminal.reader.spi&lt;/code> package of the &lt;strong>Calypsonet Terminal Reader API&lt;/strong> component.&lt;/p>
+&lt;p>Here is an example of a reader observer class including an exception handler:&lt;/p>
+&lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('24', this);">Copy&lt;/button>&lt;/div>
+&lt;pre>&lt;code class="language-java" id="code-24">class ReaderObserver implements CardReaderObserverSpi, CardReaderObservationExceptionHandlerSpi {
 @Override
 public void onReaderEvent(CardReaderEvent event) {
 switch (event.getType()) {
@@ -270,18 +225,30 @@ break;
 }
 @Override
 public void onReaderObservationError(String pluginName, String readerName, Throwable e) {
-//
 // handle here the reader exceptions raised while observing the cards
-//
+...
 }
-}&lt;/code>&lt;/pre>&lt;/p>
-&lt;p>The observation of the events of the reader is done in a similar way to
-that of the plugin, by adding an observer:
-&lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('26', this);">Copy&lt;/button>&lt;/div>
-&lt;pre>&lt;code class="language-java" id="code-26">ReaderObserver readerObserver = new ReaderObserver();
+}&lt;/code>&lt;/pre>
+&lt;p>In order to access the dedicated setters, the reader has to be cast to &lt;code>ObservableReader&lt;/code>.&lt;/p>
+&lt;p>Since adding an observer will cause the &lt;strong>Keyple Service&lt;/strong> to check for the presence of an exception handler,
+the definition of the exception handler must be done first.&lt;/p>
+&lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('25', this);">Copy&lt;/button>&lt;/div>
+&lt;pre>&lt;code class="language-java" id="code-25">ReaderObserver readerObserver = new ReaderObserver();
 ((ObservableReader) reader).setReaderObservationExceptionHandler(readerObserver);
-((ObservableReader) reader).addObserver(readerObserver);&lt;/code>&lt;/pre>&lt;/p>
-&lt;h2 id="card-selection">Card selection&lt;/h2>
+((ObservableReader) reader).addObserver(readerObserver);
+((ObservableReader) reader).startCardDetection(ObservableCardReader.DetectionMode.REPEATING);&lt;/code>&lt;/pre>
+&lt;div class="alert alert-note">
+&lt;div>
+Note that the &lt;code>startCardDetection(...)&lt;/code> and &lt;code>stopCardDetection()&lt;/code> methods start and stop the monitoring thread.
+The API offers different options to manage the needs around card detection.&lt;br>
+Moreover, the notification process is sequential and synchronous.
+&lt;/div>
+&lt;/div>
+&lt;hr>
+&lt;h2 id="select-a-card">Select a card&lt;/h2>
+&lt;p>The starting point of any processing done with a card in the Keyple enrivonment, is to reference this card in the system.
+It is the role of the selection step to obtain this reference.&lt;/p>
+&lt;p>You have first to prepare a selection scenario defining the eligible cards for a transaction, then to execute the scenario when a card is presented.&lt;/p>
 &lt;p>The Keyple card selection process is generic, allowing the management of cards of different types
 or technologies within the same application.&lt;/p>
 &lt;p>It is based on the universal selection interface defined by the
@@ -311,10 +278,24 @@ be made available to the application.
 It is thus possible to directly ignore cards that do not correspond to the defined selection criteria.&lt;/p>
 &lt;p>When a card is selected, the &lt;code>CardSelectionManager&lt;/code> will make available the result
 as a &lt;code>SmartCard&lt;/code> object containing all the information known about the card at that stage.&lt;/p>
-&lt;p>Depending on the card extension that is used, this &lt;code>SmartCard&lt;/code> object can be casted into a more
+&lt;p>Depending on the card extension that is used, this &lt;code>SmartCard&lt;/code> object can be cast to a more
 comprehensive object with specific features defined by the extension.&lt;/p>
 &lt;p>In addition to the selection process itself, specific APDU commands may be sent to the card if the selection is successful.
 The output of these commands is available in the instance of the &lt;code>SmartCard&lt;/code> object or its derivative.&lt;/p>
+&lt;h3 id="prepare-a-selection-scenario">Prepare a selection scenario&lt;/h3>
+&lt;h3 id="process-a-selection-scenario">Process a selection scenario&lt;/h3>
+&lt;h3 id="schedule-a-selection-scenario">Schedule a selection scenario&lt;/h3>
+&lt;hr>
+&lt;h2 id="perform-a-transaction">Perform a transaction&lt;/h2>
+&lt;hr>
+&lt;h2 id="unregister-a-plugin">Unregister a plugin&lt;/h2>
+&lt;hr>
+&lt;h2 id="api">API&lt;/h2>
+&lt;hr>
+&lt;h2 id="examples">Examples&lt;/h2>
+&lt;hr>
+&lt;h2 id="download">Download&lt;/h2>
+&lt;h2 id="card-selection">Card selection&lt;/h2>
 &lt;h2 id="card-selection-and-reader-observation">Card selection and reader observation&lt;/h2>
 &lt;p>The &lt;code>CardSelectionManager&lt;/code> performs card selection in two steps:&lt;/p>
 &lt;ul>
