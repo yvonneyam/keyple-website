@@ -26,7 +26,7 @@
 <meta property="og:title" content="The Keyple key concepts | Eclipse Keyple">
 <meta property="og:description" content="Understand the concepts behind Eclipse Keyple™."><meta property="og:image" content="https://keyple.org/images/logo_hu673a59176cd62c570f44ed2728665b48_42188_300x300_fit_lanczos_3.png">
 <meta property="twitter:image" content="https://keyple.org/images/logo_hu673a59176cd62c570f44ed2728665b48_42188_300x300_fit_lanczos_3.png"><meta property="og:locale" content="en-us">
-<meta property="article:modified_time" content="2021-09-30T15:13:35+02:00">
+<meta property="article:modified_time" content="2021-09-30T18:21:28+02:00">
 <script src=https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js integrity="sha256-5VhCqFam2Cn+yjw61zbBNrbHVJ6SRydPeKopYlngbiQ=" crossorigin=anonymous></script>
 <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css integrity="sha256-zQ0LblD/Af8vOppw18+2anxsuaz3pWYyVWi+bTvTH8Q=" crossorigin=anonymous>
 <script>window.addEventListener("load",function(){window.cookieconsent.initialise({palette:{popup:{background:"#1D87BB",text:"#FFFFFF"},button:{background:"#FFFFFF",text:"#1D87BB"}},theme:"classic",type:"opt-in",content:{header:'Cookiessss used on the website!',message:"Some Eclipse Foundation pages use cookies to better serve you when you return to the site. You can set your browser to notify you before you receive a cookie or turn off cookies. If you do so, however, some areas of some sites may not function properly. To read Eclipse Foundation Privacy Policy ",allow:"Allow cookies",deny:"Decline",dismiss:"Got it!",link:"click here",href:'https://www.eclipse.org/legal/privacy.php'}})})</script>
@@ -186,7 +186,7 @@
 <li><a href=#smart-card-service>Smart card service</a></li>
 <li><a href=#observation>Observation</a></li>
 <li><a href=#selection>Selection</a></li>
-<li><a href=#abstract-smart-card>Abstract smart card</a></li>
+<li><a href=#smart-card>Smart card</a></li>
 </ul>
 </nav>
 </div>
@@ -197,82 +197,61 @@
 <div class=article-style>
 <hr>
 <h2 id=overview>Overview</h2>
-<p>This page describes the core elements of <strong>Keyple</strong>, i.e. the concepts and APIs of <strong>Keyple Core</strong> that are used to build any application implementing <strong>Keyple</strong>.</p>
-<p>It is essential for the future user of <strong>Keyple</strong> to be familiar with what is said in this chapter because the other modules made available by the project are all dependent on <strong>Keyple Core</strong>.</p>
+<p>This page describes the core elements of Keyple, i.e. the concepts and APIs that are used to build any application implementing Keyple.</p>
+<p>It is essential for the future user of Keyple to be familiar with what is said in this chapter.</p>
 <hr>
 <h2 id=reader>Reader</h2>
-<p>Keyple&rsquo;s primary goal being to interact with smart cards (or smartphones) worn by individuals, it is logical to put the Reader at the top of <strong>Keyple Core</strong>&rsquo;s concepts.</p>
-<p>Indeed, it is through the reader interfaces that all interactions with the smart cards will take place, either directly via the <strong>Keyple Service</strong> or using a card extension (such as <strong>Keyple Calypso Card Extension</strong>).</p>
+<p>Keyple&rsquo;s primary goal being to interact with smart cards (or smartphones) held by individuals, it is logical to put the Reader at the top of Keyple&rsquo;s concepts.</p>
+<p>Indeed, it is through the reader interfaces that all interactions with the smart cards will take place, either directly via the <strong>Keyple Service</strong> or using a card extension (such as <strong>Keyple Calypso Card Extension</strong> for example).</p>
 <p>These interfaces provide the means to</p>
 <ul>
 <li>identify the underlying physical reader,</li>
 <li>manage communication protocols,</li>
 <li>detect the presence and communicate with smart cards.</li>
 </ul>
-<p>The reader concept also applies to the hardware interfaces used to communicate with security elements such as SAMs (Secure Access Modules), which are sometimes integrated into devices and the virtual interfaces represented by the remote implementations.</p>
-<p>To define the interface between an application and a player, Keyple relies on the
-<a href=https://calypsonet.github.io/calypsonet-terminal-reader-java-api/ target=_blank rel=noopener>standard Terminal Reader API</a> proposed by Calypso Networks Association and thus inherits an existing modeling effort.</p>
+<p>The reader concept also applies to the hardware interfaces used to communicate with security elements such as SAMs (Secure Access Modules),
+which are sometimes integrated into devices and the virtual interfaces represented by the remote implementations.</p>
+<p>To define the interface between an application and a reader,
+Keyple relies on the
+<a href=https://calypsonet.github.io/calypsonet-terminal-reader-java-api/ target=_blank rel=noopener>standard Terminal Reader API</a> proposed by <strong>Calypso Networks Association</strong> and thus inherits an existing modeling effort.</p>
 <p>Another benefit of using this terminal API is the ability to certify the functioning of a Keyple terminal via the associated certification process.</p>
 <p>This certification provides a guarantee that the terminal will function as expected.</p>
-<p>
-<a href=keyple-core.md#reader-access>More information</a></p>
 <hr>
 <h2 id=plugin>Plugin</h2>
-<p>In Keyple language a plugin is an add-on service that allows the management of readers of a certain type.
+<p>In Keyple terminology, a plugin is an add-on that allows the management of readers of a certain type.
 The plugin is responsible for informing the application about the availability of readers.
 The readers of the same plugin are usually hardware linked to the same physical interface.</p>
-<p>In order to be as independent as possible from the type of hardware used, Keyple proposes a plugin API.</p>
-<p>The plugin API models the behavior of a smart card reader using a set of objects and methods that allow Keyple to work in the same way with different types of hardware.</p>
-<p>Plugins covering standard interfaces are proposed directly (PC/SC, Andrdoid NFC/OMAPI) but it is also possible to develop a plugin to address the particularities of a specific hardware (see
-<a href=../../../learn/developer-guide/create-a-reader-plugin/>Develop a plugin</a> and
-<a href=../../../external-resources/external-add-ons/>External add-ons</a>)</p>
 <p>Depending on its profile, an application may use different types of plugins to communicate with the different elements it needs (card, SAM).</p>
-<p>
-<a href=keyple-core.md#reader-access>More information</a></p>
 <hr>
 <h2 id=card-extension>Card extension</h2>
 <p>A card extension is an add-on that provides high-level access to the features of a particular card technology.</p>
-<p>The interface between the main Keyple service and a card extension is based on another API, the
-<a href=https://calypsonet.github.io/calypsonet-terminal-card-java-api/ target=_blank rel=noopener>standard Terminal Card API</a>, also proposed by the Calypso Networks Association.</p>
-<p>This API models the operations that can be performed with a smart card through a reader. It also provides facilities for certifying the behavior of a system with respect to a card.</p>
-<p>Two card extensions are provided natively by the Eclipse Keyple project:</p>
+<p>Two card extensions are provided natively by the Keyple project:</p>
 <ul>
-<li>A generic card extension providing basic means to communicate with a card</li>
-<li>A Calypso card extension providing high level access to Calypso card features. It includes a Secure Session based transaction manager involving Calypso cards and SAMs.</li>
+<li>a generic card extension providing basic means to communicate with a card,</li>
+<li>a Calypso card extension providing high-level access to Calypso card features. It includes a Secure Session based transaction manager involving Calypso cards and SAMs.</li>
 </ul>
 <hr>
 <h2 id=smart-card-service>Smart card service</h2>
-<p>This is the <strong>Keyple Core</strong> service that concentrates the knowledge of active plugins and readers.</p>
-<p>At startup, a Keyple application must register the add-ons (plugins and card extensions) it uses. Conversely, it can also unregister them.</p>
-<p>The <strong>SmartCardService</strong> will then make sure that the resources used are properly released.</p>
-<p>
-<a href=keyple-core.md#reader-access>More information</a></p>
+<p>This is the main service of Keyple that concentrates the knowledge of active plugins and readers and provides card selection managers.</p>
+<p>At startup, a Keyple application must register the add-ons (plugins and card extensions) it uses.</p>
 <hr>
 <h2 id=observation>Observation</h2>
-<p>The observation concept applies to readers as well as to plugins; optional, it is used depending on the needs.</p>
+<p>The concept of observation applies to certain types of readers and plugins.</p>
 <p>It consists in monitoring changes such as reader connection/disconnection or card insertion/removal and informing the observing application through a dedicated interface.</p>
-<p>Not all plugins and readers are observable.</p>
-<p>
-<a href=keyple-core.md#reader-notifications>More information</a></p>
+<p>Not all plugins and readers are observable and for those which are, the observation is optional.</p>
 <hr>
 <h2 id=selection>Selection</h2>
-<p>In Keyple the concept of selection is derived from the application selection defined by the ISO7816-4 standard.</p>
-<p>It supplements it by managing cards that do not have the standard command using identification mechanisms based on Answer To Reset and the communication protocol, and also by allowing the execution of commands immediately following application selection or detection.</p>
+<p>The Keyple <strong>selection</strong> concept is derived from the application selection defined by the ISO7816-4 standard.</p>
+<p>It supplements it by managing cards that do not have the standard command using identification mechanisms based on power-on data and communication protocol,
+and also by allowing the execution of commands immediately following application selection or detection.</p>
 <p>This principle optimizes the processing by allowing the application to elaborate advanced card discovery requests.</p>
-<p>Several targets can be defined by the application according to the different customer cards expected.</p>
-<p>The <strong>default selection</strong> principle consists in providing an observable reader with a set of selection cases corresponding to the expected cards and receiving notifications containing not only the card identification but also the result of all additional commands that the application will have attached.</p>
-<p>
-<a href=architecture/keyple-core.md#card-selection>More information</a></p>
-<p>The Keyple card selection process is generic, allowing the management of cards of different types
-or technologies within the same application.</p>
+<p>Several targets can be defined by the application according to the different customer cards expected within a selection scenario.</p>
+<p>The <strong>selection scenario</strong> principle consists in providing a set of selection cases corresponding to the expected cards and receiving a selection result containing not only the card identification but also the result of all additional commands that the application will have attached.</p>
+<p>The Keyple card selection process is generic, allowing the management of cards of different types or technologies within the same application.</p>
 <hr>
-<h2 id=abstract-smart-card>Abstract smart card</h2>
-<p>The <strong>abstract smart card</strong> concept is used by specific extensions (e.g. <strong>Keyple Calypso</strong>) and by the <strong>Keyple Core</strong> selection mechanism.
-It corresponds to an abstract container model implemented by the extension specific to a card type and returned by the selection process.</p>
-<p>This container will be able to carry all the useful information known about the card.</p>
-<p>Note: this concept, mentioned here for understanding, should not appear to the application developer if he uses a card extension.</p>
-<p>
-<a href=keyple-core.md#card-selection>More information</a></p>
+<h2 id=smart-card>Smart card</h2>
+<p>The Keyple <strong>smart card</strong> is an object representation of the physical card.</p>
+<p>It is built by the specific card extension used (e.g. <strong>Keyple Calypso</strong>) and is provided to the user by the card selection service.</p>
 </div>
 <div class=article-widget>
 <div class=post-nav>
