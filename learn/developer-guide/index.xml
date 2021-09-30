@@ -37,7 +37,7 @@ extensions such as
 &lt;h2 id="operating-mode">Operating mode&lt;/h2>
 &lt;ol>
 &lt;li>Access to the
-&lt;a href="#smart-card-service">smart card service&lt;/a>&lt;/li>
+&lt;a href="#the-smart-card-service">smart card service&lt;/a>&lt;/li>
 &lt;li>
 &lt;a href="#set-up-a-plugin">Set up a plugin&lt;/a>&lt;/li>
 &lt;li>
@@ -47,7 +47,7 @@ extensions such as
 &lt;li>
 &lt;a href="#perform-a-transaction">Perform a transaction&lt;/a>&lt;/li>
 &lt;/ol>
-&lt;h2 id="smart-card-service">Smart card service&lt;/h2>
+&lt;h2 id="the-smart-card-service">The smart card service&lt;/h2>
 &lt;p>As part of &lt;strong>Keyple Service&lt;/strong> component, the smart card service is the main service of Keyple. Its role is to centralize the add-on resources and to manage their
 life cycle.&lt;/p>
 &lt;p>The service is accessible by invoking the &lt;code>SmartCardServiceProvider.getService()&lt;/code> static method.&lt;/p>
@@ -256,7 +256,7 @@ Moreover, the notification process is sequential and synchronous.
 &lt;p>The starting point of any processing done with a card in the Keyple enrivonment, is to reference this card in the system.
 It is the role of the selection step to obtain this reference.&lt;/p>
 &lt;p>You have first to prepare a selection scenario defining the eligible cards for a transaction, then to execute the scenario when a card is present.&lt;/p>
-&lt;h3 id="prepare-a-selection-scenario">Prepare a selection scenario&lt;/h3>
+&lt;h3 id="prepare-a-scenario">Prepare a scenario&lt;/h3>
 &lt;p>To prepare a scenario, you have to get a new instance of &lt;code>CardSelectionManager&lt;/code> from the smart card service using the &lt;code>createCardSelectionManager()&lt;/code> method,
 then configure it with scenario cases using dedicated methods provided by one or more card extensions.&lt;/p>
 &lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('26', this);">Copy&lt;/button>&lt;/div>
@@ -300,7 +300,7 @@ int secondCaseIndex = cardSelectionManager.prepareSelection(
 GenericExtensionService.getInstance()
 .createCardSelection()
 .filterByDfName(AID2));&lt;/code>&lt;/pre>&lt;/p>
-&lt;h3 id="run-a-selection-scenario">Run a selection scenario&lt;/h3>
+&lt;h3 id="run-a-scenario">Run a scenario&lt;/h3>
 &lt;p>If we know that the card is in the reader it is possible to run a selection scenario by invoking the &lt;code>processCardSelectionScenario(...)&lt;/code> method on the corresponding reader.
 The result of the selection is then directly returned.&lt;/p>
 &lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('28', this);">Copy&lt;/button>&lt;/div>
@@ -312,7 +312,7 @@ throw new IllegalStateException(&amp;#34;The selection of the card failed.&amp;#
 }
 // Get the SmartCard resulting of the selection.
 SmartCard smartCard = selectionResult.getActiveSmartCard();&lt;/code>&lt;/pre>
-&lt;h3 id="schedule-a-selection-scenario">Schedule a selection scenario&lt;/h3>
+&lt;h3 id="schedule-a-scenario">Schedule a scenario&lt;/h3>
 &lt;p>If the reader is of type &lt;code>ObservableReader&lt;/code> then it is possible to schedule in advance the execution of a selection scenario as soon as a card is presented.&lt;/p>
 &lt;p>Invoke the &lt;code>scheduleCardSelectionScenario(...)&lt;/code> to register the previously prepared scenario in the observable reader.&lt;/p>
 &lt;p>In this case, it is necessary to register a reader observer and to have started the card detection in order to be able to retrieve the result of the selection which will be contained in a &lt;code>ReaderEvent&lt;/code>.&lt;/p>
