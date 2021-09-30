@@ -35,17 +35,24 @@ extensions such as
 &lt;/ol>
 &lt;hr>
 &lt;h2 id="operating-mode">Operating mode&lt;/h2>
-&lt;p>&lt;strong>Keyple Service&lt;/strong> is built around the concepts described
-&lt;a href="../../learn/overview/key-concepts/">here&lt;/a> and sometimes proposes several ways to perform
-an action or to achieve a result depending on the needs of the
-application.&lt;/p>
-&lt;p>The purpose of this section is to guide you in its use.&lt;/p>
+&lt;ol>
+&lt;li>Access to the
+&lt;a href="#smart-card-service">smart card service&lt;/a>&lt;/li>
+&lt;li>
+&lt;a href="#set-up-a-plugin">Set up a plugin&lt;/a>&lt;/li>
+&lt;li>
+&lt;a href="#set-up-a-reader">Set up a reader&lt;/a>&lt;/li>
+&lt;li>
+&lt;a href="#select-a-card">Select a card&lt;/a>&lt;/li>
+&lt;li>
+&lt;a href="#perform-a-transaction">Perform a transaction&lt;/a>&lt;/li>
+&lt;/ol>
 &lt;h2 id="smart-card-service">Smart card service&lt;/h2>
 &lt;p>As part of &lt;strong>Keyple Service&lt;/strong> component, the smart card service is the main service of Keyple. Its role is to centralize the add-on resources and to manage their
 life cycle.&lt;/p>
 &lt;p>The service is accessible by invoking the &lt;code>SmartCardServiceProvider.getService()&lt;/code> static method.&lt;/p>
-&lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('7', this);">Copy&lt;/button>&lt;/div>
-&lt;pre>&lt;code class="language-java" id="code-7">SmartCardService smartCardService = SmartCardServiceProvider.getService();&lt;/code>&lt;/pre>
+&lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('6', this);">Copy&lt;/button>&lt;/div>
+&lt;pre>&lt;code class="language-java" id="code-6">SmartCardService smartCardService = SmartCardServiceProvider.getService();&lt;/code>&lt;/pre>
 &lt;hr>
 &lt;h2 id="set-up-a-plugin">Set up a plugin&lt;/h2>
 &lt;p>The Keyple application developer will choose the reader plugins he needs
@@ -78,16 +85,16 @@ Please refer to the API of the plugin component you are considering to see what 
 A plugin is identified by a unique name in the system so that it can be retrieved at any time from the smart card service.
 &lt;/div>
 &lt;/div>
-&lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('13', this);">Copy&lt;/button>&lt;/div>
-&lt;pre>&lt;code class="language-java" id="code-13">// Here is for example the registration of the PC/SC plugin
+&lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('12', this);">Copy&lt;/button>&lt;/div>
+&lt;pre>&lt;code class="language-java" id="code-12">// Here is for example the registration of the PC/SC plugin
 Plugin plugin = smartCardService.registerPlugin(PcscPluginFactoryBuilder.builder().build());&lt;/code>&lt;/pre>
 &lt;h3 id="configure-a-plugin">Configure a plugin&lt;/h3>
 &lt;p>Some plugin types may offer specific options.&lt;/p>
 &lt;p>Static options are usually directly exposed by the plugin factory API while dynamic options are exposed by the plugin extension API.&lt;/p>
 &lt;p>To access the plugin extension it is necessary to invoke the &lt;code>getExtension(...)&lt;/code> method on the registered &lt;code>Plugin&lt;/code> by specifying the expected class of the extension which must extends the &lt;code>KeyplePluginExtension&lt;/code> interface.
 After that, the dedicated methods are available from the resulting object.&lt;/p>
-&lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('14', this);">Copy&lt;/button>&lt;/div>
-&lt;pre>&lt;code class="language-java" id="code-14">// Here is a snippet showing the usage of the extension of the Stub plugin
+&lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('13', this);">Copy&lt;/button>&lt;/div>
+&lt;pre>&lt;code class="language-java" id="code-13">// Here is a snippet showing the usage of the extension of the Stub plugin
 plugin
 .getExtension(StubPlugin.class)
 .unplugReader(&amp;#34;READER_1&amp;#34;);&lt;/code>&lt;/pre>
@@ -107,8 +114,8 @@ through a background task managed by &lt;strong>Keyple Service&lt;/strong>.&lt;/
 &lt;/ul>
 &lt;p>These two interfaces are available in the &lt;code>org.eclipse.keyple.core.service.spi&lt;/code> package of the &lt;strong>Keyple Service&lt;/strong> component.&lt;/p>
 &lt;p>Here is an example of a plugin observer class including an exception handler:&lt;/p>
-&lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('16', this);">Copy&lt;/button>&lt;/div>
-&lt;pre>&lt;code class="language-java" id="code-16">class PluginObserver implements PluginObserverSpi, PluginObservationExceptionHandlerSpi {
+&lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('15', this);">Copy&lt;/button>&lt;/div>
+&lt;pre>&lt;code class="language-java" id="code-15">class PluginObserver implements PluginObserverSpi, PluginObservationExceptionHandlerSpi {
 @Override
 public void onPluginEvent(PluginEvent event) {
 switch (event.getEventType()) {
@@ -133,8 +140,8 @@ public void onPluginObservationError(String pluginName, Throwable e) {
 &lt;p>In order to access the dedicated setters, the plugin has to be cast to &lt;code>ObservablePlugin&lt;/code>.&lt;/p>
 &lt;p>Since adding an observer will cause the &lt;strong>Keyple Service&lt;/strong> to check for the presence of an exception handler,
 the definition of the exception handler must be done first.&lt;/p>
-&lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('17', this);">Copy&lt;/button>&lt;/div>
-&lt;pre>&lt;code class="language-java" id="code-17">PluginObserver pluginObserver = new PluginObserver();
+&lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('16', this);">Copy&lt;/button>&lt;/div>
+&lt;pre>&lt;code class="language-java" id="code-16">PluginObserver pluginObserver = new PluginObserver();
 ((ObservablePlugin) plugin).setPluginObservationExceptionHandler(pluginObserver);
 ((ObservablePlugin) plugin).addObserver(pluginObserver);&lt;/code>&lt;/pre>
 &lt;div class="alert alert-note">
@@ -150,8 +157,8 @@ Note that the monitoring thread only works if there is at least one observer reg
 &lt;p>The hardware readers already connected are referenced in the system during the registration of the plugin.
 For observable plugins, the references of the connected readers are updated in real time.&lt;/p>
 &lt;p>Readers are accessible directly from the associated &lt;code>Plugin&lt;/code> instance.&lt;/p>
-&lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('19', this);">Copy&lt;/button>&lt;/div>
-&lt;pre>&lt;code class="language-java" id="code-19">// Here is an example to get the 1st available reader
+&lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('18', this);">Copy&lt;/button>&lt;/div>
+&lt;pre>&lt;code class="language-java" id="code-18">// Here is an example to get the 1st available reader
 String readerName = plugin.getReaderNames().get(0);
 Reader reader = plugin.getReader(readerName);&lt;/code>&lt;/pre>
 &lt;div class="alert alert-note">
@@ -175,8 +182,8 @@ It is then possible to activate or deactivate the protocols supported by the rea
 &lt;p>The reader&amp;rsquo;s extension API exposes specific options:&lt;br>
 To access the reader extension it is necessary to invoke the &lt;code>getExtension(...)&lt;/code> method on the &lt;code>Reader&lt;/code> instance by specifying the expected class of the extension which must extends the &lt;code>KeypleReaderExtension&lt;/code> interface.
 After that, the dedicated methods, if any, are available from the resulting object.
-&lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('21', this);">Copy&lt;/button>&lt;/div>
-&lt;pre>&lt;code class="language-java" id="code-21">// Here is a snippet showing the usage of the extension of the Stub reader
+&lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('20', this);">Copy&lt;/button>&lt;/div>
+&lt;pre>&lt;code class="language-java" id="code-20">// Here is a snippet showing the usage of the extension of the Stub reader
 reader
 .getExtension(StubReader.class)
 .removeCard();&lt;/code>&lt;/pre>&lt;/p>
@@ -206,8 +213,8 @@ through a background task managed by &lt;strong>Keyple Service&lt;/strong>.&lt;/
 &lt;/ul>
 &lt;p>These two interfaces are available in the &lt;code>org.calypsonet.terminal.reader.spi&lt;/code> package of the &lt;strong>Calypsonet Terminal Reader API&lt;/strong> component.&lt;/p>
 &lt;p>Here is an example of a reader observer class including an exception handler:&lt;/p>
-&lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('24', this);">Copy&lt;/button>&lt;/div>
-&lt;pre>&lt;code class="language-java" id="code-24">class ReaderObserver implements CardReaderObserverSpi, CardReaderObservationExceptionHandlerSpi {
+&lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('23', this);">Copy&lt;/button>&lt;/div>
+&lt;pre>&lt;code class="language-java" id="code-23">class ReaderObserver implements CardReaderObserverSpi, CardReaderObservationExceptionHandlerSpi {
 @Override
 public void onReaderEvent(CardReaderEvent event) {
 switch (event.getType()) {
@@ -232,8 +239,8 @@ public void onReaderObservationError(String pluginName, String readerName, Throw
 &lt;p>In order to access the dedicated setters, the reader has to be cast to &lt;code>ObservableReader&lt;/code>.&lt;/p>
 &lt;p>Since adding an observer will cause the &lt;strong>Keyple Service&lt;/strong> to check for the presence of an exception handler,
 the definition of the exception handler must be done first.&lt;/p>
-&lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('25', this);">Copy&lt;/button>&lt;/div>
-&lt;pre>&lt;code class="language-java" id="code-25">ReaderObserver readerObserver = new ReaderObserver();
+&lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('24', this);">Copy&lt;/button>&lt;/div>
+&lt;pre>&lt;code class="language-java" id="code-24">ReaderObserver readerObserver = new ReaderObserver();
 ((ObservableReader) reader).setReaderObservationExceptionHandler(readerObserver);
 ((ObservableReader) reader).addObserver(readerObserver);
 ((ObservableReader) reader).startCardDetection(ObservableCardReader.DetectionMode.REPEATING);&lt;/code>&lt;/pre>
@@ -248,17 +255,15 @@ Moreover, the notification process is sequential and synchronous.
 &lt;h2 id="select-a-card">Select a card&lt;/h2>
 &lt;p>The starting point of any processing done with a card in the Keyple enrivonment, is to reference this card in the system.
 It is the role of the selection step to obtain this reference.&lt;/p>
-&lt;p>You have first to prepare a selection scenario defining the eligible cards for a transaction, then to execute the scenario when a card is presented.&lt;/p>
-&lt;p>The Keyple card selection process is generic, allowing the management of cards of different types
-or technologies within the same application.&lt;/p>
-&lt;p>It is based on the universal selection interface defined by the
-&lt;a href="../../components-java/standards-compliance/calypsonet-apis/">&lt;strong>Calypsonet Terminal Reader Java API&lt;/strong>&lt;/a>.&lt;/p>
-&lt;p>A &lt;code>CardSelectionManager&lt;/code> is obtained from the Keyple &lt;code>SmartCardService&lt;/code>
-using the &lt;code>createCardSelectionManager&lt;/code> method.&lt;/p>
-&lt;p>It allows the addition of &amp;ldquo;selection cases&amp;rdquo; corresponding to an expected target card.&lt;/p>
-&lt;p>These selection cases are represented by objects implementing the &lt;strong>Calypsonet Terminal Reader Java API&lt;/strong>
-interface &lt;code>CardSelection&lt;/code>; these objects should be provided by a Keyple Card Extension add-on.&lt;/p>
-&lt;p>Providing one or more selection cases to the &lt;code>CardSelectionManager&lt;/code> constitutes a &lt;em>selection scenario&lt;/em>.
+&lt;p>You have first to prepare a selection scenario defining the eligible cards for a transaction, then to execute the scenario when a card is present.&lt;/p>
+&lt;h3 id="prepare-a-selection-scenario">Prepare a selection scenario&lt;/h3>
+&lt;p>To prepare a scenario, you have to get a new instance of &lt;code>CardSelectionManager&lt;/code> from the smart card service using the &lt;code>createCardSelectionManager()&lt;/code> method,
+then configure it with scenario cases using dedicated methods provided by one or more card extensions.&lt;/p>
+&lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('26', this);">Copy&lt;/button>&lt;/div>
+&lt;pre>&lt;code class="language-java" id="code-26">CardSelectionManager cardSelectionManager = smartCardService.createCardSelectionManager();```&lt;/code>&lt;/pre>
+&lt;p>The &lt;code>prepareSelection(...)&lt;/code> method allows to add a selection case to the scenario by providing an implementation of the &lt;code>CardSelection&lt;/code> interface and return the index of the added case in order to be able to identify later the case that matched.&lt;/p>
+&lt;p>Please note that the order of addition is important because it will impact the selection cycle and favor the performance of the first added cases.&lt;/p>
+&lt;p>Providing one or more selection cases to the &lt;code>CardSelectionManager&lt;/code> constitutes a selection scenario.
 The scenario is run by &lt;strong>Keyple Service&lt;/strong> when a card is detected, the different cases being evaluated
 sequentially as long as the card does not match the criteria of the defined cases.&lt;/p>
 &lt;p>The selection process for a case offers several options for selecting a processing based on the type of card presented to the reader.&lt;/p>
@@ -273,267 +278,113 @@ card technology)&lt;/li>
 &lt;p>When a card is inserted, it is evaluated according to these criteria and
 will be given the status &amp;ldquo;selected&amp;rdquo; or not.&lt;/p>
 &lt;p>When a card is not selected, no other operation will be possible with it.&lt;/p>
-&lt;p>Depending on the chosen setting (see &lt;code>setMultipleSelectionMode&lt;/code>), the result of the selection will or will not
-be made available to the application.
-It is thus possible to directly ignore cards that do not correspond to the defined selection criteria.&lt;/p>
+&lt;p>The same card could correspond to several cases of the same scenario, especially when filtering by AID.
+By default, the selection process will stop at the first case that matches.
+It is however possible to choose another strategy using the &lt;code>setMultipleSelectionMode()&lt;/code> method.
+In this case, the process will continue to the last selection case in the scenario and return all results, but only the last matching application will be selected.&lt;/p>
 &lt;p>When a card is selected, the &lt;code>CardSelectionManager&lt;/code> will make available the result
 as a &lt;code>SmartCard&lt;/code> object containing all the information known about the card at that stage.&lt;/p>
 &lt;p>Depending on the card extension that is used, this &lt;code>SmartCard&lt;/code> object can be cast to a more
 comprehensive object with specific features defined by the extension.&lt;/p>
 &lt;p>In addition to the selection process itself, specific APDU commands may be sent to the card if the selection is successful.
-The output of these commands is available in the instance of the &lt;code>SmartCard&lt;/code> object or its derivative.&lt;/p>
-&lt;h3 id="prepare-a-selection-scenario">Prepare a selection scenario&lt;/h3>
-&lt;h3 id="process-a-selection-scenario">Process a selection scenario&lt;/h3>
-&lt;h3 id="schedule-a-selection-scenario">Schedule a selection scenario&lt;/h3>
-&lt;hr>
-&lt;h2 id="perform-a-transaction">Perform a transaction&lt;/h2>
-&lt;hr>
-&lt;h2 id="unregister-a-plugin">Unregister a plugin&lt;/h2>
-&lt;hr>
-&lt;h2 id="api">API&lt;/h2>
-&lt;hr>
-&lt;h2 id="examples">Examples&lt;/h2>
-&lt;hr>
-&lt;h2 id="download">Download&lt;/h2>
-&lt;h2 id="card-selection">Card selection&lt;/h2>
-&lt;h2 id="card-selection-and-reader-observation">Card selection and reader observation&lt;/h2>
-&lt;p>The &lt;code>CardSelectionManager&lt;/code> performs card selection in two steps:&lt;/p>
-&lt;ul>
-&lt;li>a first step of preparing the selection scenario,&lt;/li>
-&lt;li>a second step of running the prepared scenario.&lt;/li>
-&lt;/ul>
-&lt;p>The first step is done by invoking the &lt;code>prepareSelection&lt;/code> method with a &lt;code>CardSelection&lt;/code> object defining
-a selection profile as argument. This is to be repeated as many times as there are selection cases.&lt;/p>
-&lt;p>The second step, the scenario execution, can be done in two ways:&lt;/p>
-&lt;ul>
-&lt;li>by directly executing the scenario with &lt;code>processCardSelectionScenario&lt;/code> when the presence of the card is managed
-by the application,&lt;/li>
-&lt;li>by feeding the observation mechanism with the scenario by invoking the &lt;code>scheduleCardSelectionScenario&lt;/code> when
-the reader is observed.&lt;/li>
-&lt;/ul>
-&lt;p>In the first case, the result obtained directly in &lt;code>CardSelectionResult&lt;/code> in return of
-&lt;code>processCardSelectionScenario&lt;/code>.&lt;/p>
-&lt;p>In the latter case, the result is passed to the application in the &lt;code>ScheduledCardSelectionsResponse&lt;/code> field of
-&lt;code>ReaderEvent&lt;/code> and is to be retrieved using &lt;code>parseScheduledCardSelectionsResponse&lt;/code>.&lt;/p>
-&lt;p>Note that the scheduling of the execution of a scenario includes two options:&lt;/p>
-&lt;ul>
-&lt;li>the &lt;code>DetectionMode&lt;/code> defining the expected behavior regarding the card detection allowing to automatically restart it or not.&lt;/li>
-&lt;li>the &lt;code>NotificationMode&lt;/code> allowing to choose if only the cards matching the selection (successfully selected) should trigger an event.&lt;/li>
-&lt;/ul>
-&lt;h2 id="card-selection-in-practice">Card selection in practice&lt;/h2>
-&lt;p>In this chapter we will show step by step how to use the selection service with the generic card extension.&lt;/p>
-&lt;h3 id="create-the-card-selection-manager">Create the card selection manager&lt;/h3>
-&lt;p>The card selection manager will be used all along the card selection process.&lt;/p>
-&lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('28', this);">Copy&lt;/button>&lt;/div>
-&lt;pre>&lt;code class="language-java" id="code-28">// Get the core card selection manager.
-CardSelectionManager cardSelectionManager = smartCardService.createCardSelectionManager();```&lt;/code>&lt;/pre>
-&lt;h3 id="prepare-and-add-the-selection-cases">Prepare and add the selection cases&lt;/h3>
-&lt;p>The application can create as many selection cases as the type of cards
-expected. The order in which the selection cases are prepared is
-important because it will favor the latency delay for the processing of
-the cards corresponding to the first case. It is therefore recommended
-to place the most common card profile in the application context first.&lt;/p>
-&lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('29', this);">Copy&lt;/button>&lt;/div>
-&lt;pre>&lt;code class="language-java" id="code-29">// prepare a selection for application 1
-cardSelectionManager.prepareSelection(
+The output of these commands is available in the instance of the &lt;code>SmartCard&lt;/code> object.&lt;/p>
+&lt;p>The following snippet shows the preparation of two selection cases using the generic card extension:
+&lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('27', this);">Copy&lt;/button>&lt;/div>
+&lt;pre>&lt;code class="language-java" id="code-27">// prepare a selection for application 1
+int firstCaseIndex = cardSelectionManager.prepareSelection(
 GenericExtensionService.getInstance()
 .createCardSelection()
 .filterByDfName(AID1));
 // prepare a selection for application 2
-cardSelectionManager.prepareSelection(
+int secondCaseIndex = cardSelectionManager.prepareSelection(
 GenericExtensionService.getInstance()
 .createCardSelection()
-.filterByDfName(AID2));&lt;/code>&lt;/pre>
-&lt;h4 id="proceed-to-the-selection-with-a-non-observable-reader">Proceed to the selection with a non-observable reader&lt;/h4>
-&lt;p>The &lt;code>processCardSelectionScenario&lt;/code> method of &lt;code>CardSelectionManager&lt;/code> performs the actual
-communication with the card.
-&lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('30', this);">Copy&lt;/button>&lt;/div>
-&lt;pre>&lt;code class="language-java" id="code-30">// Actual card communication: run the selection scenario.
+.filterByDfName(AID2));&lt;/code>&lt;/pre>&lt;/p>
+&lt;h3 id="run-a-selection-scenario">Run a selection scenario&lt;/h3>
+&lt;p>If we know that the card is in the reader it is possible to run a selection scenario by invoking the &lt;code>processCardSelectionScenario(...)&lt;/code> method on the corresponding reader.
+The result of the selection is then directly returned.&lt;/p>
+&lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('28', this);">Copy&lt;/button>&lt;/div>
+&lt;pre>&lt;code class="language-java" id="code-28">// Actual card communication: run the selection scenario.
 CardSelectionResult selectionResult = cardSelectionManager.processCardSelectionScenario(reader);
 // Check the selection result.
 if (selectionResult.getActiveSmartCard() == null) {
 throw new IllegalStateException(&amp;#34;The selection of the card failed.&amp;#34;);
 }
 // Get the SmartCard resulting of the selection.
-SmartCard smartCard = selectionResult.getActiveSmartCard();&lt;/code>&lt;/pre>&lt;/p>
-&lt;h4 id="proceed-to-the-selection-with-an-observable-reader">Proceed to the selection with an observable reader&lt;/h4>
-&lt;p>In the case of an observable reader, the prepared request is provided
-to the reader (it is then named Default Selection) and will be processed
-automatically as soon as a card is presented. The application is then
-notified of the event with the data resulting from the selection.
-Depending on the selection settings, the application will be notified of
-all card presentations (&lt;code>CARD_INSERTED&lt;/code> event) or only those
-presentations that led to a successful selection (&lt;code>CARD_MATCHED&lt;/code>
-event).&lt;/p>
-&lt;h5 id="add-a-default-selection">Add a default selection&lt;/h5>
-&lt;pre>&lt;code class="language-java">// Provide the Reader with the selection operation to be processed when a card is inserted.
-((ObservableReader) reader)
-.setDefaultSelectionRequest(
-cardSelectionService.getDefaultSelection().getDefaultSelectionsRequest(),
-ObservableReader.NotificationMode.MATCHED_ONLY,
-ObservableReader.PollingMode.REPEATING);
-&lt;/code>&lt;/pre>
-&lt;p>The &lt;code>NotificationMode&lt;/code> allows you to specify whether all card
-insertions should be reported to the application or only those that led
-to a successful selection.&lt;/p>
-&lt;p>&lt;code>PollingMode&lt;/code> indicates whether to go back to waiting for the card
-after processing (&lt;code>REPEATING&lt;/code>) or let the application decide when to
-restart the search (&lt;code>SINGLESHOT&lt;/code>) with &lt;code>startCardDetection&lt;/code>.&lt;/p>
-&lt;p>Note: when the default selection is set with the &lt;code>PollingMode&lt;/code>
-parameter, the card detection is started automatically. However, it is
-possible to set a default selection without automatic start and by
-starting the detection independently with &lt;code>startCardDetection&lt;/code>.&lt;/p>
-&lt;h5 id="receive-the-result-as-an-event">Receive the result as an event&lt;/h5>
-&lt;pre>&lt;code class="language-java">...
+SmartCard smartCard = selectionResult.getActiveSmartCard();&lt;/code>&lt;/pre>
+&lt;h3 id="schedule-a-selection-scenario">Schedule a selection scenario&lt;/h3>
+&lt;p>If the reader is of type &lt;code>ObservableReader&lt;/code> then it is possible to schedule in advance the execution of a selection scenario as soon as a card is presented.&lt;/p>
+&lt;p>Invoke the &lt;code>scheduleCardSelectionScenario(...)&lt;/code> to register the previously prepared scenario in the observable reader.&lt;/p>
+&lt;p>In this case, it is necessary to register a reader observer and to have started the card detection in order to be able to retrieve the result of the selection which will be contained in a &lt;code>ReaderEvent&lt;/code>.&lt;/p>
+&lt;p>Use the &lt;code>parseScheduledCardSelectionsResponse(...)&lt;/code> method to extract the selection result from the event.&lt;/p>
+&lt;p>Note that the scheduling of the execution of a scenario includes two options:&lt;/p>
+&lt;ul>
+&lt;li>the &lt;code>DetectionMode&lt;/code> defining the expected behavior regarding the card detection allowing to automatically restart it or not.&lt;/li>
+&lt;li>the &lt;code>NotificationMode&lt;/code> allowing to choose if only the cards matching the selection (successfully selected) should trigger an event.&lt;/li>
+&lt;/ul>
+&lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('29', this);">Copy&lt;/button>&lt;/div>
+&lt;pre>&lt;code class="language-java" id="code-29">...
 @Override
-public void update(ReaderEvent event) {
-switch (event.getEventType()) {
-case CARD_MATCHED:
-AbstractSmartCard selectedCard = null;
-try {
-selectedCard =
-getDefaultSelection()
-.processDefaultSelectionsResponse(event.getDefaultSelectionsResponse())
+public void onReaderEvent(CardReaderEvent event) {
+switch (event.getType()) {
+case CardReaderEvent.Type.CARD_MATCHED:
+// Retrieve the selected smart card
+SmartCard smartCard =
+cardSelectionManager
+.parseScheduledCardSelectionsResponse(event.getScheduledCardSelectionsResponse())
 .getActiveSmartCard();
-} catch (KeypleException e) {
-logger.error(&amp;quot;Exception: {}&amp;quot;, e.getMessage());
-((ObservableReader) (event.getReader())).finalizeCardProcessing();
-}
-if (selectedCard != null) {
-logger.info(&amp;quot;Observer notification: the selection of the card has succeeded.&amp;quot;);
-// insert the processing of the card here
+// Perform the transaction
 ...
-logger.info(&amp;quot;= #### End of the card processing.&amp;quot;);
-} else {
-logger.error(
-&amp;quot;The selection of the card has failed. Should not have occurred due to the MATCHED_ONLY selection mode.&amp;quot;);
-}
-break;
-case CARD_INSERTED:
-logger.error(
-&amp;quot;CARD_INSERTED event: should not have occurred due to the MATCHED_ONLY selection mode.&amp;quot;);
-break;
-case CARD_REMOVED:
-logger.trace(&amp;quot;There is no PO inserted anymore. Return to the waiting state...&amp;quot;);
 break;
 default:
 break;
 }
-if (event.getEventType() == ReaderEvent.EventType.CARD_INSERTED
-|| event.getEventType() == ReaderEvent.EventType.CARD_MATCHED) {
-// Informs the underlying layer of the end of the card processing, in order to manage the
-// removal sequence.
-((ObservableReader) (event.getReader())).finalizeCardProcessing();
+if (event.getType() == CardReaderEvent.Type.CARD_INSERTED
+|| event.getType() == CardReaderEvent.Type.CARD_MATCHED) {
+// Ensures that the communication channel is closed, regardless of the processing with the card.
+((ObservableReader) (reader)).finalizeCardProcessing();
 }
 }
-...
-&lt;/code>&lt;/pre>
-&lt;h4 id="get-the-selection-result">Get the selection result&lt;/h4>
-&lt;p>The result of the selection is available in the &lt;code>AbstractSmartCard&lt;/code>
-object.&lt;/p>
-&lt;pre>&lt;code class="language-java">...
-if (!cardSelectionsResult.hasActiveSelection()) {
-logger.warn(&amp;quot;The selection of the application &amp;quot; + cardAid + &amp;quot; failed.&amp;quot;);
-}
-AbstractSmartCard smartCard = cardSelectionsResult.getActiveSmartCard();
-logger.info(&amp;quot;The selection of the card has succeeded.&amp;quot;);
-if (smartCard.hasFci()) {
-String fci = ByteArrayUtil.toHex(smartCard.getFciBytes());
-logger.info(&amp;quot;Application FCI = {}&amp;quot;, fci);
-}
-if (smartCard.hasAtr()) {
-String atr = ByteArrayUtil.toHex(smartCard.getAtrBytes());
-logger.info(&amp;quot;Card ATR = {}&amp;quot;, atr);
-}
-...
-&lt;/code>&lt;/pre>
-&lt;h2 id="implementation-of-the-application-service">Implementation of the application service&lt;/h2>
-&lt;p>The applicative processing of the card that follows the selection of the
-card is to be inserted in the processing of the &lt;code>CARD_INSERTED&lt;/code> or
-&lt;code>CARD_MATCHED&lt;/code> event.&lt;/p>
-&lt;p>It can be processed in the thread provided by the monitoring task or
-detached in a separate thread. The application developer must pay
-attention to the handling of exceptions in this part of the application.
-Indeed, in case of a runtime exception, the information will be given to
-the application via the exception handler configured beforehand.&lt;/p>
-&lt;h2 id="stopping-the-application">Stopping the application&lt;/h2>
-&lt;p>The clean shutdown of a Keyple application requires the release of
-resources and in particular the shutdown of the observation threads.&lt;/p>
-&lt;p>This is done by unregistering the plugins in the following way:&lt;/p>
-&lt;pre>&lt;code class="language-java">smartCardService.unregisterPlugin(plugin.getName());
-&lt;/code>&lt;/pre>
+...&lt;/code>&lt;/pre>
+&lt;div class="alert alert-note">
+&lt;div>
+&lt;p>The &lt;code>finalizeCardProcessing()&lt;/code> method must be invoked at the end of the transaction to ensure that the communication channel is closed.
+This switches the underlying monitoring thread into a state of waiting for the card to be removed.&lt;/p>
+&lt;p>Not doing this can lead to blocking states of the card insertion/removal monitoring mechanism.&lt;/p>
+&lt;/div>
+&lt;/div>
 &lt;hr>
-&lt;h2 id="keyple-service-api">Keyple Service API&lt;/h2>
-&lt;p>To learn all the details of the &lt;strong>Keyple Service&lt;/strong> API, please consult the
-&lt;a href="https://keyple.org/docs-1.0/api-reference/">Javadoc documentation&lt;/a>.&lt;/p>
-&lt;p>However, here are two diagrams showing the main features of &lt;strong>Keyple Service&lt;/strong>:&lt;/p>
+&lt;h2 id="perform-a-transaction">Perform a transaction&lt;/h2>
+&lt;p>Once the smart card is referenced in the system it is possible to perform the desired transaction using the appropriate card extension.&lt;/p>
+&lt;p>When the transaction is completed, if the reader is observed, it is imperative to invoke the &lt;code>finalizeCardProcessing()&lt;/code> method on the observable reader (see the above note).&lt;/p>
+&lt;hr>
+&lt;h2 id="unregister-a-plugin">Unregister a plugin&lt;/h2>
+&lt;p>To shut down a Keyple application properly, it is necessary to free the resources and in particular to stop the observation threads.&lt;/p>
+&lt;p>This is done by unregistering the plugins in the following way:&lt;/p>
+&lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('31', this);">Copy&lt;/button>&lt;/div>
+&lt;pre>&lt;code class="language-java" id="code-31">smartCardService.unregisterPlugin(plugin.getName());&lt;/code>&lt;/pre>
+&lt;hr>
+&lt;h2 id="api">API&lt;/h2>
 &lt;ul>
 &lt;li>
-&lt;p>The diagram below represents the main classes implemented around the
-&lt;strong>Smart Card Service&lt;/strong> with in particular the observation mechanisms.
-&lt;figure >
-&lt;a data-fancybox="" href="../../media/archive-1.0/architecture/KeypleCore_Reader_ClassDiag_PluginSettingAndReaderAccess_1_0_0.svg" >
-&lt;img src="../../media/archive-1.0/architecture/KeypleCore_Reader_ClassDiag_PluginSettingAndReaderAccess_1_0_0.svg" alt="" >
-&lt;/a>
-&lt;/figure>
-&lt;/p>
-&lt;/li>
+&lt;a href="https://calypsonet.github.io/calypsonet-terminal-reader-java-api" target="_blank" rel="noopener">Calypsonet Terminal Reader API&lt;/a>&lt;/li>
 &lt;li>
-&lt;p>The diagram below represents the main classes used for selection
-operations.
-&lt;figure >
-&lt;a data-fancybox="" href="../../media/archive-1.0/architecture/KeypleCore_CardSelection_ClassDiag_SelectorAndSelection_1_0_0.svg" >
-&lt;img src="../../media/archive-1.0/architecture/KeypleCore_CardSelection_ClassDiag_SelectorAndSelection_1_0_0.svg" alt="" >
-&lt;/a>
-&lt;/figure>
-&lt;/p>
-&lt;/li>
+&lt;a href="https://eclipse.github.io/keyple-common-java-api" target="_blank" rel="noopener">Keyple Common API&lt;/a>&lt;/li>
+&lt;li>
+&lt;a href="https://eclipse.github.io/keyple-service-java-lib" target="_blank" rel="noopener">Keyple Service API&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;hr>
-&lt;h2 id="examples-1">Examples&lt;/h2>
-&lt;p>To help in the implementation of the different facilities offered by
-Keyple to process smart cards, a set of examples is present in the
-project repository
-&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/example/generic/standalone" target="_blank" rel="noopener">
-&lt;i class="fab fa-github pr-1 fa-fw">&lt;/i> examples&lt;/a>&lt;/p>
-&lt;p>Nevertheless, you will find below a brief description of them:&lt;/p>
-&lt;h2 id="explicit-selection">Explicit Selection&lt;/h2>
-&lt;p>Shows the use of Keyple to make a card selection without observing the
-reader, based on testing the presence of the card by the application.&lt;/p>
-&lt;p>
-&lt;a href="https://github.com/eclipse/keyple-java/blob/master/java/example/generic/standalone/src/main/java/org/eclipse/keyple/example/generic/centralized/UseCase1_ExplicitSelectionAid" target="_blank" rel="noopener">see the code&lt;/a>&lt;/p>
-&lt;h2 id="default-selection">Default Selection&lt;/h2>
-&lt;p>Shows the use of Keyple to make a card selection with observation of the
-reader. A default selection is prepared, the presentation of a card
-triggers the notification of a reader event to the application.&lt;/p>
-&lt;p>
-&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/example/generic/standalone/src/main/java/org/eclipse/keyple/example/generic/centralized/UseCase2_DefaultSelectionNotification" target="_blank" rel="noopener">see the code&lt;/a>&lt;/p>
-&lt;h2 id="sequential-multiple-selection">Sequential Multiple Selection&lt;/h2>
-&lt;p>Executes successively several independent selection operations with the
-use of the ISO &amp;lsquo;NEXT&amp;rsquo; navigation flag.&lt;/p>
-&lt;p>
-&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/example/generic/standalone/src/main/java/org/eclipse/keyple/example/generic/centralized/UseCase3_SequentialMultiSelection" target="_blank" rel="noopener">see the code&lt;/a>&lt;/p>
-&lt;p>Illustrates the case of a card exploration with maintenance of the physical channel open.&lt;/p>
-&lt;h2 id="grouped-multiple-selection">Grouped Multiple Selection&lt;/h2>
-&lt;p>Executes a multiple selection with logical channel closure between each
-selection.&lt;/p>
-&lt;p>Allows the exploration of the applications of a card in a single
-operation but without selection at the end.&lt;/p>
-&lt;p>
-&lt;a href="https://github.com/eclipse/keyple-java/blob/master/java/example/generic/standalone/src/main/java/org/eclipse/keyple/example/generic/centralized/UseCase4_GroupedMultiSelection" target="_blank" rel="noopener">see the code&lt;/a>&lt;/p>
-&lt;h2 id="demo-card-protocol-detection">Demo Card Protocol Detection&lt;/h2>
-&lt;p>Demonstrates the use of Keyple in a context where several card
-technologies are likely to be processed by the application.&lt;/p>
-&lt;p>
-&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/example/generic/standalone/src/main/java/org/eclipse/keyple/example/generic/centralized/Demo_CardProtocolDetection" target="_blank" rel="noopener">see the code&lt;/a>&lt;/p>
-&lt;h2 id="demo-observable-reader-notification">Demo Observable Reader Notification&lt;/h2>
-&lt;p>Demonstrates the use of Keyple to implement the observation of a plugin
-and its readers. Readers are dynamically created and an observer is
-assigned to them.&lt;/p>
-&lt;p>
-&lt;a href="https://github.com/eclipse/keyple-java/tree/master/java/example/generic/standalone/src/main/java/org/eclipse/keyple/example/generic/centralized/Demo_ObservableReaderNotification" target="_blank" rel="noopener">see the code&lt;/a>&lt;/p>
+&lt;h2 id="examples">Examples&lt;/h2>
+&lt;ul>
+&lt;li>
+&lt;a href="https://github.com/eclipse/keyple-java-example" target="_blank" rel="noopener">Java examples&lt;/a>&lt;/li>
+&lt;/ul>
 &lt;hr>
-&lt;h2 id="download-1">Download&lt;/h2></description></item><item><title>Distributed Application Developer Guide</title><link>https://keyple.org/learn/developer-guide/distributed-application/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/learn/developer-guide/distributed-application/</guid><description>&lt;hr>
+&lt;h2 id="download">Download&lt;/h2>
+&lt;ul>
+&lt;li>
+&lt;a href="https://keyple.org/components-java/overview/configuration-wizard/">Java components&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>Distributed Application Developer Guide</title><link>https://keyple.org/learn/developer-guide/distributed-application/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/learn/developer-guide/distributed-application/</guid><description>&lt;hr>
 &lt;h2 id="overview">Overview&lt;/h2>
 &lt;p>&lt;strong>Keyple provides the &amp;ldquo;Keyple Distributed&amp;rdquo; solution which allows a terminal to communicate with a smart card reader available in another terminal&lt;/strong>.&lt;/p>
 &lt;p>In this way, you can manage transactions within a distributed architecture.&lt;/p>

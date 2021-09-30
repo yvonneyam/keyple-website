@@ -66,6 +66,8 @@ The readers of the same plugin are usually hardware linked to the same physical 
 &lt;p>The &lt;strong>default selection&lt;/strong> principle consists in providing an observable reader with a set of selection cases corresponding to the expected cards and receiving notifications containing not only the card identification but also the result of all additional commands that the application will have attached.&lt;/p>
 &lt;p>
 &lt;a href="architecture/keyple-core.md#card-selection">More information&lt;/a>&lt;/p>
+&lt;p>The Keyple card selection process is generic, allowing the management of cards of different types
+or technologies within the same application.&lt;/p>
 &lt;hr>
 &lt;h2 id="abstract-smart-card">Abstract smart card&lt;/h2>
 &lt;p>The &lt;strong>abstract smart card&lt;/strong> concept is used by specific extensions (e.g. &lt;strong>Keyple Calypso&lt;/strong>) and by the &lt;strong>Keyple Core&lt;/strong> selection mechanism.

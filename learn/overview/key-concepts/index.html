@@ -26,7 +26,7 @@
 <meta property="og:title" content="The Keyple key concepts | Eclipse Keyple">
 <meta property="og:description" content="Understand the concepts behind Eclipse Keyple™."><meta property="og:image" content="https://keyple.org/images/logo_hu673a59176cd62c570f44ed2728665b48_42188_300x300_fit_lanczos_3.png">
 <meta property="twitter:image" content="https://keyple.org/images/logo_hu673a59176cd62c570f44ed2728665b48_42188_300x300_fit_lanczos_3.png"><meta property="og:locale" content="en-us">
-<meta property="article:modified_time" content="2021-09-30T11:39:34+02:00">
+<meta property="article:modified_time" content="2021-09-30T15:13:35+02:00">
 <script src=https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js integrity="sha256-5VhCqFam2Cn+yjw61zbBNrbHVJ6SRydPeKopYlngbiQ=" crossorigin=anonymous></script>
 <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css integrity="sha256-zQ0LblD/Af8vOppw18+2anxsuaz3pWYyVWi+bTvTH8Q=" crossorigin=anonymous>
 <script>window.addEventListener("load",function(){window.cookieconsent.initialise({palette:{popup:{background:"#1D87BB",text:"#FFFFFF"},button:{background:"#FFFFFF",text:"#1D87BB"}},theme:"classic",type:"opt-in",content:{header:'Cookiessss used on the website!',message:"Some Eclipse Foundation pages use cookies to better serve you when you return to the site. You can set your browser to notify you before you receive a cookie or turn off cookies. If you do so, however, some areas of some sites may not function properly. To read Eclipse Foundation Privacy Policy ",allow:"Allow cookies",deny:"Decline",dismiss:"Got it!",link:"click here",href:'https://www.eclipse.org/legal/privacy.php'}})})</script>
@@ -263,6 +263,8 @@ The readers of the same plugin are usually hardware linked to the same physical 
 <p>The <strong>default selection</strong> principle consists in providing an observable reader with a set of selection cases corresponding to the expected cards and receiving notifications containing not only the card identification but also the result of all additional commands that the application will have attached.</p>
 <p>
 <a href=architecture/keyple-core.md#card-selection>More information</a></p>
+<p>The Keyple card selection process is generic, allowing the management of cards of different types
+or technologies within the same application.</p>
 <hr>
 <h2 id=abstract-smart-card>Abstract smart card</h2>
 <p>The <strong>abstract smart card</strong> concept is used by specific extensions (e.g. <strong>Keyple Calypso</strong>) and by the <strong>Keyple Core</strong> selection mechanism.
