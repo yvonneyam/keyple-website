@@ -6,8 +6,8 @@ with the end user.&lt;/p>
 interaction with the user.&lt;/p>
 &lt;p>The diagram below illustrates the organization of a standalone application based on Keyple:
 &lt;figure >
-&lt;a data-fancybox="" href="../../media/learn/developer-guide/standalone-application/Local_Application_Components_Overview.svg" >
-&lt;img src="../../media/learn/developer-guide/standalone-application/Local_Application_Components_Overview.svg" alt="" >
+&lt;a data-fancybox="" href="../../media/learn/developer-guide/standalone-application/standalone_application_overview.svg" >
+&lt;img src="../../media/learn/developer-guide/standalone-application/standalone_application_overview.svg" alt="" >
 &lt;/a>
 &lt;/figure>
 &lt;/p>
@@ -381,18 +381,18 @@ Keyple Distributed - Solution layers overview
 &lt;/figcaption>
 &lt;/figure>
 &lt;hr>
-&lt;h2 id="how-to-use-it-">How to use it ?&lt;/h2>
+&lt;h2 id="how-to-use-it">How to use it&lt;/h2>
 &lt;ol>
 &lt;li>In pre-requisite, read
 &lt;a href="../../learn/developer-guide/standalone-application/">Standalone Application Developer Guide&lt;/a> to understand the main concepts of Keyple in a standalone application.&lt;/li>
-&lt;li>Read chapter
-&lt;a href="#concepts">Concepts&lt;/a> to understand the main terms and concepts of the &lt;strong>Keyple Distributed&lt;/strong> solution.&lt;/li>
-&lt;li>Using chapter
-&lt;a href="#usage-modes">Usage modes&lt;/a>, find your usage mode. This will help you to determine exactly which library and API to use.&lt;/li>
-&lt;li>Using chapter
-&lt;a href="#download">Download&lt;/a>, import into your project the libraries specified by your usage mode.&lt;/li>
-&lt;li>Using chapter
-&lt;a href="#network-configuration">Network configuration&lt;/a>, implement the transport layer adapted to your network configuration.&lt;/li>
+&lt;li>Learn
+&lt;a href="#concepts">main terms and concepts&lt;/a> of the &lt;strong>Keyple Distributed&lt;/strong> solution.&lt;/li>
+&lt;li>Find your
+&lt;a href="#usage-modes">usage mode&lt;/a>. This will help you to determine exactly which library and API to use.&lt;/li>
+&lt;li>
+&lt;a href="#download">Import&lt;/a> into your project the libraries specified by your usage mode.&lt;/li>
+&lt;li>Implement the transport layer adapted to your
+&lt;a href="#network-configuration">network configuration&lt;/a>.&lt;/li>
 &lt;li>Implement your ticketing services as specified in the associated usage mode.&lt;/li>
 &lt;/ol>
 &lt;hr>
@@ -852,6 +852,13 @@ It completely hides the details of APDU orders that are sent to Calypso cards an
 &lt;li>Stored Value operations management;&lt;/li>
 &lt;li>card invalidation / rehabilitation.&lt;/li>
 &lt;/ul>
+&lt;p>The diagram below illustrates the organization of a Calypso application based on Keyple:
+&lt;figure >
+&lt;a data-fancybox="" href="../../media/learn/developer-guide/calypso-application/calypso_application_overview.svg" >
+&lt;img src="../../media/learn/developer-guide/calypso-application/calypso_application_overview.svg" alt="" >
+&lt;/a>
+&lt;/figure>
+&lt;/p>
 &lt;hr>
 &lt;h2 id="operating-mode">Operating mode&lt;/h2>
 &lt;div class="alert alert-warning">
@@ -877,12 +884,12 @@ It completely hides the details of APDU orders that are sent to Calypso cards an
 &lt;h2 id="the-calypso-extension-service">The Calypso extension service&lt;/h2>
 &lt;p>As part of the &lt;strong>Calypso&lt;/strong> card extension add-on, the &lt;strong>Calypso extension service&lt;/strong> is the provider of the API implementations.&lt;/p>
 &lt;p>The service is accessible by invoking the &lt;code>CalypsoExtensionService.getInstance()&lt;/code> static method.&lt;/p>
-&lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('1', this);">Copy&lt;/button>&lt;/div>
-&lt;pre>&lt;code class="language-java" id="code-1">CalypsoExtensionService calypsoExtensionService = CalypsoExtensionService.getInstance();&lt;/code>&lt;/pre>
+&lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('2', this);">Copy&lt;/button>&lt;/div>
+&lt;pre>&lt;code class="language-java" id="code-2">CalypsoExtensionService calypsoExtensionService = CalypsoExtensionService.getInstance();&lt;/code>&lt;/pre>
 &lt;p>During initialization, it is recommended to check the extension with the smart card service to ensure the compatibility of the different libraries involved.&lt;/p>
 &lt;p>In case of incompatibility a warning will be produced in the log file.&lt;/p>
-&lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('2', this);">Copy&lt;/button>&lt;/div>
-&lt;pre>&lt;code class="language-java" id="code-2">smartCardService.checkCardExtension(calypsoExtensionService);&lt;/code>&lt;/pre>
+&lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('3', this);">Copy&lt;/button>&lt;/div>
+&lt;pre>&lt;code class="language-java" id="code-3">smartCardService.checkCardExtension(calypsoExtensionService);&lt;/code>&lt;/pre>
 &lt;hr>
 &lt;h2 id="select-a-card">Select a card&lt;/h2>
 &lt;p>In order to perform a transaction it is necessary to have selected the card first.&lt;/p>
@@ -891,8 +898,8 @@ It completely hides the details of APDU orders that are sent to Calypso cards an
 &lt;p>The resulting &lt;code>SmartCard&lt;/code> can be cast to a &lt;code>CalypsoCard&lt;/code> object which concentrate all known information about the card being processed.
 Its content is dynamically updated during the transaction.
 The client application will use it to get the data necessary for its business logic.&lt;/p>
-&lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('3', this);">Copy&lt;/button>&lt;/div>
-&lt;pre>&lt;code class="language-java" id="code-3">// Create a card selection manager.
+&lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('4', this);">Copy&lt;/button>&lt;/div>
+&lt;pre>&lt;code class="language-java" id="code-4">// Create a card selection manager.
 CardSelectionManager cardSelectionManager = smartCardService.createCardSelectionManager();
 // Create a card selection using the Calypso card extension.
 cardSelectionManager.prepareSelection(
@@ -922,8 +929,8 @@ This selection can be done with the &lt;code>createSamSelection()&lt;/code> meth
 &lt;p>In the case of the Card Resource Service, you have to create a profile extension using the &lt;code>createSamResourceProfileExtension(...)&lt;/code> method, specifying the previously built selection case, and then associate it to a dedicated profile in the service (see the
 &lt;a href="../../learn/developer-guide/card-resource-service/">Card Resource Service developer guide&lt;/a>).&lt;/p>
 &lt;p>The following snippet shows the initialization of the card resource service with a SAM profile:
-&lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('6', this);">Copy&lt;/button>&lt;/div>
-&lt;pre>&lt;code class="language-java" id="code-6">// Create a SAM selection case
+&lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('7', this);">Copy&lt;/button>&lt;/div>
+&lt;pre>&lt;code class="language-java" id="code-7">// Create a SAM selection case
 CalypsoSamSelection samSelection = CalypsoExtensionService.getInstance().createSamSelection();
 // Create a SAM resource profile extension
 CardResourceProfileExtension samCardResourceExtension =
@@ -953,8 +960,8 @@ SAM_PROFILE_NAME, readerNameRegex, plugin.getName()));
 // Release the resource
 cardResourceService.releaseCardResource(cardResource);&lt;/code>&lt;/pre>&lt;/p>
 &lt;p>Here is the creation of the security settings using a SAM resource obtained from the card resource service:
-&lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('7', this);">Copy&lt;/button>&lt;/div>
-&lt;pre>&lt;code class="language-java" id="code-7">// Create security settings that reference the same SAM profile requested from the card resource service.
+&lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('8', this);">Copy&lt;/button>&lt;/div>
+&lt;pre>&lt;code class="language-java" id="code-8">// Create security settings that reference the same SAM profile requested from the card resource service.
 CardResource samResource = CardResourceServiceProvider.getService().getCardResource(SAM_PROFILE_NAME);
 CardSecuritySetting cardSecuritySetting =
 CalypsoExtensionService.getInstance()
@@ -971,8 +978,8 @@ The provided &lt;code>CalypsoCard&lt;/code> object is kept and updated dynamical
 &lt;li>Preparation of the commands to be sent to the card. Several command preparations can be stacked (no communication neither with the card nor with the SAM).&lt;/li>
 &lt;li>Processing of the prepared commands. Performs all necessary communications with the card and/or the SAM to carry out the previously prepared operations.&lt;/li>
 &lt;/ul>
-&lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('8', this);">Copy&lt;/button>&lt;/div>
-&lt;pre>&lt;code class="language-java" id="code-8">try {
+&lt;div class="bd-clipboard">&lt;button type="button" class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onClick="javascript:copyCodeContentToClipboard('9', this);">Copy&lt;/button>&lt;/div>
+&lt;pre>&lt;code class="language-java" id="code-9">try {
 // Performs file reads using the card transaction manager in secure mode.
 cardExtension
 .createCardTransaction(cardReader, calypsoCard, cardSecuritySetting)

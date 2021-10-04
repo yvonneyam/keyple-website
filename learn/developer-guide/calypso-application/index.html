@@ -26,7 +26,7 @@
 <meta property="og:title" content="Calypso application | Eclipse Keyple">
 <meta property="og:description" content="How to develop an end-user application using the Calypso Card Extension."><meta property="og:image" content="https://keyple.org/images/logo_hu673a59176cd62c570f44ed2728665b48_42188_300x300_fit_lanczos_3.png">
 <meta property="twitter:image" content="https://keyple.org/images/logo_hu673a59176cd62c570f44ed2728665b48_42188_300x300_fit_lanczos_3.png"><meta property="og:locale" content="en-us">
-<meta property="article:modified_time" content="2021-10-04T17:00:56+02:00">
+<meta property="article:modified_time" content="2021-10-04T18:17:26+02:00">
 <script src=https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js integrity="sha256-5VhCqFam2Cn+yjw61zbBNrbHVJ6SRydPeKopYlngbiQ=" crossorigin=anonymous></script>
 <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css integrity="sha256-zQ0LblD/Af8vOppw18+2anxsuaz3pWYyVWi+bTvTH8Q=" crossorigin=anonymous>
 <script>window.addEventListener("load",function(){window.cookieconsent.initialise({palette:{popup:{background:"#1D87BB",text:"#FFFFFF"},button:{background:"#FFFFFF",text:"#1D87BB"}},theme:"classic",type:"opt-in",content:{header:'Cookiessss used on the website!',message:"Some Eclipse Foundation pages use cookies to better serve you when you return to the site. You can set your browser to notify you before you receive a cookie or turn off cookies. If you do so, however, some areas of some sites may not function properly. To read Eclipse Foundation Privacy Policy ",allow:"Allow cookies",deny:"Decline",dismiss:"Got it!",link:"click here",href:'https://www.eclipse.org/legal/privacy.php'}})})</script>
@@ -212,6 +212,13 @@ It completely hides the details of APDU orders that are sent to Calypso cards an
 <li>Stored Value operations management;</li>
 <li>card invalidation / rehabilitation.</li>
 </ul>
+<p>The diagram below illustrates the organization of a Calypso application based on Keyple:
+<figure>
+<a data-fancybox href=../../../media/learn/developer-guide/calypso-application/calypso_application_overview.svg>
+<img src=../../../media/learn/developer-guide/calypso-application/calypso_application_overview.svg alt>
+</a>
+</figure>
+</p>
 <hr>
 <h2 id=operating-mode>Operating mode</h2>
 <div class="alert alert-warning">
@@ -237,12 +244,12 @@ It completely hides the details of APDU orders that are sent to Calypso cards an
 <h2 id=the-calypso-extension-service>The Calypso extension service</h2>
 <p>As part of the <strong>Calypso</strong> card extension add-on, the <strong>Calypso extension service</strong> is the provider of the API implementations.</p>
 <p>The service is accessible by invoking the <code>CalypsoExtensionService.getInstance()</code> static method.</p>
-<div class=bd-clipboard><button type=button class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onclick="copyCodeContentToClipboard('1',this)">Copy</button></div>
-<pre><code class=language-java id=code-1>CalypsoExtensionService calypsoExtensionService = CalypsoExtensionService.getInstance();</code></pre>
+<div class=bd-clipboard><button type=button class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onclick="copyCodeContentToClipboard('2',this)">Copy</button></div>
+<pre><code class=language-java id=code-2>CalypsoExtensionService calypsoExtensionService = CalypsoExtensionService.getInstance();</code></pre>
 <p>During initialization, it is recommended to check the extension with the smart card service to ensure the compatibility of the different libraries involved.</p>
 <p>In case of incompatibility a warning will be produced in the log file.</p>
-<div class=bd-clipboard><button type=button class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onclick="copyCodeContentToClipboard('2',this)">Copy</button></div>
-<pre><code class=language-java id=code-2>smartCardService.checkCardExtension(calypsoExtensionService);</code></pre>
+<div class=bd-clipboard><button type=button class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onclick="copyCodeContentToClipboard('3',this)">Copy</button></div>
+<pre><code class=language-java id=code-3>smartCardService.checkCardExtension(calypsoExtensionService);</code></pre>
 <hr>
 <h2 id=select-a-card>Select a card</h2>
 <p>In order to perform a transaction it is necessary to have selected the card first.</p>
@@ -251,8 +258,8 @@ It completely hides the details of APDU orders that are sent to Calypso cards an
 <p>The resulting <code>SmartCard</code> can be cast to a <code>CalypsoCard</code> object which concentrate all known information about the card being processed.
 Its content is dynamically updated during the transaction.
 The client application will use it to get the data necessary for its business logic.</p>
-<div class=bd-clipboard><button type=button class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onclick="copyCodeContentToClipboard('3',this)">Copy</button></div>
-<pre><code class=language-java id=code-3>// Create a card selection manager.
+<div class=bd-clipboard><button type=button class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onclick="copyCodeContentToClipboard('4',this)">Copy</button></div>
+<pre><code class=language-java id=code-4>// Create a card selection manager.
 CardSelectionManager cardSelectionManager = smartCardService.createCardSelectionManager();
 
 // Create a card selection using the Calypso card extension.
@@ -286,8 +293,8 @@ This selection can be done with the <code>createSamSelection()</code> method and
 <p>In the case of the Card Resource Service, you have to create a profile extension using the <code>createSamResourceProfileExtension(...)</code> method, specifying the previously built selection case, and then associate it to a dedicated profile in the service (see the
 <a href=../../../learn/developer-guide/card-resource-service/>Card Resource Service developer guide</a>).</p>
 <p>The following snippet shows the initialization of the card resource service with a SAM profile:
-<div class=bd-clipboard><button type=button class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onclick="copyCodeContentToClipboard('6',this)">Copy</button></div>
-<pre><code class=language-java id=code-6>// Create a SAM selection case
+<div class=bd-clipboard><button type=button class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onclick="copyCodeContentToClipboard('7',this)">Copy</button></div>
+<pre><code class=language-java id=code-7>// Create a SAM selection case
 CalypsoSamSelection samSelection = CalypsoExtensionService.getInstance().createSamSelection();
 
 // Create a SAM resource profile extension
@@ -324,8 +331,8 @@ if (cardResource == null) {
 // Release the resource
 cardResourceService.releaseCardResource(cardResource);</code></pre></p>
 <p>Here is the creation of the security settings using a SAM resource obtained from the card resource service:
-<div class=bd-clipboard><button type=button class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onclick="copyCodeContentToClipboard('7',this)">Copy</button></div>
-<pre><code class=language-java id=code-7>// Create security settings that reference the same SAM profile requested from the card resource service.
+<div class=bd-clipboard><button type=button class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onclick="copyCodeContentToClipboard('8',this)">Copy</button></div>
+<pre><code class=language-java id=code-8>// Create security settings that reference the same SAM profile requested from the card resource service.
 CardResource samResource = CardResourceServiceProvider.getService().getCardResource(SAM_PROFILE_NAME);
 
 CardSecuritySetting cardSecuritySetting =
@@ -343,8 +350,8 @@ The provided <code>CalypsoCard</code> object is kept and updated dynamically all
 <li>Preparation of the commands to be sent to the card. Several command preparations can be stacked (no communication neither with the card nor with the SAM).</li>
 <li>Processing of the prepared commands. Performs all necessary communications with the card and/or the SAM to carry out the previously prepared operations.</li>
 </ul>
-<div class=bd-clipboard><button type=button class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onclick="copyCodeContentToClipboard('8',this)">Copy</button></div>
-<pre><code class=language-java id=code-8>try {
+<div class=bd-clipboard><button type=button class="btn btn-clipboard btn-outline-light" title="Copy to clipboard" onclick="copyCodeContentToClipboard('9',this)">Copy</button></div>
+<pre><code class=language-java id=code-9>try {
   // Performs file reads using the card transaction manager in secure mode.
   cardExtension
       .createCardTransaction(cardReader, calypsoCard, cardSecuritySetting)
