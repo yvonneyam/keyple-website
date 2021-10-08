@@ -155,9 +155,9 @@
 <ul>
 <li><a href=#types-of-contributions>Types of contributions</a></li>
 <li><a href=#eclipse-contributor-agreement>Eclipse Contributor Agreement</a></li>
-<li><a href=#commits-message-conventions>Commits message conventions</a></li>
 <li><a href=#contributing-via-fork>Contributing via fork</a></li>
 <li><a href=#contributing-as-a-project-committer>Contributing as a project committer</a></li>
+<li><a href=#commits-message-conventions>Commits message conventions</a></li>
 </ul>
 </nav>
 </div>
@@ -193,29 +193,6 @@ additionally have an Eclipse Foundation account and must have a signed Eclipse
 Contributor Agreement (ECA) on file.</p>
 <p>For more information, please see the Eclipse Committer Handbook:
 <a href=https://www.eclipse.org/projects/handbook/#contributing target=_blank rel=noopener>https://www.eclipse.org/projects/handbook/#contributing</a></p>
-<hr>
-<h2 id=commits-message-conventions>Commits message conventions</h2>
-<p>In order to ensure good readability of the commit history, it is necessary to have consistency in the structure of the commit messages.</p>
-<p>Therefore, all contributors to the project are asked to respect the structure of the commits messages as described in the guide
-<a href=https://www.conventionalcommits.org/en/v1.0.0/ target=_blank rel=noopener>Conventional Commits 1.0.0</a>:</p>
-<pre><code>&lt;type&gt;[optional scope]: &lt;description&gt;
-
-[optional body]
-
-&lt;footer(s)&gt;
-</code></pre>
-<p>Furthermore, it is requested to indicate in the <code>footer</code> section the associated issue(s) that will be closed (<code>Closes #xxx, closes #yyy, etc...</code>).
-This will automatically close the associated issue(s) when the pull request is validated (see
-<a href=https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue target=_blank rel=noopener>GitHub Docs</a> for more details).</p>
-<p>It is also required to indicate possible references to other associated issues (<code>Refs: #aaa, #bbbb, repository_owner/other_repository_name#ccc, etc...</code>).</p>
-<p>Here is fictive example:</p>
-<pre><code class=language-ini>feat(observation): allow asynchronous notification of reader events
-
-Add a public method in the observable reader to enable asynchronous notifications.
-
-Closes #34, closes #38
-Refs: #12, eclipse/keyple#54
-</code></pre>
 <hr>
 <h2 id=contributing-via-fork>Contributing via fork</h2>
 <ol>
@@ -254,6 +231,29 @@ Use commits messages that respect the
 <a href=https://help.github.com/articles/using-pull-requests/ target=_blank rel=noopener>pull request</a> and ask somebody who is familiar with the code you modified to review it.</li>
 <li>If the reviewer approves and all checks are OK, merge using <strong>squash & commit</strong> method.</li>
 </ol>
+<hr>
+<h2 id=commits-message-conventions>Commits message conventions</h2>
+<p>In order to ensure good readability of the commit history, it is necessary to have consistency in the structure of the commit messages.</p>
+<p>Therefore, all contributors to the project are asked to respect the structure of the commits messages as described in the guide
+<a href=https://www.conventionalcommits.org/en/v1.0.0/ target=_blank rel=noopener>Conventional Commits 1.0.0</a>:</p>
+<pre><code>&lt;type&gt;[optional scope]: &lt;description&gt;
+
+[optional body]
+
+&lt;footer(s)&gt;
+</code></pre>
+<p>Furthermore, it is requested to indicate in the <code>footer</code> section the associated issue(s) that will be closed (<code>Closes #xxx, closes #yyy, etc...</code>).
+This will automatically close the associated issue(s) when the pull request is validated (see
+<a href=https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue target=_blank rel=noopener>GitHub Docs</a> for more details).</p>
+<p>It is also required to indicate possible references to other associated issues (<code>Refs: #aaa, #bbbb, repository_owner/other_repository_name#ccc, etc...</code>).</p>
+<p>Here is fictive example:</p>
+<pre><code class=language-ini>feat(observation): allow asynchronous notification of reader events
+
+Add a public method in the observable reader to enable asynchronous notifications.
+
+Closes #34, closes #38
+Refs: #12, eclipse/keyple#54
+</code></pre>
 </div>
 <div class=article-widget>
 <div class=post-nav>

@@ -2118,11 +2118,54 @@ electronic ticketing transportation standards since 2003.&lt;/p>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table></description></item><item><title>Build process and continuous integration</title><link>https://keyple.org/learn/keyple-in-depth/build-ci-process/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/learn/keyple-in-depth/build-ci-process/</guid><description>&lt;hr>
-&lt;div class="alert alert-note">
+&lt;h2 id="versioning-rules">Versioning rules&lt;/h2>
+&lt;p>Keyple components are versioned according to
+&lt;a href="https://semver.org" target="_blank" rel="noopener">Semantic Versioning 2.0.0&lt;/a> which is based on the three numbers &lt;code>X.Y.Z&lt;/code>&lt;/p>
+&lt;p>Please note that for API components (i.e. artifacts suffixed with &lt;code>-api&lt;/code>), the incrementation of &lt;code>Z&lt;/code> indicates only a documentation update.&lt;/p>
+&lt;hr>
+&lt;h2 id="continuous-integration">Continuous integration&lt;/h2>
+&lt;p>Keyple continuous integration works with the
+&lt;a href="https://ci.eclipse.org/keyple/job/Keyple/" target="_blank" rel="noopener">Jenkins server&lt;/a> of the Eclipse Foundation.&lt;/p>
+&lt;p>The build process uses the home-made gradle plugin &lt;strong>Keyple Gradle&lt;/strong> available directly from the
+&lt;a href="https://search.maven.org/search?q=a:keyple-gradle" target="_blank" rel="noopener">Maven Central Repository&lt;/a> and whose sources are available on
+&lt;a href="https://github.com/eclipse/keyple-ops" target="_blank" rel="noopener">GitHub&lt;/a>.&lt;/p>
+&lt;p>The CI automates the following tasks (defined in the &lt;code>Jenkinsfile&lt;/code> file):&lt;/p>
+&lt;ul>
+&lt;li>Verify the validity of the version;&lt;/li>
+&lt;li>Verify the code formatting using
+&lt;a href="https://github.com/diffplug/spotless" target="_blank" rel="noopener">Spotless&lt;/a>;&lt;/li>
+&lt;li>Build the code;&lt;/li>
+&lt;li>Execute unit tests;&lt;/li>
+&lt;li>Sign and publish artifacts to &lt;strong>Maven Central Repository&lt;/strong>;&lt;/li>
+&lt;li>Publish the javadoc to the corresponding &lt;strong>GitHub Pages&lt;/strong>;&lt;/li>
+&lt;li>Publish the code quality report to
+&lt;a href="https://sonarcloud.io/organizations/eclipse/projects?search=keyple" target="_blank" rel="noopener">Sonar Cloud&lt;/a>.&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h2 id="snapshot-publication">Snapshot publication&lt;/h2>
+&lt;p>A snapshot artifact (suffixed with &lt;code>-SNAPSHOT&lt;/code>) is automatically published after each commit on the &lt;code>main&lt;/code> branch, except in the case of a release (see
+&lt;a href="#release-publication">Release publication&lt;/a>).&lt;/p>
+&lt;div class="alert alert-warning">
 &lt;div>
-Coming soon
+The artifact version defined in the &lt;code>gradle.properties&lt;/code> file must not have a &lt;code>-SNAPSHOT&lt;/code> suffix because the suffix is automatically added by the &lt;strong>Keyple Gradle&lt;/strong> plugin.
 &lt;/div>
-&lt;/div></description></item><item><title>Calypso application</title><link>https://keyple.org/learn/developer-guide/calypso-application/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/learn/developer-guide/calypso-application/</guid><description>&lt;hr>
+&lt;/div>
+&lt;hr>
+&lt;h2 id="release-publication">Release publication&lt;/h2>
+&lt;p>A release artifact is automatically published if and only if the following two conditions are met:&lt;/p>
+&lt;ul>
+&lt;li>the commit is done on the &lt;code>main&lt;/code> branch or on a &lt;code>release-X.Y.Z&lt;/code> branch,&lt;/li>
+&lt;li>the commit message starts with &lt;code>Release X.Y.Z&lt;/code>.&lt;/li>
+&lt;/ul>
+&lt;div class="alert alert-warning">
+&lt;div>
+&lt;code>X.Y.Z&lt;/code> must be the version defined in the &lt;code>gradle.properties&lt;/code> file.
+&lt;/div>
+&lt;/div>
+&lt;hr>
+&lt;h2 id="integration-tests">Integration tests&lt;/h2>
+&lt;p>Integration tests are defined in an independent GitHub repository:
+&lt;a href="https://github.com/eclipse/keyple-integration-java-test" target="_blank" rel="noopener">keyple-integration-java-test&lt;/a>&lt;/p></description></item><item><title>Calypso application</title><link>https://keyple.org/learn/developer-guide/calypso-application/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://keyple.org/learn/developer-guide/calypso-application/</guid><description>&lt;hr>
 &lt;h2 id="overview">Overview&lt;/h2>
 &lt;p>&lt;strong>Keyple provides a card extension add-on dedicated to the Calypso® card technology.&lt;/strong>&lt;/p>
 &lt;p>This component allows operating commands with a Calypso card and to manage a secure Calypso transaction in a simple way.

@@ -26,7 +26,7 @@
 <meta property="og:title" content="Build process and continuous integration | Eclipse Keyple">
 <meta property="og:description" content="Learn how the Keyple components are built, tested and published."><meta property="og:image" content="https://keyple.org/images/logo_hu673a59176cd62c570f44ed2728665b48_42188_300x300_fit_lanczos_3.png">
 <meta property="twitter:image" content="https://keyple.org/images/logo_hu673a59176cd62c570f44ed2728665b48_42188_300x300_fit_lanczos_3.png"><meta property="og:locale" content="en-us">
-<meta property="article:modified_time" content="2021-10-05T18:15:32+02:00">
+<meta property="article:modified_time" content="2021-10-08T17:18:06+02:00">
 <script src=https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js integrity="sha256-5VhCqFam2Cn+yjw61zbBNrbHVJ6SRydPeKopYlngbiQ=" crossorigin=anonymous></script>
 <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css integrity="sha256-zQ0LblD/Af8vOppw18+2anxsuaz3pWYyVWi+bTvTH8Q=" crossorigin=anonymous>
 <script>window.addEventListener("load",function(){window.cookieconsent.initialise({palette:{popup:{background:"#1D87BB",text:"#FFFFFF"},button:{background:"#FFFFFF",text:"#1D87BB"}},theme:"classic",type:"opt-in",content:{header:'Cookiessss used on the website!',message:"Some Eclipse Foundation pages use cookies to better serve you when you return to the site. You can set your browser to notify you before you receive a cookie or turn off cookies. If you do so, however, some areas of some sites may not function properly. To read Eclipse Foundation Privacy Policy ",allow:"Allow cookies",deny:"Decline",dismiss:"Got it!",link:"click here",href:'https://www.eclipse.org/legal/privacy.php'}})})</script>
@@ -179,7 +179,15 @@
 <ul class="nav toc-top">
 <li><a href=# id=back_to_top class=docs-toc-title>Contents</a></li>
 </ul>
-<nav id=TableOfContents></nav>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#versioning-rules>Versioning rules</a></li>
+<li><a href=#continuous-integration>Continuous integration</a></li>
+<li><a href=#snapshot-publication>Snapshot publication</a></li>
+<li><a href=#release-publication>Release publication</a></li>
+<li><a href=#integration-tests>Integration tests</a></li>
+</ul>
+</nav>
 </div>
 <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role=main>
 <article class=article>
@@ -187,11 +195,54 @@
 <h1>Build process and continuous integration</h1>
 <div class=article-style>
 <hr>
-<div class="alert alert-note">
+<h2 id=versioning-rules>Versioning rules</h2>
+<p>Keyple components are versioned according to
+<a href=https://semver.org target=_blank rel=noopener>Semantic Versioning 2.0.0</a> which is based on the three numbers <code>X.Y.Z</code></p>
+<p>Please note that for API components (i.e. artifacts suffixed with <code>-api</code>), the incrementation of <code>Z</code> indicates only a documentation update.</p>
+<hr>
+<h2 id=continuous-integration>Continuous integration</h2>
+<p>Keyple continuous integration works with the
+<a href=https://ci.eclipse.org/keyple/job/Keyple/ target=_blank rel=noopener>Jenkins server</a> of the Eclipse Foundation.</p>
+<p>The build process uses the home-made gradle plugin <strong>Keyple Gradle</strong> available directly from the
+<a href="https://search.maven.org/search?q=a:keyple-gradle" target=_blank rel=noopener>Maven Central Repository</a> and whose sources are available on
+<a href=https://github.com/eclipse/keyple-ops target=_blank rel=noopener>GitHub</a>.</p>
+<p>The CI automates the following tasks (defined in the <code>Jenkinsfile</code> file):</p>
+<ul>
+<li>Verify the validity of the version;</li>
+<li>Verify the code formatting using
+<a href=https://github.com/diffplug/spotless target=_blank rel=noopener>Spotless</a>;</li>
+<li>Build the code;</li>
+<li>Execute unit tests;</li>
+<li>Sign and publish artifacts to <strong>Maven Central Repository</strong>;</li>
+<li>Publish the javadoc to the corresponding <strong>GitHub Pages</strong>;</li>
+<li>Publish the code quality report to
+<a href="https://sonarcloud.io/organizations/eclipse/projects?search=keyple" target=_blank rel=noopener>Sonar Cloud</a>.</li>
+</ul>
+<hr>
+<h2 id=snapshot-publication>Snapshot publication</h2>
+<p>A snapshot artifact (suffixed with <code>-SNAPSHOT</code>) is automatically published after each commit on the <code>main</code> branch, except in the case of a release (see
+<a href=#release-publication>Release publication</a>).</p>
+<div class="alert alert-warning">
 <div>
-Coming soon
+The artifact version defined in the <code>gradle.properties</code> file must not have a <code>-SNAPSHOT</code> suffix because the suffix is automatically added by the <strong>Keyple Gradle</strong> plugin.
 </div>
 </div>
+<hr>
+<h2 id=release-publication>Release publication</h2>
+<p>A release artifact is automatically published if and only if the following two conditions are met:</p>
+<ul>
+<li>the commit is done on the <code>main</code> branch or on a <code>release-X.Y.Z</code> branch,</li>
+<li>the commit message starts with <code>Release X.Y.Z</code>.</li>
+</ul>
+<div class="alert alert-warning">
+<div>
+<code>X.Y.Z</code> must be the version defined in the <code>gradle.properties</code> file.
+</div>
+</div>
+<hr>
+<h2 id=integration-tests>Integration tests</h2>
+<p>Integration tests are defined in an independent GitHub repository:
+<a href=https://github.com/eclipse/keyple-integration-java-test target=_blank rel=noopener>keyple-integration-java-test</a></p>
 </div>
 <div class=article-widget>
 <div class=post-nav>
@@ -203,7 +254,7 @@ Coming soon
 </div>
 </div>
 <div class=body-footer>
-<p>Last updated on Tue, Oct 5, 2021</p>
+<p>Last updated on Fri, Oct 8, 2021</p>
 </div>
 </article>
 <footer class=site-footer>
