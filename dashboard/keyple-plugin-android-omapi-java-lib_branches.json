@@ -1,5 +1,13 @@
 [
   {
+    "name": "add_changelog_file",
+    "commit": {
+      "sha": "726af4de0afc116f3a3a87dadc154647536454a9",
+      "url": "https://api.github.com/repos/eclipse/keyple-plugin-android-omapi-java-lib/commits/726af4de0afc116f3a3a87dadc154647536454a9"
+    },
+    "protected": false
+  },
+  {
     "name": "gh-pages",
     "commit": {
       "sha": "dd089de7e6a6d75563df5d7a148847d068db0ff4",
