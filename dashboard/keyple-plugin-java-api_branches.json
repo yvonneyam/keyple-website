@@ -1,25 +1,17 @@
 [
   {
-    "name": "add_changelog_file",
-    "commit": {
-      "sha": "2ff51906977e18ae53f0bf63d827e96329f2a7be",
-      "url": "https://api.github.com/repos/eclipse/keyple-plugin-java-api/commits/2ff51906977e18ae53f0bf63d827e96329f2a7be"
-    },
-    "protected": false
-  },
-  {
     "name": "gh-pages",
     "commit": {
-      "sha": "0da553f5243c3bfd9bae9989895f582b26137f2b",
-      "url": "https://api.github.com/repos/eclipse/keyple-plugin-java-api/commits/0da553f5243c3bfd9bae9989895f582b26137f2b"
+      "sha": "4eafededcf9e77d2efda2f6a9cb8b84e0787f9a5",
+      "url": "https://api.github.com/repos/eclipse/keyple-plugin-java-api/commits/4eafededcf9e77d2efda2f6a9cb8b84e0787f9a5"
     },
     "protected": false
   },
   {
     "name": "main",
     "commit": {
-      "sha": "4dbc2c7a33e3738c80102e48b67281e36f930312",
-      "url": "https://api.github.com/repos/eclipse/keyple-plugin-java-api/commits/4dbc2c7a33e3738c80102e48b67281e36f930312"
+      "sha": "cecd24de08abd16528abc8b75ab0529eb9311c73",
+      "url": "https://api.github.com/repos/eclipse/keyple-plugin-java-api/commits/cecd24de08abd16528abc8b75ab0529eb9311c73"
     },
     "protected": false
   }
