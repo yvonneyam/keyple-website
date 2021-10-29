@@ -1,0 +1,18 @@
+[
+  {
+    "name": "gh-pages",
+    "commit": {
+      "sha": "0a8ae73cf83685b7f23ac23d0edbb2242af1e2c5",
+      "url": "https://api.github.com/repos/eclipse/keyple-website/commits/0a8ae73cf83685b7f23ac23d0edbb2242af1e2c5"
+    },
+    "protected": false
+  },
+  {
+    "name": "master",
+    "commit": {
+      "sha": "0f31ce54ad514ce0675e2133f97624029adca3f0",
+      "url": "https://api.github.com/repos/eclipse/keyple-website/commits/0f31ce54ad514ce0675e2133f97624029adca3f0"
+    },
+    "protected": true
+  }
+]
