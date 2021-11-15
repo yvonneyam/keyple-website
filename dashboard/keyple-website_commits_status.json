@@ -3,7 +3,7 @@
   "statuses": [
 
   ],
-  "sha": "24bb60ab7558cf022ae377e5ea83d1fefa14c20d",
+  "sha": "d560df511dfe904ca854bd3a8032620d0885e9ce",
   "total_count": 0,
   "repository": {
     "id": 271755874,
@@ -72,6 +72,6 @@
     "releases_url": "https://api.github.com/repos/eclipse/keyple-website/releases{/id}",
     "deployments_url": "https://api.github.com/repos/eclipse/keyple-website/deployments"
   },
-  "commit_url": "https://api.github.com/repos/eclipse/keyple-website/commits/24bb60ab7558cf022ae377e5ea83d1fefa14c20d",
-  "url": "https://api.github.com/repos/eclipse/keyple-website/commits/24bb60ab7558cf022ae377e5ea83d1fefa14c20d/status"
+  "commit_url": "https://api.github.com/repos/eclipse/keyple-website/commits/d560df511dfe904ca854bd3a8032620d0885e9ce",
+  "url": "https://api.github.com/repos/eclipse/keyple-website/commits/d560df511dfe904ca854bd3a8032620d0885e9ce/status"
 }
